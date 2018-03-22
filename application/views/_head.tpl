@@ -45,7 +45,7 @@ $this->assign('addr_image',$address);
 {/if}
 {/foreach}
 {else}
-<meta property="og:image" content="https://590.ua/assets/media/logo.png">
+<meta property="og:image" content="http://fresh.590.ua/assets/media/logo.png">
 {/if}
 <!-- // Вывод картинки товара при расшаривании ссылки // -->
 
