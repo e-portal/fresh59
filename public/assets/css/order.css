@@ -1,0 +1,345 @@
+
+.basket-two-column {
+    display: flex;
+    justify-content: space-between;
+}
+
+.basket-two-column > div {
+    width: 49%;
+    height: 100%;
+}
+
+.basket-last-column {
+    border: 1px solid #d7d7d7;
+    border-radius: 25px;
+}
+
+.without-icon::after {
+    content: none;
+}
+
+.without-icon span {
+    margin: 0;
+}
+
+.flex-between {
+    justify-content: space-between;
+}
+
+/*--------------First column--------------*/
+.tabs-order {
+    margin: 0;
+}
+
+.tabs-order .take-order {
+    width: calc(100% - 20px);
+}
+
+/*.step-hidden,
+.step2-hidden,
+.step2-hidden,
+.step2-hidden {
+    height: 45px;
+    overflow: hidden;
+    opacity: .3;
+}*/
+.two-col {
+    width: 44%;
+}
+
+.tab-new-client {
+    justify-content: space-between;
+}
+
+.tab-new-client .border-plus {
+    height: 270px;
+}
+
+.tab-new-client .border-plus span {
+    width: 35px;
+    height: 35px;
+}
+
+.order-title {
+    font-family: 'SFUIDisplay-Bold';
+    font-size: 16px;
+    line-height: 54px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.order-title span {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    background: #fbd402;
+    border-radius: 50%;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error {
+    border-color: #ed462f;
+}
+
+.order label,
+.order input,
+.order select,
+.order textarea {
+    width: 100%;
+}
+
+.order textarea {
+    resize: vertical;
+}
+
+.order label {
+    color: rgba(49, 62, 73, .7);
+    font-family: 'SFUIDisplay-Medium';
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin-left: 25px;
+}
+
+.order label span {
+    text-transform: none;
+}
+
+.order input,
+.order select,
+.order textarea {
+    font-family: 'SFUIDisplay-Bold';
+    border: 1px solid #e6e6e6;
+    border-radius: 25px;
+    background: #f9f9f9;
+    padding: 10px 20px;
+    line-height: 20px;
+    margin-bottom: 30px;
+}
+
+.order .input-min-width {
+    width: calc(100% - 40px);
+}
+
+.delivery-detail .input-min-width {
+    width: calc(100% - 60px);
+}
+
+#city-courier.input-min-width {
+    width: calc(100% - 20px);
+}
+
+.delivery-detail .delivery-adress-width:nth-child(1),
+.delivery-detail .delivery-adress-width:nth-child(2) {
+    width: 35%;
+}
+
+.delivery-detail .delivery-adress-width:nth-child(3),
+.delivery-detail .delivery-adress-width:nth-child(4) {
+    width: 15%;
+}
+
+.delivery-detail {
+    margin-top: 30px;
+    display: none;
+}
+
+.delivery-detail.checked {
+    display: flex;
+}
+
+/*--------------Checkbox--------------*/
+.order input[type="radio"] {
+    display: none;
+}
+
+.order input[type="radio"] + label {
+    display: block;
+    position: relative;
+    padding-left: 27px;
+    margin-left: 57px;
+    cursor: pointer;
+    text-transform: none;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+.order input[type="radio"] + label::before {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 23%;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.order input[type="radio"]:checked + label {
+    color: #000;
+}
+
+.order input[type="radio"]:checked + label::before {
+    background: #000;
+    -webkit-box-shadow: inset 0 0 0 4.5px rgba(255, 255, 255, 1);
+    -moz-box-shadow: inset 0 0 0 4.5px rgba(255, 255, 255, 1);
+    box-shadow: inset 0 0 0 4.5px rgba(255, 255, 255, 1);
+}
+
+/*--------------end Checkbox--------------*/
+.tab-new-client .bask.acty.without-icon {
+    padding: 0 55px;
+    width: auto;
+    margin: 0;
+}
+
+.black-link {
+    font-family: 'SFUIDisplay-Medium';
+    font-size: 15px;
+    text-decoration: underline;
+}
+
+.reg-social {
+    flex-direction: column;
+}
+
+.reg-social p {
+    padding: 0 10%;
+    text-align: center;
+    color: rgba(49, 62, 73, .7);
+    font-family: 'SFUIDisplay-Medium';
+    line-height: 18px;
+    font-size: 14px;
+}
+
+.reg-social a {
+    width: 43px;
+    height: 42px;
+    display: inline-block;
+    margin: 15px;
+}
+
+.reg-social a > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/*--------------end First column--------------*/
+/*--------------Last column--------------*/
+.basket-last-column .basket-header {
+    line-height: 25px;
+    width: 100%;
+}
+
+.cart .basket-price {
+    display: none;
+}
+
+.basket-last-column .basket-header > div:last-child {
+    padding-right: 48px;
+}
+
+.basket-last-column .basket-section .basket-prod,
+.cart .basket-header > div {
+    width: 90%;
+}
+
+.basket-first-column .take-order,
+.basket-last-column .total-section,
+.basket-last-column .take-order {
+    padding: 10px 30px;
+}
+
+.cart .basket-section > div > div {
+    width: 16%;
+}
+
+.basket-last-column .total-section {
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.basket-last-column .total-section .blue-link a {
+    display: block;
+    width: 100%;
+    font-family: 'SFUIDisplay-Medium';
+}
+
+.icon-question {
+    text-decoration: underline;
+}
+
+.icon-question span {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    margin-left: 3px;
+}
+
+.icon-question span > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.basket-last-column .total-take {
+    text-align: right;
+}
+
+.basket-last-column .total-take .total {
+    margin-right: 0;
+    width: 100%;
+}
+
+.basket-first-column .take-order,
+.basket-last-column .take-order {
+    text-align: left;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #313e49;
+}
+
+.basket-first-column .take-order .bask,
+.basket-last-column .take-order .bask {
+    padding: 0 20px;
+    width: auto;
+    margin: 0;
+}
+
+.basket-last-column .take-order .bask span {
+    margin: 0;
+}
+
+.basket-last-column .take-order .bask::after {
+    content: none;
+}
+
+input.bask {
+    background: #fbd402;
+    font-family: 'SFUIDisplay-Medium';
+    border: 1px solid #fbd402;
+}
+
+.btn-dissable {
+    background: #e7e7e7;
+    color: rgba(49, 62, 73, .7);
+    box-shadow: none;
+    pointer-events: none;
+}
+
+.btn-dissable:hover {
+    box-shadow: none;
+}
+
+/*--------------end Last column--------------*/

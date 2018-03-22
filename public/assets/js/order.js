@@ -1,0 +1,258 @@
+$(document).ready(function () {
+
+    /*click on cart-button*/
+    $('.add-to-cart').bind('click', doObject);
+
+
+    var basket = localStorage.getItem('basket') != undefined ? JSON.parse(localStorage.getItem('basket')) : {};
+
+    if ($('body').hasClass('cart')) {
+        basket != null ? doBasket(basket) : ''
+    }
+
+    function doObject() {/* create object product*/
+        var prod_id = $(this).attr('data-id');
+
+        if (basket[prod_id] == undefined) {
+            prod_data = $(this).data();
+            prod_data.quantity = 1;
+            basket[prod_id] = prod_data;
+            doBasket(basket);
+        } else {
+            basket[prod_id].quantity = parseInt(basket[prod_id].quantity) + 1;
+            doBasket(basket);
+        }
+        window.localStorage.setItem('basket', JSON.stringify(basket));
+        console.log(basket);
+    }
+
+
+    function doBasket(obj) {/* add basket-section-prod*/
+        $('.basket-table').html(' ');
+        i = 0;
+        for (prod_data in obj) {
+            /*---------POPUP---------*/
+            $('<div class="basket-section basket-section' + i + '">\n' +
+                '                        <div class="basket-section-prod flexibal">\n' +
+                '                            <div class="basket-prod flexibal">\n' +
+                '                                <div class="basket-prod-img"><img src="' + obj[prod_data].img + '"></div>\n' +
+                '                                <div class="basket-prod-text">\n' +
+                '                                    <div class="basket-prod-name">' + obj[prod_data].name + '</div>\n' +
+                '                                    <div class="prod-code">Код товара <span>' + obj[prod_data].id + '</span></div>\n' +
+                '                                    <div class="basket-bonus basket-bonus' + i + '"></div>\n' +
+                '                                </div>\n' +
+                '                            </div>\n' +
+                '                            <div class="basket-prod-number">\n' +
+                '                                <div class="input-number-wrap">\n' +
+                '                                    <span class="input-number-decrement decrement">–</span>\n' +
+                '                                    <input class="input-number" type="text" value="' + obj[prod_data].quantity + '" min="0" max="10">\n' +
+                '                                    <span class="input-number-increment">+</span>\n' +
+                '                                </div>\n' +
+                '                            </div>\n' +
+                '                            <div class="basket-price">' + ( obj[prod_data].price > obj[prod_data].sale ? obj[prod_data].sale : obj[prod_data].price ) + '</div>\n' +
+                '                            <div class="prod-price-total" data-value="' + (( obj[prod_data].price > obj[prod_data].sale ? obj[prod_data].sale : obj[prod_data].price ) * obj[prod_data].quantity ) + '">' + (( obj[prod_data].price > obj[prod_data].sale ? obj[prod_data].sale : obj[prod_data].price ) * obj[prod_data].quantity ) + '</div>\n' +
+                '                            <div class="basket-delete"><div class="basket-delete-icon"></div></div>\n' +
+                '                        </div>\n' +
+                '                    </div>').appendTo('.basket-table');
+
+            if (obj[prod_data].giftId !== undefined) {
+                $('<div class="basket-section-gift flexibal">\n' +
+                    '                                      <div class="basket-prod flexibal">\n' +
+                    '                                           <div class="basket-prod-img"></div>\n' +
+                    '                                           <div class="basket-gift flexibal">\n' +
+                    '                                                <div class="basket-prod-img"><img src="' + obj[prod_data].giftImg + '"></div>\n' +
+                    '                                             <div class="">\n' +
+                    '                                                   <div class="basket-gift-name">' + obj[prod_data].giftName + '</div>\n' +
+                    '                                                  <div class="prod-code">Код товара <span>' + obj[prod_data].giftId + '</span></div>\n' +
+                    '                                                </div>\n' +
+                    '                                          </div>\n' +
+                    '                                       </div>\n' +
+                    '                                       <div class="basket-prod-number red">подарок!</div>\n' +
+                    '                                       <div class="basket-price"></div>\n' +
+                    '                                       <div class=""></div>\n' +
+                    '                                       <div class=""></div>\n' +
+                    '                                   </div>').appendTo('.basket-section' + i);
+            }
+            if (obj[prod_data].bonus !== undefined) {
+                $('<span class="red"> + ' + obj[prod_data].bonus + ' грн</span> на <a>Бонусный счет</a>').appendTo('.basket-bonus' + i);
+            }
+
+            i++
+        }
+
+        /*stop scroll*/
+        if (window.matchMedia('(max-width: 900px)').matches) {
+            $('html, body').css('overflow', 'hidden');
+        } else {
+            $('html, body').css('overflow', 'hidden');
+        }
+
+        /*show popup*/
+        $('body').find('.popup').css('display', 'flex');
+        $('.popup-content').addClass('show');
+        $('.close').addClass('show');
+        totalCart();
+        bindings();
+
+        /*close popup*/
+        $('.closeX, .close, .closeBtn, .take-order-btn').on('click', function () {
+
+            $('.popup-content').removeClass('show').addClass('hide');
+            $('.close').removeClass('show').addClass('hide');
+
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                $('html, body').css('overflow', 'auto');
+            } else {
+                $('html, body').css('overflow', 'auto');
+            }
+
+            setTimeout(function () {
+                $('.popup-content').removeClass('hide');
+                $('.close').removeClass('hide');
+                $('.popup').css('display', 'none');
+            }, 1000);
+        });
+    }
+
+
+    /*---------end POPUP---------*/
+
+
+    if ($('body').hasClass('cart')) {  /*page of cart*/
+        $('html, body').css('overflow', 'auto');
+        bindings();
+    }
+
+
+    /*---------delete PRODUCT---------*/
+    function delProd() {
+        idObj = $(this).parents('.basket-section-prod').find('.prod-code span').html()
+        delete basket[idObj];
+        $(this).parents('.basket-section').remove();
+        totalCart();
+    }
+
+    /*---------end delete PRODUCT---------*/
+
+
+    /*---------Plus-minus PRODUCT---------*/
+    function incremProd() {
+        var $input = $(this).parent().find('input');
+        c = $(this).hasClass('decrement') ? parseInt($input.val()) - 1 : parseInt($input.val()) + 1;
+        if (c <= 0) {
+            c = 1;
+        }
+        $input.val(c);
+        $input.trigger('change');
+    }
+
+    /*---------end Plus-minus PRODUCT---------*/
+
+
+    /*---------Count price---------*/
+    function inNumberProd() {
+        var numcount = $(this).val();
+        idObj = $(this).parents('.basket-section-prod').find('.prod-code span').html()
+        basket[idObj].quantity = $(this).val();
+        var startPrice = $(this).parents('.basket-section-prod').find('.prod-price-total').attr('data-value');
+        $(this).parents('.basket-section-prod').find('.prod-price-total').html(startPrice * numcount);
+        // $(this).parents('.basket-section-prod').find('.prod-price-total').attr('data-value', startPrice * numcount);
+        totalCart();
+    }
+
+    /*---------end Count price---------*/
+
+
+    /*---------Count total price---------*/
+    var totalPrice = 0;
+
+    function totalCart() {
+        totalPrice = 0;
+        $('.prod-price-total').each(function () {
+            totalPrice += parseInt($(this).html());
+        });
+        $('.count-total').html(totalPrice);
+    }
+
+    /*---------end Count total price---------*/
+
+    /*---------BIND UNBIND---------*/
+    function bindings() {
+        $('.basket-delete').unbind('click', delProd);
+        $('.input-number-decrement').unbind('click', incremProd);
+        $('.input-number-increment').unbind('click', incremProd);
+        $('.input-number').unbind('change', inNumberProd);
+
+
+        $('.basket-delete').bind('click', delProd);
+        $('.input-number-decrement').bind('click', incremProd);
+        $('.input-number-increment').bind('click', incremProd);
+        $('.input-number').bind('change', inNumberProd);
+    }
+
+    /*---------end BIND UNBIND---------*/
+
+    /*---------Delivery show-hide---------*/
+    $('input.ShowOrHide').click(function () {
+
+        var checked = $('input.ShowOrHide:checked');
+
+        if (checked.length == 0) {
+            $("div.ShowOrHide").show();
+        } else {
+            $("div.ShowOrHide").hide();
+            $('div#' + $(this).val()).css('display', 'flex');
+        }
+    });
+    /*---------Delivery show-hide---------*/
+
+
+    /*---------PORTFOLIO TABS---------*/
+
+    $('.tabs').each(function () {
+        var _this = $(this);
+        var $tabButtonItem = _this.find('.tab-button li'),
+            $tabSelect = _this.find('.tab-select'),
+            $tabContents = _this.find('.tab-contents'),
+            activeClass = 'is-active';
+        if ($('body').hasClass('payment-page')) {
+            $('.tab-contents').hide();
+            $('.tab-contents.is-active').show();
+        } else {
+            $tabButtonItem.first().addClass(activeClass);
+            $tabContents.first().addClass(activeClass);
+            $tabContents.not(':first').hide();
+        }
+
+
+        $tabButtonItem.find('a').on('click', function (e) {
+            var target = $(this).attr('href');
+
+            $tabButtonItem.removeClass(activeClass);
+            $(this).parent().addClass(activeClass);
+            $tabSelect.val(target);
+            $tabContents.hide().removeClass(activeClass);
+            $(target).show().addClass(activeClass);
+            e.preventDefault();
+        });
+    });
+    $tabSelect.on('change', function () {
+        var target = $(this).val(),
+            targetSelectNum = $(this).prop('selectedIndex');
+
+        $tabButtonItem.removeClass(activeClass);
+        $tabButtonItem.eq(targetSelectNum).addClass(activeClass);
+        $tabContents.hide().removeClass(activeClass);
+        $(target).show().addClass(activeClass);
+    });
+
+
+    /*---------end PORTFOLIO TABS---------*/
+
+
+});
+
+
+
+
+

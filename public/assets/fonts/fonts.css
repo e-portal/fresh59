@@ -1,0 +1,163 @@
+/* shepdim edition - including fonts - start */
+
+@font-face {
+    font-family: 'pfdintextcomppro-regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('pfdintextcomppro-regular.ttf'), url('PFDinTextCompPro-Normal_0.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'pf';
+    src: url('pfdintextcomppro-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'avan';
+    src: url('avantgardegothicc-bold.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'pfl';
+    src: url('pfdintextcomppro-thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotobold';
+    src: url('Roboto/roboto-bold.eot');
+    src: url('Roboto/roboto-bold.eot?#iefix') format('embedded-opentype'),
+    url('Roboto/roboto-bold.woff') format('woff'),
+    url('Roboto/roboto-bold.ttf') format('truetype'),
+    url('Roboto/roboto-bold.svg#robotobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'roboto-condensedbold';
+    src: url('Roboto/roboto-boldcondensed.eot');
+    src: url('Roboto/roboto-boldcondensed.eot?#iefix') format('embedded-opentype'),
+    url('Roboto/roboto-boldcondensed.woff') format('woff'),
+    url('Roboto/roboto-boldcondensed.ttf') format('truetype'),
+    url('Roboto/roboto-boldcondensed.svg#roboto_condensedbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'roboto-condensedregular';
+    src: url('Roboto/roboto-condensed.eot');
+    src: url('Roboto/roboto-condensed.eot?#iefix') format('embedded-opentype'),
+    url('Roboto/roboto-condensed.woff') format('woff'),
+    url('Roboto/roboto-condensed.ttf') format('truetype'),
+    url('Roboto/roboto-condensed.svg#roboto_condensedregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'roboto-regular';
+    src: url('Roboto/roboto-regular.eot');
+    src: url('Roboto/roboto-regular.eot?#iefix') format('embedded-opentype'),
+    url('Roboto/roboto-regular.woff') format('woff'),
+    url('Roboto/roboto-regular.ttf') format('truetype'),
+    url('Roboto/roboto-regular.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* shepdim edition - including fonts - finish */
+
+/* font-family: "BenderRegular"; */
+@font-face {
+    font-family: "bender-regular";
+    src: url("Bender/BenderRegular.eot");
+    src: url("Bender/BenderRegular.eot?#iefix") format("embedded-opentype"),
+    url("Bender/BenderRegular.woff") format("woff"),
+    url("Bender/BenderRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* font-family: "BenderBold"; */
+@font-face {
+    font-family: "benderbold";
+    src: url("Bender/BenderBold.eot");
+    src: url("Bender/BenderBold.eot?#iefix") format("embedded-opentype"),
+    url("Bender/BenderBold.woff") format("woff"),
+    url("Bender/BenderBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* font-family: "BenderItalic"; */
+@font-face {
+    font-family: "bender-italic";
+    src: url("Bender/BenderItalic.eot");
+    src: url("Bender/BenderItalic.eot?#iefix") format("embedded-opentype"),
+    url("Bender/BenderItalic.woff") format("woff"),
+    url("Bender/BenderItalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* font-family: "BenderBoldItalic"; */
+@font-face {
+    font-family: "benderbold-italic";
+    src: url("Bender/BenderBoldItalic.eot");
+    src: url("Bender/BenderBoldItalic.eot?#iefix") format("embedded-opentype"),
+    url("Bender/BenderBoldItalic.woff") format("woff"),
+    url("Bender/BenderBoldItalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* font-family: "BenderBlack"; */
+@font-face {
+    font-family: "benderblack";
+    src: url("Bender/BenderBlack.eot");
+    src: url("Bender/BenderBlack.eot?#iefix") format("embedded-opentype"),
+    url("Bender/BenderBlack.woff") format("woff"),
+    url("Bender/BenderBlack.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* font-family: "BenderBlackItalic"; */
+@font-face {
+    font-family: "benderblack-italic";
+    src: url("Bender/BenderBlackItalic.eot");
+    src: url("Bender/BenderBlackItalic.eot?#iefix") format("embedded-opentype"),
+    url("Bender/BenderBlackItalic.woff") format("woff"),
+    url("Bender/BenderBlackItalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* font-family: "BenderLight"; */
+@font-face {
+    font-family: "benderlight";
+    src: url("Bender/BenderLight.eot");
+    src: url("Bender/BenderLight.eot?#iefix") format("embedded-opentype"),
+    url("Bender/BenderLight.woff") format("woff"),
+    url("Bender/BenderLight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* font-family: "BenderLightItalic"; */
+@font-face {
+    font-family: "benderlight-italic";
+    src: url("Bender/BenderLightItalic.eot");
+    src: url("Bender/BenderLightItalic.eot?#iefix") format("embedded-opentype"),
+    url("Bender/BenderLightItalic.woff") format("woff"),
+    url("Bender/BenderLightItalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
