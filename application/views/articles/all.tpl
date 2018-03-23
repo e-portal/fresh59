@@ -34,7 +34,12 @@
                     </div>
 
                     <div class="one-article-date-btn">
-                        <div class="date">05 марта 2018</div>
+                        <div class="date">{mdates $article.date}</div>
+                        {if isset($article.review) }
+                        <div class="rewiev">
+                            {$article.review}
+                        </div>
+                        {/if}
                         <div class="rewiev">24</div>
                         <a href="/articles/{$item.url|mblower}" class="khob acty">Подробнее</a>
                     </div>
