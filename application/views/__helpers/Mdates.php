@@ -3,11 +3,10 @@
 class Zend_View_Helper_Mdates extends Zend_View_Helper_Abstract
 {
 
-    public function mdates($date)
+    public function mdates($date = null)
     {
-        /*if($date)
-        {
-            $months = array (
+        if ($date) {
+            $months = array(
                 1 => 'января',
                 2 => 'февраля',
                 3 => 'марта',
@@ -21,8 +20,11 @@ class Zend_View_Helper_Mdates extends Zend_View_Helper_Abstract
                 11 => 'ноября',
                 12 => 'декабря');
 
-            $format = str_replace("%m",$months[(int)date('m',$timestamp)],$format);
-            $formatter='auto';
-        }*/
+            $day = date("d", strtotime('2017-02-23'));
+            $year = date("Y", strtotime('2017-02-23'));
+            $month = $months[date("n", strtotime('2017-02-23'))];
+
+            return $day . ' ' . $month . ' ' . $year;
+        }
     }
 }
