@@ -9,7 +9,6 @@
 </div>
 <div class="span-12 faq_block no_margin">
     {if $faq}
-    <pre>{$faq|var_dump}</pre>
     {foreach from=$faq item=faq_item name=glossary}
 
 
