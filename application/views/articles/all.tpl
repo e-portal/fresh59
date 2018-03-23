@@ -34,10 +34,10 @@
                     </div>
 
                     <div class="one-article-date-btn">
-                        <div class="date">{mdates $article.date}</div>
-                        {if isset($article.review) }
+                        <div class="date">{mdates $item.date}</div>
+                        {if isset($item.review) }
                         <div class="rewiev">
-                            {$article.review}
+                            {$item.review}
                         </div>
                         {/if}
                         <div class="rewiev">24</div>
