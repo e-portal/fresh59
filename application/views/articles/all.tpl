@@ -20,6 +20,10 @@
             <div class="three-column">
                 {foreach from=$articles item=item name=footer_articles}
 
+                <pre>
+                    {$item|var_dump}
+                </pre>
+
                 <div class="one-article">
 
                     {if isset($item.img) }
