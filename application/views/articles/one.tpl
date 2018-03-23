@@ -28,7 +28,7 @@
                 </div>
                 {/if}
                 <div class="one-article-date-btn one-article-under-img">
-                    <div class="date">05 марта 2018</div>
+                    <div class="date">{$article.date}</div>
                     <div class="rewiev">24</div>
                 </div>
                 {$article.full_text}
