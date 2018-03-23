@@ -29,7 +29,7 @@
                 {/if}
                 <div class="one-article-date-btn one-article-under-img">
                     <div class="date">{mdates $article.date}</div>
-                    <div class="rewiev">{$article.review}</div>
+                    <div class="rewiev">{$article.review ? $article.review : ''}</div>
                 </div>
                 {$article.full_text}
 
