@@ -19,8 +19,8 @@ class Zend_View_Helper_Css extends Zend_View_Helper_Abstract {
 		    }
 		}
 		$hash = md5($hash);
-		if (file_exists("{$_SERVER['DOCUMENT_ROOT']}/styles/tmp/{$hash}.css"))
-			return "/styles/tmp/{$hash}.css";
+        if (file_exists("{$_SERVER['DOCUMENT_ROOT']}/styles/fresh_tmp/{$hash}.css"))
+            return "/styles/fresh_tmp/{$hash}.css";
 		else {
 			foreach ($fileNames as $fileName) {
 			    $path = $_SERVER['DOCUMENT_ROOT'] . '/styles/' . $fileName . '.css';
@@ -28,8 +28,8 @@ class Zend_View_Helper_Css extends Zend_View_Helper_Abstract {
 			}
 			$minifier = new Minify_CSS();
 			$minCss = $minifier->minify($css);
-			file_put_contents("{$_SERVER['DOCUMENT_ROOT']}/styles/tmp/{$hash}.css", $minCss);
-			return "/styles/tmp/{$hash}.css";
+            file_put_contents("{$_SERVER['DOCUMENT_ROOT']}/styles/fresh_tmp/{$hash}.css", $minCss);
+            return "/styles/fresh_tmp/{$hash}.css";
 		}
 	}
 }
