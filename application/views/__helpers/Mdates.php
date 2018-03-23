@@ -3,7 +3,7 @@
 class Zend_View_Helper_Mdates extends Zend_View_Helper_Abstract
 {
 
-    public function mdates($date = null)
+    public function mdates($date)
     {
         if ($date) {
             $months = array(
