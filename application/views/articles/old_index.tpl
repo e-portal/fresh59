@@ -3,7 +3,8 @@
 {if $id}
 
 <nav class="breadcumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
-    <a href="/">Главная</a><i>→</i><a href="/articles">Статьи</a><i>→</i><span>{$article.announce}</span>
+    <a href="/">Главная</a><i>→</i><a href="/articles">Статьи</a>
+    <i>→</i><span>{$article.announce}</span>
 </nav>
 
 <h1 class="blue-head">{$article.announce}</h1>

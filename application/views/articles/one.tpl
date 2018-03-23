@@ -6,16 +6,16 @@
             <meta itemprop="position" content="1">
         </div>
         <div itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="button">
-            <a href="/" itemprop="item">Статьи</a>
-            <meta itemprop="position" content="1">
+            <a href="/articles" itemprop="item">Статьи</a>
+            <meta itemprop="position" content="2">
         </div>
         <div itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="button">
-            <span itemprop="name" class="label1">Как правильно выбрать бытовую технику? Секреты долгих лет службы</span>
+            <span itemprop="name" class="label1">{$article.announce}</span>
             <meta itemprop="position" content="3">
         </div>
 
     </div>
-    <h1 class="liner cent"><span>Как правильно выбрать бытовую технику? Секреты долгих лет службы</span></h1>
+    <h1 class="liner cent"><span>{$article.announce}</span></h1>
     <div class="ourr left-right-banner">
         <div class="left-banner">
             <div class="left-banner-content">
