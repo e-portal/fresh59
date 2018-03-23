@@ -22,7 +22,6 @@
         <div class="right-banner">
             <div class="one-content">
                 {debug}
-                {$article}
                 {if isset($article.img) }
                 <div class="article-img">
                     <img src="/assets/img/articles/{$article.img}">
