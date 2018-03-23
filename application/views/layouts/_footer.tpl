@@ -28,11 +28,15 @@
                 <img src="/assets/img/logo.png" alt="">
                 <p>Мы в социальных сетях</p>
                 <div class="link">
-                    <a href="https://www.facebook.com/590.ua" class="linky"><img src="/assets/img/white-face.png"
-                                                                                 alt=""></a>
-                    <a href="https://twitter.com/590Ua" class="linky"><img src="/assets/img/white-twit.png" alt=""></a>
-                    <a href="https://plus.google.com/101839783687775705263?rel=author" class="linky"><img
-                                src="/assets/img/white-gogle.png" alt=""></a>
+                    <a href="https://www.facebook.com/590.ua" class="linky" rel="nofollow">
+                        <img src="/assets/img/white-face.png" alt="">
+                    </a>
+                    <a href="https://twitter.com/590Ua" class="linky" rel="nofollow">
+                        <img src="/assets/img/white-twit.png" alt="">
+                    </a>
+                    <a href="https://plus.google.com/101839783687775705263?rel=author" class="linky" rel="nofollow">
+                        <img src="/assets/img/white-gogle.png" alt="">
+                    </a>
                 </div>
 
 
@@ -44,12 +48,12 @@
                 <p>590.ua</p>
 
                 <ul>
-                    <li><a href="">Акции</a></li>
-                    <li><a href="">Оплата</a></li>
-                    <li><a href="">Доставка</a></li>
-                    <li><a href="">Гарантии и сервис</a></li>
+                    <li><a href="/news">Акции</a></li>
+                    <li><a href="/page/payment">Оплата</a></li>
+                    <li><a href="/page/delivery">Доставка</a></li>
+                    <li><a href="/page/guarantee">Гарантии и сервис</a></li>
                     <li><a href="/articles/faq">Вопрос/Ответ</a></li>
-                    <li><a href="">Контакты</a></li>
+                    <li><a href="/page/address">Контакты</a></li>
                     <li><a href="">Бонус-клуб</a></li>
                     <li><a href="/articles">Статьи</a></li>
                 </ul>
