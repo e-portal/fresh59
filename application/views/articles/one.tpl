@@ -13,24 +13,11 @@
             <span itemprop="name" class="label1">{$article.announce}</span>
             <meta itemprop="position" content="3">
         </div>
-
     </div>
     <h1 class="liner cent"><span>{$article.announce}</span></h1>
     <div class="ourr left-right-banner">
         <div class="left-banner">
-            <div class="left-banner-content">
-                <img src="/assets/img/sliders/left-banner.png" alt="">
-                <div class="slider-contain">
-                    <div class="head-item">
-                        <a href=""><img src="/assets/img/logo.png" alt=""></a>
-                        <span>Покупать очень просто!</span>
-                    </div>
-                    <div class="slider-text">
-                        <span>Программа лояльности</span>
-                        <div>для постоянных покупателей</div>
-                    </div>
-                </div>
-            </div>
+            {include file='layouts/left-banner.tpl'}
         </div>
         <div class="right-banner">
             <div class="one-content">
@@ -39,7 +26,10 @@
                     <img src="/assets/img/articles/{$article.img}">
                 </div>
                 {/if}
-
+                <div class="one-article-date-btn one-article-under-img">
+                    <div class="date">05 марта 2018</div>
+                    <div class="rewiev">24</div>
+                </div>
                 {$article.full_text}
 
                 <div class="social-back">
@@ -51,7 +41,7 @@
                             <a href="/" class="linky"><img src="/assets/img/white-gogle.png" alt=""></a>
                         </div>
                     </div>
-                    <a href="/" class="khob khob-back acty">к статьям</a>
+                    <a href="/articles" class="khob khob-back acty">к статьям</a>
                 </div>
             </div>
         </div>
