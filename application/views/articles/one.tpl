@@ -27,7 +27,7 @@
                 </div>
                 {/if}
                 <div class="one-article-date-btn one-article-under-img">
-                    <div class="date">{mdates $article.date}</div>
+                    <div class="date">{mdates arr=$article.date}</div>
                     {if isset($article.review) }
                     <div class="rewiev">
                         {$article.review}
