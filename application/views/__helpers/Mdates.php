@@ -20,9 +20,9 @@ class Zend_View_Helper_Mdates extends Zend_View_Helper_Abstract
                 11 => 'ноября',
                 12 => 'декабря');
 
-            $day = date("d", strtotime('2017-02-23'));
-            $year = date("Y", strtotime('2017-02-23'));
-            $month = $months[date("n", strtotime('2017-02-23'))];
+            $day = date("d", strtotime($date));
+            $year = date("Y", strtotime($date));
+            $month = $months[date("n", strtotime($date))];
 
             return $day . ' ' . $month . ' ' . $year;
         }
