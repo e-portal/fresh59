@@ -28,14 +28,15 @@
                 <img src="/assets/img/logo.png" alt="">
                 <p>Мы в социальных сетях</p>
                 <div class="link">
-                    <a href="/" class="linky"><img src="/assets/img/white-face.png" alt=""></a>
-                    <a href="/" class="linky"><img src="/assets/img/white-twit.png" alt=""></a>
-                    <a href="/" class="linky"><img src="/assets/img/white-gogle.png" alt=""></a>
-
+                    <a href="https://www.facebook.com/590.ua" class="linky"><img src="/assets/img/white-face.png"
+                                                                                 alt=""></a>
+                    <a href="https://twitter.com/590Ua" class="linky"><img src="/assets/img/white-twit.png" alt=""></a>
+                    <a href="https://plus.google.com/101839783687775705263?rel=author" class="linky"><img
+                                src="/assets/img/white-gogle.png" alt=""></a>
                 </div>
 
 
-                <span>2007-2017. Все права защищены</span>
+                <span>2007-{$smarty.now|date_format:"%Y"}. Все права защищены</span>
             </div>
 
             <div class="item-foot">
@@ -47,10 +48,10 @@
                     <li><a href="">Оплата</a></li>
                     <li><a href="">Доставка</a></li>
                     <li><a href="">Гарантии и сервис</a></li>
-                    <li><a href="">Вопрос/Ответ</a></li>
+                    <li><a href="/articles/faq">Вопрос/Ответ</a></li>
                     <li><a href="">Контакты</a></li>
                     <li><a href="">Бонус-клуб</a></li>
-                    <li><a href="">Статьи</a></li>
+                    <li><a href="/articles">Статьи</a></li>
                 </ul>
             </div>
 
