@@ -9,9 +9,9 @@
 </div>
 <div class="span-12 faq_block no_margin">
     {if $faq}
+    <pre>{$faq|var_dump}</pre>
     {foreach from=$faq item=faq_item name=glossary}
 
-    <pre>{$faq_item|print_r}</pre>
 
     <div class="span-12 faq_item no_margin">
         <div class="faq_control_button"><img src="/assets/media/faq_toggle.png"></div>
