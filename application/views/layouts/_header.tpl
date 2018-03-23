@@ -18,13 +18,6 @@
                             <li><a href="http://fresh.590.ua{$menutop.param}">{$menutop.label|translate}</a></li>
                             {/if}
                             {/foreach}
-
-                            <!--<li><a href="/">Акции</a></li>
-                            <li><a href="/">Оплата</a></li>
-                            <li><a href="/">Доставка</a></li>
-                            <li><a href="/">Гарантии и сервис</a></li>
-                            <li><a href="/">Вопрос / Ответ</a></li>
-                            <li><a href="/">Контакты</a></li>-->
                         </ul>
                     </div>
 
@@ -150,8 +143,6 @@
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
