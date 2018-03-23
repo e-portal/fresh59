@@ -21,7 +21,7 @@
         </div>
         <div class="right-banner">
             <div class="one-content">
-                {debug}
+                {debug}{$article|var_dump}
                 {if isset($article.img) }
                 <div class="article-img">
                     <img src="/assets/img/articles/{$article.img}">
