@@ -26,5 +26,6 @@ class Zend_View_Helper_Mdates extends Zend_View_Helper_Abstract
 
             return $day . ' ' . $month . ' ' . $year;
         }
+        return '';
     }
 }

@@ -28,9 +28,8 @@
                 </div>
                 {/if}
                 <div class="one-article-date-btn one-article-under-img">
-                    <!--                    <div class="date">{$article.date|date_format:"%e %B %Y"}</div>-->
                     <div class="date">{mdates $article.date}</div>
-                    <div class="rewiev">24</div>
+                    <div class="rewiev">{if $article.review}</div>
                 </div>
                 {$article.full_text}
 
