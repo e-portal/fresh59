@@ -11,7 +11,7 @@
     {if $faq}
     {foreach from=$faq item=faq_item name=glossary}
 
-    <pre>{$faq_item|var_dump}</pre>
+    <pre>{$faq_item|print_r}</pre>
 
     <div class="span-12 faq_item no_margin">
         <div class="faq_control_button"><img src="/assets/media/faq_toggle.png"></div>
