@@ -25,12 +25,12 @@
     <div class="foot">
         <div class="container wrap">
             <div class="item-foot">
-                <img src="./img/logo.png" alt="">
+                <img src="/assets/img/logo.png" alt="">
                 <p>Мы в социальных сетях</p>
                 <div class="link">
-                    <a href="/" class="linky"><img src="./img/white-face.png" alt=""></a>
-                    <a href="/" class="linky"><img src="./img/white-twit.png" alt=""></a>
-                    <a href="/" class="linky"><img src="./img/white-gogle.png" alt=""></a>
+                    <a href="/" class="linky"><img src="/assets/img/white-face.png" alt=""></a>
+                    <a href="/" class="linky"><img src="/assets/img/white-twit.png" alt=""></a>
+                    <a href="/" class="linky"><img src="/assets/img/white-gogle.png" alt=""></a>
 
                 </div>
 
@@ -103,6 +103,6 @@
 
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="./js/main.js"></script>
+<script src="/assets/js/main.js"></script>
 </body>
 </html>
