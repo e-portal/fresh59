@@ -1,0 +1,176 @@
+.accordion {
+    width: -webkit-fill-available;
+    float: left;
+}
+
+.accordion .accordion_item {
+    margin-bottom: 1px;
+    position: relative;
+    border-bottom: 1px solid #eaeaea;
+    padding-left: 40px;
+}
+
+.accordion .title_block {
+    font: 17px 'SFUIDisplay-Semibold';
+    color: #000;
+    cursor: pointer;
+    -webkit-transition: all .2s linear 0s;
+    -webkit-transition-delay: .2s 0s;
+    transition: all .2s linear 0s;
+    padding: 3px 0;
+
+}
+
+.accordion .title_block:before {
+    content: url('../img/qa-arrow.png');
+    content: '\203A';
+    height: 28px;
+    font-size: 20px;
+    text-align: center;
+    width: 28px;
+    border: 1px solid #ececec;
+    border-radius: 25px;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    position: absolute;
+    right: 20px;
+    top: -2px;
+}
+
+.accordion .accordion_item:hover .title_block:before {
+    border-color: #fbd402;
+    background: #fbd402;
+    transition: all .5s ease 0s;
+
+}
+
+.accordion .active_block .title_block:before {
+    background: #fbd402;
+    transform: rotate(-90deg);
+    border-color: #fbd402;
+}
+
+.accordion .info-accord {
+    display: none;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+.accordion .info-accord p {
+    margin: 0;
+}
+
+.accordion .info-accord a {
+    font: 14px 'SFUIDisplay-Medium';
+    color: #53a2d3;
+}
+
+.say-question {
+    float: right;
+    padding: 22px 15px 0 0px;
+
+}
+
+.say-question span {
+    font: 13px 'SF-UI-Display-Light';
+    color: #8b9095;
+    padding-right: 33px;
+
+}
+
+.say-question a {
+    background: #fbd402;
+    border-radius: 25px;
+    padding: 9px 25px;
+    font: 14px 'SFUIDisplay-Medium';
+    color: #313e49;
+}
+
+.enter {
+    display: none;
+}
+
+.watched-slider .slick-slide img {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+/*-----pop-up-----*/
+
+#popup {
+    display: none;
+    width: 100%;
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.popup-inner {
+    top: 20%;
+    position: relative;
+    width: 700px;
+    background: #fff;
+    height: 400px;
+    padding: 10px 23px 43px;
+    margin: 0 auto;
+}
+
+#popup .close {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 30px;
+    right: 25px;
+    background: none;
+    cursor: pointer;
+}
+
+#popup .popup-block {
+    width: 49%;
+    display: inline-block;
+}
+
+#popup .popup-block:last-child {
+    text-align: right
+}
+
+#popup p {
+    font: 14px 'SFUIDisplay-Medium';
+    color: #aaadb1;
+    text-transform: uppercase;
+    padding: 17px 0 6px 30px;
+    margin: 0;
+    text-align: left;
+}
+
+#popup input,
+#popup textarea {
+    font: 14px 'SFUIDisplay-Bold';
+    color: #313e49;
+    padding: 11px 20px;
+    border: 1px solid #ececec;
+    background-color: #f9f9f9;
+    border-radius: 25px;
+    width: 84%;
+    margin-bottom: 15px;
+}
+
+#popup textarea {
+    width: 82%;
+    font-size: 13px;
+}
+
+#popup .button {
+    cursor: pointer;
+    background: #fbd402;
+    width: 94%;
+    font: 17px 'SFUIDisplay-Medium';
+    margin-top: 30px;
+}

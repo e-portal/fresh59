@@ -25,7 +25,7 @@ class Zend_View_Helper_Mdates extends Zend_View_Helper_Abstract
             $month = $months[date("n", strtotime($date))];
 
 //            return $day . ' ' . $month . ' ' . $year;
-            return var_dump($date);
+            return var_dump($date[0]);
         }
         return '';
     }
