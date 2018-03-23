@@ -8,6 +8,8 @@ class ArticlesController extends Alcotec_Frontend_Controller_ArticlesController 
         $lang = Zend_Registry::isRegistered('lang') ? Zend_Registry::get('lang') : 'ru';
         $rawId = $this->_getParam('id');
 
+        $this->view->body_class = 'article';
+
         if ($this->_hasParam('id') && $this->_getParam('id') != 'page') {
             if ($this->_getParam('id') && (string)(int)$rawId == $rawId) {
                 $id = intval($this->_getParam('id'));

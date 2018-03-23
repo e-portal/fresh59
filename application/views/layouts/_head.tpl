@@ -12,4 +12,4 @@
     <link rel="stylesheet" href="/assets/css/mob-question.css">
     <link rel="stylesheet" href="/assets/css/media.css">
 </head>
-<body class="articles">
+<body class="{$body_class|default:'no title'}">
