@@ -1,3 +1,4 @@
+{include file='layouts/_head.tpl'}
 <header class="headers">
     <div class="hedd wrap">
         <div class="container">
