@@ -20,8 +20,6 @@
             <div class="three-column">
                 {foreach from=$articles item=item name=footer_articles}
 
-                <pre>{$item.date|var_dump}</pre>
-
                 <div class="one-article">
 
                     {if isset($item.img) }
@@ -36,7 +34,7 @@
                     </div>
 
                     <div class="one-article-date-btn">
-                        <div class="date">{mdates $item.date}</div>
+                        <div class="date">{mdates arr=$item.date}</div>
                         {if isset($item.review) }
                         <div class="rewiev">
                             {$item.review}
