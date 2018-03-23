@@ -25,15 +25,6 @@
     {else}
     <p>Материал готовится и скоро будет выложен на сайт.</p>
     {/if}
-
-    {literal}
-    <script>
-        $('.faq_item').on('click', function () {
-            $('.faq_text').hide();
-            $(this).find('.faq_text').show();
-        });
-    </script>
-    {/literal}
 </div>
 
 <div class="clear"></div>
