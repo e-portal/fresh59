@@ -2,11 +2,11 @@
     <div class="bread-crumbs breadcrumbs mobile-display-none" id="breadcrumbs" itemscope=""
          itemtype="http://schema.org/BreadcrumbList">
         <div itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="button">
-            <a href="http://13.j2landing.com" itemprop="item">Главная</a>
+            <a href="/" itemprop="item">Главная</a>
             <meta itemprop="position" content="1">
         </div>
         <div itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="button">
-            <a href="http://13.j2landing.com" itemprop="item">Статьи</a>
+            <a href="/" itemprop="item">Статьи</a>
             <meta itemprop="position" content="1">
         </div>
         <div itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="button">
@@ -19,10 +19,10 @@
     <div class="ourr left-right-banner">
         <div class="left-banner">
             <div class="left-banner-content">
-                <img src="./img/sliders/left-banner.png" alt="">
+                <img src="/assets/img/sliders/left-banner.png" alt="">
                 <div class="slider-contain">
                     <div class="head-item">
-                        <a href=""><img src="./img/logo.png" alt=""></a>
+                        <a href=""><img src="/assets/img/logo.png" alt=""></a>
                         <span>Покупать очень просто!</span>
                     </div>
                     <div class="slider-text">
@@ -35,7 +35,7 @@
         <div class="right-banner">
             <div class="one-content">
                 <div class="article-img">
-                    <img src="img/articles/big-art.png">
+                    <img src="/assets/img/articles/big-art.png">
                 </div>
                 <div class="one-article-date-btn one-article-under-img">
                     <div class="date">05 марта 2018</div>
@@ -122,12 +122,12 @@
                     <div class="social">
                         <div>Поделится:</div>
                         <div class="link">
-                            <a href="/" class="linky"><img src="./img/white-face.png" alt=""></a>
-                            <a href="/" class="linky"><img src="./img/white-twit.png" alt=""></a>
-                            <a href="/" class="linky"><img src="./img/white-gogle.png" alt=""></a>
+                            <a href="/" class="linky"><img src="/assets/img/white-face.png" alt=""></a>
+                            <a href="/" class="linky"><img src="/assets/img/white-twit.png" alt=""></a>
+                            <a href="/" class="linky"><img src="/assets/img/white-gogle.png" alt=""></a>
                         </div>
                     </div>
-                    <a href="articles.html" class="khob khob-back acty">к статьям</a>
+                    <a href="/" class="khob khob-back acty">к статьям</a>
                 </div>
             </div>
         </div>
@@ -136,13 +136,13 @@
         <div class="container">
             <div class="orii">
                 <div class="orig-item">
-                    <img src="./img/orig1.png" alt="">
+                    <img src="/assets/img/orig1.png" alt="">
                     <p><span>100% оригинал</span><br> от европейских производителей</p>
                 </div>
 
 
                 <div class="orig-item">
-                    <img src="./img/orig2.png" alt="">
+                    <img src="/assets/img/orig2.png" alt="">
                     <p><span>Акции!<br> Подарки! Скидки!</span>
                         <br>каждые 2-е недели что-то
                         новенькое</p>
@@ -150,7 +150,7 @@
 
 
                 <div class="orig-item">
-                    <img src="./img/orig3.png" alt="">
+                    <img src="/assets/img/orig3.png" alt="">
                     <p>Быстрая доставка в любой
                         город Украины. От 2000 грн
                         по Киеву <span>БЕСПЛАТНО</span></p>
@@ -158,7 +158,7 @@
 
 
                 <div class="orig-item">
-                    <img src="./img/orig4.png" alt="">
+                    <img src="/assets/img/orig4.png" alt="">
                     <p>Наши менеджеры<br>
                         самые отзывчивые и
                         профессиональные</p>
@@ -167,5 +167,5 @@
             </div>
         </div>
     </div>
-    <div class="doww"><img src="./img/verh.png" alt=""></div>
+    <div class="doww"><img src="/assets/img/verh.png" alt=""></div>
 </div>

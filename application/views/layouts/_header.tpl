@@ -4,7 +4,7 @@
         <div class="container">
             <div class="main-hedd">
                 <div class="head-item">
-                    <a href=""><img src="./img/logo.png" alt=""></a>
+                    <a href=""><img src="/assets/img/logo.png" alt=""></a>
                     <span>Покупать очень просто!</span>
                 </div>
                 <div class="head-item">
@@ -102,7 +102,7 @@
                     <div class="inpp">
                         <form action="">
                             <input type="поиск" placeholder="Поиск товара">
-                            <div class="searc"><img src="./img/seac.png" alt=""></div>
+                            <div class="searc"><img src="/assets/img/seac.png" alt=""></div>
                         </form>
                     </div>
                 </div>
