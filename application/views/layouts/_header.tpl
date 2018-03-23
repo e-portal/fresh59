@@ -10,13 +10,21 @@
                 <div class="head-item">
                     <div class="main-menu">
                         <ul>
+                            {foreach from=$topmenu item=menutop name=topmenu}
+                            {if $menutop.type=='text'}
+                            <li><a href="http://fresh.590.ua/page/{$menutop.alias}">{$menutop.label|translate}</a></li>
+                            {/if}
+                            {if $menutop.type=='link'}
+                            <li><a href="http://fresh.590.ua{$menutop.param}">{$menutop.label|translate}</a></li>
+                            {/if}
+                            {/foreach}
 
-                            <li><a href="/">Акции</a></li>
+                            <!--<li><a href="/">Акции</a></li>
                             <li><a href="/">Оплата</a></li>
                             <li><a href="/">Доставка</a></li>
                             <li><a href="/">Гарантии и сервис</a></li>
                             <li><a href="/">Вопрос / Ответ</a></li>
-                            <li><a href="/">Контакты</a></li>
+                            <li><a href="/">Контакты</a></li>-->
                         </ul>
                     </div>
 

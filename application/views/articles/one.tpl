@@ -29,8 +29,14 @@
                 {/if}
                 <div class="one-article-date-btn one-article-under-img">
                     <div class="date">{mdates $article.date}</div>
+                    {if isset($article.review) }
+                    <div class="rewiev">
+                        {$article.review}
+                    </div>
+                    {/if}
                     <div class="rewiev">24</div>
                 </div>
+
                 {$article.full_text}
 
                 <div class="social-back">
@@ -55,7 +61,6 @@
                     <p><span>100% оригинал</span><br> от европейских производителей</p>
                 </div>
 
-
                 <div class="orig-item">
                     <img src="/assets/img/orig2.png" alt="">
                     <p><span>Акции!<br> Подарки! Скидки!</span>
@@ -63,14 +68,12 @@
                         новенькое</p>
                 </div>
 
-
                 <div class="orig-item">
                     <img src="/assets/img/orig3.png" alt="">
                     <p>Быстрая доставка в любой
                         город Украины. От 2000 грн
                         по Киеву <span>БЕСПЛАТНО</span></p>
                 </div>
-
 
                 <div class="orig-item">
                     <img src="/assets/img/orig4.png" alt="">
