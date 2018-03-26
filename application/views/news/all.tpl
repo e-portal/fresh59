@@ -43,7 +43,7 @@
             </div>
 
             <!--            START pagination-->
-            {assign var=pages value=$paginator->getPages()}
+            <!--{assign var=pages value=$paginator->getPages()}
             {if $pages->pageCount > 1}
             <div class="blocks-pagination">
                 {if $pages->current > 1}
@@ -72,7 +72,7 @@
                 <a class="blocks-pagination-forward blocks-pagination-arrow"
                    href="/articles/page/{$pages->current+1}"></a>
                 {/if}
-            </div>
+            </div>-->
             <!--            End pagination-->
 
         </div>
