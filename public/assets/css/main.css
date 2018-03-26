@@ -116,7 +116,9 @@ h6 {
     align-items: center;
     margin: 55px auto;
 }
-.blocks-pagination a {
+
+.blocks-pagination a,
+.blocks-pagination span {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,17 +131,20 @@ h6 {
     border: 1px solid #eaeaea;
     border-radius: 50%;
 }
-.blocks-pagination a:hover,
+
+.blocks-pagination .pagin-number:hover,
 .blocks-pagination .pagin-number-active {
     background: #fbd402;
     color: #000;
     border-color: #fbd402;
 }
-.blocks-pagination a.blocks-pagination-arrow {
+
+.blocks-pagination .blocks-pagination-arrow {
     margin: 0 40px;
     position: relative;
 }
-.blocks-pagination a.blocks-pagination-arrow::before {
+
+.blocks-pagination .blocks-pagination-arrow::before {
     content: '';
     position: relative;
     width: inherit;
@@ -148,15 +153,18 @@ h6 {
     justify-content: center;
     align-items: center;
 }
-.blocks-pagination a.blocks-pagination-arrow:hover {
+
+.blocks-pagination .blocks-pagination-arrow:hover {
     background: #f9f9f9;
 }
-.blocks-pagination a.blocks-pagination-back::before {
+
+.blocks-pagination .blocks-pagination-back::before {
     background: url(../img/rigs.png) center no-repeat;
     background-size: 20%;
     transform: rotate(180deg);
 }
-.blocks-pagination a.blocks-pagination-forward::before {
+
+.blocks-pagination .blocks-pagination-forward::before {
     background: url(../img/rigs.png) no-repeat center center;
     background-size: 20%;
 }
@@ -278,6 +286,10 @@ h6 {
 
 .main-hedd {
     display: flex
+}
+
+.menu-mob {
+    display: none;
 }
 
 .menu {
