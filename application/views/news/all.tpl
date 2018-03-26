@@ -43,11 +43,11 @@
                 {if $pages->pageCount > 1}
                 <div class="blocks-pagination">
                     {if $pages->current > 1}
-                    <a href="{if $pages->current-1=='1'}/news{else}/news/page/{$pages->current-1}{/if}"
+                    <a href="/news{if $pages->current-1=='1'}{$firstPageUrl}{else}{$firstPageUrl}/page/{$pages->current-1}{/if}"
                        class="blocks-pagination-back blocks-pagination-arrow"></a>
                     {/if}
                     {if $pages->firstPageInRangeNum!=1}
-                    <a href="{$firstPageUrl}" class="pagin-number active-pagin-number">1</a>
+                    <a href="/news" class="pagin-number active-pagin-number">1</a>
                     <span>...</span>
                     {/if}
                     {if $pages->pagesInRange}
