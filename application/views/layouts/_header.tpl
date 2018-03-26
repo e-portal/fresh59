@@ -49,7 +49,7 @@
 
                         <div class="inpp">
                             <form action="">
-                                <input type="поиск" placeholder="Перезвонить? Введите номер...">
+                                <input type="поиск" placeholder="Перезвонить? Введите номер..." class="numb">
                                 <div class="send"><img src="/assets/img/phon.png" alt=""></div>
                             </form>
                         </div>
