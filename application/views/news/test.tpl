@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container wrap">
     <div class="bread-crumbs breadcrumbs mobile-display-none" id="breadcrumbs" itemscope=""
          itemtype="http://schema.org/BreadcrumbList">
         <div itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="button">
@@ -12,4 +12,9 @@
     </div>
     <h1 class="liner cent"><span>Акции интернет-магазина</span></h1>
 
+
+    {include file='layouts/slider_view.tpl'}
+    {include file='layouts/orig.tpl'}
+
+    <div class="doww"><img src="./img/verh.png" alt=""></div>
 </div>
