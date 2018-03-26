@@ -116,7 +116,6 @@ h6 {
     align-items: center;
     margin: 55px auto;
 }
-
 .blocks-pagination a,
 .blocks-pagination span {
     display: flex;
@@ -131,19 +130,16 @@ h6 {
     border: 1px solid #eaeaea;
     border-radius: 50%;
 }
-
 .blocks-pagination .pagin-number:hover,
 .blocks-pagination .pagin-number-active {
     background: #fbd402;
     color: #000;
     border-color: #fbd402;
 }
-
 .blocks-pagination .blocks-pagination-arrow {
     margin: 0 40px;
     position: relative;
 }
-
 .blocks-pagination .blocks-pagination-arrow::before {
     content: '';
     position: relative;
@@ -153,17 +149,14 @@ h6 {
     justify-content: center;
     align-items: center;
 }
-
 .blocks-pagination .blocks-pagination-arrow:hover {
     background: #f9f9f9;
 }
-
 .blocks-pagination .blocks-pagination-back::before {
     background: url(../img/rigs.png) center no-repeat;
     background-size: 20%;
     transform: rotate(180deg);
 }
-
 .blocks-pagination .blocks-pagination-forward::before {
     background: url(../img/rigs.png) no-repeat center center;
     background-size: 20%;
@@ -3137,18 +3130,21 @@ ul#selectsMenuBoxi > li.options:hover {
 }
 
 .present {
-    text-align: center;
     width: 85px;
-    height: auto;
+    position: absolute;
+    justify-content: center;
+    height: 107px;
     z-index: 5;
-    display: block;
-    bottom: 78px;
+    flex-wrap: wrap;
+    top: -3px;
     left: 169px;
 }
 
 .present p {
     width: 100%;
     padding-top: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 .present .numeral {
