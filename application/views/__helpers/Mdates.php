@@ -22,7 +22,7 @@ class Zend_View_Helper_Mdates extends Zend_View_Helper_Abstract
 
             $day = date("d", strtotime($date));
             $year = date("Y", strtotime($date));
-            $month = $months[date("n", strtotime($date))];
+            $month = $months[date("n", strtotime(str_replace('/', '-', $date)))];
 
             return $day . ' ' . $month . ' ' . $year;
         }
