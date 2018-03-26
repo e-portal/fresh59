@@ -22,9 +22,9 @@
             <div class="three-column">
                 {foreach from=$news item=new key=key name=news}
                 <div class="one-sale">
-                    {if $new.end_date}
-                    <div class="sale-from-to">Акция действует с {$new.start_date}г по 28 мая 2018г
-                        {$new.end_date|var_dump}
+                    {if $news.is_action==1}
+                    <div class="sale-from-to">Акция действует с {mdates arr=$new.start_date}г по {mdates
+                        arr=$new.end_date}г
                     </div>
                     {/if}
                     <div class="sale-img-text">
