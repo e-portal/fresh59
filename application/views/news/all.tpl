@@ -19,7 +19,7 @@
         <div class="right-banner">
             <div class="three-column">
 
-                {foreach from=$news item=news key=key name=news}
+                {foreach from=$news item=article key=key name=news}
 
                 <div class="one-sale">
                     <div class="sale-from-to">Акция действует с 08 февраля 2018г по 28 мая 2018г</div>
@@ -32,8 +32,7 @@
                             </div>
                         </div>
                     </div>
-                    <a><h5>АКЦИЯ GOENJE: ПРИ ПОКУПКЕ ТЕХНИКИ
-                            GORENJE ГАРАНТИРОВАНЫ ПОДАРКИ
+                    <a><h5>{$article.name}
                         </h5></a>
                     <div class="timer" data-year="2018" data-month="05" data-days="25"></div>
                     <a class="khob acty">Подробнее</a>
