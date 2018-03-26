@@ -42,30 +42,32 @@
             <!--            START pagination-->
             {assign var=pages value=$paginator->getPages()}
             {if $pages->pageCount > 1}
-            <div class="span-12 no_margin category_nav paggination">
-                <p>Страницы:</p>
+            <div class="blocks-pagination">
                 {if $pages->current > 1}
-                <a href="/news{if $pages->current-1=='1'}{$firstPageUrl}{else}{$firstPageUrl}/page/{$pages->current-1}{/if}">&larr;</a>
+                <a href="/news{if $pages->current-1=='1'}{$firstPageUrl}{else}{$firstPageUrl}/page/{$pages->current-1}{/if}"
+                   class="blocks-pagination-back blocks-pagination-arrow"></a>
                 {/if}
                 {if $pages->firstPageInRangeNum!=1}
-                <a href="{$firstPageUrl}">1</a>
-                <p>...</p>
+                <a href="{$firstPageUrl}" class="pagin-number active-pagin-number">1</a>
+                <span>...</span>
                 {/if}
                 {if $pages->pagesInRange}
                 {foreach from=$pages->pagesInRange item=p key=k}
                 {if $pages->current!=$k}
-                <a href="/news{if $k=='1'}{$firstPageUrl}{else}{$firstPageUrl}/page/{$k}{/if}">{$k}</a>
+                <a href="/news{if $k=='1'}{$firstPageUrl}{else}{$firstPageUrl}/page/{$k}{/if}"
+                   class="pagin-number">{$k}</a>
                 {else}
-                <span class="current">{$pages->current}</span>
+                <a class="pagin-number pagin-number-active">{$pages->current}</a>
                 {/if}
                 {/foreach}
                 {/if}
                 {if $pages->pageCount && $pages->lastPageInRange != $pages->last}
-                <p>...</p>
-                <a href="/news{$firstPageUrl}/page/{$pages->pageCount}">{$pages->pageCount}</a>
+                <span>...</span>
+                <a href="/news{$firstPageUrl}/page/{$pages->pageCount}" class="pagin-number">{$pages->pageCount}</a>
                 {/if}
                 {if $pages->current < $pages->pageCount}
-                <a href="/news{$firstPageUrl}/page/{$pages->current+1}">&rarr;</a>
+                <a class="blocks-pagination-forward blocks-pagination-arrow"
+                   href="/news{$firstPageUrl}/page/{$pages->current+1}"></a>
                 {/if}
             </div>
             {/if}
