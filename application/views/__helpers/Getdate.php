@@ -5,6 +5,9 @@ class Zend_View_Helper_Getdate extends Zend_View_Helper_Abstract
 
     public function getdate($date, $val)
     {
+
+        var_dump($date, $val);
+        die;
         if ($date) {
 
             switch ($val) {
