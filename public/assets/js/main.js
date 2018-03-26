@@ -109,12 +109,6 @@ jQuery(document).ready(function () {
         $("html, body").css('overflow', 'visible')
     });
 
-
-    if ($("#phone").length) {
-        $('#phone').mask('+3 8(000) 000-00-00');
-    }
-
-
     if ($('.watched-small').length) {
         $('.watched-small').slick({
             slidesToShow: 4,
@@ -147,13 +141,13 @@ jQuery(document).ready(function () {
             infinite: true,
             fade: false,
             cssEase: 'linear',
-            // autoplay: true,
+            autoplay: true,
             autoplaySpeed: 5000
         });
     } else {
     }
 
-    // if ($('.watched-slider').length) {
+    if ($('.watched-slider').length) {
     $('.watched-slider').slick({
         slidesToShow: 5,
         responsive: [
@@ -177,7 +171,8 @@ jQuery(document).ready(function () {
         autoplay: true,
         autoplaySpeed: 5000
     });
-    // } else {}
+    } else {
+    }
 
 
     if ($('.slick').length) {
@@ -221,6 +216,14 @@ jQuery(document).ready(function () {
         });
         $('.owl').slick({
             slidesToShow: 2,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+
+                    }
+                }],
             slidesToScroll: 1,
             arrows: true,
             dots: false,

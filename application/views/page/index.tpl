@@ -6,7 +6,7 @@
 {elseif $pagetext}
 
 
-<div class="container">
+<div class="container wrap">
     <div class="bread-crumbs breadcrumbs mobile-display-none" id="breadcrumbs" itemscope=""
          itemtype="http://schema.org/BreadcrumbList">
         <div itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="button">
