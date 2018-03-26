@@ -5,7 +5,7 @@
 {include file='news/one.tpl'}
 
 {else}
-
+<h2>NEWS</h2>
 {include file='news/all.tpl'}
 
 {/if}
