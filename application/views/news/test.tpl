@@ -21,7 +21,9 @@
 
     <div class="right-banner">
         <div class="three-column">
-            RIGHT
+            {foreach from=$news item=new key=key name=news}
+            <h3>{$new.name}</h3>
+            {/foreach}
         </div>
     </div>
 
