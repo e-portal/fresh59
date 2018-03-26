@@ -2,11 +2,11 @@
 
 {if $singleNews}
 
-{include file='articles/one.tpl'}
+{include file='news/one.tpl'}
 
 {else}
 
-{include file='articles/all.tpl'}
+{include file='news/all.tpl'}
 
 {/if}
 
