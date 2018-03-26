@@ -1,4 +1,4 @@
-{include file=_header.tpl}
+{include file='layouts/_header.tpl'}
 
 {if $id}
 {include file='faq/one.tpl'}
@@ -6,4 +6,4 @@
 {include file='faq/all.tpl'}
 {/if}
 
-{include file=_footer.tpl}
+{include file='layouts/_footer.tpl'}

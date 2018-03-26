@@ -1,5 +1,3 @@
-{include file='layouts/_header.tpl'}
-
 <div class="container">
     <div class="bread-crumbs wrap breadcrumbs mobile-display-none" id="breadcrumbs" itemscope=""
          itemtype="http://schema.org/BreadcrumbList">
@@ -777,5 +775,3 @@
 </div>
 
 <div class="doww"><img src="/assets/img/verh.png" alt="up"></div>
-
-{include file='layouts/_footer.tpl'}
