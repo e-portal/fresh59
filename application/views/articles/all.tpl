@@ -9,7 +9,6 @@
             <span itemprop="name" class="label1">Статьи</span>
             <meta itemprop="position" content="2">
         </div>
-
     </div>
     <h1 class="liner cent"><span>Статьи</span></h1>
     <div class="ourr left-right-banner">
