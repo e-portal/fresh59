@@ -12,9 +12,7 @@
     </div>
     <h1 class="liner cent"><span>Акции интернет-магазина</span></h1>
     <div class="ourr left-right-banner">
-        <div class="left-banner">
-            {include file='layouts/left-banner.tpl'}
-        </div>
+
 
         <div class="right-banner">
             <div class="three-column">
