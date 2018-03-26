@@ -17,62 +17,62 @@
         <div class="left-banner">
             {include file='layouts/left-banner.tpl'}
         </div>
-    </div>
 
-    <div class="right-banner">
-        <div class="three-column">
-            {foreach from=$news item=new key=key name=news}
-            <div class="one-sale">
-                <div class="sale-from-to">Акция действует с 08 февраля 2018г по 28 мая 2018г</div>
-                <div class="sale-img-text">
-                    <img src="/assets/img/sliders/sale.png" alt="">
-                    <div class="sale-img-text-contain">
-                        <div class="sale-img-text-text">При покупке техники
-                            <span>Gorenje</span> Гарантированные
-                            подарки
+        <div class="right-banner">
+            <div class="three-column">
+                {foreach from=$news item=new key=key name=news}
+                <div class="one-sale">
+                    <div class="sale-from-to">Акция действует с 08 февраля 2018г по 28 мая 2018г</div>
+                    <div class="sale-img-text">
+                        <img src="/assets/img/sliders/sale.png" alt="">
+                        <div class="sale-img-text-contain">
+                            <div class="sale-img-text-text">При покупке техники
+                                <span>Gorenje</span> Гарантированные
+                                подарки
+                            </div>
                         </div>
                     </div>
+                    <a><h5>{$new.name}</h5></a>
+                    <div class="timer" data-year="2018" data-month="05" data-days="25"></div>
+                    <a class="khob acty">Подробнее</a>
                 </div>
-                <a><h5>{$new.name}</h5></a>
-                <div class="timer" data-year="2018" data-month="05" data-days="25"></div>
-                <a class="khob acty">Подробнее</a>
-            </div>
-            {/foreach}
-
-            <!--            START pagination-->
-            {assign var=pages value=$paginator->getPages()}
-            {if $pages->pageCount > 1}
-            <div class="blocks-pagination">
-                {if $pages->current > 1}
-                <a href="/news{if $pages->current-1=='1'}{$firstPageUrl}{else}{$firstPageUrl}/page/{$pages->current-1}{/if}"
-                   class="blocks-pagination-back blocks-pagination-arrow"></a>
-                {/if}
-                {if $pages->firstPageInRangeNum!=1}
-                <a href="{$firstPageUrl}" class="pagin-number active-pagin-number">1</a>
-                <span>...</span>
-                {/if}
-                {if $pages->pagesInRange}
-                {foreach from=$pages->pagesInRange item=p key=k}
-                {if $pages->current!=$k}
-                <a href="/news{if $k=='1'}{$firstPageUrl}{else}{$firstPageUrl}/page/{$k}{/if}"
-                   class="pagin-number">{$k}</a>
-                {else}
-                <a class="pagin-number pagin-number-active">{$pages->current}</a>
-                {/if}
                 {/foreach}
-                {/if}
-                {if $pages->pageCount && $pages->lastPageInRange != $pages->last}
-                <span>...</span>
-                <a href="/news{$firstPageUrl}/page/{$pages->pageCount}" class="pagin-number">{$pages->pageCount}</a>
-                {/if}
-                {if $pages->current < $pages->pageCount}
-                <a class="blocks-pagination-forward blocks-pagination-arrow"
-                   href="/news{$firstPageUrl}/page/{$pages->current+1}"></a>
-                {/if}
-            </div>
-            {/if}
-            <!--            End pagination-->
 
+                <!--            START pagination-->
+                {assign var=pages value=$paginator->getPages()}
+                {if $pages->pageCount > 1}
+                <div class="blocks-pagination">
+                    {if $pages->current > 1}
+                    <a href="/news{if $pages->current-1=='1'}{$firstPageUrl}{else}{$firstPageUrl}/page/{$pages->current-1}{/if}"
+                       class="blocks-pagination-back blocks-pagination-arrow"></a>
+                    {/if}
+                    {if $pages->firstPageInRangeNum!=1}
+                    <a href="{$firstPageUrl}" class="pagin-number active-pagin-number">1</a>
+                    <span>...</span>
+                    {/if}
+                    {if $pages->pagesInRange}
+                    {foreach from=$pages->pagesInRange item=p key=k}
+                    {if $pages->current!=$k}
+                    <a href="/news{if $k=='1'}{$firstPageUrl}{else}{$firstPageUrl}/page/{$k}{/if}"
+                       class="pagin-number">{$k}</a>
+                    {else}
+                    <a class="pagin-number pagin-number-active">{$pages->current}</a>
+                    {/if}
+                    {/foreach}
+                    {/if}
+                    {if $pages->pageCount && $pages->lastPageInRange != $pages->last}
+                    <span>...</span>
+                    <a href="/news{$firstPageUrl}/page/{$pages->pageCount}" class="pagin-number">{$pages->pageCount}</a>
+                    {/if}
+                    {if $pages->current < $pages->pageCount}
+                    <a class="blocks-pagination-forward blocks-pagination-arrow"
+                       href="/news{$firstPageUrl}/page/{$pages->current+1}"></a>
+                    {/if}
+                </div>
+                {/if}
+                <!--            End pagination-->
+
+            </div>
         </div>
     </div>
 
