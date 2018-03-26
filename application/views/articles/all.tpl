@@ -57,7 +57,7 @@
                 {/if}
                 {if $pages->firstPageInRangeNum!=1}
                 <a class="pagin-number active-pagin-number" href="/articles">1</a>
-                <span>.</span><span>.</span><span>.</span>
+                <span>...</span>
                 {/if}
                 {if $pages->pagesInRange}
                 {foreach from=$pages->pagesInRange item=p key=k}
@@ -69,7 +69,7 @@
                 {/foreach}
                 {/if}
                 {if $pages->pageCount && $pages->lastPageInRange != $pages->last}
-                <span>.</span><span>.</span><span>.</span>
+                <span>...</span>
                 <a class="pagin-number" href="/articles/page/{$pages->pageCount}">{$pages->pageCount}</a>
                 {/if}
 
