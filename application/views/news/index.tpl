@@ -6,7 +6,7 @@
 
 {else}
 
-{include file='news/all.tpl'}
+{include file='news/test.tpl'}
 
 {/if}
 
