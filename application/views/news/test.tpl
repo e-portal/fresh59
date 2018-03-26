@@ -19,11 +19,9 @@
         </div>
     </div>
 
-    <!--
-    {foreach from=$news item=new key=key name=news}
-    <h3>{$new.name}</h3>
-    {/foreach}
--->
+    <div class="right-banner">
+        RIGHT
+    </div>
 
 
     {include file='layouts/slider_view.tpl'}
