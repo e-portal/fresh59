@@ -39,7 +39,37 @@
             </div>
             {/foreach}
 
-
+            <!--            START pagination-->
+            {assign var=pages value=$paginator->getPages()}
+            {if $pages->pageCount > 1}
+            <div class="span-12 no_margin category_nav paggination">
+                <p>Страницы:</p>
+                {if $pages->current > 1}
+                <a href="/news{if $pages->current-1=='1'}{$firstPageUrl}{else}{$firstPageUrl}/page/{$pages->current-1}{/if}">&larr;</a>
+                {/if}
+                {if $pages->firstPageInRangeNum!=1}
+                <a href="{$firstPageUrl}">1</a>
+                <p>...</p>
+                {/if}
+                {if $pages->pagesInRange}
+                {foreach from=$pages->pagesInRange item=p key=k}
+                {if $pages->current!=$k}
+                <a href="/news{if $k=='1'}{$firstPageUrl}{else}{$firstPageUrl}/page/{$k}{/if}">{$k}</a>
+                {else}
+                <span class="current">{$pages->current}</span>
+                {/if}
+                {/foreach}
+                {/if}
+                {if $pages->pageCount && $pages->lastPageInRange != $pages->last}
+                <p>...</p>
+                <a href="/news{$firstPageUrl}/page/{$pages->pageCount}">{$pages->pageCount}</a>
+                {/if}
+                {if $pages->current < $pages->pageCount}
+                <a href="/news{$firstPageUrl}/page/{$pages->current+1}">&rarr;</a>
+                {/if}
+            </div>
+            {/if}
+            <!--            End pagination-->
 
         </div>
     </div>
