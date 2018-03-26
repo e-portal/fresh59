@@ -1,4 +1,4 @@
-<div class="left-banner-content">
+<a class="left-banner-content">
     <img src="/assets/img/sliders/left-banner.png" alt="">
     <div class="slider-contain">
         <div class="head-item">
@@ -10,4 +10,4 @@
             <div>для постоянных покупателей</div>
         </div>
     </div>
-</div>
+</a>
