@@ -22,7 +22,21 @@
     <div class="right-banner">
         <div class="three-column">
             {foreach from=$news item=new key=key name=news}
-            <h3>{$new.name}</h3>
+            <div class="one-sale">
+                <div class="sale-from-to">Акция действует с 08 февраля 2018г по 28 мая 2018г</div>
+                <div class="sale-img-text">
+                    <img src="/asset/img/sliders/sale.png" alt="">
+                    <div class="sale-img-text-contain">
+                        <div class="sale-img-text-text">При покупке техники
+                            <span>Gorenje</span> Гарантированные
+                            подарки
+                        </div>
+                    </div>
+                </div>
+                <a><h5>{$new.name}</h5></a>
+                <div class="timer" data-year="2018" data-month="05" data-days="25"></div>
+                <a class="khob acty">Подробнее</a>
+            </div>
             {/foreach}
         </div>
     </div>
