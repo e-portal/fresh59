@@ -10,6 +10,7 @@ class FaqController extends Alcotec_Frontend_Controller_FaqController {
                 <script src="/assets/js/jquery.fancybox.pack.js"></script>
                 <script src="/assets/js/readmore.min.js"></script>
             ';
+
         $this->view->css_int = '
                     <link rel="stylesheet" href="/assets/css/slick.css">
                     <link rel="stylesheet" href="/assets/css/accord.css">
