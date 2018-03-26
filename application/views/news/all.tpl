@@ -21,6 +21,7 @@
         <div class="right-banner">
             <div class="three-column">
                 {foreach from=$news item=new key=key name=news}
+                {$new.start_date}-{$new.end_date}
                 <div class="one-sale">
                     {if $new.is_action==1}
                     <div class="sale-from-to">Акция действует с {mdates arr=$new.start_date}г по {mdates
