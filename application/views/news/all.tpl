@@ -25,7 +25,7 @@
             <div class="one-sale">
                 <div class="sale-from-to">Акция действует с 08 февраля 2018г по 28 мая 2018г</div>
                 <div class="sale-img-text">
-                    <img src="/asset/img/sliders/sale.png" alt="">
+                    <img src="/assets/img/sliders/sale.png" alt="">
                     <div class="sale-img-text-contain">
                         <div class="sale-img-text-text">При покупке техники
                             <span>Gorenje</span> Гарантированные
@@ -45,5 +45,5 @@
     {include file='layouts/slider_view.tpl'}
     {include file='layouts/orig.tpl'}
 
-    <div class="doww"><img src="./img/verh.png" alt=""></div>
+    <div class="doww"><img src="/assets/img/verh.png" alt=""></div>
 </div>
