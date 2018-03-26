@@ -43,8 +43,9 @@
                     </div>
                     <a><h5>{$new.name}</h5></a>
                     {if $new.is_action==1}
-                    <div class="timer" data-year="{getdate arr=$new.end_date arr='d'}" data-month="05"
-                         data-days="25"></div>
+                    <div class="timer" data-year="{getdate arr=$new.end_date arr='Y'}"
+                         data-month="{getdate arr=$new.end_date arr='m'}"
+                         data-days="{getdate arr=$new.end_date arr='d'}"></div>
                     {/if}
                     <a href="/news/{$new.url|mblower}" class="khob acty">Подробнее</a>
                 </div>
