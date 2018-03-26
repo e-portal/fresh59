@@ -11,5 +11,8 @@
     <link rel="stylesheet" href="/assets/css/small-page.css">
     <link rel="stylesheet" href="/assets/css/mob-question.css">
     <link rel="stylesheet" href="/assets/css/media.css">
+    {if isset($css_int) }
+    {$css_int}
+    {/if}
 </head>
 <body class="{$body_class|default:'no title'}">
