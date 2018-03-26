@@ -1,5 +1,11 @@
 {include file='layouts/_header.tpl'}
 
+
+{debug}
+
+
+
+
 <div class="container">
 
     {if $seo_text_bottom}
