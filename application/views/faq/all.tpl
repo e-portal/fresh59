@@ -60,7 +60,7 @@
                 <input type="email" name="name" id="email"/>
                 <div id="bthrow_error_email"></div>
                 <p>телефон * </p>
-                <input type="text" name="phone" id="phone"/>
+                <input type="text" name="phone" class="numb"/>
                 <div id="bthrow_error_phone"></div>
             </div>
             <div class="popup-block">
