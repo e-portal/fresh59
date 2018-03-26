@@ -881,7 +881,7 @@ input {
     font-size: 19px;
     color: #313e49;
     bottom: 37%;
-    left: 37px;
+    /*left: 37px;*/
     cursor: pointer;
 }
 
@@ -1051,7 +1051,8 @@ input {
 }
 
 .item-score:nth-child(1):after {
-    background: url(../img/po4ta.png) center no-repeat;
+    background: url(../img/po4ta.svg) center no-repeat;
+    /*background: url(../img/po4ta.png) center no-repeat;*/
     left: 7px;
     top: 5px
 }
