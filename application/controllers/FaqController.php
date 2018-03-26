@@ -12,6 +12,7 @@ class FaqController extends Alcotec_Frontend_Controller_FaqController {
             ';
         $this->view->css_int = '
                     <link rel="stylesheet" href="/assets/css/slick.css">
+                    <link rel="stylesheet" href="/assets/css/accord.css">
                     <link rel="stylesheet" href="/assets/css/jquery.fancybox-1.3.4.css">
             ';
 
