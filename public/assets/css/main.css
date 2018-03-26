@@ -130,7 +130,7 @@ h6 {
     border-radius: 50%;
 }
 .blocks-pagination a:hover,
-.blocks-pagination a.pagin-number-active {
+.blocks-pagination .pagin-number-active {
     background: #fbd402;
     color: #000;
     border-color: #fbd402;
@@ -2299,6 +2299,7 @@ input {
     margin: 24px auto 0;
 }
 
+
 .maii .slick-slide {
     margin: 5px 0 57px;
 }
@@ -3156,19 +3157,16 @@ ul#selectsMenuBoxi > li.options:hover {
     border-bottom: 1px solid #ddd;
     padding-bottom: 20px;
 }
-
 .price-filters {
     display: flex;
     justify-content: space-between;
     padding: 0 35px;
 }
-
 .price-filters span {
     font-size: 12px;
     color: #c3c5c7;
     font-family: 'SF-UI-Display-Light';
 }
-
 input[type=number] {
     /*border: none;*/
     text-align: center;
@@ -3183,7 +3181,6 @@ input[type=number] {
     letter-spacing: .5px;
     font-family: 'SF-UI-Display-Regular';
 }
-
 input[type=number]:focus {
     font-weight: 600;
 }
@@ -3192,18 +3189,15 @@ input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
-
 input[type=number]:invalid,
 input[type=number]:out-of-range {
     border-bottom: 1px solid #ff6347;
     color: #ff6347;
 }
-
 input[type=range] {
     -webkit-appearance: none;
     width: 100%;
 }
-
 input[type=range]:focus {
     outline: none;
 }
@@ -3219,7 +3213,6 @@ input[type=range]::-webkit-slider-runnable-track {
     box-shadow: none;
     border: 0;
 }
-
 input[type=range]::-webkit-slider-thumb {
     z-index: 2;
     position: relative;
@@ -3235,6 +3228,7 @@ input[type=range]::-webkit-slider-thumb {
     margin-top: -8px;
 }
 
+
 input[type=range]::-ms-track {
     width: 100%;
     height: 5px;
@@ -3244,7 +3238,6 @@ input[type=range]::-ms-track {
     border-color: transparent;
     color: transparent;
 }
-
 input[type=range]::-ms-fill-lower,
 input[type=range]::-ms-fill-upper {
     background: #2497e3;
@@ -3267,16 +3260,13 @@ input[type=range]::-ms-fill-upper {
     /*z-index: 5;*/
     border: 2px solid #fbd402;
 }
-
 .filter_toggle .ui-widget-header {
     background: #fbd402;
 }
-
 .filter_toggle .ui-slider-horizontal .ui-slider-range {
     height: 2px;
     top: 1px;
 }
-
 .filter_toggle .ui-slider-horizontal .ui-slider-handle {
     top: -6px;
 }
@@ -3296,7 +3286,6 @@ input[type=range]::-ms-fill-upper {
 .filter_toggle .ui-corner-all, .filter_toggle .ui-corner-top, .filter_toggle .ui-corner-left, .filter_toggle .ui-corner-tl {
     border-top-left-radius: 0;
 }
-
 .filter_toggle .ui-slider .ui-slider-handle {
     width: 10px;
     height: 10px;
@@ -3311,7 +3300,6 @@ input[type=range]::-ms-fill-upper {
     width: initial;
 
 }
-
 .hasl .slick-dots {
     bottom: 60px;
     padding: 0 0 0 40px;
