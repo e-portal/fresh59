@@ -42,7 +42,6 @@
                         </div>
                     </div>
                     <a><h5>{$new.name}</h5></a>
-                    {getdate arr=$new.end_date arr='d'}
                     {if $new.is_action==1}
                     <div class="timer" data-year="{getdate arr=$new.end_date arr='d'}" data-month="05"
                          data-days="25"></div>
