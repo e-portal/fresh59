@@ -55,12 +55,6 @@ class ArticlesController extends Alcotec_Frontend_Controller_ArticlesController 
                 }
             }
         } else {
-            $this->view->js_int = '
-                <script src="/assets/js/slick.min.js"></script>
-            ';
-            $this->view->css_int = '
-                    <link rel="stylesheet" href="/assets/css/slick.css">
-            ';
             if ($lang == 'ru') {
                 if ($siteId == 4) {
                     $select = $modArticles->select()->where('visible = "1"')->where('site_id = ?', $siteId)->order('date DESC');

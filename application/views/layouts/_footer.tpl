@@ -109,7 +109,7 @@
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/assets/js/main.js"></script>
-<script src="/assets/js/slick.js"></script>
+<script src="/assets/js/slick.min.js"></script>
 <script src="/assets/js/mask.js"></script>
 {if isset($js_int) }
 {$js_int}
