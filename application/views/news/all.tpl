@@ -22,7 +22,7 @@
             <div class="three-column">
                 {foreach from=$news item=new key=key name=news}
                 <div class="one-sale">
-                    <div class="sale-from-to">Акция действует с 08 февраля 2018г по 28 мая 2018г</div>
+                    <div class="sale-from-to">Акция действует с {mdates arr=$new.start_date}г по 28 мая 2018г</div>
                     <div class="sale-img-text">
                         <img src="/assets/img/sliders/sale.png" alt="">
                         <div class="sale-img-text-contain">
