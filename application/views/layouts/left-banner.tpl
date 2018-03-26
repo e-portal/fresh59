@@ -2,7 +2,7 @@
     <img src="/assets/img/sliders/left-banner.png" alt="">
     <div class="slider-contain">
         <div class="head-item">
-            <a href=""><img src="/assets/img/logo.png" alt=""></a>
+            <img src="/assets/img/logo.png" alt="">
             <span>Покупать очень просто!</span>
         </div>
         <div class="slider-text">
