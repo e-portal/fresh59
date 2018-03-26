@@ -20,11 +20,10 @@
 
         <div class="right-banner">
             <div class="three-column">
-                {foreach from=$news item=new key=key name=news}
-
                 <pre>
-                {$new|var_dump}
+                {$news|var_dump}
                 </pre>
+                {foreach from=$news item=new key=key name=news}
                 <div class="one-sale">
                     {if $news.is_action==1}
                     <div class="sale-from-to">Акция действует с {mdates arr=$new.start_date}г по {mdates
