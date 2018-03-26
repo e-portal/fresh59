@@ -12,10 +12,10 @@
     </div>
     <h1 class="liner cent"><span>Акции интернет-магазина</span></h1>
 
+    {foreach from=$news item=new key=key name=news}
+    <h3>{$new.name}</h3>
+    {/foreach}
 
-    <pre>
-        {$news|var_dump}
-    </pre>
 
 
     {include file='layouts/slider_view.tpl'}
