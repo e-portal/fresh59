@@ -20,7 +20,9 @@
     </div>
 
     <div class="right-banner">
-        RIGHT
+        <div class="three-column">
+            RIGHT
+        </div>
     </div>
 
 
