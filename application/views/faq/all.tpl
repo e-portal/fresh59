@@ -13,9 +13,9 @@
     </div>
     <h1 class="liner cent wrap"><span>Вопрос / Ответ</span></h1>
     <div class="ourr wrap left-right-banner">
-        <div class="left-banner">
+        <a class="left-banner">
             {include file='layouts/left-banner.tpl'}
-        </div>
+        </a>
         <div class="right-banner">
 
             <div class="accordion">
