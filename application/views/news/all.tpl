@@ -1,4 +1,3 @@
-<h2>NEWS</h2>
 <div class="container">
     <div class="bread-crumbs breadcrumbs mobile-display-none" id="breadcrumbs" itemscope=""
          itemtype="http://schema.org/BreadcrumbList">
