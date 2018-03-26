@@ -13,10 +13,17 @@
     <h1 class="liner cent"><span>Акции интернет-магазина</span></h1>
 
 
+    <div class="ourr left-right-banner">
+        <div class="left-banner">
+            {include file='layouts/left-banner.tpl'}
+        </div>
+    </div>
+
+    <!--
     {foreach from=$news item=new key=key name=news}
     <h3>{$new.name}</h3>
     {/foreach}
-
+-->
 
 
     {include file='layouts/slider_view.tpl'}
