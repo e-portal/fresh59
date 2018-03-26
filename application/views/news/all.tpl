@@ -19,7 +19,7 @@
         <div class="right-banner">
             <div class="three-column">
 
-                {foreach from=$news item=article key=key name=news}
+                <!--{foreach from=$news item=article key=key name=news}
 
                 {$article.name}
                 <!--<div class="one-sale">
@@ -39,7 +39,7 @@
                     <a class="khob acty">Подробнее</a>
                 </div>-->
 
-                {/foreach}
+                {/foreach}-->
             </div>
 
             <!--            START pagination-->
