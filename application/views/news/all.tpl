@@ -21,15 +21,19 @@
         <div class="right-banner">
             <div class="three-column">
                 {foreach from=$news item=new key=key name=news}
-                {$new.start_date}-{$new.end_date}
                 <div class="one-sale">
+                    {if $new.expired && $new.is_action==1}
+                    <div class="sale-from-to">
+                        Акция завершена
+                    </div>
+                    {/if}
                     {if $new.is_action==1}
                     <div class="sale-from-to">Акция действует с {mdates arr=$new.start_date}г по {mdates
                         arr=$new.end_date}г
                     </div>
                     {/if}
                     <div class="sale-img-text">
-                        <img src="/assets/img/sliders/sale.png" alt="">
+                        <img src="/uploads/news/{$new.id}.{$new.img}" alt="">
                         <div class="sale-img-text-contain">
                             <div class="sale-img-text-text">При покупке техники
                                 <span>Gorenje</span> Гарантированные
@@ -39,7 +43,7 @@
                     </div>
                     <a><h5>{$new.name}</h5></a>
                     <div class="timer" data-year="2018" data-month="05" data-days="25"></div>
-                    <a class="khob acty">Подробнее</a>
+                    <a href="/news/{$new.url|mblower}" class="khob acty">Подробнее</a>
                 </div>
                 {/foreach}
 
