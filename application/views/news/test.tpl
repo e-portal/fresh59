@@ -13,12 +13,9 @@
     <h1 class="liner cent"><span>Акции интернет-магазина</span></h1>
 
 
-    <div class="ourr left-right-banner">
-        <div class="left-banner">
-            {include file='layouts/left-banner.tpl'}
-        </div>
-
-    </div>
+    <pre>
+        {$news|var_dump}
+    </pre>
 
 
     {include file='layouts/slider_view.tpl'}
