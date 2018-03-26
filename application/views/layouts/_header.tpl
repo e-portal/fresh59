@@ -4,7 +4,7 @@
         <div class="container">
             <div class="main-hedd">
                 <div class="head-item">
-                    <a href=""><img src="/assets/img/logo.png" alt=""></a>
+                    <a href="/"><img src="/assets/img/logo.png" alt=""></a>
                     <span>Покупать очень просто!</span>
                 </div>
                 <div class="head-item">
