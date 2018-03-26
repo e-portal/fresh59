@@ -56,14 +56,14 @@
                     <h5 class="green">В наличии</h5>
                     <h4>Микроволновая печь GORENJE MO 6240</h4>
                     <div class="centr">
-                        <div class="itee-imgg"><img src="./img/senn0.png" alt=""></div>
+                        <div class="itee-imgg"><img src="/assets/img/senn0.png" alt=""></div>
                         <div class="itee">
-                            <img src="./img/izee0.png" alt="">
+                            <img src="/assets/img/izee0.png" alt="">
                             <p>Вернем: <span>500 грн</span></p>
                         </div>
 
                         <div class="itee">
-                            <img src="./img/izee1.png" alt="">
+                            <img src="/assets/img/izee1.png" alt="">
                             <p>от <span>500</span> грн/мес</p>
                         </div>
 
@@ -72,7 +72,7 @@
                     <object type="lol/wut">
                         <a href="/" class="otzv">
                             <div class="left-otzv">
-                                <img src="./img/patr.png" alt="">
+                                <img src="/assets/img/patr.png" alt="">
                             </div>
                             <div class="right-otzv">
                                 <span>10 отзывов</span>
@@ -111,14 +111,14 @@
                     <h5 class="green">В наличии</h5>
                     <h4>Микроволновая печь GORENJE MO 6240</h4>
                     <div class="centr">
-                        <div class="itee-imgg"><img src="./img/senn0.png" alt=""></div>
+                        <div class="itee-imgg"><img src="/assets/img/senn0.png" alt=""></div>
                         <div class="itee">
-                            <img src="./img/izee0.png" alt="">
+                            <img src="/assets/img/izee0.png" alt="">
                             <p>Вернем: <span>500 грн</span></p>
                         </div>
 
                         <div class="itee">
-                            <img src="./img/izee1.png" alt="">
+                            <img src="/assets/img/izee1.png" alt="">
                             <p>от <span>500</span> грн/мес</p>
                         </div>
 
@@ -127,7 +127,7 @@
                     <object type="lol/wut">
                         <a href="/" class="otzv">
                             <div class="left-otzv">
-                                <img src="./img/patr.png" alt="">
+                                <img src="/assets/img/patr.png" alt="">
                             </div>
                             <div class="right-otzv">
                                 <span>10 отзывов</span>
@@ -166,18 +166,18 @@
                     <h5 class="gray">Наличие уточняйте</h5>
                     <h4>Плита кухонная GORENJE G 6111 WJ</h4>
                     <div class="centr">
-                        <div class="itee-imgg"><img src="./img/senn5.png" alt=""></div>
+                        <div class="itee-imgg"><img src="/assets/img/senn5.png" alt=""></div>
                         <div class="itee">
-                            <img src="./img/izee0.png" alt="">
+                            <img src="/assets/img/izee0.png" alt="">
                             <p>Вернем: <span>500 грн</span></p>
                         </div>
 
                         <div class="itee">
-                            <img src="./img/izee1.png" alt="">
+                            <img src="/assets/img/izee1.png" alt="">
                             <p>от <span>500</span> грн/мес</p>
                         </div>
                         <div class="itee">
-                            <img src="./img/izee3.png" alt="">
+                            <img src="/assets/img/izee3.png" alt="">
                             <p>от <span>1200</span> грн/мес</p>
                         </div>
 
@@ -185,7 +185,7 @@
                     </div>
                     <object type="lol/wut"><a href="/otzv" class="otzv">
                             <div class="left-otzv">
-                                <img src="./img/patr.png" alt="">
+                                <img src="/assets/img/patr.png" alt="">
                             </div>
                             <div class="right-otzv">
                                 <span>Оставить отзыв</span>
@@ -222,26 +222,26 @@
                     <h5 class="green">В наличии</h5>
                     <h4>Стиральная машина Electro ELECTROLUX</h4>
                     <div class="centr">
-                        <div class="itee-imgg"><img src="./img/senn2.png" alt=""></div>
+                        <div class="itee-imgg"><img src="/assets/img/senn2.png" alt=""></div>
                         <div class="itee">
-                            <img src="./img/izee0.png" alt="">
+                            <img src="/assets/img/izee0.png" alt="">
                             <p>Вернем: <span>500 грн</span></p>
                         </div>
 
                         <div class="itee">
-                            <img src="./img/izee1.png" alt="">
+                            <img src="/assets/img/izee1.png" alt="">
                             <p>от <span>500</span> грн/мес</p>
                         </div>
                         <div class="itee">
-                            <img src="./img/izee3.png" alt="">
+                            <img src="/assets/img/izee3.png" alt="">
                             <p>от <span>1200</span> грн/мес</p>
                         </div>
                         <div class="itee">
-                            <img src="./img/izee2.png" alt="">
+                            <img src="/assets/img/izee2.png" alt="">
                             <p>Гарантия <span>12</span> мес</p>
                         </div>
                         <div class="itee">
-                            <img src="./img/izee4.png" alt="">
+                            <img src="/assets/img/izee4.png" alt="">
                             <p>Лучша <span>цена</span></p>
                         </div>
 
@@ -250,7 +250,7 @@
                     <object type="lol/wut">
                         <a href="/" class="otzv">
                             <div class="left-otzv">
-                                <img src="./img/patr.png" alt="">
+                                <img src="/assets/img/patr.png" alt="">
                             </div>
                             <div class="right-otzv">
                                 <span>10 отзывов</span>
@@ -291,14 +291,14 @@
                     <h5 class="bluee">Под заказ</h5>
                     <h4>Чайник ELECTROLUX </h4>
                     <div class="centr">
-                        <div class="itee-imgg"><img src="./img/senn3.png" alt=""></div>
+                        <div class="itee-imgg"><img src="/assets/img/senn3.png" alt=""></div>
                         <div class="itee">
-                            <img src="./img/izee0.png" alt="">
+                            <img src="/assets/img/izee0.png" alt="">
                             <p>Вернем: <span>500 грн</span></p>
                         </div>
 
                         <div class="itee">
-                            <img src="./img/izee1.png" alt="">
+                            <img src="/assets/img/izee1.png" alt="">
                             <p>от <span>500</span> грн/мес</p>
                         </div>
 
@@ -307,7 +307,7 @@
                     <object type="lol/wut">
                         <a href="/" class="otzv">
                             <div class="left-otzv">
-                                <img src="./img/patr.png" alt="">
+                                <img src="/assets/img/patr.png" alt="">
                             </div>
                             <div class="right-otzv">
                                 <span>10 отзывов</span>
@@ -346,14 +346,14 @@
                     <h5 class="green">В наличии</h5>
                     <h4>Наушники Monster beats Monster beats</h4>
                     <div class="centr">
-                        <div class="itee-imgg"><img src="./img/senn4.png" alt=""></div>
+                        <div class="itee-imgg"><img src="/assets/img/senn4.png" alt=""></div>
                         <div class="itee">
-                            <img src="./img/izee0.png" alt="">
+                            <img src="/assets/img/izee0.png" alt="">
                             <p>Вернем: <span>500 грн</span></p>
                         </div>
 
                         <div class="itee">
-                            <img src="./img/izee1.png" alt="">
+                            <img src="/assets/img/izee1.png" alt="">
                             <p>от <span>500</span> грн/мес</p>
                         </div>
 
@@ -362,7 +362,7 @@
                     <object type="lol/wut">
                         <a href="/" class="otzv">
                             <div class="left-otzv">
-                                <img src="./img/patr.png" alt="">
+                                <img src="/assets/img/patr.png" alt="">
                             </div>
                             <div class="right-otzv">
                                 <span>10 отзывов</span>
@@ -401,14 +401,14 @@
                     <h5 class="green">В наличии</h5>
                     <h4>Микроволновая печь GORENJE MO 6240</h4>
                     <div class="centr">
-                        <div class="itee-imgg"><img src="./img/senn0.png" alt=""></div>
+                        <div class="itee-imgg"><img src="/assets/img/senn0.png" alt=""></div>
                         <div class="itee">
-                            <img src="./img/izee0.png" alt="">
+                            <img src="/assets/img/izee0.png" alt="">
                             <p>Вернем: <span>500 грн</span></p>
                         </div>
 
                         <div class="itee">
-                            <img src="./img/izee1.png" alt="">
+                            <img src="/assets/img/izee1.png" alt="">
                             <p>от <span>500</span> грн/мес</p>
                         </div>
 
@@ -417,7 +417,7 @@
                     <object type="lol/wut">
                         <a href="/" class="otzv">
                             <div class="left-otzv">
-                                <img src="./img/patr.png" alt="">
+                                <img src="/assets/img/patr.png" alt="">
                             </div>
                             <div class="right-otzv">
                                 <span>10 отзывов</span>
@@ -456,14 +456,14 @@
                     <h5 class="green">В наличии</h5>
                     <h4>Микроволновая печь GORENJE MO 6240</h4>
                     <div class="centr">
-                        <div class="itee-imgg"><img src="./img/senn0.png" alt=""></div>
+                        <div class="itee-imgg"><img src="/assets/img/senn0.png" alt=""></div>
                         <div class="itee">
-                            <img src="./img/izee0.png" alt="">
+                            <img src="/assets/img/izee0.png" alt="">
                             <p>Вернем: <span>500 грн</span></p>
                         </div>
 
                         <div class="itee">
-                            <img src="./img/izee1.png" alt="">
+                            <img src="/assets/img/izee1.png" alt="">
                             <p>от <span>500</span> грн/мес</p>
                         </div>
 
@@ -472,7 +472,7 @@
                     <object type="lol/wut">
                         <a href="/" class="otzv">
                             <div class="left-otzv">
-                                <img src="./img/patr.png" alt="">
+                                <img src="/assets/img/patr.png" alt="">
                             </div>
                             <div class="right-otzv">
                                 <span>10 отзывов</span>
@@ -511,18 +511,18 @@
                     <h5 class="gray">Наличие уточняйте</h5>
                     <h4>Плита кухонная GORENJE G 6111 WJ</h4>
                     <div class="centr">
-                        <div class="itee-imgg"><img src="./img/senn5.png" alt=""></div>
+                        <div class="itee-imgg"><img src="/assets/img/senn5.png" alt=""></div>
                         <div class="itee">
-                            <img src="./img/izee0.png" alt="">
+                            <img src="/assets/img/izee0.png" alt="">
                             <p>Вернем: <span>500 грн</span></p>
                         </div>
 
                         <div class="itee">
-                            <img src="./img/izee1.png" alt="">
+                            <img src="/assets/img/izee1.png" alt="">
                             <p>от <span>500</span> грн/мес</p>
                         </div>
                         <div class="itee">
-                            <img src="./img/izee3.png" alt="">
+                            <img src="/assets/img/izee3.png" alt="">
                             <p>от <span>1200</span> грн/мес</p>
                         </div>
 
@@ -530,7 +530,7 @@
                     </div>
                     <object type="lol/wut"><a href="/otzv" class="otzv">
                             <div class="left-otzv">
-                                <img src="./img/patr.png" alt="">
+                                <img src="/assets/img/patr.png" alt="">
                             </div>
                             <div class="right-otzv">
                                 <span>Оставить отзыв</span>
@@ -567,26 +567,26 @@
                     <h5 class="green">В наличии</h5>
                     <h4>Стиральная машина Electro ELECTROLUX</h4>
                     <div class="centr">
-                        <div class="itee-imgg"><img src="./img/senn2.png" alt=""></div>
+                        <div class="itee-imgg"><img src="/assets/img/senn2.png" alt=""></div>
                         <div class="itee">
-                            <img src="./img/izee0.png" alt="">
+                            <img src="/assets/img/izee0.png" alt="">
                             <p>Вернем: <span>500 грн</span></p>
                         </div>
 
                         <div class="itee">
-                            <img src="./img/izee1.png" alt="">
+                            <img src="/assets/img/izee1.png" alt="">
                             <p>от <span>500</span> грн/мес</p>
                         </div>
                         <div class="itee">
-                            <img src="./img/izee3.png" alt="">
+                            <img src="/assets/img/izee3.png" alt="">
                             <p>от <span>1200</span> грн/мес</p>
                         </div>
                         <div class="itee">
-                            <img src="./img/izee2.png" alt="">
+                            <img src="/assets/img/izee2.png" alt="">
                             <p>Гарантия <span>12</span> мес</p>
                         </div>
                         <div class="itee">
-                            <img src="./img/izee4.png" alt="">
+                            <img src="/assets/img/izee4.png" alt="">
                             <p>Лучша <span>цена</span></p>
                         </div>
 
@@ -595,7 +595,7 @@
                     <object type="lol/wut">
                         <a href="/" class="otzv">
                             <div class="left-otzv">
-                                <img src="./img/patr.png" alt="">
+                                <img src="/assets/img/patr.png" alt="">
                             </div>
                             <div class="right-otzv">
                                 <span>10 отзывов</span>
@@ -636,14 +636,14 @@
                     <h5 class="bluee">Под заказ</h5>
                     <h4>Чайник ELECTROLUX </h4>
                     <div class="centr">
-                        <div class="itee-imgg"><img src="./img/senn3.png" alt=""></div>
+                        <div class="itee-imgg"><img src="/assets/img/senn3.png" alt=""></div>
                         <div class="itee">
-                            <img src="./img/izee0.png" alt="">
+                            <img src="/assets/img/izee0.png" alt="">
                             <p>Вернем: <span>500 грн</span></p>
                         </div>
 
                         <div class="itee">
-                            <img src="./img/izee1.png" alt="">
+                            <img src="/assets/img/izee1.png" alt="">
                             <p>от <span>500</span> грн/мес</p>
                         </div>
 
@@ -652,7 +652,7 @@
                     <object type="lol/wut">
                         <a href="/" class="otzv">
                             <div class="left-otzv">
-                                <img src="./img/patr.png" alt="">
+                                <img src="/assets/img/patr.png" alt="">
                             </div>
                             <div class="right-otzv">
                                 <span>10 отзывов</span>
@@ -691,14 +691,14 @@
                     <h5 class="green">В наличии</h5>
                     <h4>Наушники Monster beats Monster beats</h4>
                     <div class="centr">
-                        <div class="itee-imgg"><img src="./img/senn4.png" alt=""></div>
+                        <div class="itee-imgg"><img src="/assets/img/senn4.png" alt=""></div>
                         <div class="itee">
-                            <img src="./img/izee0.png" alt="">
+                            <img src="/assets/img/izee0.png" alt="">
                             <p>Вернем: <span>500 грн</span></p>
                         </div>
 
                         <div class="itee">
-                            <img src="./img/izee1.png" alt="">
+                            <img src="/assets/img/izee1.png" alt="">
                             <p>от <span>500</span> грн/мес</p>
                         </div>
 
@@ -707,7 +707,7 @@
                     <object type="lol/wut">
                         <a href="/" class="otzv">
                             <div class="left-otzv">
-                                <img src="./img/patr.png" alt="">
+                                <img src="/assets/img/patr.png" alt="">
                             </div>
                             <div class="right-otzv">
                                 <span>10 отзывов</span>
