@@ -245,7 +245,12 @@
     display: none;
 }
 
+.basket-last-column .basket-header > div:first-child {
+    border-bottom-left-radius: 0;
+}
+
 .basket-last-column .basket-header > div:last-child {
+    border-bottom-right-radius: 0;
     padding-right: 48px;
 }
 
@@ -343,3 +348,202 @@ input.bask {
 }
 
 /*--------------end Last column--------------*/
+
+.compare-all-blocks {
+    display: flex;
+    position: relative;
+    overflow-x: auto;
+    margin-bottom: 50px;
+}
+
+.compare-fixed {
+    background: #fff;
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.compare-smaller .compare-fixed {
+    -webkit-box-shadow: 2px 2px 15px 5px rgba(30, 30, 30, 0.1);
+    -moz-box-shadow: 2px 2px 15px 5px rgba(30, 30, 30, 0.1);
+    box-shadow: 2px 2px 15px 5px rgba(30, 30, 30, 0.1);
+}
+
+.compare-block:first-child,
+.compare-block:first-child .compare-fixed {
+    min-width: 320px !important;
+}
+
+.compare-block,
+.compare-fixed {
+    width: 320px;
+}
+
+.compare-block.compare-smaller,
+.compare-smaller .compare-fixed {
+    width: 270px;
+    min-width: 270px;
+}
+
+.compare-block:first-child .compare-thead {
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+.compare-block:last-child .compare-thead {
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.compare-thead {
+    background: #f2f2f2;
+    text-transform: uppercase;
+    font-family: 'SF-UI-Display-Regular';
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.compare-thead .basket-delete-icon {
+    display: flex;
+    align-items: center;
+}
+
+.compare-thead .basket-delete-icon::before {
+    width: 22px;
+    height: 22px;
+    top: unset;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.compare-product {
+    height: 130px;
+    padding: 30px 20px 30px 0;
+    position: relative;
+}
+
+.compare-product .basket-prod {
+    height: inherit;
+}
+
+.compare-block:first-child .compare-product:before {
+    border: 0;
+}
+
+.compare-product:before {
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-left: 1px solid #d7d7d7;
+}
+
+.compare-btn {
+    border: 1px solid #d7d7d7;
+    border-radius: 50px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(90% - 60px);
+    padding: 16px 30px;
+    font-family: 'SFUIDisplay-Bold';
+    font-size: 16px;
+    color: #313e49;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.compare-btn:first-child {
+    margin-bottom: 20px;
+}
+
+.compare-btn-active,
+.compare-btn:hover {
+    background: #313e49;
+    color: #fff;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.compare-product .basket-prod-name {
+    display: block;
+    font-size: 13px;
+    line-height: 15px;
+    height: 45px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.compare-product .prod-price {
+    font-size: 19px;
+    line-height: 37px;
+    color: #313e49;
+}
+
+.compare-product .basket-prod-img {
+    width: 30%;
+    height: inherit;
+    padding: 0 20px;
+}
+
+.compare-product .basket-prod-img img {
+    height: inherit;
+}
+
+.compare-product .basket-prod-text {
+    width: 70%;
+}
+
+.compare-product .compare-smaller > div {
+    width: 50%;
+}
+
+.compare-product .none-if-more {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.compare-product .favorite-ico {
+    height: 16px;
+}
+
+.compare-features {
+    padding: 20px 0;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #d7d7d7;
+    font-size: 15px;
+    color: #313e49;
+    text-align: center;
+    font-family: 'SFUIDisplay-Bold';
+}
+
+.compare-features-title span {
+    font-family: 'SFUIDisplay-Bold';
+    border-bottom: 2px solid #fbd402;
+    padding-bottom: 5px;
+}
+
+.compare-features > div {
+    height: 40px;
+    overflow: hidden;
+}
+
+.compare-block:first-child .compare-features {
+    text-align: left;
+    font-family: 'SF-UI-Display-Light';
+}
+
+.compare-if-small {
+    display: flex;
+    justify-content: center;
+    padding: 0 0 30px;
+    margin-bottom: 30px;
+}

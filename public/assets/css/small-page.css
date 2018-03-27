@@ -1,7 +1,6 @@
 .one-content a {
     color: #0088c8;
 }
-
 .one-content a:hover {
     text-decoration: underline;
 }
@@ -166,6 +165,8 @@
     text-transform: uppercase;
     font-family: 'SFUIDisplay-Semibold';
     margin: 15px 22px 35px;
+    height: 42px;
+    overflow: hidden;
 }
 .one-sale .timer {
     margin: 0 auto;
@@ -371,22 +372,18 @@ b {
 .payment-page .tabs {
     margin: 0;
 }
-
 /*GUARANTEE*/
 li {
     color: #313e49;
     font-family: 'SF-UI-Display-Regular';
 }
-
 .table-smaller {
     width: 50%;
 }
-
 .table-grey-border {
     border-collapse: collapse;
     margin-bottom: 50px;
 }
-
 .table-grey-border thead,
 .table-grey-border thead td {
     background: #fafafa;
@@ -396,30 +393,24 @@ li {
     line-height: 22px;
     color: #313e49;
 }
-
 .table-grey-border thead tr {
     border: none;
 }
-
 .table-grey-border thead td:first-child {
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
 }
-
 .table-grey-border thead td:last-child {
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
 }
-
 .table-grey-border tr {
     border-bottom: 1px solid #d7d7d7;
 }
-
 .table-grey-border td {
     padding: 15px 35px;
 
 }
-
 .table-grey-border td,
 .table-grey-border td p,
 .table-grey-border td li {
@@ -429,12 +420,10 @@ li {
     line-height: 21px;
     vertical-align: text-top;
 }
-
 .table-grey-border tr > td:first-child,
 .table-grey-border tr > td:first-child p {
     font-family: 'SFUIDisplay-Bold';
 }
-
 .guarantee-page .table-grey-border {
     margin-left: 25px;
 }
@@ -442,33 +431,26 @@ li {
 .guarantee-tree-column {
     display: flex;
 }
-
 .guarantee-tree-column > div {
     width: 33.33%;
 }
-
 .guarantee-tree-column > div li {
     margin-bottom: 30px;
 }
-
 .guarantee-tree-column > div li p {
     margin: 0;
 }
-
 .guarantee-page ul.long-list {
     padding-left: 60px;
 }
-
 .guarantee-page ol {
     padding-left: 50px;
 }
-
 ol li {
     padding-left: 10px;
     font-size: 15px;
     line-height: 25px;
 }
-
 /*end GUARANTEE*/
 
 .contact-map {
@@ -476,12 +458,10 @@ ol li {
     height: 525px;
     background: transparent;
 }
-
 #map {
     width: 100%;
     height: 525px;
 }
-
 .map-content {
     position: absolute;
     background: #fff;

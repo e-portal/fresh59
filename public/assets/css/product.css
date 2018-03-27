@@ -58,11 +58,9 @@ h1 {
     font-family: 'SFUIDisplay-Medium';
     font-size: 14px;
 }
-
 .bask span {
     white-space: nowrap;
 }
-
 .smaller-liner {
     line-height: 28px;
     margin: 50px 0 27px;
@@ -111,7 +109,7 @@ h1 {
 /*---------- SLIDER ----------*/
 .slick-prev, .slick-next {
     display: inline-block !important;
-    position: relative;
+    /*position: relative;*/
     color: transparent;
     background: #fff;
     border: none;
@@ -166,6 +164,20 @@ h1 {
     align-items: center;
 }
 
+.slider-prod .slick-list,
+.cheaper-slider .slick-list {
+    width: 90%;
+}
+
+.slider-prod .slick-prev,
+.cheaper-slider .slick-prev {
+    left: 0;
+}
+
+.cheaper-slider .slick-next,
+.slider-prod .slick-next {
+    right: 0;
+}
 .slider-for .slick-slide {
     height: 55vh;
     padding: .5%;
@@ -179,7 +191,7 @@ h1 {
     padding: .5%;
 }
 
-.slider-nav .slick-active {
+.slider-nav .slick-current {
     border-color: #fbd402;
 }
 
@@ -283,11 +295,9 @@ h1 {
     color: #979797;
     display: flex;
 }
-
 .prod-code span {
     margin-left: 5px;
 }
-
 .in-stock > div:nth-child(2) {
     margin-left: 44px;
 }
@@ -379,7 +389,7 @@ h1 {
     text-decoration: underline;
 }
 
-.qweek-busket-prod object .bask.acty {
+.qweek-busket-prodadd-to-cart .bask.acty {
     width: 210px;
     line-height: 48px;
     margin: 20px 0;
@@ -387,7 +397,7 @@ h1 {
     height: 42px;
 }
 
-.qweek-busket-prod object .bask:after {
+.qweek-busket-prodadd-to-cart .bask:after {
     right: 50px;
 }
 
@@ -457,7 +467,6 @@ h1 {
     font-size: 18px;
     line-height: 40px;
 }
-
 .title-gift span {
     font-family: 'SFUIDisplay-Semibold';
     text-transform: uppercase;
@@ -469,6 +478,7 @@ h1 {
     align-items: center;
     padding: 27px 10px;
 }
+
 
 .gift-prod {
     display: flex;
@@ -518,12 +528,18 @@ h1 {
 /*---------- end GIFT ----------*/
 /*---------- CHEAPER ----------*/
 .cheaper-slider {
-    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.cheaper-slider .slick-slide {
+    margin: 0;
+}
+
+.cheaper-slider .slick-dots {
+    bottom: -50px;
+}
 .cheaper-slide {
     display: flex;
 }
@@ -667,6 +683,7 @@ h1 {
     align-items: center;
     text-align: center;
     text-decoration: none;
+    color: #000;
 }
 
 .tab-button li:hover,
@@ -1003,18 +1020,7 @@ div.review-date > span {
     overflow-y: auto;
 }
 
-.popup-inner-scroll::-webkit-scrollbar {
-    width: 3px;
-    background-color: #ddd;
-}
 
-.popup-inner-scroll::-webkit-scrollbar-thumb {
-    background-color: #fbd402;
-}
-
-.popup-inner-scroll::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 0 2px rgba(158, 158, 158, .2);
-}
 
 /*--------------end POPUP--------------*/
 .liner-basket {
@@ -1029,7 +1035,6 @@ div.review-date > span {
 .popup .basket-table {
     margin: 0 10px;
 }
-
 .basket-table {
     display: table;
 }
@@ -1045,12 +1050,10 @@ div.review-date > span {
     justify-content: space-between;
     border-radius: 25px;
 }
-
 .cart .basket-header {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
-
 .basket-header > div,
 .basket-section > div > div {
     display: table-cell;
@@ -1059,11 +1062,9 @@ div.review-date > span {
     white-space: nowrap;
     width: 16%;
 }
-
 .basket-section .basket-prod {
     white-space: unset;
 }
-
 .basket-header div,
 .basket-section-prod > div,
 .basket-section-gift > div {
@@ -1079,11 +1080,9 @@ div.review-date > span {
 .basket-section-prod > div {
     padding: 35px 0 20px 0;
 }
-
 .basket-section-prod .basket-prod {
     padding: 35px 30px 20px 30px;
 }
-
 .basket-header div:last-child {
     text-transform: none;
     color: #ed462f;
@@ -1102,11 +1101,9 @@ div.review-date > span {
     border-bottom: 1px solid #dddddd;
     transition: .5s;
 }
-
 .cart .basket-section::after {
     width: 100%;
 }
-
 .basket-section:hover {
     transition: .5s;
     -webkit-box-shadow: 2px 2px 15px 5px rgba(30, 30, 30, 0.1);
@@ -1134,7 +1131,6 @@ div.review-date > span {
     height: auto;
     object-fit: contain;
 }
-
 .basket-prod-name {
     font-family: 'SFUIDisplay-Semibold';
     font-size: 17px;
