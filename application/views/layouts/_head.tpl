@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="/assets/css/product.css">
     <link rel="stylesheet" href="/assets/css/small-page.css">
-    <link rel="stylesheet" href="/assets/css/mob-question.css">
     <link rel="stylesheet" href="/assets/css/media.css">
+    <link rel="stylesheet" href="/assets/css/mob-question.css">
     {if isset($css_int) }
     {$css_int}
     {/if}
