@@ -68,8 +68,8 @@
                     <li><a href="/page/bonus">Бонусная программа</a></li>
                     <li><a href="/">Подарочные карты</a></li>
                     <li><a href="/">Кредит и оплата частями</a></li>
-                    <li><a href="/">Доставка с подключением</a></li>
-                    <li><a href="/">Установка</a></li>
+                    <li><a href="/page/delivery">Доставка с подключением</a></li>
+                    <li><a href="/page/connection">Установка</a></li>
                     <li><a href="/">Страховка</a></li>
                     <li><a href="/">Дополнительная гарантия</a></li>
                     <li><a href="/page/confidentiality">Политика конфиденцеальности</a></li>
