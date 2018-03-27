@@ -3186,6 +3186,7 @@ ul#selectsMenuBoxi > li.options:hover {
     margin: 0 0 1px 0;
     display: inline-block;
     width: fit-content;
+    height: auto;
 }
 
 .filter_toggle {

@@ -189,9 +189,9 @@ jQuery(document).ready(function () {
                     breakpoint: 1025,
                     settings: {
                         dots: false,
-                        arrows: true,
+                        arrows: true
                     }
-                }],
+                }]
         });
     } else {
     }
@@ -637,7 +637,7 @@ function CDT() {
 
 
         var tl = new Date(year + '/' + month + '/' + days + ' 00:00:00');
-        p[i] = new CountdownTimer(timerAll[i], tl, '<span class="number-wrapper"><div class="line"></div><span class="number end">Time is up!</span></span>');
+        p[i] = new CountdownTimer(timerAll[i], tl, '<span class="number-wrapper"><div class="line"></div><span class="number end">Акция завершена</span></span>');
         p[i].countDown();
     }
 
