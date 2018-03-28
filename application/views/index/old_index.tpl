@@ -116,7 +116,6 @@
     </div>
 </div>
 <!-- End actions -->
-
 <!-- Begin actions -->
 <div class="product_box">
     <div class="product_box_title">

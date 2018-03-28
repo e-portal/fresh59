@@ -36,7 +36,7 @@
 
 
             <div itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="button">
-                <span itemprop="name" class="label1">Отдельностоящая техника</span>
+                <span itemprop="name" class="label1">{$catName}</span>
                 <meta itemprop="position" content="2">
             </div>
 
