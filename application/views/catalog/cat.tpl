@@ -1140,43 +1140,11 @@ if(document.getElementsByClassName('bonus_on_card_'+(i+1))[0])
             </div>
         {/if}
     {else}
-
+                            <!--Categories-->
+                            <!--Categories-->
         {if $catId!=1}
-            {literal}
-                <script>
-                    $(function () {
-                        $('.b-navigation-toggle').click()
-                    });
-                </script>
-            {/literal}
-
-            <div class="h1_holder span-12 no_margin"><h1>{$catName}</h1></div>
-            <!-- {if !$catId == 275 || !$cat.parent == 275} -->
-                <a class="banner-set" href="/catalog/sets"></a>
-            <!-- {/if} -->
-            <div class="category_listing span-12 no_margin">
-                {foreach from=$categories item=cat name=categories}
-                    <div class="span-3 subcategory_item">
-                        {if $smarty.foreach.categories.iteration <= 4 && $smarty.foreach.categories.iteration <= $smarty.foreach.categories.total}
-                            <div style="display:none"><!--cartdname-->{$cat.name}<!--/cartdname--></div>
-                        {/if}
-                        <a href="/{$cat.subdomain}/{$cat.latin_name|replace:' ':'-'|mblower}">
-                            <div class="img_holder">
-                                <img alt="{$catName}" src="{if $cat.id==86}/images/catalog/38342_s.jpg{else}{$url.img}/catalog/{$img[$cat.id].id}_s.{$img[$cat.id].ext}{/if}"/>
-                            </div>
-                            <span>{$cat.name}</span>
-                        </a>
-                    </div>
-                {/foreach}
-            </div>
-<!-- SEO -->
-            <article class="stext-footer" id="stextfooter_js">{if $seo_text_bottom}{$seo_text_bottom}{/if}</article>
-<!-- SEO -->
+                            {include file='catalog/categories.tpl'}
         {else}
-
-            {literal}
-                <!-- <style type="text/css">.main-content {padding: 0 !important;} h1 {margin: 0 0 10px !important;}</style> -->
-            {/literal}
 
             <div class="h1_holder span-12 no_margin">
                 <h1>{if $seo_h1}{$seo_h1}{else}Каталог{/if}</h1>
@@ -1224,66 +1192,12 @@ if(document.getElementsByClassName('bonus_on_card_'+(i+1))[0])
 <!-- SEO -->
             {if $seo_text_bottom}
                 <article class="stext-bottom">{$seo_text_bottom}</article>
-
-                {literal}
-                    <script>
-                        $(document).ready(function() {
-                            $('.central_block .content').css({'padding-bottom':$('.stext-bottom').height() + 10});
-                        });
-                    </script>
-                {/literal}
-
             {/if}
 <!-- SEO -->
         {/if}
     {/if}
 
-<!-- <div style="display:none" id="new_seo">
-    {php}
-        if (function_exists("seo_shield_init_generate_content")) {
-            $ss_content = seo_shield_init_generate_content(array(
-                'type' => 'category_content',
-                'template_res' => array(
-                    'before' => '<div class="card_seo_content">',
-                    'after' => '</div>',
-                ),
-                'markers' => array(
-                    'prevcrumbs' => '',
-                    'secondcrumbs' => '',
-                    'cartname_1' => '',
-                    'cartname_2' => '',
-                    'cartname_3' => '',
-                    'cartname_4' => '',
-                )
-            ));
-            $ss_content->start();
-        }
-    {/php}
-</div> -->
-
 {literal}
-<!-- SEO -->
-<!--     <script type="text/javascript">
-        $(document).ready(function(){
-            if($('.stext-footer').text().length >1) {
-                $('#stextfooter_js').remove();
-            } else {
-                if($("article").is(".stext-footer")) {
-                    var seotext = $('#new_seo').html();
-                    $('.stext-footer').html(seotext);
-                } else {
-                    var new_seo = $('#new_seo').html();
-                    $('.content').append('<article class="stext-footer" id="stextfooter_js">'+new_seo+'</article>');
-                }
-            }
-            $('.stext-footer ul li').each(function() {
-                if ($(this).text() == "- ") {
-                    $(this).remove();
-                }
-            });
-        });
-    </script> -->
-<!-- SEO -->
     <script>
         // Вызывается, когда пользователь кликает по продукту
         function onProductClickEcommerce(id) {
