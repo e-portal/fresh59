@@ -54,8 +54,6 @@
                             </form>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
@@ -72,29 +70,32 @@
                     </div>
 
                     <div class="item-base">
-                        <div class="base-menu">
-                            <ul>
 
-                                <li><a href="">Отдельностоящая техника</a>
-                                    <ul class="menu-0">
-                                        <li><a href="">мойки и смесители</a></li>
-                                        <li><a href="">мойки и смесители</a></li>
-                                        <li><a href="">мойки и смесители</a></li>
-                                        <li><a href="">мойки и смесители</a></li>
-                                        <li><a href="">мойки и смесители</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="">Встраиваемая техника</a></li>
-                                <li><a href="">мелкая бытовая техника</a></li>
-                                <li><a href="">Красота и здоровье</a></li>
-                                <li><a href="">Техника для уборки</a></li>
-                                <li><a href="">Кухонная посуда</a></li>
-                                <li><a href="">мойки и смесители</a></li>
-                                <li><a href="">климатическая техника</a></li>
-                                <li><a href="">Аксессуары</a></li>
-                                <li><a href="">Бытовая химия</a></li>
-                                <li><a href="">Распродажа</a></li>
-                            </ul>
+                        <!--<ul>
+
+                            <li><a href="">Отдельностоящая техника</a>
+                                <ul class="menu-0">
+                                    <li><a href="">мойки и смесители</a></li>
+                                    <li><a href="">мойки и смесители</a></li>
+                                    <li><a href="">мойки и смесители</a></li>
+                                    <li><a href="">мойки и смесители</a></li>
+                                    <li><a href="">мойки и смесители</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Встраиваемая техника</a></li>
+                            <li><a href="">мелкая бытовая техника</a></li>
+                            <li><a href="">Красота и здоровье</a></li>
+                            <li><a href="">Техника для уборки</a></li>
+                            <li><a href="">Кухонная посуда</a></li>
+                            <li><a href="">мойки и смесители</a></li>
+                            <li><a href="">климатическая техника</a></li>
+                            <li><a href="">Аксессуары</a></li>
+                            <li><a href="">Бытовая химия</a></li>
+                            <li><a href="">Распродажа</a></li>
+                        </ul>-->
+                        {php} echo
+                        $this->navigation()->menu($this->menu)->setPartial('layouts/menu.tpl')->setMinDepth(1)->setMaxDepth(2);
+                        {/php}
                         </div>
                     </div>
 

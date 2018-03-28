@@ -340,8 +340,6 @@
                 </div>
             </a>
             <div class="hovv">
-
-
                 <div class="news">
                     <div class="left-butt">
                         <a href="">В избранное</a>

@@ -52,7 +52,7 @@
                     <li><a href="/page/payment">Оплата</a></li>
                     <li><a href="/page/delivery">Доставка</a></li>
                     <li><a href="/page/guarantee">Гарантии и сервис</a></li>
-                    <li><a href="/articles/faq">Вопрос/Ответ</a></li>
+                    <li><a href="/faq">Вопрос/Ответ</a></li>
                     <li><a href="/page/address">Контакты</a></li>
                     <li><a href="">Бонус-клуб</a></li>
                     <li><a href="/articles">Статьи</a></li>
