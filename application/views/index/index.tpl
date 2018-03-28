@@ -23,6 +23,6 @@
 
 
     {include file='layouts/orig.tpl'}
-    <div class="doww"><img src="./img/verh.png" alt=""></div>
+    <div class="doww"><img src="/assets/img/verh.png" alt=""></div>
 </div>
 {include file='layouts/_footer.tpl'}

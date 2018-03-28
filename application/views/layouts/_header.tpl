@@ -70,7 +70,6 @@
                     </div>
 
                     <div class="item-base">
-
                         <!--<ul>
 
                             <li><a href="">Отдельностоящая техника</a>
@@ -93,7 +92,8 @@
                             <li><a href="">Бытовая химия</a></li>
                             <li><a href="">Распродажа</a></li>
                         </ul>-->
-                        {php} echo
+                        {php}
+                        echo
                         $this->navigation()->menu($this->menu)->setPartial('layouts/menu.tpl')->setMinDepth(1)->setMaxDepth(2);
                         {/php}
                     </div>
