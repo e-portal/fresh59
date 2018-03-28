@@ -1,4 +1,8 @@
-{debug}
+<pre>
+{php}
+var_dump($articles);die;
+{/php}
+</pre>
 <div class="container wrap">
     <div class="bread-crumbs breadcrumbs mobile-display-none" id="breadcrumbs" itemscope=""
          itemtype="http://schema.org/BreadcrumbList">
