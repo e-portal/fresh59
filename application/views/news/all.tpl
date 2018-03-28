@@ -42,7 +42,7 @@
                     <div class="sale-from-to">
                         Акция завершена
                     </div>
-                    {else}
+                    {elseif $new.is_action==1}
                     <div class="timer" data-year="{getdate arr=$new.end_date arr='Y'}"
                          data-month="{getdate arr=$new.end_date arr='m'}"
                          data-days="{getdate arr=$new.end_date arr='d'}"></div>
