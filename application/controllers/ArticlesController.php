@@ -58,6 +58,8 @@ class ArticlesController extends Alcotec_Frontend_Controller_ArticlesController 
             if ($lang == 'ru') {
                 if ($siteId == 4) {
                     $select = $modArticles->select()->where('visible = "1"')->where('site_id = ?', $siteId)->order('date DESC');
+                    var_dump($select);
+                    die;
                     $urlpath = new Alcotec_Urlpath(array('baseUrl' => '/articles', 'urlParams' => array_diff_key($this->getRequest()->getParams(), array('module' => '', 'searchtext' => '', 'action' => '', 'controller' => '', 'id' => '',))));
                     $paginator = Alcotec_Paginator::factory($select, $urlpath);
                     $paginator->setItemsPerPage(10);
