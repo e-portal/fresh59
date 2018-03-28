@@ -1,5 +1,6 @@
 <pre>
 {php}
+    global $articles;
 var_dump($articles);die;
 {/php}
 </pre>
