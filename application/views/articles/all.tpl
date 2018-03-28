@@ -1,8 +1,5 @@
 <pre>
-{php}
-    global $articles;
-var_dump($articles);die;
-{/php}
+{$articles|var_dump}
 </pre>
 <div class="container wrap">
     <div class="bread-crumbs breadcrumbs mobile-display-none" id="breadcrumbs" itemscope=""
