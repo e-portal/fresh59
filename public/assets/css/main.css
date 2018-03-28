@@ -178,9 +178,14 @@ h6 {
 }
 /*end PAGINATION*/
 
+.maii-item {
+    position: relative;
+}
+
 .maii .item-senn:nth-child(2) {
     height: 827px;
-    width: 663px;
+    width: calc(40% - 10px);
+    /*width: 663px;*/
 }
 
 .maii .item-senn:nth-child(2) .sench {
@@ -541,7 +546,7 @@ h6 {
 
 .inpp input {
     font-size: 13px;
-    padding: 10px 0 10px 27px;
+    padding: 15px 0 15px 27px;
     font-family: 'SF-UI-Display-Regular';
     color: #979797;
     border-top-left-radius: 25px;
@@ -559,7 +564,7 @@ input {
 
 .send {
     width: 62px;
-    height: 38px;
+    height: 47px;
     background: #313e49;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -768,6 +773,10 @@ input {
     justify-content: center
 }
 
+.burgerBtn {
+    display: none;
+}
+
 .base-menu {
     position: absolute;
     top: 65px;
@@ -789,6 +798,7 @@ input {
     -webkit-transition: .25s;
     -ms-transition: .25s;
     position: relative;
+    margin: -1px 0;
 }
 
 .base-menu ul li a {
@@ -801,7 +811,9 @@ input {
     font-family: 'SFUIDisplay-Semibold';
     font-size: 17px;
     color: #313e49;
-    text-transform: uppercase
+    text-transform: uppercase;
+    transition: none;
+
 }
 
 .base-menu ul li:nth-child(even) {
@@ -846,11 +858,6 @@ input {
     float: left;
     background: #f9f9f9;
     position: relative
-}
-
-.most-item-sale {
-    /*display: flex;*/
-    /*justify-content: space-between;*/
 }
 
 .most-item-sale .most-item {
@@ -899,7 +906,7 @@ input {
     font-size: 19px;
     color: #313e49;
     bottom: 37%;
-    /*left: 37px;*/
+    left: 37px;
     cursor: pointer;
 }
 
@@ -1529,7 +1536,8 @@ input {
 }
 
 .item-senn:nth-child(1) {
-    width: 300px;
+    width: calc(20% - 10px);
+    /*width: 300px;*/
     height: 409px;
     background: #fff;
     /*margin: 0 10px 0 4px;*/
@@ -1608,7 +1616,8 @@ input {
 .item-senn {
     float: left;
     background: #fff;
-    width: 300px;
+    width: calc(20% - 10px);
+    /*width: 300px;*/
     height: 409px;
     margin: 0 10px 0 0;
     position: relative
@@ -1664,10 +1673,18 @@ input {
     margin: 0
 }
 
-.item-senn:nth-child(5) {
+.item-senn:nth-child(5),
+.item-senn:nth-child(7) {
     position: absolute;
     bottom: 0;
-    /*left: 4px;*/
+}
+
+.item-senn:nth-child(6) {
+    margin-top: 10px;
+}
+
+.item-senn:nth-child(7) {
+    right: 0;
 }
 
 .under-senn .item-senn:nth-child(6) {
@@ -2380,7 +2397,8 @@ input {
 }
 
 .home-page .base-menu {
-    transform: translate(0) !important;
+    transform: translate(0);
+    /*transform: translate(0) !important;*/
 }
 
 .home-page .base-menu ul {
@@ -2466,19 +2484,28 @@ input {
 
 .base-tehni {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90%;
 }
 
 .left-tehni {
-    margin: 0 47px 0 0;
+    width: 45%;
+    height: inherit;
+}
+
+.left-tehni img {
+    width: 100%;
+    height: inherit;
+    object-fit: contain;
 }
 
 .right-tehni {
-    margin: 30px 0 0 0;
     font-family: 'SFUIDisplay-Bold';
     color: #000;
     font-size: 17px;
     line-height: 17px;
-    width: 137px;
+    width: 45%;
 }
 
 .senn-main {
@@ -3204,7 +3231,6 @@ ul#selectsMenuBoxi > li.options:hover {
     font-family: 'SF-UI-Display-Light';
 }
 input[type=number] {
-    /*border: none;*/
     text-align: center;
     font-size: 14px;
     -moz-appearance: textfield;
