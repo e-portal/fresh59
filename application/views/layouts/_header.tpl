@@ -114,12 +114,14 @@
                             <div class="names">Бонусы</div>
                         </div>
                     </div>
+                    {if $login}
                     <div class="bask-item pipl">
                         <div class="runn">
                             <div class="imgg"></div>
-                            <div class="names">Анжелика</div>
+                            <div class="names">{$login}</div>
                         </div>
                     </div>
+                    {/if}
                     <div class="bask-item vijen">
                         <div class="runn">
                             <div class="imgg">
