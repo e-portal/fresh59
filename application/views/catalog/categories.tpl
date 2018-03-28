@@ -23,7 +23,6 @@
 
         <!--</div>-->
     </div>
-    {debug}
 
     <div class="tehni wrap">
 
@@ -440,9 +439,7 @@
                         </div>
 
 
-                    </div>
 
-                    <div class="maii-item">
 
 
                         <div class="item-senn">
