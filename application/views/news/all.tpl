@@ -22,11 +22,6 @@
             <div class="three-column">
                 {foreach from=$news item=new key=key name=news}
                 <div class="one-sale">
-                    {if $new.expired && $new.is_action==1}
-                    <div class="sale-from-to">
-                        Акция завершена
-                    </div>
-                    {/if}
                     {if $new.is_action==1}
                     <div class="sale-from-to">Акция действует с {mdates arr=$new.start_date}г по {mdates
                         arr=$new.end_date}г
@@ -43,9 +38,15 @@
                     </div>
                     <a><h5>{$new.name}</h5></a>
 
+                    {if $new.expired && $new.is_action==1}
+                    <div class="sale-from-to">
+                        Акция завершена
+                    </div>
+                    {else}
                     <div class="timer" data-year="{getdate arr=$new.end_date arr='Y'}"
                          data-month="{getdate arr=$new.end_date arr='m'}"
                          data-days="{getdate arr=$new.end_date arr='d'}"></div>
+                    {/if}
 
                     <a href="/news/{$new.url|mblower}" class="khob acty">Подробнее</a>
                 </div>
