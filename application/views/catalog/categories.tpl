@@ -23,7 +23,7 @@
 
         <!--</div>-->
     </div>
-
+    {debug}
 
     <div class="tehni wrap">
 
