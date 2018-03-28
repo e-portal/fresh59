@@ -16,12 +16,12 @@
                         {if $smarty.foreach.links.iteration == round($smarty.foreach.links.total/2)} </ul><ul> {/if}
                         {/foreach}
                     </ul>
-                </div>-->
-</div>
-</li>
-{/foreach}
-{/foreach}
-</ul>
+                </div>
+            </div>-->
+        </li>
+        {/foreach}
+        {/foreach}
+    </ul>
 
 
 </div>
