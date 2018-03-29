@@ -1,6 +1,6 @@
 {include file='layouts/_header.tpl'}
 
-<pre>{$footer_articles|vardump}</pre>
+<pre>{$footer_articles|var_dump}</pre>
 
 
 
