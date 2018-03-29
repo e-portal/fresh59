@@ -11,7 +11,7 @@
         {if $item.id_availability == 3}
         <h5 class="blue">Под заказ</h5>
         {/if}
-        <h4>{$top_item.brand} {$top_item.name}</h4>
+        <h4>{if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if}{$top_item.brand} {$top_item.name}</h4>
         <div class="centr">
             <div class="itee-imgg">
                 <img {if $top_item.imgid} src="/images/catalog/{$top_item.imgid}_s.{$top_item.imgext}" {else}
