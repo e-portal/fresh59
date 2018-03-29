@@ -1,5 +1,3 @@
-{debug}
-
 <div class="container category">
 
     <div class="libe wrap">
