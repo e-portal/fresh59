@@ -1659,6 +1659,12 @@ input {
     line-height: 12px
 }
 
+.home-page .itee-imgg img {
+    width: auto;
+    height: auto;
+    object-fit: scale-down;
+}
+
 .itee img {
     width: auto;
     height: auto;
@@ -1682,7 +1688,6 @@ input {
 .item-senn:nth-child(6) {
     margin-top: 10px;
 }
-
 .item-senn:nth-child(7) {
     right: 0;
 }
@@ -1947,20 +1952,8 @@ input {
     background: #0088c8
 }
 
-.senn .blue {
-    position: absolute;
-    right: 15px;
-    top: 50px;
-    z-index: 5;
-}
-
 .blue {
     font-size: 14px;
-}
-
-.senn .blue:after {
-    top: 1px;
-    background: url(../img/blus.png) center no-repeat;
 }
 
 .menu-0 {
@@ -1981,14 +1974,18 @@ input {
     background: #fff;
 }
 
-.seap .blue {
+.seap .blue,
+.owls .blue,
+.senn .blue {
     position: absolute;
     right: 15px;
     top: 50px;
     z-index: 5;
 }
 
-.seap .blue:after {
+.seap .blue:after,
+.senn .blue:after,
+.owls .blue:after {
     top: 1px;
     background: url(../img/blus.png) center no-repeat;
 }
