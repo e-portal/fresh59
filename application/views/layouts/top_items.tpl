@@ -5,13 +5,14 @@
         {if $top_item.id_availability == 1}
         <h5 class="green">В наличии</h5>
         {/if}
-        {if $item.id_availability == 2}
+        {if $top_item.id_availability == 2}
         <h5 class="gray">Наличие уточняйте</h5>
         {/if}
-        {if $item.id_availability == 3}
+        {if $top_item.id_availability == 3}
         <h5 class="blue">Под заказ</h5>
         {/if}
-        <h4>{if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if}{$top_item.brand} {$top_item.name}</h4>
+        <h4>{if $top_item.cat_onename}{$top_item.cat_onename}{else}{$top_item.cat}{/if}{$top_item.brand}
+            {$top_item.name}</h4>
         <div class="centr">
             <div class="itee-imgg">
                 <img {if $top_item.imgid} src="/images/catalog/{$top_item.imgid}_s.{$top_item.imgext}" {else}
@@ -42,13 +43,13 @@
                 <p>Гарантия <span>12</span> мес</p>
             </div>
             {/if}
-            {if $item.bestprice > $item.price || $item.id2==41385}
+            {if $top_item.bestprice > $top_item.price || $top_item.id2==41385}
             <div class="itee">
                 <img src="/assets/img/izee4.png" alt="">
                 <p>Лучшая <span>цена</span></p>
             </div>
             {/if}
-            {if $item.bestprice > $item.price || $item.id2==41385}
+            {if $top_item.bestprice > $top_item.price || $top_item.id2==41385}
             <img src="/assets/img/izee4.png" alt="">
             <p>Замена</p>
             {/if}
