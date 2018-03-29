@@ -502,61 +502,6 @@
                         <div class="item-senn">
                             <a class="sench" href="/">
                                 <h5 class="green">В наличии</h5>
-                                <h4>Микроволновая печь GORENJE MO 6240</h4>
-                                <div class="centr">
-                                    <div class="itee-imgg"><img src="/assets/img/senn0.png" alt=""></div>
-                                    <div class="itee">
-                                        <img src="/assets/img/izee0.png" alt="">
-                                        <p>Вернем: <span>500 грн</span></p>
-                                    </div>
-
-                                    <div class="itee">
-                                        <img src="/assets/img/izee1.png" alt="">
-                                        <p>от <span>500</span> грн/мес</p>
-                                    </div>
-
-
-                                </div>
-                                <object type="lol/wut">
-                                    <a href="/" class="otzv">
-                                        <div class="left-otzv">
-                                            <img src="/assets/img/patr.png" alt="">
-                                        </div>
-                                        <div class="right-otzv">
-                                            <span>10 отзывов</span>
-                                        </div>
-                                    </a></object>
-
-                                <div class="bakk">
-                                    <div class="left-bakk">
-                                        <p>2 500 грн</p>
-                                        <p>Вернем: <span>500 грн</span></p>
-                                    </div>
-                                    <div class="right-bakk">
-                                        <object type="lol/wut">
-                                            <a class="bask acty" href="javascript:void(0)"><span>В корзину</span></a>
-                                        </object>
-
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="hovv">
-
-
-                                <div class="news">
-                                    <div class="left-butt">
-                                        <a href="">В избранное</a>
-                                    </div>
-                                    <div class="right-butt">
-                                        <a href="">Сравнение</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="item-senn">
-                            <a class="sench" href="/">
-                                <h5 class="green">В наличии</h5>
                                 <h4>Стиральная машина Electro ELECTROLUX</h4>
                                 <div class="centr">
                                     <div class="itee-imgg"><img src="/assets/img/senn2.png" alt=""></div>
@@ -622,6 +567,62 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="item-senn">
+                            <a class="sench" href="/">
+                                <h5 class="green">В наличии</h5>
+                                <h4>Микроволновая печь GORENJE MO 6240</h4>
+                                <div class="centr">
+                                    <div class="itee-imgg"><img src="/assets/img/senn0.png" alt=""></div>
+                                    <div class="itee">
+                                        <img src="/assets/img/izee0.png" alt="">
+                                        <p>Вернем: <span>500 грн</span></p>
+                                    </div>
+
+                                    <div class="itee">
+                                        <img src="/assets/img/izee1.png" alt="">
+                                        <p>от <span>500</span> грн/мес</p>
+                                    </div>
+
+
+                                </div>
+                                <object type="lol/wut">
+                                    <a href="/" class="otzv">
+                                        <div class="left-otzv">
+                                            <img src="/assets/img/patr.png" alt="">
+                                        </div>
+                                        <div class="right-otzv">
+                                            <span>10 отзывов</span>
+                                        </div>
+                                    </a></object>
+
+                                <div class="bakk">
+                                    <div class="left-bakk">
+                                        <p>2 500 грн</p>
+                                        <p>Вернем: <span>500 грн</span></p>
+                                    </div>
+                                    <div class="right-bakk">
+                                        <object type="lol/wut">
+                                            <a class="bask acty" href="javascript:void(0)"><span>В корзину</span></a>
+                                        </object>
+
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="hovv">
+
+
+                                <div class="news">
+                                    <div class="left-butt">
+                                        <a href="">В избранное</a>
+                                    </div>
+                                    <div class="right-butt">
+                                        <a href="">Сравнение</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
 
                         <div class="item-senn">
                             <a class="sench" href="/">
