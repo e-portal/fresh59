@@ -2,20 +2,35 @@
 
     <div class="libe wrap">
         <!--<div class="container">-->
+
+        <!--{foreach from=$footer_news item=news key=key name=news}
+        <div class="item-libe">
+            <img src="/uploads/{$news.big_img}" alt="{$news.name|htmlspecialchars}"
+                 title="{$news.name|htmlspecialchars}">
+            <div class="khob acty">Все скидки
+                <a {if (strlen($news.ext_url)> 0) && (strpos($news.ext_url,'ucenka'))>0} rel='nofollow' {/if}
+                    href="{if strlen($news.ext_url) > 0}{$news.ext_url}{else}/news/{$news.url}{/if}" id="link"
+                    tabindex="0"></a></div>
+        </div>
+        {/foreach}-->
+
         <div class="slick libe-slick">
-
-            {foreach from=$footer_news item=news key=key name=news}
             <div class="item-libe">
-                <img src="/uploads/{$news.big_img}" alt="{$news.name|htmlspecialchars}"
-                     title="{$news.name|htmlspecialchars}">
-                <div class="khob acty">Все скидки
-                    <a {if (strlen($news.ext_url)> 0) && (strpos($news.ext_url,'ucenka'))>0} rel='nofollow' {/if}
-                        href="{if strlen($news.ext_url) > 0}{$news.ext_url}{else}/news/{$news.url}{/if}" id="link"
-                        tabindex="0"></a></div>
+                <img src="/assets/img/categ.png" alt="">
+                <div class="khob acty">Все скидки<a href="/" id="link" tabindex="0"></a></div>
             </div>
-            {/foreach}
 
 
+            <div class="item-libe">
+                <img src="/assets/img/categ.png" alt="">
+                <div class="khob acty">Все скидки<a href="/" id="link" tabindex="0"></a></div>
+            </div>
+
+
+            <div class="item-libe">
+                <img src="/assets/img/categ.png" alt="">
+                <div class="khob acty">Все скидки<a href="/" id="link" tabindex="0"></a></div>
+            </div>
         </div>
 
         <!--</div>-->
