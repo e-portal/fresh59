@@ -57,7 +57,9 @@
     padding-bottom: 20px;
 }
 
-.accordion .info-accord p {
+.accordion .info-accord p,
+.info-accord ul,
+.info-accord ol {
     margin: 0;
 }
 
