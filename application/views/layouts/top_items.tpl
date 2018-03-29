@@ -48,18 +48,18 @@
             </div>
 
             <div class="itee">
-                <img src="./img/izee3.png" alt="">
+                <img src="/assets/img/izee3.png" alt="">
                 <p>от <span>{$top_item.price*0.0099*$curs_evro_smarty+$top_item.price/24*$curs_evro_smarty|round}</span>
                     грн/мес
                 </p>
             </div>
             {/if}
             <div class="itee">
-                <img src="./img/izee2.png" alt="">
+                <img src="/assets/img/izee2.png" alt="">
                 <p>Гарантия <span>12</span> мес</p>
             </div>
             <div class="itee">
-                <img src="./img/izee4.png" alt="">
+                <img src="/assets/img/izee4.png" alt="">
                 <p>Лучшая <span>цена</span></p>
             </div>
 
