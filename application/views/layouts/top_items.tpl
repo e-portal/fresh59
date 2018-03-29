@@ -25,31 +25,32 @@
 {foreach from=$topsales_items item=top_item}
 <div class="item-senn">
     <a class="sench"
-       href="{iurl assoc.subdomain=$item.subdomain assoc.parent=$item.parentname assoc.cat_latin=$item.cat_latin_single assoc.brand=$item.brand assoc.item=$item.name}">
-        {if $item.id_availability == 1}
+       href="{iurl assoc.subdomain=$top_item.subdomain assoc.parent=$top_item.parentname assoc.cat_latin=$top_item.cat_latin_single assoc.brand=$top_item.brand assoc.item=$top_item.name}">
+        {if $top_item.id_availability == 1}
         <h5 class="green">В наличии</h5>
         {/if}
-        <h4>{$item.brand} {$item.name}</h4>
+        <h4>{$top_item.brand} {$top_item.name}</h4>
         <div class="centr">
             <div class="itee-imgg">
-                <img {if $item.imgid} src="/images/catalog/{$item.imgid}_s.{$item.imgext}" {else}
-                     src="{$url.img}/no-image.jpg" {/if} alt="{$item.name}-{$item.brand}">
+                <img {if $top_item.imgid} src="/images/catalog/{$top_item.imgid}_s.{$top_item.imgext}" {else}
+                     src="{$url.img}/no-image.jpg" {/if} alt="{$top_item.name}-{$top_item.brand}">
             </div>
-            {if $item.bonus_amount>0}
+            {if $top_item.bonus_amount>0}
             <div class="itee">
                 <img src="/assets/img/izee0.png" alt="">
-                <p>Вернем: <span>{$item.bonus_amount|round} грн</span></p>
+                <p>Вернем: <span>{$top_item.bonus_amount|round} грн</span></p>
             </div>
             {/if}
-            {if $item.id_availability == 1}
+            {if $top_item.id_availability == 1}
             <div class="itee">
                 <img src="/assets/img/izee1.png" alt="">
-                <p>от <span>{$item.price/$rent_index*$curs_evro_smarty|round}</span> грн/мес</p>
+                <p>от <span>{$top_item.price/$rent_index*$curs_evro_smarty|round}</span> грн/мес</p>
             </div>
 
             <div class="itee">
                 <img src="./img/izee3.png" alt="">
-                <p>от <span>{$item.price*0.0099*$curs_evro_smarty+$item.price/24*$curs_evro_smarty|round}</span> грн/мес
+                <p>от <span>{$top_item.price*0.0099*$curs_evro_smarty+$top_item.price/24*$curs_evro_smarty|round}</span>
+                    грн/мес
                 </p>
             </div>
             {/if}
