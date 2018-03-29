@@ -11,7 +11,7 @@
         {if $top_item.id_availability == 3}
         <h5 class="blue">Под заказ</h5>
         {/if}
-        <h4>{if $top_item.cat_onename}{$top_item.cat_onename}{else}{$top_item.cat}{/if}{$top_item.brand}
+        <h4>{if $top_item.cat_onename}{$top_item.cat_onename}{else}{$top_item.cat}{/if} {$top_item.brand}
             {$top_item.name}</h4>
         <div class="centr">
             <div class="itee-imgg">
@@ -50,8 +50,10 @@
             </div>
             {/if}
             {if $top_item.bestprice > $top_item.price || $top_item.id2==41385}
-            <img src="/assets/img/izee4.png" alt="">
-            <p>Замена</p>
+            <div class="itee">
+                <img src="/assets/img/izee4.png" alt="">
+                <p>Замена</p>
+            </div>
             {/if}
         </div>
         <object type="lol/wut">
