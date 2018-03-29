@@ -1,33 +1,15 @@
-<!-- <div class="top_sales_subblock">
-     {foreach from=$topsales_items item=item name=topsales_items}
-     <div class="top_sales_item">
-         <a href="{iurl assoc.subdomain=$item.subdomain assoc.parent=$item.parentname assoc.cat_latin=$item.cat_latin_single assoc.brand=$item.brand assoc.item=$item.name}">
-             <img {if $item.imgid}src="/images/catalog/{$item.imgid}_s.{$item.imgext}" {else}src="{$url.img}/no-image.jpg"{/if} alt="{$item.name}-{$item.brand}"/>
-         </a>
-         <a href="{iurl assoc.subdomain=$item.subdomain assoc.parent=$item.parentname assoc.cat_latin=$item.cat_latin_single assoc.brand=$item.brand assoc.item=$item.name}">{$item.brand} {$item.name}</a>
-         <span class="description">{if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if}</span>
-         {if $item.id_availability == 1}
-         <span class="in_stock_status">Есть в наличии</span>
-         {/if}
-         {if $item.id_availability == 2}
-         <span class="out_stock_status">Наличие уточняйте</span>
-         {/if}
-         {if $item.id_availability == 3}
-         <span class="un_order"><a href="/articles/4" target="_blank" title="Как получить товар под заказ">Под заказ</a></span>
-         {/if}
-         <span class="price_sidebar">{price $item.price $item.id_currency} {$smarty.session.Currency.title}</span>
-         {if $smarty.foreach.topsales_items.first}<i class="topsale-icon"></i>{/if}
-     </div>
-     {/foreach}
- </div>-->
-
-
-{foreach from=$topsales_items item=top_item}
+{foreach from=$topsales_items item=top_item name=tp_items}
 <div class="item-senn">
     <a class="sench"
        href="{iurl assoc.subdomain=$top_item.subdomain assoc.parent=$top_item.parentname assoc.cat_latin=$top_item.cat_latin_single assoc.brand=$top_item.brand assoc.item=$top_item.name}">
         {if $top_item.id_availability == 1}
         <h5 class="green">В наличии</h5>
+        {/if}
+        {if $item.id_availability == 2}
+        <h5 class="gray">Наличие уточняйте</h5>
+        {/if}
+        {if $item.id_availability == 3}
+        <h5 class="blue">Под заказ</h5>
         {/if}
         <h4>{$top_item.brand} {$top_item.name}</h4>
         <div class="centr">
@@ -54,15 +36,22 @@
                 </p>
             </div>
             {/if}
+            {if $top_item.id_brand == '26' && $top_item.id_category != 60}
             <div class="itee">
                 <img src="/assets/img/izee2.png" alt="">
                 <p>Гарантия <span>12</span> мес</p>
             </div>
+            {/if}
+            {if $item.bestprice > $item.price || $item.id2==41385}
             <div class="itee">
                 <img src="/assets/img/izee4.png" alt="">
                 <p>Лучшая <span>цена</span></p>
             </div>
-
+            {/if}
+            {if $item.bestprice > $item.price || $item.id2==41385}
+            <img src="/assets/img/izee4.png" alt="">
+            <p>Замена</p>
+            {/if}
         </div>
         <object type="lol/wut">
             <a href="/" class="otzv">
