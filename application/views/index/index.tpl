@@ -1,11 +1,10 @@
 {include file='layouts/_header.tpl'}
 
-<pre>{$footer_articles._data|var_dump}</pre>
-<hr>
-{foreach from=$footer_articles item=article}
-<pre>{$articles|var_dump}</pre>
-{/foreach}
-<hr>
+<pre>
+{php}
+var_dump($footer_articles);die;
+{/php}
+</pre>
 
 
 <div class="container">
