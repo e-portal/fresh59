@@ -1,6 +1,6 @@
 {include file='layouts/_header.tpl'}
 
-
+{debug}
 
 
 
