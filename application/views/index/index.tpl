@@ -1,5 +1,6 @@
 {include file='layouts/_header.tpl'}
 
+<pre>{$footer_articles|vardump}</pre>
 
 
 
