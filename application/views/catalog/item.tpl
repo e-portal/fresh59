@@ -532,7 +532,13 @@ if(document.getElementsByClassName('black_friday')[0])
 
 {if $item.rent > 25}{assign var="rent_index" value=8}{elseif $item.rent > 12.5}{assign var="rent_index" value=6}{else}{assign var="rent_index" value=3}{/if}
 
-{if $item.id_availability == 1}<div onmouseover="hide_icons_oplata_chast()" onmouseout="show_icons_oplata_chast()" class="oplata_chast_icon"><img src="/images/icons/privatbank_pp_{if $item.rent >= 25}8{elseif $item.rent > 12.5}6{elseif $item.rent > 7.5}3{else}3{/if}_logo.png" style="position: absolute;margin-left: -33px;width: 27px;margin-top: -1px;">от <span style="color: rgba(255, 39, 2, 0.81);font-weight: bold;font-size: 10px;font-style: italic;">{$item.price/$rent_index*$curs_evro_smarty|round}</span><br><span style="font-size: 10px;font-weight: bold;font-style: italic;"> грн./мес.</span><div class="overlay_icons" style="margin-top: -30px;margin-left: -145px;font-style: italic;">
+    {if $item.id_availability == 1}
+    <div onmouseover="hide_icons_oplata_chast()" onmouseout="show_icons_oplata_chast()" class="oplata_chast_icon">
+        <img src="/images/icons/privatbank_pp_{if $item.rent >= 25}8{elseif $item.rent > 12.5}6{elseif $item.rent > 7.5}3{else}3{/if}_logo.png"
+             style="position: absolute;margin-left: -33px;width: 27px;margin-top: -1px;">
+        от <span style="color: rgba(255, 39, 2, 0.81);font-weight: bold;font-size: 10px;font-style: italic;">{$item.price/$rent_index*$curs_evro_smarty|round}</span><br><span
+                style="font-size: 10px;font-weight: bold;font-style: italic;"> грн./мес.</span>
+        <div class="overlay_icons" style="margin-top: -30px;margin-left: -145px;font-style: italic;">
     <div class="wrapper_body"><div class="cbm_wrap ">
      <noindex><a href="https://chast.privatbank.ua/" rel="nofollow" target="_blank"><h1 title="Узнать подробнее...">Оплата частями</h1></a></noindex>
      <noindex><a href="https://chast.privatbank.ua/" rel="nofollow" target="_blank"><img title="Узнать подробнее..." src="/images/hint/op_chast.png"></a></noindex>
@@ -545,7 +551,13 @@ if(document.getElementsByClassName('black_friday')[0])
      </div>
 </div></div></div>
 
-<div onmouseover="hide_icons_oplata_rassrochka()" onmouseout="show_icons_oplata_rassrochka()" class="oplata_rassrochka_icon"><img src="/images/hint/oplata_rassrochka_icon.png" style="position: absolute;margin-left: -32px;margin-top: 1px;">от <span style="color: rgba(255, 39, 2, 0.81);font-weight: bold;font-size: 10px;font-style: italic;">{$item.price*0.0099*$curs_evro_smarty+$item.price/24*$curs_evro_smarty|round}</span><br><span style="font-size: 10px;font-weight: bold;font-style: italic;"> грн./мес.</span><div class="overlay_icons" style="margin-top: -30px;margin-left: -145px;font-style: italic;">
+    <div onmouseover="hide_icons_oplata_rassrochka()" onmouseout="show_icons_oplata_rassrochka()"
+         class="oplata_rassrochka_icon">
+        <img src="/images/hint/oplata_rassrochka_icon.png"
+             style="position: absolute;margin-left: -32px;margin-top: 1px;">от
+        <span style="color: rgba(255, 39, 2, 0.81);font-weight: bold;font-size: 10px;font-style: italic;">{$item.price*0.0099*$curs_evro_smarty+$item.price/24*$curs_evro_smarty|round}</span><br><span
+                style="font-size: 10px;font-weight: bold;font-style: italic;"> грн./мес.</span>
+        <div class="overlay_icons" style="margin-top: -30px;margin-left: -145px;font-style: italic;">
     <div class="wrapper_body"><div class="cbm_wrap ">
      <noindex><a href="https://chast.privatbank.ua/" rel="nofollow" target="_blank"><h1 title="Узнать подробнее...">МГНОВЕННАЯ РАССРОЧКА</h1></a></noindex>
      <noindex><a href="https://chast.privatbank.ua/" rel="nofollow" target="_blank"><img title="Узнать подробнее..." src="/images/hint/oplata_rassrochka.jpg"></a></noindex>
