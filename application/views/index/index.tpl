@@ -3,14 +3,18 @@
 
 <div class="container">
 
+    {if 13|in_array:[12, 13, 15, 18, 21, 24, 25, 28, 29, 37, 45, 46, 48, 49, 50, 66, 68, 78, 92, 94, 141, 145, 169, 178, 210, 211, 212, 213, 270, 274, 308]}
+        INARRAY
+    {/if}
+
     {if $seo_text_bottom}
-    <div class="equip">
-        <div class="container">
-            <div class="nozer">
-                {$seo_text_bottom}
+        <div class="equip">
+            <div class="container">
+                <div class="nozer">
+                    {$seo_text_bottom}
+                </div>
             </div>
         </div>
-    </div>
     {/if}
 
 
