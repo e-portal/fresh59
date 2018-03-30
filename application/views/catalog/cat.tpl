@@ -29,8 +29,8 @@
 
 
 {if $catId}
-{if !$finalCat}
-{if $pages->totalItemCount > 0}
+    {if !$finalCat}
+    {if $pages->totalItemCount > 0}
     <div class="h1_holder span-12 no_margin 123123">
         <h1>
             {if $seo_h1}
@@ -212,167 +212,240 @@
     </script>
 {/literal}
 
-{assign var="number_of_element" value=0}
+
+
+    {assign var="number_of_element" value=0}
 <div id="category_block_view_listing" class="span-12 no_margin">
     {foreach from=$items item=item name=catitems}
     {if $article && $smarty.foreach.catitems.iteration == 21 && !$zf.params.page}
-    <div class="span-4 category_block_view_item">
-        {if $temporary_cashback_setting_action.on_off == 'on'}
-            {assign var="iteration_action" value=0}
-            {foreach from=$item_id_temporary_cashback item=foo}
-            {if $item.id2 == $foo}
-                <span {if $item.acttype=='gift'}id="refund_electrolux_gift"{else}id="refund_electrolux"{/if}
-                data-title="{$temporary_cashback_setting_action.catalog_label_for_what}" style="display: block;{/if}">
-            {$temporary_cashback_setting_action.catalog_label_info} {$temporary_cashback_summ[$iteration_action]}
-            грн</span>
-        {/if}
-        {assign var="iteration_action" value=$iteration_action+1}
-        {/foreach}
-        {/if}
-        <div class="cat-item__article">
-            <div class="cat-item__article-inner">
-                <h3><a href="/articles/{$article.url}">{$article.announce}</a></h3>
-                <div class="cat-item__article-text">{$article.short_text}</div>
+        <div class="span-4 category_block_view_item">
+            {if $temporary_cashback_setting_action.on_off == 'on'}
+                {assign var="iteration_action" value=0}
+                {foreach from=$item_id_temporary_cashback item=foo}
+                    {if $item.id2 == $foo}
+                        <span {if $item.acttype=='gift'}id="refund_electrolux_gift" {else}id="refund_electrolux"{/if}
+                              data-title="{$temporary_cashback_setting_action.catalog_label_for_what}"
+                              style="display: block;
+                                      text-align: center;
+                                      color: #f9ebf3;
+                                      font-size: 16px;
+                                      font-weight: bold;
+                                      position: absolute;
+                                      margin-top: 80px;
+                                      margin-left: 150px;
+                                      z-index: 1;
+                                      transform: rotate(15deg);
+                                      background-color: #0878C2;
+                                      border-radius: 10px;
+                                      padding: 5px;
+                                      cursor: pointer;
+                                      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+                              {if $item.acttype=='gift'}
+                                      transform: rotate(-20deg) !important;
+                                      margin-top: 215px !important;
+                                      margin-left: 125px !important;
+                              {/if}
+                                      width: 90px;">{$temporary_cashback_setting_action.catalog_label_info} {$temporary_cashback_summ[$iteration_action]}
+                            грн</span>
+                    {/if}
+                    {assign var="iteration_action" value=$iteration_action+1}
+                {/foreach}
+            {/if}
+            <div class="cat-item__article">
+                <div class="cat-item__article-inner">
+                    <h3><a href="/articles/{$article.url}">{$article.announce}</a></h3>
+                    <div class="cat-item__article-text">{$article.short_text}</div>
+                </div>
+                <a href="/articles/{$article.url}">Читать далее</a>
             </div>
-            <a href="/articles/{$article.url}">Читать далее</a>
+            <i class="article-icon"></i>
         </div>
-        <i class="article-icon"></i>
-    </div>
     {/if}
 
     {if $smarty.foreach.catitems.iteration == 3}
-    {if $catId == '28' || $catId == '29'}
-    <div class="span-4 category_block_view_item">
-    {if $temporary_cashback_setting_action.on_off == 'on'}
-        {assign var="iteration_action" value=0}
-        {foreach from=$item_id_temporary_cashback item=foo}
-        {if $item.id2 == $foo}
-            <span {if $item.acttype=='gift'}id="refund_electrolux_gift"{else}id="refund_electrolux"{/if}
-            data-title="{$temporary_cashback_setting_action.catalog_label_for_what}" style="{/if}">
-        {$temporary_cashback_setting_action.catalog_label_info} {$temporary_cashback_summ[$iteration_action]} грн</span>
-    {/if}
-    {assign var="iteration_action" value=$iteration_action+1}
-    {/foreach}
-    {/if}
-    <a href="/articles/%D0%9C%D0%BE%D0%B9%D0%BA%D0%B8-%D0%B8-%D1%81%D0%BC%D0%B5%D1%81%D0%B8%D1%82%D0%B5%D0%BB%D0%B8-%D0%B2-%D0%BA%D1%80%D0%B5%D0%B4%D0%B8%D1%82-%D0%BF%D0%BE%D0%B4-0">
-        <img src="/images/blanco0.jpg" alt="">
-    </a>
-    </div>
-    {elseif in_array($cat->parent, array(7,17)) && in_array($zf.params.brand,array(1,3,13))}
-    <div class="span-4 category_block_view_item">
-        {if $temporary_cashback_setting_action.on_off == 'on'}
-            {assign var="iteration_action" value=0}
-            {foreach from=$item_id_temporary_cashback item=foo}
-            {if $item.id2 == $foo}
-                <span {if $item.acttype=='gift'}id="refund_electrolux_gift"{else}id="refund_electrolux"{/if}
-                data-title="{$temporary_cashback_setting_action.catalog_label_for_what}" style="{/if}">
-            {$temporary_cashback_setting_action.catalog_label_info} {$temporary_cashback_summ[$iteration_action]}
-            грн</span>
+        {if $catId == '28' || $catId == '29'}
+            <div class="span-4 category_block_view_item">
+                {if $temporary_cashback_setting_action.on_off == 'on'}
+                    {assign var="iteration_action" value=0}
+                    {foreach from=$item_id_temporary_cashback item=foo}
+                        {if $item.id2 == $foo}
+                            <span {if $item.acttype=='gift'}id="refund_electrolux_gift"
+                                  {else}id="refund_electrolux"{/if}
+                                  data-title="{$temporary_cashback_setting_action.catalog_label_for_what}" style="
+                                    text-align: center;
+                                    color: #f9ebf3;
+                                    font-size: 16px;
+                                    font-weight: bold;
+                                    position: absolute;
+                                    margin-top: 80px;
+                                    margin-left: 150px;
+                                    z-index: 1;
+                                    transform: rotate(15deg);
+                                    background-color: #0878C2;
+                                    border-radius: 10px;
+                                    padding: 5px;
+                                    cursor: pointer;
+                                    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+                            {if $item.acttype=='gift'}
+                                    transform: rotate(-20deg) !important;
+                                    margin-top: 215px !important;
+                                    margin-left: 125px !important;
+                            {/if}
+                                    width: 90px;">{$temporary_cashback_setting_action.catalog_label_info} {$temporary_cashback_summ[$iteration_action]}
+                                грн</span>
+                        {/if}
+                        {assign var="iteration_action" value=$iteration_action+1}
+                    {/foreach}
+                {/if}
+                <a href="/articles/%D0%9C%D0%BE%D0%B9%D0%BA%D0%B8-%D0%B8-%D1%81%D0%BC%D0%B5%D1%81%D0%B8%D1%82%D0%B5%D0%BB%D0%B8-%D0%B2-%D0%BA%D1%80%D0%B5%D0%B4%D0%B8%D1%82-%D0%BF%D0%BE%D0%B4-0">
+                    <img src="/images/blanco0.jpg" alt="">
+                </a>
+            </div>
+        {elseif in_array($cat->parent, array(7,17)) && in_array($zf.params.brand,array(1,3,13))}
+            <div class="span-4 category_block_view_item">
+                {if $temporary_cashback_setting_action.on_off == 'on'}
+                    {assign var="iteration_action" value=0}
+                    {foreach from=$item_id_temporary_cashback item=foo}
+                        {if $item.id2 == $foo}
+                            <span {if $item.acttype=='gift'}id="refund_electrolux_gift"
+                                  {else}id="refund_electrolux"{/if}
+                                  data-title="{$temporary_cashback_setting_action.catalog_label_for_what}" style="
+                                    text-align: center;
+                                    color: #f9ebf3;
+                                    font-size: 16px;
+                                    font-weight: bold;
+                                    position: absolute;
+                                    margin-top: 80px;
+                                    margin-left: 150px;
+                                    z-index: 1;
+                                    transform: rotate(15deg);
+                                    background-color: #0878C2;
+                                    border-radius: 10px;
+                                    padding: 5px;
+                                    cursor: pointer;
+                                    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+                            {if $item.acttype=='gift'}
+                                    transform: rotate(-20deg) !important;
+                                    margin-top: 215px !important;
+                                    margin-left: 125px !important;
+                            {/if}
+                                    width: 90px;">{$temporary_cashback_setting_action.catalog_label_info} {$temporary_cashback_summ[$iteration_action]}
+                                грн</span>
+                        {/if}
+                        {assign var="iteration_action" value=$iteration_action+1}
+                    {/foreach}
+                {/if}
+                <img src="/images/banner/banner-le-zan-aeg.jpg" alt="">
+            </div>
         {/if}
-        {assign var="iteration_action" value=$iteration_action+1}
-        {/foreach}
-        {/if}
-        <img src="/images/banner/banner-le-zan-aeg.jpg" alt="">
-    </div>
-    {/if}
     {/if}
 
     {if $smarty.foreach.catitems.iteration == 21}
         {if $catId == '45'}
             <div class="span-4 category_block_view_item">
-            {if $temporary_cashback_setting_action.on_off == 'on'}
-                {assign var="iteration_action" value=0}
-                {foreach from=$item_id_temporary_cashback item=foo}
-                {if $item.id2 == $foo}
-                    <span {if $item.acttype=='gift'}id="refund_electrolux_gift"{else}id="refund_electrolux"{/if}
-                    data-title="{$temporary_cashback_setting_action.catalog_label_for_what}"
-                    style="{/if}">
-                {$temporary_cashback_setting_action.catalog_label_info} {$temporary_cashback_summ[$iteration_action]}
-                грн</span>
-            {/if}
-            {assign var="iteration_action" value=$iteration_action+1}
-        {/foreach}
+                {if $temporary_cashback_setting_action.on_off == 'on'}
+                    {assign var="iteration_action" value=0}
+                    {foreach from=$item_id_temporary_cashback item=foo}
+                        {if $item.id2 == $foo}
+                            <span {if $item.acttype=='gift'}id="refund_electrolux_gift"
+                                  {else}id="refund_electrolux"{/if}
+                                  data-title="{$temporary_cashback_setting_action.catalog_label_for_what}" style="
+                                    text-align: center;
+                                    color: #f9ebf3;
+                                    font-size: 16px;
+                                    font-weight: bold;
+                                    position: absolute;
+                                    margin-top: 80px;
+                                    margin-left: 150px;
+                                    z-index: 1;
+                                    transform: rotate(15deg);
+                                    background-color: #0878C2;
+                                    border-radius: 10px;
+                                    padding: 5px;
+                                    cursor: pointer;
+                                    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+                            {if $item.acttype=='gift'}
+                                    transform: rotate(-20deg) !important;
+                                    margin-top: 215px !important;
+                                    margin-left: 125px !important;
+                            {/if}
+                                    width: 90px;">{$temporary_cashback_setting_action.catalog_label_info} {$temporary_cashback_summ[$iteration_action]}
+                                грн</span>
+                        {/if}
+                        {assign var="iteration_action" value=$iteration_action+1}
+                    {/foreach}
+                {/if}
+                <a href="/landing/electrolux/ergorapido/landing.html">
+                    <img src="/landing/electrolux/ergorapido/assets/img/landing.jpg"
+                         alt="Пылесос Electrolux Ergorapido купить" title="Пылесос Electrolux Ergorapido">
+                </a>
+            </div>
         {/if}
-        <a href="/landing/electrolux/ergorapido/landing.html">
-            <img src="/landing/electrolux/ergorapido/assets/img/landing.jpg" alt="Пылесос Electrolux Ergorapido купить"
-                 title="Пылесос Electrolux Ergorapido">
-        </a>
-        </div>
-    {/if}
     {/if}
     {if $login=='акция рождество' || $login=='Гальченко Владимир'}
         {if $cat_id_temporary_celebration_count[$catId]}
             {if $smarty.foreach.catitems.iteration == 2}
-                {if $catId|in_array:[12, 13, 15, 18, 21, 24, 25, 28, 29, 37, 45, 46, 48, 49, 50, 66, 68, 78, 92, 94, 141, 145, 169, 178, 210, 211, 212, 213, 270, 274, 308]}
+                {if $catId == '12' || $catId == '13' || $catId == '15' || $catId == '18' || $catId == '21' || $catId == '24' || $catId == '25' || $catId == '28' || $catId == '29' || $catId == '37' || $catId == '45' || $catId == '46' || $catId == '48' || $catId == '49' || $catId == '50' || $catId == '66' || $catId == '68' || $catId == '78' || $catId == '92' || $catId == '94' || $catId == '141' || $catId == '145' || $catId == '169' || $catId == '178' || $catId == '210' || $catId == '211' || $catId == '212' || $catId == '213' || $catId == '270' || $catId == '274' || $catId == '308'}
                     <div class="span-4 category_block_view_item">
-                        {if $catId =='12'}
-                        <a href="https://590.ua/catalog/action/ids/14903,20686,20713,21960,23460,25910,27331,27288,19433,19434,19472,19474,19476,19477,19478,19525,22151,22152,27827,27828,27829,20737,27312,15302,15353,16077,21219,25597,23659">
-                            {elseif $catId =='13'}
-                            <a href="https://590.ua/catalog/action/ids/19995,21126,23440,23441,19891">
-                                {elseif $catId =='15'}
-                                <a href="https://590.ua/catalog/action/ids/21214,21215">
-                                    {elseif $catId =='18'}
-                                    <a href="https://590.ua/catalog/action/ids/25304,26465,28405,28408,28515,28345,28354,28422,24776">
-                                        {elseif $catId =='21'}
-                                        <a href="https://590.ua/catalog/action/ids/21580,24575,20446,21757,23046,24959,25103,25104,25377">
-                                            {elseif $catId =='24' || $catId =='213'}
-                                            <a href="https://590.ua/catalog/action/ids/23129,24519,26258,26264,26372,21149,24695,24697,26147,25377">
-                                                {elseif $catId =='25'}
-                                                <a href="https://590.ua/catalog/action/ids/25992,13723,20655,20668,20742">
-                                                    {elseif $catId =='28'}
-                                                    <a href="https://590.ua/catalog/action/ids/881,882,1014,1015,1031,1042,1043,12193,12652,13913,15147,17166,21522,24422,24426,24430,24742">
-                                                        {elseif $catId =='29'}
-                                                        <a href="https://590.ua/catalog/action/ids/1577,6519,6725,14608,14609,14612,14615,14616,16286,18023,18025,18035,22853,22882,23107">
-                                                            {elseif $catId =='37'}
-                                                            <a href="https://590.ua/catalog/action/ids/26178">
-                                                                {elseif $catId =='45'}
-                                                                <a href="https://590.ua/catalog/action/ids/23403,25823,28461,28470,28471">
-                                                                    {elseif $catId =='46'}
-                                                                    <a href="https://590.ua/catalog/action/ids/19820">
-                                                                        {elseif $catId =='48'}
-                                                                        <a href="https://590.ua/catalog/action/ids/21619,14492">
-                                                                            {elseif $catId =='49'}
-                                                                            <a href="https://590.ua/catalog/action/ids/21671,23470,23957,26377,27964,23194,25187,25890,25983,25984">
-                                                                                {elseif $catId =='50'}
-                                                                                <a href="https://590.ua/catalog/action/ids/27921">
-                                                                                    {elseif $catId =='66'}
-                                                                                    <a href="https://590.ua/catalog/action/ids/14734,19674">
-                                                                                        {elseif $catId =='68'}
-                                                                                        <a href="https://590.ua/catalog/action/ids/25236,21654">
-                                                                                            {elseif $catId =='78'}
-                                                                                            <a href="https://590.ua/catalog/action/ids/25898">
-                                                                                                {elseif $catId =='92'}
-                                                                                                <a href="https://590.ua/catalog/action/ids/8859">
-                                                                                                    {elseif $catId =='94'}
-                                                                                                    <a href="https://590.ua/catalog/action/ids/16322,23426">
-                                                                                                        {elseif $catId =='145' || $catId =='141'}
-                                                                                                        <a href="https://590.ua/catalog/action/ids/26313,22634,24827">
-                                                                                                            {elseif $catId =='169'}
-                                                                                                            <a href="https://590.ua/catalog/action/ids/24827">
-                                                                                                                {elseif $catId =='178'}
-                                                                                                                <a href="https://590.ua/catalog/action/ids/27797">
-                                                                                                                    {elseif $catId =='210'}
-                                                                                                                    <a href="https://590.ua/catalog/action/ids/23318,22806,17498,21411,25226">
-                                                                                                                        {elseif $catId =='270' || $catId =='211'}
-                                                                                                                        <a href="https://590.ua/catalog/action/ids/18769,23145,23146,20837,22124,27107,27625,28110,28349,23066,23067,23141,23824,23827,24329,6742,8681">
-                                                                                                                            {elseif $catId =='212'}
-                                                                                                                            <a href="https://590.ua/catalog/action/ids/26664,16057,16368,24794,25167,23166,23393,25903,27878,21465,23329"
-                                                                                                                            {elseif $catId =='274'}
-                                                                                                                            <a href="https://590.ua/catalog/action/ids/24706">
-                                                                                                                                {elseif $catId =='308'}
-                                                                                                                                <a href="https://590.ua/catalog/action/ids/28485">
-                                                                                                                                    {else}
-                                                                                                                                    <a href="#">
-                                                                                                                                        {/if}
-                                                                                                                                        <img style="width: 275px;height: 507px;cursor:pointer;margin-left: -19px;margin-top: 1px;"
-                                                                                                                                             src="https://590.ua/images/hint/blackfridaycategory.jpg">
-                                                                                                                                        <span>{$cat_id_temporary_celebration_count[$catId]}
-                                                                                                                                            шт.</span>
-                                                                                                                                        <span style="">Отфильтровать все<br>
-                                    <span style="color: #ff2b47;font-size: 22px;">{$cat_name_temporary_celebration[$catId]}</span>
-                                    <br>по акции <span style="color: #fff;">Christmas<br>& New Year</span>
-                                </span>
-                                                                                                                                    </a>
+                        {if $catId =='12'}<a
+                                href="https://590.ua/catalog/action/ids/14903,20686,20713,21960,23460,25910,27331,27288,19433,19434,19472,19474,19476,19477,19478,19525,22151,22152,27827,27828,27829,20737,27312,15302,15353,16077,21219,25597,23659">{elseif $catId =='13'}
+                            <a href="https://590.ua/catalog/action/ids/19995,21126,23440,23441,19891">{elseif $catId =='15'}
+                                <a href="https://590.ua/catalog/action/ids/21214,21215">{elseif $catId =='18'}<a
+                                            href="https://590.ua/catalog/action/ids/25304,26465,28405,28408,28515,28345,28354,28422,24776">{elseif $catId =='21'}
+                                        <a href="https://590.ua/catalog/action/ids/21580,24575,20446,21757,23046,24959,25103,25104,25377">{elseif $catId =='24' || $catId =='213'}
+                                            <a href="https://590.ua/catalog/action/ids/23129,24519,26258,26264,26372,21149,24695,24697,26147,25377">{elseif $catId =='25'}
+                                                <a href="https://590.ua/catalog/action/ids/25992,13723,20655,20668,20742">{elseif $catId =='28'}
+                                                    <a href="https://590.ua/catalog/action/ids/881,882,1014,1015,1031,1042,1043,12193,12652,13913,15147,17166,21522,24422,24426,24430,24742">{elseif $catId =='29'}
+                                                        <a href="https://590.ua/catalog/action/ids/1577,6519,6725,14608,14609,14612,14615,14616,16286,18023,18025,18035,22853,22882,23107">{elseif $catId =='37'}
+                                                            <a href="https://590.ua/catalog/action/ids/26178">{elseif $catId =='45'}
+                                                                <a href="https://590.ua/catalog/action/ids/23403,25823,28461,28470,28471">{elseif $catId =='46'}
+                                                                    <a href="https://590.ua/catalog/action/ids/19820">{elseif $catId =='48'}
+                                                                        <a href="https://590.ua/catalog/action/ids/21619,14492">{elseif $catId =='49'}
+                                                                            <a href="https://590.ua/catalog/action/ids/21671,23470,23957,26377,27964,23194,25187,25890,25983,25984">{elseif $catId =='50'}
+                                                                                <a href="https://590.ua/catalog/action/ids/27921">{elseif $catId =='66'}
+                                                                                    <a href="https://590.ua/catalog/action/ids/14734,19674">{elseif $catId =='68'}
+                                                                                        <a href="https://590.ua/catalog/action/ids/25236,21654">{elseif $catId =='78'}
+                                                                                            <a href="https://590.ua/catalog/action/ids/25898">{elseif $catId =='92'}
+                                                                                                <a href="https://590.ua/catalog/action/ids/8859">{elseif $catId =='94'}
+                                                                                                    <a href="https://590.ua/catalog/action/ids/16322,23426">{elseif $catId =='145' || $catId =='141'}
+                                                                                                        <a href="https://590.ua/catalog/action/ids/26313,22634,24827">{elseif $catId =='169'}
+                                                                                                            <a href="https://590.ua/catalog/action/ids/24827">{elseif $catId =='178'}
+                                                                                                                <a href="https://590.ua/catalog/action/ids/27797">{elseif $catId =='210'}
+                                                                                                                    <a href="https://590.ua/catalog/action/ids/23318,22806,17498,21411,25226">{elseif $catId =='270' || $catId =='211'}
+                                                                                                                        <a href="https://590.ua/catalog/action/ids/18769,23145,23146,20837,22124,27107,27625,28110,28349,23066,23067,23141,23824,23827,24329,6742,8681">{elseif $catId =='212'}
+                                                                                                                            <a href="https://590.ua/catalog/action/ids/26664,16057,16368,24794,25167,23166,23393,25903,27878,21465,23329">{elseif $catId =='274'}
+                                                                                                                                <a href="https://590.ua/catalog/action/ids/24706">{elseif $catId =='308'}
+                                                                                                                                    <a href="https://590.ua/catalog/action/ids/28485">{else}
+                                                                                                                                        <a href="#">{/if}
+                                                                                                                                            <img style="width: 275px;height: 507px;cursor:pointer;margin-left: -19px;margin-top: 1px;"
+                                                                                                                                                 src="https://590.ua/images/hint/blackfridaycategory.jpg"><span
+                                                                                                                                                    style="
+    position: absolute;
+        width: 160px;
+        height: 30px;
+        top: 250px;
+        left: 60px;
+        text-align: center;
+        font-family: Impact;
+        color: white;
+        font-size: 35px;
+        transform: rotate(2deg);">{$cat_id_temporary_celebration_count[$catId]} шт.</span>
+                                                                                                                                            <span style="
+    position: absolute;
+    top: 360px;
+    left: 6px;
+    font-family: Impact;
+    color: #fbfbfb;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-shadow: black 0px 1px 6px;
+    width: 253px;
+    height: 75px;
+    text-align: center;
+    line-height: 25px;
+    transform: rotate(1deg);">Отфильтровать все<br><span style="color: #ff2b47;font-size: 22px;">{$cat_name_temporary_celebration[$catId]}</span><br>по акции <span
+                                                                                                                                                        style="color: #fff;">Christmas<br>& New Year</span></span>
+                                                                                                                                        </a>
                     </div>
                 {/if}
             {/if}
@@ -381,25 +454,44 @@
     {if $smarty.foreach.catitems.iteration == 21}
         {if $catId == '12'}
             <div class="span-4 category_block_view_item">
-            {if $temporary_cashback_setting_action.on_off == 'on'}
-                {assign var="iteration_action" value=0}
-                {foreach from=$item_id_temporary_cashback item=foo}
-                {if $item.id2 == $foo}
-                    <span {if $item.acttype=='gift'}id="refund_electrolux_gift"{else}id="refund_electrolux"{/if}
-                    data-title="{$temporary_cashback_setting_action.catalog_label_for_what}"
-                    style="{/if}">
-                {$temporary_cashback_setting_action.catalog_label_info} {$temporary_cashback_summ[$iteration_action]}
-                грн</span>
-            {/if}
-            {assign var="iteration_action" value=$iteration_action+1}
-        {/foreach}
+                {if $temporary_cashback_setting_action.on_off == 'on'}
+                    {assign var="iteration_action" value=0}
+                    {foreach from=$item_id_temporary_cashback item=foo}
+                        {if $item.id2 == $foo}
+                            <span {if $item.acttype=='gift'}id="refund_electrolux_gift"
+                                  {else}id="refund_electrolux"{/if}
+                                  data-title="{$temporary_cashback_setting_action.catalog_label_for_what}" style="
+                                    text-align: center;
+                                    color: #f9ebf3;
+                                    font-size: 16px;
+                                    font-weight: bold;
+                                    position: absolute;
+                                    margin-top: 80px;
+                                    margin-left: 150px;
+                                    z-index: 1;
+                                    transform: rotate(15deg);
+                                    background-color: #0878C2;
+                                    border-radius: 10px;
+                                    padding: 5px;
+                                    cursor: pointer;
+                                    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+                            {if $item.acttype=='gift'}
+                                    transform: rotate(-20deg) !important;
+                                    margin-top: 215px !important;
+                                    margin-left: 125px !important;
+                            {/if}
+                                    width: 90px;">{$temporary_cashback_setting_action.catalog_label_info} {$temporary_cashback_summ[$iteration_action]}
+                                грн</span>
+                        {/if}
+                        {assign var="iteration_action" value=$iteration_action+1}
+                    {/foreach}
+                {/if}
+                <a href="/landing/hansa/landing.html">
+                    <img src="/landing/hansa/images/9.png" alt="Варочная поверхность Hansa купить"
+                         title="Варочная поверхность Hansa" style="left:-10px;max-width:278px;position:relative;">
+                </a>
+            </div>
         {/if}
-        <a href="/landing/hansa/landing.html">
-            <img src="/landing/hansa/images/9.png" alt="Варочная поверхность Hansa купить"
-                 title="Варочная поверхность Hansa" style="left:-10px;max-width:278px;position:relative;">
-        </a>
-        </div>
-    {/if}
     {/if}
 
     {if $item.bonus_amount > 0}
@@ -407,30 +499,66 @@
         {if $temporary_cashback_setting_action.on_off == 'on'}
             {assign var="iteration_action" value=0}
             {foreach from=$item_id_temporary_cashback item=foo}
-            {if $item.id2 == $foo}
-                <span {if $item.acttype=='gift'}id="refund_electrolux_gift"{else}id="refund_electrolux"{/if}
-                data-title="{$temporary_cashback_setting_action.catalog_label_for_what}"
-                style="{/if}">
-            {$temporary_cashback_setting_action.catalog_label_info} {$temporary_cashback_summ[$iteration_action]}
-            грн</span>
-        {/if}
-        {assign var="iteration_action" value=$iteration_action+1}
-        {/foreach}
+                {if $item.id2 == $foo}
+                    <span {if $item.acttype=='gift'}id="refund_electrolux_gift" {else}id="refund_electrolux"{/if}
+                          data-title="{$temporary_cashback_setting_action.catalog_label_for_what}" style="
+                            text-align: center;
+                            color: #f9ebf3;
+                            font-size: 16px;
+                            font-weight: bold;
+                            position: absolute;
+                            margin-top: 80px;
+                            margin-left: 150px;
+                            z-index: 1;
+                            transform: rotate(15deg);
+                            background-color: #0878C2;
+                            border-radius: 10px;
+                            padding: 5px;
+                            cursor: pointer;
+                            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+                    {if $item.acttype=='gift'}
+                            transform: rotate(-20deg) !important;
+                            margin-top: 215px !important;
+                            margin-left: 125px !important;
+                    {/if}
+                            width: 90px;">{$temporary_cashback_setting_action.catalog_label_info} {$temporary_cashback_summ[$iteration_action]}
+                        грн</span>
+                {/if}
+                {assign var="iteration_action" value=$iteration_action+1}
+            {/foreach}
         {/if}
         {else}
         <div class="span-4 category_block_view_item">
             {if $temporary_cashback_setting_action.on_off == 'on'}
                 {assign var="iteration_action" value=0}
                 {foreach from=$item_id_temporary_cashback item=foo}
-                {if $item.id2 == $foo}
-                    <span {if $item.acttype=='gift'}id="refund_electrolux_gift"{else}id="refund_electrolux"{/if}
-                    data-title="{$temporary_cashback_setting_action.catalog_label_for_what}"
-                    style="{/if}">
-                {$temporary_cashback_setting_action.catalog_label_info} {$temporary_cashback_summ[$iteration_action]}
-                грн</span>
-            {/if}
-            {assign var="iteration_action" value=$iteration_action+1}
-            {/foreach}
+                    {if $item.id2 == $foo}
+                        <span {if $item.acttype=='gift'}id="refund_electrolux_gift" {else}id="refund_electrolux"{/if}
+                              data-title="{$temporary_cashback_setting_action.catalog_label_for_what}" style="
+                                text-align: center;
+                                color: #f9ebf3;
+                                font-size: 16px;
+                                font-weight: bold;
+                                position: absolute;
+                                margin-top: 80px;
+                                margin-left: 150px;
+                                z-index: 1;
+                                transform: rotate(15deg);
+                                background-color: #0878C2;
+                                border-radius: 10px;
+                                padding: 5px;
+                                cursor: pointer;
+                                box-shadow: 0 0 10px rgba(0,0,0,0.5);
+                        {if $item.acttype=='gift'}
+                                transform: rotate(-20deg) !important;
+                                margin-top: 215px !important;
+                                margin-left: 125px !important;
+                        {/if}
+                                width: 90px;">{$temporary_cashback_setting_action.catalog_label_info} {$temporary_cashback_summ[$iteration_action]}
+                            грн</span>
+                    {/if}
+                    {assign var="iteration_action" value=$iteration_action+1}
+                {/foreach}
             {/if}
             {/if}
 
@@ -457,12 +585,13 @@
             {/if}
             {else}
 
+
             {assign var="margin_top_icon" value=0}
             {if $item.bonus_amount<=0}{assign var="margin_top_icon" value=$margin_top_icon-40}{/if}
             {if $margin_top_icon==0}
             <div style="
-                        display: block;
-                        position: absolute;">
+	display: block;
+    position: absolute;">
                 {else}
                 <div style="
                         display: block;
@@ -471,10 +600,10 @@
                     {/if}
 
                     {if $item.bonus_amount>0}
-                    <div onmouseover="hide_icons_bonus({$number_of_element})"
-                         onmouseout="show_icons_bonus({$number_of_element})"
-                         class="bonus_on_card_{$number_of_element}"><img src="/images/hint/piggy-bank.png"
-                                                                         style="position: absolute;margin-left: -29px;margin-top: 1px;">вернем<br><span
+                        <div onmouseover="hide_icons_bonus({$number_of_element})"
+                             onmouseout="show_icons_bonus({$number_of_element})"
+                             class="bonus_on_card_{$number_of_element}"><img src="/images/hint/piggy-bank.png"
+                                                                             style="position: absolute;margin-left: -29px;margin-top: 1px;">вернем<br><span
                                 style="color: rgba(255, 39, 2, 0.81);font-weight: bold;font-size: 10px;font-style: italic;">{$item.bonus_amount|round}
                             грн.</span>
                         <div class="overlay_icons" style="margin-top: -30px;margin-left: -145px;font-style: italic;">
@@ -498,33 +627,27 @@
                              onmouseout="show_icons_oplata_chast({$number_of_element})"
                              class="oplata_chast_icon_{$number_of_element}"><img src="/images/hint/oplata_chast.png"
                                                                                  style="position: absolute;margin-left: -32px;margin-top: 1px;">от
-                            <span style="color: rgba(255, 39, 2, 0.81);font-weight: bold;font-size: 10px;font-style: italic;">{$item.price/$item.rent_index*$curs_evro_smarty|round}</span><br><span
-                                    style="font-size: 10px;font-weight: bold;font-style: italic;"> грн./мес.</span>
-                            <div class="overlay_icons"
-                                 style="margin-top: -30px;margin-left: -145px;font-style: italic;">
-                                <div class="wrapper_body">
-                                    <div class="cbm_wrap ">
-                                        <noindex><a href="https://chast.privatbank.ua/" rel="nofollow" target="_blank">
-                                                <h1
-                                                        title="Узнать подробнее...">Оплата частями</h1></a></noindex>
-                                        <noindex><a href="https://chast.privatbank.ua/" rel="nofollow"
-                                                    target="_blank"><img
-                                                        title="Узнать подробнее..." src="/images/hint/op_chast.png"></a>
-                                        </noindex>
-                                        <span style="margin-top: 10px;display: block;font-weight: bold;font-size: 13px;">Этот товар Вы сможете оплатить частями. Без переплат!</span><br>
-                                        <span style="font-size: 13px;font-weight: bold;margin-left: -120px;display: block;margin-bottom: 5px;">Все что Вам нужно:</span>
-                                        <span style="font-size: 13px;font-weight: bold;margin-left: -100px;display: block;">1. Наличие карты ПриватБанк.</span>
-                                        <noindex><a href="https://chast.privatbank.ua/" rel="nofollow"
-                                                    target="_blank"><img
-                                                        title="Узнать подробнее..."
-                                                        src="/images/hint/cardprivat.png"></a>
-                                        </noindex>
-                                        <span style="font-size: 13px;font-weight: bold;margin-left: -165px;display: block;">2. Доступный лимит.</span>
-                                        <span style="font-size: 12px;margin-left: 30px;display: block;">Узнать максимальную суму покупки по сервису очень просто. Нужно отправить SMS сообщение на номер 10060 с текстом chast</span>
-                                    </div>
+                        <span style="color: rgba(255, 39, 2, 0.81);font-weight: bold;font-size: 10px;font-style: italic;">{$item.price/$item.rent_index*$curs_evro_smarty|round}</span><br><span
+                                style="font-size: 10px;font-weight: bold;font-style: italic;"> грн./мес.</span>
+                        <div class="overlay_icons" style="margin-top: -30px;margin-left: -145px;font-style: italic;">
+                            <div class="wrapper_body">
+                                <div class="cbm_wrap ">
+                                    <noindex><a href="https://chast.privatbank.ua/" rel="nofollow" target="_blank"><h1
+                                                    title="Узнать подробнее...">Оплата частями</h1></a></noindex>
+                                    <noindex><a href="https://chast.privatbank.ua/" rel="nofollow" target="_blank"><img
+                                                    title="Узнать подробнее..." src="/images/hint/op_chast.png"></a>
+                                    </noindex>
+                                    <span style="margin-top: 10px;display: block;font-weight: bold;font-size: 13px;">Этот товар Вы сможете оплатить частями. Без переплат!</span><br>
+                                    <span style="font-size: 13px;font-weight: bold;margin-left: -120px;display: block;margin-bottom: 5px;">Все что Вам нужно:</span>
+                                    <span style="font-size: 13px;font-weight: bold;margin-left: -100px;display: block;">1. Наличие карты ПриватБанк.</span>
+                                    <noindex><a href="https://chast.privatbank.ua/" rel="nofollow" target="_blank"><img
+                                                    title="Узнать подробнее..." src="/images/hint/cardprivat.png"></a>
+                                    </noindex>
+                                    <span style="font-size: 13px;font-weight: bold;margin-left: -165px;display: block;">2. Доступный лимит.</span>
+                                    <span style="font-size: 12px;margin-left: 30px;display: block;">Узнать максимальную суму покупки по сервису очень просто. Нужно отправить SMS сообщение на номер 10060 с текстом chast</span>
                                 </div>
                             </div>
-                        </div>
+                        </div></div>
                         <div onmouseover="hide_icons_oplata_rassrochka({$number_of_element})"
                              onmouseout="show_icons_oplata_rassrochka({$number_of_element})"
                              class="oplata_rassrochka_icon_{$number_of_element}"><img
@@ -613,17 +736,17 @@
                                                                                             src="/images/hint/black.png"
                                                                                             style="position: absolute;margin-left: -29px;margin-top: 1px;">
                                 <div style="
-                color: #9f2234;
-                    position: absolute;
-                    margin-top: 47px;
-                    margin-left: 4px;
-                    font-size: 12px;
-                    transform: rotate(-6deg);
-                    font-weight: bold;
-                    font-family: sans-serif;
-                    width: 80px;
-                    text-align: center;
-        ">{$summ_temporary_celebration[$iteration_celebration]} грн.
+        color: #9f2234;
+            position: absolute;
+            margin-top: 47px;
+            margin-left: 4px;
+            font-size: 12px;
+            transform: rotate(-6deg);
+            font-weight: bold;
+            font-family: sans-serif;
+            width: 80px;
+            text-align: center;
+">{$summ_temporary_celebration[$iteration_celebration]} грн.
                                 </div>
                                 <div class="overlay_icons"
                                      style="margin-top: -475px;margin-left: -128px;font-style: italic;">
@@ -756,7 +879,12 @@
                           class="price_sidebar new priceForEcommerce">{price $item.price $item.id_currency} <span
                                 class="currency">{$smarty.session.Currency.title}</span></span>
                 {else}
-                    <span class="price_sidebar priceForEcommerce">{price $item.price $item.id_currency}
+                    <span style="
+    float: left;
+    font-size: 35px;
+    margin-left: 10px;
+    color: #0d8abc;
+    margin-right: 40%;" class="price_sidebar priceForEcommerce">{price $item.price $item.id_currency}
                         <span class="currency">{$smarty.session.Currency.title}</span>
                             </span>
                 {/if}
@@ -787,19 +915,25 @@
                 {/literal}
                 <span class="cat-item-buy">
                             {if !in_array($item.id, $basketStats.ids)}
-                                <a href="#data-basket" data-productErommerceId="{$item.id}"
-                                   onclick="addToCart({$item.id})" data-toggle="modal"
-                                   class="btn btn-info data-AddToCart data-itemId-{$item.id}">
+                                <a style="
+    float: left;
+    margin-top: 10px;
+        margin-left: -11px;
+    background-image: linear-gradient(to bottom, #5bde71, #2ba247);
+    background-color: #5bde71;" href="#data-basket" data-productErommerceId="{$item.id}" onclick="addToCart({$item.id})"
+                                   data-toggle="modal" class="btn btn-info data-AddToCart data-itemId-{$item.id}">
                                     <i class="icon-shopping-cart icon-white"></i>
                                     <span>{if $item.id_availability == 1}Купить{else}Заказать{/if}</span>
                                 </a>
+                            {else}
 
-{else}
-
-
-                                <a href="#data-basket" data-productErommerceId="{$item.id}"
-                                   onclick="addToCart({$item.id})" data-toggle="modal"
-                                   class="btn btn-warning data-AddToCart data-itemId-{$item.id}">
+                                <a style="
+    float: left;
+    margin-top: 10px;
+    margin-left: -11px;
+    background-image: linear-gradient(to bottom, #f7a81e, #f89406);
+    background-color: #f7a81e;" href="#data-basket" data-productErommerceId="{$item.id}" onclick="addToCart({$item.id})"
+                                   data-toggle="modal" class="btn btn-warning data-AddToCart data-itemId-{$item.id}">
                                     <i class="icon-shopping-cart icon-white"></i>
                                     <span>В корзине</span>
                                 </a>
@@ -884,6 +1018,7 @@
             <!--Categories-->
 
         {else}
+
             <div class="h1_holder span-12 no_margin">
                 <h1>{if $seo_h1}{$seo_h1}{else}Каталог{/if}</h1>
             </div>
@@ -904,6 +1039,7 @@
                 });
             </script>
         {/literal}
+
             <a class="banner-set" href="/catalog/sets"></a>
         {foreach from=$categories item=cat name=catI key=key}
             <div class="b-category">
@@ -970,7 +1106,7 @@
                             {/literal}-->
 
         {else}
-        {include file=error/404.tpl}
+        {include file= error/404.tpl}
         {/if}
 
 {include file='layouts/_footer.tpl'}
