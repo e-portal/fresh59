@@ -316,9 +316,9 @@
                 <div>
 
                     {if $item.bonus_amount>0}
-                        <div onmouseover="hide_icons_bonus({$number_of_element})"
-                             onmouseout="show_icons_bonus({$number_of_element})"
-                             class="bonus_on_card_{$number_of_element}">
+                        <div
+
+                                class="bonus_on_card_{$number_of_element}">
                             <img src="/images/hint/piggy-bank.png">вернем<br>
                             <span>{$item.bonus_amount|round} грн.</span>
                             <div class="wrapper_body">
@@ -340,9 +340,9 @@
                     {/if}
 
                     {if $item.id_availability == 1}
-                        <div onmouseover="hide_icons_oplata_chast({$number_of_element})"
-                             onmouseout="show_icons_oplata_chast({$number_of_element})"
-                             class="oplata_chast_icon_{$number_of_element}"><img src="/images/hint/oplata_chast.png"
+                        <div
+
+                                class="oplata_chast_icon_{$number_of_element}"><img src="/images/hint/oplata_chast.png"
                             >от
                             <span>{$item.price/$item.rent_index*$curs_evro_smarty|round}</span><br><span
                             > грн./мес.</span>
@@ -373,9 +373,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div onmouseover="hide_icons_oplata_rassrochka({$number_of_element})"
-                             onmouseout="show_icons_oplata_rassrochka({$number_of_element})"
-                             class="oplata_rassrochka_icon_{$number_of_element}"><img
+                        <div
+
+                                class="oplata_rassrochka_icon_{$number_of_element}"><img
                                     src="/images/hint/oplata_rassrochka_icon.png"
                             >от <span
                             >{$item.price*0.0099*$curs_evro_smarty+$item.price/24*$curs_evro_smarty|round}</span><br><span
@@ -409,9 +409,9 @@
                     {/if}
 
                     {if $item.bestprice > $item.price || $item.id2==41385}
-                        <div onmouseover="hide_icons_best_price({$number_of_element})"
-                             onmouseout="show_icons_best_price({$number_of_element})"
-                             class="best_price_icon_{$number_of_element}"><img src="/images/hint/thumbs_up.png"
+                        <div
+
+                                class="best_price_icon_{$number_of_element}"><img src="/images/hint/thumbs_up.png"
                             >лучшая<br><span
                             >цена</span>
                             <div class="overlay_icons"
@@ -432,9 +432,9 @@
                     {/if}
                 </div>
                 {if $item.acttype != 'gift' && $item.x_index == '1' || $item.id == '21465'}
-                    <div onmouseover="hide_icons_best_tradein({$number_of_element})"
-                         onmouseout="show_icons_best_tradein({$number_of_element})"
-                         class="trdein_icon_{$number_of_element}"><img src="/images/icons/zamena_catalog.png"
+                    <div
+
+                            class="trdein_icon_{$number_of_element}"><img src="/images/icons/zamena_catalog.png"
                         >
                         <div class="overlay_icons"
                         >
@@ -459,29 +459,29 @@
                     </div>
                 {/if}
 
-
                 {if $login=='акция рождество' || $login=='Гальченко Владимир'}
                     {assign var="iteration_celebration" value=0}
                     {foreach from=$item_id_temporary_celebration item=foo}
                         {if $item.id == $foo  && $item.acttype!='gift'}
-                            <div onmouseover="hide_icons_black_friday_({$number_of_element})"
-                                 onmouseout="show_icons_black_friday_({$number_of_element})"
-                                 class="black_friday_{$number_of_element} grow-rotate"><img class="pulse"
-                                                                                            src="/images/hint/black.png"
-                                >
+                            <div class="black_friday_{$number_of_element} grow-rotate">
+                                <img class="pulse" src="/images/hint/black.png">
                                 <div>{$summ_temporary_celebration[$iteration_celebration]} грн.
                                 </div>
-                                <div class="overlay_icons"
-                                >
+                                <div class="overlay_icons">
                                     <div class="wrapper_body">
                                         <div class="cbm_wrap ">
-                                            <noindex><a href="https://goo.gl/4CLd9k" rel="nofollow" target="_blank"
-                                                        title="Показать все товары со скидками"><h1>Christmas</h1>
+                                            <noindex>
+                                                <a href="https://goo.gl/4CLd9k" rel="nofollow" target="_blank"
+                                                   title="Показать все товары со скидками">
+                                                    <h1>Christmas</h1>
                                                 </a>
                                             </noindex>
-                                            <noindex><a href="https://goo.gl/4CLd9k" rel="nofollow" target="_blank"
-                                                        title="Показать все товары со скидками"><img
-                                                            src="/images/hint/black_friday.jpg"></a></noindex>
+                                            <noindex>
+                                                <a href="https://goo.gl/4CLd9k" rel="nofollow" target="_blank"
+                                                   title="Показать все товары со скидками">
+                                                    <img src="/images/hint/black_friday.jpg">
+                                                </a>
+                                            </noindex>
                                             <p>Рождество - это тихий, семейный праздник, который стоит провести в
                                                 кругу
                                                 самых близких людей! Мы поздравляем всех наших клиентов с этим
@@ -503,7 +503,7 @@
             {/if}
             <div class="head">
                 <a href="{iurl assoc.cat_latin=$item.cat_latin_single  assoc.parent=$item.parentname assoc.subdomain=$item.subdomain assoc.cat=$item.cat_onename assoc.brand=$item.brand assoc.item=$item.name}"
-                   onclick="onProductClickEcommerce({$item.id})">{$item.brand} {$item.name}</a>
+                >{$item.brand} {$item.name}</a>
                 <span class="description">{if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if}</span>
 
                 {if !($item.archive == 1 && $item.id_availability == 3) }
@@ -545,7 +545,7 @@
             <div class="image_holder">
                 {if $item.imgid}
                     <a href="{iurl assoc.cat_latin=$item.cat_latin_single  assoc.parent=$item.parentname assoc.subdomain=$item.subdomain assoc.cat=$item.cat_onename assoc.brand=$item.brand assoc.item=$item.name}"
-                       title="{$item.brand} {$item.name}" onclick="onProductClickEcommerce({$item.id})">
+                       title="{$item.brand} {$item.name}">
                         <img itemprop="image" src="{$url.img}/catalog/{$item.imgid}_s.{$item.imgext}"
                              title="{if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if} {$item.brand} {$item.name}"
                              alt="{if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if} {$item.brand} {$item.name} - catalog"/>
@@ -639,36 +639,18 @@
             <span class="cat-item-buy">
                             {if !in_array($item.id, $basketStats.ids)}
                                 <a href="#data-basket" data-productErommerceId="{$item.id}"
-                                   onclick="addToCart({$item.id})"
+
                                    data-toggle="modal" class="btn btn-info data-AddToCart data-itemId-{$item.id}">
                                     <i class="icon-shopping-cart icon-white"></i>
                                     <span>{if $item.id_availability == 1}Купить{else}Заказать{/if}</span>
                                 </a>
 
 
-
-
-
-
-
-
-
-
-
-
-
 {else}
 
 
-
-
-
-
-
-
-
                                 <a href="#data-basket" data-productErommerceId="{$item.id}"
-                                   onclick="addToCart({$item.id})"
+
                                    data-toggle="modal" class="btn btn-warning data-AddToCart data-itemId-{$item.id}">
                                     <i class="icon-shopping-cart icon-white"></i>
                                     <span>В корзине</span>
