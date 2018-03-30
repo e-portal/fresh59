@@ -32,7 +32,7 @@
     </h1>
 </div>
 
-<div style="display:none"><!--categorr-->{$zf.params.action}<!--/categorr--></div>
+<div><!--categorr-->{$zf.params.action}<!--/categorr--></div>
 {if $zf.params.controller=='catalog' && $zf.params.action!='search' && $catId!=1 && $zf.params.action!='compare'}
     {if $seo_h2}
         <h2>{$seo_h2}</h2>
@@ -54,13 +54,13 @@
                         Популярности <!-- <div></div> -->
                     {/if}
                 </span>
-        <div class="sort_item" style="display: none;">
+        <div class="sort_item">
             <a href="{url2 assoc.sort='popularity' param=$route}" class="sort_item">Популярности</a>
             <a href="{url2 assoc.sort=null param=$route}" class="sort_item">Цене</a>
         </div>
     </div>
 
-    <div class="switch_view" style="display: none;">
+    <div class="switch_view">
         <span>Вид</span>
         <div class="list_as_block data-display" data-display="grid">
             <span></span>
@@ -176,27 +176,7 @@
                         {if $item.id2 == $foo}
                             <span {if $item.acttype=='gift'}id="refund_electrolux_gift"
                                   {else}id="refund_electrolux"{/if}
-                                  data-title="{$temporary_cashback_setting_action.catalog_label_for_what}" style="
-                                    text-align: center;
-                                    color: #f9ebf3;
-                                    font-size: 16px;
-                                    font-weight: bold;
-                                    position: absolute;
-                                    margin-top: 80px;
-                                    margin-left: 150px;
-                                    z-index: 1;
-                                    transform: rotate(15deg);
-                                    background-color: #0878C2;
-                                    border-radius: 10px;
-                                    padding: 5px;
-                                    cursor: pointer;
-                                    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-                            {if $item.acttype=='gift'}
-                                    transform: rotate(-20deg) !important;
-                                    margin-top: 215px !important;
-                                    margin-left: 125px !important;
-                            {/if}
-                                    width: 90px;">{$temporary_cashback_setting_action.catalog_label_info} {$temporary_cashback_summ[$iteration_action]}
+                                  data-title="{$temporary_cashback_setting_action.catalog_label_for_what}">{$temporary_cashback_setting_action.catalog_label_info} {$temporary_cashback_summ[$iteration_action]}
                                 грн</span>
                         {/if}
                         {assign var="iteration_action" value=$iteration_action+1}
@@ -214,27 +194,7 @@
                         {if $item.id2 == $foo}
                             <span {if $item.acttype=='gift'}id="refund_electrolux_gift"
                                   {else}id="refund_electrolux"{/if}
-                                  data-title="{$temporary_cashback_setting_action.catalog_label_for_what}" style="
-                                    text-align: center;
-                                    color: #f9ebf3;
-                                    font-size: 16px;
-                                    font-weight: bold;
-                                    position: absolute;
-                                    margin-top: 80px;
-                                    margin-left: 150px;
-                                    z-index: 1;
-                                    transform: rotate(15deg);
-                                    background-color: #0878C2;
-                                    border-radius: 10px;
-                                    padding: 5px;
-                                    cursor: pointer;
-                                    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-                            {if $item.acttype=='gift'}
-                                    transform: rotate(-20deg) !important;
-                                    margin-top: 215px !important;
-                                    margin-left: 125px !important;
-                            {/if}
-                                    width: 90px;">{$temporary_cashback_setting_action.catalog_label_info} {$temporary_cashback_summ[$iteration_action]}
+                                  data-title="{$temporary_cashback_setting_action.catalog_label_for_what}">{$temporary_cashback_setting_action.catalog_label_info} {$temporary_cashback_summ[$iteration_action]}
                                 грн</span>
                         {/if}
                         {assign var="iteration_action" value=$iteration_action+1}
@@ -282,27 +242,7 @@
                         {if $item.id2 == $foo}
                             <span {if $item.acttype=='gift'}id="refund_electrolux_gift"
                                   {else}id="refund_electrolux"{/if}
-                                  data-title="{$temporary_cashback_setting_action.catalog_label_for_what}" style="
-                                    text-align: center;
-                                    color: #f9ebf3;
-                                    font-size: 16px;
-                                    font-weight: bold;
-                                    position: absolute;
-                                    margin-top: 80px;
-                                    margin-left: 150px;
-                                    z-index: 1;
-                                    transform: rotate(15deg);
-                                    background-color: #0878C2;
-                                    border-radius: 10px;
-                                    padding: 5px;
-                                    cursor: pointer;
-                                    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-                            {if $item.acttype=='gift'}
-                                    transform: rotate(-20deg) !important;
-                                    margin-top: 215px !important;
-                                    margin-left: 125px !important;
-                            {/if}
-                                    width: 90px;">{$temporary_cashback_setting_action.catalog_label_info} {$temporary_cashback_summ[$iteration_action]}
+                                  data-title="{$temporary_cashback_setting_action.catalog_label_for_what}">{$temporary_cashback_setting_action.catalog_label_info} {$temporary_cashback_summ[$iteration_action]}
                                 грн</span>
                         {/if}
                         {assign var="iteration_action" value=$iteration_action+1}
@@ -310,7 +250,7 @@
                 {/if}
                 <a href="/landing/hansa/landing.html">
                     <img src="/landing/hansa/images/9.png" alt="Варочная поверхность Hansa купить"
-                         title="Варочная поверхность Hansa" style="left:-10px;max-width:278px;position:relative;">
+                         title="Варочная поверхность Hansa">
                 </a>
             </div>
         {/if}
@@ -350,11 +290,11 @@
             {if $login == 'old version'}
 
                 {if $smarty.foreach.catitems.iteration <= 4 && $smarty.foreach.catitems.iteration <= $smarty.foreach.catitems.total}
-                    <div style="display:none">
+                    <div>
                         <!--cartdname-->{if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if} {$item.brand}
                         {$item.name}<!--/cartdname--></div>
                 {/if}
-                <div class="prev_bonus" style="display:none">
+                <div class="prev_bonus">
                     Купив {$item.brand} {$item.name} у нас, Вы получаете +{$item.bonus_amount|round}грн на бонусный счет
                     к
                     цене!
@@ -403,11 +343,11 @@
                         <div onmouseover="hide_icons_oplata_chast({$number_of_element})"
                              onmouseout="show_icons_oplata_chast({$number_of_element})"
                              class="oplata_chast_icon_{$number_of_element}"><img src="/images/hint/oplata_chast.png"
-                                                                                 style="position: absolute;margin-left: -32px;margin-top: 1px;">от
-                            <span style="color: rgba(255, 39, 2, 0.81);font-weight: bold;font-size: 10px;font-style: italic;">{$item.price/$item.rent_index*$curs_evro_smarty|round}</span><br><span
-                                    style="font-size: 10px;font-weight: bold;font-style: italic;"> грн./мес.</span>
+                            >от
+                            <span>{$item.price/$item.rent_index*$curs_evro_smarty|round}</span><br><span
+                            > грн./мес.</span>
                             <div class="overlay_icons"
-                                 style="margin-top: -30px;margin-left: -145px;font-style: italic;">
+                            >
                                 <div class="wrapper_body">
                                     <div class="cbm_wrap ">
                                         <noindex><a href="https://chast.privatbank.ua/" rel="nofollow"
@@ -419,16 +359,16 @@
                                                     target="_blank"><img
                                                         title="Узнать подробнее..." src="/images/hint/op_chast.png"></a>
                                         </noindex>
-                                        <span style="margin-top: 10px;display: block;font-weight: bold;font-size: 13px;">Этот товар Вы сможете оплатить частями. Без переплат!</span><br>
-                                        <span style="font-size: 13px;font-weight: bold;margin-left: -120px;display: block;margin-bottom: 5px;">Все что Вам нужно:</span>
-                                        <span style="font-size: 13px;font-weight: bold;margin-left: -100px;display: block;">1. Наличие карты ПриватБанк.</span>
+                                        <span>Этот товар Вы сможете оплатить частями. Без переплат!</span><br>
+                                        <span>Все что Вам нужно:</span>
+                                        <span>1. Наличие карты ПриватБанк.</span>
                                         <noindex><a href="https://chast.privatbank.ua/" rel="nofollow"
                                                     target="_blank"><img
                                                         title="Узнать подробнее..."
                                                         src="/images/hint/cardprivat.png"></a>
                                         </noindex>
-                                        <span style="font-size: 13px;font-weight: bold;margin-left: -165px;display: block;">2. Доступный лимит.</span>
-                                        <span style="font-size: 12px;margin-left: 30px;display: block;">Узнать максимальную суму покупки по сервису очень просто. Нужно отправить SMS сообщение на номер 10060 с текстом chast</span>
+                                        <span>2. Доступный лимит.</span>
+                                        <span>Узнать максимальную суму покупки по сервису очень просто. Нужно отправить SMS сообщение на номер 10060 с текстом chast</span>
                                     </div>
                                 </div>
                             </div>
@@ -437,11 +377,11 @@
                              onmouseout="show_icons_oplata_rassrochka({$number_of_element})"
                              class="oplata_rassrochka_icon_{$number_of_element}"><img
                                     src="/images/hint/oplata_rassrochka_icon.png"
-                                    style="position: absolute;margin-left: -32px;margin-top: 1px;">от <span
-                                    style="color: rgba(255, 39, 2, 0.81);font-weight: bold;font-size: 10px;font-style: italic;">{$item.price*0.0099*$curs_evro_smarty+$item.price/24*$curs_evro_smarty|round}</span><br><span
-                                    style="font-size: 10px;font-weight: bold;font-style: italic;"> грн./мес.</span>
+                            >от <span
+                            >{$item.price*0.0099*$curs_evro_smarty+$item.price/24*$curs_evro_smarty|round}</span><br><span
+                            > грн./мес.</span>
                             <div class="overlay_icons"
-                                 style="margin-top: -30px;margin-left: -145px;font-style: italic;">
+                            >
                                 <div class="wrapper_body">
                                     <div class="cbm_wrap ">
                                         <noindex><a href="https://chast.privatbank.ua/" rel="nofollow"
@@ -463,8 +403,8 @@
 
                     {if $item.id_brand == '26' && $item.id_category != 60}
                         <div class="waranty_zirtal_{$number_of_element}"><img src="/images/hint/waranty_zirtal.png"
-                                                                              style="position: absolute;margin-left: -26px;margin-top: 1px;">гарантия<br><span
-                                    style="color: rgba(255, 39, 2, 0.81);font-weight: bold;font-size: 10px;font-style: italic;">36 мес.</span>
+                            >гарантия<br><span
+                            >36 мес.</span>
                         </div>
                     {/if}
 
@@ -472,10 +412,10 @@
                         <div onmouseover="hide_icons_best_price({$number_of_element})"
                              onmouseout="show_icons_best_price({$number_of_element})"
                              class="best_price_icon_{$number_of_element}"><img src="/images/hint/thumbs_up.png"
-                                                                               style="position: absolute;margin-left: -29px;margin-top: 1px;">лучшая<br><span
-                                    style="font-weight: bold;font-size: 10px;font-style: italic;">цена</span>
+                            >лучшая<br><span
+                            >цена</span>
                             <div class="overlay_icons"
-                                 style="margin-top: -30px;margin-left: -145px;font-style: italic;">
+                            >
                                 <div class="wrapper_body">
                                     <div class="cbm_wrap ">
                                         <h1>Отличный выбор</h1>
@@ -495,9 +435,9 @@
                     <div onmouseover="hide_icons_best_tradein({$number_of_element})"
                          onmouseout="show_icons_best_tradein({$number_of_element})"
                          class="trdein_icon_{$number_of_element}"><img src="/images/icons/zamena_catalog.png"
-                                                                       style="position: absolute;margin-left: -29px;margin-top: 1px;">
+                        >
                         <div class="overlay_icons"
-                             style="margin-top: -460px;margin-left: -201px;font-style: italic;">
+                        >
                             <div class="wrapper_body">
                                 <div class="cbm_wrap ">
                                     <noindex><a href="https://590.ua/articles/zamena" rel="nofollow"
@@ -528,22 +468,11 @@
                                  onmouseout="show_icons_black_friday_({$number_of_element})"
                                  class="black_friday_{$number_of_element} grow-rotate"><img class="pulse"
                                                                                             src="/images/hint/black.png"
-                                                                                            style="position: absolute;margin-left: -29px;margin-top: 1px;">
-                                <div style="
-        color: #9f2234;
-            position: absolute;
-            margin-top: 47px;
-            margin-left: 4px;
-            font-size: 12px;
-            transform: rotate(-6deg);
-            font-weight: bold;
-            font-family: sans-serif;
-            width: 80px;
-            text-align: center;
-        ">{$summ_temporary_celebration[$iteration_celebration]} грн.
+                                >
+                                <div>{$summ_temporary_celebration[$iteration_celebration]} грн.
                                 </div>
                                 <div class="overlay_icons"
-                                     style="margin-top: -475px;margin-left: -128px;font-style: italic;">
+                                >
                                     <div class="wrapper_body">
                                         <div class="cbm_wrap ">
                                             <noindex><a href="https://goo.gl/4CLd9k" rel="nofollow" target="_blank"
@@ -558,7 +487,7 @@
                                                 самых близких людей! Мы поздравляем всех наших клиентов с этим
                                                 светлым
                                                 праздником и дарим в честь него подборку товаров с большими
-                                                скидками.<br><strong style="font-size: 11px; line-height: 11px;">Внимание:
+                                                скидками.<br><strong>Внимание:
                                                     в акции не участвуют комплекты вместе дешевле. Акционные товары
                                                     возможно оплатить: наличными, картой, безналичным переводом.
                                                     Оплата
@@ -585,11 +514,11 @@
 
                 {elseif $item.id_availability == 2 && $item.qrm>0}
                 <link itemprop="availability" href="http://schema.org/InStock"/>
-                <span style="font-weight: bold;color: #0D8ABC;">Наличие уточняйте</span>
+                <span>Наличие уточняйте</span>
 
                 {elseif $altItem.id_availability == 2 && $item.qrm==0 || $item.qrm==""} <span
                         class="order_stock_status">
-                                        <a style="color: red;" class="on-order" target="_blank" href="/articles/4"
+                                        <a class="on-order" target="_blank" href="/articles/4"
                                            title="Как получить товар под заказ">
                                             <link itemprop="availability" href="http://schema.org/PreOrder"/>Под заказ
                                         </a>
@@ -610,7 +539,7 @@
                                     </span>
                     {else}
                     <link itemprop="availability" href="http://schema.org/InStock"/>
-                                    <span style="font-weight: bold;color: #0D8ABC;">Наличие уточняйте</span>{/if}
+                                    <span>Наличие уточняйте</span>{/if}
                     {/if}
             </div>
             <div class="image_holder">
@@ -641,7 +570,7 @@
 
                 <!-- Credit Logo -->
                 <div class="credit_logo_pp"
-                     style="{if $login == 'Гальченко Владимир'}display:none;{/if}position:absolute;margin-top:410px;margin-left:190px">
+                >
                     <img src="/images/icons/privatbank_pp_{$item.rent_index}_logo.png" width="60"
                          title="Кредит Оплата Частями Приватбанк" alt="Кредит Оплата Частями Приватбанк">
                 </div>
@@ -651,7 +580,7 @@
             {if $catId == 26 || $catId == 25 || $catId == 209 || $catId == 102 || $catId == 18 || $catId == 24 || $catId == 212 || $catId == 37 || $catId == 314 || $catId == 21 || $catId == 36 || $catId == 322 || $catId == 12 || $catId == 16 || $catId == 88 || $catId == 210 || $catId == 211 || $catId == 175 || $catId == 10 || $catId == 15 || $catId == 155 || $catId == 39 || $catId == 213 || $catId == 11 || $catId == 13 || $catId == 34 || $catId == 302 || $catId == 67}
                 {if $item.acttype !== 'gift' && $item.x_index == '1' || $item.id == '21465'}
                     <div class="zamena-catalog"
-                         style="{if $login != 'old version'}display:none;{/if}position:absolute;margin-top:255px;margin-left:105px">
+                    >
                         <a href="/articles/zamena">
                             <img src="/images/icons/zamena_catalog.png" rel="tooltip"
                                  data-original-title="При покупке техники по системе Trade-in, Вы имеете выгоду в: 1) Весомая скидка на технику; 2) Бесплатная доставка в квартиру; 3) Бесплатное подключение; 4) Вывоз и утилизация старой техники. Все ето, в течении короткого времени мы сделаем сами, тем самым освободив Вас от хлопот и дополнительных финансовых расходов."
@@ -673,17 +602,12 @@
             {/if}
             <span class="full_description">{if $zf.params.catid == 189}{$item.short_info|replace:'Стиральная машина':''}{else}{$item.short_info|truncate:270}{/if}</span>
             {if $item.specprice  && ($item.bdprice > $item.price) && (($item.bdprice - $item.price)/$item.price > 0.01) }
-                <span style="font-size: 25px;" class="price_sidebar old">{price $item.bdprice}</span>
-                <span style="font-size: 35px; margin-left: 7px;margin-right: 15%;"
-                      class="price_sidebar new priceForEcommerce">{price $item.price $item.id_currency} <span
+                <span class="price_sidebar old">{price $item.bdprice}</span>
+                <span
+                        class="price_sidebar new priceForEcommerce">{price $item.price $item.id_currency} <span
                             class="currency">{$smarty.session.Currency.title}</span></span>
             {else}
-                <span style="
-    float: left;
-    font-size: 35px;
-    margin-left: 10px;
-    color: #0d8abc;
-    margin-right: 40%;" class="price_sidebar priceForEcommerce">{price $item.price $item.id_currency}
+                <span class="price_sidebar priceForEcommerce">{price $item.price $item.id_currency}
                     <span class="currency">{$smarty.session.Currency.title}</span>
                             </span>
             {/if}
@@ -714,16 +638,13 @@
             {/literal}
             <span class="cat-item-buy">
                             {if !in_array($item.id, $basketStats.ids)}
-                                <a style="
-    float: left;
-    margin-top: 10px;
-        margin-left: -11px;
-    background-image: linear-gradient(to bottom, #5bde71, #2ba247);
-    background-color: #5bde71;" href="#data-basket" data-productErommerceId="{$item.id}" onclick="addToCart({$item.id})"
+                                <a href="#data-basket" data-productErommerceId="{$item.id}"
+                                   onclick="addToCart({$item.id})"
                                    data-toggle="modal" class="btn btn-info data-AddToCart data-itemId-{$item.id}">
                                     <i class="icon-shopping-cart icon-white"></i>
                                     <span>{if $item.id_availability == 1}Купить{else}Заказать{/if}</span>
                                 </a>
+
 
 
 
@@ -744,12 +665,10 @@
 
 
 
-                                <a style="
-    float: left;
-    margin-top: 10px;
-    margin-left: -11px;
-    background-image: linear-gradient(to bottom, #f7a81e, #f89406);
-    background-color: #f7a81e;" href="#data-basket" data-productErommerceId="{$item.id}" onclick="addToCart({$item.id})"
+
+
+                                <a href="#data-basket" data-productErommerceId="{$item.id}"
+                                   onclick="addToCart({$item.id})"
                                    data-toggle="modal" class="btn btn-warning data-AddToCart data-itemId-{$item.id}">
                                     <i class="icon-shopping-cart icon-white"></i>
                                     <span>В корзине</span>
@@ -767,16 +686,7 @@
 
             {if $item.id_availability == 1}
             {literal}
-                <div style="{/literal}{if $login == 'Гальченко Владимир'}display:none;{/if}{literal}
-                    color: #40bc59;
-                    font-weight: 900;
-                    float: left;
-                    margin-left: 51px;
-                    line-height: 14px;
-                    font-size: 12px;
-                    text-align: center;
-                    margin-top: -25px;
-                    ">от {/literal}{$item.price/$item.rent_index*$curs_evro_smarty|round}{literal}
+                <div >от {/literal}{$item.price/$item.rent_index*$curs_evro_smarty|round}{literal}
                 <br>
                 грн./мес</div>
             {/literal} {/if}
