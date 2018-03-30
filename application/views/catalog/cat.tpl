@@ -30,7 +30,7 @@
 
 {if $catId}
     {if !$finalCat}
-        {include file='sub-cats.tpl'}
+        {include file='catalog/sub-cats.tpl'}
     {else}
         {if $catId!=1}
             <!--Categories-->
