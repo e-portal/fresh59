@@ -1,7 +1,7 @@
 {include file=_header.tpl}
 
 <div class="h1_holder span-12 no_margin">
-    <h1>Акционные модели</h1>
+    <h1>Акционные модели1</h1>
 </div>
 
 {literal}

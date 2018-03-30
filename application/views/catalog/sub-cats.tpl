@@ -1,4 +1,3 @@
-<h2>SUBCATS</h2>
 {if $pages->totalItemCount > 0}
 <div class="h1_holder span-12 no_margin 123123">
     <h1>
