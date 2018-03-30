@@ -42,12 +42,26 @@
                         foreach (explode('_',$this->_tpl_vars['zf']['params']['brand']) as $brandId) $brands[] = $brandId; echo ' '.join(', ', $brands);{/php}
                 {/if}
                 {if $accepted_filters}
-                    {foreach from=$accepted_filters item=filter name=filters}{if $filter.name=='Материал'}из {$filter.name}а: "{else}, {$filter.name} - {/if}{foreach from=$filter.values item=filterValue name=filter_values}{$filterValue}{if !$smarty.foreach.filter_values.last}, {/if}{if $smarty.foreach.filters.first && $smarty.foreach.filter_values.last && $filter.name=='Материал'}"{/if}{/foreach}{/foreach}
+                    {foreach from=$accepted_filters item=filter name=filters}
+                        {if $filter.name=='Материал'}
+                            из {$filter.name}а: "
+                        {else}
+                            , {$filter.name} -
+                        {/if}
+                        {foreach from=$filter.values item=filterValue name=filter_values}
+                            {$filterValue}
+                            {if !$smarty.foreach.filter_values.last}
+                                ,
+                            {/if}
+                            {if $smarty.foreach.filters.first && $smarty.foreach.filter_values.last && $filter.name=='Материал'}
+                                "
+                            {/if}
+                        {/foreach}
+                    {/foreach}
                 {/if}
                 {if $zf.params.page} - Страница № {$pages->current}{/if}
             {/if}
         </h1>
-
     </div>
     <div style="display:none"><!--categorr-->{$zf.params.action}<!--/categorr--></div>
     {if $zf.params.controller=='catalog' && $zf.params.action!='search' && $catId!=1 && $zf.params.action!='compare'}
@@ -536,10 +550,10 @@
                     {/if}
 
                     {if $item.bonus_amount>0}
-                        <div onmouseover="hide_icons_bonus({$number_of_element})"
-                             onmouseout="show_icons_bonus({$number_of_element})"
-                             class="bonus_on_card_{$number_of_element}"><img src="/images/hint/piggy-bank.png"
-                                                                             style="position: absolute;margin-left: -29px;margin-top: 1px;">вернем<br><span
+                    <div onmouseover="hide_icons_bonus({$number_of_element})"
+                         onmouseout="show_icons_bonus({$number_of_element})"
+                         class="bonus_on_card_{$number_of_element}"><img src="/images/hint/piggy-bank.png"
+                                                                         style="position: absolute;margin-left: -29px;margin-top: 1px;">вернем<br><span
                                 style="color: rgba(255, 39, 2, 0.81);font-weight: bold;font-size: 10px;font-style: italic;">{$item.bonus_amount|round}
                             грн.</span>
                         <div class="overlay_icons" style="margin-top: -30px;margin-left: -145px;font-style: italic;">
@@ -563,27 +577,33 @@
                              onmouseout="show_icons_oplata_chast({$number_of_element})"
                              class="oplata_chast_icon_{$number_of_element}"><img src="/images/hint/oplata_chast.png"
                                                                                  style="position: absolute;margin-left: -32px;margin-top: 1px;">от
-                        <span style="color: rgba(255, 39, 2, 0.81);font-weight: bold;font-size: 10px;font-style: italic;">{$item.price/$item.rent_index*$curs_evro_smarty|round}</span><br><span
-                                style="font-size: 10px;font-weight: bold;font-style: italic;"> грн./мес.</span>
-                        <div class="overlay_icons" style="margin-top: -30px;margin-left: -145px;font-style: italic;">
-                            <div class="wrapper_body">
-                                <div class="cbm_wrap ">
-                                    <noindex><a href="https://chast.privatbank.ua/" rel="nofollow" target="_blank"><h1
-                                                    title="Узнать подробнее...">Оплата частями</h1></a></noindex>
-                                    <noindex><a href="https://chast.privatbank.ua/" rel="nofollow" target="_blank"><img
-                                                    title="Узнать подробнее..." src="/images/hint/op_chast.png"></a>
-                                    </noindex>
-                                    <span style="margin-top: 10px;display: block;font-weight: bold;font-size: 13px;">Этот товар Вы сможете оплатить частями. Без переплат!</span><br>
-                                    <span style="font-size: 13px;font-weight: bold;margin-left: -120px;display: block;margin-bottom: 5px;">Все что Вам нужно:</span>
-                                    <span style="font-size: 13px;font-weight: bold;margin-left: -100px;display: block;">1. Наличие карты ПриватБанк.</span>
-                                    <noindex><a href="https://chast.privatbank.ua/" rel="nofollow" target="_blank"><img
-                                                    title="Узнать подробнее..." src="/images/hint/cardprivat.png"></a>
-                                    </noindex>
-                                    <span style="font-size: 13px;font-weight: bold;margin-left: -165px;display: block;">2. Доступный лимит.</span>
-                                    <span style="font-size: 12px;margin-left: 30px;display: block;">Узнать максимальную суму покупки по сервису очень просто. Нужно отправить SMS сообщение на номер 10060 с текстом chast</span>
+                            <span style="color: rgba(255, 39, 2, 0.81);font-weight: bold;font-size: 10px;font-style: italic;">{$item.price/$item.rent_index*$curs_evro_smarty|round}</span><br><span
+                                    style="font-size: 10px;font-weight: bold;font-style: italic;"> грн./мес.</span>
+                            <div class="overlay_icons"
+                                 style="margin-top: -30px;margin-left: -145px;font-style: italic;">
+                                <div class="wrapper_body">
+                                    <div class="cbm_wrap ">
+                                        <noindex><a href="https://chast.privatbank.ua/" rel="nofollow" target="_blank">
+                                                <h1
+                                                        title="Узнать подробнее...">Оплата частями</h1></a></noindex>
+                                        <noindex><a href="https://chast.privatbank.ua/" rel="nofollow"
+                                                    target="_blank"><img
+                                                        title="Узнать подробнее..." src="/images/hint/op_chast.png"></a>
+                                        </noindex>
+                                        <span style="margin-top: 10px;display: block;font-weight: bold;font-size: 13px;">Этот товар Вы сможете оплатить частями. Без переплат!</span><br>
+                                        <span style="font-size: 13px;font-weight: bold;margin-left: -120px;display: block;margin-bottom: 5px;">Все что Вам нужно:</span>
+                                        <span style="font-size: 13px;font-weight: bold;margin-left: -100px;display: block;">1. Наличие карты ПриватБанк.</span>
+                                        <noindex><a href="https://chast.privatbank.ua/" rel="nofollow"
+                                                    target="_blank"><img
+                                                        title="Узнать подробнее..."
+                                                        src="/images/hint/cardprivat.png"></a>
+                                        </noindex>
+                                        <span style="font-size: 13px;font-weight: bold;margin-left: -165px;display: block;">2. Доступный лимит.</span>
+                                        <span style="font-size: 12px;margin-left: 30px;display: block;">Узнать максимальную суму покупки по сервису очень просто. Нужно отправить SMS сообщение на номер 10060 с текстом chast</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div></div>
+                        </div>
                         <div onmouseover="hide_icons_oplata_rassrochka({$number_of_element})"
                              onmouseout="show_icons_oplata_rassrochka({$number_of_element})"
                              class="oplata_rassrochka_icon_{$number_of_element}"><img
@@ -682,7 +702,7 @@
             font-family: sans-serif;
             width: 80px;
             text-align: center;
-">{$summ_temporary_celebration[$iteration_celebration]} грн.
+        ">{$summ_temporary_celebration[$iteration_celebration]} грн.
                                 </div>
                                 <div class="overlay_icons"
                                      style="margin-top: -475px;margin-left: -128px;font-style: italic;">
@@ -861,7 +881,13 @@
                                     <i class="icon-shopping-cart icon-white"></i>
                                     <span>{if $item.id_availability == 1}Купить{else}Заказать{/if}</span>
                                 </a>
-                            {else}
+
+
+
+{else}
+
+
+
 
                                 <a style="
     float: left;
@@ -954,7 +980,6 @@
             <!--Categories-->
 
         {else}
-
             <div class="h1_holder span-12 no_margin">
                 <h1>{if $seo_h1}{$seo_h1}{else}Каталог{/if}</h1>
             </div>
@@ -975,7 +1000,6 @@
                 });
             </script>
         {/literal}
-
             <a class="banner-set" href="/catalog/sets"></a>
         {foreach from=$categories item=cat name=catI key=key}
             <div class="b-category">
@@ -1042,7 +1066,7 @@
                             {/literal}-->
 
         {else}
-        {include file= error/404.tpl}
+        {include file='error/404.tpl'}
         {/if}
 
 {include file='layouts/_footer.tpl'}

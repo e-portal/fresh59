@@ -123,7 +123,7 @@
 
         <!-- SEO -->
         <div class="texx">
-            {if $seo_text_bottom}{$seo_text_bottom}{/if}
+            {$seo_text_bottom|default:''}
         </div>
         <!-- SEO -->
     </div>
