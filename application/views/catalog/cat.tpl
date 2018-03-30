@@ -190,6 +190,28 @@
         </div>
     </div>
 
+{literal}
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.category_block_view_item[data-qtip="1"]').qtip({
+                content: {
+                    text: function (event, api) {
+                        return $(this).find('.prev_bonus').html();
+                    }
+                },
+                style: {
+                    classes: 'qtip-light qtip-bootstrap',
+                    width: '220px',
+                },
+                position: {
+                    my: 'top right',
+                    at: 'top left',
+                }
+            });
+        });
+    </script>
+{/literal}
+
 {assign var="number_of_element" value=0}
 <div id="category_block_view_listing" class="span-12 no_margin">
     {foreach from=$items item=item name=catitems}
@@ -787,7 +809,7 @@
         {else}
         {if $catId!=1}
             <!--Categories-->
-            {*{include file='catalog/categories.tpl'}*}
+            {include file='catalog/categories.tpl'}
             <!--Categories-->
 
         {else}
