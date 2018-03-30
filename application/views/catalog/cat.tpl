@@ -383,73 +383,9 @@
         {/if}
     {/if}
     {if $login=='акция рождество' || $login=='Гальченко Владимир'}
-        {if $cat_id_temporary_celebration_count[$catId]}
-            {if $smarty.foreach.catitems.iteration == 2}
-                {if $catId == '12' || $catId == '13' || $catId == '15' || $catId == '18' || $catId == '21' || $catId == '24' || $catId == '25' || $catId == '28' || $catId == '29' || $catId == '37' || $catId == '45' || $catId == '46' || $catId == '48' || $catId == '49' || $catId == '50' || $catId == '66' || $catId == '68' || $catId == '78' || $catId == '92' || $catId == '94' || $catId == '141' || $catId == '145' || $catId == '169' || $catId == '178' || $catId == '210' || $catId == '211' || $catId == '212' || $catId == '213' || $catId == '270' || $catId == '274' || $catId == '308'}
-                    <div class="span-4 category_block_view_item">
-                        {if $catId =='12'}<a
-                                href="https://590.ua/catalog/action/ids/14903,20686,20713,21960,23460,25910,27331,27288,19433,19434,19472,19474,19476,19477,19478,19525,22151,22152,27827,27828,27829,20737,27312,15302,15353,16077,21219,25597,23659">{elseif $catId =='13'}
-                            <a href="https://590.ua/catalog/action/ids/19995,21126,23440,23441,19891">{elseif $catId =='15'}
-                                <a href="https://590.ua/catalog/action/ids/21214,21215">{elseif $catId =='18'}<a
-                                            href="https://590.ua/catalog/action/ids/25304,26465,28405,28408,28515,28345,28354,28422,24776">{elseif $catId =='21'}
-                                        <a href="https://590.ua/catalog/action/ids/21580,24575,20446,21757,23046,24959,25103,25104,25377">{elseif $catId =='24' || $catId =='213'}
-                                            <a href="https://590.ua/catalog/action/ids/23129,24519,26258,26264,26372,21149,24695,24697,26147,25377">{elseif $catId =='25'}
-                                                <a href="https://590.ua/catalog/action/ids/25992,13723,20655,20668,20742">{elseif $catId =='28'}
-                                                    <a href="https://590.ua/catalog/action/ids/881,882,1014,1015,1031,1042,1043,12193,12652,13913,15147,17166,21522,24422,24426,24430,24742">{elseif $catId =='29'}
-                                                        <a href="https://590.ua/catalog/action/ids/1577,6519,6725,14608,14609,14612,14615,14616,16286,18023,18025,18035,22853,22882,23107">{elseif $catId =='37'}
-                                                            <a href="https://590.ua/catalog/action/ids/26178">{elseif $catId =='45'}
-                                                                <a href="https://590.ua/catalog/action/ids/23403,25823,28461,28470,28471">{elseif $catId =='46'}
-                                                                    <a href="https://590.ua/catalog/action/ids/19820">{elseif $catId =='48'}
-                                                                        <a href="https://590.ua/catalog/action/ids/21619,14492">{elseif $catId =='49'}
-                                                                            <a href="https://590.ua/catalog/action/ids/21671,23470,23957,26377,27964,23194,25187,25890,25983,25984">{elseif $catId =='50'}
-                                                                                <a href="https://590.ua/catalog/action/ids/27921">{elseif $catId =='66'}
-                                                                                    <a href="https://590.ua/catalog/action/ids/14734,19674">{elseif $catId =='68'}
-                                                                                        <a href="https://590.ua/catalog/action/ids/25236,21654">{elseif $catId =='78'}
-                                                                                            <a href="https://590.ua/catalog/action/ids/25898">{elseif $catId =='92'}
-                                                                                                <a href="https://590.ua/catalog/action/ids/8859">{elseif $catId =='94'}
-                                                                                                    <a href="https://590.ua/catalog/action/ids/16322,23426">{elseif $catId =='145' || $catId =='141'}
-                                                                                                        <a href="https://590.ua/catalog/action/ids/26313,22634,24827">{elseif $catId =='169'}
-                                                                                                            <a href="https://590.ua/catalog/action/ids/24827">{elseif $catId =='178'}
-                                                                                                                <a href="https://590.ua/catalog/action/ids/27797">{elseif $catId =='210'}
-                                                                                                                    <a href="https://590.ua/catalog/action/ids/23318,22806,17498,21411,25226">{elseif $catId =='270' || $catId =='211'}
-                                                                                                                        <a href="https://590.ua/catalog/action/ids/18769,23145,23146,20837,22124,27107,27625,28110,28349,23066,23067,23141,23824,23827,24329,6742,8681">{elseif $catId =='212'}
-                                                                                                                            <a href="https://590.ua/catalog/action/ids/26664,16057,16368,24794,25167,23166,23393,25903,27878,21465,23329">{elseif $catId =='274'}
-                                                                                                                                <a href="https://590.ua/catalog/action/ids/24706">{elseif $catId =='308'}
-                                                                                                                                    <a href="https://590.ua/catalog/action/ids/28485">{else}
-                                                                                                                                        <a href="#">{/if}
-                                                                                                                                            <img style="width: 275px;height: 507px;cursor:pointer;margin-left: -19px;margin-top: 1px;"
-                                                                                                                                                 src="https://590.ua/images/hint/blackfridaycategory.jpg"><span
-                                                                                                                                                    style="
-    position: absolute;
-        width: 160px;
-        height: 30px;
-        top: 250px;
-        left: 60px;
-        text-align: center;
-        font-family: Impact;
-        color: white;
-        font-size: 35px;
-        transform: rotate(2deg);">{$cat_id_temporary_celebration_count[$catId]} шт.</span>
-                                                                                                                                            <span style="
-    position: absolute;
-    top: 360px;
-    left: 6px;
-    font-family: Impact;
-    color: #fbfbfb;
-    font-size: 20px;
-    text-transform: uppercase;
-    text-shadow: black 0px 1px 6px;
-    width: 253px;
-    height: 75px;
-    text-align: center;
-    line-height: 25px;
-    transform: rotate(1deg);">Отфильтровать все<br><span style="color: #ff2b47;font-size: 22px;">{$cat_name_temporary_celebration[$catId]}</span><br>по акции <span
-                                                                                                                                                        style="color: #fff;">Christmas<br>& New Year</span></span>
-                                                                                                                                        </a>
-                    </div>
-                {/if}
-            {/if}
-        {/if}
+        {*==================CHRISTMAS==================*}
+        {include file='catalog/christmas.tpl'}
+        {*==================CHRISTMAS==================*}
     {/if}
     {if $smarty.foreach.catitems.iteration == 21}
         {if $catId == '12'}
