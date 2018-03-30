@@ -1,5 +1,5 @@
 <div class="h1_holder span-12 no_margin">
-    <h1>{if $seo_h1}{$seo_h1}{else}Каталог{/if}</h1>
+    <h1>{$seo_h1|default:'Каталог'}</h1>
 </div>
 
 {literal}
@@ -42,7 +42,7 @@
     </div>
 {/foreach}
 <!-- SEO -->
-{if $seo_text_bottom}
-    <article class="stext-bottom">{$seo_text_bottom}</article>
-{/if}
+<div class="texx">
+    {$seo_text_bottom|default:''}
+</div>
 <!-- SEO -->
