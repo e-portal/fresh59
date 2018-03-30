@@ -125,7 +125,6 @@
             {/foreach}
             {/if}
 
-            {if $login == 'old version'}
 
             {if $smarty.foreach.catitems.iteration <= 4 && $smarty.foreach.catitems.iteration <= $smarty.foreach.catitems.total}
                 <div>
@@ -505,5 +504,8 @@
             <!-- / .products --></div>
 
         <div class="clear"></div>
+
+
+        <div class="doww"><img src="/assets/img/verh.png" alt=""></div>
 
 {include file='layouts/_footer.tpl'}
