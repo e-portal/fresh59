@@ -79,9 +79,7 @@
                 </a>
             </div>
         {/if}
-    {/if}
 
-    {if $smarty.foreach.catitems.iteration == 21}
         {if $catId == '12'}
             <div class="span-4 category_block_view_item">
                 {assign var="iteration_action" value=0}
@@ -469,7 +467,9 @@
                                     <span>{if $item.id_availability == 1}Купить{else}Заказать{/if}</span>
                                 </a>
 
+
 {else}
+
 
 
                                 <a href="#data-basket" data-productErommerceId="{$item.id}"
