@@ -149,28 +149,8 @@
                     {if $item.id2 == $foo}
                         <span {if $item.acttype=='gift'}id="refund_electrolux_gift"
                               {else}id="refund_electrolux"{/if}
-                              data-title="{$temporary_cashback_setting_action.catalog_label_for_what}"
-                              style="display: block;
-                                      text-align: center;
-                                      color: #f9ebf3;
-                                      font-size: 16px;
-                                      font-weight: bold;
-                                      position: absolute;
-                                      margin-top: 80px;
-                                      margin-left: 150px;
-                                      z-index: 1;
-                                      transform: rotate(15deg);
-                                      background-color: #0878C2;
-                                      border-radius: 10px;
-                                      padding: 5px;
-                                      cursor: pointer;
-                                      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-                              {if $item.acttype=='gift'}
-                                      transform: rotate(-20deg) !important;
-                                      margin-top: 215px !important;
-                                      margin-left: 125px !important;
-                              {/if}
-                                      width: 90px;">{$temporary_cashback_setting_action.catalog_label_info} {$temporary_cashback_summ[$iteration_action]}
+                              data-title="{$temporary_cashback_setting_action.catalog_label_for_what}">
+                            {$temporary_cashback_setting_action.catalog_label_info} {$temporary_cashback_summ[$iteration_action]}
                             грн</span>
                     {/if}
                     {assign var="iteration_action" value=$iteration_action+1}
@@ -274,27 +254,8 @@
                         {if $item.id2 == $foo}
                             <span {if $item.acttype=='gift'}id="refund_electrolux_gift"
                                   {else}id="refund_electrolux"{/if}
-                                  data-title="{$temporary_cashback_setting_action.catalog_label_for_what}" style="
-                                    text-align: center;
-                                    color: #f9ebf3;
-                                    font-size: 16px;
-                                    font-weight: bold;
-                                    position: absolute;
-                                    margin-top: 80px;
-                                    margin-left: 150px;
-                                    z-index: 1;
-                                    transform: rotate(15deg);
-                                    background-color: #0878C2;
-                                    border-radius: 10px;
-                                    padding: 5px;
-                                    cursor: pointer;
-                                    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-                            {if $item.acttype=='gift'}
-                                    transform: rotate(-20deg) !important;
-                                    margin-top: 215px !important;
-                                    margin-left: 125px !important;
-                            {/if}
-                                    width: 90px;">{$temporary_cashback_setting_action.catalog_label_info} {$temporary_cashback_summ[$iteration_action]}
+                                  data-title="{$temporary_cashback_setting_action.catalog_label_for_what}">
+                                {$temporary_cashback_setting_action.catalog_label_info} {$temporary_cashback_summ[$iteration_action]}
                                 грн</span>
                         {/if}
                         {assign var="iteration_action" value=$iteration_action+1}
@@ -362,27 +323,8 @@
             {foreach from=$item_id_temporary_cashback item=foo}
                 {if $item.id2 == $foo}
                     <span {if $item.acttype=='gift'}id="refund_electrolux_gift" {else}id="refund_electrolux"{/if}
-                          data-title="{$temporary_cashback_setting_action.catalog_label_for_what}" style="
-                            text-align: center;
-                            color: #f9ebf3;
-                            font-size: 16px;
-                            font-weight: bold;
-                            position: absolute;
-                            margin-top: 80px;
-                            margin-left: 150px;
-                            z-index: 1;
-                            transform: rotate(15deg);
-                            background-color: #0878C2;
-                            border-radius: 10px;
-                            padding: 5px;
-                            cursor: pointer;
-                            box-shadow: 0 0 10px rgba(0,0,0,0.5);
-                    {if $item.acttype=='gift'}
-                            transform: rotate(-20deg) !important;
-                            margin-top: 215px !important;
-                            margin-left: 125px !important;
-                    {/if}
-                            width: 90px;">{$temporary_cashback_setting_action.catalog_label_info} {$temporary_cashback_summ[$iteration_action]}
+                          data-title="{$temporary_cashback_setting_action.catalog_label_for_what}">
+                        {$temporary_cashback_setting_action.catalog_label_info} {$temporary_cashback_summ[$iteration_action]}
                         грн</span>
                 {/if}
                 {assign var="iteration_action" value=$iteration_action+1}
@@ -396,27 +338,8 @@
                     {if $item.id2 == $foo}
                         <span {if $item.acttype=='gift'}id="refund_electrolux_gift"
                               {else}id="refund_electrolux"{/if}
-                              data-title="{$temporary_cashback_setting_action.catalog_label_for_what}" style="
-                                text-align: center;
-                                color: #f9ebf3;
-                                font-size: 16px;
-                                font-weight: bold;
-                                position: absolute;
-                                margin-top: 80px;
-                                margin-left: 150px;
-                                z-index: 1;
-                                transform: rotate(15deg);
-                                background-color: #0878C2;
-                                border-radius: 10px;
-                                padding: 5px;
-                                cursor: pointer;
-                                box-shadow: 0 0 10px rgba(0,0,0,0.5);
-                        {if $item.acttype=='gift'}
-                                transform: rotate(-20deg) !important;
-                                margin-top: 215px !important;
-                                margin-left: 125px !important;
-                        {/if}
-                                width: 90px;">{$temporary_cashback_setting_action.catalog_label_info} {$temporary_cashback_summ[$iteration_action]}
+                              data-title="{$temporary_cashback_setting_action.catalog_label_for_what}">
+                            {$temporary_cashback_setting_action.catalog_label_info} {$temporary_cashback_summ[$iteration_action]}
                             грн</span>
                     {/if}
                     {assign var="iteration_action" value=$iteration_action+1}
@@ -451,16 +374,7 @@
 
             {assign var="margin_top_icon" value=0}
             {if $item.bonus_amount<=0}{assign var="margin_top_icon" value=$margin_top_icon-40}{/if}
-            {if $margin_top_icon==0}
-            <div style="
-	display: block;
-    position: absolute;">
-                {else}
-                <div style="
-                        display: block;
-                        position: absolute;
-                        margin-top: {$margin_top_icon}px;">
-                    {/if}
+                <div>
 
                     {if $item.bonus_amount>0}
                     <div onmouseover="hide_icons_bonus({$number_of_element})"
