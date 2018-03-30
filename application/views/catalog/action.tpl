@@ -125,6 +125,7 @@
             {/foreach}
             {/if}
 
+            {if $login == 'old version'}
 
             {if $smarty.foreach.catitems.iteration <= 4 && $smarty.foreach.catitems.iteration <= $smarty.foreach.catitems.total}
                 <div>
