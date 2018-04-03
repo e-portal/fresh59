@@ -12,6 +12,23 @@
     {*-----------TOP_SALES-----------*}
     {include file='index/top-sales.tpl'}
     {*-----------TOP_SALES-----------*}
+    {*----------MAIN BANNER----------*}
+    <div class="main-baner">
+        <div class="banny  wrap">
+            <div class="banny-text">
+                <p class="ad-blue">Самые выгодные покупки</p>
+                <p class="ad-cheaper">У нас дешевле! <br>Получите скидку <b>до 60%</b></p>
+                <div class="khob acty">Все скидки<a href="/"></a></div>
+            </div>
+            <div class="banny-img">
+                <img src="/assets/img/sale/sale4.png" alt="sale">
+                <img src="/assets/img/sale/sale5.png" alt="sale">
+            </div>
+        </div>
+    </div>
+    {*----------MAIN BANNER----------*}
+
+
 
     {if $seo_text_bottom}
         <div class="equip">
