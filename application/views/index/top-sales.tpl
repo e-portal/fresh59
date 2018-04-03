@@ -203,7 +203,7 @@
                     </div>
 
 
-                    {if 0 === $smarty.foreach.topsales_items.index%4 && !$smarty.foreach.topsales_items.last && !$smarty.foreach.topsales_items.first}
+                    {if 0 === $smarty.foreach.topsales_items.index%3 && !$smarty.foreach.topsales_items.last && !$smarty.foreach.topsales_items.first}
                 </div>
                 <div class="slide-item">
                     {/if}
@@ -219,3 +219,6 @@
 
     </div>
 </div>
+
+
+
