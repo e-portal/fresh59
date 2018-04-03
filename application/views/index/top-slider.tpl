@@ -3,33 +3,16 @@
     <div class="most-item">
 
         <div class="slick hasl">
-            <div class="igyy">
-                <img src="/assets/img/host8.png" alt="">
-                <div class="khob acty">Все скидки<a href="/" class="link"></a></div>
-            </div>
-
-
-            <div class="igyy">
-                <img src="/assets/img/host9.png" alt="">
-                <div class="khob acty">Все скидки<a href="/" class="link"></a></div>
-            </div>
-
-            <div class="igyy">
-                <img src="/assets/img/host8.png" alt="">
-                <div class="khob acty">Все скидки<a href="/" class="link"></a></div>
-            </div>
-
-
-            <div class="igyy">
-                <img src="/assets/img/host8.png" alt="">
-                <div class="khob acty">Все скидки<a href="/" class="link"></a></div>
-            </div>
-
-
-            <div class="igyy">
-                <img src="/assets/img/host8.png" alt="">
-                <div class="khob acty">Все скидки<a href="/" class="link"></a></div>
-            </div>
+            {foreach from=$footer_news item=article key=key name=news}
+                {if 2 > $smarty.foreach.news.index}
+                    <div class="igyy">
+                        <img src="/assets/img/host8.png" alt="">
+                        <div class="khob acty">Все скидки<a href="/" class="link"></a></div>
+                    </div>
+                {else}
+                    {continue}
+                {/if}
+            {/foreach}
 
 
         </div>
