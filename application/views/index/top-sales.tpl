@@ -49,16 +49,16 @@
                                         <p>Вернем: <span>{$item.bonus_amount|round} грн</span></p>
                                     </div>
                                 {/if}
-                                {if $top_item.id_availability == 1}
+                                {if $item.id_availability == 1}
                                 <div class="itee">
                                     <img src="assets/img/izee1.png" alt="">
-                                    <p>от <span>{$top_item.price/$rent_index*$curs_evro_smarty|round}</span> грн/мес</p>
+                                    <p>от <span>{$item.price/$rent_index*$curs_evro_smarty|round}</span> грн/мес</p>
                                 </div>
                                 {/if}
                                 <div class="itee">
                                     <img src="assets/img/izee3.png" alt="">
                                     <p>от
-                                        <span>{$top_item.price*0.0099*$curs_evro_smarty+$top_item.price/24*$curs_evro_smarty|round}</span>
+                                        <span>{$item.price*0.0099*$curs_evro_smarty+$item.price/24*$curs_evro_smarty|round}</span>
                                         грн/мес</p>
                                 </div>
                             </div>
