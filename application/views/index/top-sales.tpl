@@ -61,13 +61,13 @@
                                         <span>{$item.price*0.0099*$curs_evro_smarty+$item.price/24*$curs_evro_smarty|round}</span>
                                         грн/мес</p>
                                 </div>
-                                {if $top_item.id_brand == '26' && $top_item.id_category != 60}
+                                {if $item.id_brand == '26' && $item.id_category != 60}
                                     <div class="itee">
                                         <img src="/assets/img/izee2.png" alt="">
                                         <p>Гарантия <span>12</span> мес</p>
                                     </div>
                                 {/if}
-                                {if $top_item.bestprice > $top_item.price || $top_item.id2==41385}
+                                {if $item.bestprice > $item.price || $item.id2==41385}
                                     <div class="itee">
                                         <img src="/assets/img/izee4.png" alt="">
                                         <p>Лучша <span>цена</span></p>
@@ -80,7 +80,7 @@
                                         <img src='/images/catalog/{gift assoc.id=$item.actid}' alt="gift"/>
                                     </div>
                                 {/if}
-                                {if $top_item.bestprice > $top_item.price || $top_item.id2==41385}
+                                {if $item.bestprice > $item.price || $item.id2==41385}
                                     <div class="itee change">
                                         <img src="/assets/img/izee5.png" alt="">
                                         <p>Замена</p>
@@ -102,10 +102,10 @@
 
                             <div class="bakk">
                                 <div class="left-bakk">
-                                    <p>{price $top_item.price $top_item.id_currency} {$smarty.session.Currency.title}
+                                    <p>{price $item.price $item.id_currency} {$smarty.session.Currency.title}
                                         грн</p>
-                                    {if $top_item.bonus_amount>0}
-                                        <p>Вернем: <span>{$top_item.bonus_amount|round} грн</span></p>
+                                    {if $item.bonus_amount>0}
+                                        <p>Вернем: <span>{$item.bonus_amount|round} грн</span></p>
                                     {/if}
                                 </div>
                                 <div class="right-bakk">
