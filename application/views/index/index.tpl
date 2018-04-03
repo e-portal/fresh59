@@ -18,7 +18,7 @@
             <div class="banny-text">
                 <p class="ad-blue">Самые выгодные покупки</p>
                 <p class="ad-cheaper">У нас дешевле! <br>Получите скидку <b>до 60%</b></p>
-                <div class="khob acty">Все скидки<a href="/"></a></div>
+                <div class="khob acty">Все скидки<a href="/news"></a></div>
             </div>
             <div class="banny-img">
                 <img src="/assets/img/sale/sale4.png" alt="sale">

@@ -1574,13 +1574,13 @@ input {
     width: calc(100% - 48px);
     height: auto;
     position: relative;
-    z-index: 5;
     background: #fff
 }
 
 .more-senn .bakk {
     padding: 0 24px;
 }
+
 
 .item-senn .bakk {
     position: relative;
@@ -1785,7 +1785,8 @@ input {
 
 .news {
     position: absolute;
-    bottom: 49px;
+    bottom: 20px;
+    /*bottom: 49px;*/
     left: 0;
     width: 100%;
     display: flex;

@@ -151,9 +151,19 @@
                     {foreach from=$topsales_items item=item name=topsales_items}
 
                     <div class="item-senn">
-                        <a class="sench" href="/">
-                            <h5 class="green">В наличии</h5>
-                            <h4>Микроволновая печь GORENJE MO 6240</h4>
+                        <a class="sench"
+                           href="{iurl  assoc.cat_latin=$item.cat_latin_single assoc.parent=$item.parentname assoc.subdomain=$item.subdomain assoc.cat=$item.cat_onename assoc.brand=$item.brand assoc.item=$item.name}">
+                            {if 1 == $item.id_availability}
+                                <h5 class="green">В наличии</h5>
+                            {/if}
+                            {if 2 == $item.id_availability}
+                                <h5 class="gray">Наличие уточняйте</h5>
+                            {/if}
+                            {if 3 == $item.id_availability}
+                                <h5 class="blue">Под заказ</h5>
+                            {/if}
+
+                            <h4>{$item.brand} {$item.name}</h4>
                             <div class="centr">
                                 <div class="itee-imgg"><img src="assets/img/senn0.png" alt=""></div>
                                 <div class="itee">
