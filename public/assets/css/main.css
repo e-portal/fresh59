@@ -868,7 +868,6 @@ input {
 .most-item:nth-child(3) {
     height: 285px;
     width: calc(50% - 380px);
-
     /*width: 400px;*/
     margin: 0 0 0 32px
 }
@@ -913,8 +912,7 @@ input {
 }
 
 .most-item-sale .most-item img {
-    width: auto;
-    /*width: 100%;*/
+    width: 100%;
 }
 
 .ourr {
