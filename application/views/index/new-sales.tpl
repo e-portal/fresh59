@@ -1,9 +1,9 @@
 <div class="senn senn-scrol">
     <div class="senn-container wrap">
-        <a class="blue" href="/">ГОРЯЧИЕ НОВИНКИ<span class="linn"></span></a>
+        <a class="blue" href="/">Все новые поступления<span class="linn"></span></a>
 
 
-        <div class="liner"><span>Топ продаж</span></div>
+        <div class="liner"><span>ГОРЯЧИЕ НОВИНКИ</span></div>
         <div class="parag parag-prev ">
             <div class="parag-item active">Отдельностоящая</div>
             <div class="parag-item">Встраиваемая</div>
