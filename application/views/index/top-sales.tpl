@@ -58,7 +58,7 @@
                                     <img src="assets/img/patr.png" alt="">
                                 </div>
                                 <div class="right-otzv">
-                                    <span>10 отзывов</span>
+                                    <a><span>10 отзывов</span></a>
                                 </div>
                             </object>
 
