@@ -75,11 +75,9 @@
                                 {/if}
                                 {if $item.acttype=='gift'}
                                     <div class="itee present">
-                                        <div class="numeral">
-                                            <img src='/images/catalog/{gift assoc.id=$item.actid}' alt="gift"/>
-                                        </div>
+                                        <div class="numeral"><img src="/assets/img/present-img.png" alt="present"></div>
                                         <p>Подарок!</p>
-                                        <img src="/assets/img/present.png" alt="present">
+                                        <img src='/images/catalog/{gift assoc.id=$item.actid}' alt="gift"/>
                                     </div>
                                 {/if}
                                 {if $top_item.bestprice > $top_item.price || $top_item.id2==41385}
