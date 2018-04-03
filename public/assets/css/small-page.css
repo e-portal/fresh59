@@ -198,10 +198,10 @@
     height: 42px;
     overflow: hidden;
 }
-
 .one-article-text-contain {
-    height: 194px;
+    height: 180px;
     overflow: hidden;
+    margin-bottom: 30px;
 }
 .one-article-date-btn {
     display: flex;
