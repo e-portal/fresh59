@@ -27,7 +27,9 @@
         </div>
     </div>
     {*----------MAIN BANNER----------*}
-
+    {*-----------NEW-----------*}
+    {include file='index/new-sales.tpl'}
+    {*-----------NEW-----------*}
 
 
     {if $seo_text_bottom}
