@@ -27,7 +27,7 @@
                     </div>
                     {else}
                         <div class="one-article-img">
-                            <img src="/assets/img/articles/art{0|rand:6}.png">
+                            <img src="/assets/img/articles/art{1|rand:6}.png">
                         </div>
                     {/if}
 
