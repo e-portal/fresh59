@@ -32,27 +32,27 @@
                         <div class="hovyy"></div>
                         <a href="/">
                             <div class="left-iteem">
-                                <div class="itee-imgg"><img src="./img/iteem0.png" alt=""></div>
+                                <div class="itee-imgg"><img src="/assets/img/iteem0.png" alt=""></div>
                                 <div class="itee">
-                                    <img src="./img/izee0.png" alt="">
+                                    <img src="/assets/img/izee0.png" alt="">
                                     <p>Вернем: <span>500 грн</span></p>
                                 </div>
                                 <div class="itee">
-                                    <img src="./img/izee1.png" alt="">
+                                    <img src="/assets/img/izee1.png" alt="">
                                     <p>от <span>500</span> грн/мес</p>
                                 </div>
                                 <div class="itee">
-                                    <img src="./img/izee3.png" alt="">
+                                    <img src="/assets/img/izee3.png" alt="">
 
                                     <p>от <span>1200</span> грн/мес</p>
                                 </div>
                                 <div class="itee present">
-                                    <div class="numeral"><img src="./img/present-img.png" alt="present"></div>
+                                    <div class="numeral"><img src="/assets/img/present-img.png" alt="present"></div>
                                     <p>Подарок!</p>
-                                    <img src="./img/present.png" alt="present">
+                                    <img src="/assets/img/present.png" alt="present">
                                 </div>
                                 <div class="itee change">
-                                    <img src="./img/izee5.png" alt="">
+                                    <img src="/assets/img/izee5.png" alt="">
                                     <p>Замена</p>
                                 </div>
 
@@ -64,7 +64,7 @@
                                     <object type="lol/wut">
                                         <a href="#" class="otzv">
                                             <div class="left-otzv">
-                                                <img src="./img/patr.png" alt="">
+                                                <img src="/assets/img/patr.png" alt="">
                                             </div>
                                             <div class="right-otzv">
                                                 <span>10 отзывов</span>
@@ -105,17 +105,17 @@
                         <div class="hovyy"></div>
                         <a href="/">
                             <div class="left-iteem">
-                                <div class="itee-imgg"><img src="./img/ityy2.png" alt=""></div>
+                                <div class="itee-imgg"><img src="/assets/img/ityy2.png" alt=""></div>
                                 <div class="itee">
-                                    <img src="./img/izee0.png" alt="">
+                                    <img src="/assets/img/izee0.png" alt="">
                                     <p>Вернем: <span>500 грн</span></p>
                                 </div>
                                 <div class="itee">
-                                    <img src="./img/izee1.png" alt="">
+                                    <img src="/assets/img/izee1.png" alt="">
                                     <p>от <span>500</span> грн/мес</p>
                                 </div>
                                 <div class="itee">
-                                    <img src="./img/izee3.png" alt="">
+                                    <img src="/assets/img/izee3.png" alt="">
 
                                     <p>от <span>1200</span> грн/мес</p>
                                 </div>
@@ -127,7 +127,7 @@
                                     <object type="lol/wut">
                                         <a href="#" class="otzv">
                                             <div class="left-otzv">
-                                                <img src="./img/patr.png" alt="">
+                                                <img src="/assets/img/patr.png" alt="">
                                             </div>
                                             <div class="right-otzv">
                                                 <span>10 отзывов</span>
@@ -169,13 +169,13 @@
                         <div class="hovyy"></div>
                         <a href="/">
                             <div class="left-iteem">
-                                <div class="itee-imgg"><img src="./img/ityy3.png" alt=""></div>
+                                <div class="itee-imgg"><img src="/assets/img/ityy3.png" alt=""></div>
                                 <div class="itee">
-                                    <img src="./img/izee0.png" alt="">
+                                    <img src="/assets/img/izee0.png" alt="">
                                     <p>Вернем: <span>500 грн</span></p>
                                 </div>
                                 <div class="itee">
-                                    <img src="./img/izee1.png" alt="">
+                                    <img src="/assets/img/izee1.png" alt="">
                                     <p>от <span>500</span> грн/мес</p>
                                 </div>
                             </div>
@@ -186,7 +186,7 @@
                                     <object type="lol/wut">
                                         <a href="#" class="otzv">
                                             <div class="left-otzv">
-                                                <img src="./img/patr.png" alt="">
+                                                <img src="/assets/img/patr.png" alt="">
                                             </div>
                                             <div class="right-otzv">
                                                 <span>10 отзывов</span>
@@ -227,13 +227,13 @@
                         <div class="hovyy"></div>
                         <a href="/">
                             <div class="left-iteem">
-                                <div class="itee-imgg"><img src="./img/ityy4.png" alt=""></div>
+                                <div class="itee-imgg"><img src="/assets/img/ityy4.png" alt=""></div>
                                 <div class="itee">
-                                    <img src="./img/izee0.png" alt="">
+                                    <img src="/assets/img/izee0.png" alt="">
                                     <p>Вернем: <span>500 грн</span></p>
                                 </div>
                                 <div class="itee">
-                                    <img src="./img/izee1.png" alt="">
+                                    <img src="/assets/img/izee1.png" alt="">
                                     <p>от <span>500</span> грн/мес</p>
                                 </div>
                             </div>
@@ -244,7 +244,7 @@
                                     <object type="lol/wut">
                                         <a href="#" class="otzv">
                                             <div class="left-otzv">
-                                                <img src="./img/patr.png" alt="">
+                                                <img src="/assets/img/patr.png" alt="">
                                             </div>
                                             <div class="right-otzv">
                                                 <span>10 отзывов</span>
@@ -287,24 +287,24 @@
                         <div class="hovyy"></div>
                         <a href="/">
                             <div class="left-iteem">
-                                <div class="itee-imgg"><img src="./img/iteem0.png" alt=""></div>
+                                <div class="itee-imgg"><img src="/assets/img/iteem0.png" alt=""></div>
                                 <div class="itee">
-                                    <img src="./img/izee0.png" alt="">
+                                    <img src="/assets/img/izee0.png" alt="">
                                     <p>Вернем: <span>500 грн</span></p>
                                 </div>
                                 <div class="itee">
-                                    <img src="./img/izee1.png" alt="">
+                                    <img src="/assets/img/izee1.png" alt="">
                                     <p>от <span>500</span> грн/мес</p>
                                 </div>
                                 <div class="itee">
-                                    <img src="./img/izee3.png" alt="">
+                                    <img src="/assets/img/izee3.png" alt="">
 
                                     <p>от <span>1200</span> грн/мес</p>
                                 </div>
                                 <div class="itee present">
-                                    <div class="numeral"><img src="./img/present-img.png" alt="present"></div>
+                                    <div class="numeral"><img src="/assets/img/present-img.png" alt="present"></div>
                                     <p>Подарок!</p>
-                                    <img src="./img/present.png" alt="present">
+                                    <img src="/assets/img/present.png" alt="present">
                                 </div>
 
                             </div>
@@ -315,7 +315,7 @@
                                     <object type="lol/wut">
                                         <a href="#" class="otzv">
                                             <div class="left-otzv">
-                                                <img src="./img/patr.png" alt="">
+                                                <img src="/assets/img/patr.png" alt="">
                                             </div>
                                             <div class="right-otzv">
                                                 <span>10 отзывов</span>
@@ -356,17 +356,17 @@
                         <div class="hovyy"></div>
                         <a href="/">
                             <div class="left-iteem">
-                                <div class="itee-imgg"><img src="./img/ityy2.png" alt=""></div>
+                                <div class="itee-imgg"><img src="/assets/img/ityy2.png" alt=""></div>
                                 <div class="itee">
-                                    <img src="./img/izee0.png" alt="">
+                                    <img src="/assets/img/izee0.png" alt="">
                                     <p>Вернем: <span>500 грн</span></p>
                                 </div>
                                 <div class="itee">
-                                    <img src="./img/izee1.png" alt="">
+                                    <img src="/assets/img/izee1.png" alt="">
                                     <p>от <span>500</span> грн/мес</p>
                                 </div>
                                 <div class="itee">
-                                    <img src="./img/izee3.png" alt="">
+                                    <img src="/assets/img/izee3.png" alt="">
 
                                     <p>от <span>1200</span> грн/мес</p>
                                 </div>
@@ -378,7 +378,7 @@
                                     <object type="lol/wut">
                                         <a href="#" class="otzv">
                                             <div class="left-otzv">
-                                                <img src="./img/patr.png" alt="">
+                                                <img src="/assets/img/patr.png" alt="">
                                             </div>
                                             <div class="right-otzv">
                                                 <span>10 отзывов</span>
@@ -420,13 +420,13 @@
                         <div class="hovyy"></div>
                         <a href="/">
                             <div class="left-iteem">
-                                <div class="itee-imgg"><img src="./img/ityy3.png" alt=""></div>
+                                <div class="itee-imgg"><img src="/assets/img/ityy3.png" alt=""></div>
                                 <div class="itee">
-                                    <img src="./img/izee0.png" alt="">
+                                    <img src="/assets/img/izee0.png" alt="">
                                     <p>Вернем: <span>500 грн</span></p>
                                 </div>
                                 <div class="itee">
-                                    <img src="./img/izee1.png" alt="">
+                                    <img src="/assets/img/izee1.png" alt="">
                                     <p>от <span>500</span> грн/мес</p>
                                 </div>
                             </div>
@@ -437,7 +437,7 @@
                                     <object type="lol/wut">
                                         <a href="#" class="otzv">
                                             <div class="left-otzv">
-                                                <img src="./img/patr.png" alt="">
+                                                <img src="/assets/img/patr.png" alt="">
                                             </div>
                                             <div class="right-otzv">
                                                 <span>10 отзывов</span>
@@ -478,13 +478,13 @@
                         <div class="hovyy"></div>
                         <a href="/">
                             <div class="left-iteem">
-                                <div class="itee-imgg"><img src="./img/ityy4.png" alt=""></div>
+                                <div class="itee-imgg"><img src="/assets/img/ityy4.png" alt=""></div>
                                 <div class="itee">
-                                    <img src="./img/izee0.png" alt="">
+                                    <img src="/assets/img/izee0.png" alt="">
                                     <p>Вернем: <span>500 грн</span></p>
                                 </div>
                                 <div class="itee">
-                                    <img src="./img/izee1.png" alt="">
+                                    <img src="/assets/img/izee1.png" alt="">
                                     <p>от <span>500</span> грн/мес</p>
                                 </div>
                             </div>
@@ -495,7 +495,7 @@
                                     <object type="lol/wut">
                                         <a href="#" class="otzv">
                                             <div class="left-otzv">
-                                                <img src="./img/patr.png" alt="">
+                                                <img src="/assets/img/patr.png" alt="">
                                             </div>
                                             <div class="right-otzv">
                                                 <span>10 отзывов</span>
