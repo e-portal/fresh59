@@ -9,8 +9,6 @@
                         <img src="/assets/img/host8.png" alt="">
                         <div class="khob acty">Все скидки<a href="/" class="link"></a></div>
                     </div>
-                {else}
-                    {continue}
                 {/if}
             {/foreach}
 
