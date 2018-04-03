@@ -45,22 +45,49 @@
                                 </div>
                                 {if $item.bonus_amount>0}
                                     <div class="itee">
-                                        <img src="assets/img/izee0.png" alt="">
+                                        <img src="/assets/img/izee0.png" alt="">
                                         <p>Вернем: <span>{$item.bonus_amount|round} грн</span></p>
                                     </div>
                                 {/if}
                                 {if $item.id_availability == 1}
-                                <div class="itee">
-                                    <img src="assets/img/izee1.png" alt="">
-                                    <p>от <span>{$item.price/$rent_index*$curs_evro_smarty|round}</span> грн/мес</p>
-                                </div>
+                                    <div class="itee">
+                                        <img src="/assets/img/izee1.png" alt="">
+                                        <p>от <span>{$item.price/$rent_index*$curs_evro_smarty|round}</span> грн/мес</p>
+                                    </div>
                                 {/if}
                                 <div class="itee">
-                                    <img src="assets/img/izee3.png" alt="">
+                                    <img src="/assets/img/izee3.png" alt="">
                                     <p>от
                                         <span>{$item.price*0.0099*$curs_evro_smarty+$item.price/24*$curs_evro_smarty|round}</span>
                                         грн/мес</p>
                                 </div>
+                                {if $top_item.id_brand == '26' && $top_item.id_category != 60}
+                                    <div class="itee">
+                                        <img src="/assets/img/izee2.png" alt="">
+                                        <p>Гарантия <span>12</span> мес</p>
+                                    </div>
+                                {/if}
+                                {if $top_item.bestprice > $top_item.price || $top_item.id2==41385}
+                                    <div class="itee">
+                                        <img src="/assets/img/izee4.png" alt="">
+                                        <p>Лучша <span>цена</span></p>
+                                    </div>
+                                {/if}
+                                {if $item.acttype=='gift'}
+                                    <div class="itee present">
+                                        <div class="numeral"><img src="./img/present-img.png" alt="present"></div>
+                                        <p>Подарок!</p>
+                                        <img src="/assets/img/present.png" alt="present">
+                                    </div>
+                                {/if}
+                                {if $top_item.bestprice > $top_item.price || $top_item.id2==41385}
+                                    <div class="itee change">
+                                        <img src="/assets/img/izee5.png" alt="">
+                                        <p>Замена</p>
+                                    </div>
+                                {/if}
+
+
                             </div>
                             <object type="lol/wut">
                                 <span class="otzv">
