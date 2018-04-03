@@ -2,7 +2,6 @@
 
 
 <div class="container">
-    {$topsales_items|@debug_print_var}
     <div class="wrap">
         {*{assign var="arr1" value=array(1,2,3)}*}
         {*-----------TOP_SLIDER-----------*}
