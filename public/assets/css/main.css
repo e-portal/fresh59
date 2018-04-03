@@ -1571,7 +1571,7 @@ input {
 }
 .sench {
     display: inline-block;
-    width: calc(100% - 48px);
+    width: calc(100% - 52px);
     height: auto;
     position: relative;
     z-index: 5;
@@ -1717,11 +1717,11 @@ input {
     line-height: 12px
 }
 
-.home-page .itee-imgg img {
-    width: auto;
-    height: auto;
-    object-fit: scale-down;
-}
+/*.home-page .itee-imgg img {*/
+/*width: auto;*/
+/*height: auto;*/
+/*object-fit: scale-down;*/
+/*}*/
 
 .itee img {
     width: auto;
