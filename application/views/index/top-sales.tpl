@@ -208,9 +208,9 @@
                 <div class="slide-item">
                     {/if}
 
-                </div>
-                {/foreach}
 
+                {/foreach}
+                </div>
             </div>
             {*----------------MOBILE----------------*}
 
