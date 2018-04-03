@@ -5,9 +5,10 @@
     <div class="wrap">
 
         {*{assign var="arr1" value=array(1,2,3)}*}
-
+        {*-----------TOP_SLIDER-----------*}
         {include file='index/top-slider.tpl'}
-
+        {*-----------TOP_SLIDER-----------*}
+        {$actionItems|@debug_print_var}
 
 
         {if $seo_text_bottom}

@@ -881,10 +881,14 @@ input {
     position: relative;
 }
 
+.most-item-slider .most-item:nth-child(3) div {
+    position: relative;
+}
+
 .most-item:nth-child(3) .blue {
     position: absolute;
-    top: 105px;
-    left: 27px;
+    top: 40%;
+    left: 30px;
 }
 
 .most-item-sale {
