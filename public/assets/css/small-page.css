@@ -195,6 +195,13 @@
 .one-article-text-contain h3 {
     text-transform: none;
     margin: 25px 0;
+    height: 42px;
+    overflow: hidden;
+}
+
+.one-article-text-contain {
+    height: 194px;
+    overflow: hidden;
 }
 .one-article-date-btn {
     display: flex;

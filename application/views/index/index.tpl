@@ -30,6 +30,9 @@
     {*-----------NEW-----------*}
     {include file='index/new-sales.tpl'}
     {*-----------NEW-----------*}
+    {*-----------discounts-----------*}
+    {include file='index/discounts.tpl'}
+    {*-----------discounts-----------*}
 
 
     {if $seo_text_bottom}
