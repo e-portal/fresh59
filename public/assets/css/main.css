@@ -909,7 +909,8 @@ input {
 }
 
 .most-item-sale .most-item img {
-    width: 100%;
+    width: auto;
+    /*width: 100%;*/
 }
 
 .ourr {
