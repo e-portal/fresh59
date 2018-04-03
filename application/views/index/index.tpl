@@ -3,8 +3,8 @@
 
 <div class="container">
 
-    {assign var="arr1" value=array(1,2,3)}
-    <h2>{$smarty.version}</h2>
+    {*{assign var="arr1" value=array(1,2,3)}*}
+
 
     {if $seo_text_bottom}
         <div class="equip">

@@ -1,4 +1,4 @@
-﻿{include file=_header.tpl}
+﻿{include file='_header.tpl'}
 
 <!--Trafmag ретаргетинг-->
 {literal}
@@ -6,11 +6,6 @@
 {/literal}
 <!-- //Trafmag ретаргетинг-->
 
-{literal}
-<style type="text/css">
-	.sale-icon{left: 0px !important;}
-</style>
-{/literal}
 {if $item}
     <div itemscope itemtype="http://schema.org/Product">
         {if $zf.params.itemId==6411}
@@ -52,18 +47,6 @@
                         </script>
                     {/literal}
                 </div>
-                {*<div class="like-item">
-                    {literal}
-                        <script type="text/javascript" src="http://userapi.com/js/api/openapi.js?34"></script>
-                        <script type="text/javascript">
-                            VK.init({apiId: 3076385, onlyWidgets: true});
-                        </script>
-                        <div id="vk_like"></div>
-                        <script type="text/javascript">
-                            VK.Widgets.Like("vk_like", {type: "mini"});
-                        </script>
-                    {/literal}
-                </div>*}
             </div><!-- Like End -->
             {/if}
 
@@ -1958,10 +1941,10 @@ if (friday_num == 6 || friday_num == 7) {
 {/if}
 
 {else}
-    {include file= error/404.tpl}
+                {include file='error/404.tpl'}
 {/if}
 
         <div class="clearfix"></div>
         </div>
 
-{include file=_footer.tpl}
+        {include file='_footer.tpl'}

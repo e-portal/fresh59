@@ -43,100 +43,11 @@
     <p class="stext-show"><span id="data-toggle-text">Читать дальше</span></p>
 {/if}
 
-
+{*----------SORT----------*}
 <div class="span-12 no_margin category_nav">
-    <div class="category_nav_sort">
-        <span>Сортировать:&nbsp;</span>
-        <span class="sort_item_selected">
-                    {if !$zf.params.sort}
-                        Цене <!-- <div></div> -->
-                    {else}
-                        Популярности <!-- <div></div> -->
-                    {/if}
-                </span>
-        <div class="sort_item">
-            <a href="{url2 assoc.sort='popularity' param=$route}" class="sort_item">Популярности</a>
-            <a href="{url2 assoc.sort=null param=$route}" class="sort_item">Цене</a>
-        </div>
-    </div>
-
-    <div class="switch_view">
-        <span>Вид</span>
-        <div class="list_as_block data-display" data-display="grid">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="list_as_list data-display" data-display="row">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-    {literal}
-        <script type="text/javascript">
-            $(document).ready(function () {
-                var now_url = '';
-                $('body').on("click", ".filter_params label", function (event) {
-                    var url = $(this).attr('data-filter-name');
-
-                    if ($(this).attr('data-filter-chek') !== 'checked') {
-                        if (now_url.length == 0 || now_url == '') {
-                            now_url = document.location.href + '/' + url;
-                        } else {
-                            now_url = now_url + '/' + url;
-                        }
-                    } else {
-                        now_url = now_url.replace(url, '');
-                    }
-
-                    $.cookie('draw_ajax_filters', 'true', {expires: 1, path: '590.ua/index.php'});
-                    $.ajax({
-                        url: now_url,
-                        type: "get",
-                        success: function (data) {
-                            var html_print = $(data).find(".span-12.content").html();
-                            $('.span-12.content').html(html_print);
-                            $.removeCookie('draw_ajax_filters');
-                        }
-                    });
-                });
-            });
-        </script>
-    {/literal}
-    {assign var="rasprodaja_check" value=0}
-
-    {foreach from=$items item=itemcheck}
-        {if $itemcheck.sale==1 && $itemcheck.d90==-1}
-            {assign var="rasprodaja_check" value=1}
-        {/if}
-    {/foreach}
-
-
-    <div class="filter_params span-6">
-        {if $zf.params.availability==1}
-            <input id="check1" checked="checked" type="checkbox" name="check" value="check1">
-            <label data-filter-name="availability/1" data-filter-chek="checked" for="check1">Только в
-                наличии</label>
-        {else}
-            <input id="check1" type="checkbox" name="check" value="check1">
-            <label data-filter-name="availability/1" for="check1">Только в наличии</label>
-        {/if}
-
-
-        {if $rasprodaja_check==1}
-            {if $zf.params.sale=='only'}
-                <input id="check3" checked="checked" type="checkbox" name="check" value="check1">
-                <label data-filter-name="sale/only" data-filter-chek="checked" for="check3">Распродажа</label>
-            {else}
-                <input id="check3" type="checkbox" name="check" value="check1">
-                <label data-filter-name="sale/only" for="check3">Распродажа</label>
-            {/if}
-        {/if}
-    </div>
+    {include file='catalog/subs-nav.tpl'}
 </div>
+{*----------SORT----------*}
 
 {assign var="number_of_element" value=0}
 <div id="category_block_view_listing" class="span-12 no_margin">
@@ -310,62 +221,61 @@
                 {/if}
             {else}
 
-
                 {assign var="margin_top_icon" value=0}
                 {if $item.bonus_amount<=0}{assign var="margin_top_icon" value=$margin_top_icon-40}{/if}
                 <div>
 
                     {if $item.bonus_amount>0}
-                        <div
-
-                                class="bonus_on_card_{$number_of_element}">
+                        <div class="bonus_on_card_{$number_of_element}">
                             <img src="/images/hint/piggy-bank.png">вернем<br>
                             <span>{$item.bonus_amount|round} грн.</span>
                             <div class="wrapper_body">
                                 <div class="cbm_wrap ">
                                     <a href="https://590.ua/news/%D0%BC%D0%B5%D0%BD%D1%8F%D0%B9%D1%82%D0%B5-%D0%B1%D0%BE%D0%BD%D1%83%D1%81%D1%8B-%D0%BD%D0%B0-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D1%83"
-                                       target="_blank"><h1 title="Узнать подробнее...">Оплачивай бонусами</h1></a>
+                                       target="_blank">
+                                        <h1 title="Узнать подробнее...">Оплачивай бонусами</h1>
+                                    </a>
                                     <a href="https://590.ua/news/%D0%BC%D0%B5%D0%BD%D1%8F%D0%B9%D1%82%D0%B5-%D0%B1%D0%BE%D0%BD%D1%83%D1%81%D1%8B-%D0%BD%D0%B0-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D1%83"
-                                       target="_blank"><img title="Узнать подробнее..."
-                                                            src="/images/hint/bonus.jpg"></a>
+                                       target="_blank">
+                                        <img title="Узнать подробнее..." src="/images/hint/bonus.jpg">
+                                    </a>
                                     <p>Вы можете получить бонусную карточку на которой можно накапливать и тратить
                                         бонусы в оплате товара на нашем сайте (1 бонус приравнивается к 1
                                         грн.)<br><br>Бонусный
                                         счет можно использовать для полной или частичной оплаты последующих заказов
-                                        в
-                                        нашем интернет-магазине.<br><br>Карточку постоянного покупателя могут
-                                        использовать все члены Вашей семьи, а также друзья.</p></div>
+                                        в нашем интернет-магазине.<br><br>Карточку постоянного покупателя могут
+                                        использовать все члены Вашей семьи, а также друзья.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     {/if}
 
                     {if $item.id_availability == 1}
-                        <div
-
-                                class="oplata_chast_icon_{$number_of_element}"><img src="/images/hint/oplata_chast.png"
-                            >от
-                            <span>{$item.price/$item.rent_index*$curs_evro_smarty|round}</span><br><span
-                            > грн./мес.</span>
-                            <div class="overlay_icons"
-                            >
+                        <div class="oplata_chast_icon_{$number_of_element}">
+                            <img src="/images/hint/oplata_chast.png">от
+                            <span>{$item.price/$item.rent_index*$curs_evro_smarty|round}</span><br>
+                            <span> грн./мес.</span>
+                            <div class="overlay_icons">
                                 <div class="wrapper_body">
                                     <div class="cbm_wrap ">
-                                        <noindex><a href="https://chast.privatbank.ua/" rel="nofollow"
-                                                    target="_blank">
-                                                <h1
-                                                        title="Узнать подробнее...">Оплата частями</h1></a>
+                                        <noindex>
+                                            <a href="https://chast.privatbank.ua/" rel="nofollow" target="_blank">
+                                                <h1 title="Узнать подробнее...">Оплата частями</h1>
+                                            </a>
                                         </noindex>
-                                        <noindex><a href="https://chast.privatbank.ua/" rel="nofollow"
-                                                    target="_blank"><img
-                                                        title="Узнать подробнее..." src="/images/hint/op_chast.png"></a>
+                                        <noindex>
+                                            <a href="https://chast.privatbank.ua/" rel="nofollow" target="_blank">
+                                                <img title="Узнать подробнее..." src="/images/hint/op_chast.png">
+                                            </a>
                                         </noindex>
                                         <span>Этот товар Вы сможете оплатить частями. Без переплат!</span><br>
                                         <span>Все что Вам нужно:</span>
                                         <span>1. Наличие карты ПриватБанк.</span>
-                                        <noindex><a href="https://chast.privatbank.ua/" rel="nofollow"
-                                                    target="_blank"><img
-                                                        title="Узнать подробнее..."
-                                                        src="/images/hint/cardprivat.png"></a>
+                                        <noindex>
+                                            <a href="https://chast.privatbank.ua/" rel="nofollow" target="_blank">
+                                                <img title="Узнать подробнее..." src="/images/hint/cardprivat.png">
+                                            </a>
                                         </noindex>
                                         <span>2. Доступный лимит.</span>
                                         <span>Узнать максимальную суму покупки по сервису очень просто. Нужно отправить SMS сообщение на номер 10060 с текстом chast</span>
@@ -373,28 +283,25 @@
                                 </div>
                             </div>
                         </div>
-                        <div
-
-                                class="oplata_rassrochka_icon_{$number_of_element}"><img
-                                    src="/images/hint/oplata_rassrochka_icon.png"
-                            >от <span
-                            >{$item.price*0.0099*$curs_evro_smarty+$item.price/24*$curs_evro_smarty|round}</span><br><span
-                            > грн./мес.</span>
-                            <div class="overlay_icons"
-                            >
+                        <div class="oplata_rassrochka_icon_{$number_of_element}">
+                            <img src="/images/hint/oplata_rassrochka_icon.png">от
+                            <span>{$item.price*0.0099*$curs_evro_smarty+$item.price/24*$curs_evro_smarty|round}</span>
+                            <br><span> грн./мес.</span>
+                            <div class="overlay_icons">
                                 <div class="wrapper_body">
                                     <div class="cbm_wrap ">
-                                        <noindex><a href="https://chast.privatbank.ua/" rel="nofollow"
-                                                    target="_blank">
+                                        <noindex>
+                                            <a href="https://chast.privatbank.ua/" rel="nofollow" target="_blank">
                                                 <h1 title="Узнать подробнее...">МГНОВЕННАЯ РАССРОЧКА</h1></a>
                                         </noindex>
-                                        <noindex><a href="https://chast.privatbank.ua/" rel="nofollow"
-                                                    target="_blank"><img title="Узнать подробнее..."
-                                                                         src="/images/hint/oplata_rassrochka.jpg"></a>
+                                        <noindex>
+                                            <a href="https://chast.privatbank.ua/" rel="nofollow" target="_blank">
+                                                <img title="Узнать подробнее..."
+                                                     src="/images/hint/oplata_rassrochka.jpg">
+                                            </a>
                                         </noindex>
                                         <p>Покупайте товары в рассрочку до 24 месяцев с небольшой ежемесячной
-                                            комиссией
-                                            от стоимости товара.</p>
+                                            комиссией от стоимости товара.</p>
                                     </div>
                                 </div>
                             </div>
@@ -402,20 +309,16 @@
                     {/if}
 
                     {if $item.id_brand == '26' && $item.id_category != 60}
-                        <div class="waranty_zirtal_{$number_of_element}"><img src="/images/hint/waranty_zirtal.png"
-                            >гарантия<br><span
-                            >36 мес.</span>
+                        <div class="waranty_zirtal_{$number_of_element}">
+                            <img src="/images/hint/waranty_zirtal.png">гарантия<br>
+                            <span>36 мес.</span>
                         </div>
                     {/if}
 
                     {if $item.bestprice > $item.price || $item.id2==41385}
-                        <div
-
-                                class="best_price_icon_{$number_of_element}"><img src="/images/hint/thumbs_up.png"
-                            >лучшая<br><span
-                            >цена</span>
-                            <div class="overlay_icons"
-                            >
+                        <div class="best_price_icon_{$number_of_element}">
+                            <img src="/images/hint/thumbs_up.png">лучшая<br><span>цена</span>
+                            <div class="overlay_icons">
                                 <div class="wrapper_body">
                                     <div class="cbm_wrap ">
                                         <h1>Отличный выбор</h1>
@@ -432,20 +335,19 @@
                     {/if}
                 </div>
                 {if $item.acttype != 'gift' && $item.x_index == '1' || $item.id == '21465'}
-                    <div
-
-                            class="trdein_icon_{$number_of_element}"><img src="/images/icons/zamena_catalog.png"
-                        >
-                        <div class="overlay_icons"
-                        >
+                    <div class="trdein_icon_{$number_of_element}"><img src="/images/icons/zamena_catalog.png">
+                        <div class="overlay_icons">
                             <div class="wrapper_body">
                                 <div class="cbm_wrap ">
-                                    <noindex><a href="https://590.ua/articles/zamena" rel="nofollow"
-                                                target="_blank"><h1
-                                                    title="Узнать подробнее...">Замена (Trade-in)</h1></a></noindex>
-                                    <noindex><a href="https://590.ua/articles/zamena" rel="nofollow"
-                                                target="_blank"><img title="Узнать подробнее..."
-                                                                     src="/images/hint/tradein_description.jpg"></a>
+                                    <noindex>
+                                        <a href="https://590.ua/articles/zamena" rel="nofollow" target="_blank">
+                                            <h1 title="Узнать подробнее...">Замена (Trade-in)</h1>
+                                        </a>
+                                    </noindex>
+                                    <noindex>
+                                        <a href="https://590.ua/articles/zamena" rel="nofollow" target="_blank">
+                                            <img title="Узнать подробнее..." src="/images/hint/tradein_description.jpg">
+                                        </a>
                                     </noindex>
                                     <p>Вы имеете следующую выгоду:<br>1. Весомая скидка на технику<br>2. Бесплатная
                                         доставка в квартиру<br>3. Бесплатное подключение<br>4. Вывоз и утилизация
@@ -499,7 +401,8 @@
                             </div>
                         {/if}
                         {assign var="iteration_celebration" value=$iteration_celebration+1}
-                    {/foreach} {/if}
+                    {/foreach}
+                {/if}
             {/if}
             <div class="head">
                 <a href="{iurl assoc.cat_latin=$item.cat_latin_single  assoc.parent=$item.parentname assoc.subdomain=$item.subdomain assoc.cat=$item.cat_onename assoc.brand=$item.brand assoc.item=$item.name}"
@@ -569,8 +472,7 @@
             {if $item.id_availability == 1}
 
                 <!-- Credit Logo -->
-                <div class="credit_logo_pp"
-                >
+                <div class="credit_logo_pp">
                     <img src="/images/icons/privatbank_pp_{$item.rent_index}_logo.png" width="60"
                          title="Кредит Оплата Частями Приватбанк" alt="Кредит Оплата Частями Приватбанк">
                 </div>
@@ -579,8 +481,7 @@
 
             {if $catId == 26 || $catId == 25 || $catId == 209 || $catId == 102 || $catId == 18 || $catId == 24 || $catId == 212 || $catId == 37 || $catId == 314 || $catId == 21 || $catId == 36 || $catId == 322 || $catId == 12 || $catId == 16 || $catId == 88 || $catId == 210 || $catId == 211 || $catId == 175 || $catId == 10 || $catId == 15 || $catId == 155 || $catId == 39 || $catId == 213 || $catId == 11 || $catId == 13 || $catId == 34 || $catId == 302 || $catId == 67}
                 {if $item.acttype !== 'gift' && $item.x_index == '1' || $item.id == '21465'}
-                    <div class="zamena-catalog"
-                    >
+                    <div class="zamena-catalog">
                         <a href="/articles/zamena">
                             <img src="/images/icons/zamena_catalog.png" rel="tooltip"
                                  data-original-title="При покупке техники по системе Trade-in, Вы имеете выгоду в: 1) Весомая скидка на технику; 2) Бесплатная доставка в квартиру; 3) Бесплатное подключение; 4) Вывоз и утилизация старой техники. Все ето, в течении короткого времени мы сделаем сами, тем самым освободив Вас от хлопот и дополнительных финансовых расходов."
@@ -603,13 +504,13 @@
             <span class="full_description">{if $zf.params.catid == 189}{$item.short_info|replace:'Стиральная машина':''}{else}{$item.short_info|truncate:270}{/if}</span>
             {if $item.specprice  && ($item.bdprice > $item.price) && (($item.bdprice - $item.price)/$item.price > 0.01) }
                 <span class="price_sidebar old">{price $item.bdprice}</span>
-                <span
-                        class="price_sidebar new priceForEcommerce">{price $item.price $item.id_currency} <span
-                            class="currency">{$smarty.session.Currency.title}</span></span>
+                <span class="price_sidebar new priceForEcommerce">{price $item.price $item.id_currency}
+                    <span class="currency">{$smarty.session.Currency.title}</span>
+                </span>
             {else}
                 <span class="price_sidebar priceForEcommerce">{price $item.price $item.id_currency}
                     <span class="currency">{$smarty.session.Currency.title}</span>
-                            </span>
+                </span>
             {/if}
 
             <!--{if $item.id_programm==3}<p class="manager-pr">Салонная программа</p>{/if}-->
@@ -619,8 +520,11 @@
                     <p class="category-price">Первая
                         цена {math equation="(x-y)/x*100" x=$item.price y=$item.bestprice} </p>
                 {/if}
-                {if $item.rent}<p class="category-price">Категория
-                    цены {if $item.rent > 25}1{elseif $item.rent > 12.5}2{elseif $item.rent > 7.5}3{else}{/if}</p>{/if}
+                {if $item.rent}
+                    <p class="category-price">Категория цены
+                        {if $item.rent > 25}1{elseif $item.rent > 12.5}2{elseif $item.rent > 7.5}3{else}{/if}
+                    </p>
+                {/if}
                 <p class="cat-manager-price">
                     Розница -
                     <span class='strong'>{price $item.roznprice $item.id_currency} {$smarty.session.Currency.title}</span>
@@ -629,41 +533,42 @@
                 <p>{$item.qrm}, {$item.qty_z}
                     , {if $item.rqrm}{$item.rqrm}{else}-{/if}{if $login == 'Сергей Гринюк' || $login == 'Vadyus' || $login == 'Vitaliy Shyshko'}{if $item.rent},({$item.rent|round}){/if},[{$item.sold}]{/if}</p>
             {/if}
-            {literal}
-                <style type="text/css">
-                    .btn:hover {
-                        background-position: 0 -30px !important;
-                    }
-                </style>
-            {/literal}
             <span class="cat-item-buy">
-                            {if !in_array($item.id, $basketStats.ids)}
-                                <a href="#data-basket" data-productErommerceId="{$item.id}"
+            {if !in_array($item.id, $basketStats.ids)}
+                <a href="#data-basket" data-productErommerceId="{$item.id}"
 
-                                   data-toggle="modal" class="btn btn-info data-AddToCart data-itemId-{$item.id}">
-                                    <i class="icon-shopping-cart icon-white"></i>
-                                    <span>{if $item.id_availability == 1}Купить{else}Заказать{/if}</span>
-                                </a>
+                   data-toggle="modal" class="btn btn-info data-AddToCart data-itemId-{$item.id}">
+            <i class="icon-shopping-cart icon-white"></i>
+            <span>{if $item.id_availability == 1}Купить{else}Заказать{/if}</span>
+            </a>
+
+
+
+
 
 
 {else}
 
 
-                                <a href="#data-basket" data-productErommerceId="{$item.id}"
 
-                                   data-toggle="modal" class="btn btn-warning data-AddToCart data-itemId-{$item.id}">
-                                    <i class="icon-shopping-cart icon-white"></i>
-                                    <span>В корзине</span>
-                                </a>
-                            {/if}
-                        </span>
+
+
+
+                <a href="#data-basket" data-productErommerceId="{$item.id}"
+
+                   data-toggle="modal" class="btn btn-warning data-AddToCart data-itemId-{$item.id}">
+            <i class="icon-shopping-cart icon-white"></i>
+            <span>В корзине</span>
+            </a>
+            {/if}
+            </span>
             <p class="cat-item-compare">
-                            <span title="Добавить в список сравнения" id="comp_{$item.id}" data-id='{$item.id}'
-                                  data-category='{$item.cat|mblower}'
-                                  class="data-toggleCompare{if in_array($item.id, $compareItems)} checked{/if}"
-                                  data-url="{$url.img}/catalog/{$item.imgid}_s.{$item.imgext}">
-                                <!--<i>в список сравнения</i>-->
-                            </span>
+                <span title="Добавить в список сравнения" id="comp_{$item.id}" data-id='{$item.id}'
+                      data-category='{$item.cat|mblower}'
+                      class="data-toggleCompare{if in_array($item.id, $compareItems)} checked{/if}"
+                      data-url="{$url.img}/catalog/{$item.imgid}_s.{$item.imgext}">
+                <!--<i>в список сравнения</i>-->
+                </span>
             </p>
 
             {if $item.id_availability == 1}
@@ -681,7 +586,6 @@
         {/foreach}
         <!-- / .products --></div>
 
-    <div class="clear"></div>
 
     {if $pages->pageCount > 1}
         <!-- Pager -->
@@ -714,7 +618,6 @@
         </div>
         <!-- Pager End -->
     {/if}
-
     {else}
     <div class="alert alert-error">По заданным параметрам ничего не найдено<br/>
         <a class="btn btn-mini" href="{$baseUrl}"><i class="icon-arrow-left"></i> вернуться назад</a>
