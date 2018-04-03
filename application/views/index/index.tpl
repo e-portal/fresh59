@@ -1,9 +1,12 @@
 {include file='layouts/_header.tpl'}
 
 
-<div class="container">
+<div class="container wrap">
 
     {*{assign var="arr1" value=array(1,2,3)}*}
+
+    {include file='index/top-slider.tpl'}
+
 
 
     {if $seo_text_bottom}
