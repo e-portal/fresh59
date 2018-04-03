@@ -25,6 +25,10 @@
                     <div class="one-article-img">
                         <img src="/assets/img/articles/{$item.img}">
                     </div>
+                    {else}
+                        <div class="one-article-img">
+                            <img src="/assets/img/articles/att{random in=1 out=6}.png">
+                        </div>
                     {/if}
 
                     <div class="one-article-text-contain">
