@@ -53,7 +53,7 @@
     <div class="most-item-sale">
 
         {foreach from=$footer_news item=article key=key name=news}
-            {if 7 <= $smarty.foreach.news.index}
+            {if 6 <= $smarty.foreach.news.index}
                 <div class="most-item">
                     <a {if strlen($article.ext_url)> 0 && strpos($article.ext_url,'ucenka')>0}rel='nofollow'{/if}
                        href="{if strlen($article.ext_url) > 0}{$article.ext_url}{else}/news/{$article.url}{/if}">
