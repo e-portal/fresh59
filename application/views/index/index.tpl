@@ -14,18 +14,18 @@
     {include file='index/top-sales.tpl'}
     {*-----------TOP_SALES-----------*}
 
-        {if $seo_text_bottom}
-            <div class="equip">
-                <div class="container">
-                    <div class="nozer">
-                        {$seo_text_bottom}
-                    </div>
+    {if $seo_text_bottom}
+        <div class="equip">
+            <div class="container">
+                <div class="nozer">
+                    {$seo_text_bottom}
                 </div>
             </div>
-        {/if}
+        </div>
+    {/if}
 
 
-        {include file='layouts/orig.tpl'}
+    {include file='layouts/orig.tpl'}
 
     <div class="doww"><img src="/assets/img/verh.png" alt=""></div>
 </div>
