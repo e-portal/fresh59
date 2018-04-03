@@ -15,10 +15,8 @@
 
     {if $seo_text_bottom}
         <div class="equip">
-            <div class="container">
-                <div class="nozer">
-                    {$seo_text_bottom}
-                </div>
+            <div class="nozer wrap">
+                {$seo_text_bottom}
             </div>
         </div>
     {/if}
