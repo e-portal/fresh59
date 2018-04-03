@@ -75,7 +75,7 @@
                         </div>
                     </div>
 
-                    {if 6 === $smarty.foreach.topsales_items.index}
+                    {if 0 === $smarty.foreach.topsales_items.index%6 && !$smarty.foreach.topsales_items.last}
                     <div class="d" style="clear: both"></div>
                 </div>
                 <div class="maii-item">
