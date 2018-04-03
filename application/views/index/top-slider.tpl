@@ -4,10 +4,15 @@
 
         <div class="slick hasl">
             {foreach from=$footer_news item=article key=key name=news}
-                {if 2 > $smarty.foreach.news.index}
+                {if 3 > $smarty.foreach.news.index}
                     <div class="igyy">
-                        <img src="/assets/img/host8.png" alt="">
-                        <div class="khob acty">Все скидки<a href="/" class="link"></a></div>
+                        <img src="/uploads/{$article.big_img}" alt="{$article.name|htmlspecialchars}"
+                             title="{$article.name|htmlspecialchars}">
+                        <div class="khob acty">Все скидки
+                            <a {if strlen($article.ext_url)> 0 && strpos($article.ext_url,'ucenka')>0}rel='nofollow'{/if}
+                               href="{if strlen($article.ext_url) > 0}{$article.ext_url}{else}/news/{$article.url}{/if}"
+                               class="link"></a>
+                        </div>
                     </div>
                 {/if}
             {/foreach}
