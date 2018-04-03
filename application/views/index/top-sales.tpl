@@ -35,6 +35,7 @@
                             {/if}
 
                             <h4>{$item.brand} {$item.name}</h4>
+
                             <div class="centr">
                                 <div class="itee-imgg">
                                     <img src="assets/img/senn1.png" alt="">
@@ -54,12 +55,14 @@
                                 </div>
                             </div>
                             <object type="lol/wut">
-                                <div class="left-otzv">
-                                    <img src="assets/img/patr.png" alt="">
-                                </div>
-                                <div class="right-otzv">
-                                    <a><span>10 отзывов</span></a>
-                                </div>
+                                <span class="otzv">
+                                    <div class="left-otzv">
+                                        <img src="assets/img/patr.png" alt="">
+                                    </div>
+                                    <div class="right-otzv">
+                                        <span>10 отзывов</span>
+                                    </div>
+                                </span>
                             </object>
 
                             <div class="bakk">
