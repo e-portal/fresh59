@@ -36,24 +36,30 @@
 
                             <h4>{$item.brand} {$item.name}</h4>
 
+
                             <div class="centr">
                                 <div class="itee-imgg">
                                     <img src="/images/catalog/{$item.imgid}_s.{$item.imgext}"
                                          alt="{if $item.cat_onename}{$item.cat_onename|mblower}{else}{$item.cat|mblower}{/if} {$item.brand} {$item.name} {'купить'}"
                                          title="{if $item.cat_onename}{$item.cat_onename|mblower}{else}{$item.cat|mblower}{/if} {$item.brand} {$item.name}">
                                 </div>
-                                <div class="itee">
-                                    <img src="assets/img/izee0.png" alt="">
-                                    <p>Вернем: <span>500 грн</span></p>
-                                </div>
-
+                                {if $item.bonus_amount>0}
+                                    <div class="itee">
+                                        <img src="assets/img/izee0.png" alt="">
+                                        <p>Вернем: <span>{$item.bonus_amount|round} грн</span></p>
+                                    </div>
+                                {/if}
+                                {if $top_item.id_availability == 1}
                                 <div class="itee">
                                     <img src="assets/img/izee1.png" alt="">
-                                    <p>от <span>500</span> грн/мес</p>
+                                    <p>от <span>{$top_item.price/$rent_index*$curs_evro_smarty|round}</span> грн/мес</p>
                                 </div>
+                                {/if}
                                 <div class="itee">
                                     <img src="assets/img/izee3.png" alt="">
-                                    <p>от <span>1200</span> грн/мес</p>
+                                    <p>от
+                                        <span>{$top_item.price*0.0099*$curs_evro_smarty+$top_item.price/24*$curs_evro_smarty|round}</span>
+                                        грн/мес</p>
                                 </div>
                             </div>
                             <object type="lol/wut">
