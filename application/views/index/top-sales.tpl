@@ -20,6 +20,7 @@
             <div class="senn-slik slick">
                 <div class="maii-item">
                     {foreach from=$topsales_items item=item name=topsales_items}
+                    {$item|@debug_print_var}
                     <div class="item-senn">
                         <a class="sench"
                            href="{iurl  assoc.cat_latin=$item.cat_latin_single assoc.parent=$item.parentname assoc.subdomain=$item.subdomain assoc.cat=$item.cat_onename assoc.brand=$item.brand assoc.item=$item.name}">
