@@ -38,7 +38,9 @@
 
                             <div class="centr">
                                 <div class="itee-imgg">
-                                    <img src="assets/img/senn1.png" alt="">
+                                    <img src="/images/catalog/{$item.imgid}_s.{$item.imgext}"
+                                         alt="{if $item.cat_onename}{$item.cat_onename|mblower}{else}{$item.cat|mblower}{/if} {$item.brand} {$item.name} {'купить'}"
+                                         title="{if $item.cat_onename}{$item.cat_onename|mblower}{else}{$item.cat|mblower}{/if} {$item.brand} {$item.name}">
                                 </div>
                                 <div class="itee">
                                     <img src="assets/img/izee0.png" alt="">
