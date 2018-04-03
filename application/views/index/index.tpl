@@ -7,7 +7,7 @@
         {include file='index/top-slider.tpl'}
         {*-----------TOP_SLIDER-----------*}
     </div>
-
+    {debug}
     {*{$actionItems|@debug_print_var}*}
     {*-----------TOP_SALES-----------*}
     {include file='index/top-sales.tpl'}
