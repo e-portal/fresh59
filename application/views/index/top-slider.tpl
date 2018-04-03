@@ -35,22 +35,19 @@
 
 
     <div class="most-item slick">
-        <div>
-            <img src="/assets/img/host9.png" alt="">
-            <a class="blue" href="/">Подробнее<span class="linn"></span></a>
-        </div>
-        <div>
-            <img src="/assets/img/host9.png" alt="">
-            <a class="blue" href="/">Подробнее<span class="linn"></span></a>
-        </div>
-        <div>
-            <img src="/assets/img/host9.png" alt="">
-            <a class="blue" href="/">Подробнее<span class="linn"></span></a>
-        </div>
-        <div>
-            <img src="/assets/img/host9.png" alt="">
-            <a class="blue" href="/">Подробнее<span class="linn"></span></a>
-        </div>
+        {foreach from=$footer_news item=article key=key name=news}
+            {if 6 <= $smarty.foreach.news.index && 9 > $smarty.foreach.news.index}
+                <div>
+                    <img src="/uploads/{$article.big_img}" alt="{$article.name|htmlspecialchars}"
+                         title="{$article.name|htmlspecialchars}">
+                    <a class="blue"
+                       {if strlen($article.ext_url)> 0 && strpos($article.ext_url,'ucenka')>0}rel='nofollow'{/if}
+                       href="{if strlen($article.ext_url) > 0}{$article.ext_url}{else}/news/{$article.url}{/if}">
+                        Подробнее<span class="linn"></span>
+                    </a>
+                </div>
+            {/if}
+        {/foreach}
     </div>
 
     <div class="most-item-sale">
