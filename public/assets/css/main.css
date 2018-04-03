@@ -196,7 +196,7 @@ h6 {
 }
 
 .maii .item-senn:nth-child(2) .centr {
-    height: 643px;
+    height: 659px;
 }
 
 .maii .item-senn:nth-child(2) .bakk {
@@ -1571,7 +1571,7 @@ input {
 }
 .sench {
     display: inline-block;
-    width: calc(100% - 52px);
+    width: calc(100% - 48px);
     height: auto;
     position: relative;
     z-index: 5;
@@ -1582,9 +1582,7 @@ input {
     padding: 0 24px;
 }
 
-
-.item-senn
-.bakk {
+.item-senn .bakk {
     position: relative;
     display: flex;
     align-items: center;
@@ -1594,10 +1592,12 @@ input {
 
 .item-senn:nth-child(1) {
     width: calc(20% - 10px);
-    /*width: 300px;*/
-    height: 409px;
     background: #fff;
-    /*margin: 0 10px 0 4px;*/
+}
+
+.senn-main .item-senn:nth-child(1),
+.senn-main .item-senn:nth-child(5) {
+    margin: 0 10px 0 5px;
 }
 
 .sench {
@@ -3233,9 +3233,9 @@ ul#selectsMenuBoxi > li.options:hover {
     padding-left: 10px;
 }
 
-/*.ityy .present {*/
-/*top: 40px*/
-/*}*/
+.hate .present {
+    top: 40px
+}
 
 .present {
     width: 85px;
