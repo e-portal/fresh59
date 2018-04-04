@@ -6,101 +6,36 @@
         <div class="owl-main">
 
             <div class="owl">
+                {foreach from=$footer_articles item=article}
+                    <div class="items">
+                        <a href="/" class="items">
 
-                <div class="items">
-                    <a href="/" class="items">
-                        <img src="./img/remb1.png" alt="">
-                        <h4>Как отличить настоящий iPhone от подделки?</h4>
+                            {if isset($article.img) }
+                                <div class="one-article-img">
+                                    <img src="/assets/img/articles/{$article.img}">
+                                </div>
+                            {else}
+                                <div class="one-article-img">
+                                    <img src="/assets/img/articles/art{1|rand:6}.png">
+                                    {*<img src="/assets/img/noimage.png">*}
+                                </div>
+                            {/if}
 
-                        <div class="item-comen">
-                            <div class="clock">
-                                <img src="./img/clock.png" alt="">
-                                <p>27 января 2017</p>
+                            <h4>Как отличить настоящий iPhone от подделки?</h4>
+
+                            <div class="item-comen">
+                                <div class="clock">
+                                    <img src="./img/clock.png" alt="">
+                                    <p>{mdates arr=$article.date}</p>
+                                </div>
+                                <div class="clock">
+                                    <img src="./img/chat.png" alt="">
+                                    <p>423</p>
+                                </div>
                             </div>
-                            <div class="clock">
-                                <img src="./img/chat.png" alt="">
-                                <p>423</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-
-                <div class="items">
-                    <a href="/" class="items">
-                        <img src="./img/remb2.png" alt="">
-                        <h4>Индукционная плита - преимущества и недостатки</h4>
-
-                        <div class="item-comen">
-                            <div class="clock">
-                                <img src="./img/clock.png" alt="">
-                                <p>27 января 2017</p>
-                            </div>
-                            <div class="clock">
-                                <img src="./img/chat.png" alt="">
-                                <p>423</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-
-                <div class="items">
-                    <a href="/" class="items">
-                        <img src="./img/remb3.png" alt="">
-                        <h4>Как выбрать соковыжималку?</h4>
-
-                        <div class="item-comen">
-                            <div class="clock">
-                                <img src="./img/clock.png" alt="">
-                                <p>27 января 2017</p>
-                            </div>
-                            <div class="clock">
-                                <img src="./img/chat.png" alt="">
-                                <p>423</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-
-                <div class="items">
-                    <a href="/" class="items">
-                        <img src="./img/remb4.png" alt="">
-                        <h4>Как выбрать соковыжималку?</h4>
-
-                        <div class="item-comen">
-                            <div class="clock">
-                                <img src="./img/clock.png" alt="">
-                                <p>27 января 2017</p>
-                            </div>
-                            <div class="clock">
-                                <img src="./img/chat.png" alt="">
-                                <p>423</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="items">
-                    <a href="/" class="items">
-                        <img src="./img/remb4.png" alt="">
-                        <h4>Как выбрать соковыжималку?</h4>
-
-                        <div class="item-comen">
-                            <div class="clock">
-                                <img src="./img/clock.png" alt="">
-                                <p>27 января 2017</p>
-                            </div>
-                            <div class="clock">
-                                <img src="./img/chat.png" alt="">
-                                <p>423</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-
+                        </a>
+                    </div>
+                {/foreach}
             </div>
 
             <div class="formu">
