@@ -1,5 +1,7 @@
 {include file='layouts/_header.tpl'}
 
+{$footer_articles|@debug_print_var}
+
 <div class="container">
     <div class="wrap">
         {*{assign var="arr1" value=array(1,2,3)}*}

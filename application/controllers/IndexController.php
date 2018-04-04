@@ -32,8 +32,8 @@ class IndexController extends Alcotec_Frontend_Controller_IndexController {
 //        var_dump($footer_articles);
 //        die;
         $this->view->footer_articles = $modArticles->fetchAll("site_id = {$siteId} and visible = '1'", 'RAND()', 2, 0);
-        var_dump($this->view->footer_articles);
-        die;
+        /*var_dump($this->view->footer_articles);
+        die;*/
 		$modCatalog = new Catalog();
 		$this->view->footer_items = $modCatalog->getItemList("c.show_index_{$siteId} = 1")->reset(Zend_Db_Select::ORDER)->limit(5)->order('RAND()')->query()->fetchAll();
 
