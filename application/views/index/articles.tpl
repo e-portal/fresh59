@@ -7,7 +7,7 @@
 
             <div class="owl">
                 {foreach from=$footer_articles item=article}
-                    {$article|@debug_print_var}
+                    {*{$article|@debug_print_var}*}
                     <div class="items">
                         <a href="/" class="items">
 
@@ -22,7 +22,8 @@
                                 </div>
                             {/if}
 
-                            <h4>Как отличить настоящий iPhone от подделки?</h4>
+                            <h4>{$article.title|default:'title'}</h4>
+                            {*<h4>{$article.announce|default:'announce'}</h4>*}
 
                             <div class="item-comen">
                                 <div class="clock">
