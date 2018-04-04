@@ -7,14 +7,14 @@
 
 
         <div class="parag parag-home">
-            <div class="parag-item active" style="width: 175.984px;">Отдельностоящая</div>
-            <div class="parag-item" style="width: 142.359px;">Встраиваемая</div>
-            <div class="parag-item" style="width: 155.531px;">Мелкая бытовая</div>
-            <div class="parag-item" style="width: 181.781px;">Красота и здоровье</div>
-            <div class="parag-item" style="width: 121.906px;">Для уборки</div>
-            <div class="parag-item" style="width: 92.375px;">Посуда</div>
-            <div class="parag-item" style="width: 180.766px;">Мойки и смесители</div>
-            <div class="parag-item" style="width: 150.266px;">Климатическая</div>
+            <div class="parag-item">Отдельностоящая</div>
+            <div class="parag-item">Встраиваемая</div>
+            <div class="parag-item">Мелкая бытовая</div>
+            <div class="parag-item">Красота и здоровье</div>
+            <div class="parag-item">Для уборки</div>
+            <div class="parag-item">Посуда</div>
+            <div class="parag-item">Мойки и смесители</div>
+            <div class="parag-item">Климатическая</div>
         </div>
 
 
