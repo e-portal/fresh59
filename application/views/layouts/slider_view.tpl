@@ -3,7 +3,7 @@
     <div class="liner"><span>Вы смотрели</span></div>
 
 
-    <div class="senn-main watched-slider slider-more-prod">
+    <div class="watched-slider">
         <div class="item-senn">
             <a class="sench" href="/">
                 <h5 class="green">В наличии</h5>
