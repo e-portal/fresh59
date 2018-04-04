@@ -1,12 +1,13 @@
 <div class="owls wrap">
     <!--<div>-->
     <div class="senn-container">
-        <a class="blue" href="/">Перейти к статьям<span class="linn"></span></a>
+        <a class="blue" href="/articles">Перейти к статьям<span class="linn"></span></a>
         <div class="liner"><span>Это интересно</span></div>
         <div class="owl-main">
 
             <div class="owl">
                 {foreach from=$footer_articles item=article}
+                    {$actionItems|@debug_print_var}
                     <div class="items">
                         <a href="/" class="items">
 
@@ -25,11 +26,11 @@
 
                             <div class="item-comen">
                                 <div class="clock">
-                                    <img src="./img/clock.png" alt="">
+                                    <img src="/assets/img/clock.png" alt="">
                                     <p>{mdates arr=$article.date}</p>
                                 </div>
                                 <div class="clock">
-                                    <img src="./img/chat.png" alt="">
+                                    <img src="/assets/img/chat.png" alt="">
                                     <p>423</p>
                                 </div>
                             </div>
