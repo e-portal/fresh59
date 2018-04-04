@@ -1,4 +1,4 @@
-{$topsales_items|@debug_print_var}
+{*{$topsales_items|@debug_print_var}*}
 <div class="senn senn-scrol">
     <div class="senn-container wrap">
         <a class="blue" href="/">Все новые поступления<span class="linn"></span></a>
