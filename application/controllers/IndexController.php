@@ -51,7 +51,7 @@ class IndexController extends Alcotec_Frontend_Controller_IndexController {
             $select = $modCatalog->getItemList('c.id_availability = 1')
                 ->HAVING('(act.type IS NOT NULL AND icon IS NOT NULL)');
 
-            $actionItems = $select->limit(10)->query()->fetchAll();
+            $actionItems = $select->limit(20)->query()->fetchAll();
             try {
                 $cache->save($actionItems,$actionItemsKey);
             }
