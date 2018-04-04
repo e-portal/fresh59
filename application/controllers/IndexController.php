@@ -27,8 +27,19 @@ class IndexController extends Alcotec_Frontend_Controller_IndexController {
 
         $this->view->body_class = 'home-page';
         $this->view->footer_news = $modNews->fetchAll("site_id = {$siteId} AND big_img is not null and visible=1 AND is_action = 1 AND end_date >= '{$date}' AND end_date is not NULL", 'date DESC', 20, 0);
+
+
         $modArticles = new Articles();
-        $this->view->all_articles = $modArticles->select()->where('visible = "1"')->order('date DESC');
+
+
+        $select = $modArticles->select()->where('visible = "1"')->where('site_id = ?', $siteId)->order('date DESC');
+        $paginator = Alcotec_Paginator::factory($select, '/articles');
+        $paginator->setItemsPerPage(10);
+
+        $this->view->paginator = $paginator->setCurrentPageNumber(1);
+
+
+        $this->view->all_articles = $paginator->getCurrentItems();
 //        $this->view->footer_articles = $modArticles->fetchAll("site_id = {$siteId} and visible = '1'", 'RAND()', 2, 0);
 		$modCatalog = new Catalog();
 		$this->view->footer_items = $modCatalog->getItemList("c.show_index_{$siteId} = 1")->reset(Zend_Db_Select::ORDER)->limit(5)->order('RAND()')->query()->fetchAll();
