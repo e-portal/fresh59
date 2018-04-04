@@ -24,12 +24,16 @@
 
                 <div class="hate-item">
 
-                    {foreach from=$actionItems item=item name=topsales_items}
+                    {foreach from=$actionItems item=item name=action_items}
                         <div class="ityy">
                             <div class="hovyy"></div>
-                            <a href="/">
+                            <a href="{iurl assoc.cat_latin=$item.cat_latin_single assoc.parent=$item.parentname assoc.subdomain=$item.subdomain assoc.cat=$item.cat_onename assoc.brand=$item.brand assoc.item=$item.name}">
                                 <div class="left-iteem">
-                                    <div class="itee-imgg"><img src="/assets/img/iteem0.png" alt=""></div>
+                                    <div class="itee-imgg">
+                                        <img src="/images/catalog/{$item.imgid}_s.{$item.imgext}"
+                                             alt="{if $item.cat_onename}{$item.cat_onename|mblower}{else}{$item.cat|mblower}{/if} {$item.brand} {$item.name} {'купить'}"
+                                             title="{if $item.cat_onename}{$item.cat_onename|mblower}{else}{$item.cat|mblower}{/if} {$item.brand} {$item.name}">
+                                    </div>
                                     <div class="itee">
                                         <img src="/assets/img/izee0.png" alt="">
                                         <p>Вернем: <span>500 грн</span></p>
@@ -57,7 +61,7 @@
                                 <div class="right-iteem">
                                     <div class="name-iteem">
                                         <h5 class="gray">Наличие уточняйте</h5>
-                                        <h4>Стиральная машина LG FH 096</h4>
+                                        <h4>{$item.brand} {$item.name}</h4>
                                         <object type="lol/wut">
                                             <a href="#" class="otzv">
                                                 <div class="left-otzv">
@@ -97,6 +101,7 @@
                             </a>
                         </div>
                     {/foreach}
+
                 </div>
 
             </div>
