@@ -7,7 +7,7 @@
 
             <div class="owl">
                 {foreach from=$footer_articles item=article}
-                    {$actionItems|@debug_print_var}
+                    {$article|@debug_print_var}
                     <div class="items">
                         <a href="/" class="items">
 
