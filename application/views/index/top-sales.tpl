@@ -1,4 +1,4 @@
-{$all_articles|@debug_print_var}
+{*{$all_articles|@debug_print_var}*}
 <div class="senn senn-scrol">
     <div class="senn-container wrap">
         <a class="blue" href="/">Все новые поступления<span class="linn"></span></a>
@@ -131,7 +131,7 @@
                         </div>
                     </div>
 
-                    {if 0 === $smarty.foreach.topsales_items.index%6 && !$smarty.foreach.topsales_items.last && !$smarty.foreach.topsales_items.first}
+                    {if 0 === $smarty.foreach.topsales_items.iteration%7 && !$smarty.foreach.topsales_items.last && !$smarty.foreach.topsales_items.first}
                     <div class="d" style="clear: both"></div>
                 </div>
                 <div class="maii-item">
