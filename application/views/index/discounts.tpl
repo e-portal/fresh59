@@ -100,6 +100,14 @@
                                 </div>
                             </a>
                         </div>
+
+                    {if 0 == $smarty.foreach.action_items.iteration%2 && !$smarty.foreach.action_items.last}
+                </div>
+                <div class="hate-item">
+                    {/if}
+                    {if $smarty.foreach.action_items.last}
+                </div>
+                {/if}
                     {/foreach}
 
                 </div>
