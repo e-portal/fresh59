@@ -19,7 +19,7 @@
             {*----------------MAIN----------------*}
             <div class="senn-slik slick">
                 <div class="maii-item">
-                    {$footer_items|@debug_print_var}
+                    {$footer_articles|@debug_print_var}
                     {foreach from=$topsales_items item=item name=topsales_items}
                     {*{$item|@debug_print_var}*}
                     <div class="item-senn">
