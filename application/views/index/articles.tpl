@@ -9,7 +9,7 @@
                 {foreach from=$footer_articles item=article}
                     {*{$article|@debug_print_var}*}
                     <div class="items">
-                        <a href="/articles/{$article.url|mblower} class=" items">
+                        <a href="/articles/{$article.url|mblower}" class="items">
 
                             {if isset($article.img) }
                                 <div class="one-article-img">
