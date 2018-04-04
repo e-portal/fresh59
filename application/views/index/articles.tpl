@@ -5,7 +5,7 @@
         <div class="liner"><span>Это интересно</span></div>
         <div class="owl-main">
 
-            <div class="owl">
+            <div class="owl owl-slide">
                 {foreach from=$footer_articles item=article}
                     {*{$article|@debug_print_var}*}
                     <div class="items">
@@ -22,8 +22,8 @@
                                 </div>
                             {/if}
 
-                            <h4>{$article.title|default:'title'}</h4>
-                            {*<h4>{$article.announce|default:'announce'}</h4>*}
+                            {*<h4>{$article.title|default:'title'}</h4>*}
+                            <h4>{$article.announce|default:'announce'}</h4>
 
                             <div class="item-comen">
                                 <div class="clock">
