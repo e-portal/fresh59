@@ -35,7 +35,7 @@
 
         <div class="most-item slick">
             {foreach from=$footer_news item=article key=key name=news}
-                {if 6 <= $smarty.foreach.news.index && 9 > $smarty.foreach.news.index}
+                {if 10 <= $smarty.foreach.news.index && 15 > $smarty.foreach.news.index}
                     <div>
                         <img src="/uploads/{$article.big_img}" alt="{$article.name|htmlspecialchars}"
                              title="{$article.name|htmlspecialchars}">
