@@ -25,6 +25,7 @@
                 <div class="hate-item">
 
                     {foreach from=$actionItems item=item name=action_items}
+                    {$item|@debug_print_var}
                         <div class="ityy">
                             <div class="hovyy"></div>
                             <a href="{iurl assoc.cat_latin=$item.cat_latin_single assoc.parent=$item.parentname assoc.subdomain=$item.subdomain assoc.cat=$item.cat_onename assoc.brand=$item.brand assoc.item=$item.name}">
