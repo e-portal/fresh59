@@ -5,7 +5,7 @@
         <div class="most-item">
             <div class="slick hasl">
                 {foreach from=$footer_news item=article key=key name=news}
-                    {if 3 > $smarty.foreach.news.index}
+                    {if 5 > $smarty.foreach.news.index}
                         <div class="igyy">
                             <img src="/uploads/{$article.big_img}" alt="{$article.name|htmlspecialchars}"
                                  title="{$article.name|htmlspecialchars}">
@@ -22,7 +22,7 @@
 
         <div class="most-item slick">
             {foreach from=$footer_news item=article key=key name=news}
-                {if 3 <= $smarty.foreach.news.index && 6 > $smarty.foreach.news.index}
+                {if 5 <= $smarty.foreach.news.index && 10 > $smarty.foreach.news.index}
                     <a {if strlen($article.ext_url)> 0 && strpos($article.ext_url,'ucenka')>0}rel='nofollow'{/if}
                        href="{if strlen($article.ext_url) > 0}{$article.ext_url}{else}/news/{$article.url}{/if}">
                         <img src="/uploads/{$article.big_img}" alt="{$article.name|htmlspecialchars}"
