@@ -1477,7 +1477,45 @@
 
                     </div>
 
+
+                    <!--            START pagination-->
+                    {assign var=pages value=$paginator->getPages()}
+                    {if $pages->pageCount > 1}
                     <div class="blocks-pagination">
+                        {if $pages->current > 1}
+                            <a class="blocks-pagination-back blocks-pagination-arrow"
+                               href="{if $pages->current-1=='1'}{$firstPageUrl}{else}{$firstPageUrl}/page/{$pages->current-1}{/if}"></a>
+                        {/if}
+                        {if $pages->firstPageInRangeNum!=1}
+                            <a class="pagin-number active-pagin-number" href="{$firstPageUrl}">1</a>
+                            <span>...</span>
+                        {/if}
+                        {if $pages->pagesInRange}
+                            {foreach from=$pages->pagesInRange item=p key=k}
+                                {if $pages->current!=$k}
+                                    <a class="pagin-number"
+                                       href="{if $k=='1'}{$firstPageUrl}{else}{$firstPageUrl}/page/{$k}{/if}">{$k}
+                                        ">{$k}</a>
+                                {else}
+                                    <span class="pagin-number pagin-number-active">{$pages->current}</span>
+                                {/if}
+                            {/foreach}
+                        {/if}
+                        {if $pages->pageCount && $pages->lastPageInRange != $pages->last}
+                            <span>...</span>
+                            <a class="pagin-number"
+                               href="{$firstPageUrl}/page/{$pages->pageCount}">{$pages->pageCount}</a>
+                        {/if}
+
+                        {if $pages->current < $pages->pageCount}
+                            <a class="blocks-pagination-forward blocks-pagination-arrow"
+                               href="{$firstPageUrl}/page/{$pages->current+1}"></a>
+                        {/if}
+                    </div>
+                    <!--            End pagination-->
+
+
+                    {*<div class="blocks-pagination">
                         <a class="blocks-pagination-more">Показать еще<img src="/assets/img/arrow-circle.png"
                                                                            alt="more"></a>
                         <a class="blocks-pagination-back blocks-pagination-arrow"></a>
@@ -1489,10 +1527,11 @@
                         <span>...</span>
                         <a class="pagin-number">27</a>
                         <a class="blocks-pagination-forward blocks-pagination-arrow"></a>
-                    </div>
+                    </div>*}
 
 
                     <div class="owls interest">
+                        {*----------ARTICLES----------*}
                         <div class="container">
                             <a class="blue" href="javascript:void(0)">Все советы<span class="linn"></span></a>
                             <div class="liner"><span>Полезно и интересно</span></div>
@@ -1501,7 +1540,6 @@
                                 <div class="owl interest-slide">
 
                                     {foreach from=$articles item=article}
-                                        {*{$article|@debug_print_var}*}
                                         <div class="items">
                                             <a href="/articles/{$article.url|mblower}" class="items">
 
@@ -1534,6 +1572,7 @@
 
                             </div>
                         </div>
+                        {*----------ARTICLES----------*}
                         <div class="interest-sale">
                             <p class="ad-blue">Самые выгодные покупки</p>
                             <p class="ad-cheaper">У нас дешевле! <br> скидки <b>до 60%</b></p>
