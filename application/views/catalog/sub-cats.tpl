@@ -1,3 +1,4 @@
+{debug}
 <div class="container">
     {if $pages->totalItemCount > 0}
         <div class="options wrap">
