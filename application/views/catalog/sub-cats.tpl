@@ -66,7 +66,9 @@
                                     {*----------in stock--------*}
 
 
-                                    <h4>{$item.brand} {$item.name}</h4>
+                                    <h4>
+                                        {if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if} {$item.brand} {$item.name}
+                                    </h4>
                                     <div class="centr">
                                         <div class="itee-imgg">
                                             <img src="{$url.img}/catalog/{$item.imgid}_s.{$item.imgext}"
