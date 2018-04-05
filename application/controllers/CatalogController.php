@@ -392,6 +392,9 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
         $cat = $modCat->find($catId)->current();
 
         if ($cat['id']) {
+
+            $this->view->css_int = '<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">';
+
             $this->view->js_int = '
                 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
                 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
