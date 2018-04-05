@@ -1,4 +1,5 @@
 <div class="container">
+    {debug}
     {if $pages->totalItemCount > 0}
         <div class="options wrap">
 
@@ -126,23 +127,6 @@
                                                 <td><span>C</span></td>
                                             </tr>
                                         </table>
-
-                                        <!--<p>Максимальная загрузка: <span>6 кг</span></p>-->
-                                        <!--<p>Тип стиральной машины: <span>Фронтальная</span></p>-->
-                                        <!--<p>Класс энергопотребления: <span>А+</span></p>-->
-                                        <!--<p>Класс отжима: <span>С</span></p>-->
-                                        <!--<p>Класс стирки: <span>А</span></p>-->
-                                        <!--<p>Максимальная загрузка: <span>6 кг</span></p>-->
-                                        <!--<p>Тип стиральной машины: <span>Фронтальная</span></p>-->
-                                        <!--<p>Класс энергопотребления: <span>А+</span></p>-->
-                                        <!--<p>Класс отжима: <span>С</span></p>-->
-                                        <!--<p>Класс стирки: <span>А</span></p>-->
-                                        <!--<p>Максимальная загрузка: <span>6 кг</span></p>-->
-                                        <!--<p>Тип стиральной машины: <span>Фронтальная</span></p>-->
-                                        <!--<p>Тип стиральной машины: <span>Фронтальная</span></p>-->
-                                        <!--<p>Класс энергопотребления: <span>А+</span></p>-->
-                                        <!--<p>Класс отжима: <span>С</span></p>-->
-                                        <!--<p>Класс стирки: <span>А</span></p>-->
 
                                     </div>
                                     <a href="javascript:void(0)" class="morr">Больше +</a>
@@ -1499,11 +1483,11 @@
                                                                            alt="more"></a>
                         <a class="blocks-pagination-back blocks-pagination-arrow"></a>
                         <a class="pagin-number active-pagin-number">1</a>
-                        <span>.</span><span>.</span><span>.</span>
+                        <span>...</span>
                         <a class="pagin-number">13</a>
                         <a class="pagin-number pagin-number-active">14</a>
                         <a class="pagin-number">15</a>
-                        <span>.</span><span>.</span><span>.</span>
+                        <span>...</span>
                         <a class="pagin-number">27</a>
                         <a class="blocks-pagination-forward blocks-pagination-arrow"></a>
                     </div>

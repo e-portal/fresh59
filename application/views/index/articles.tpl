@@ -50,9 +50,7 @@
                     <div class="sendy acty">Подписаться</div>
                 </form>
 
-
             </div>
-
 
         </div>
     </div>
