@@ -11,7 +11,7 @@
                     <div class="main-menu">
                         <ul>
                             {foreach from=$topmenu item=menutop name=topmenu}
-                                {if $menutop.type=='text' && !$smarty.foreach.last}
+                                {if $menutop.type=='text' && !$smarty.foreach.menutop.last}
                                     <li>
                                         <a href="http://fresh.590.ua/page/{$menutop.alias}">{$menutop.label|translate}</a>
                                     </li>
