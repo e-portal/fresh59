@@ -200,7 +200,9 @@
                                     <div class="bakk">
                                         <div class="left-bakk">
                                             <p>{price $item.price $item.id_currency} {$smarty.session.Currency.title}</p>
-                                            <p>Вернем: <span>{$item.bonus_amount|round} грн</span></p>
+                                            {if $item.specprice  && ($item.bdprice > $item.price) && (($item.bdprice - $item.price)/$item.price > 0.01) }
+                                                <p class="oldPrice">{price $item.bdprice} {$smarty.session.Currency.title}</p>
+                                            {/if}
                                         </div>
                                         <div class="right-bakk">
                                             {if true}
