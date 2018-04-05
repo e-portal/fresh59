@@ -391,6 +391,13 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
 
         $cat = $modCat->find($catId)->current();
 
+        if ($cat['id']) {
+            $this->view->js_int = '
+                <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+                <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+            ';
+        }
+
         if ($cat['id'] && $page = $this->view->navigation($this->view->menu)->findOneById($cat['id'])) {
             $modNamedFilters = new NamedFilters();
             $namedFilters = $modNamedFilters->getAllByCategoryId($catId);
