@@ -62,12 +62,17 @@
 
                                     <h4>{$item.brand} {$item.name}</h4>
                                     <div class="centr">
-                                        <div class="itee-imgg"><img src="/assets/img/senn2.png" alt=""></div>
-                                        <div class="itee">
-                                            <img src="/assets/img/izee0.png" alt="">
-                                            <p>Вернем: <span>500 грн</span></p>
+                                        <div class="itee-imgg">
+                                            <img src="{$url.img}/catalog/{$item.imgid}_s.{$item.imgext}"
+                                                 title="{if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if} {$item.brand} {$item.name}"
+                                                 alt="{if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if} {$item.brand} {$item.name} - catalog">
                                         </div>
-
+                                        {if $item.bonus_amount>0}
+                                            <div class="itee">
+                                                <img src="/assets/img/izee0.png" alt="">
+                                                <p>Вернем: <span>{$item.bonus_amount|round} грн</span></p>
+                                            </div>
+                                        {/if}
                                         <div class="itee">
                                             <img src="/assets/img/izee1.png" alt="">
                                             <p>от
@@ -84,10 +89,12 @@
                                                 <p>Гарантия <span>36</span> мес</p>
                                             </div>
                                         {/if}
-                                        <div class="itee">
-                                            <img src="/assets/img/izee4.png" alt="">
-                                            <p>Лучшая <span>цена</span></p>
-                                        </div>
+                                        {if $item.bestprice > $item.price || $item.id2==41385}
+                                            <div class="itee">
+                                                <img src="/assets/img/izee4.png" alt="">
+                                                <p>Лучшая <span>цена</span></p>
+                                            </div>
+                                        {/if}
                                         <div class="itee change">
                                             <img src="/assets/img/izee5.png" alt="">
                                             <p>Замена</p>
