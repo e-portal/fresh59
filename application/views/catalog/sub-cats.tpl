@@ -1499,77 +1499,37 @@
                             <div class="owl-main">
 
                                 <div class="owl interest-slide">
-                                    <div class="items">
-                                        <a href="/" class="items">
-                                            <img src="/assets/img/remb2.png" alt="">
-                                            <h4>Индукционная плита - преимущества и недостатки</h4>
 
-                                            <div class="item-comen">
-                                                <div class="clock">
-                                                    <img src="/assets/img/clock.png" alt="">
-                                                    <p>27 января 2017</p>
-                                                </div>
-                                                <div class="clock">
-                                                    <img src="/assets/img/chat.png" alt="">
-                                                    <p>423</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
+                                    {foreach from=$articles item=article}
+                                        {*{$article|@debug_print_var}*}
+                                        <div class="items">
+                                            <a href="/articles/{$article.url|mblower}" class="items">
 
-                                    <div class="items">
-                                        <a href="/" class="items">
-                                            <img src="/assets/img/remb3.png" alt="">
-                                            <h4>Как выбрать соковыжималку?</h4>
+                                                {if isset($article.img) }
+                                                    <img src="/assets/img/articles/{$article.img}">
+                                                {else}
+                                                    <img src="/assets/img/articles/art{1|rand:6}.png">
+                                                    {*<img src="/assets/img/noimage.png">*}
 
-                                            <div class="item-comen">
-                                                <div class="clock">
-                                                    <img src="/assets/img/clock.png" alt="">
-                                                    <p>27 января 2017</p>
-                                                </div>
-                                                <div class="clock">
-                                                    <img src="/assets/img/chat.png" alt="">
-                                                    <p>423</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
+                                                {/if}
 
-                                    <div class="items">
-                                        <a href="/" class="items">
-                                            <img src="/assets/img/remb3.png" alt="">
-                                            <h4>Как выбрать соковыжималку?</h4>
+                                                {*<h4>{$article.title|default:'title'}</h4>*}
+                                                <h4>{$article.announce|default:'announce'}</h4>
 
-                                            <div class="item-comen">
-                                                <div class="clock">
-                                                    <img src="/assets/img/clock.png" alt="">
-                                                    <p>27 января 2017</p>
+                                                <div class="item-comen">
+                                                    <div class="clock">
+                                                        <img src="/assets/img/clock.png" alt="">
+                                                        <p>{mdates arr=$article.date}</p>
+                                                    </div>
+                                                    <div class="clock">
+                                                        <img src="/assets/img/chat.png" alt="">
+                                                        <p>423</p>
+                                                    </div>
                                                 </div>
-                                                <div class="clock">
-                                                    <img src="/assets/img/chat.png" alt="">
-                                                    <p>423</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
+                                            </a>
+                                        </div>
+                                    {/foreach}
 
-                                    <div class="items">
-                                        <a href="/" class="items">
-                                            <img src="/assets/img/remb4.png" alt="">
-                                            <h4>Как выбрать соковыжималку?</h4>
-
-                                            <div class="item-comen">
-                                                <div class="clock">
-                                                    <img src="/assets/img/clock.png" alt="">
-                                                    <p>27 января 2017</p>
-                                                </div>
-                                                <div class="clock">
-                                                    <img src="/assets/img/chat.png" alt="">
-                                                    <p>423</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
                                 </div>
 
                             </div>

@@ -696,6 +696,7 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
             }
 
             $modArticles = new Articles();
+            $this->view->articles = $modArticles->fetchAll("site_id = {$siteId} and visible = '1'", 'date DESC', 8, 0)->toArray();
             $this->view->article = $modArticles->getArticle($catId, $filters['brand']);
             $allowedKeys = [
                 'brand',
