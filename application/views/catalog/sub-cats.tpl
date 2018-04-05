@@ -50,13 +50,13 @@
                                    tabindex="-1" class="sench">
 
                                     {*----------in stock--------*}
-                                    {if $top_item.id_availability == 1}
+                                    {if $item.id_availability == 1}
                                         <h5 class="green">В наличии</h5>
                                     {/if}
-                                    {if $top_item.id_availability == 2}
+                                    {if $item.id_availability == 2}
                                         <h5 class="gray">Наличие уточняйте</h5>
                                     {/if}
-                                    {if $top_item.id_availability == 3}
+                                    {if $item.id_availability == 3}
                                         <h5 class="blue">Под заказ</h5>
                                     {/if}
                                     {*----------in stock--------*}
@@ -72,16 +72,20 @@
 
                                         <div class="itee">
                                             <img src="/assets/img/izee1.png" alt="">
-                                            <p>от <span>500</span> грн/мес</p>
+                                            <p>от
+                                                <span>{$item.price*0.0099*$curs_evro_smarty+$item.price/24*$curs_evro_smarty|round}</span>
+                                                грн/мес</p>
                                         </div>
                                         <div class="itee">
                                             <img src="/assets/img/izee3.png" alt="">
                                             <p>от <span>1200</span> грн/мес</p>
                                         </div>
-                                        <div class="itee">
-                                            <img src="/assets/img/izee2.png" alt="">
-                                            <p>Гарантия <span>12</span> мес</p>
-                                        </div>
+                                        {if $item.id_brand == '26' && $item.id_category != 60}
+                                            <div class="itee">
+                                                <img src="/assets/img/izee2.png" alt="">
+                                                <p>Гарантия <span>36</span> мес</p>
+                                            </div>
+                                        {/if}
                                         <div class="itee">
                                             <img src="/assets/img/izee4.png" alt="">
                                             <p>Лучшая <span>цена</span></p>
@@ -90,12 +94,14 @@
                                             <img src="/assets/img/izee5.png" alt="">
                                             <p>Замена</p>
                                         </div>
-                                        <div class="itee present">
-                                            <div class="numeral"><img src="/assets/img/present-img.png"
-                                                                      alt="present"></div>
-                                            <p>Подарок!</p>
-                                            <img src="/assets/img/present.png" alt="present">
-                                        </div>
+                                        {if $item.acttype=='gift'}
+                                            <div class="itee present">
+                                                <div class="numeral"><img src="/assets/img/present-img.png"
+                                                                          alt="present"></div>
+                                                <p>Подарок!</p>
+                                                <img src="/assets/img/present.png" alt="present">
+                                            </div>
+                                        {/if}
                                     </div>
 
 
