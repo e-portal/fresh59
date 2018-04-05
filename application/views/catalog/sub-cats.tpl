@@ -1542,7 +1542,7 @@
                     </div>
 
                     {*-----------LAST VIEWED-----------*}
-                    {include file='layouts/slider_view.tpl'}
+                    {include file='layouts/slider_view.tpl' small=true}
                     {*-----------LAST VIEWED-----------*}
 
 

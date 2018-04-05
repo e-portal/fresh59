@@ -2,8 +2,12 @@
     <a class="blue" href="javascript:void(0)">Все новые поступления<span class="linn"></span></a>
     <div class="liner"><span>Вы смотрели</span></div>
 
-
-    <div class="watched-slider">
+    {if $zf.params.controller=='catalog' && $zf.params.action=='cat' && true==$small}
+        {assign var=slider_class value='watched-small'}
+    {else}
+        {assign var=slider_class value='watched-slider'}
+    {/if}
+    <div class="{$slider_class}">
         <div class="item-senn">
             <a class="sench" href="/">
                 <h5 class="green">В наличии</h5>
