@@ -11,12 +11,15 @@
                     <div class="main-menu">
                         <ul>
                             {foreach from=$topmenu item=menutop name=topmenu}
-                            {if $menutop.type=='text'}
-                            <li><a href="http://fresh.590.ua/page/{$menutop.alias}">{$menutop.label|translate}</a></li>
-                            {/if}
-                            {if $menutop.type=='link'}
-                            <li><a href="http://fresh.590.ua{$menutop.param}">{$menutop.label|translate}</a></li>
-                            {/if}
+                                {if $menutop.type=='text' && !$smarty.foreach.last}
+                                    <li>
+                                        <a href="http://fresh.590.ua/page/{$menutop.alias}">{$menutop.label|translate}</a>
+                                    </li>
+                                {/if}
+                                {if $menutop.type=='link'}
+                                    <li><a href="http://fresh.590.ua{$menutop.param}">{$menutop.label|translate}</a>
+                                    </li>
+                                {/if}
                             {/foreach}
                         </ul>
                     </div>
@@ -97,8 +100,8 @@
                             <li><a href="">Распродажа</a></li>
                         </ul>-->
                         {php}
-                        echo
-                        $this->navigation()->menu($this->menu)->setPartial('layouts/menu.tpl')->setMinDepth(1)->setMaxDepth(2);
+                            echo
+                            $this->navigation()->menu($this->menu)->setPartial('layouts/menu.tpl')->setMinDepth(1)->setMaxDepth(2);
                         {/php}
                     </div>
 
@@ -119,12 +122,12 @@
                         </div>
                     </div>
                     {if $login}
-                    <div class="bask-item pipl">
-                        <div class="runn">
-                            <div class="imgg"></div>
-                            <div class="names">{$login}</div>
+                        <div class="bask-item pipl">
+                            <div class="runn">
+                                <div class="imgg"></div>
+                                <div class="names">{$login}</div>
+                            </div>
                         </div>
-                    </div>
                     {/if}
                     <div class="bask-item vijen">
                         <div class="runn">
