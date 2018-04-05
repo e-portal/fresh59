@@ -1493,8 +1493,7 @@
                             {foreach from=$pages->pagesInRange item=p key=k}
                                 {if $pages->current!=$k}
                                     <a class="pagin-number"
-                                       href="{if $k=='1'}{$firstPageUrl}{else}{$firstPageUrl}/page/{$k}{/if}">{$k}
-                                        ">{$k}</a>
+                                       href="{if $k=='1'}{$firstPageUrl}{else}{$firstPageUrl}/page/{$k}{/if}">{$k}</a>
                                 {else}
                                     <span class="pagin-number pagin-number-active">{$pages->current}</span>
                                 {/if}
