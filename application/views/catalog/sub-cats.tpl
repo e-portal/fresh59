@@ -84,11 +84,17 @@
                                         </div>
                                         <div class="itee">
                                             <img src="/assets/img/izee4.png" alt="">
-                                            <p>Лучша <span>цена</span></p>
+                                            <p>Лучшая <span>цена</span></p>
                                         </div>
                                         <div class="itee change">
                                             <img src="/assets/img/izee5.png" alt="">
                                             <p>Замена</p>
+                                        </div>
+                                        <div class="itee present">
+                                            <div class="numeral"><img src="/assets/img/present-img.png"
+                                                                      alt="present"></div>
+                                            <p>Подарок!</p>
+                                            <img src="/assets/img/present.png" alt="present">
                                         </div>
                                     </div>
 
@@ -187,12 +193,6 @@
                                                        tabindex="-1"><span>Под заказ</span></a>
                                                 </object>
                                             {/if}
-                                            <div class="itee present">
-                                                <div class="numeral"><img src="/assets/img/present-img.png"
-                                                                          alt="present"></div>
-                                                <p>Подарок!</p>
-                                                <img src="/assets/img/present.png" alt="present">
-                                            </div>
                                         </div>
                                     </div>
                                 </a>
