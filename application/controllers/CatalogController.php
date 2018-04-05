@@ -641,7 +641,7 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
                 // $paginator->setCache($cache);
             }
             if (!$this->_hasParam('perPage')) {
-                $paginator->setItemsPerPage(21);
+                $paginator->setItemsPerPage(24);
             }
 
 //var_dump($paginator);die;
@@ -854,7 +854,7 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
             }
             $urlpath = new Alcotec_Urlpath(array('baseUrl' => '/catalog/gifts', 'urlParams' => array_diff_key($this->getRequest()->getParams(), array('module' => '', 'action' => '', 'route' => '', 'controller' => ''))));
             $paginator = Alcotec_Paginator::factory($select, $urlpath);
-            $paginator->setItemsPerPage(21);
+            $paginator->setItemsPerPage(24);
 
             $this->view->paginator = $paginator->setCurrentPageNumber($this->_getParam('page'));
             $this->view->items = $paginator->getCurrentItems();

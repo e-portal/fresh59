@@ -224,6 +224,9 @@
                     <!--            START pagination-->
                     {if $pages->pageCount > 1}
                         <div class="blocks-pagination">
+                            <a class="blocks-pagination-more">
+                                Показать еще<img src="/assets/img/arrow-circle.png" alt="more">
+                            </a>
                             {if $pages->current > 1}
                                 <a class="blocks-pagination-back blocks-pagination-arrow"
                                    href="{if $pages->current-1=='1'}{$firstPageUrl}{else}{$firstPageUrl}/page/{$pages->current-1}{/if}"></a>

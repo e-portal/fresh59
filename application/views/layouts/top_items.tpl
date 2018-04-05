@@ -2,7 +2,7 @@
 <div class="item-senn">
     <a class="sench"
        href="{iurl assoc.subdomain=$top_item.subdomain assoc.parent=$top_item.parentname assoc.cat_latin=$top_item.cat_latin_single assoc.brand=$top_item.brand assoc.item=$top_item.name}">
-        {if $top_item.id_availability == 1}
+        {if $top_item.id_availability == 1 || $item.id_availability == 4}
         <h5 class="green">В наличии</h5>
         {/if}
         {if $top_item.id_availability == 2}
