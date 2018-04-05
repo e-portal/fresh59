@@ -45,9 +45,23 @@
 
                     <div class="under-senn">
                         <div class="item-senn more-senn">
-                            <a class="sench" href="/" tabindex="-1">
-                                <h5 class="green">В наличии</h5>
-                                <h4>Микроволновая печь GORENJE MO 6240</h4>
+                            <a href="{iurl assoc.cat_latin=$item.cat_latin_single  assoc.parent=$item.parentname assoc.subdomain=$item.subdomain assoc.cat=$item.cat_onename assoc.brand=$item.brand assoc.item=$item.name}"
+                               tabindex="-1" class="sench">
+
+                                {*----------in stock--------*}
+                                {if $top_item.id_availability == 1}
+                                    <h5 class="green">В наличии</h5>
+                                {/if}
+                                {if $top_item.id_availability == 2}
+                                    <h5 class="gray">Наличие уточняйте</h5>
+                                {/if}
+                                {if $top_item.id_availability == 3}
+                                    <h5 class="blue">Под заказ</h5>
+                                {/if}
+                                {*----------in stock--------*}
+
+
+                                <h4>{$item.brand} {$item.name}</h4>
                                 <div class="centr">
                                     <div class="itee-imgg"><img src="/assets/img/senn0.png" alt=""></div>
                                     <div class="itee">
@@ -1480,53 +1494,38 @@
 
                     <!--            START pagination-->
                     {if $pages->pageCount > 1}
-                    <div class="blocks-pagination">
-                        {if $pages->current > 1}
-                            <a class="blocks-pagination-back blocks-pagination-arrow"
-                               href="{if $pages->current-1=='1'}{$firstPageUrl}{else}{$firstPageUrl}/page/{$pages->current-1}{/if}"></a>
-                        {/if}
-                        {if $pages->firstPageInRangeNum!=1}
-                            <a class="pagin-number active-pagin-number" href="{$firstPageUrl}">1</a>
-                            <span>...</span>
-                        {/if}
-                        {if $pages->pagesInRange}
-                            {foreach from=$pages->pagesInRange item=p key=k}
-                                {if $pages->current!=$k}
-                                    <a class="pagin-number"
-                                       href="{if $k=='1'}{$firstPageUrl}{else}{$firstPageUrl}/page/{$k}{/if}">{$k}</a>
-                                {else}
-                                    <span class="pagin-number pagin-number-active">{$pages->current}</span>
-                                {/if}
-                            {/foreach}
-                        {/if}
-                        {if $pages->pageCount && $pages->lastPageInRange != $pages->last}
-                            <span>...</span>
-                            <a class="pagin-number"
-                               href="{$firstPageUrl}/page/{$pages->pageCount}">{$pages->pageCount}</a>
-                        {/if}
+                        <div class="blocks-pagination">
+                            {if $pages->current > 1}
+                                <a class="blocks-pagination-back blocks-pagination-arrow"
+                                   href="{if $pages->current-1=='1'}{$firstPageUrl}{else}{$firstPageUrl}/page/{$pages->current-1}{/if}"></a>
+                            {/if}
+                            {if $pages->firstPageInRangeNum!=1}
+                                <a class="pagin-number active-pagin-number" href="{$firstPageUrl}">1</a>
+                                <span>...</span>
+                            {/if}
+                            {if $pages->pagesInRange}
+                                {foreach from=$pages->pagesInRange item=p key=k}
+                                    {if $pages->current!=$k}
+                                        <a class="pagin-number"
+                                           href="{if $k=='1'}{$firstPageUrl}{else}{$firstPageUrl}/page/{$k}{/if}">{$k}</a>
+                                    {else}
+                                        <span class="pagin-number pagin-number-active">{$pages->current}</span>
+                                    {/if}
+                                {/foreach}
+                            {/if}
+                            {if $pages->pageCount && $pages->lastPageInRange != $pages->last}
+                                <span>...</span>
+                                <a class="pagin-number"
+                                   href="{$firstPageUrl}/page/{$pages->pageCount}">{$pages->pageCount}</a>
+                            {/if}
 
-                        {if $pages->current < $pages->pageCount}
-                            <a class="blocks-pagination-forward blocks-pagination-arrow"
-                               href="{$firstPageUrl}/page/{$pages->current+1}"></a>
-                        {/if}
-                    </div>
-                    <!--            End pagination-->
+                            {if $pages->current < $pages->pageCount}
+                                <a class="blocks-pagination-forward blocks-pagination-arrow"
+                                   href="{$firstPageUrl}/page/{$pages->current+1}"></a>
+                            {/if}
+                        </div>
+                        <!--            End pagination-->
                     {/if}
-
-
-                    {*<div class="blocks-pagination">
-                        <a class="blocks-pagination-more">Показать еще<img src="/assets/img/arrow-circle.png"
-                                                                           alt="more"></a>
-                        <a class="blocks-pagination-back blocks-pagination-arrow"></a>
-                        <a class="pagin-number active-pagin-number">1</a>
-                        <span>...</span>
-                        <a class="pagin-number">13</a>
-                        <a class="pagin-number pagin-number-active">14</a>
-                        <a class="pagin-number">15</a>
-                        <span>...</span>
-                        <a class="pagin-number">27</a>
-                        <a class="blocks-pagination-forward blocks-pagination-arrow"></a>
-                    </div>*}
 
 
                     <div class="owls interest">
