@@ -5,7 +5,15 @@
             {php}echo $this->navigation($this->menu)->breadcrumbs()->setPartial(array('catalog/breadcrumbs.tpl', 'default'));{/php}
 
 
-            <div class="liner cent"><span>Стиральные машины</span></div>
+            <div class="liner cent">
+                <span>
+                    {if $seo_h1}
+                        {$seo_h1}
+                    {else}
+                        {php} echo $this->menu->findOneBy('active', true);{/php}
+                    {/if}
+                </span>
+            </div>
             <div class="base-options">
 
                 {*----------SORT----------*}
