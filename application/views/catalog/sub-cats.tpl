@@ -1512,6 +1512,7 @@
                         {/if}
                     </div>
                     <!--            End pagination-->
+                    {/if}
 
 
                     {*<div class="blocks-pagination">
