@@ -316,7 +316,7 @@
 
 
     <div class="up-filter">
-        <div style="height: fit-content">К фильтрам <img src="./img/aror-back.png" alt="up"></div>
+        <div style="height: fit-content">К фильтрам <img src="/assets/img/aror-back.png" alt="up"></div>
     </div>
 
 </div>
