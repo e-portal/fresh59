@@ -60,7 +60,7 @@ class ArticlesController extends Alcotec_Frontend_Controller_ArticlesController 
                     $select = $modArticles->select()->where('visible = "1"')->where('site_id = ?', $siteId)->order('date DESC');
                     $urlpath = new Alcotec_Urlpath(array('baseUrl' => '/articles', 'urlParams' => array_diff_key($this->getRequest()->getParams(), array('module' => '', 'searchtext' => '', 'action' => '', 'controller' => '', 'id' => '',))));
                     $paginator = Alcotec_Paginator::factory($select, $urlpath);
-                    $paginator->setItemsPerPage(10);
+                    $paginator->setItemsPerPage(12);
                     preg_match('/page\/(\d+)/', $_SERVER['REQUEST_URI'], $page);
                     $this->view->paginator = $paginator->setCurrentPageNumber($page[1]);
                     $this->view->articles = $paginator->getCurrentItems();
