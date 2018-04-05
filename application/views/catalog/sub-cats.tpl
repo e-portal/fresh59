@@ -1479,7 +1479,6 @@
 
 
                     <!--            START pagination-->
-                    {assign var=pages value=$paginator->getPages()}
                     {if $pages->pageCount > 1}
                     <div class="blocks-pagination">
                         {if $pages->current > 1}
