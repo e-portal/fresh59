@@ -20,10 +20,9 @@
                         <div id=selectyBoxi>
                             <p class=valueTags name=selects>цена по возростанию<span></span></p>
                             <ul id=selectyMenuBoxi>
-                                <li class=options>цены 0</li>
-                                <li class=options>цены 4</li>
-                                <li class=options>цены 5</li>
-
+                                <li class=options>цена по убыванию</li>
+                                <li class=options>популярные</li>
+                                <li class=options>только в наличии</li>
                             </ul>
                         </div>
                     </div>
@@ -35,7 +34,6 @@
                         <div class="share-main">
                             <div class="share-item active">Вернем до 30%</div>
                             <div class="share-item">С подарками</div>
-
                             <div class="share-item">Вместе дешевле</div>
                         </div>
 
@@ -288,7 +286,7 @@
                     <div class="owls interest">
                         {*----------ARTICLES----------*}
                         <div class="container">
-                            <a class="blue" href="javascript:void(0)">Все советы<span class="linn"></span></a>
+                            <a class="blue" href="/articles">Все советы<span class="linn"></span></a>
                             <div class="liner"><span>Полезно и интересно</span></div>
                             <div class="owl-main">
 
