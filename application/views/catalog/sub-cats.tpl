@@ -45,7 +45,9 @@
 
                     <div class="under-senn">
                         {foreach from=$items item=item name=catitems}
-                            {$actionItems|@debug_print_var}
+                            <pre>
+                            {$item|@debug_print_var}
+                                </pre>
                             {php}
                                 die;
                             {/php}
