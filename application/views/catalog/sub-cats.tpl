@@ -76,12 +76,20 @@
                                         <div class="itee">
                                             <img src="/assets/img/izee1.png" alt="">
                                             <p>от
-                                                <span>{$item.price*0.0099*$curs_evro_smarty+$item.price/24*$curs_evro_smarty|round}</span>
+                                                <span>
+                                                    {$item.price/$item.rent_index*$curs_evro_smarty|round}
+                                                </span>
                                                 грн/мес</p>
                                         </div>
                                         <div class="itee">
                                             <img src="/assets/img/izee3.png" alt="">
-                                            <p>от <span>1200</span> грн/мес</p>
+                                            <p>
+                                                от
+                                                <span>
+                                                    {$item.price*0.0099*$curs_evro_smarty+$item.price/24*$curs_evro_smarty|round}
+                                                </span>
+                                                грн/мес
+                                            </p>
                                         </div>
                                         {if $item.id_brand == '26' && $item.id_category != 60}
                                             <div class="itee">
@@ -95,10 +103,12 @@
                                                 <p>Лучшая <span>цена</span></p>
                                             </div>
                                         {/if}
-                                        <div class="itee change">
-                                            <img src="/assets/img/izee5.png" alt="">
-                                            <p>Замена</p>
-                                        </div>
+                                        {if $item.acttype != 'gift' && $item.x_index == '1' || $item.id == '21465'}
+                                            <div class="itee change">
+                                                <img src="/assets/img/izee5.png" alt="">
+                                                <p>Замена</p>
+                                            </div>
+                                        {/if}
                                         {if $item.acttype=='gift'}
                                             <div class="itee present">
                                                 <div class="numeral"><img src="/assets/img/present-img.png"
