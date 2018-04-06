@@ -299,15 +299,20 @@ ul.long-list {
 .social-back .social .link img {
     width: auto;
 }
+
+.khob-back,
 .articles .right-banner .social-back .khob-back {
     width: max-content;
     margin: 35px 0;
     padding-left: 45px;
 }
+
+.khob-back::after,
 .social-back .khob-back::after {
     content: none;
 }
 
+.khob-back::before,
 .social-back .khob-back::before {
     width: 10px;
     height: 15px;
@@ -415,8 +420,7 @@ li {
     border-bottom: 1px solid #d7d7d7;
 }
 .table-grey-border td {
-    padding: 15px 35px;
-
+    padding: 15px 25px;
 }
 .table-grey-border td,
 .table-grey-border td p,
@@ -458,6 +462,11 @@ ol li {
     font-size: 15px;
     line-height: 25px;
 }
+
+.table-grey-border tr > td {
+    width: 25%;
+}
+
 /*end GUARANTEE*/
 
 .contact-map {

@@ -3684,3 +3684,47 @@ input[type=range]::-ms-fill-upper {
     color: #fff;
     z-index: 9999999;
 }
+
+.not-found {
+    font-size: 20px;
+    width: 100%;
+    padding: 35px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.not-found p {
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+
+}
+
+.not-found .khob {
+    left: auto;
+    bottom: auto;
+    position: relative;
+}
+
+.not-found .khob-back {
+    margin: 0;
+    padding: 0 15px 0 30px;
+}
+
+.not-found .khob-back::before {
+    width: 10px;
+    height: 15px;
+    position: absolute;
+    content: '';
+    left: 15px;
+}
+
+.newPrice {
+    color: #ed462f !important;
+}
+
+.oldPrice {
+    color: #979797 !important;
+    text-decoration: line-through #979797;
+}

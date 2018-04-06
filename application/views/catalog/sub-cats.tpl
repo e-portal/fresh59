@@ -213,7 +213,7 @@
                                     </a>
                                     <div class="bakk">
                                         <div class="left-bakk">
-                                            <p>{price $item.price $item.id_currency} {$smarty.session.Currency.title}</p>
+                                            <p class="newPrice">{price $item.price $item.id_currency} {$smarty.session.Currency.title}</p>
                                             {if $item.specprice  && ($item.bdprice > $item.price) && (($item.bdprice - $item.price)/$item.price > 0.01) }
                                                 <p class="oldPrice">{price $item.bdprice} {$smarty.session.Currency.title}</p>
                                             {/if}
@@ -350,9 +350,9 @@
             </div>
         </div>
     {else}
-        По заданным параметрам ничего не найдено
-        <div class="khob acty">вернуться назад
-            <a href="{$baseUrl}" class="link" tabindex="-1"></a>
+        <div class="not-found">
+            <p>По заданным параметрам ничего не найдено</p>
+            <div class="khob khob-back">Вернуться назад</div>
         </div>
     {/if}
     <!-- SEO -->

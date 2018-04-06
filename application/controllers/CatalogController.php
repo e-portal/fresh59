@@ -637,9 +637,7 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
 //var_dump($select);die;
             $paginator = Alcotec_Paginator::factory($select, $urlpath);
             $paginator->setPageRange(3);
-            if (!Alcotec_Auth::getInstance()->hasIdentity()) {
-                // $paginator->setCache($cache);
-            }
+
             if (!$this->_hasParam('perPage')) {
                 $paginator->setItemsPerPage(24);
             }
