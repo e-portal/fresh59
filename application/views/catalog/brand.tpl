@@ -57,11 +57,43 @@
 
             <div class="base-options">
 
-                <div class="left-options">
+                <div class="left-options left-banner">
                     {include file='layouts/left-banner.tpl'}
                 </div>
 
+                <div class="right-options">
 
+                    <div class="under-senn">
+                        {foreach from=$items item=item name=catitems}
+                            {if $smarty.foreach.catitems.iteration == 3}
+                                <!-- Баннер "Принимаем платежные карты" -->
+                                <div class="item-senn more-senn">
+                                    <a href="https://590.ua/news/%D0%9F%D1%80%D0%B8%D0%BD%D0%B8%D0%BC%D0%B0%D0%B5%D0%BC-%D0%BA-%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D0%B5-%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BA%D0%BE%D0%B2%D1%8B%D0%B5-%D0%BA%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B8">
+                                        <img src="/images/visa-210x345.jpg"
+                                             alt="Принимаем к оплате пластиковые карточки Visa, Maestro, MasterCard">
+                                    </a>
+                                </div>
+                            {/if}
+                            {*-----------ITEM-----------*}
+                            <a href="{iurl assoc.cat_latin=$item.cat_latin_single  assoc.parent=$item.parentname assoc.subdomain=$item.subdomain assoc.cat=$item.cat_onename assoc.brand=$item.brand assoc.item=$item.name}"
+                               tabindex="-1" class="sench">
+
+                            </a>
+                            <div class="hovv">
+                                <div class="news">
+                                    <div class="left-butt">
+                                        <a href="" tabindex="-1">В избранное</a>
+                                    </div>
+                                    <div class="right-butt">
+                                        <a href="" tabindex="-1">Сравнение</a>
+                                    </div>
+                                </div>
+                            </div>
+                            {*-----------ITEM-----------*}
+
+                        {/foreach}
+                    </div>
+                </div>
             </div>
         </div>
         <!-- SEO -->
@@ -101,6 +133,9 @@
             {if !($item.archive == 1 && $item.id_availability == 3) && ($manager || $item.id_availability == 3)}
                 {if $item.id_availability == 1} <span class="in_stock_status">
                     <link itemprop="availability" href="http://schema.org/InStock"/>
+
+
+
 
 Есть в наличии{/if}</span>
                 {if $item.id_availability == 2}
