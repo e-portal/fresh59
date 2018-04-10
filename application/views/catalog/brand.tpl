@@ -243,7 +243,7 @@
                     {/if}
                     <!--            End pagination-->
                     <div class="owls interest">
-                        ----------ARTICLES----------
+                        {*----------ARTICLES----------*}
                         <div class="container">
                             <a class="blue" href="/articles">Все советы<span class="linn"></span></a>
                             <div class="liner"><span>Полезно и интересно</span></div>
