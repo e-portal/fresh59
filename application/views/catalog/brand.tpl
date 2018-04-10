@@ -29,45 +29,31 @@
 <!-- //Trafmag ретаргетинг-->
 
 {if $brand}
-    {assign var=pages value=$paginator->getPages()}
+    <div class="container">
+        {assign var=pages value=$paginator->getPages()}
+
+        <div class="options wrap">
+
+            {php}echo $this->navigation($this->menu)->breadcrumbs()->setPartial(array('catalog/breadcrumbs.tpl', 'default'));{/php}
+        </div>
+        <!-- SEO -->
+        <div class="fashion wrap">
+            {$seo_text_bottom|default:''}
+        </div>
+        <!-- SEO -->
+        {include file='layouts/orig.tpl'}
+    </div>
+
+
+
     <div class="h1_holder span-12 no_margin">
         <h1>Техника {$brandName}</h1>
     </div>
-    {if $zf.params.controller=='catalog' && $zf.params.action!='search' && $catId!=1 && $zf.params.action!='compare'}
-        {if $seo_h2}
-            <h2>{$seo_h2}</h2>
-        {/if}
-    {/if}
-
-    {if $seo_text_top}
-        <article class="stext-top" id="stext">{$seo_text_top}</article>
-        <p class="stext-show"><span id="data-toggle-text">Читать дальше</span></p>
-    {/if}
-
-    {if $seo_text_bottom}
-        <article class="stext-bottom">
-            {$seo_text_bottom}
-        </article>
-    {/if}
     <nav class="breadcumbs" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
         <a href="/">Главная</a>
         <i>&rarr;</i>
         <span>{$brandName}</span>
     </nav>
-    <div class="cat-brand">
-        <div class="btn-group">
-            <span class="btn" data-toggle="dropdown">Все категории</span>
-            <span class="btn dropdown-toggle" data-toggle="dropdown"><i class="caret"></i></span>
-            <ul class="dropdown-menu">
-                {foreach from=$cats key=parent item=children}
-                    <li><a href="#"><span class='strong'>{$parent}</span></a></li>
-                    {foreach from=$children item=child key=key}
-                        <li><a href="{url assoc.brand=$brandName|mblower param=$child.route}">{$child.name}</a></li>
-                    {/foreach}
-                {/foreach}
-            </ul>
-        </div>
-    </div>
     <div id="category_block_view_listing" class="span-12 no_margin">
     {foreach from=$items item=item name=catitems}
         {if $smarty.foreach.catitems.iteration == 3}
