@@ -74,32 +74,35 @@
                                     </a>
                                 </div>
                             {/if}
+
                             {*-----------ITEM-----------*}
-                            <a href="{iurl assoc.cat_latin=$item.cat_latin_single  assoc.parent=$item.parentname assoc.subdomain=$item.subdomain assoc.cat=$item.cat_onename assoc.brand=$item.brand assoc.item=$item.name}"
-                               tabindex="-1" class="sench">
+                            <div class="item-senn more-senn">
+                                <a href="{iurl assoc.cat_latin=$item.cat_latin_single  assoc.parent=$item.parentname assoc.subdomain=$item.subdomain assoc.cat=$item.cat_onename assoc.brand=$item.brand assoc.item=$item.name}"
+                                   tabindex="-1" class="sench">
 
-                                {*----------in stock--------*}
-                                {if $item.id_availability == 1}
-                                    <h5 class="green">В наличии</h5>
-                                {elseif $item.id_availability == 3}
-                                    <h5 class="blue">Под заказ</h5>
-                                {else}
-                                    <h5 class="gray">Наличие уточняйте</h5>
-                                {/if}
-                                {*----------in stock--------*}
-                                <h4>
-                                    {if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if} {$item.brand} {$item.name}
-                                </h4>
+                                    {*----------in stock--------*}
+                                    {if $item.id_availability == 1}
+                                        <h5 class="green">В наличии</h5>
+                                    {elseif $item.id_availability == 3}
+                                        <h5 class="blue">Под заказ</h5>
+                                    {else}
+                                        <h5 class="gray">Наличие уточняйте</h5>
+                                    {/if}
+                                    {*----------in stock--------*}
+                                    <h4>
+                                        {if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if} {$item.brand} {$item.name}
+                                    </h4>
 
 
-                            </a>
-                            <div class="hovv">
-                                <div class="news">
-                                    <div class="left-butt">
-                                        <a href="" tabindex="-1">В избранное</a>
-                                    </div>
-                                    <div class="right-butt">
-                                        <a href="" tabindex="-1">Сравнение</a>
+                                </a>
+                                <div class="hovv">
+                                    <div class="news">
+                                        <div class="left-butt">
+                                            <a href="" tabindex="-1">В избранное</a>
+                                        </div>
+                                        <div class="right-butt">
+                                            <a href="" tabindex="-1">Сравнение</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
