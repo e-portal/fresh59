@@ -50,8 +50,8 @@
             </div>
             {/if}
             {if $top_item.bestprice > $top_item.price || $top_item.id2==41385}
-            <div class="itee">
-                <img src="/assets/img/izee4.png" alt="">
+                <div class="itee change">
+                    <img src="/assets/img/izee5.png" alt="">
                 <p>Замена</p>
             </div>
             {/if}
