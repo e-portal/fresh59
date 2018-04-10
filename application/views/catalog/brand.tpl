@@ -293,7 +293,7 @@
                     </div>*}
 
                     {*-----------LAST VIEWED-----------*}
-                    {include file='layouts/slider_view.tpl' small=true}
+                    {*{include file='layouts/slider_view.tpl' small=true}*}
                     {*-----------LAST VIEWED-----------*}
 
                 </div>
