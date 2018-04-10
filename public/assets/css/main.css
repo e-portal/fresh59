@@ -135,7 +135,6 @@ h6 {
 
 .blocks-pagination a {
     border: 1px solid #eaeaea;
-    border-radius: 50%;
 }
 
 .blocks-pagination a,
@@ -149,7 +148,7 @@ h6 {
     line-height: 12px;
     width: 30px;
     height: 30px;
-
+    border-radius: 50%;
 }
 
 .blocks-pagination .blocks-pagination-more {
@@ -170,7 +169,7 @@ h6 {
 .blocks-pagination .pagin-number-active {
     background: #fbd402;
     color: #000;
-    border-color: #fbd402;
+    border: 1px solid #fbd402
 }
 
 .blocks-pagination .blocks-pagination-arrow {
@@ -3411,13 +3410,17 @@ ul#selectsMenuBoxi > li.options:hover {
 }
 
 .ad-sale {
-    background: #fafafa;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .ad-sale .sench {
-    padding: 40px 0 0 0;
+    /*padding: 40px 0 0 0;*/
     width: inherit;
+    text-align: center;
+
 }
 
 .ad-sale .ad-blue {
