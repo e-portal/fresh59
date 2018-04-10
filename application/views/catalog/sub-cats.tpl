@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container">{debug}
     {if $pages->totalItemCount > 0}
         <div class="options wrap">
 
