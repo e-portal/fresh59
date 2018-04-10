@@ -797,7 +797,7 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
             }
             $urlpath = new Alcotec_Urlpath(array('baseUrl' => "/{$brand['name']}", 'urlParams' => array_diff_key($this->getRequest()->getParams(), array('module' => '', 'brandid' => '', 'brandId' => '', 'action' => '', 'route' => '', 'controller' => ''))));
             $paginator = Alcotec_Paginator::factory($select, $urlpath);
-            $paginator->setItemsPerPage(33);
+            $paginator->setItemsPerPage(20);
             $this->view->firstPageUrl = rtrim(preg_replace('/page\/(\d+)/','',$_SERVER['REQUEST_URI']),'/');
             $this->view->paginator = $paginator->setCurrentPageNumber($this->_getParam('page'));
             $this->view->items = $paginator->getCurrentItems();
