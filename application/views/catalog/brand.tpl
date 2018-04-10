@@ -242,8 +242,8 @@
                         </div>
                     {/if}
                     <!--            End pagination-->
-                    <div class="owls interest">
-                        {*----------ARTICLES----------*}
+                    {*<div class="owls interest">
+                        *}{*----------ARTICLES----------*}{*
                         <div class="container">
                             <a class="blue" href="/articles">Все советы<span class="linn"></span></a>
                             <div class="liner"><span>Полезно и интересно</span></div>
@@ -259,11 +259,11 @@
                                                     <img src="/assets/img/articles/{$article.img}">
                                                 {else}
                                                     <img src="/assets/img/articles/art{1|rand:6}.png">
-                                                    {*<img src="/assets/img/noimage.png">*}
+                                                    *}{*<img src="/assets/img/noimage.png">*}{*
 
                                                 {/if}
 
-                                                {*<h4>{$article.title|default:'title'}</h4>*}
+                                                *}{*<h4>{$article.title|default:'title'}</h4>*}{*
                                                 <h4>{$article.announce|default:'announce'}</h4>
 
                                                 <div class="item-comen">
@@ -284,13 +284,13 @@
 
                             </div>
                         </div>
-                        {*----------ARTICLES----------*}
+                        *}{*----------ARTICLES----------*}{*
                         <div class="interest-sale">
                             <p class="ad-blue">Самые выгодные покупки</p>
                             <p class="ad-cheaper">У нас дешевле! <br> скидки <b>до 60%</b></p>
                             <div><img src="/assets/img/interest-sale.png" alt="sale"></div>
                         </div>
-                    </div>
+                    </div>*}
 
                     {*-----------LAST VIEWED-----------*}
                     {include file='layouts/slider_view.tpl' small=true}
