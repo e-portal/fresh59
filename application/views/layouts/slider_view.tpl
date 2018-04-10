@@ -2,7 +2,7 @@
     <a class="blue" href="javascript:void(0)">Все новые поступления<span class="linn"></span></a>
     <div class="liner"><span>Вы смотрели</span></div>
 
-    {if $zf.params.controller=='catalog' && $zf.params.action=='cat' && true==$small}
+    {if $zf.params.controller=='catalog' && true==$small}
         {assign var=slider_class value='watched-small'}
     {else}
         {assign var=slider_class value='watched-slider'}
