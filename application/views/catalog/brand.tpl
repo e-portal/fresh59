@@ -242,6 +242,60 @@
                         </div>
                     {/if}
                     <!--            End pagination-->
+                    <div class="owls interest">
+                        {*----------ARTICLES----------*}
+                        <div class="container">
+                            <a class="blue" href="/articles">Все советы<span class="linn"></span></a>
+                            <div class="liner"><span>Полезно и интересно</span></div>
+                            <div class="owl-main">
+
+                                <div class="owl interest-slide">
+
+                                    {foreach from=$articles item=article}
+                                        <div class="items">
+                                            <a href="/articles/{$article.url|mblower}" class="items">
+
+                                                {if isset($article.img) }
+                                                    <img src="/assets/img/articles/{$article.img}">
+                                                {else}
+                                                    <img src="/assets/img/articles/art{1|rand:6}.png">
+                                                    {*<img src="/assets/img/noimage.png">*}
+
+                                                {/if}
+
+                                                {*<h4>{$article.title|default:'title'}</h4>*}
+                                                <h4>{$article.announce|default:'announce'}</h4>
+
+                                                <div class="item-comen">
+                                                    <div class="clock">
+                                                        <img src="/assets/img/clock.png" alt="">
+                                                        <p>{mdates arr=$article.date}</p>
+                                                    </div>
+                                                    <div class="clock">
+                                                        <img src="/assets/img/chat.png" alt="">
+                                                        <p>423</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    {/foreach}
+
+                                </div>
+
+                            </div>
+                        </div>
+                        {*----------ARTICLES----------*}
+                        <div class="interest-sale">
+                            <p class="ad-blue">Самые выгодные покупки</p>
+                            <p class="ad-cheaper">У нас дешевле! <br> скидки <b>до 60%</b></p>
+                            <div><img src="/assets/img/interest-sale.png" alt="sale"></div>
+                        </div>
+                    </div>
+
+                    {*-----------LAST VIEWED-----------*}
+                    {include file='layouts/slider_view.tpl' small=true}
+                    {*-----------LAST VIEWED-----------*}
+
                 </div>
             </div>
         </div>
