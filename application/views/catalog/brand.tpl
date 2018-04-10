@@ -284,7 +284,7 @@
 
                             </div>
                         </div>
-                        ----------ARTICLES----------
+                        {*----------ARTICLES----------*}
                         <div class="interest-sale">
                             <p class="ad-blue">Самые выгодные покупки</p>
                             <p class="ad-cheaper">У нас дешевле! <br> скидки <b>до 60%</b></p>
