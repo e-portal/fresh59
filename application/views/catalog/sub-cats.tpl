@@ -136,7 +136,7 @@
 
                                     <div class="front-wrap">
                                         <div class="front">
-                                            {$item.short_info|truncate:520}
+                                            {$item.short_info|truncate:1024}
                                             {*<table>
                                                 <tr>
                                                     <td><p>Максимальная загрузка:</p></td>
