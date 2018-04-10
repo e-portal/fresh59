@@ -48,6 +48,21 @@
                 </div>
 
             </div>
+
+            <div class="liner cent">
+                <span>
+                    Техника {$brandName}
+                </span>
+            </div>
+
+            <div class="base-options">
+
+                {*----------SORT----------*}
+                {include file='catalog/subs-nav.tpl'}
+                {*----------SORT----------*}
+
+
+            </div>
         </div>
         <!-- SEO -->
         <div class="fashion wrap">
@@ -55,12 +70,6 @@
         </div>
         <!-- SEO -->
         {include file='layouts/orig.tpl'}
-    </div>
-
-
-
-    <div class="h1_holder span-12 no_margin">
-        <h1>Техника {$brandName}</h1>
     </div>
     <div id="category_block_view_listing" class="span-12 no_margin">
     {foreach from=$items item=item name=catitems}
