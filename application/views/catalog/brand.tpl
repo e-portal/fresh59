@@ -34,7 +34,20 @@
 
         <div class="options wrap">
 
-            {php}echo $this->navigation($this->menu)->breadcrumbs()->setPartial(array('catalog/breadcrumbs.tpl', 'default'));{/php}
+            <div class="bread-crumbs breadcrumbs mobile-display-none" id="breadcrumbs" itemscope=""
+                 itemtype="http://schema.org/BreadcrumbList">
+                <div itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="button">
+                    <a href="/" itemprop="item">Главная</a>
+                    <meta itemprop="position" content="1">
+                </div>
+
+
+                <div itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="button">
+                    <span itemprop="name" class="label1">{$brandName}</span>
+                    <meta itemprop="position" content="2">
+                </div>
+
+            </div>
         </div>
         <!-- SEO -->
         <div class="fashion wrap">
@@ -49,11 +62,6 @@
     <div class="h1_holder span-12 no_margin">
         <h1>Техника {$brandName}</h1>
     </div>
-    <nav class="breadcumbs" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-        <a href="/">Главная</a>
-        <i>&rarr;</i>
-        <span>{$brandName}</span>
-    </nav>
     <div id="category_block_view_listing" class="span-12 no_margin">
     {foreach from=$items item=item name=catitems}
         {if $smarty.foreach.catitems.iteration == 3}
