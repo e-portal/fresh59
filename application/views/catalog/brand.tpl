@@ -263,7 +263,6 @@
 
                                                 {/if}
 
-                                                <h4>{$article.title|default:'title'}</h4>
                                                 <h4>{$article.announce|default:'announce'}</h4>
 
                                                 <div class="item-comen">
