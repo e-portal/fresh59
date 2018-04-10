@@ -136,8 +136,8 @@
 
                                     <div class="front-wrap">
                                         <div class="front">
-
-                                            <table>
+                                            {$item.short_info|truncate:270}
+                                            {*<table>
                                                 <tr>
                                                     <td><p>Максимальная загрузка:</p></td>
                                                     <td><span>6 кг</span></td>
@@ -198,7 +198,7 @@
                                                     <td><p>Класс стирки:</p></td>
                                                     <td><span>C</span></td>
                                                 </tr>
-                                            </table>
+                                            </table>*}
 
                                         </div>
                                         <a href="javascript:void(0)" class="morr">Больше +</a>
