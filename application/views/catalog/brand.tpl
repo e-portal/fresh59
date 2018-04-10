@@ -57,9 +57,9 @@
 
             <div class="base-options">
 
-                {*----------SORT----------*}
-                {include file='catalog/subs-nav.tpl'}
-                {*----------SORT----------*}
+                <div class="left-options">
+                    {include file='layouts/left-banner.tpl'}
+                </div>
 
 
             </div>
