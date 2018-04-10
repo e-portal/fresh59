@@ -78,6 +78,20 @@
                             <a href="{iurl assoc.cat_latin=$item.cat_latin_single  assoc.parent=$item.parentname assoc.subdomain=$item.subdomain assoc.cat=$item.cat_onename assoc.brand=$item.brand assoc.item=$item.name}"
                                tabindex="-1" class="sench">
 
+                                {*----------in stock--------*}
+                                {if $item.id_availability == 1}
+                                    <h5 class="green">В наличии</h5>
+                                {elseif $item.id_availability == 3}
+                                    <h5 class="blue">Под заказ</h5>
+                                {else}
+                                    <h5 class="gray">Наличие уточняйте</h5>
+                                {/if}
+                                {*----------in stock--------*}
+                                <h4>
+                                    {if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if} {$item.brand} {$item.name}
+                                </h4>
+
+
                             </a>
                             <div class="hovv">
                                 <div class="news">
@@ -105,15 +119,6 @@
     </div>
     <div id="category_block_view_listing" class="span-12 no_margin">
     {foreach from=$items item=item name=catitems}
-        {if $smarty.foreach.catitems.iteration == 3}
-            <!-- Баннер "Принимаем платежные карты" -->
-            <div class="span-4 category_block_view_item category_block_view_ads">
-                <a href="https://590.ua/news/%D0%9F%D1%80%D0%B8%D0%BD%D0%B8%D0%BC%D0%B0%D0%B5%D0%BC-%D0%BA-%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D0%B5-%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BA%D0%BE%D0%B2%D1%8B%D0%B5-%D0%BA%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B8">
-                    <img class="category_block_view_item_banner" src="/images/visa-210x345.jpg"
-                         alt="Принимаем к оплате пластиковые карточки Visa, Maestro, MasterCard">
-                </a>
-            </div>
-        {/if}
         <div class="prev_bonus" style="display:none;">
             Купив {$item.brand} {$item.name} у нас, Вы получаете +{$item.bonus_amount|round}грн на бонусный счет к цене!
         </div>
@@ -130,34 +135,7 @@
             <a href="{iurl assoc.parent=$item.parentname  assoc.cat_latin=$item.cat_latin_single assoc.subdomain=$item.subdomain assoc.cat=$item.cat_onename assoc.brand=$item.brand assoc.item=$item.name}">{$item.brand} {$item.name}</a>
             <span class="description">{if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if}</span>
 
-            {if !($item.archive == 1 && $item.id_availability == 3) && ($manager || $item.id_availability == 3)}
-                {if $item.id_availability == 1} <span class="in_stock_status">
-                    <link itemprop="availability" href="http://schema.org/InStock"/>
 
-
-
-
-Есть в наличии{/if}</span>
-                {if $item.id_availability == 2}
-                    <link itemprop="availability" href="http://schema.org/InStock"/>
-                    <span class="status_stock_status">Наличие уточняйте</span>
-                {/if}
-                {if $item.id_availability == 3}
-                    <span class="order_stock_status">
-                                <a class="on-order" target="_blank" href="/articles/4"
-                                   title="Как получить товар под заказ">
-                                    <link itemprop="availability" href="http://schema.org/PreOrder"/>Под заказ
-                                </a>
-                            </span>
-                {/if}
-                {if $item.id_availability == 4}
-                    <span class="in_stock_status" rel="tooltip" data-placement="top"
-                          data-original-title="Есть в наличии. Доставка через 5 рабочих дней"
-                          title="Есть в наличии. Доставка через 5 рабочих дней">
-                                <link itemprop="availability" href="http://schema.org/InStock"/>Есть в наличии. Доставка через 5 рабочих дней
-                            </span>
-                {/if}
-            {/if}
         </div>
         <div class="image_holder">
             {if $item.imgid}
