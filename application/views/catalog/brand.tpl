@@ -61,7 +61,7 @@
                     {include file='layouts/left-banner.tpl'}
                 </div>
 
-                <div class="right-options">
+                <div class="right-options brands">
 
                     <div class="under-senn">
                         {foreach from=$items item=item name=catitems}
