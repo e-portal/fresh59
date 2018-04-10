@@ -205,6 +205,43 @@
 
                         {/foreach}
                     </div>
+                    <!--            START pagination-->
+                    {if $pages->pageCount > 1}
+                        <div class="blocks-pagination">
+                            <a class="blocks-pagination-more">
+                                Показать еще<img src="/assets/img/arrow-circle.png" alt="more">
+                            </a>
+                            {if $pages->current > 1}
+                                <a class="blocks-pagination-back blocks-pagination-arrow"
+                                   href="{if $pages->current-1=='1'}{$firstPageUrl}{else}{$firstPageUrl}/page/{$pages->current-1}{/if}"></a>
+                            {/if}
+                            {if $pages->firstPageInRangeNum!=1}
+                                <a class="pagin-number active-pagin-number" href="{$firstPageUrl}">1</a>
+                                <span>...</span>
+                            {/if}
+                            {if $pages->pagesInRange}
+                                {foreach from=$pages->pagesInRange item=p key=k}
+                                    {if $pages->current!=$k}
+                                        <a class="pagin-number"
+                                           href="{if $k=='1'}{$firstPageUrl}{else}{$firstPageUrl}/page/{$k}{/if}">{$k}</a>
+                                    {else}
+                                        <span class="pagin-number pagin-number-active">{$pages->current}</span>
+                                    {/if}
+                                {/foreach}
+                            {/if}
+                            {if $pages->pageCount && $pages->lastPageInRange != $pages->last}
+                                <span>...</span>
+                                <a class="pagin-number"
+                                   href="{$firstPageUrl}/page/{$pages->pageCount}">{$pages->pageCount}</a>
+                            {/if}
+
+                            {if $pages->current < $pages->pageCount}
+                                <a class="blocks-pagination-forward blocks-pagination-arrow"
+                                   href="{$firstPageUrl}/page/{$pages->current+1}"></a>
+                            {/if}
+                        </div>
+                    {/if}
+                    <!--            End pagination-->
                 </div>
             </div>
         </div>
@@ -215,101 +252,7 @@
         <!-- SEO -->
         {include file='layouts/orig.tpl'}
     </div>
-    <div id="category_block_view_listing" class="span-12 no_margin">
-    {foreach from=$items item=item name=catitems}
-        <div class="prev_bonus" style="display:none;">
-            Купив {$item.brand} {$item.name} у нас, Вы получаете +{$item.bonus_amount|round}грн на бонусный счет к цене!
-        </div>
-        {if $item.bestprice > $item.price || $item.id2==41385}
-            <i title="Лучшая цена" class="sale-icon sale-icon-price"></i>
-        {/if}
-        {if $item.specprice && ($item.bdprice > $item.price) && (($item.bdprice - $item.price) > 1) && !($item.sale==1 && $item.d90==-1)}
-            <i title="Акционная цена" class="sale-icon sale-icon-discount"></i>
-        {/if}
-        {if $item.sale==1 && $item.d90==-1}
-            <i title="Распродажа" class="sale-icon sale-icon-sale"></i>
-        {/if}
-        <div class="head">
-            <a href="{iurl assoc.parent=$item.parentname  assoc.cat_latin=$item.cat_latin_single assoc.subdomain=$item.subdomain assoc.cat=$item.cat_onename assoc.brand=$item.brand assoc.item=$item.name}">{$item.brand} {$item.name}</a>
-            <span class="description">{if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if}</span>
-
-
-        </div>
-        <div class="image_holder">
-            {if $item.imgid}
-                <a href="{iurl  assoc.cat_latin=$item.cat_latin_single assoc.parent=$item.parentname assoc.subdomain=$item.subdomain assoc.cat=$item.cat_onename assoc.brand=$item.brand assoc.item=$item.name}"
-                   title="{$item.brand} {$item.name}">
-                    <img itemprop="image" src="{$url.img}/catalog/{$item.imgid}_s.{$item.imgext}"
-                         title="{if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if} {$item.brand} {$item.name}"
-                         alt="{if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if} {$item.brand} {$item.name} - catalog"/>
-                </a>
-            {else}
-                <img src="/images/noimage.jpg" alt="{$item.brand} {$item.name}"/>
-            {/if}
-        </div>
-        {if $item.acttype=='gift'}
-            <div class="gift">
-                <div class="products_container_image_wrap">
-                    <a href="#gift-modal-{$item.id}" data-toggle="modal" class="gift-txt-lnk data-getActInfo"
-                       id="i_{$item.id}"><img src="/images/catalog/{gift assoc.id=$item.actid}" alt="">
-                    </a>
-                </div>
-                <span>Подарок</span>
-            </div>
-        {/if}
-        <span class="full_description">{if $zf.params.catid == 189}{$item.short_info|replace:'Стиральная машина':''}{else}{$item.short_info|truncate:270}{/if}</span>
-        <span class="style_price">Цена:</span>
-        <br>
-        {if $item.specprice  && ($item.bdprice > $item.price) && (($item.bdprice - $item.price)/$item.price > 0.01) }
-            <span class="price_sidebar old">{price $item.bdprice $item.id_currency} <span
-                        class="currency">{$smarty.session.Currency.title}</span></span>
-            <span class="price_sidebar new">{price $item.price $item.id_currency} <span
-                        class="currency">{$smarty.session.Currency.title}</span></span>
-        {else}
-            <span class="price_sidebar">{price $item.price $item.id_currency}
-                <span class="currency">{$smarty.session.Currency.title}</span>
-                    </span>
-        {/if}
-
-        {if $item.id_brand == '26' && $item.id_category != 60}<i class="guarantee-icon"></i>{/if}
-
-        </div><!-- / .cat-item1 -->
-    {/foreach}
-    </div><!-- / .products -->
-    <div class="clear"></div>
 {/if}
-
-<!-- pager -->
-{if $pages->pageCount > 1}
-    <div class="span-12 no_margin category_nav paggination">
-        <p>Страницы:</p>
-        {if $pages->current > 1}
-            <a href="{if $pages->current-1=='1'}{$firstPageUrl}{else}{$firstPageUrl}/page/{$pages->current-1}{/if}">&larr;</a>
-        {/if}
-        {if $pages->firstPageInRangeNum!=1}
-            <a href="{$firstPageUrl}">1</a>
-            <p>...</p>
-        {/if}
-        {if $pages->pagesInRange}
-            {foreach from=$pages->pagesInRange item=p key=k}
-                {if $pages->current!=$k}
-                    <a href="https://590.ua{if $k=='1'}{$firstPageUrl}{else}{$firstPageUrl}/page/{$k}{/if}">{$k}</a>
-                {else}
-                    <span class="current">{$pages->current}</span>
-                {/if}
-            {/foreach}
-        {/if}
-        {if $pages->pageCount && $pages->lastPageInRange != $pages->last}
-            <p>...</p>
-            <a href="https://590.ua{$firstPageUrl}/page/{$pages->pageCount}">{$pages->pageCount}</a>
-        {/if}
-
-        {if $pages->current < $pages->pageCount}
-            <a href="https://590.ua{$firstPageUrl}/page/{$pages->current+1}">&rarr;</a>
-        {/if}
-    </div>
-{/if}
-<!-- / .pager -->
 
 <div class="doww"><img src="/assets/img/verh.png" alt=""></div>
 {include file='layouts/_footer.tpl'}
