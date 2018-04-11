@@ -100,10 +100,8 @@
                     </div>
 
                     <div class="busket-marg">
-                        <a class="qweek-busket-prod open-in-popup add-to-cart bask acty" data-id="{$item.id}"
-                           data-name="Кофеварка ELECTROLUX ручная" data-img="/assets/img/product/prod-5.png"
-                           data-price="1500"
-                           data-bonus="100">
+                        <a class="qweek-busket-prod open-in-popup add-to-cart bask acty"
+                                {include file='layouts/cart-item.tpl' cart_item=$item}>
                             <span>В корзину</span>
                         </a>
                     </div>
@@ -164,7 +162,8 @@
                     {/if}
                 </div>
                 <div class="qweek-busket-prodadd-to-cart">
-                    <a class="qweek-busket-prod open-in-popup add-to-cart bask acty" {include file='layouts/cart-item.tpl' cart_item=$item}>
+                    <a class="qweek-busket-prod open-in-popup add-to-cart bask acty"
+                            {include file='layouts/cart-item.tpl' cart_item=$item}>
                         <span>В корзину</span>
                     </a>
                     <div class="without-reg-prod">
