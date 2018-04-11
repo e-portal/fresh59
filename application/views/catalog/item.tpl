@@ -34,25 +34,25 @@
                 </div>
                 <div class="slider-prod slider-for">
                     <div class="clone-slide">
-                        <img src="img/product/prod-1.jpg">
+                        <img src="/assets/img/product/prod-1.jpg">
                     </div>
                     <div class="clone-slide">
-                        <img src="img/product/prod-2.jpg">
+                        <img src="/assets/img/product/prod-2.jpg">
                     </div>
                     <div class="clone-slide">
-                        <img src="img/product/prod-3.jpg">
+                        <img src="/assets/img/product/prod-3.jpg">
                     </div>
                     <div class="clone-slide">
-                        <img src="img/product/prod-4.jpg">
+                        <img src="/assets/img/product/prod-4.jpg">
                     </div>
                     <div class="clone-slide">
-                        <img src="img/product/prod-6.jpg">
+                        <img src="/assets/img/product/prod-6.jpg">
                     </div>
                     <div class="clone-slide">
-                        <img src="img/product/prod-7.jpg">
+                        <img src="/assets/img/product/prod-7.jpg">
                     </div>
                     <div class="clone-slide">
-                        <img src="img/product/prod-8.png">
+                        <img src="/assets/img/product/prod-8.png">
                     </div>
                 </div>
                 <div class="slider-prod slider-nav">
@@ -80,7 +80,8 @@
 
                     <div class="busket-marg">
                         <a class="qweek-busket-prod open-in-popup add-to-cart bask acty" data-id="600567"
-                           data-name="Кофеварка ELECTROLUX ручная" data-img="img/product/prod-5.png" data-price="1500"
+                           data-name="Кофеварка ELECTROLUX ручная" data-img="/assets/img/product/prod-5.png"
+                           data-price="1500"
                            data-bonus="100">
                             <span>В корзину</span>
                         </a>
@@ -129,7 +130,7 @@
                 </div>
                 <div class="qweek-busket-prodadd-to-cart">
                     <a class="qweek-busket-prod open-in-popup add-to-cart bask acty" data-id="274567"
-                       data-name="Плита кухонная ELECTROLUX EKG 96118 CX" data-img="img/product/prod-1.jpg"
+                       data-name="Плита кухонная ELECTROLUX EKG 96118 CX" data-img="/assets/img/product/prod-1.jpg"
                        data-price="12500" data-sale="10750" data-bonus="1500" data-gift-id="274560"
                        data-gift-name="Чайник ELECTROLUX Electro чайник" data-gift-img="/assets/img/senn5.png">
                         <span>В корзину</span>
@@ -198,7 +199,7 @@
                         <div class="cheaper-slide">
                             <div class="cheaper-prod flexibal">
                                 <div class="cheaper-prod-img">
-                                    <img src="img/product/prod-1.jpg">
+                                    <img src="/assets/img/product/prod-1.jpg">
                                 </div>
                                 <div class="cheaper-prod-text">
                                     <div class="prod-code">Код товара 274567</div>
@@ -241,7 +242,7 @@
                         <div class="cheaper-slide">
                             <div class="cheaper-prod flexibal">
                                 <div class="cheaper-prod-img">
-                                    <img src="img/product/prod-1.jpg">
+                                    <img src="/assets/img/product/prod-1.jpg">
                                 </div>
                                 <div class="cheaper-prod-text">
                                     <div class="prod-code">Код товара 274567</div>
@@ -252,7 +253,7 @@
                             <div class="border-plus"><span>+</span></div>
                             <div class="cheaper-prod flexibal">
                                 <div class="cheaper-prod-img">
-                                    <img src="img/product/prod-5.png">
+                                    <img src="/assets/img/product/prod-5.png">
                                 </div>
                                 <div class="cheaper-prod-text">
                                     <div class="prod-code">Код товара 274567 <span class="red-sale">-15%</span></div>
@@ -539,7 +540,7 @@
                         <div class="tab-contents-wrap">
                             <div class="tab-section flexibal flex-between">
                                 <div class="bonus flexibal">
-                                    <img src="img/menu1.png"> + 5 бонусов за отзыв
+                                    <img src="/assets/img/menu1.png"> + 5 бонусов за отзыв
                                 </div>
                                 <div class="">
                                     <object type="lol/wut">
