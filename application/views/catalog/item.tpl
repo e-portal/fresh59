@@ -5,7 +5,6 @@
 
     {*--------------------------------------------------------------------------------------------------------*}
 
-    {debug}
     <div class="left-right slider-wrap jq-move-slider jq-move-slider-wrap">
         <div class="ourr">
             <div class="slider-product jq-move-slider-product">
