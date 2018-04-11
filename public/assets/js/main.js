@@ -203,28 +203,28 @@ jQuery(document).ready(function () {
 
     if ($('.watched-slider').length) {
         $('.watched-slider').slick({
-        slidesToShow: 5,
-        responsive: [
-            {
-                breakpoint: 1025,
-                settings: {
-                    slidesToShow: 3
-                }
-            },
-            {
-                breakpoint: 781,
-                settings: {
-                    slidesToShow: 1
-                }
-            }],
-        slidesToScroll: 1,
-        dots: true,
-        arrows: false,
-        infinite: true,
-        cssEase: 'linear',
+            slidesToShow: 5,
+            responsive: [
+                {
+                    breakpoint: 1025,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 781,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }],
+            slidesToScroll: 1,
+            dots: true,
+            arrows: false,
+            infinite: true,
+            cssEase: 'linear',
             autoplay: true,
-        autoplaySpeed: 5000
-    });
+            autoplaySpeed: 5000
+        });
     } else {
     }
 
@@ -248,9 +248,7 @@ jQuery(document).ready(function () {
         });
     } else {
     }
-
-    function owl_slide() {
-        if (window.matchMedia("(min-width: 1025px)").matches && $('.owl-slide').length) {
+    if ($('.owl-slide').length && window.matchMedia("(min-width: 1025px)").matches) {
             $('.owl-slide').slick({
                 slidesToShow: 4,
                 slidesToScroll: 1,
@@ -259,15 +257,8 @@ jQuery(document).ready(function () {
                 speed: 500,
                 cssEase: 'linear',
             });
-        }
     }
-    owl_slide();
-    $(window).resize(function () {
-        owl_slide();
-    })
 
-
-    // }
 
     if (window.matchMedia("(max-width: 1025px)").matches) {
         $('.parag').slick({
@@ -361,7 +352,6 @@ jQuery(document).ready(function () {
         befScroll = scroll_block
 
     });
-
 
 
     window.requestAnimFrame = (function () {

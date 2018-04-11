@@ -163,17 +163,14 @@ h1 {
     justify-content: center;
     align-items: center;
 }
-
 .slider-prod .slick-list,
 .cheaper-slider .slick-list {
     width: 90%;
 }
-
 .slider-prod .slick-prev,
 .cheaper-slider .slick-prev {
     left: 0;
 }
-
 .cheaper-slider .slick-next,
 .slider-prod .slick-next {
     right: 0;
@@ -532,11 +529,9 @@ h1 {
     justify-content: center;
     align-items: center;
 }
-
 .cheaper-slider .slick-slide {
     margin: 0;
 }
-
 .cheaper-slider .slick-dots {
     bottom: -50px;
 }

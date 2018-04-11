@@ -115,6 +115,11 @@
     </div>
 
 </footer>
+
+{*--------------CART--------------*}
+{include file='layouts/cart.tpl'}
+{*--------------CART--------------*}
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 {if isset($js_int) }
     {$js_int}

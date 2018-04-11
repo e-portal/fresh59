@@ -216,14 +216,13 @@ $(document).ready(function () {
             $tabContents = _this.find('.tab-contents'),
             activeClass = 'is-active';
         if ($('body').hasClass('payment-page')) {
-            $('.tab-contents').hide();
+            $tabContents.first().hide();
             $('.tab-contents.is-active').show();
         } else {
             $tabButtonItem.first().addClass(activeClass);
             $tabContents.first().addClass(activeClass);
             $tabContents.not(':first').hide();
         }
-
 
         $tabButtonItem.find('a').on('click', function (e) {
             var target = $(this).attr('href');
@@ -235,19 +234,129 @@ $(document).ready(function () {
             $(target).show().addClass(activeClass);
             e.preventDefault();
         });
+
+        $tabSelect.on('change', function () {
+            var target = $(this).val();
+            var targetSelectNum = $(this).prop('selectedIndex');
+
+            $tabButtonItem.removeClass(activeClass);
+            $tabButtonItem.eq(targetSelectNum).addClass(activeClass);
+            $tabContents.hide().removeClass(activeClass);
+            $(target).show().addClass(activeClass);
+        });
+
     });
-    $tabSelect.on('change', function () {
-        var target = $(this).val(),
-            targetSelectNum = $(this).prop('selectedIndex');
-
-        $tabButtonItem.removeClass(activeClass);
-        $tabButtonItem.eq(targetSelectNum).addClass(activeClass);
-        $tabContents.hide().removeClass(activeClass);
-        $(target).show().addClass(activeClass);
-    });
-
-
     /*---------end PORTFOLIO TABS---------*/
+
+    /*---------COMPARE---------*/
+    if ($('body').hasClass('compare-page')) {
+
+//compare length show-hide busket
+        function compareLength() {
+            if ($('.compare-block').length > 5) {
+                $('.none-if-more').hide();
+                $('.compare-if-small').show();
+                $('.compare-block, .compare-all-blocks-wrap').addClass('compare-smaller');
+            } else {
+                $('.none-if-more').show();
+                $('.compare-if-small').hide();
+                $('.compare-block, .compare-all-blocks-wrap').removeClass('compare-smaller');
+            }
+        }
+
+        compareLength();
+
+
+//Scroll compare menu
+        var befScroll = 0;
+        $(window).scroll(function () {
+            if ($('.compare-all-blocks').length) {
+                var foot = $('.compare-all-blocks').offset().top;
+                var scroll_block = $(window).scrollTop();
+                var baner = $('.compare-fixed-wrap, .compare-block-left .compare-fixed');
+                var baner_top = $('.compare-all-blocks').offset().top;
+                if (scroll_block > baner_top + 0 && scroll_block + baner.height() + 100 < $('.compare-all-blocks').height() + foot) {
+                    baner.css({"position": 'fixed', top: '0px'});
+                    $('.compare-fixed-over, .compare-block-left .compare-fixed').addClass('fixed-shadow');
+
+                } else if (scroll_block + baner.height() + 100 >= $('.compare-all-blocks').height() + foot) {
+                    if (befScroll < scroll_block) {
+                        baner.css({'position': 'absolute', 'bottom': 'auto', 'top': 'auto'});
+                    }
+                }
+                else if (scroll_block < baner_top + 0) {
+                    baner.css({'position': 'relative', top: '0px'});
+                    $('.compare-fixed-over, .compare-block-left .compare-fixed').removeClass('fixed-shadow');
+                }
+            }
+            befScroll = scroll_block;
+        });
+
+//scroll on px
+        $('.compare-all-blocks-wrap').on("scroll", function (e) {
+            compareScroll = e.currentTarget.scrollLeft;
+            $('.compare-fixed-over').scrollLeft(compareScroll);
+        });
+
+//delete PRODUCT
+        $('.basket-delete-icon').click(function () {
+
+            var compareIndex = $(this).parents('.compare-fixed').index();
+            $('.compare-block-wrap').find('.compare-block').eq(compareIndex).remove();
+            $(this).parents('.compare-fixed').remove();
+            compareLength();
+        });
+
+//Active button
+        $('.compare-btn').click(function () {
+            $(this).parents('.compare-all-blocks').find('.hide-without-different').removeClass('hide-without-different');
+            $(this).parent().find('.compare-btn').removeClass('compare-btn-active');
+            $(this).addClass('compare-btn-active');
+
+
+//show differences
+            if ($('.only-differences').hasClass('compare-btn-active')) {
+
+                var p = $('.compare-block');
+
+                $(p[1]).find('.compare-features-feat').each(function (i) {
+                    z = $(this).html();
+                    w = true;
+                    for (var x = 2; x < p.length; x++) {
+                        l = $(p[x]).find('.compare-features-feat').eq(i).html();
+                        if (z != l) {
+                            w = false
+                        }
+                    }
+
+                    if (w) {
+                        $('.compare-block').each(function () {
+                            $(this).find('.compare-features-feat').eq(i).addClass('hide-without-different');
+                        })
+                    }
+                    i++;
+                });
+
+                $('.compare-list').each(function () {
+                    console.log($(this).find('span').html());
+                    b = false;
+                    $(this).find('.compare-features-feat').each(function () {
+                        console.log(!$(this).hasClass('hide-without-different'));
+                        if (!$(this).hasClass('hide-without-different')) {
+                            b = true;
+                        }
+                    });
+                    console.log('b', b);
+                    if (!b) {
+                        console.log('b2', b);
+                        $(this).addClass('hide-without-different');
+                    }
+                })
+            }
+
+        });
+    }
+    /*---------end COMPARE---------*/
 
 
 });
