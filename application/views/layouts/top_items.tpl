@@ -32,7 +32,6 @@
                             <span>
                                 {if $top_item.rent >= 25}
                                     {math equation="x/y*$curs_evro_smarty|round" x=$top_item.price y=8}
-
                                 {elseif $top_item.rent > 12.5}
                                     {math equation="x/y*$curs_evro_smarty|round" x=$top_item.price y=6}
                                 {elseif $top_item.rent > 7.5}

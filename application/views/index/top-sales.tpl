@@ -54,7 +54,21 @@
                                 {if $item.id_availability == 1}
                                     <div class="itee">
                                         <img src="/assets/img/izee1.png" alt="">
-                                        <p>от <span>{$item.price/$rent_index*$curs_evro_smarty|round}</span> грн/мес</p>
+                                        <p>
+                                            от
+                                            <span>
+                                                {if $item.rent >= 25}
+                                                    {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=8}
+                                                {elseif $item.rent > 12.5}
+                                                    {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=6}
+                                                {elseif $item.rent > 7.5}
+                                                    {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=3}
+                                                {else}
+                                                    {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=3}
+                                                {/if}
+                                            </span>
+                                            грн/мес
+                                        </p>
                                     </div>
                                 {/if}
                                 <div class="itee">
