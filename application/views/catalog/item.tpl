@@ -23,7 +23,7 @@
                                                 </span>
                             грн/мес</p>
                     </div>*}
-                    {*<div class="itee">
+                    <div class="itee">
                         <img src="/assets/img/izee3.png" alt="">
                         <p>от
                             <span>
@@ -38,7 +38,7 @@
                                 {/if}
                             </span>
                             грн/мес</p>
-                    </div>*}
+                    </div>
                     {*{if $item.id_brand == '26' && $item.id_category != 60}
                          <div class="itee">
                              <img src="/assets/img/izee2.png" alt="">
