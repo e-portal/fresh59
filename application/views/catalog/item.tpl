@@ -95,7 +95,9 @@
                     <span itemprop="name">{$item.name}</span>
                 </h1>
                 <div class="title-slide-show flexibal">
-                    <div class="red">{$item.price}</div>
+                    <div>
+                        {price $item.price $item.id_currency} {$smarty.session.Currency.title}
+                    </div>
 
                     <div class="busket-marg">
                         <a class="qweek-busket-prod open-in-popup add-to-cart bask acty" data-id="{$item.id}"
@@ -150,12 +152,17 @@
             <!--           ЦЕНА КОРЗИНА             -->
             <div class="price-busket-kredit">
                 <div class="prod-price">
-                    <pre>
+                    {*<pre>
                         {$item|var_dump}
-                    </pre>
+                    </pre>*}
 
-                    <div class="old-price">12 500 грн</div>
-                    <div class="red big-price"> 10 500 грн</div>
+                    {if $item.specprice  && ($item.bdprice > $item.price) && (($item.bdprice - $item.price)/$item.price > 0.01) }
+                        <div class="red big-price">{price $item.price $item.id_currency} {$smarty.session.Currency.title}</div>
+                        <div class="old-price">{price $item.bdprice} {$smarty.session.Currency.title}</div>
+                    {else}
+                        <div>{price $item.price $item.id_currency} {$smarty.session.Currency.title}</div>
+                    {/if}
+
                     <div class="return-prod">Вернем: <span class="red">1 500 грн</span></div>
                     <div class="on-bonus-prod">на <a>Бонусный счет</a></div>
                 </div>
