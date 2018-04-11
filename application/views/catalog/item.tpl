@@ -151,7 +151,7 @@
             <div class="price-busket-kredit">
                 <div class="prod-price">
                     <pre>
-                        {$item|@debug_print_var}
+                        {$item|var_dump}
                     </pre>
 
                     <div class="old-price">12 500 грн</div>
