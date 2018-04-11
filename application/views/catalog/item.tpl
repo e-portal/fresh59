@@ -43,12 +43,12 @@
                              <p>Лучшая <span>цена</span></p>
                          </div>
                      {/if}
-                    {*{if $item.acttype != 'gift' && $item.x_index == '1' || $item.id == '21465'}
+                    {if $item.acttype !== 'gift'&& $x3 > 0 || $item.id == '21465'}
                          <div class="itee change">
                              <img src="/assets/img/izee5.png" alt="">
                              <p>Замена</p>
                          </div>
-                     {/if}*}
+                    {/if}
                     {*{if $item.acttype=='gift'}
                         <div class="itee present">
                             <div class="numeral"><img src="/assets/img/present-img.png"
