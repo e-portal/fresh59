@@ -61,16 +61,18 @@
                                 <a href="{iurl assoc.cat_latin=$item.cat_latin_single  assoc.parent=$item.parentname assoc.subdomain=$item.subdomain assoc.cat=$item.cat_onename assoc.brand=$item.brand assoc.item=$item.name}"
                                    tabindex="-1" class="sench">
 
-                                    {*----------in stock--------*}
-                                    {if $item.id_availability == 1}
-                                        <h5 class="green">В наличии</h5>
-                                    {elseif $item.id_availability == 3}
-                                        <h5 class="blue">Под заказ</h5>
-                                    {else}
-                                        <h5 class="gray">Наличие уточняйте</h5>
-                                    {/if}
-                                    {*----------in stock--------*}
-
+                                    <div class="in-stock">
+                                        {*----------in stock--------*}
+                                        {if $item.id_availability == 1}
+                                            <h5 class="green">В наличии</h5>
+                                        {elseif $item.id_availability == 3}
+                                            <h5 class="blue">Под заказ</h5>
+                                        {else}
+                                            <h5 class="gray">Наличие уточняйте</h5>
+                                        {/if}
+                                        {*----------in stock--------*}
+                                        <div class="prod-code">Код: {$item.id}</div>
+                                    </div>
 
                                     <h4>
                                         {if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if} {$item.brand} {$item.name}
