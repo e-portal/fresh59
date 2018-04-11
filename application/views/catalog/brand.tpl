@@ -293,10 +293,10 @@
                     </div>
                 </div>
             </div>
+            {*-----------LAST VIEWED-----------*}
+            {include file='layouts/slider_view.tpl' }
+            {*-----------LAST VIEWED-----------*}
         </div>
-        {*-----------LAST VIEWED-----------*}
-        {include file='layouts/slider_view.tpl' }
-        {*-----------LAST VIEWED-----------*}
         <!-- SEO -->
         <div class="fashion wrap">
             {$seo_text_bottom|default:''}
