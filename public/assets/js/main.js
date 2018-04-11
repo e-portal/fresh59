@@ -339,7 +339,8 @@ jQuery(document).ready(function () {
     }
 
     $(window).scroll(function () {  //Scroll up-filter
-        if ($('.base-options').length) {
+        if ($('.left-options').length) {
+            // if ($('.base-options, .up-filter').length) {
             var foot = $('.fashion').offset().top;
             var scroll_block = $(window).scrollTop();
             var baner = $('.up-filter div');

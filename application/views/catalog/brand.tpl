@@ -57,7 +57,7 @@
 
             <div class="base-options">
 
-                <div class="left-options left-banner">
+                <div class="left-banner">
                     {include file='layouts/left-banner.tpl'}
                 </div>
 
@@ -75,9 +75,9 @@
                                     </a>
                                 </div>
                             {/if}
-                            <pre>
+                            {*<pre>
                                 {$item|@debug_print_var}
-                            </pre>
+                            </pre>*}
                             {*-----------ITEM-----------*}
                             <div class="item-senn more-senn">
                                 <a href="{iurl assoc.cat_latin=$item.cat_latin_single  assoc.parent=$item.parentname assoc.subdomain=$item.subdomain assoc.cat=$item.cat_onename assoc.brand=$item.brand assoc.item=$item.name}"
@@ -116,7 +116,16 @@
                                             <img src="/assets/img/izee1.png" alt="">
                                             <p>от
                                                 <span>
-                                                    {$item.price/$item.rent_index*$curs_evro_smarty|round}
+                                                    {if $item.rent >= 25}
+                                                        {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=8}
+
+                                                    {elseif $item.rent > 12.5}
+                                                        {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=6}
+                                                    {elseif $item.rent > 7.5}
+                                                        {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=3}
+                                                    {else}
+                                                        {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=3}
+                                                    {/if}
                                                 </span>
                                                 грн/мес</p>
                                         </div>
