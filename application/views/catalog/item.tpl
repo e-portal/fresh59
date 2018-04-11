@@ -2,7 +2,6 @@
 
 <div class="container wrap">
 
-
     {if $seo_text_bottom}
         <div class="equip">
             <div class="nozer wrap">
