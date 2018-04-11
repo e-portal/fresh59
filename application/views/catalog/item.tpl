@@ -1,7 +1,12 @@
 ﻿{include file='layouts/_header.tpl'}
 
 <div class="container wrap">
-
+    <pre>
+        {$item|@debug_print_var}
+    </pre>
+    {php}
+        die;
+    {/php}
 
     {*--------------------------------------------------------------------------------------------------------*}
 
