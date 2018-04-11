@@ -160,7 +160,7 @@
                         <div class="red big-price">{price $item.price $item.id_currency} {$smarty.session.Currency.title}</div>
                         <div class="old-price">{price $item.bdprice} {$smarty.session.Currency.title}</div>
                     {else}
-                        <div>{price $item.price $item.id_currency} {$smarty.session.Currency.title}</div>
+                        <div class="big-price">{price $item.price $item.id_currency} {$smarty.session.Currency.title}</div>
                     {/if}
 
                     <div class="return-prod">Вернем: <span class="red">1 500 грн</span></div>
