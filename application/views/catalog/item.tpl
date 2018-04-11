@@ -34,27 +34,18 @@
 
 
                 <div class="slider-prod slider-for">
-                    <div class="clone-slide">
-                        <img src="/assets/img/product/prod-1.jpg">
-                    </div>
-                    <div class="clone-slide">
-                        <img src="/assets/img/product/prod-2.jpg">
-                    </div>
-                    <div class="clone-slide">
-                        <img src="/assets/img/product/prod-3.jpg">
-                    </div>
-                    <div class="clone-slide">
-                        <img src="/assets/img/product/prod-4.jpg">
-                    </div>
-                    <div class="clone-slide">
-                        <img src="/assets/img/product/prod-6.jpg">
-                    </div>
-                    <div class="clone-slide">
-                        <img src="/assets/img/product/prod-7.jpg">
-                    </div>
-                    <div class="clone-slide">
-                        <img src="/assets/img/product/prod-8.png">
-                    </div>
+
+                    {if $item.images}
+                        {foreach from=$item.images item=item_image name=item_image}
+                            <div class="clone-slide">
+                                <img src="{$url.img}/catalog/{$item_image.id}_s.{$item_image.imgext}"
+                                     alt="{if $item.cat_onename}{$item.cat_onename|mblower}{else}{$item.cat|mblower}{/if} {$item.brand} {$item.name} {'купить'}"
+                                     title="{if $item.cat_onename}{$item.cat_onename|mblower}{else}{$item.cat|mblower}{/if} {$item.brand} {$item.name}"/>
+                            </div>
+                        {/foreach}
+                    {/if}
+
+
                 </div>
                 <div class="slider-prod slider-nav">
 
@@ -75,7 +66,15 @@
             </div>
             <!--           end ЗАГОЛОВОК ПРОДУКТА             -->
             <div class="title-slide">
-                <h1>Плита кухонная ELECTROLUX EKG 96118 CX</h1>
+                <h1>
+                    {if $item.category_onename}{$item.category_onename}{else}{$item.category}{/if}
+                    <span itemprop="brand">
+                        <span itemprop="manufacturer" itemscope itemtype="http://schema.org/Organization">
+                            <span itemprop="name">{$item.brand}</span>
+                        </span>
+                    </span>
+                    <span itemprop="name">{$item.name}</span>
+                </h1>
                 <div class="title-slide-show flexibal">
                     <div class="red">10 500 грн</div>
 
