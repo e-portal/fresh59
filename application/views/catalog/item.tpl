@@ -182,7 +182,19 @@
                 </div>
                 <div class="buy-by-part">
                     <div class="buy-by-part-from">
-                        от <span>1 500</span> грн/мес
+                        от
+                        <span>
+                            {if $item.rent >= 25}
+                                {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=8}
+                            {elseif $item.rent > 12.5}
+                                {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=6}
+                            {elseif $item.rent > 7.5}
+                                {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=3}
+                            {else}
+                                {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=3}
+                            {/if}
+                        </span>
+                        грн/мес
                     </div>
                     <div class="">
                         <a class="green-link">Рассрочка</a> или <a class="green-link">Кредит</a>
