@@ -57,16 +57,30 @@
         <div class="liner cent"><span>{$catName}</span></div>
         <div class="main-tehni">
             {foreach from=$categories item=cat name=categories}
-            <a href="/{$cat.subdomain}/{$cat.latin_name|replace:' ':'-'|mblower}" class="item-tehni">
-                <div class="base-tehni">
-                    <div class="left-tehni">
-                        <img src="{if $cat.id==86}/images/catalog/38342_s.jpg{else}{$url.img}/catalog/{$img[$cat.id].id}_s.{$img[$cat.id].ext}{/if}"
-                             alt="{$catName}">
-                    </div>
-                    <div class="right-tehni">{$cat.name}</div>
-                </div>
+                <div class="item-tehni">
+                    <div class="base-tehni">
+                        <div class="left-tehni">
+                            <a href="/{$cat.subdomain}/{$cat.latin_name|replace:' ':'-'|mblower}">
+                                <img src="{if $cat.id==86}/images/catalog/38342_s.jpg{else}{$url.img}/catalog/{$img[$cat.id].id}_s.{$img[$cat.id].ext}{/if}"
+                                     alt="{$catName}">
+                            </a>
+                        </div>
+                        <div class="right-tehni">
+                            <a href="/{$cat.subdomain}/{$cat.latin_name|replace:' ':'-'|mblower}">
+                                {$cat.name}
+                            </a>
+                            <div class="detailed-category">
+                                <a href="#">Frost ></a><br>
+                                <a href="#">NoFrost ></a><br>
+                                <a href="#">Frost ></a><br>
+                                <a href="#">NoFrost ></a><br>
+                                <a href="#">Frost ></a>
+                            </div>
+                        </div>
 
-            </a>
+                    </div>
+
+                </div>
             {/foreach}
         </div>
     </div>

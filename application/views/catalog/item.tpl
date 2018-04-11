@@ -152,10 +152,6 @@
             <!--           ЦЕНА КОРЗИНА             -->
             <div class="price-busket-kredit">
                 <div class="prod-price">
-                    {*<pre>
-                        {$item|var_dump}
-                    </pre>*}
-
                     {if $item.specprice  && ($item.bdprice > $item.price) && (($item.bdprice - $item.price)/$item.price > 0.01) }
                         <div class="red big-price">{price $item.price $item.id_currency} {$smarty.session.Currency.title}</div>
                         <div class="old-price">{price $item.bdprice} {$smarty.session.Currency.title}</div>
@@ -168,10 +164,7 @@
                     {/if}
                 </div>
                 <div class="qweek-busket-prodadd-to-cart">
-                    <a class="qweek-busket-prod open-in-popup add-to-cart bask acty" data-id="274567"
-                       data-name="Плита кухонная ELECTROLUX EKG 96118 CX" data-img="/assets/img/product/prod-1.jpg"
-                       data-price="12500" data-sale="10750" data-bonus="1500" data-gift-id="274560"
-                       data-gift-name="Чайник ELECTROLUX Electro чайник" data-gift-img="/assets/img/senn5.png">
+                    <a class="qweek-busket-prod open-in-popup add-to-cart bask acty" {include file='layouts/cart-item.tpl' cart_item=$item}>
                         <span>В корзину</span>
                     </a>
                     <div class="without-reg-prod">
