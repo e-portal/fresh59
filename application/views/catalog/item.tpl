@@ -1,9 +1,9 @@
 ﻿{include file='layouts/_header.tpl'}
 
 <div class="container wrap">
-    <pre>
+    {*<pre>
         {$item|var_dump}
-    </pre>
+    </pre>*}
 
     {*--------------------------------------------------------------------------------------------------------*}
 
