@@ -153,9 +153,6 @@
                     <pre>
                         {$item|@debug_print_var}
                     </pre>
-                    {php}
-                        die;
-                    {/php}
 
                     <div class="old-price">12 500 грн</div>
                     <div class="red big-price"> 10 500 грн</div>
