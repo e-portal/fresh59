@@ -261,7 +261,6 @@ jQuery(document).ready(function () {
             });
         }
     }
-
     owl_slide();
     $(window).resize(function () {
         owl_slide();
