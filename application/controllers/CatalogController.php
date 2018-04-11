@@ -313,10 +313,12 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
 
         $this->view->js_int = '
                 <script src="/assets/js/product.js"></script>
+                <script src="./js/order.js"></script>
             ';
 
         $this->view->css_int = '
                 <link rel="stylesheet" href="/assets/css/product.css">
+                <link rel="stylesheet" href="./css/mob-question.css">
             ';
 
 
