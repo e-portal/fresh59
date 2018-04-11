@@ -826,7 +826,6 @@ input {
     justify-content: center;
     cursor: pointer
 }
-
 @-moz-document url-prefix() {
     .searc,
     .send {
@@ -2454,6 +2453,7 @@ input {
     display: flex;
 }
 
+
 .hovyy {
     left: 9px;
     width: calc(100% - 18px);
@@ -2785,7 +2785,8 @@ input {
 
 .left-tehni img {
     width: 100%;
-    height: inherit;
+    height: 100%;
+    /*height: inherit;*/
     object-fit: contain;
 }
 
