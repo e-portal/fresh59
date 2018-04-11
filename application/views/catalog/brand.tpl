@@ -75,7 +75,7 @@
                                     </a>
                                 </div>
                             {/if}
-
+                            {$item|@debug_print_var}
                             {*-----------ITEM-----------*}
                             <div class="item-senn more-senn">
                                 <a href="{iurl assoc.cat_latin=$item.cat_latin_single  assoc.parent=$item.parentname assoc.subdomain=$item.subdomain assoc.cat=$item.cat_onename assoc.brand=$item.brand assoc.item=$item.name}"
