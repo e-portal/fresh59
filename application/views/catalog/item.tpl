@@ -15,6 +15,14 @@
                             <p>Вернем: <span>{$item.bonus_amount|round} грн</span></p>
                         </div>
                     {/if}
+                    <div class="itee">
+                        <img src="/assets/img/izee1.png" alt="">
+                        <p>от
+                            <span>
+                                                    {$item.price/$item.rent_index*$curs_evro_smarty|round}
+                                                </span>
+                            грн/мес</p>
+                    </div>
 
                 </div>
 
