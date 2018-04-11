@@ -39,19 +39,19 @@
                             </span>
                             грн/мес</p>
                     </div>*}
-                    {if $item.id_brand == '26' && $item.id_category != 60}
+                    {*{if $item.id_brand == '26' && $item.id_category != 60}
                          <div class="itee">
                              <img src="/assets/img/izee2.png" alt="">
                              <p>Гарантия <span>36</span> мес</p>
                          </div>
-                     {/if}
-                    {* {if $item.bestprice > $item.price || $item.id2==41385}
+                     {/if}*}
+                    {if $item.bestprice > $item.price || $item.id2==41385}
                          <div class="itee">
                              <img src="/assets/img/izee4.png" alt="">
                              <p>Лучшая <span>цена</span></p>
                          </div>
                      {/if}
-                     {if $item.acttype != 'gift' && $item.x_index == '1' || $item.id == '21465'}
+                    {* {if $item.acttype != 'gift' && $item.x_index == '1' || $item.id == '21465'}
                          <div class="itee change">
                              <img src="/assets/img/izee5.png" alt="">
                              <p>Замена</p>
