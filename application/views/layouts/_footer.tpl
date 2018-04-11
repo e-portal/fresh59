@@ -88,7 +88,7 @@
                     <span><a href="tel:+380675900591">+38 (067) 590-0-591</a></span>
                     <span><a href="tel:+380505900590">+38 (050) 590-0-590</a></span>
                     <span><a href="tel:+380935900590">+38 (093) 590-0-590</a></span>
-                    <span class="rights-security"><b>2007-2017.</b> Все права защищены</span>
+                    <span class="rights-security"><b>2007-{$smarty.now|date_format:"%Y"}. </b> Все права защищены</span>
                 </div>
 
                 <div class="adree">
