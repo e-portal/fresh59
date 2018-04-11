@@ -15,14 +15,6 @@
                             <p>Вернем: <span>{$item.bonus_amount|round} грн</span></p>
                         </div>
                     {/if}
-                    {*<div class="itee">
-                        <img src="/assets/img/izee1.png" alt="">
-                        <p>от
-                            <span>
-                                                    {$item.price/$item.rent_index*$curs_evro_smarty|round}
-                                                </span>
-                            грн/мес</p>
-                    </div>*}
                     <div class="itee">
                         <img src="/assets/img/izee3.png" alt="">
                         <p>от
@@ -39,12 +31,12 @@
                             </span>
                             грн/мес</p>
                     </div>
-                    {*{if $item.id_brand == '26' && $item.id_category != 60}
+                    {if $item.id_brand == '26' && $item.id_category != 60}
                          <div class="itee">
                              <img src="/assets/img/izee2.png" alt="">
                              <p>Гарантия <span>36</span> мес</p>
                          </div>
-                     {/if}*}
+                    {/if}
                     {if $item.bestprice > $item.price || $item.id2==41385}
                          <div class="itee">
                              <img src="/assets/img/izee4.png" alt="">
