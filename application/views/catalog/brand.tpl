@@ -291,14 +291,12 @@
                             <div><img src="/assets/img/interest-sale.png" alt="sale"></div>
                         </div>
                     </div>
-
-                    {*-----------LAST VIEWED-----------*}
-                    {include file='layouts/slider_view.tpl' small=true}
-                    {*-----------LAST VIEWED-----------*}
-
                 </div>
             </div>
         </div>
+        {*-----------LAST VIEWED-----------*}
+        {include file='layouts/slider_view.tpl' small=true}
+        {*-----------LAST VIEWED-----------*}
         <!-- SEO -->
         <div class="fashion wrap">
             {$seo_text_bottom|default:''}
