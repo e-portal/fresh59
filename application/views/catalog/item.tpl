@@ -209,30 +209,34 @@
 
 
             <!--           ТАЙМЕР УСПЕЙ ЗАКАЗАТЬ             -->
-            <div class="take-gift">
-                <div class="title-gift"><span>Успей заказать и получить подарок!</span></div>
-                <div class="take-gift-content">
-                    <div class="timer" data-year="2018" data-month="03" data-days="25"></div>
-                    <div class="gift-prod">
-                        <div class="gift-prod-img">
-                            <img src="/assets/img/senn5.png" alt="">
+
+            {if $assocItem.acttype=='gift'}
+                <div class="take-gift">
+                    <div class="title-gift"><span>Успей заказать и получить подарок!</span></div>
+                    <div class="take-gift-content">
+                        <div class="timer" data-year="2019" data-month="03" data-days="25"></div>
+                        <div class="gift-prod">
+                            <div class="gift-prod-img">
+                                <img src="/images/catalog/{gift assoc.id=$assocItem.actid}" alt="">
+                            </div>
+                            <div class="gift-prod-text">
+                                <a class="gift-prod-title">Чайник ELECTROLUX Electro чайник</a>
+                                <div class="in-gift red">в подарок!</div>
+                            </div>
                         </div>
-                        <div class="gift-prod-text">
-                            <a class="gift-prod-title">Чайник ELECTROLUX Electro чайник</a>
-                            <div class="in-gift red">в подарок!</div>
+                        <div class="gift-price">
+                            <div class="">10 500 грн</div>
+                            <div class="busket-marg">
+                                <object type="lol/wut">
+                                    <a class="bask acty" href="javascript:void(0)"><span>В корзину</span></a>
+                                </object>
+                            </div>
+                            <a class="bluee">Подробнее об акции</a>
                         </div>
-                    </div>
-                    <div class="gift-price">
-                        <div class="">10 500 грн</div>
-                        <div class="busket-marg">
-                            <object type="lol/wut">
-                                <a class="bask acty" href="javascript:void(0)"><span>В корзину</span></a>
-                            </object>
-                        </div>
-                        <a class="bluee">Подробнее об акции</a>
                     </div>
                 </div>
-            </div>
+            {/if}
+
             <!--           end ТАЙМЕР УСПЕЙ ЗАКАЗАТЬ             -->
 
             <!--           СЛАЙДЕР ВМЕСТЕ ДЕШЕВЛЕ             -->
