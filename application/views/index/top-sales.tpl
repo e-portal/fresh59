@@ -36,7 +36,10 @@
                                 <h5 class="blue">Под заказ</h5>
                             {/if}
 
-                            <h4>{$item.brand} {$item.name}</h4>
+                            <h4>
+                                {if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if}
+                                {$item.brand} {$item.name}
+                            </h4>
 
 
                             <div class="centr">

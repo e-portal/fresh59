@@ -75,7 +75,7 @@
                                 {if $item.bestprice > $item.price || $item.id2==41385}
                                     <div class="itee">
                                         <img src="/assets/img/izee4.png" alt="">
-                                        <p>Лучша <span>цена</span></p>
+                                        <p>Лучшая <span>цена</span></p>
                                     </div>
                                 {/if}
                                 {if $item.acttype=='gift'}
@@ -105,7 +105,10 @@
                                     {if 3 == $item.id_availability}
                                         <h5 class="blue">Под заказ</h5>
                                     {/if}
-                                    <h4>{$item.brand} {$item.name}</h4>
+                                    <h4>
+                                        {if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if}
+                                        {$item.brand} {$item.name}
+                                    </h4>
                                     <object type="lol/wut">
                                         <a href="#" class="otzv">
                                             <div class="left-otzv">
@@ -129,7 +132,7 @@
 
 
                                     <div class="times">
-                                        <div class="timer" data-year="2018" data-month="04" data-days="05"></div>
+                                        <div class="timer" data-year="2019" data-month="04" data-days="05"></div>
 
                                         <div class="right-times">
                                             <object type="lol/wut">
