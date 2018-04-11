@@ -162,9 +162,10 @@
                     {else}
                         <div class="big-price">{price $item.price $item.id_currency} {$smarty.session.Currency.title}</div>
                     {/if}
-
-                    <div class="return-prod">Вернем: <span class="red">1 500 грн</span></div>
-                    <div class="on-bonus-prod">на <a>Бонусный счет</a></div>
+                    {if $item.bonusAmount > 0}
+                        <div class="return-prod">Вернем: <span class="red">{$item.bonusAmount|round} грн</span></div>
+                        <div class="on-bonus-prod">на <a href="/page/bonus">Бонусный счет</a></div>
+                    {/if}
                 </div>
                 <div class="qweek-busket-prodadd-to-cart">
                     <a class="qweek-busket-prod open-in-popup add-to-cart bask acty" data-id="274567"
