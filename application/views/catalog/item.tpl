@@ -32,30 +32,22 @@
                             грн/мес</p>
                     </div>
                     {if $item.id_brand == '26' && $item.id_category != 60}
-                         <div class="itee">
-                             <img src="/assets/img/izee2.png" alt="">
-                             <p>Гарантия <span>36</span> мес</p>
-                         </div>
+                        <div class="itee">
+                            <img src="/assets/img/izee2.png" alt="">
+                            <p>Гарантия <span>36</span> мес</p>
+                        </div>
                     {/if}
                     {if $item.bestprice > $item.price || $item.id2==41385}
-                         <div class="itee">
-                             <img src="/assets/img/izee4.png" alt="">
-                             <p>Лучшая <span>цена</span></p>
-                         </div>
-                     {/if}
-                    {if $item.acttype !== 'gift'&& $x3 > 0 || $item.id == '21465'}
+                        <div class="itee">
+                            <img src="/assets/img/izee4.png" alt="">
+                            <p>Лучшая <span>цена</span></p>
+                        </div>
+                    {/if}
+                    {*{if $item.acttype !== 'gift'&& $x3 > 0 || $item.id == '21465'}
                          <div class="itee change">
                              <img src="/assets/img/izee5.png" alt="">
                              <p>Замена</p>
                          </div>
-                    {/if}
-                    {*{if $item.acttype=='gift'}
-                        <div class="itee present">
-                            <div class="numeral"><img src="/assets/img/present-img.png"
-                                                      alt="present"></div>
-                            <p>Подарок!</p>
-                            <img src="/assets/img/present.png" alt="present">
-                        </div>
                     {/if}*}
                 </div>
 
@@ -103,10 +95,10 @@
                     <span itemprop="name">{$item.name}</span>
                 </h1>
                 <div class="title-slide-show flexibal">
-                    <div class="red">10 500 грн</div>
+                    <div class="red">{$item.price}</div>
 
                     <div class="busket-marg">
-                        <a class="qweek-busket-prod open-in-popup add-to-cart bask acty" data-id="600567"
+                        <a class="qweek-busket-prod open-in-popup add-to-cart bask acty" data-id="{$item.id}"
                            data-name="Кофеварка ELECTROLUX ручная" data-img="/assets/img/product/prod-5.png"
                            data-price="1500"
                            data-bonus="100">
@@ -158,6 +150,13 @@
             <!--           ЦЕНА КОРЗИНА             -->
             <div class="price-busket-kredit">
                 <div class="prod-price">
+                    <pre>
+                        {$item|@debug_print_var}
+                    </pre>
+                    {php}
+                        die;
+                    {/php}
+
                     <div class="old-price">12 500 грн</div>
                     <div class="red big-price"> 10 500 грн</div>
                     <div class="return-prod">Вернем: <span class="red">1 500 грн</span></div>
