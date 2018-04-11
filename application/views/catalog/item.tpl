@@ -5,7 +5,7 @@
 
     {*--------------------------------------------------------------------------------------------------------*}
 
-
+    {debug}
     <div class="left-right slider-wrap jq-move-slider jq-move-slider-wrap">
         <div class="ourr">
             <div class="slider-product jq-move-slider-product">
@@ -29,9 +29,11 @@
                     </div>
                     <div class="itee">
                         <img src="/assets/img/izee4.png" alt="">
-                        <p>Лучша <span>цена</span></p>
+                        <p>Лучшая <span>цена</span></p>
                     </div>
                 </div>
+
+
                 <div class="slider-prod slider-for">
                     <div class="clone-slide">
                         <img src="/assets/img/product/prod-1.jpg">
