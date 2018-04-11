@@ -2,6 +2,11 @@
 
 <div class="container wrap">
 
+
+    {include file='catalog/also-by.tpl'}
+    {include file='catalog/the-same-items.tpl'}
+
+
     {if $seo_text_bottom}
         <div class="equip">
             <div class="nozer wrap">
