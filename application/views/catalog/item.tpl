@@ -25,7 +25,7 @@
                     </div>
                     <div class="itee">
                         <img src="/assets/img/izee3.png" alt="">
-                        <p>от
+                        {*<p>от
                             <span>
                                 {if $item.rent >= 25}
                                     {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=8}
@@ -37,7 +37,7 @@
                                     {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=3}
                                 {/if}
                             </span>
-                            грн/мес</p>
+                            грн/мес</p>*}
                     </div>
                     {if $item.id_brand == '26' && $item.id_category != 60}
                         <div class="itee">
