@@ -317,7 +317,7 @@
                                     <li><img src="/assets/img/payment/privat-bonus.png"></li>
 
                                     <li><img title="Дисконтный клуб ПриватБанка"
-                                             src="/assets/img/payment/privat-bonus.png"></li>
+                                             src="/assets/img/payment/vip_discount.png"></li>
                                 </ul>
                             </li>
                         </ul>
