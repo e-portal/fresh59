@@ -368,102 +368,36 @@
                 <div id="prod-info">
                     <div class="liner smaller-liner"><span>Описание стиральной машины Electrolux EWS 1054 NDU</span>
                     </div>
-                    <div><p>Отдельностоящая стиральная машина Electrolux EWF 1076 GDW с фронтальной загрузкой. Имеет
-                            специальную программу
-                            Обработки паром для мягкого разглаживания складок на одежде и устранению неприятного запаха.
-                            ФункцияTime Manager позволит адаптировать цикл стирки по Вашему расписанию. Светодиодные
-                            индикаторы обеспечат интуитивно понятный выбор настроек. Большой загрузочный люк значительно
-                            упрощает загрузку и выгрузку белья.</p></div>
+                    <div>{if $item.full_info}{$item.full_info}{else}{$item.short_info}{/if}</div>
                 </div>
                 <div id="prod-characteristic">
                     <table class="table-without-border">
-                        <tr>
-                            <td class="title-bold">Характеристика</td>
-                        </tr>
-                        <tr>
-                            <td>Установка</td>
-                            <td>отдельностоящая</td>
-                        </tr>
-                        <tr>
-                            <td>Загрузка</td>
-                            <td>фронтальная</td>
-                        </tr>
-                        <tr>
-                            <td>Максимальная загрузка белья</td>
-                            <td>7 кг</td>
-                        </tr>
-                        <tr>
-                            <td>Максимальная скорость отжима</td>
-                            <td>1000 об/мин</td>
-                        </tr>
-                        <tr>
-                            <td>Класс энергопотребления</td>
-                            <td>А+++</td>
-                        </tr>
-                        <tr>
-                            <td>Класс стирки</td>
-                            <td>А</td>
-                        </tr>
-                        <tr>
-                            <td>Класс отжима</td>
-                            <td>С</td>
-                        </tr>
-                        <tr>
-                            <td>Номинальное напряжение</td>
-                            <td>230 В</td>
-                        </tr>
-                        <tr>
-                            <td>Мощность подключения</td>
-                            <td>2200 Вт</td>
-                        </tr>
-                        <tr>
-                            <td>Уровень шума стирка</td>
-                            <td>56 дБ (А)</td>
-                        </tr>
-                        <tr>
-                            <td>Цвет</td>
-                            <td>белый</td>
-                        </tr>
-                        <tr>
-                            <td>Размеры (В х Ш х Г)</td>
-                            <td>85 х 60 х 52,2 см</td>
-                        </tr>
-                        <tr>
-                            <td class="title-bold">Особенности модели</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>Контроль дисбаланса</p>
-                                <p> Технология Fuzzy Logic</p>
-                                <p> Функция отложенного старта</p>
-                                <p> Контроль пенообразования</p>
-                                <p> Инверторный двигатель для улучшения производительности и понижения шума</p>
-                                <p> Функция "Защита детей"</p>
-                                <p> Ножки: 4 регулируемые ножки</p>
-                                <p> Защита от протечек</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="title-bold">Программы стирки</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>Вкл./Выкл.</p>
-                                <p> Хлопок</p>
-                                <p> Хлопок эко</p>
-                                <p> Синтетика</p>
-                                <p> Деликатная стирка</p>
-                                <p> Шерсть Плюс</p>
-                                <p> Обработка паром</p>
-                                <p> Обработка паром - синтетика</p>
-                                <p> Steam Cottons</p>
-                                <p> Джинсы, Rinse (Rpm Dep)</p>
-                                <p> Spin / Drain</p>
-                                <p> Пуховые одеяла</p>
-                                <p> Спорт легкий</p>
-                                <p> Быстрая стирка</p>
-                            </td>
-                        </tr>
+
+                        {foreach from=$fields item=_group}
+                            {if $_group.name}
+                                <tr>
+                                    <th class="title-bold">{$_group.name}</th>
+                                </tr>
+                                {foreach from=$_group.fields item=_field name=td_dot1}
+                                    {if !empty($_field.value)}
+                                        <tr>
+                                            <td>{$_field.name}</td>
+                                            <td>{$_field.value}</td>
+                                        </tr>
+                                    {/if}
+                                {/foreach}
+
+                            {else}
+                                {foreach from=$_group.fields item=_field name=td_dot}
+                                    {if !empty($_field.value) || $_field.value!=''}
+                                        <tr>
+                                            <td>{$_field.name}</td>
+                                            <td>{$_field.value}</td>
+                                        </tr>
+                                    {/if}
+                                {/foreach}
+                            {/if}
+                        {/foreach}
                     </table>
                 </div>
                 <!--           end ТАБЛИЦА ХАРАКТЕРИСТИК           -->
