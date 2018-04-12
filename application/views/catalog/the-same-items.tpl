@@ -53,7 +53,7 @@
         <div class="senn-main watched-slider slider-more-prod">
             {foreach from=$otherItems item=brand}
                 {foreach from=$brand.items item=itemtopsale}
-                    {if $item.id_brand == $itemtopsale.id_brand}
+                    {if $item.id_brand == $itemtopsale.id_brand && $item.id != $itemtopsale.id}
                         <div class="item-senn">
                             <a class="sench"
                                href="/{$cat_info.subdomain}{iurl assoc.cat_latin=$itemtopsale.cat_latin_single assoc.parent=$itemtopsale.parentname assoc.cat=$itemtopsale.cat_onename assoc.brand=$itemtopsale.brand assoc.item=$itemtopsale.name}">
