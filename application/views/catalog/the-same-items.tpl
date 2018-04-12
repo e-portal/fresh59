@@ -50,7 +50,8 @@
 
         </div>
         {foreach from=$brand.items item=itemtopsale}
-            {*<pre>{$itemtopsale|@debug_print_var}</pre>*}
+            <h2>{$item.id_brand}</h2>
+            <pre>{$itemtopsale|@debug_print_var}</pre>
             {if $item.id_brand == $itemtopsale.id_brand}
                 <div class="senn-main watched-slider slider-more-prod">
                 <div class="item-senn">
