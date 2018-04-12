@@ -215,7 +215,7 @@
                 <!-- Action -->
                 {if $item.acttype=='gift'}
                     <pre>
-                        {$action|var_dump}
+                        {$action|@debug_print_var}
                     </pre>
                     <div class="take-gift">
                         <div class="title-gift"><span>{$action.name}</span></div>
