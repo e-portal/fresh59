@@ -1,5 +1,4 @@
-
-{*<div class="other-items-box">
+<div class="other-items-box">
     <ul>
         {foreach from=$otherItems item=brand}
             <li>
@@ -32,9 +31,10 @@
             </li>
         {/foreach}
     </ul>
-</div>*}
+</div>
 
-<pre>{$otherItems|var_dump}</pre>
+{*<pre>{$otherItems|var_dump}</pre>*}
+<pre>{$item|@debug_print_var}</pre>
 
 {*$assocItemsVmeste*}
 
@@ -43,6 +43,7 @@
     <div class="container">
         <div class="liner"><span>Другие модели</span></div>
 
+        {*{foreach from=$otherItems item=brand}
 
         <div class="parag">
             <div class="other-model">Стиральные машины:</div>
@@ -53,6 +54,7 @@
             <div class="other-model other-model-item"><a>Electrolux</a> <span>(25)</span></div>
             <div class="other-model other-model-item"><a>Samsung</a> <span>(36)</span></div>
         </div>
+        {/foreach}*}
 
         <div class="senn-main watched-slider slider-more-prod">
             <div class="item-senn">
