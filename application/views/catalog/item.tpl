@@ -330,7 +330,7 @@
                 <div id="tab03" class="tab-contents">
                     <div class="tab-contents-wrap">
                         {if $brand_info.guarantee}
-                            <a class="li_garant" href="/page/guarantee">Гарантия</a>
+                            <a class="bluee" href="/page/guarantee">Гарантия</a>
                             <p>
                                 {if $item.id_brand == 9 && $item.id_category == 217}
                                     5 лет
@@ -354,7 +354,7 @@
                 <div id="tab04" class="tab-contents">
                     <div class="tab-contents-wrap">
                         <div>
-                            <a href="/files/instruction/{$item.id}.{$item.instruction}">
+                            <a class="bluee" href="/files/instruction/{$item.id}.{$item.instruction}">
                                 Скачать инструкцию
                             </a>
                         </div>
