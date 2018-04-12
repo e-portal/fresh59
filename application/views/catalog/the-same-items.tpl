@@ -55,7 +55,8 @@
                 {foreach from=$brand.items item=itemtopsale}
                     {if $item.id_brand == $itemtopsale.id_brand}
                         <div class="item-senn">
-                            <a class="sench" href="/">
+                            <a class="sench"
+                               href="/{$cat_info.subdomain}{iurl assoc.cat_latin=$itemtopsale.cat_latin_single assoc.parent=$itemtopsale.parentname assoc.cat=$itemtopsale.cat_onename assoc.brand=$itemtopsale.brand assoc.item=$itemtopsale.name}">
 
 
                                 {if $itemtopsale.id_availability == 1 || $item.id_availability == 4}
