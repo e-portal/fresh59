@@ -254,7 +254,9 @@
             <!--           end ТАЙМЕР УСПЕЙ ЗАКАЗАТЬ             -->
 
             <!--           СЛАЙДЕР ВМЕСТЕ ДЕШЕВЛЕ             -->
-            {include file='catalog/cheaper-slider.tpl'}
+            {if $assocItems|@count > 0 && !$item.archive}
+                {include file='catalog/cheaper-slider.tpl'}
+            {/if}
             <!--           end СЛАЙДЕР ВМЕСТЕ ДЕШЕВЛЕ             -->
 
 
