@@ -50,7 +50,7 @@
 
         </div>
         {foreach from=$brand.items item=itemtopsale}
-            <pre>{$itemtopsale|var_dump}</pre>
+            <pre>{$itemtopsale|@debug_print_var}</pre>
             {*<div class="senn-main watched-slider slider-more-prod">
                 <div class="item-senn">
                     <a class="sench" href="/">
