@@ -276,8 +276,13 @@
                             <div class="threee">
                                 <img src="/assets/img/orig3.png" alt="">
                                 <div class="">
-                                    <p>По Киеву </p>
-                                    <p><span>БЕСПЛАТНО</span></p>
+                                    {if $item.price > 2000/$currencies[6].rate}
+                                        <p>По Киеву до квартиры</p>
+                                        <p><span>БЕСПЛАТНО</span></p>
+                                    {else}
+                                        <p>доставка по Киеву 40грн.</p>
+                                        <p>доставляем по Украине</p>
+                                    {/if}
                                 </div>
                             </div>
                             <div class="threee">
@@ -299,15 +304,27 @@
                 </div>
                 <div id="tab02" class="tab-contents">
                     <div class="tab-contents-wrap">
-                        Отдельностоящая стиральная машина Electrolux EWF 1076 GDW с фронтальной загрузкой. Имеет
-                        специальную
-                        программу
-                        Обработки паром для мягкого разглаживания складок на одежде и устранению неприятного запаха.
-                        ФункцияTime Manager позволит адаптировать цикл стирки по Вашему расписанию. Светодиодные
-                        индикаторы
-                        обеспечат интуитивно понятный выбор настроек. Большой загрузочный люк значительно упрощает
-                        загрузку
-                        и выгрузку белья.
+                        <ul class="one_item_additional_ul">
+                            <li>
+                                <a class="li_payment" href="/page/payment">Оплата</a>
+                                <ul>
+                                    <li>наличными курьеру</li>
+                                    <li>наличными через отделение банка</li>
+                                    <li>по безналичному расчету</li>
+                                    <li>оплата карточкой</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="/images/icons/item/visa-mastercard.png">
+                                </span>
+                                <div>
+                                    <img src="/images/icons/item/bonus-plus.png">
+                                    <img title="Дисконтный клуб ПриватБанка"
+                                         src="/images/icons/item/vip_discount.png">
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div id="tab03" class="tab-contents">
