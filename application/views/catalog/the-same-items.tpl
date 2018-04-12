@@ -40,18 +40,14 @@
     <div class="container">
         <div class="liner"><span>Другие модели</span></div>
 
-        {*{foreach from=$otherItems item=brand}
 
         <div class="parag">
-            <div class="other-model">Стиральные машины:</div>
-            <div class="other-model other-model-item"><a>Indesit</a> <span>(12)</span></div>
-            <div class="other-model other-model-item"><a>Electrolux</a> <span>(25)</span></div>
-            <div class="other-model other-model-item"><a>Samsung</a> <span>(36)</span></div>
-            <div class="other-model other-model-item"><a>Indesit</a> <span>(12)</span></div>
-            <div class="other-model other-model-item"><a>Electrolux</a> <span>(25)</span></div>
-            <div class="other-model other-model-item"><a>Samsung</a> <span>(36)</span></div>
+            <div class="other-model">{$item.category}</div>
+            {foreach from=$otherItems item=brand}
+                <div class="other-model other-model-item"><a>{$brand.brand}</a> <span>({$brand|@count})</span></div>
+            {/foreach}
+
         </div>
-        {/foreach}*}
 
         <div class="senn-main watched-slider slider-more-prod">
             <div class="item-senn">
