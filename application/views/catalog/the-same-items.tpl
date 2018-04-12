@@ -50,10 +50,10 @@
             {/foreach}
 
         </div>
-        {foreach from=$otherItems item=brand}
-            {foreach from=$brand.items item=itemtopsale}
-                {if $item.id_brand == $itemtopsale.id_brand}
-                    <div class="senn-main watched-slider slider-more-prod">
+        <div class="senn-main watched-slider slider-more-prod">
+            {foreach from=$otherItems item=brand}
+                {foreach from=$brand.items item=itemtopsale}
+                    {if $item.id_brand == $itemtopsale.id_brand}
                         <div class="item-senn">
                             <a class="sench" href="/">
 
@@ -133,11 +133,9 @@
                                 </div>
                             </div>
                         </div>
-
-                    </div>
-                {/if}
+                    {/if}
+                {/foreach}
             {/foreach}
-        {/foreach}
-
+        </div>
     </div>
 </div>
