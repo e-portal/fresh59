@@ -66,7 +66,7 @@
                                     <h5 class="gray">Наличие уточняйте</h5>
                                 {/if}
                                 {if $itemtopsale.id_availability == 3}
-                                    <h5 class="blue">Под заказ</h5>
+                                    <h5 class="bluee">Под заказ</h5>
                                 {/if}
                                 <h4>
                                     {if $itemtopsale.cat_onename}{$itemtopsale.cat_onename}{else}{$itemtopsale.cat}{/if} {$itemtopsale.brand}
@@ -131,6 +131,14 @@
                                         <div class="itee change">
                                             <img src="/assets/img/izee5.png" alt="">
                                             <p>Замена</p>
+                                        </div>
+                                    {/if}
+                                    {if $item.acttype=='gift'}
+                                        <div class="itee present">
+                                            <div class="numeral"><img src="/assets/img/present-img.png"
+                                                                      alt="present"></div>
+                                            <p>Подарок!</p>
+                                            <img src="/assets/img/present.png" alt="present">
                                         </div>
                                     {/if}
 
