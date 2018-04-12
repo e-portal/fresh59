@@ -156,7 +156,7 @@
                                 <div class="bakk">
                                     <div class="left-bakk">
                                         <p>{price $itemtopsale.price $item.id_currency} {$smarty.session.Currency.title}</p>
-                                        <p>Вернем: <span>{$itemtopsale.bonusAmount|round} грн</span></p>
+                                        <p>Вернем: <span>{$itemtopsale.bonus_amount|round} грн</span></p>
                                     </div>
                                     <div class="right-bakk">
                                         <object type="lol/wut">
