@@ -214,9 +214,9 @@
             {if $action}
                 <!-- Action -->
                 {if $item.acttype=='gift'}
-                    {*<pre>
-                        {$action|@debug_print_var}
-                    </pre>*}
+                    <pre>
+                        {$item|@debug_print_var}
+                    </pre>
                     <div class="take-gift">
                         <div class="title-gift"><span>Успей заказать и получить подарок!</span></div>
                         <div class="take-gift-content">

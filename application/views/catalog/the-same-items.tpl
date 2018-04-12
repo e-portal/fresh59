@@ -34,8 +34,6 @@
 </div>
 
 {*<pre>{$otherItems|var_dump}</pre>*}
-<pre>{$item|@debug_print_var}</pre>
-
 {*$assocItemsVmeste*}
 
 
