@@ -136,10 +136,10 @@
                                     {if $itemtopsale.acttype=='gift'}
                                         <div class="itee present">
                                             <div class="numeral">
-                                                <img src='/images/catalog/{gift assoc.id=$itemtopsale.actid}'/>
+                                                <img src="/assets/img/present-img.png" alt="present">
                                             </div>
                                             <p>Подарок!</p>
-                                            <img src="/assets/img/present.png" alt="present">
+                                            <img src='/images/catalog/{gift assoc.id=$itemtopsale.actid}'/>
                                         </div>
                                     {/if}
 
