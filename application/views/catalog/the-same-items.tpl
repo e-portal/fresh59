@@ -1,4 +1,4 @@
-<div class="other-items-box">
+{*<div class="other-items-box">
     <ul>
         {foreach from=$otherItems item=brand}
             <li>
@@ -31,7 +31,7 @@
             </li>
         {/foreach}
     </ul>
-</div>
+</div>*}
 
 {*<pre>{$otherItems|var_dump}</pre>*}
 {*$assocItemsVmeste*}
