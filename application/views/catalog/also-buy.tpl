@@ -18,7 +18,7 @@
 
             {foreach from=$assocItemsVmeste item=assocItemsCats name=similarItems}
                 {foreach from=$assocItemsCats.items item=assocItem}
-                    <pre>{$assocItem|@debug_print_var}</pre>
+                    {*<pre>{$assocItem|@debug_print_var}</pre>*}
                     <div class="item-senn">
                         <a class="sench"
                            href="{iurl assoc.parent=$assocItem.parentname assoc.subdomain=$assocItem.subdomain assoc.cat_latin=$assocItem.cat_latin_single assoc.brand=$assocItem.brand assoc.item=$assocItem.name}">
@@ -39,15 +39,15 @@
                             </h4>
 
 
-                            {*<div class="centr">
+                            <div class="centr">
                                 <div class="itee-imgg">
-                                    <img {if $itemtopsale.imgid} src="/images/catalog/{$itemtopsale.imgid}_s.{$itemtopsale.imgext}" {else}
+                                    <img {if $assocItem.imgid} src="/images/catalog/{$assocItem.imgid}_s.{$assocItem.imgext}" {else}
                                         src="{$url.img}/no-image.jpg" {/if}
-                                            alt="{$itemtopsale.name}-{$itemtopsale.brand}">
+                                            alt="{$assocItem.name}-{$assocItem.brand}">
                                 </div>
 
 
-                                {if $itemtopsale.bonus_amount>0}
+                                {*{if $itemtopsale.bonus_amount>0}
                                     <div class="itee">
                                         <img src="/assets/img/izee0.png" alt="">
                                         <p>Вернем: <span>{$itemtopsale.bonus_amount|round} грн</span></p>
@@ -106,7 +106,7 @@
                                         <p>Подарок!</p>
                                         <img src='/images/catalog/{gift assoc.id=$itemtopsale.actid}'/>
                                     </div>
-                                {/if}
+                                {/if}*}
 
                             </div>
                             <object type="lol/wut">
@@ -139,7 +139,7 @@
                                     <a href="">Сравнение</a>
                                 </div>
                             </div>
-                        </div>*}
+                        </div>
                     </div>
                 {/foreach}
             {/foreach}
