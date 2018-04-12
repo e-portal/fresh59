@@ -36,7 +36,6 @@
 {*<pre>{$otherItems|var_dump}</pre>*}
 {*$assocItemsVmeste*}
 
-
 <div class="small-product">
     <div class="container">
         <div class="liner"><span>Другие модели</span></div>
