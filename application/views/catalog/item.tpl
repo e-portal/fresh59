@@ -4,7 +4,9 @@
     {*<pre>
         {$item|var_dump}
     </pre>*}
-
+    <pre>
+        {$item|@debug_print_var}
+    </pre>
     {*--------------------------------------------------------------------------------------------------------*}
 
     <div class="left-right slider-wrap jq-move-slider jq-move-slider-wrap">
@@ -214,9 +216,6 @@
             {if $action}
                 <!-- Action -->
                 {if $item.acttype=='gift'}
-                    <pre>
-                        {$item|@debug_print_var}
-                    </pre>
                     <div class="take-gift">
                         <div class="title-gift"><span>Успей заказать и получить подарок!</span></div>
                         <div class="take-gift-content">
