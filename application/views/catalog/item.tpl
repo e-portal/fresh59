@@ -310,8 +310,11 @@
                                 </ul>
                             </li>
                             <li>
-                                <img src="/images/icons/item/visa-mastercard.png">
-                                <img src="/images/icons/item/bonus-plus.png">
+                                <img src="/assets/img/payment/liqpay2.png">
+                                <img src="/assets/img/payment/mastercard-logo.png">
+                                <img src="/assets/img/payment/visa-logo.png">
+                                <img src="/assets/img/payment/privat-bonus.png">
+
                                 <img title="Дисконтный клуб ПриватБанка"
                                      src="/images/icons/item/vip_discount.png">
                             </li>
