@@ -5,7 +5,7 @@
             <a class="arrow-right bluee">Смотреть все</a>
         </div>
 
-        <pre>{$assocItemsVmeste|@debug_print_var}</pre>
+        <pre>{$assocItemsVmeste|var_dump}</pre>
 
         <div class="parag parag-prev">
             <div class="parag-item active">Все категории</div>
