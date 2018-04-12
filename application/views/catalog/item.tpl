@@ -310,13 +310,15 @@
                                 </ul>
                             </li>
                             <li>
-                                <img src="/assets/img/payment/liqpay2.png">
-                                <img src="/assets/img/payment/mastercard-logo.png">
-                                <img src="/assets/img/payment/visa-logo.png">
-                                <img src="/assets/img/payment/privat-bonus.png">
+                                <ul>
+                                    <li><img src="/assets/img/payment/liqpay2.png"></li>
+                                    <li><img src="/assets/img/payment/mastercard-logo.png"></li>
+                                    <li><img src="/assets/img/payment/visa-logo.png"></li>
+                                    <li><img src="/assets/img/payment/privat-bonus.png"></li>
 
-                                <img title="Дисконтный клуб ПриватБанка"
-                                     src="/images/icons/item/vip_discount.png">
+                                    <li><img title="Дисконтный клуб ПриватБанка"
+                                             src="/assets/img/payment/privat-bonus.png"></li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
