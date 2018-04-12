@@ -50,12 +50,28 @@
 
         </div>
         {foreach from=$brand.items item=itemtopsale}
-            <pre>{$itemtopsale|@debug_print_var}</pre>
-            {*<div class="senn-main watched-slider slider-more-prod">
+            {*<pre>{$itemtopsale|@debug_print_var}</pre>*}
+            {if $item.id_brand == $itemtopsale.id_brand}
+                <div class="senn-main watched-slider slider-more-prod">
                 <div class="item-senn">
                     <a class="sench" href="/">
-                        <h5 class="green">В наличии</h5>
-                        <h4>Стиральная машина Electro ELECTROLUX</h4>
+
+
+                        {if $itemtopsale.id_availability == 1 || $item.id_availability == 4}
+                            <h5 class="green">В наличии</h5>
+                        {/if}
+                        {if $itemtopsale.id_availability == 2}
+                            <h5 class="gray">Наличие уточняйте</h5>
+                        {/if}
+                        {if $itemtopsale.id_availability == 3}
+                            <h5 class="blue">Под заказ</h5>
+                        {/if}
+                        <h4>
+                            {if $itemtopsale.cat_onename}{$itemtopsale.cat_onename}{else}{$itemtopsale.cat}{/if} {$itemtopsale.brand}
+                            {$itemtopsale.name}
+                        </h4>
+
+
                         <div class="centr">
                             <div class="itee-imgg"><img src="/assets/img/senn2.png" alt=""></div>
                             <div class="itee">
@@ -117,7 +133,8 @@
                     </div>
                 </div>
 
-            </div>*}
+                </div>
+            {/if}
         {/foreach}
 
     </div>
