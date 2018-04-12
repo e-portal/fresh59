@@ -75,7 +75,13 @@
 
 
                                 <div class="centr">
-                                    <div class="itee-imgg"><img src="/assets/img/senn2.png" alt=""></div>
+                                    <div class="itee-imgg">
+                                        <img {if $itemtopsale.imgid} src="/images/catalog/{$itemtopsale.imgid}_s.{$itemtopsale.imgext}" {else}
+                                            src="{$url.img}/no-image.jpg" {/if}
+                                                alt="{$itemtopsale.name}-{$itemtopsale.brand}">
+                                    </div>
+
+
                                     <div class="itee">
                                         <img src="/assets/img/izee0.png" alt="">
                                         <p>Вернем: <span>500 грн</span></p>
