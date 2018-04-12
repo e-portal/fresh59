@@ -12,9 +12,11 @@
 
         </div>
         <div class="senn-main watched-slider slider-more-prod">
-            {foreach from=$otherItems item=brand}
+            {assign var="slide_iteration" value=0}
+            {foreach from=$otherItems item=brand name=slider_brands}
                 {foreach from=$brand.items item=itemtopsale name=slider_items}
-                    {if $item.id != $itemtopsale.id && $smarty.foreach.slider_items.iteration <= 15}
+                    {if $item.id != $itemtopsale.id && $slide_iteration <= 15}
+                        {assign var="slide_iteration" value=$slide_iteration+1}
                         <div class="item-senn">
                             <a class="sench"
                                href="/{$cat_info.subdomain}{iurl assoc.cat_latin=$itemtopsale.cat_latin_single assoc.parent=$itemtopsale.parentname assoc.cat=$itemtopsale.cat_onename assoc.brand=$itemtopsale.brand assoc.item=$itemtopsale.name}">
