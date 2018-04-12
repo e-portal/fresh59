@@ -44,7 +44,8 @@
         <div class="parag">
             <div class="other-model">{$item.category}</div>
             {foreach from=$otherItems item=brand}
-                <div class="other-model other-model-item"><a>{$brand.brand}</a> <span>({$brand|@count})</span></div>
+                <div class="other-model other-model-item"><a>{$brand.brand}</a> <span>({$brand.items|@count})</span>
+                </div>
             {/foreach}
 
         </div>
