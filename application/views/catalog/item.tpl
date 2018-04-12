@@ -214,11 +214,11 @@
             {if $action}
                 <!-- Action -->
                 {if $item.acttype=='gift'}
-                    <pre>
+                    {*<pre>
                         {$action|@debug_print_var}
-                    </pre>
+                    </pre>*}
                     <div class="take-gift">
-                        <div class="title-gift"><span>{$action.name}</span></div>
+                        <div class="title-gift"><span>Успей заказать и получить подарок!</span></div>
                         <div class="take-gift-content">
                             <div class="timer" data-year="{getdate arr=$action.end_date arr='Y'}"
                                  data-month="{getdate arr=$action.end_date arr='m'}"
@@ -228,7 +228,7 @@
                                     <img src='/images/catalog/{gift assoc.id=$item.actid}'/>
                                 </div>
                                 <div class="gift-prod-text">
-                                    <a class="gift-prod-title">Чайник ELECTROLUX Electro чайник</a>
+                                    <a class="gift-prod-title">{$action.short_info}</a>
                                     <div class="in-gift red">в подарок!</div>
                                 </div>
                             </div>
