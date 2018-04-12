@@ -511,7 +511,7 @@
 
 
 
-    {include file='catalog/also-by.tpl'}
+    {include file='catalog/also-buy.tpl'}
     {include file='catalog/the-same-items.tpl'}
 
 

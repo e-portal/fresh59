@@ -1,8 +1,11 @@
 <div class="small-product slider-till-here">
     <div class="container">
-        <div class="liner" id="prod-accessories"><span>С этим товаром покупают</span> <a class="arrow-right bluee">Смотреть
-                все</a></div>
+        <div class="liner" id="prod-accessories">
+            <span>С этим товаром покупают</span>
+            <a class="arrow-right bluee">Смотреть все</a>
+        </div>
 
+        <pre>{$assocItemsVmeste|@debug_print_var}</pre>
 
         <div class="parag parag-prev">
             <div class="parag-item active">Все категории</div>
@@ -11,6 +14,7 @@
             <div class="parag-item">Для уборки</div>
             <div class="parag-item">Средства для стирки</div>
         </div>
+
 
         <div class="senn-main watched-slider slider-more-prod">
             <div class="item-senn">

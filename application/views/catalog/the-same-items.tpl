@@ -1,45 +1,6 @@
-{*<div class="other-items-box">
-    <ul>
-        {foreach from=$otherItems item=brand}
-            <li>
-                <span>{$brand.brand}</span>
-                <ul>
-                    {foreach from=$brand.items item=itemtopsale}
-                        <li class="data-item-{$itemtopsale.id}">
-                            <em><a href="/{$cat_info.subdomain}{iurl assoc.cat_latin=$itemtopsale.cat_latin_single assoc.parent=$itemtopsale.parentname assoc.cat=$itemtopsale.cat_onename assoc.brand=$itemtopsale.brand assoc.item=$itemtopsale.name}"
-                                   {if $itemtopsale.id_availability== 2 || $itemtopsale.id_availability==
-                                   3}class="disabled"
-                                   rel="tooltip" {/if} {if $itemtopsale.id_availability ==
-                                2}data-original-title="Наличие уточняйте"{/if} {if $itemtopsale.id_availability
-                                == 3}data-original-title="Под заказ"{/if}>{$itemtopsale.name}</a></em>
-                            {if $itemtopsale.acttype=='gift'}
-                                <i class="mini-icon mini-icon-gift" rel="tooltip"
-                                   data-original-title="Подарок"></i>
-                            {/if}
-                            {if $itemtopsale.specprice && ($itemtopsale.bdprice > $itemtopsale.price) &&
-                            (($itemtopsale.bdprice - $itemtopsale.price)/$itemtopsale.price > 0.01)}
-                                <i class="mini-icon mini-icon-sale" rel="tooltip"
-                                   data-original-title="Скидка"></i>
-                            {/if}
-                            {if $itemtopsale.bestprice > $itemtopsale.price}
-                                <i class="mini-icon mini-icon-price" rel="tooltip"
-                                   data-original-title="Лучшая цена"></i>
-                            {/if}
-                        </li>
-                    {/foreach}
-                </ul>
-            </li>
-        {/foreach}
-    </ul>
-</div>*}
-
-{*<pre>{$otherItems|var_dump}</pre>*}
-{*$assocItemsVmeste*}
-
 <div class="small-product">
     <div class="container">
         <div class="liner"><span>Другие модели</span></div>
-
 
         <div class="parag">
             <div class="other-model">{$item.category}</div>
