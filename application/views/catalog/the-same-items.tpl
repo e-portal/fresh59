@@ -44,97 +44,99 @@
         <div class="parag">
             <div class="other-model">{$item.category}</div>
             {foreach from=$otherItems item=brand}
-                <pre>{$otherItems|@debug_print_var}</pre>
+                {*<pre>{$otherItems|@debug_print_var}</pre>*}
                 <div class="other-model other-model-item"><a>{$brand.brand}</a> <span>({$brand.items|@count})</span>
                 </div>
             {/foreach}
 
         </div>
-        {foreach from=$brand.items item=itemtopsale}
-            {if $item.id_brand == $itemtopsale.id_brand}
-                <div class="senn-main watched-slider slider-more-prod">
-                <div class="item-senn">
-                    <a class="sench" href="/">
+        {foreach from=$otherItems item=brand}
+            {foreach from=$brand.items item=itemtopsale}
+                {if $item.id_brand == $itemtopsale.id_brand}
+                    <div class="senn-main watched-slider slider-more-prod">
+                        <div class="item-senn">
+                            <a class="sench" href="/">
 
 
-                        {if $itemtopsale.id_availability == 1 || $item.id_availability == 4}
-                            <h5 class="green">В наличии</h5>
-                        {/if}
-                        {if $itemtopsale.id_availability == 2}
-                            <h5 class="gray">Наличие уточняйте</h5>
-                        {/if}
-                        {if $itemtopsale.id_availability == 3}
-                            <h5 class="blue">Под заказ</h5>
-                        {/if}
-                        <h4>
-                            {if $itemtopsale.cat_onename}{$itemtopsale.cat_onename}{else}{$itemtopsale.cat}{/if} {$itemtopsale.brand}
-                            {$itemtopsale.name}
-                        </h4>
+                                {if $itemtopsale.id_availability == 1 || $item.id_availability == 4}
+                                    <h5 class="green">В наличии</h5>
+                                {/if}
+                                {if $itemtopsale.id_availability == 2}
+                                    <h5 class="gray">Наличие уточняйте</h5>
+                                {/if}
+                                {if $itemtopsale.id_availability == 3}
+                                    <h5 class="blue">Под заказ</h5>
+                                {/if}
+                                <h4>
+                                    {if $itemtopsale.cat_onename}{$itemtopsale.cat_onename}{else}{$itemtopsale.cat}{/if} {$itemtopsale.brand}
+                                    {$itemtopsale.name}
+                                </h4>
 
 
-                        <div class="centr">
-                            <div class="itee-imgg"><img src="/assets/img/senn2.png" alt=""></div>
-                            <div class="itee">
-                                <img src="/assets/img/izee0.png" alt="">
-                                <p>Вернем: <span>500 грн</span></p>
-                            </div>
-                            <div class="itee">
-                                <img src="/assets/img/izee1.png" alt="">
-                                <p>от <span>500</span> грн/мес</p>
-                            </div>
-                            <div class="itee">
-                                <img src="/assets/img/izee3.png" alt="">
-                                <p>от <span>1200</span> грн/мес</p>
-                            </div>
-                            <div class="itee">
-                                <img src="/assets/img/izee2.png" alt="">
-                                <p>Гарантия <span>12</span> мес</p>
-                            </div>
-                            <div class="itee">
-                                <img src="/assets/img/izee4.png" alt="">
-                                <p>Лучша <span>цена</span></p>
-                            </div>
-                            <div class="itee present">
-                                <div class="numeral"><img src="/assets/img/present-img.png" alt="present"></div>
-                                <p>Подарок!</p>
-                                <img src="/assets/img/present.png" alt="present">
-                            </div>
-                        </div>
-                        <object type="lol/wut">
-                            <a href="/" class="otzv">
-                                <div class="left-otzv">
-                                    <img src="/assets/img/patr.png" alt="">
+                                <div class="centr">
+                                    <div class="itee-imgg"><img src="/assets/img/senn2.png" alt=""></div>
+                                    <div class="itee">
+                                        <img src="/assets/img/izee0.png" alt="">
+                                        <p>Вернем: <span>500 грн</span></p>
+                                    </div>
+                                    <div class="itee">
+                                        <img src="/assets/img/izee1.png" alt="">
+                                        <p>от <span>500</span> грн/мес</p>
+                                    </div>
+                                    <div class="itee">
+                                        <img src="/assets/img/izee3.png" alt="">
+                                        <p>от <span>1200</span> грн/мес</p>
+                                    </div>
+                                    <div class="itee">
+                                        <img src="/assets/img/izee2.png" alt="">
+                                        <p>Гарантия <span>12</span> мес</p>
+                                    </div>
+                                    <div class="itee">
+                                        <img src="/assets/img/izee4.png" alt="">
+                                        <p>Лучша <span>цена</span></p>
+                                    </div>
+                                    <div class="itee present">
+                                        <div class="numeral"><img src="/assets/img/present-img.png" alt="present"></div>
+                                        <p>Подарок!</p>
+                                        <img src="/assets/img/present.png" alt="present">
+                                    </div>
                                 </div>
-                                <div class="right-otzv">
-                                    <span>10 отзывов</span>
-                                </div>
-                            </a></object>
-                        <div class="bakk">
-                            <div class="left-bakk">
-                                <p>2 500 грн</p>
-                                <p>Вернем: <span>500 грн</span></p>
-                            </div>
-                            <div class="right-bakk">
                                 <object type="lol/wut">
-                                    <a class="bask acty" href="javascript:void(0)"><span>В корзину</span></a>
-                                </object>
+                                    <a href="/" class="otzv">
+                                        <div class="left-otzv">
+                                            <img src="/assets/img/patr.png" alt="">
+                                        </div>
+                                        <div class="right-otzv">
+                                            <span>10 отзывов</span>
+                                        </div>
+                                    </a></object>
+                                <div class="bakk">
+                                    <div class="left-bakk">
+                                        <p>2 500 грн</p>
+                                        <p>Вернем: <span>500 грн</span></p>
+                                    </div>
+                                    <div class="right-bakk">
+                                        <object type="lol/wut">
+                                            <a class="bask acty" href="javascript:void(0)"><span>В корзину</span></a>
+                                        </object>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="hovv">
+                                <div class="news">
+                                    <div class="left-butt">
+                                        <a href="">В избранное</a>
+                                    </div>
+                                    <div class="right-butt">
+                                        <a href="">Сравнение</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </a>
-                    <div class="hovv">
-                        <div class="news">
-                            <div class="left-butt">
-                                <a href="">В избранное</a>
-                            </div>
-                            <div class="right-butt">
-                                <a href="">Сравнение</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                </div>
-            {/if}
+                    </div>
+                {/if}
+            {/foreach}
         {/foreach}
 
     </div>
