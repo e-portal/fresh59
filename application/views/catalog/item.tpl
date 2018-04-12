@@ -1,8 +1,8 @@
 ﻿{include file='layouts/_header.tpl'}
 
 <div class="container wrap">
-    {*<pre>{$item|var_dump}</pre>*}
-    <pre>{$item|@debug_print_var}</pre>
+    <pre>{$item|var_dump}</pre>
+    {*<pre>{$item|@debug_print_var}</pre>*}
     {*--------------------------------------------------------------------------------------------------------*}
 
     <div class="left-right slider-wrap jq-move-slider jq-move-slider-wrap">
