@@ -318,7 +318,6 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
 
         $this->view->css_int = '
                 <link rel="stylesheet" href="/assets/css/product.css">
-                <link rel="stylesheet" href="/assets/css/mob-question.css">
             ';
 
 

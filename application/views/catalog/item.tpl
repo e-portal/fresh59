@@ -366,7 +366,10 @@
             <div class="product-container">
                 <!--           ТАБЛИЦА ХАРАКТЕРИСТИК                 -->
                 <div id="prod-info">
-                    <div class="liner smaller-liner"><span>Описание стиральной машины Electrolux EWS 1054 NDU</span>
+                    <div class="liner smaller-liner">
+                        <span>
+                            Описание - {if $item.category_onename}{$item.category_onename}{else}{$item.category}{/if} {$item.brand} {$item.name}
+                        </span>
                     </div>
                     <div>{if $item.full_info}{$item.full_info}{else}{$item.short_info}{/if}</div>
                 </div>
