@@ -306,7 +306,7 @@
 
                                     {foreach from=$articles item=article}
                                         <div class="items">
-                                            <a href="/articles/{$article.url|mblower}" class="items">
+                                            <a href="/articles/{$article.url|mblower}">
 
                                                 {if isset($article.img) }
                                                     <img src="/assets/img/articles/{$article.img}">
