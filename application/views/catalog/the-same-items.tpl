@@ -44,14 +44,13 @@
         <div class="parag">
             <div class="other-model">{$item.category}</div>
             {foreach from=$otherItems item=brand}
+                <pre>{$otherItems|@debug_print_var}</pre>
                 <div class="other-model other-model-item"><a>{$brand.brand}</a> <span>({$brand.items|@count})</span>
                 </div>
             {/foreach}
 
         </div>
         {foreach from=$brand.items item=itemtopsale}
-            <h2>{$item.id_brand}</h2>
-            <pre>{$itemtopsale|@debug_print_var}</pre>
             {if $item.id_brand == $itemtopsale.id_brand}
                 <div class="senn-main watched-slider slider-more-prod">
                 <div class="item-senn">
