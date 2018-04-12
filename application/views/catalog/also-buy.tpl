@@ -5,16 +5,15 @@
             <a class="arrow-right bluee">Смотреть все</a>
         </div>
 
-        <pre>{$assocItemsVmeste|var_dump}</pre>
-
-        <div class="parag parag-prev">
-            <div class="parag-item active">Все категории</div>
-            <div class="parag-item">Для стиральных машин</div>
-            <div class="parag-item">Аксессуары</div>
-            <div class="parag-item">Для уборки</div>
-            <div class="parag-item">Средства для стирки</div>
-        </div>
-
+        {foreach from=$assocItemsVmeste item=assocItemsVmeste name=similarItems}
+            <div class="parag parag-prev">
+                {if 0 == $smarty.foreach.similarItems.index}
+                    <div class="parag-item active">Все категории</div>
+                {else}
+                    <div class="parag-item">{$assocItemsVmeste.name}</div>
+                {/if}
+            </div>
+        {/foreach}
 
         <div class="senn-main watched-slider slider-more-prod">
             <div class="item-senn">
