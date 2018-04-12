@@ -210,32 +210,43 @@
 
             <!--           ТАЙМЕР УСПЕЙ ЗАКАЗАТЬ             -->
 
-            {if $assocItem.acttype=='gift'}
-                <div class="take-gift">
-                    <div class="title-gift"><span>Успей заказать и получить подарок!</span></div>
-                    <div class="take-gift-content">
-                        <div class="timer" data-year="2019" data-month="03" data-days="25"></div>
-                        <div class="gift-prod">
-                            <div class="gift-prod-img">
-                                <img src="/images/catalog/{gift assoc.id=$assocItem.actid}" alt="">
+
+            {if $action}
+                <!-- Action -->
+                {if $item.acttype=='gift'}
+                    <div class="take-gift">
+                        <div class="title-gift"><span>{$action.name}</span></div>
+                        <div class="take-gift-content">
+                            <div class="timer" data-year="{getdate arr=$action.end_date arr='Y'}"
+                                 data-month="{getdate arr=$action.end_date arr='m'}"
+                                 data-days="{getdate arr=$action.end_date arr='d'}"></div>
+                            <div class="gift-prod">
+                                <div class="gift-prod-img">
+                                    <img src='/images/catalog/{gift assoc.id=$item.actid}'/>
+                                </div>
+                                <div class="gift-prod-text">
+                                    <a class="gift-prod-title">Чайник ELECTROLUX Electro чайник</a>
+                                    <div class="in-gift red">в подарок!</div>
+                                </div>
                             </div>
-                            <div class="gift-prod-text">
-                                <a class="gift-prod-title">Чайник ELECTROLUX Electro чайник</a>
-                                <div class="in-gift red">в подарок!</div>
+                            <div class="gift-price">
+                                <div class="">
+                                    {price $item.price $item.id_currency} {$smarty.session.Currency.title}
+                                </div>
+                                <div class="busket-marg">
+                                    <object type="lol/wut">
+                                        <a class="bask acty" href="javascript:void(0)"><span>В корзину</span></a>
+                                    </object>
+                                </div>
+                                <a href="/actions/show/{$action.id}" class="bluee">Подробнее об акции</a>
                             </div>
-                        </div>
-                        <div class="gift-price">
-                            <div class="">10 500 грн</div>
-                            <div class="busket-marg">
-                                <object type="lol/wut">
-                                    <a class="bask acty" href="javascript:void(0)"><span>В корзину</span></a>
-                                </object>
-                            </div>
-                            <a class="bluee">Подробнее об акции</a>
                         </div>
                     </div>
-                </div>
+                {/if}
+
+                <!-- Action End -->
             {/if}
+
 
             <!--           end ТАЙМЕР УСПЕЙ ЗАКАЗАТЬ             -->
 
