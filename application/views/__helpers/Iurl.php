@@ -4,7 +4,7 @@ class Zend_View_Helper_Iurl extends Zend_View_Helper_Abstract {
 
     public function iurl($params) {
         if ($params['subdomain']) {
-            $url = "https://fresh.590.ua/{$params['subdomain']}/";
+            $url = "http://fresh.590.ua/{$params['subdomain']}/";
         } else {
             $url = '/';
         }
