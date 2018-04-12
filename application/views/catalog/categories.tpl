@@ -45,7 +45,7 @@
         <div class="liner cent"><span>{$catName}</span></div>
         <div class="main-tehni">
             {foreach from=$categories item=cat name=categories}
-                <pre>{$cat|@debug_print_var}</pre>
+                {*<pre>{$cat|@debug_print_var}</pre>*}
                 <div class="item-tehni">
                     <div class="base-tehni">
                         <div class="left-tehni">
