@@ -133,10 +133,11 @@
                                             <p>Замена</p>
                                         </div>
                                     {/if}
-                                    {if $item.acttype=='gift'}
+                                    {if $itemtopsale.acttype=='gift'}
                                         <div class="itee present">
-                                            <div class="numeral"><img src="/assets/img/present-img.png"
-                                                                      alt="present"></div>
+                                            <div class="numeral">
+                                                <img src="/assets/img/present-img.png" alt="present">
+                                            </div>
                                             <p>Подарок!</p>
                                             <img src="/assets/img/present.png" alt="present">
                                         </div>
