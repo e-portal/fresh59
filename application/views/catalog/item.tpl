@@ -228,7 +228,7 @@
                                     <img src='/images/catalog/{gift assoc.id=$item.actid}'/>
                                 </div>
                                 <div class="gift-prod-text">
-                                    <a class="gift-prod-title">{$action.short_info}</a>
+                                    <a class="gift-prod-title">{$action.name}</a>
                                     <div class="in-gift red">в подарок!</div>
                                 </div>
                             </div>

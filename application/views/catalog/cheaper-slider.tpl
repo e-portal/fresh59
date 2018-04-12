@@ -25,14 +25,14 @@
                                     <img src="/images/catalog/{$assocItem.imgid}_s.{$assocItem.imgext}"/>
                                 </div>
                                 <div class="cheaper-prod-text">
-                                    <div class="prod-code">Код товара {$assocItem.id} <span class="red-sale">-5%</span>
+                                    <div class="prod-code">Код
+                                        товара {$assocItem.id} {*<span class="red-sale">-5%</span>*}
                                     </div>
                                     <a href="{iurl assoc.parent=$assocItem.parentname assoc.subdomain=$assocItem.subdomain assoc.cat_latin=$assocItem.cat_latin_single assoc.brand=$assocItem.brand assoc.item=$assocItem.name}"
                                        class="cheaper-prod-title">
                                         {$assocItem.cat_onename} {$assocItem.brand} {$assocItem.name}
                                     </a>
-                                    <div class="old-price">700 грн</div>
-                                    <div class="red price">500 грн</div>
+                                    <div class="price">{price $assocItem.price $assocItem.id_currency} грн</div>
                                 </div>
                             </div>
                             <div class="border-plus"><span>=</span></div>
@@ -40,8 +40,58 @@
                                 <div class="cheaper-prod-img">
                                 </div>
                                 <div class="cheaper-prod-text">
-                                    <div class="old-price">12 700 грн</div>
-                                    <div class="red price">12 500 грн</div>
+                                    <div class="old-price">
+                                        {math equation="(x+y)*$curs_evro_smarty|round" x=$item.price y=$assocItem.price}
+                                        грн
+                                    </div>
+                                    <div class="red price">
+
+                                        {if $item.rent >= 25}
+                                            {if $assocItem.rent >= 25}
+                                                {math equation="(x*0.92+y*0.92)*$curs_evro_smarty|round" x=$item.price y=$assocItem.price} грн
+                                            {elseif $assocItem.rent >= 12.5}
+                                                {math equation="(x*0.92+y*0.95)*$curs_evro_smarty|round" x=$item.price y=$assocItem.price} грн
+                                            {elseif $assocItem.rent >= 7.5}
+                                                {math equation="(x*0.92+y*0.98)*$curs_evro_smarty|round" x=$item.price y=$assocItem.price} грн
+                                            {else}
+                                                {math equation="(x*0.92+y)*$curs_evro_smarty|round" x=$item.price y=$assocItem.price} грн
+                                            {/if}
+
+                                        {elseif $item.rent >= 12.5}
+                                            {if $assocItem.rent >= 25}
+                                                {math equation="(x*0.95+y*0.92)*$curs_evro_smarty|round" x=$item.price y=$assocItem.price} грн
+                                            {elseif $assocItem.rent >= 12.5}
+                                                {math equation="(x*0.95+y*0.95)*$curs_evro_smarty|round" x=$item.price y=$assocItem.price} грн
+                                            {elseif $assocItem.rent >= 7.5}
+                                                {math equation="(x*0.95+y*0.98)*$curs_evro_smarty|round" x=$item.price y=$assocItem.price} грн
+                                            {else}
+                                                {math equation="(x*0.95+y)*$curs_evro_smarty|round" x=$item.price y=$assocItem.price} грн
+                                            {/if}
+
+                                        {elseif $item.rent >= 7.5}
+                                            {if $assocItem.rent >= 25}
+                                                {math equation="(x*0.98+y*0.92)*$curs_evro_smarty|round" x=$item.price y=$assocItem.price} грн
+                                            {elseif $assocItem.rent >= 12.5}
+                                                {math equation="(x*0.98+y*0.95)*$curs_evro_smarty|round" x=$item.price y=$assocItem.price} грн
+                                            {elseif $assocItem.rent >= 7.5}
+                                                {math equation="(x*0.98+y*0.98)*$curs_evro_smarty|round" x=$item.price y=$assocItem.price} грн
+                                            {else}
+                                                {math equation="(x*0.98+y)*$curs_evro_smarty|round" x=$item.price y=$assocItem.price} грн
+                                            {/if}
+
+                                        {else}
+                                            {if $assocItem.rent >= 25}
+                                                {math equation="(x+y*0.92)*$curs_evro_smarty|round" x=$item.price y=$assocItem.price} грн
+                                            {elseif $assocItem.rent >= 12.5}
+                                                {math equation="(x+y*0.95)*$curs_evro_smarty|round" x=$item.price y=$assocItem.price} грн
+                                            {elseif $assocItem.rent >= 7.5}
+                                                {math equation="(x+y*0.98)*$curs_evro_smarty|round" x=$item.price y=$assocItem.price} грн
+                                            {else}
+                                                {math equation="(x+y)*$curs_evro_smarty|round" x=$item.price y=$assocItem.price} грн
+                                            {/if}
+                                        {/if}
+
+                                    </div>
                                     <div class="busket-marg">
                                         <object type="lol/wut">
                                             <a class="bask acty" href="javascript:void(0)"><span>В корзину</span></a>
