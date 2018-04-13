@@ -5,7 +5,7 @@
         <div class="parag">
             <div class="other-model">{$item.category}</div>
             {foreach from=$otherItems item=brand}
-                {*<pre>{$otherItems|@debug_print_var}</pre>*}
+                <pre>{$brand|@debug_print_var}</pre>
                 <div class="other-model other-model-item"><a>{$brand.brand}</a> <span>({$brand.items|@count})</span>
                 </div>
             {/foreach}
