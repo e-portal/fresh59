@@ -8,7 +8,11 @@
             {foreach from=$otherItems item=brand}
                 <div class="other-model other-model-item">
                     {*<a href="http://fresh.590.ua/smallbt/frozens-yogurt/brand/redmond">*}
-                    <a href="/{$cat_info.subdomain}/">
+                    <a href="/{$cat_info.subdomain}
+                    {iurl assoc.cat_latin=$cat_info.latin_name
+                    assoc.brand=$brand.brand
+                    assoc.item='item'
+                    }">
                         {$brand.brand}
                     </a>
                     <span>({$brand.items|@count})</span>
