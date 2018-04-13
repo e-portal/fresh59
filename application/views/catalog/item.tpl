@@ -347,15 +347,17 @@
                         {/if}
                     </div>
                 </div>
-                <div id="tab04" class="tab-contents">
-                    <div class="tab-contents-wrap">
-                        <div>
-                            <a class="bluee" href="/files/instruction/{$item.id}.{$item.instruction}">
-                                Скачать инструкцию
-                            </a>
+                {if $item.instruction}
+                    <div id="tab04" class="tab-contents">
+                        <div class="tab-contents-wrap">
+                            <div>
+                                <a class="bluee" href="/files/instruction/{$item.id}.{$item.instruction}">
+                                    Скачать инструкцию
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                {/if}
             </div>
             <!--           end ТАБЫ ДОСТАВКА ОПЛАТА             -->
 
