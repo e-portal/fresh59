@@ -42,9 +42,15 @@
 
                             <div class="centr">
                                 <div class="itee-imgg">
-                                    <img src="/images/catalog/{$item.imgid}_s.{$item.imgext}"
-                                         alt="{if $item.cat_onename}{$item.cat_onename|mblower}{else}{$item.cat|mblower}{/if} {$item.brand} {$item.name} {'купить'}"
-                                         title="{if $item.cat_onename}{$item.cat_onename|mblower}{else}{$item.cat|mblower}{/if} {$item.brand} {$item.name}">
+                                    {if 0 == $smarty.foreach.topsales_items.index%8 || 1 == $smarty.foreach.topsales_items.index}
+                                        <img src="/images/catalog/{$item.imgid}.{$item.imgext}"
+                                             alt="{if $item.cat_onename}{$item.cat_onename|mblower}{else}{$item.cat|mblower}{/if} {$item.brand} {$item.name} {'купить'}"
+                                             title="{if $item.cat_onename}{$item.cat_onename|mblower}{else}{$item.cat|mblower}{/if} {$item.brand} {$item.name}">
+                                    {else}
+                                        <img src="/images/catalog/{$item.imgid}_s.{$item.imgext}"
+                                             alt="{if $item.cat_onename}{$item.cat_onename|mblower}{else}{$item.cat|mblower}{/if} {$item.brand} {$item.name} {'купить'}"
+                                             title="{if $item.cat_onename}{$item.cat_onename|mblower}{else}{$item.cat|mblower}{/if} {$item.brand} {$item.name}">
+                                    {/if}
                                 </div>
                                 {if $item.bonus_amount>0}
                                     <div class="itee">

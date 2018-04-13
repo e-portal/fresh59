@@ -30,15 +30,9 @@
                         <a href="{iurl assoc.cat_latin=$item.cat_latin_single assoc.parent=$item.parentname assoc.subdomain=$item.subdomain assoc.cat=$item.cat_onename assoc.brand=$item.brand assoc.item=$item.name}">
                             <div class="left-iteem">
                                 <div class="itee-imgg">
-                                    {if 0 == $smarty.foreach.action_items.index%8 || 1 == $smarty.foreach.action_items.index}
-                                        <img src="/images/catalog/{$item.imgid}.{$item.imgext}"
-                                             alt="{if $item.cat_onename}{$item.cat_onename|mblower}{else}{$item.cat|mblower}{/if} {$item.brand} {$item.name} {'купить'}"
-                                             title="{if $item.cat_onename}{$item.cat_onename|mblower}{else}{$item.cat|mblower}{/if} {$item.brand} {$item.name}">
-                                    {else}
-                                        <img src="/images/catalog/{$item.imgid}_s.{$item.imgext}"
-                                             alt="{if $item.cat_onename}{$item.cat_onename|mblower}{else}{$item.cat|mblower}{/if} {$item.brand} {$item.name} {'купить'}"
-                                             title="{if $item.cat_onename}{$item.cat_onename|mblower}{else}{$item.cat|mblower}{/if} {$item.brand} {$item.name}">
-                                    {/if}
+                                    <img src="/images/catalog/{$item.imgid}_s.{$item.imgext}"
+                                         alt="{if $item.cat_onename}{$item.cat_onename|mblower}{else}{$item.cat|mblower}{/if} {$item.brand} {$item.name} {'купить'}"
+                                         title="{if $item.cat_onename}{$item.cat_onename|mblower}{else}{$item.cat|mblower}{/if} {$item.brand} {$item.name}">
                                 </div>
                                 {if $item.bonus_amount>0}
                                     <div class="itee">
