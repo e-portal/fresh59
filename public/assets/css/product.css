@@ -810,6 +810,7 @@ img {
     font-size: 17px;
     color: #313e49;
     display: block;
+    text-align: left;
     margin: 25px 0 15px 0;
 }
 
@@ -1039,6 +1040,7 @@ div.review-date > span {
 
 .popup .basket-table {
     margin: 0 10px;
+    width: 100%;
 }
 .basket-table {
     display: table;
