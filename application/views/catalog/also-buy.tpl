@@ -11,16 +11,17 @@
             {foreach from=$assocItemsVmeste item=assocItemsCats name=similarItems}
                 {*<pre>{$assocItemsCats|@debug_print_var}</pre>*}
                 <div class="parag-item">
-                    <a href="{brandurl assoc.subdomain=$assocItemsCats.items[0].subdomain
+                    {*<a href="{brandurl assoc.subdomain=$assocItemsCats.items[0].subdomain
                     assoc.cat_latin=$assocItemsCats.items[0].cat_latin_single}">
                         {$assocItemsCats.name}
-                    </a>
+                    </a>*}
+                    {$assocItemsCats.name}
                 </div>
             {/foreach}
         </div>
 
 
-        <div class="senn-main watched-slider slider-more-prod">
+        <div class="watched-slider">
 
             {foreach from=$assocItemsVmeste item=assocItemsCats name=similarItems}
                 {foreach from=$assocItemsCats.items item=assocItem}
@@ -63,16 +64,16 @@
                                         <p>
                                             от
                                             <span>
-                                                    {if $assocItem.rent >= 25}
-                                                        {math equation="x/y*$curs_evro_smarty|round" x=$assocItem.price y=8}
-                                                    {elseif $assocItem.rent > 12.5}
-                                                        {math equation="x/y*$curs_evro_smarty|round" x=$assocItem.price y=6}
-                                                    {elseif $assocItem.rent > 7.5}
-                                                        {math equation="x/y*$curs_evro_smarty|round" x=$assocItem.price y=3}
-                                                    {else}
-                                                        {math equation="x/y*$curs_evro_smarty|round" x=$assocItem.price y=3}
-                                                    {/if}
-                                                </span>
+                                                {if $assocItem.rent >= 25}
+                                                    {math equation="x/y*$curs_evro_smarty|round" x=$assocItem.price y=8}
+                                                {elseif $assocItem.rent > 12.5}
+                                                    {math equation="x/y*$curs_evro_smarty|round" x=$assocItem.price y=6}
+                                                {elseif $assocItem.rent > 7.5}
+                                                    {math equation="x/y*$curs_evro_smarty|round" x=$assocItem.price y=3}
+                                                {else}
+                                                    {math equation="x/y*$curs_evro_smarty|round" x=$assocItem.price y=3}
+                                                {/if}
+                                            </span>
                                             грн/мес
                                         </p>
                                     </div>
