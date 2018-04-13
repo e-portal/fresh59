@@ -12,7 +12,7 @@ class Zend_View_Helper_Brandurl extends Zend_View_Helper_Abstract
         }
 
         if (empty($params['brand'])) {
-            $url .= str_replace(' ', '-', $params['cat_latin']);
+            $url .= str_replace(' ', '-', $params['cat_latin']) . 's';
         } else {
             $url .= str_replace(' ', '-', $params['cat_latin']);
             $url .= '/brand';
