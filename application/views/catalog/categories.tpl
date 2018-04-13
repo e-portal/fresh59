@@ -1,5 +1,7 @@
 <div class="container category">
 
+    <pre>{$filters|@debug_print_var}</pre>
+
     <div class="libe wrap">
 
         <div class="slick libe-slick">
