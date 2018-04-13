@@ -17,7 +17,6 @@ h1 {
     letter-spacing: 0.2px;
     margin: 0;
 }
-
 img {
     width: auto;
     max-width: 100%;
@@ -498,13 +497,17 @@ img {
 }
 
 .gift-prod-img {
-    height: 100px;
+    height: inherit;
     margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .gift-prod-img img {
-    height: inherit;
+    height: auto;
     width: auto;
+    max-width: 100%;
 }
 
 .in-gift {
@@ -832,7 +835,6 @@ img {
     padding: 15px 30px;
     width: calc(100% - 20px);
 }
-
 .tabs-review .tab-section:last-child {
     border-bottom: none;
 }
