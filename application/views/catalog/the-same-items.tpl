@@ -7,7 +7,6 @@
             {*<pre>{$cat_info|@debug_print_var}</pre>*}
             {foreach from=$otherItems item=brand}
                 <div class="other-model other-model-item">
-                    {*<a href="http://fresh.590.ua/smallbt/frozens-yogurt/brand/redmond">*}
                     <a href="{brandurl assoc.subdomain=$cat_info.subdomain
                     assoc.cat_latin=$cat_info.latin_name
                     assoc.brand=$brand.brand}">
