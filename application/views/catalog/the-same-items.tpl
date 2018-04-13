@@ -4,14 +4,13 @@
 
         <div class="parag">
             <div class="other-model">{$item.category}</div>
-            <pre>{$cat_info|@debug_print_var}</pre>
+            {*<pre>{$cat_info|@debug_print_var}</pre>*}
             {foreach from=$otherItems item=brand}
                 <div class="other-model other-model-item">
                     {*<a href="http://fresh.590.ua/smallbt/frozens-yogurt/brand/redmond">*}
-                    <a href="/{brandurl assoc.subdomain=$cat_info.subdomain
+                    <a href="{brandurl assoc.subdomain=$cat_info.subdomain
                     assoc.cat_latin=$cat_info.latin_name
-                    assoc.brand=$brand.brand
-                    }">
+                    assoc.brand=$brand.brand}">
                         {$brand.brand}
                     </a>
                     <span>({$brand.items|@count})</span>
@@ -26,7 +25,6 @@
                     {if $item.id != $itemtopsale.id && $slide_iteration <= 15}
                         {assign var="slide_iteration" value=$slide_iteration+1}
                         <div class="item-senn">
-                            <pre>{$itemtopsale|@debug_print_var}</pre>
                             <a class="sench"
                                href="/{$cat_info.subdomain}{iurl assoc.cat_latin=$itemtopsale.cat_latin_single assoc.parent=$itemtopsale.parentname assoc.cat=$itemtopsale.cat_onename assoc.brand=$itemtopsale.brand assoc.item=$itemtopsale.name}">
 
