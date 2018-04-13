@@ -9,7 +9,7 @@
         <div class="parag parag-prev">
             <div class="parag-item active">Все категории</div>
             {foreach from=$assocItemsVmeste item=assocItemsCats name=similarItems}
-                <pre>{$assocItemsCats|@debug_print_var}</pre>
+                {*<pre>{$assocItemsCats|@debug_print_var}</pre>*}
                 <div class="parag-item">
                     <a href="{brandurl assoc.subdomain=$assocItemsCats.items[0].subdomain
                     assoc.cat_latin=$assocItemsCats.items[0].cat_latin_single}">
@@ -24,7 +24,6 @@
 
             {foreach from=$assocItemsVmeste item=assocItemsCats name=similarItems}
                 {foreach from=$assocItemsCats.items item=assocItem}
-                    {*<pre>{$assocItem|@debug_print_var}</pre>*}
                     <div class="item-senn">
                         <a class="sench"
                            href="{iurl assoc.parent=$assocItem.parentname assoc.subdomain=$assocItem.subdomain assoc.cat_latin=$assocItem.cat_latin_single assoc.brand=$assocItem.brand assoc.item=$assocItem.name}">
