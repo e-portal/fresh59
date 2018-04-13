@@ -4,8 +4,8 @@
 
         <div class="parag">
             <div class="other-model">{$item.category}</div>
+            <pre>{$cat_info|@debug_print_var}</pre>
             {foreach from=$otherItems item=brand}
-                {*<pre>{$brand|@debug_print_var}</pre>*}
                 <div class="other-model other-model-item">
                     {*<a href="http://fresh.590.ua/smallbt/frozens-yogurt/brand/redmond">*}
                     <a href="/{$cat_info.subdomain}/">
