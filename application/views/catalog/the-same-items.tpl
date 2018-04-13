@@ -29,7 +29,7 @@
 
                                 {*<pre>{$itemtopsale.id_availability|@debug_print_var}</pre>*}
 
-                                {if '4' === $itemtopsale.id_availability}
+                                {if '4' === $itemtopsale.id_availability || '1' === $itemtopsale.id_availability}
                                     <h5 class="green">В наличии</h5>
                                 {/if}
                                 {if $itemtopsale.id_availability === '2'}
