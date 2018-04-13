@@ -11,6 +11,7 @@
             {foreach from=$assocItemsVmeste item=assocItemsCats name=similarItems}
                 {*<pre>{$assocItemsCats|@debug_print_var}</pre>*}
                 <div class="parag-item">
+                    {$assocItemsCats.subdomain}
                     <a href="{brandurl assoc.subdomain=$assocItemsCats.subdomain
                     assoc.cat_latin=$assocItemsCats.cat_latin_single}">
                         {$assocItemsCats.name}
