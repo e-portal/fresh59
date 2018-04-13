@@ -9,8 +9,13 @@
         <div class="parag parag-prev">
             <div class="parag-item active">Все категории</div>
             {foreach from=$assocItemsVmeste item=assocItemsCats name=similarItems}
-                <pre>{$assocItemsCats|@debug_print_var}</pre>
-                <div class="parag-item">{$assocItemsCats.name}</div>
+                {*<pre>{$assocItemsCats|@debug_print_var}</pre>*}
+                <div class="parag-item">
+                    <a href="{brandurl assoc.subdomain=$assocItemsCats.subdomain
+                    assoc.cat_latin=$assocItemsCats.cat_latin_single}">
+                        {$assocItemsCats.name}
+                    </a>
+                </div>
             {/foreach}
         </div>
 

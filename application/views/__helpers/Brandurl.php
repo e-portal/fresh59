@@ -11,9 +11,13 @@ class Zend_View_Helper_Brandurl extends Zend_View_Helper_Abstract
             $url = '/';
         }
 
-        $url .= str_replace(' ', '-', $params['cat_latin']);
-        $url .= '/brand';
-        $url .= '/' . str_replace(' ', '-', $params['brand']);
+        if (empty($params['brand'])) {
+            $url .= str_replace(' ', '-', $params['cat_latin']);
+        } else {
+            $url .= str_replace(' ', '-', $params['cat_latin']);
+            $url .= '/brand';
+            $url .= '/' . str_replace(' ', '-', $params['brand']);
+        }
 
         return mb_strtolower($url);
     }
