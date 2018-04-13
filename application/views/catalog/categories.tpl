@@ -1,6 +1,6 @@
 <div class="container category">
 
-    <pre>{$namedFilters|@debug_print_var}</pre>
+    <pre>{$accepted_filters|@debug_print_var}</pre>
 
     <div class="libe wrap">
 

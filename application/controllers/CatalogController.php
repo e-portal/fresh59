@@ -295,8 +295,7 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
         $similarItems = $cache->load($key);
         if (!$similarItems) {
             $modCatalog = new Catalog();
-            $sameCatItems = $modCatalog->getItemList("c.id_category={$this->view->item['id_category']}")
-                ->reset(Zend_Db_Select::ORDER)->order('c.name')->group('c.id')->query()->fetchAll();
+            $sameCatItems = $modCatalog->getItemList("c.id_category={$this->view->item['id_category']}")->reset(Zend_Db_Select::ORDER)->order('c.name')->group('c.id')->query()->fetchAll();
             $similarItems = array();
             foreach ($sameCatItems as $item) {
                 if (!$similarItems[$item['id_brand']]) {
