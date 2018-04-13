@@ -5,21 +5,21 @@
             <a class="arrow-right bluee">Смотреть все</a>
         </div>
 
-
-        <div class="parag parag-prev">
-            <div class="parag-item active">Все категории</div>
-            {foreach from=$assocItemsVmeste item=assocItemsCats name=similarItems}
-                {*<pre>{$assocItemsCats|@debug_print_var}</pre>*}
-                <div class="parag-item">
-                    {*<a href="{brandurl assoc.subdomain=$assocItemsCats.items[0].subdomain
-                    assoc.cat_latin=$assocItemsCats.items[0].cat_latin_single}">
+        {if $assocItemsVmeste|@count > 0}
+            <div class="parag parag-prev">
+                <div class="parag-item active">Все категории</div>
+                {foreach from=$assocItemsVmeste item=assocItemsCats name=similarItems}
+                    {*<pre>{$assocItemsCats|@debug_print_var}</pre>*}
+                    <div class="parag-item">
+                        {*<a href="{brandurl assoc.subdomain=$assocItemsCats.items[0].subdomain
+                        assoc.cat_latin=$assocItemsCats.items[0].cat_latin_single}">
+                            {$assocItemsCats.name}
+                        </a>*}
                         {$assocItemsCats.name}
-                    </a>*}
-                    {$assocItemsCats.name}
-                </div>
-            {/foreach}
-        </div>
-
+                    </div>
+                {/foreach}
+            </div>
+        {/if}
 
         <div class="watched-slider">
 
