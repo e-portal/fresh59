@@ -8,7 +8,7 @@
                 {*<pre>{$brand|@debug_print_var}</pre>*}
                 <div class="other-model other-model-item">
                     {*<a href="http://fresh.590.ua/smallbt/frozens-yogurt/brand/redmond">*}
-                    <a href="{$cat_info.subdomain}">
+                    <a href="/{$cat_info.subdomain}/">
                         {$brand.brand}
                     </a>
                     <span>({$brand.items|@count})</span>
@@ -23,6 +23,7 @@
                     {if $item.id != $itemtopsale.id && $slide_iteration <= 15}
                         {assign var="slide_iteration" value=$slide_iteration+1}
                         <div class="item-senn">
+                            <pre>{$itemtopsale|@debug_print_var}</pre>
                             <a class="sench"
                                href="/{$cat_info.subdomain}{iurl assoc.cat_latin=$itemtopsale.cat_latin_single assoc.parent=$itemtopsale.parentname assoc.cat=$itemtopsale.cat_onename assoc.brand=$itemtopsale.brand assoc.item=$itemtopsale.name}">
 
