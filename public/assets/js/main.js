@@ -70,30 +70,29 @@ jQuery(document).ready(function () {
 
     //--------------Вопросы / Ответы-------------
 
+    $('.title_block').click(function () {
+        if ($(this).parents('.accordion_item').hasClass('active')) {
+            $('.accordion_item').removeClass('active');
+            $('.accordion_item').removeClass('open');
+            return true
+        }
+        $('.accordion_item').removeClass('active');
+        $('.accordion_item').removeClass('open');
 
-    !function (i) {
-        var o, n;
-        i(".title_block").on("click", function () {
-            o = i(this).parents(".accordion_item"), n = o.find(".info-accord"),
-                o.hasClass("active_block") ? (o.removeClass("active_block"),
-                    n.slideUp()) : (o.addClass("active_block"), n.stop(!0, !0).slideDown(),
-                    o.siblings(".active_block").removeClass("active_block").children(
-                        ".info-accord").stop(!0, !0).slideUp())
-            $('.article').readmore({
-                maxHeight: 78,
-                speed: 275,
-                moreLink: '<a class="moreLink" href="#">Еще</a>',
-                lessLink: '<a class="moreLink" href="#">Скрыть</a>'
-            });
-        })
-    }(jQuery);
+        $(this).parents('.accordion_item').addClass('active');
 
+    });
+    $('.acc-open').click(function () {
+        $(this).parents('.accordion_item').toggleClass('open');
+
+    });
 
     //-------
 
     if ($(".modalbox").length) {
         $(".modalbox").fancybox();
     }
+    ;
 
 
     $('.modalbox').click(function () {
@@ -248,51 +247,58 @@ jQuery(document).ready(function () {
         });
     } else {
     }
+
     if ($('.owl-slide').length && window.matchMedia("(min-width: 1025px)").matches) {
-            $('.owl-slide').slick({
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                arrows: false,
-                dots: true,
-                speed: 500,
-                cssEase: 'linear',
-            });
+        $('.owl-slide').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            speed: 500,
+            cssEase: 'linear',
+        });
     }
 
 
     if (window.matchMedia("(max-width: 1025px)").matches) {
-        $('.parag').slick({
-            slidesToShow: 4,
-            responsive: [
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 2,
+        if ($(".parag").length) {
+            $('.parag').slick({
+                slidesToShow: 4,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2,
 
-                    }
-                }],
-            slidesToScroll: 1,
-            arrows: true,
-            dots: false,
-            speed: 500,
-            cssEase: 'linear',
-        });
+                        }
+                    }],
+                slidesToScroll: 1,
+                arrows: true,
+                dots: false,
+                speed: 500,
+                cssEase: 'linear',
+            });
+        }
 
-        $('.slick-ipad').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: true,
-            dots: false,
-            speed: 500,
-            cssEase: 'linear',
-        });
+        if ($(".slick-ipad").length) {
+            $('.slick-ipad').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+                dots: false,
+                speed: 500,
+                cssEase: 'linear',
+            });
+        }
 
-        $('article').readmore({
-            maxHeight: 70,
-            speed: 275,
-            moreLink: '<a class="moreLink" href="#">Еще</a>',
-            lessLink: '<a class="moreLink" href="#">Скрыть</a>'
-        });
+        if ($('article').length) {
+            $('article').readmore({
+                maxHeight: 70,
+                speed: 275,
+                moreLink: '<a class="moreLink" href="#">Еще</a>',
+                lessLink: '<a class="moreLink" href="#">Скрыть</a>'
+            });
+        }
 
         /*IPAD MENU*/
         $(".iteem:nth-child(1)").on("click", function () {
@@ -410,7 +416,6 @@ jQuery(document).ready(function () {
         $('body,html').animate({scrollTop: 0}, 800);
         return false;
     });
-
 
     if ($('.numb').length) {
         $('.numb').inputmask({
@@ -720,28 +725,6 @@ function CDT() {
 window.onload = function () {
     CDT();
 }
-
-// jQuery(document).ready(function () {
-//     if ($('.slick').length) {
-//         $('.slick').slick({
-//             arrows: false,
-//             dots: true,
-//             infinite: true,
-//             speed: 500,
-//             cssEase: 'linear',
-//             autoplay: true,
-//             autoplaySpeed: 5000,
-//             responsive: [
-//                 {
-//                     breakpoint: 1025,
-//                     settings: {
-//                         dots: false,
-//                         arrows: true
-//                     }
-//                 }]
-//         });
-//     } else {}
-// })
 
 
 

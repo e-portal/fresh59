@@ -826,16 +826,6 @@ input {
     justify-content: center;
     cursor: pointer
 }
-@-moz-document url-prefix() {
-    .searc,
-    .send {
-        height: 49px;
-    }
-
-    .item-score:nth-child(3) .send {
-        height: 51px;
-    }
-}
 
 .searc img {
     display: block;
@@ -2279,10 +2269,11 @@ input {
     z-index: 5;
 }
 
+.small-product .blue:after,
 .seap .blue:after,
 .senn .blue:after,
 .owls .blue:after {
-    top: 1px;
+    top: 0;
     background: url(../img/blus.png) center no-repeat;
 }
 
@@ -2686,7 +2677,6 @@ input {
 
 .home-page .base-menu {
     transform: translate(0);
-    /*transform: translate(0) !important;*/
 }
 
 .home-page .base-menu ul {
@@ -3402,7 +3392,7 @@ ul#selectsMenuBoxi > li.options:hover {
 }
 
 .front.see-more {
-    top: -260px;
+    top: -257px;
     height: 345px;
     z-index: 5;
     width: 100%;
@@ -3415,16 +3405,12 @@ ul#selectsMenuBoxi > li.options:hover {
     position: relative;
 }
 
-.small-product .blue {
+.blue {
+    /*.small-product .blue {*/
     position: absolute;
     right: 15px;
-    /*bottom: 570px;*/
     z-index: 5;
     font: 14px 'SFUIDisplay-Medium';
-}
-
-.small-product .blue:after {
-    top: 1px;
 }
 
 .ad-sale {
@@ -3499,7 +3485,7 @@ ul#selectsMenuBoxi > li.options:hover {
 
 .interest .items {
     width: calc(33% - 25px);
-    margin: 0 35px 0 0;
+    margin: 0 25px 0 0;
 }
 
 .interest-sale {
@@ -3581,10 +3567,10 @@ ul#selectsMenuBoxi > li.options:hover {
 }
 
 .itee.present img {
-    margin: 0 0 1px 0;
+    margin: 3px;
     display: inline-block;
     width: auto;
-    height: calc(100% - 24px);
+    height: calc(100% - 35px);
     object-fit: contain;
 }
 
@@ -3813,4 +3799,15 @@ input[type=range]::-ms-fill-upper {
 
 .brands {
     margin: 0;
+}
+
+@-moz-document url-prefix() {
+    .searc,
+    .send {
+        height: 49px;
+    }
+
+    .item-score:nth-child(3) .send {
+        height: 51px;
+    }
 }

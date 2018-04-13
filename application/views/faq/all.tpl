@@ -28,6 +28,7 @@
                             {$faq_item.text}
                         </div>
                     </div>
+                    <div class="acc-open">more</div>
                 </section>
                 {/foreach}
                 {else}
