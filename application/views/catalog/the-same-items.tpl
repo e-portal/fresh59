@@ -29,7 +29,9 @@
 
                                 {*<pre>{$itemtopsale.id_availability|@debug_print_var}</pre>*}
 
-
+                                {if $itemtopsale.id_availability === '1' || $item.id_availability === '4'}
+                                    <h5 class="green">В наличии</h5>
+                                {/if}
                                 {if $itemtopsale.id_availability === '2'}
                                     <h5 class="gray">Наличие уточняйте</h5>
                                 {/if}
