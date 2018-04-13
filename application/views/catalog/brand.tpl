@@ -88,7 +88,7 @@
                                         {if $item.id_availability == 1}
                                             <h5 class="green">В наличии</h5>
                                         {elseif $item.id_availability == 3}
-                                            <h5 class="blue">Под заказ</h5>
+                                            <h5 class="bluee">Под заказ</h5>
                                         {else}
                                             <h5 class="gray">Наличие уточняйте</h5>
                                         {/if}

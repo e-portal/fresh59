@@ -2,7 +2,7 @@
     <div class="container">
         <div class="liner" id="prod-accessories">
             <span>С этим товаром покупают</span>
-            <a class="arrow-right bluee">Смотреть все</a>
+            {*<a class="arrow-right bluee">Смотреть все</a>*}
         </div>
 
         {if $assocItemsVmeste|@count > 0}
