@@ -41,7 +41,6 @@
                     <meta itemprop="position" content="1">
                 </div>
 
-
                 <div itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="button">
                     <span itemprop="name" class="label1">{$brandName}</span>
                     <meta itemprop="position" content="2">
@@ -80,7 +79,12 @@
                             </pre>*}
                             {*-----------ITEM-----------*}
                             <div class="item-senn more-senn">
-                                <a href="{iurl assoc.cat_latin=$item.cat_latin_single  assoc.parent=$item.parentname assoc.subdomain=$item.subdomain assoc.cat=$item.cat_onename assoc.brand=$item.brand assoc.item=$item.name}"
+                                <a href="{iurl assoc.cat_latin=$item.cat_latin_single
+                                assoc.parent=$item.parentname
+                                assoc.subdomain=$item.subdomain
+                                assoc.cat=$item.cat_onename
+                                assoc.brand=$item.brand
+                                assoc.item=$item.name}"
                                    tabindex="-1" class="sench">
 
                                     <div class="in-stock">
