@@ -17,7 +17,7 @@
             {/foreach}
 
         </div>
-        <div class="senn-main watched-slider slider-more-prod">
+        <div class="watched-slider">
             {assign var="slide_iteration" value=0}
             {foreach from=$otherItems item=brand name=slider_brands}
                 {foreach from=$brand.items item=itemtopsale name=slider_items}
