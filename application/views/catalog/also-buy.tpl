@@ -28,7 +28,6 @@
                         <a class="sench"
                            href="{iurl assoc.parent=$assocItem.parentname assoc.subdomain=$assocItem.subdomain assoc.cat_latin=$assocItem.cat_latin_single assoc.brand=$assocItem.brand assoc.item=$assocItem.name}">
 
-
                             {if $assocItem.id_availability == 1 || $item.id_availability == 4}
                                 <h5 class="green">В наличии</h5>
                             {/if}
