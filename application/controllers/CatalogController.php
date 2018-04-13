@@ -316,9 +316,9 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
                 <script src="/assets/js/order.js"></script>
             ';
 
-        $this->view->css_int = '
+        /*$this->view->css_int = '
                 <link rel="stylesheet" href="/assets/css/product.css">
-            ';
+            ';*/
 
 
         $this->view->otherItems = $similarItems;
