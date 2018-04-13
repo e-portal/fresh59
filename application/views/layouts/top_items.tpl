@@ -17,7 +17,7 @@
             </h4>
             <div class="centr">
                 <div class="itee-imgg">
-                    {if 0 == $smarty.foreach.tp_items.index%9 || 1 == $smarty.foreach.tp_items.index}
+                    {if 0 == $smarty.foreach.tp_items.index%8 || 1 == $smarty.foreach.tp_items.index}
                         <img {if $top_item.imgid} src="/images/catalog/{$top_item.imgid}.{$top_item.imgext}" {else}
                             src="{$url.img}/no-image.jpg" {/if} alt="{$top_item.name}-{$top_item.brand}">
                     {else}
