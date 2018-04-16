@@ -107,7 +107,9 @@
                                     <div class="centr">
                                         <div class="itee-imgg">
                                             {if $item.imgid}
-                                                {$item.imgid}
+                                                <pre>
+                                {$item.imgid|@debug_print_var}
+                            </pre>
                                                 <img src="{$url.img}/catalog/{$item.imgid}_s.{$item.imgext}"
                                                      title="{if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if} {$item.brand} {$item.name}"
                                                      alt="{if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if} {$item.brand} {$item.name} - catalog">
