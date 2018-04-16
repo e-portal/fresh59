@@ -80,6 +80,18 @@
                     </div>
                 </div>
                 <div class="compare-block-wrap">
+                    {foreach from=$fields item=grp name=grp}
+
+                        {foreach from=$grp.fields item=field name=field}
+
+                            {foreach from=$items item=item}
+                                {$field.itemvalues[$item.id]}
+                            {/foreach}
+
+                        {/foreach}
+                    {/foreach}
+
+
                     <div class="compare-block">
 
 
@@ -93,30 +105,7 @@
                                 <li class="compare-features-feat">До 2ч</li>
                                 <li class="compare-features-feat">Ручной</li>
                             </ul>
-                            <ul class="compare-list">
-                                <div class="compare-features-title"></div>
-                                <li class="compare-features-feat">Присутствует</li>
-                                <li class="compare-features-feat">До 2ч</li>
-                                <li class="compare-features-feat">Ручной</li>
-                                <li class="compare-features-feat">Отдельностоящая</li>
-                                <li class="compare-features-feat">Фронтальная</li>
-                                <li class="compare-features-feat">5 кг</li>
-                            </ul>
-                            <ul class="compare-list">
-                                <div class="compare-features-title"></div>
-                                <li class="compare-features-feat">Отдельностоящая</li>
-                                <li class="compare-features-feat">Фронтальная</li>
-                                <li class="compare-features-feat">5 кг</li>
-                                <li class="compare-features-feat">Присутствует</li>
-                                <li class="compare-features-feat">До 2ч</li>
-                                <li class="compare-features-feat">Ручной</li>
-                                <li class="compare-features-feat">Присутствует</li>
-                                <li class="compare-features-feat">До 2ч</li>
-                                <li class="compare-features-feat">Ручной</li>
-                                <li class="compare-features-feat">Отдельностоящая</li>
-                                <li class="compare-features-feat">Фронтальная</li>
-                                <li class="compare-features-feat">2 кг</li>
-                            </ul>
+
                         </div>
 
                         <div class="compare-if-small"><a class="qweek-busket-prod add-to-cart bask acty"
@@ -128,259 +117,6 @@
                                                          data-gift-name="Чайник ELECTROLUX Electro чайник"
                                                          data-gift-img="/assets/img/senn5.png">
                                 <span>В корзину</span></a></div>
-
-                    </div>
-                    <div class="compare-block">
-
-
-                        <div class="compare-features">
-                            <ul class="compare-list">
-                                <div class="compare-features-title"></div>
-                                <li class="compare-features-feat">Отдельностоящая</li>
-                                <li class="compare-features-feat">Фронтальная</li>
-                                <li class="compare-features-feat">5 кг</li>
-                                <li class="compare-features-feat">Присутствует</li>
-                                <li class="compare-features-feat">До 2ч</li>
-                                <li class="compare-features-feat">Ручной</li>
-                            </ul>
-                            <ul class="compare-list">
-                                <div class="compare-features-title"></div>
-                                <li class="compare-features-feat">Присутствует</li>
-                                <li class="compare-features-feat">До 2ч</li>
-                                <li class="compare-features-feat">Ручной</li>
-                                <li class="compare-features-feat">Отдельностоящая</li>
-                                <li class="compare-features-feat">Фронтальная</li>
-                                <li class="compare-features-feat">5 кг</li>
-                            </ul>
-                            <ul class="compare-list">
-                                <div class="compare-features-title"></div>
-                                <li class="compare-features-feat">Отдельностоящая</li>
-                                <li class="compare-features-feat">Фронтальная</li>
-                                <li class="compare-features-feat">5 кг</li>
-                                <li class="compare-features-feat">Присутствует</li>
-                                <li class="compare-features-feat">До 2ч</li>
-                                <li class="compare-features-feat">Ручной</li>
-                                <li class="compare-features-feat">Присутствует</li>
-                                <li class="compare-features-feat">До 2ч</li>
-                                <li class="compare-features-feat">Ручной</li>
-                                <li class="compare-features-feat">Отдельностоящая</li>
-                                <li class="compare-features-feat">Фронтальная</li>
-                                <li class="compare-features-feat">2 кг</li>
-                            </ul>
-                        </div>
-
-                        <div class="compare-if-small"><a class="qweek-busket-prod add-to-cart bask acty"
-                                                         data-id="274567"
-                                                         data-name="Плита кухонная ELECTROLUX EKG 96118 CX"
-                                                         data-img="img/product/prod-1.jpg"
-                                                         data-price="12500" data-sale="10750" data-bonus="1500"
-                                                         data-gift-id="274560"
-                                                         data-gift-name="Чайник ELECTROLUX Electro чайник"
-                                                         data-gift-img="/assets/img/senn5.png">
-                                <span>В корзину</span></a></div>
-
-                    </div>
-                    <div class="compare-block">
-
-
-                        <div class="compare-features">
-                            <ul class="compare-list">
-                                <div class="compare-features-title"></div>
-                                <li class="compare-features-feat">Отдельностоящая</li>
-                                <li class="compare-features-feat">Фронтальная</li>
-                                <li class="compare-features-feat">5 кг</li>
-                                <li class="compare-features-feat">Присутствует</li>
-                                <li class="compare-features-feat">До 2ч</li>
-                                <li class="compare-features-feat">Ручной</li>
-                            </ul>
-                            <ul class="compare-list">
-                                <div class="compare-features-title"></div>
-                                <li class="compare-features-feat">Присутствует</li>
-                                <li class="compare-features-feat">До 2ч</li>
-                                <li class="compare-features-feat">Ручной</li>
-                                <li class="compare-features-feat">Отдельностоящая</li>
-                                <li class="compare-features-feat">Фронтальная</li>
-                                <li class="compare-features-feat">5 кг</li>
-                            </ul>
-                            <ul class="compare-list">
-                                <div class="compare-features-title"></div>
-                                <li class="compare-features-feat">Отдельностоящая</li>
-                                <li class="compare-features-feat">Фронтальная</li>
-                                <li class="compare-features-feat">5 кг</li>
-                                <li class="compare-features-feat">Присутствует</li>
-                                <li class="compare-features-feat">До 2ч</li>
-                                <li class="compare-features-feat">Ручной</li>
-                                <li class="compare-features-feat">Присутствует</li>
-                                <li class="compare-features-feat">До 2ч</li>
-                                <li class="compare-features-feat">Ручной</li>
-                                <li class="compare-features-feat">Отдельностоящая</li>
-                                <li class="compare-features-feat">Фронтальная</li>
-                                <li class="compare-features-feat">3 кг</li>
-                            </ul>
-                        </div>
-
-                        <div class="compare-if-small"><a class="qweek-busket-prod add-to-cart bask acty"
-                                                         data-id="274567"
-                                                         data-name="Плита кухонная ELECTROLUX EKG 96118 CX"
-                                                         data-img="img/product/prod-1.jpg"
-                                                         data-price="12500" data-sale="10750" data-bonus="1500"
-                                                         data-gift-id="274560"
-                                                         data-gift-name="Чайник ELECTROLUX Electro чайник"
-                                                         data-gift-img="/assets/img/senn5.png">
-                                <span>В корзину</span></a></div>
-
-                    </div>
-                    <div class="compare-block">
-
-
-                        <div class="compare-features">
-                            <ul class="compare-list">
-                                <div class="compare-features-title"></div>
-                                <li class="compare-features-feat">Отдельностоящая</li>
-                                <li class="compare-features-feat">Фронтальная</li>
-                                <li class="compare-features-feat">5 кг</li>
-                                <li class="compare-features-feat">Присутствует</li>
-                                <li class="compare-features-feat">До 2ч</li>
-                                <li class="compare-features-feat">Ручной</li>
-                            </ul>
-                            <ul class="compare-list">
-                                <div class="compare-features-title"></div>
-                                <li class="compare-features-feat">Присутствует</li>
-                                <li class="compare-features-feat">До 2ч</li>
-                                <li class="compare-features-feat">Ручной</li>
-                                <li class="compare-features-feat">Отдельностоящая</li>
-                                <li class="compare-features-feat">Фронтальная</li>
-                                <li class="compare-features-feat">5 кг</li>
-                            </ul>
-                            <ul class="compare-list">
-                                <div class="compare-features-title"></div>
-                                <li class="compare-features-feat">Отдельностоящая</li>
-                                <li class="compare-features-feat">Фронтальная</li>
-                                <li class="compare-features-feat">5 кг</li>
-                                <li class="compare-features-feat">Присутствует</li>
-                                <li class="compare-features-feat">До 2ч</li>
-                                <li class="compare-features-feat">Ручной</li>
-                                <li class="compare-features-feat">Присутствует</li>
-                                <li class="compare-features-feat">До 2ч</li>
-                                <li class="compare-features-feat">Ручной</li>
-                                <li class="compare-features-feat">Отдельностоящая</li>
-                                <li class="compare-features-feat">Фронтальная</li>
-                                <li class="compare-features-feat">4 кг</li>
-                            </ul>
-                        </div>
-
-                        <div class="compare-if-small"><a class="qweek-busket-prod add-to-cart bask acty"
-                                                         data-id="274567"
-                                                         data-name="Плита кухонная ELECTROLUX EKG 96118 CX"
-                                                         data-img="img/product/prod-1.jpg"
-                                                         data-price="12500" data-sale="10750" data-bonus="1500"
-                                                         data-gift-id="274560"
-                                                         data-gift-name="Чайник ELECTROLUX Electro чайник"
-                                                         data-gift-img="/assets/img/senn5.png">
-                                <span>В корзину</span></a></div>
-
-                    </div>
-                    <div class="compare-block">
-
-
-                        <div class="compare-features">
-                            <ul class="compare-list">
-                                <div class="compare-features-title"></div>
-                                <li class="compare-features-feat">Отдельностоящая</li>
-                                <li class="compare-features-feat">Фронтальная</li>
-                                <li class="compare-features-feat">5 кг</li>
-                                <li class="compare-features-feat">Присутствует</li>
-                                <li class="compare-features-feat">До 2ч</li>
-                                <li class="compare-features-feat">Ручной</li>
-                            </ul>
-                            <ul class="compare-list">
-                                <div class="compare-features-title"></div>
-                                <li class="compare-features-feat">Присутствует</li>
-                                <li class="compare-features-feat">До 2ч</li>
-                                <li class="compare-features-feat">Ручной</li>
-                                <li class="compare-features-feat">Отдельностоящая</li>
-                                <li class="compare-features-feat">Фронтальная</li>
-                                <li class="compare-features-feat">5 кг</li>
-                            </ul>
-                            <ul class="compare-list">
-                                <div class="compare-features-title"></div>
-                                <li class="compare-features-feat">Отдельностоящая</li>
-                                <li class="compare-features-feat">Фронтальная</li>
-                                <li class="compare-features-feat">5 кг</li>
-                                <li class="compare-features-feat">Присутствует</li>
-                                <li class="compare-features-feat">До 2ч</li>
-                                <li class="compare-features-feat">Ручной</li>
-                                <li class="compare-features-feat">Присутствует</li>
-                                <li class="compare-features-feat">До 2ч</li>
-                                <li class="compare-features-feat">Ручной</li>
-                                <li class="compare-features-feat">Отдельностоящая</li>
-                                <li class="compare-features-feat">Фронтальная</li>
-                                <li class="compare-features-feat">5 кг</li>
-                            </ul>
-                        </div>
-
-                        <div class="compare-if-small"><a class="qweek-busket-prod add-to-cart bask acty"
-                                                         data-id="274567"
-                                                         data-name="Плита кухонная ELECTROLUX EKG 96118 CX"
-                                                         data-img="img/product/prod-1.jpg"
-                                                         data-price="12500" data-sale="10750" data-bonus="1500"
-                                                         data-gift-id="274560"
-                                                         data-gift-name="Чайник ELECTROLUX Electro чайник"
-                                                         data-gift-img="/assets/img/senn5.png">
-                                <span>В корзину</span></a></div>
-
-                    </div>
-                    <div class="compare-block">
-
-
-                        <div class="compare-features">
-                            <ul class="compare-list">
-                                <div class="compare-features-title"></div>
-                                <li class="compare-features-feat">Отдельностоящая</li>
-                                <li class="compare-features-feat">Фронтальная</li>
-                                <li class="compare-features-feat">5 кг</li>
-                                <li class="compare-features-feat">Присутствует</li>
-                                <li class="compare-features-feat">До 2ч</li>
-                                <li class="compare-features-feat">Ручной</li>
-                            </ul>
-                            <ul class="compare-list">
-                                <div class="compare-features-title"></div>
-                                <li class="compare-features-feat">Присутствует</li>
-                                <li class="compare-features-feat">До 2ч</li>
-                                <li class="compare-features-feat">Ручной</li>
-                                <li class="compare-features-feat">Отдельностоящая</li>
-                                <li class="compare-features-feat">Фронтальная</li>
-                                <li class="compare-features-feat">5 кг</li>
-                            </ul>
-                            <ul class="compare-list">
-                                <div class="compare-features-title"></div>
-                                <li class="compare-features-feat">Отдельностоящая</li>
-                                <li class="compare-features-feat">Фронтальная</li>
-                                <li class="compare-features-feat">5 кг</li>
-                                <li class="compare-features-feat">Присутствует</li>
-                                <li class="compare-features-feat">До 2ч</li>
-                                <li class="compare-features-feat">Ручной</li>
-                                <li class="compare-features-feat">Присутствует</li>
-                                <li class="compare-features-feat">До 2ч</li>
-                                <li class="compare-features-feat">Ручной</li>
-                                <li class="compare-features-feat">Отдельностоящая</li>
-                                <li class="compare-features-feat">Фронтальная</li>
-                                <li class="compare-features-feat">6 кг</li>
-                            </ul>
-                        </div>
-
-                        <div class="compare-if-small">
-                            <a class="qweek-busket-prod add-to-cart bask acty"
-                               data-id="274567"
-                               data-name="Плита кухонная ELECTROLUX EKG 96118 CX"
-                               data-img="img/product/prod-1.jpg"
-                               data-price="12500" data-sale="10750" data-bonus="1500"
-                               data-gift-id="274560"
-                               data-gift-name="Чайник ELECTROLUX Electro чайник"
-                               data-gift-img="/assets/img/senn5.png">
-                                <span>В корзину</span>
-                            </a>
-                        </div>
 
                     </div>
                 </div>

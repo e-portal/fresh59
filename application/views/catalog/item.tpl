@@ -56,11 +56,13 @@
 
                     {if $item.images}
                         {foreach from=$item.images item=item_image name=item_image}
-                            <div class="clone-slide">
-                                <img src="{$url.img}/catalog/{$item_image.id}.{$item_image.imgext}"
-                                     alt="{if $item.cat_onename}{$item.cat_onename|mblower}{else}{$item.cat|mblower}{/if} {$item.brand} {$item.name} {'купить'}"
-                                     title="{if $item.cat_onename}{$item.cat_onename|mblower}{else}{$item.cat|mblower}{/if} {$item.brand} {$item.name}"/>
-                            </div>
+                            {if $smarty.foreach.item_image.index<10}
+                                <div class="clone-slide">
+                                    <img src="{$url.img}/catalog/{$item_image.id}.{$item_image.imgext}"
+                                         alt="{if $item.cat_onename}{$item.cat_onename|mblower}{else}{$item.cat|mblower}{/if} {$item.brand} {$item.name} {'купить'}"
+                                         title="{if $item.cat_onename}{$item.cat_onename|mblower}{else}{$item.cat|mblower}{/if} {$item.brand} {$item.name}"/>
+                                </div>
+                            {/if}
                         {/foreach}
                     {/if}
 
