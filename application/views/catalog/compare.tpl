@@ -1,5 +1,4 @@
 {include file='layouts/_header.tpl'}
-{debug}
 {if !$error}
     <div class="container wrap">
         <div class="bread-crumbs breadcrumbs mobile-display-none" id="breadcrumbs" itemscope=""
