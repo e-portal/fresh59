@@ -13,7 +13,7 @@
             </div>
 
         </div>
-        <h1 class="liner cent"><span>Сравнение товаров</span></h1>
+        <h1 class="liner cent"><span>Сравнение товаров - {$cat_name_temporary_celebration[$catId]}</span></h1>
 
         <div class="compare-all-blocks">
             <div class="compare-block compare-block-left">
