@@ -81,44 +81,31 @@
                 </div>
                 <div class="compare-block-wrap">
                     {foreach from=$fields item=grp name=grp}
+                        <div class="compare-block">
+                            {foreach from=$grp.fields item=field name=field}
+                                <div class="compare-features">
+                                    <ul class="compare-list">
 
-                        {foreach from=$grp.fields item=field name=field}
 
-                            {foreach from=$items item=item}
-                                {$field.itemvalues[$item.id]}
+                                        <div class="compare-features-title"></div>
+
+
+                                        {foreach from=$items item=item}
+                                            <li class="compare-features-feat">{$field.itemvalues[$item.id]}</li>
+                                        {/foreach}
+                                    </ul>
+
+                                </div>
                             {/foreach}
-
-                        {/foreach}
+                            <div class="compare-if-small">
+                                <a class="qweek-busket-prod add-to-cart bask acty"
+                                        {include file='layouts/cart-item.tpl' cart_item=$item}>
+                                    <span>В корзину</span></a>
+                            </div>
+                        </div>
                     {/foreach}
 
 
-                    <div class="compare-block">
-
-
-                        <div class="compare-features">
-                            <ul class="compare-list">
-                                <div class="compare-features-title"></div>
-                                <li class="compare-features-feat">Отдельностоящая</li>
-                                <li class="compare-features-feat">Фронтальная</li>
-                                <li class="compare-features-feat">5 кг</li>
-                                <li class="compare-features-feat">Присутствует</li>
-                                <li class="compare-features-feat">До 2ч</li>
-                                <li class="compare-features-feat">Ручной</li>
-                            </ul>
-
-                        </div>
-
-                        <div class="compare-if-small"><a class="qweek-busket-prod add-to-cart bask acty"
-                                                         data-id="274567"
-                                                         data-name="Плита кухонная ELECTROLUX EKG 96118 CX"
-                                                         data-img="img/product/prod-1.jpg"
-                                                         data-price="12500" data-sale="10750" data-bonus="1500"
-                                                         data-gift-id="274560"
-                                                         data-gift-name="Чайник ELECTROLUX Electro чайник"
-                                                         data-gift-img="/assets/img/senn5.png">
-                                <span>В корзину</span></a></div>
-
-                    </div>
                 </div>
 
             </div>
