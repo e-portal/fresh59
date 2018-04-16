@@ -106,9 +106,13 @@
 
                                     <div class="centr">
                                         <div class="itee-imgg">
-                                            <img src="{$url.img}/catalog/{$item.imgid}_s.{$item.imgext}"
-                                                 title="{if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if} {$item.brand} {$item.name}"
-                                                 alt="{if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if} {$item.brand} {$item.name} - catalog">
+                                            {if $item.imgid}
+                                                <img src="{$url.img}/catalog/{$item.imgid}_s.{$item.imgext}"
+                                                     title="{if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if} {$item.brand} {$item.name}"
+                                                     alt="{if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if} {$item.brand} {$item.name} - catalog">
+                                            {else}
+                                                <img src="/images/noimage.jpg" alt="{$item.brand} {$item.name}"/>
+                                            {/if}
                                         </div>
                                         {if $item.bonus_amount>0}
                                             <div class="itee">
