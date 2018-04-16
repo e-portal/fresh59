@@ -75,7 +75,7 @@
                             </div>
                             <div class="compare-product">
                                 <div class="basket-prod flexibal">
-                                    <div class="basket-prod-img"><img src="img/product/prod-1.jpg"></div>
+                                    <div class="basket-prod-img"><img src="/assets/img/product/prod-1.jpg"></div>
                                     <div class="basket-prod-text">
                                         <a class="basket-prod-name">Плита кухонная EKG 96118 CX ELECTROLUX</a>
                                         <div class="prod-price"><span>10500</span>грн</div>
@@ -86,9 +86,9 @@
                                                data-price="12500" data-sale="10750" data-bonus="1500"
                                                data-gift-id="274560"
                                                data-gift-name="Чайник ELECTROLUX Electro чайник"
-                                               data-gift-img="./img/senn5.png">
+                                               data-gift-img="/assets/img/senn5.png">
                                                 <span>В корзину</span></a>
-                                            <a class="favorite-ico"><img src="img/left-butt-start.png"></a>
+                                            <a class="favorite-ico"><img src="/assets/img/left-butt-start.png"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -101,7 +101,7 @@
                             </div>
                             <div class="compare-product">
                                 <div class="basket-prod flexibal">
-                                    <div class="basket-prod-img"><img src="img/senn3.png"></div>
+                                    <div class="basket-prod-img"><img src="/assets/img/senn3.png"></div>
                                     <div class="basket-prod-text">
                                         <a class="basket-prod-name">Чайник CX ELECTROLUX EKG 96118</a>
                                         <div class="prod-price"><span>10500</span>грн</div>
@@ -112,9 +112,9 @@
                                                data-price="12500" data-sale="10750" data-bonus="1500"
                                                data-gift-id="274560"
                                                data-gift-name="Чайник ELECTROLUX Electro чайник"
-                                               data-gift-img="./img/senn5.png">
+                                               data-gift-img="/assets/img/senn5.png">
                                                 <span>В корзину</span></a>
-                                            <a class="favorite-ico"><img src="img/left-butt-start.png"></a>
+                                            <a class="favorite-ico"><img src="/assets/img/left-butt-start.png"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -127,7 +127,7 @@
                             </div>
                             <div class="compare-product">
                                 <div class="basket-prod flexibal">
-                                    <div class="basket-prod-img"><img src="img/senn0.png"></div>
+                                    <div class="basket-prod-img"><img src="/assets/img/senn0.png"></div>
                                     <div class="basket-prod-text">
                                         <a class="basket-prod-name">Плита кухонная EKG 96118 CX ELECTROLUX</a>
                                         <div class="prod-price"><span>10500</span>грн</div>
@@ -138,9 +138,9 @@
                                                data-price="12500" data-sale="10750" data-bonus="1500"
                                                data-gift-id="274560"
                                                data-gift-name="Чайник ELECTROLUX Electro чайник"
-                                               data-gift-img="./img/senn5.png">
+                                               data-gift-img="/assets/img/senn5.png">
                                                 <span>В корзину</span></a>
-                                            <a class="favorite-ico"><img src="img/left-butt-start.png"></a>
+                                            <a class="favorite-ico"><img src="/assets/img/left-butt-start.png"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -153,7 +153,7 @@
                             </div>
                             <div class="compare-product">
                                 <div class="basket-prod flexibal">
-                                    <div class="basket-prod-img"><img src="img/senn2.png"></div>
+                                    <div class="basket-prod-img"><img src="/assets/img/senn2.png"></div>
                                     <div class="basket-prod-text">
                                         <a class="basket-prod-name">Стиральная машина EKG 96118 CX ELECTROLUX</a>
                                         <div class="prod-price"><span>10500</span>грн</div>
@@ -164,9 +164,9 @@
                                                data-price="12500" data-sale="10750" data-bonus="1500"
                                                data-gift-id="274560"
                                                data-gift-name="Чайник ELECTROLUX Electro чайник"
-                                               data-gift-img="./img/senn5.png">
+                                               data-gift-img="/assets/img/senn5.png">
                                                 <span>В корзину</span></a>
-                                            <a class="favorite-ico"><img src="img/left-butt-start.png"></a>
+                                            <a class="favorite-ico"><img src="/assets/img/left-butt-start.png"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -179,7 +179,7 @@
                             </div>
                             <div class="compare-product">
                                 <div class="basket-prod flexibal">
-                                    <div class="basket-prod-img"><img src="img/product/prod-1.jpg"></div>
+                                    <div class="basket-prod-img"><img src="/assets/img/product/prod-1.jpg"></div>
                                     <div class="basket-prod-text">
                                         <a class="basket-prod-name">Плита кухонная EKG 96118 CX ELECTROLUX</a>
                                         <div class="prod-price"><span>10500</span>грн</div>
@@ -190,9 +190,9 @@
                                                data-price="12500" data-sale="10750" data-bonus="1500"
                                                data-gift-id="274560"
                                                data-gift-name="Чайник ELECTROLUX Electro чайник"
-                                               data-gift-img="./img/senn5.png">
+                                               data-gift-img="/assets/img/senn5.png">
                                                 <span>В корзину</span></a>
-                                            <a class="favorite-ico"><img src="img/left-butt-start.png"></a>
+                                            <a class="favorite-ico"><img src="/assets/img/left-butt-start.png"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -205,7 +205,7 @@
                             </div>
                             <div class="compare-product">
                                 <div class="basket-prod flexibal">
-                                    <div class="basket-prod-img"><img src="img/product/prod-1.jpg"></div>
+                                    <div class="basket-prod-img"><img src="/assets/img/product/prod-1.jpg"></div>
                                     <div class="basket-prod-text">
                                         <a class="basket-prod-name">Плита кухонная EKG 96118 CX ELECTROLUX</a>
                                         <div class="prod-price"><span>10500</span>грн</div>
@@ -216,9 +216,9 @@
                                                data-price="12500" data-sale="10750" data-bonus="1500"
                                                data-gift-id="274560"
                                                data-gift-name="Чайник ELECTROLUX Electro чайник"
-                                               data-gift-img="./img/senn5.png">
+                                               data-gift-img="/assets/img/senn5.png">
                                                 <span>В корзину</span></a>
-                                            <a class="favorite-ico"><img src="img/left-butt-start.png"></a>
+                                            <a class="favorite-ico"><img src="/assets/img/left-butt-start.png"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -274,7 +274,7 @@
                                                          data-price="12500" data-sale="10750" data-bonus="1500"
                                                          data-gift-id="274560"
                                                          data-gift-name="Чайник ELECTROLUX Electro чайник"
-                                                         data-gift-img="./img/senn5.png">
+                                                         data-gift-img="/assets/img/senn5.png">
                                 <span>В корзину</span></a></div>
 
                     </div>
@@ -324,7 +324,7 @@
                                                          data-price="12500" data-sale="10750" data-bonus="1500"
                                                          data-gift-id="274560"
                                                          data-gift-name="Чайник ELECTROLUX Electro чайник"
-                                                         data-gift-img="./img/senn5.png">
+                                                         data-gift-img="/assets/img/senn5.png">
                                 <span>В корзину</span></a></div>
 
                     </div>
@@ -374,7 +374,7 @@
                                                          data-price="12500" data-sale="10750" data-bonus="1500"
                                                          data-gift-id="274560"
                                                          data-gift-name="Чайник ELECTROLUX Electro чайник"
-                                                         data-gift-img="./img/senn5.png">
+                                                         data-gift-img="/assets/img/senn5.png">
                                 <span>В корзину</span></a></div>
 
                     </div>
@@ -424,7 +424,7 @@
                                                          data-price="12500" data-sale="10750" data-bonus="1500"
                                                          data-gift-id="274560"
                                                          data-gift-name="Чайник ELECTROLUX Electro чайник"
-                                                         data-gift-img="./img/senn5.png">
+                                                         data-gift-img="/assets/img/senn5.png">
                                 <span>В корзину</span></a></div>
 
                     </div>
@@ -474,7 +474,7 @@
                                                          data-price="12500" data-sale="10750" data-bonus="1500"
                                                          data-gift-id="274560"
                                                          data-gift-name="Чайник ELECTROLUX Electro чайник"
-                                                         data-gift-img="./img/senn5.png">
+                                                         data-gift-img="/assets/img/senn5.png">
                                 <span>В корзину</span></a></div>
 
                     </div>
@@ -525,7 +525,7 @@
                                data-price="12500" data-sale="10750" data-bonus="1500"
                                data-gift-id="274560"
                                data-gift-name="Чайник ELECTROLUX Electro чайник"
-                               data-gift-img="./img/senn5.png">
+                               data-gift-img="/assets/img/senn5.png">
                                 <span>В корзину</span>
                             </a>
                         </div>
@@ -537,7 +537,7 @@
         </div>
 
 
-        <div class="doww" style="opacity: 1; visibility: visible;"><img src="./img/verh.png" alt=""></div>
+        <div class="doww" style="opacity: 1; visibility: visible;"><img src="/assets/img/verh.png" alt=""></div>
 
 
     </div>
