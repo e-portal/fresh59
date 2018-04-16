@@ -46,162 +46,34 @@
             <div class="compare-all-blocks-wrap">
                 <div class="compare-fixed-wrap">
                     <div class="compare-fixed-over wrap">
-                        <div class="compare-fixed">
-                            <div class="compare-thead">
-                                <div class="basket-delete-icon"></div>
-                            </div>
-                            <div class="compare-product">
-                                <div class="basket-prod flexibal">
-                                    <div class="basket-prod-img"><img src="/assets/img/product/prod-1.jpg"></div>
-                                    <div class="basket-prod-text">
-                                        <a class="basket-prod-name">Плита кухонная EKG 96118 CX ELECTROLUX</a>
-                                        <div class="prod-price"><span>10500</span>грн</div>
-                                        <div class="none-if-more">
-                                            <a class="qweek-busket-prod add-to-cart bask acty" data-id="274567"
-                                               data-name="Плита кухонная ELECTROLUX EKG 96118 CX"
-                                               data-img="img/product/prod-1.jpg"
-                                               data-price="12500" data-sale="10750" data-bonus="1500"
-                                               data-gift-id="274560"
-                                               data-gift-name="Чайник ELECTROLUX Electro чайник"
-                                               data-gift-img="/assets/img/senn5.png">
-                                                <span>В корзину</span></a>
-                                            <a class="favorite-ico"><img src="/assets/img/left-butt-start.png"></a>
+                        {foreach from=$items item=item}
+                            <div class="compare-fixed">
+                                <div class="compare-thead">
+                                    <div class="basket-delete-icon"></div>
+                                </div>
+                                <div class="compare-product">
+                                    <div class="basket-prod flexibal">
+                                        <div class="basket-prod-img">
+                                            <img {if $item.imgid} src="{$url.img}/catalog/{$item.imgid}_s.{$item.imgext}"
+                                                    {else} src="/{$module}/images/no-image.jpg"{/if}/>
+                                        </div>
+                                        <div class="basket-prod-text">
+                                            <a class="basket-prod-name">{$item.brand} {$item.name}</a>
+                                            <div class="prod-price">
+                                                <span>{price $item.price $item.id_currency}</span>{$smarty.session.Currency.title}
+                                            </div>
+                                            <div class="none-if-more">
+                                                <a class="qweek-busket-prod add-to-cart bask acty"
+                                                        {include file='layouts/cart-item.tpl' cart_item=$item}>
+                                                    <span>В корзину</span></a>
+                                                <a class="favorite-ico"><img src="/assets/img/left-butt-start.png"></a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                            </div>
-                        </div>
-                        <div class="compare-fixed">
-                            <div class="compare-thead">
-                                <div class="basket-delete-icon"></div>
-                            </div>
-                            <div class="compare-product">
-                                <div class="basket-prod flexibal">
-                                    <div class="basket-prod-img"><img src="/assets/img/senn3.png"></div>
-                                    <div class="basket-prod-text">
-                                        <a class="basket-prod-name">Чайник CX ELECTROLUX EKG 96118</a>
-                                        <div class="prod-price"><span>10500</span>грн</div>
-                                        <div class="none-if-more">
-                                            <a class="qweek-busket-prod add-to-cart bask acty" data-id="274567"
-                                               data-name="Плита кухонная ELECTROLUX EKG 96118 CX"
-                                               data-img="img/product/prod-1.jpg"
-                                               data-price="12500" data-sale="10750" data-bonus="1500"
-                                               data-gift-id="274560"
-                                               data-gift-name="Чайник ELECTROLUX Electro чайник"
-                                               data-gift-img="/assets/img/senn5.png">
-                                                <span>В корзину</span></a>
-                                            <a class="favorite-ico"><img src="/assets/img/left-butt-start.png"></a>
-                                        </div>
-                                    </div>
                                 </div>
-
                             </div>
-                        </div>
-                        <div class="compare-fixed">
-                            <div class="compare-thead">
-                                <div class="basket-delete-icon"></div>
-                            </div>
-                            <div class="compare-product">
-                                <div class="basket-prod flexibal">
-                                    <div class="basket-prod-img"><img src="/assets/img/senn0.png"></div>
-                                    <div class="basket-prod-text">
-                                        <a class="basket-prod-name">Плита кухонная EKG 96118 CX ELECTROLUX</a>
-                                        <div class="prod-price"><span>10500</span>грн</div>
-                                        <div class="none-if-more">
-                                            <a class="qweek-busket-prod add-to-cart bask acty" data-id="274567"
-                                               data-name="Плита кухонная ELECTROLUX EKG 96118 CX"
-                                               data-img="img/product/prod-1.jpg"
-                                               data-price="12500" data-sale="10750" data-bonus="1500"
-                                               data-gift-id="274560"
-                                               data-gift-name="Чайник ELECTROLUX Electro чайник"
-                                               data-gift-img="/assets/img/senn5.png">
-                                                <span>В корзину</span></a>
-                                            <a class="favorite-ico"><img src="/assets/img/left-butt-start.png"></a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="compare-fixed">
-                            <div class="compare-thead">
-                                <div class="basket-delete-icon"></div>
-                            </div>
-                            <div class="compare-product">
-                                <div class="basket-prod flexibal">
-                                    <div class="basket-prod-img"><img src="/assets/img/senn2.png"></div>
-                                    <div class="basket-prod-text">
-                                        <a class="basket-prod-name">Стиральная машина EKG 96118 CX ELECTROLUX</a>
-                                        <div class="prod-price"><span>10500</span>грн</div>
-                                        <div class="none-if-more">
-                                            <a class="qweek-busket-prod add-to-cart bask acty" data-id="274567"
-                                               data-name="Плита кухонная ELECTROLUX EKG 96118 CX"
-                                               data-img="img/product/prod-1.jpg"
-                                               data-price="12500" data-sale="10750" data-bonus="1500"
-                                               data-gift-id="274560"
-                                               data-gift-name="Чайник ELECTROLUX Electro чайник"
-                                               data-gift-img="/assets/img/senn5.png">
-                                                <span>В корзину</span></a>
-                                            <a class="favorite-ico"><img src="/assets/img/left-butt-start.png"></a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="compare-fixed">
-                            <div class="compare-thead">
-                                <div class="basket-delete-icon"></div>
-                            </div>
-                            <div class="compare-product">
-                                <div class="basket-prod flexibal">
-                                    <div class="basket-prod-img"><img src="/assets/img/product/prod-1.jpg"></div>
-                                    <div class="basket-prod-text">
-                                        <a class="basket-prod-name">Плита кухонная EKG 96118 CX ELECTROLUX</a>
-                                        <div class="prod-price"><span>10500</span>грн</div>
-                                        <div class="none-if-more">
-                                            <a class="qweek-busket-prod add-to-cart bask acty" data-id="274567"
-                                               data-name="Плита кухонная ELECTROLUX EKG 96118 CX"
-                                               data-img="img/product/prod-1.jpg"
-                                               data-price="12500" data-sale="10750" data-bonus="1500"
-                                               data-gift-id="274560"
-                                               data-gift-name="Чайник ELECTROLUX Electro чайник"
-                                               data-gift-img="/assets/img/senn5.png">
-                                                <span>В корзину</span></a>
-                                            <a class="favorite-ico"><img src="/assets/img/left-butt-start.png"></a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="compare-fixed">
-                            <div class="compare-thead">
-                                <div class="basket-delete-icon"></div>
-                            </div>
-                            <div class="compare-product">
-                                <div class="basket-prod flexibal">
-                                    <div class="basket-prod-img"><img src="/assets/img/product/prod-1.jpg"></div>
-                                    <div class="basket-prod-text">
-                                        <a class="basket-prod-name">Плита кухонная EKG 96118 CX ELECTROLUX</a>
-                                        <div class="prod-price"><span>10500</span>грн</div>
-                                        <div class="none-if-more">
-                                            <a class="qweek-busket-prod add-to-cart bask acty" data-id="274567"
-                                               data-name="Плита кухонная ELECTROLUX EKG 96118 CX"
-                                               data-img="img/product/prod-1.jpg"
-                                               data-price="12500" data-sale="10750" data-bonus="1500"
-                                               data-gift-id="274560"
-                                               data-gift-name="Чайник ELECTROLUX Electro чайник"
-                                               data-gift-img="/assets/img/senn5.png">
-                                                <span>В корзину</span></a>
-                                            <a class="favorite-ico"><img src="/assets/img/left-butt-start.png"></a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
+                        {/foreach}
                     </div>
                 </div>
                 <div class="compare-block-wrap">
