@@ -19,10 +19,10 @@
                 <div class="itee-imgg">
                     {if 0 == $smarty.foreach.tp_items.index%8 || 1 == $smarty.foreach.tp_items.index}
                         <img {if $top_item.imgid} src="/images/catalog/{$top_item.imgid}.{$top_item.imgext}" {else}
-                            src="{$url.img}/no-image.jpg" {/if} alt="{$top_item.name}-{$top_item.brand}">
+                            src="{$url.img}/noimage.jpg" {/if} alt="{$top_item.name}-{$top_item.brand}">
                     {else}
                         <img {if $top_item.imgid} src="/images/catalog/{$top_item.imgid}_s.{$top_item.imgext}" {else}
-                            src="{$url.img}/no-image.jpg" {/if} alt="{$top_item.name}-{$top_item.brand}">
+                            src="{$url.img}/noimage.jpg" {/if} alt="{$top_item.name}-{$top_item.brand}">
                     {/if}
                 </div>
                 {if $top_item.bonus_amount>0}

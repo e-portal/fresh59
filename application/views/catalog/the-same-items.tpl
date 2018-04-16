@@ -47,7 +47,7 @@
                                 <div class="centr">
                                     <div class="itee-imgg">
                                         <img {if $itemtopsale.imgid} src="/images/catalog/{$itemtopsale.imgid}_s.{$itemtopsale.imgext}" {else}
-                                            src="{$url.img}/no-image.jpg" {/if}
+                                            src="{$url.img}/noimage.jpg" {/if}
                                                 alt="{$itemtopsale.name}-{$itemtopsale.brand}">
                                     </div>
 
