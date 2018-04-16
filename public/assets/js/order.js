@@ -266,14 +266,15 @@ $(document).ready(function () {
         compareLength();
 
 //scroll on px
-        $('.compare-all-blocks-wrap').on("scroll", function (e) {
-            compareScroll = e.currentTarget.scrollLeft;
+        $('.compare-all-blocks-wrap').on('scroll', function (e) {
+            var compareScroll = e.currentTarget.scrollLeft;
             $('.compare-fixed-over').scrollLeft(compareScroll);
         });
 
 //Scroll compare menu
         var befScroll = 0;
         $(window).scroll(function () {
+
             if ($('.compare-all-blocks').length) {
                 var foot = $('.compare-all-blocks').offset().top;
                 var scroll_block = $(window).scrollTop();
@@ -289,8 +290,12 @@ $(document).ready(function () {
                     }
                 }
                 else if (scroll_block < baner_top + 0) {
+                    $('.compare-all-blocks-wrap').on('scroll', function (e) {
+                        var compareScroll = e.currentTarget.scrollLeft;
+                        $('.compare-fixed-wrap').scrollLeft(compareScroll);
+                    });
                     baner.css({'position': 'absolute', top: '0px'});
-                    $('.compare-fixed-wrap').scrollLeft(compareScroll);
+                    $('body').find('.compare-features').addClass('m-top');
                     $('.compare-fixed-over, .compare-block-left .compare-fixed').removeClass('fixed-shadow');
                 }
             }
