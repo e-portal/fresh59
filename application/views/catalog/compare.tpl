@@ -80,18 +80,17 @@
                     </div>
                 </div>
                 <div class="compare-block-wrap">
-                    {foreach from=$fields item=grp name=grp}
+
+                    {foreach from=$items item=item}
                         <div class="compare-block">
-                            {foreach from=$grp.fields item=field name=field}
+
+                            {foreach from=$fields item=grp name=grp}
                                 <div class="compare-features">
                                     <ul class="compare-list">
-
-
                                         <div class="compare-features-title"></div>
-
-
-                                        {foreach from=$items item=item}
-                                            <li class="compare-features-feat">{$field.itemvalues[$item.id]}</li>
+                                        {foreach from=$grp.fields item=field name=field}
+                                            <li class="compare-features-feat">Отдельностоящая</li>
+                                            {$field.itemvalues[$item.id]}
                                         {/foreach}
                                     </ul>
 
@@ -102,9 +101,9 @@
                                         {include file='layouts/cart-item.tpl' cart_item=$item}>
                                     <span>В корзину</span></a>
                             </div>
+
                         </div>
                     {/foreach}
-
 
                 </div>
 
