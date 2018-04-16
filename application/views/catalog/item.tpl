@@ -64,6 +64,8 @@
                                 </div>
                             {/if}
                         {/foreach}
+                    {else}
+                        <img src="/images/noimage.jpg" alt="{$item.brand} {$item.name}"/>
                     {/if}
 
 
