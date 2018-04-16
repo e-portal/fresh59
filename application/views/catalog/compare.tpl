@@ -89,8 +89,7 @@
                                     <ul class="compare-list">
                                         <div class="compare-features-title"></div>
                                         {foreach from=$grp.fields item=field name=field}
-                                            <li class="compare-features-feat">Отдельностоящая</li>
-                                            {$field.itemvalues[$item.id]}
+                                            <li class="compare-features-feat">{$field.itemvalues[$item.id]}</li>
                                         {/foreach}
                                     </ul>
 
