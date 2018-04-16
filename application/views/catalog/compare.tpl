@@ -30,37 +30,14 @@
 
                 <div class="compare-features">
                     <ul class="compare-list">
-                        <div class="compare-features-title"><span>Основные характеристики</span></div>
-                        <li class="compare-features-feat">Установка</li>
-                        <li class="compare-features-feat">Загрузка</li>
-                        <li class="compare-features-feat">Максималья загрузка белья</li>
-                        <li class="compare-features-feat">Контроль дисбаланса</li>
-                        <li class="compare-features-feat">Функция отложенного старта</li>
-                        <li class="compare-features-feat">Контроль пенообразования</li>
-                    </ul>
-                    <ul class="compare-list">
-                        <div class="compare-features-title"><span>Особенности модели</span></div>
-                        <li class="compare-features-feat">Контроль дисбаланса</li>
-                        <li class="compare-features-feat">Функция отложенного старта</li>
-                        <li class="compare-features-feat">Контроль пенообразования</li>
-                        <li class="compare-features-feat">Установка</li>
-                        <li class="compare-features-feat">Загрузка</li>
-                        <li class="compare-features-feat">Максималья загрузка белья</li>
-                    </ul>
-                    <ul class="compare-list">
-                        <div class="compare-features-title"><span>Программы стирки</span></div>
-                        <li class="compare-features-feat">Установка</li>
-                        <li class="compare-features-feat">Загрузка</li>
-                        <li class="compare-features-feat">Максималья загрузка белья</li>
-                        <li class="compare-features-feat">Контроль дисбаланса</li>
-                        <li class="compare-features-feat">Функция отложенного старта</li>
-                        <li class="compare-features-feat">Контроль пенообразования</li>
-                        <li class="compare-features-feat">Контроль дисбаланса</li>
-                        <li class="compare-features-feat">Функция отложенного старта</li>
-                        <li class="compare-features-feat">Контроль пенообразования</li>
-                        <li class="compare-features-feat">Установка</li>
-                        <li class="compare-features-feat">Загрузка</li>
-                        <li class="compare-features-feat">Максималья загрузка белья</li>
+
+                        {foreach from=$fields item=grp name=grp}
+                            <div class="compare-features-title"><span>{$grp.name}</span></div>
+                            {foreach from=$grp.fields item=field name=field}
+                                <li class="compare-features-feat">{$field.name}</li>
+                            {/foreach}
+                        {/foreach}
+
                     </ul>
                 </div>
                 <div class="compare-if-small"></div>
