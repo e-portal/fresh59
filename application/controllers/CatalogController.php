@@ -1103,8 +1103,20 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
                         unset($values);
                     }
                 }
+
+                $this->view->body_class = 'compare-page';
+
+                $this->view->css_int = '
+                    <link rel="stylesheet" href="/assets/css/order.css">
+                ';
+
+                $this->view->js_int = '
+                    <script src="/assets/js/order.js"></script>
+                ';
+
                 $this->view->fields = $res;
-                $this->view->navigation($this->view->menu)->findOneById(1)->addPage(array('id' => null, 'label' => 'Сравнение', 'action' => 'compare', 'controller' => 'catalog'));
+                $this->view->navigation($this->view->menu)->findOneById(1)
+                    ->addPage(array('id' => null, 'label' => 'Сравнение', 'action' => 'compare', 'controller' => 'catalog'));
 
             }
         } else {
