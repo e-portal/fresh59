@@ -83,18 +83,18 @@
 
                     {foreach from=$items item=item}
                         <div class="compare-block">
+                            <div class="compare-features">
 
-                            {foreach from=$fields item=grp name=grp}
-                                <div class="compare-features">
+                                {foreach from=$fields item=grp name=grp}
                                     <ul class="compare-list">
                                         <div class="compare-features-title"></div>
                                         {foreach from=$grp.fields item=field name=field}
                                             <li class="compare-features-feat">{$field.itemvalues[$item.id]}</li>
                                         {/foreach}
                                     </ul>
+                                {/foreach}
+                            </div>
 
-                                </div>
-                            {/foreach}
                             <div class="compare-if-small">
                                 <a class="qweek-busket-prod add-to-cart bask acty"
                                         {include file='layouts/cart-item.tpl' cart_item=$item}>
