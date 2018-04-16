@@ -58,7 +58,10 @@
                                                     {else} src="/{$module}/images/no-image.jpg"{/if}/>
                                         </div>
                                         <div class="basket-prod-text">
-                                            <a class="basket-prod-name">{$item.brand} {$item.name}</a>
+                                            <a {iurl assoc.cat_latin=$item.cat_latin_single  assoc.parent=$item.parentname assoc.subdomain=$item.subdomain assoc.cat=$item.cat_onename assoc.brand=$item.brand assoc.item=$item.name}
+                                                    class="basket-prod-name">
+                                                {$item.brand} {$item.name}
+                                            </a>
                                             <div class="prod-price">
                                                 <span>{price $item.price $item.id_currency}</span>{$smarty.session.Currency.title}
                                             </div>
