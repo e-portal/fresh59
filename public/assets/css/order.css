@@ -352,8 +352,25 @@ input.bask {
 .compare-all-blocks {
     display: flex;
     position: relative;
-    overflow-x: auto;
     margin-bottom: 50px;
+}
+
+.compare-fixed-over,
+.compare-block-wrap {
+    display: flex;
+}
+
+.compare-all-blocks-wrap {
+    overflow-x: auto;
+    width: 100%;
+}
+
+.compare-fixed-over {
+    overflow: hidden;
+}
+
+.compare-fixed-over.wrap {
+    max-width: 1280px;
 }
 
 .compare-fixed {
@@ -361,14 +378,19 @@ input.bask {
     border-bottom: 1px solid #d7d7d7;
 }
 
-.compare-smaller .compare-fixed {
-    -webkit-box-shadow: 2px 2px 15px 5px rgba(30, 30, 30, 0.1);
-    -moz-box-shadow: 2px 2px 15px 5px rgba(30, 30, 30, 0.1);
-    box-shadow: 2px 2px 15px 5px rgba(30, 30, 30, 0.1);
+.compare-fixed-wrap {
+    overflow: hidden;
 }
 
-.compare-block:first-child,
-.compare-block:first-child .compare-fixed {
+.fixed-shadow {
+    -webkit-box-shadow: 12px 2px 15px 2px rgba(30, 30, 30, 0.1);
+    -moz-box-shadow: 12px 2px 15px 2px rgba(30, 30, 30, 0.1);
+    box-shadow: 12px 2px 15px 2px rgba(30, 30, 30, 0.1);
+    margin-bottom: 15px;
+}
+
+.compare-block-left:first-child,
+.compare-block-left:first-child .compare-fixed {
     min-width: 320px !important;
 }
 
@@ -501,7 +523,7 @@ input.bask {
     width: 70%;
 }
 
-.compare-product .compare-smaller > div {
+.compare-smaller .basket-prod > div {
     width: 50%;
 }
 
@@ -531,12 +553,26 @@ input.bask {
     padding-bottom: 5px;
 }
 
-.compare-features > div {
+.compare-features > div,
+.compare-features > ul > li,
+.compare-features > ul > div {
+    line-height: 40px;
     height: 40px;
     overflow: hidden;
+    padding: 0 30px;
 }
 
-.compare-block:first-child .compare-features {
+.compare-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.hide-without-different {
+    display: none;
+}
+
+.compare-block-left .compare-features {
     text-align: left;
     font-family: 'SF-UI-Display-Light';
 }
@@ -546,4 +582,10 @@ input.bask {
     justify-content: center;
     padding: 0 0 30px;
     margin-bottom: 30px;
+}
+
+/*.compare-features-feat:nth-child(odd),*/
+.compare-features > .compare-features-feat:nth-child(odd),
+.compare-features li:nth-child(odd) {
+    background: #f2f2f2;
 }
