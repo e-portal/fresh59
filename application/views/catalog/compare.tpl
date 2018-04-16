@@ -37,7 +37,6 @@
                             {/foreach}
                         </ul>
                     {/foreach}
-
                 </div>
                 <div class="compare-if-small"></div>
             </div>
@@ -108,9 +107,7 @@
             </div>
         </div>
 
-
-        <div class="doww" style="opacity: 1; visibility: visible;"><img src="/assets/img/verh.png" alt=""></div>
-
+        <div class="doww"><img src="/assets/img/verh.png" alt=""></div>
 
     </div>
 {else}
