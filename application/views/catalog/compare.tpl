@@ -5,12 +5,12 @@
         <div class="bread-crumbs breadcrumbs mobile-display-none" id="breadcrumbs" itemscope=""
              itemtype="http://schema.org/BreadcrumbList">
             <div itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="button">
-                <a href="http://13.j2landing.com" itemprop="item">Главная</a>
+                <a href="/" itemprop="item">Главная</a>
                 <meta itemprop="position" content="1">
             </div>
             <div itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="button">
                 <span itemprop="name" class="label1">Сравнение товаров</span>
-                <meta itemprop="position" content="3">
+                <meta itemprop="position" content="2">
             </div>
 
         </div>
