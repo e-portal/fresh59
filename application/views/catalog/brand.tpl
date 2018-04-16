@@ -167,10 +167,11 @@
                                         {/if}
                                         {if $item.acttype=='gift'}
                                             <div class="itee present">
-                                                <div class="numeral"><img src="/assets/img/present-img.png"
-                                                                          alt="present"></div>
+                                                <div class="numeral">
+                                                    <img src="/assets/img/present-img.png" alt="present">
+                                                </div>
                                                 <p>Подарок!</p>
-                                                <img src="/assets/img/present.png" alt="present">
+                                                <img src='/images/catalog/{gift assoc.id=$item.actid}' alt="present"/>
                                             </div>
                                         {/if}
                                     </div>
