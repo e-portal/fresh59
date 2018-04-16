@@ -1,42 +1,44 @@
 $(document).ready(function () {
     /*---------PRODUCT BIG SLIDER---------*/
-    $('.slider-for').find('.clone-slide').clone().appendTo('.slider-nav');
+    if ($('.clone-slide').length > 2) {
+        $('.slider-for').find('.clone-slide').clone().appendTo('.slider-nav');
 
-    function sliders() {
-        $('.slider-for').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            fade: true,
-            arrows: false,
-            asNavFor: '.slider-nav'
-        });
-        $('.slider-nav').slick({
-            slidesToShow: 5,
-            slidesToScroll: 1,
-            asNavFor: '.slider-for',
-            arrows: true,
-            dots: false,
-            focusOnSelect: true,
-            centerPadding: '60px',
-            /*responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        arrows: false,
-                        slidesToShow: 4
+        function sliders() {
+            $('.slider-for').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                fade: true,
+                arrows: false,
+                asNavFor: '.slider-nav'
+            });
+            $('.slider-nav').slick({
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                asNavFor: '.slider-for',
+                arrows: true,
+                dots: false,
+                focusOnSelect: true,
+                centerPadding: '60px',
+                /*responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            arrows: false,
+                            slidesToShow: 4
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 3
+                        }
                     }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 3
-                    }
-                }
-            ]*/
-        });
+                ]*/
+            });
+        }
+
+        sliders();
     }
-
-    sliders();
 
     $('.slider-nav a[data-slide]').click(function (e) {
         e.preventDefault();
