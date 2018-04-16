@@ -285,7 +285,8 @@ $(document).ready(function () {
                     }
                 }
                 else if (scroll_block < baner_top + 0) {
-                    baner.css({'position': 'relative', top: '0px', left: '320px'});
+                    baner.css({'position': 'relative', top: '0px'});
+                    $('.compare-fixed-wrap').css({'position': 'relative', top: '0px', left: '320px'});
                     $('.compare-fixed-over, .compare-block-left .compare-fixed').removeClass('fixed-shadow');
                 }
             }
