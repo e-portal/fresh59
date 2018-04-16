@@ -29,16 +29,15 @@
                 </div>
 
                 <div class="compare-features">
-                    <ul class="compare-list">
-
-                        {foreach from=$fields item=grp name=grp}
+                    {foreach from=$fields item=grp name=grp}
+                        <ul class="compare-list">
                             <div class="compare-features-title"><span>{$grp.name}</span></div>
                             {foreach from=$grp.fields item=field name=field}
                                 <li class="compare-features-feat">{$field.name}</li>
                             {/foreach}
-                        {/foreach}
+                        </ul>
+                    {/foreach}
 
-                    </ul>
                 </div>
                 <div class="compare-if-small"></div>
             </div>
