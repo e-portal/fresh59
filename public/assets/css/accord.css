@@ -1,86 +1,78 @@
 .accordion {
     width: -webkit-fill-available;
+    width: fill-available;
     float: left;
 }
-
 .accordion .accordion_item {
     margin-bottom: 1px;
     position: relative;
     border-bottom: 1px solid #eaeaea;
-    padding-left: 40px;
+    padding-left: 38px;
 }
 
+.accordion .title_block:first-child {
+    padding-top: 2px;
+}
 .accordion .title_block {
-    font: 17px 'SFUIDisplay-Semibold';
+    font: 17.3px 'SFUIDisplay-Semibold';
     color: #000;
     cursor: pointer;
     -webkit-transition: all .2s linear 0s;
-    -webkit-transition-delay: .2s 0s;
     transition: all .2s linear 0s;
-    padding: 3px 0;
-
+    position: relative;
+    padding: 4px 0 1px;
 }
-
 .accordion .title_block:before {
     content: url('../img/qa-arrow.png');
-    content: '\203A';
-    height: 28px;
-    font-size: 20px;
+    /*content: '\203A';*/
+    height: 26px;
+    /*font-size: 20px;*/
     text-align: center;
-    width: 28px;
+    width: 26px;
     border: 1px solid #ececec;
     border-radius: 25px;
-    -ms-transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
+    /*-ms-transform:rotate(90deg);*/
+    /*-webkit-transform:rotate(90deg);*/
+    /*transform:rotate(90deg);*/
     position: absolute;
-    right: 20px;
-    top: -2px;
+    right: 22px;
+    top: -3px;
 }
-
 .accordion_item:hover .title_block:before {
     border-color: #fbd402;
     background: #fbd402;
     transition: all .5s ease 0s;
-
 }
-
 .accordion_item.active .title_block:before {
     background: #fbd402;
-    transform: rotate(-90deg);
+    transform: rotate(-180deg);
     border-color: #fbd402;
 }
-
 .accordion .info-accord {
     overflow: hidden;
     position: relative;
 }
 
-.info-accord .article,
-.accordion_item.active {
-    padding-bottom: 20px;
+.info-accord .article {
+    padding-bottom: 0;
 }
-
-
+.accordion_item.active {
+    padding-bottom: 40px;
+}
 .accordion .info-accord p,
 .info-accord ul,
 .info-accord ol {
     margin: 0;
 }
-
 .say-question {
     float: right;
     padding: 22px 15px 0 0px;
-
 }
-
 .say-question span {
     font: 13px 'SF-UI-Display-Light';
     color: #8b9095;
     padding-right: 33px;
-
 }
-
 .say-question a {
     background: #fbd402;
     border-radius: 25px;
@@ -88,66 +80,48 @@
     font: 14px 'SFUIDisplay-Medium';
     color: #313e49;
 }
-
 .enter {
     display: none;
 }
-
 .active_block {
-    /*.article {*/
     position: relative;
     max-height: 148px;
     overflow: hidden;
     transition: .5s;
 }
-
 .accordion_item .info-accord {
     max-height: 0px;
     transition: 200ms;
 }
-
 .accordion_item.active .info-accord {
     max-height: 78px;
     transition: 200ms;
 }
-
 .accordion_item.active.open .info-accord {
     max-height: 500px;
     transition: 1000ms;
 }
-
 .acc-open {
     position: absolute;
-    bottom: 0;
+    bottom: 15px;
     color: #53a2d3;
     font: 14px 'SFUIDisplay-Medium';
     cursor: pointer;
-    /*transition: 1s;*/
 }
-
 .accordion_item .acc-open {
     visibility: hidden;
 }
-
-.accordion_item.active.open .acc-open {
-    bottom: 10px;
-}
-
 .accordion_item.active .acc-open {
     visibility: visible;
     transition: .2s;
 }
-
 .watched-slider .slick-slide img {
     width: auto;
     height: auto;
     margin: 0 auto;
     object-fit: contain;
 }
-
-
 /*-----pop-up-----*/
-
 #popup {
     display: none;
     width: 100%;
@@ -170,55 +144,67 @@
     overflow: hidden;
 }
 
+.popup-inner .liner {
+    font-size: 23px;
+    line-height: 43px;
+}
 #popup .close {
     position: absolute;
     width: 18px;
     height: 18px;
     top: 30px;
-    right: 25px;
+    right: 27px;
     background: none;
     cursor: pointer;
 }
-
 #popup .popup-block {
-    width: 49%;
+    width: 48%;
+    padding-left: 7px;
     display: inline-block;
 }
-
 #popup .popup-block:last-child {
-    text-align: right
+    width: 49%;
+    text-align: right;
+    padding-left: 5px;
 }
 
+#popup .popup-block:last-child p {
+    padding: 0 0 6px 41px;
+}
 #popup p {
     font: 14px 'SFUIDisplay-Medium';
     color: #aaadb1;
     text-transform: uppercase;
-    padding: 17px 0 6px 30px;
+    padding: 20px 0 6px 24px;
     margin: 0;
     text-align: left;
 }
-
-#popup input,
 #popup textarea {
-    font: 14px 'SFUIDisplay-Bold';
+    font: 13px 'SFUIDisplay-Bold';
     color: #313e49;
-    padding: 11px 20px;
+    padding: 13px 22px;
     border: 1px solid #ececec;
     background-color: #f9f9f9;
     border-radius: 25px;
-    width: 84%;
-    margin-bottom: 15px;
+    width: 82%;
+    margin-bottom: 11px;
 }
 
-#popup textarea {
-    width: 82%;
-    font-size: 13px;
+#popup input {
+    font: 14px 'SFUIDisplay-Bold';
+    color: #313e49;
+    padding: 11px 22px;
+    border: 1px solid #ececec;
+    background-color: #f9f9f9;
+    border-radius: 25px;
+    width: 83%;
+    margin-bottom: 11px;
 }
 
 #popup .button {
     cursor: pointer;
     background: #fbd402;
-    width: 94%;
+    width: 95%;
     font: 17px 'SFUIDisplay-Medium';
-    margin-top: 30px;
+    margin-top: 33px;
 }

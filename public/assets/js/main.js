@@ -205,6 +205,12 @@ jQuery(document).ready(function () {
             slidesToShow: 5,
             responsive: [
                 {
+                    breakpoint: 1281,
+                    settings: {
+                        slidesToShow: 4
+                    }
+                },
+                {
                     breakpoint: 1025,
                     settings: {
                         slidesToShow: 3
@@ -221,7 +227,7 @@ jQuery(document).ready(function () {
             arrows: false,
             infinite: true,
             cssEase: 'linear',
-            autoplay: true,
+            // autoplay: true,
             autoplaySpeed: 5000
         });
     } else {
@@ -301,8 +307,8 @@ jQuery(document).ready(function () {
         }
 
         /*IPAD MENU*/
-        $(".iteem:nth-child(1)").on("click", function () {
-            $(this).toggleClass('mobile-menu');
+        $(".burgerBtn").bind("click", function () {
+            $(this).parent().toggleClass('mobile-menu');
             if ($('.item-base').hasClass('base-menu')) {
                 $('html, body').css('overflow', 'hidden');
 
@@ -313,7 +319,21 @@ jQuery(document).ready(function () {
 
 
     }
-
+    $('.base-menu li .menu-one').bind('click', function (e) {
+        e.preventDefault()
+        if ($(this).hasClass('menu-0')) {
+        } else {
+            if ($(this).parent().hasClass('active')) {
+                $('.menu-0').slideUp(500)
+                $(this).parent().toggleClass('active');
+                return
+            }
+            $(this).parent().siblings().removeClass('active');
+            $('.menu-0').slideUp(500);
+            $(this).parent().addClass('active');
+            $(this).parent().hasClass('active') ? $(this).parent().find('.menu-0').slideDown(500) : $('.base-menu').removeClass('active');
+        }
+    });
     if (window.matchMedia("(max-width: 767px)").matches) {
 
         /*MOBILE MENU*/
