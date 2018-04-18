@@ -1993,7 +1993,6 @@ input {
     left: 0;
     width: 100%;
     display: flex;
-    display: -ms-flexbox;
     align-items: center;
     justify-content: center;
     height: 100%
@@ -2397,7 +2396,7 @@ input {
     position: relative;
 }
 
-.base-menu ul li:hover {
+.base-menu ul.categ-menu li:hover {
     background: #fbd402
 }
 
