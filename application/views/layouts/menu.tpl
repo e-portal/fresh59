@@ -3,7 +3,7 @@
 <!-- navigation -->
 <div class="base-menu">
 
-    <ul>
+    <ul class="categ-menu">
         {foreach from=$container item=page}
         {foreach from=$page->pages item=page}
         <li>
