@@ -144,11 +144,9 @@
     .main-menu ul li a {
         font-size: 15px;
     }
-
     .next-menu ul li a {
         font-size: 13px;
     }
-
     .next-menu ul li:nth-child(1) a:after,
     .next-menu ul li:nth-child(2) a:after {
         left: -30px;
@@ -167,7 +165,6 @@
         background-size: 14px;
         top: -6px;
     }
-
     .head-item:nth-child(3) {
         width: 370px;
     }
@@ -185,7 +182,6 @@
     .send {
         height: 38px;
     }
-
     .head-item:nth-child(2) {
         padding: 0 30px;
     }
@@ -466,7 +462,6 @@
         transform: rotate(90deg);
         transition-duration: .2s;
     }
-
     .base-menu ul.categ-menu li.active a:after {
         transform: rotate(270deg);
     }
@@ -487,7 +482,6 @@
     .base-menu ul.menu-0 li:first-child {
         padding-top: 13px;
     }
-
     .base-menu ul.menu-0 li a {
         height: 41px;
         list-style-type: circle;
@@ -500,7 +494,6 @@
     .base-menu ul.menu-0 li a::after {
         background: none;
     }
-
     .base-menu ul.menu-0 li a::before {
         content: '•';
         position: relative;
@@ -536,7 +529,6 @@
     .mob-next-menu ul li {
         padding: 16.6px 0 16.6px 61px;
     }
-
     .mob-next-menu ul li a {
         position: relative;
         font-size: 16px;
@@ -546,6 +538,10 @@
 
     .mob-next-menu ul li:active a {
         color: #fbd402;
+    }
+
+    .base-menu ul.categ-menu li:hover {
+        background: #fff;
     }
 
     .mob-next-menu ul li:active {
@@ -561,7 +557,6 @@
         width: 25px;
         content: ''
     }
-
     .mob-next-menu ul li:nth-child(1) a:after {
         background: url(../img/menu1.png) center no-repeat;
     }
@@ -582,19 +577,16 @@
         padding: 48px 0;
         margin-left: -17px;
     }
-
     .mob-main-menu ul li {
         text-align: center;
         padding: 14px 0;
     }
-
     .mob-main-menu ul li a {
         font-size: 17px;
         text-transform: none;
         color: #969a9d;
         transition: .2s;
     }
-
     .mob-main-menu ul li:active a {
         color: #333e48;
     }
@@ -602,7 +594,6 @@
     .mob-social {
         text-align: center;
     }
-
     .mob-social p {
         font-size: 15px;
         text-transform: none;
@@ -627,7 +618,6 @@
     .base-menu ul.mob-next-menu li {
         background: #fff;
     }
-
     .base-menu ul.mob-next-menu li:hover {
         color: #fbd402;
     }
@@ -922,6 +912,7 @@
     /*.owl .slick-prev {*/
     /*left: 10px;*/
     /*}*/
+
     .owl .items {
         padding: 0 10px;
         width: 47%;
@@ -1501,6 +1492,7 @@
         right: 20px;
         top: 2px;
     }
+
 
     .small-product .blue {
         top: -10px;
