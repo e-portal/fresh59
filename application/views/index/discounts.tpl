@@ -122,8 +122,8 @@
                                     <div class="cash">
 
                                         {if $item.specprice && ($item.bdprice > $item.price) && (($item.bdprice - $item.price)/$item.price > 0.01) }
-                                            {price $item.bdprice} {$smarty.session.Currency.title}
-                                            <span>{price $item.bdprice} {price $item.price $item.id_currency}</span>
+                                            {price $item.price $item.id_currency}
+                                            <span>{price $item.bdprice} {$smarty.session.Currency.title}</span>
                                         {else}
                                             {price $item.price $item.id_currency} {$smarty.session.Currency.title}
                                         {/if}
