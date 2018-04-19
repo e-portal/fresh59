@@ -228,15 +228,11 @@
                                         </div>
                                         <div class="right-bakk">
                                             {if true}
-                                                <object type="lol/wut">
-                                                    <a class="bask acty" href="javascript:void(0)"
-                                                       tabindex="-1"><span>В корзину</span></a>
-                                                </object>
+                                                <a class="bask acty" href="javascript:void(0)"
+                                                   tabindex="-1"><span>В корзину</span></a>
                                             {else}
-                                                <object type="lol/wut">
-                                                    <a class="bask acty blue-bask" href="javascript:void(0)"
-                                                       tabindex="-1"><span>Под заказ</span></a>
-                                                </object>
+                                                <a class="bask acty blue-bask" href="javascript:void(0)"
+                                                   tabindex="-1"><span>Под заказ</span></a>
                                             {/if}
                                         </div>
                                     </div>
