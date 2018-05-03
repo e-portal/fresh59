@@ -57,6 +57,26 @@
                             грн/мес</p>
                         {include file='catalog/popup-privat.tpl'}
                     </div>
+                    <div class="itee">
+                        <img src="/assets/img/izee3.png" alt="">
+                        <p>от <span>
+                                {$item.price*0.0099*$curs_evro_smarty+$item.price/24*$curs_evro_smarty|round}
+                            </span> грн/мес</p>
+
+                        <div class="pop-stock quick-payment">
+                            <div class="pop-header">
+                                <span>мгновенная рассрочка</span>
+                                <img src="/assets/img/main/pop-quick-payment.png" alt="title">
+                            </div>
+                            <div class="pop-text">
+                                <p><b>Получите рассрочку за 30 минут без переплат и очередей</b></p>
+                                <p>Покупайте товары в рассрочку до 24 месяцев с небольшой ежемесячной комиссией от
+                                    стоимости товара.</p>
+                                <img class="pop-background" src="/assets/img/main/pop-quick-payment-back.png"
+                                     alt="backgroun">
+                            </div>
+                        </div>
+                    </div>
                     {if $item.id_brand == '26' && $item.id_category != 60}
                         <div class="itee">
                             <img src="/assets/img/izee2.png" alt="">
