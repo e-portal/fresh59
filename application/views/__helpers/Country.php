@@ -151,7 +151,7 @@ class Zend_View_Helper_Country extends Zend_View_Helper_Abstract
             'republic of china' => 'China.png',
         ];
 
-        return $countries[$params];
+        return $params;
 
     }
 }
