@@ -111,9 +111,43 @@ $(document).ready(function () {
                 $('.popup').css('display', 'none');
             }, 1000);
         });
+
     }
 
+    /*---------autorisation---------*/
+    $('.pipl').click(function () {
+        $('.autorisation').css('display', 'flex');
+        /*stop scroll*/
+        if (window.matchMedia('(max-width: 900px)').matches) {
+            $('html, body').css('overflow', 'hidden');
+        } else {
+            $('html, body').css('overflow', 'hidden');
+        }
 
+        /*show popup*/
+        $('.popup-content').addClass('show');
+        $('.close').addClass('show');
+
+        /*close popup*/
+        $('.closeX, .close, .closeBtn, .take-order-btn').on('click', function () {
+
+            $('.popup-content').removeClass('show').addClass('hide');
+            $('.close').removeClass('show').addClass('hide');
+
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                $('html, body').css('overflow', 'auto');
+            } else {
+                $('html, body').css('overflow', 'auto');
+            }
+
+            setTimeout(function () {
+                $('.popup-content').removeClass('hide');
+                $('.close').removeClass('hide');
+                $('.popup').css('display', 'none');
+            }, 1000);
+        });
+    });
+    /*---------end autorisation---------*/
     /*---------end POPUP---------*/
 
 
