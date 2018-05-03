@@ -127,5 +127,6 @@
 <script src="/assets/js/main.js"></script>
 <script src="/assets/js/slick.min.js"></script>
 <script src="/assets/js/mask.js"></script>
+<script src="/assets/js/order.js"></script>
 </body>
 </html>
