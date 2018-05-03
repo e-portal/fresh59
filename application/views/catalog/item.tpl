@@ -17,10 +17,31 @@
                         <div class="itee">
                             <img src="/assets/img/izee0.png" alt="">
                             <p>Вернем: <span>{$item.bonus_amount|round} грн</span></p>
+
+                            {*-------POP-up-------*}
+                            <div class="pop-stock pay-bonus">
+                                <div class="pop-header">
+                                    <span>ОПлачивай бонусами!</span>
+                                    <img src="/assets/img/main/pop-pay-bonus.png" alt="title">
+                                </div>
+                                <div class="pop-text">
+                                    <p>Вы можете получить <b>бонусную карточку</b> на которой можно накапливать и
+                                        тратить бонусы в оплате товара
+                                        на нашем сайте <b>(1 бонус приравнивается к 1 грн.)</b></p>
+                                    <p>Бонусный счет можно использовать для <b>полной</b> или <b>частичной оплаты</b>
+                                        последующих заказов в
+                                        нашем интернет-магазине.</p>
+                                    <p>Карточку постоянного покупателя могут использовать <b>все члены Вашей семьи</b>,
+                                        а также друзья.</p>
+                                    <img class="pop-background" src="/assets/img/main/pop-pay-bonus-back.png"
+                                         alt="backgroun">
+                                </div>
+                            </div>
+                            {*-------POP-up-------*}
                         </div>
                     {/if}
                     <div class="itee">
-                        <img src="/assets/img/izee3.png" alt="">
+                        <img src="/assets/img/izee1.png" alt="">
                         <p>от
                             <span>
                                 {if $item.rent >= 25}
@@ -34,6 +55,7 @@
                                 {/if}
                             </span>
                             грн/мес</p>
+                        {include file='catalog/popup-privat.tpl'}
                     </div>
                     {if $item.id_brand == '26' && $item.id_category != 60}
                         <div class="itee">
@@ -54,12 +76,13 @@
                          </div>
                     {/if}*}
                 </div>
-                <a href="#prod-gift" class="itee present">
-                    <div class="numeral"><img src="/assets/img/present-img.png" alt="present"></div>
-                    <p>Подарок!</p>
-                    <img src="/assets/img/present.png" alt="present">
-                </a>
-
+                {if $item.acttype=='gift'}
+                    <a href="#prod-gift" class="itee present">
+                        <div class="numeral"><img src="/assets/img/present-img.png" alt="present"></div>
+                        <p>Подарок!</p>
+                        <img src='/images/catalog/{gift assoc.id=$item.actid}'/>
+                    </a>
+                {/if}
                 <div class="slider-prod slider-for">
 
                     {if $item.images}
