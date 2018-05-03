@@ -111,6 +111,7 @@ class Zend_View_Helper_Country extends Zend_View_Helper_Abstract
             'великобритания' => ['United-Kingdom.png', 'UK'],
             'великобританія' => ['United-Kingdom.png', 'UK'],
             'united kingdom' => ['United-Kingdom.png', 'UK'],
+            'Great Britain' => ['United-Kingdom.png', 'UK'],
             'Южная Корея' => ['South-Korea.png', 'Korea'],
             'Південна Корея' => ['South-Korea.png', 'Korea'],
             'South Korea' => ['South-Korea.png', 'Korea'],
