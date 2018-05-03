@@ -192,6 +192,7 @@
                 </div>
                 <div class="buy-by-part">
                     <div class="buy-by-part-from">
+                        <img src="/assets/img/izee1.png" alt="">
                         от
                         <span>
                             {if $item.rent >= 25}
@@ -207,7 +208,6 @@
                         грн/мес
                     </div>
                     <div>
-                        <img src="/assets/img/izee1.png" alt="">
                         <a class="green-link">Рассрочка</a> или <a class="green-link">Кредит</a>
                     </div>
 
