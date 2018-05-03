@@ -149,6 +149,7 @@ class Zend_View_Helper_Country extends Zend_View_Helper_Abstract
             'китайская народная республика' => ['China.png', 'China'],
             'китайська народна республіка' => ['China.png', 'China'],
             'republic of china' => ['China.png', 'China'],
+            'Швеция' => ['Sweden.png', 'Sweden'],
         ];
 
         if (1 == $params['source']) {
