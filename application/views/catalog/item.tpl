@@ -87,6 +87,21 @@
                         <div class="itee">
                             <img src="/assets/img/izee4.png" alt="">
                             <p>Лучшая <span>цена</span></p>
+                            <div class="pop-stock best-price">
+                                <div class="pop-header">
+                                    <span>Отличный выбор</span>
+                                    <img src="/assets/img/main/pop-best-price.png" alt="title">
+                                </div>
+                                <div class="pop-text">
+                                    <p>Мы <b>отследили цены</b> во многих интернет магазинах по этому товару. И смело
+                                        можем утверждать, что <b>наша
+                                            цена является лучшей</b>!</p>
+                                    <p>Товары, на которых Вы заметили иконку с пальцем вверх - достойны Вашего внимания
+                                        :)</p>
+                                    <img class="pop-background" src="/assets/img/main/pop-best-price-back.png"
+                                         alt="backgroun">
+                                </div>
+                            </div>
                         </div>
                     {/if}
                     {*{if $item.acttype !== 'gift'&& $x3 > 0 || $item.id == '21465'}

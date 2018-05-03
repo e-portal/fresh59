@@ -6,16 +6,13 @@
     .two-same-column > div {
         width: 100%;
     }
-
     .two-same-column .take-gift {
         margin-top: 30px;
     }
-
     .slider-text {
         font-size: 25px;
         line-height: 30px;
     }
-
     .three-column > div {
         width: 50%;
     }
@@ -24,16 +21,13 @@
         flex-wrap: wrap;
         flex-direction: column-reverse;
     }
-
     .basket-two-column > div {
         width: 100%;
         margin-bottom: 30px;
     }
-
     .left-right {
         flex-wrap: wrap;
     }
-
     .left-right > div,
     .slider-product {
         width: 100% !important;
@@ -46,11 +40,9 @@
         line-height: 27px;
         text-align: center;
     }
-
     .slider-text {
         font-size: 15px;
     }
-
     .slider-text .khob {
         width: auto;
         padding: 0 22px 0 10px;
@@ -59,42 +51,33 @@
         height: auto;
         bottom: 5%;
     }
-
     .slider-text .khob::after {
         right: 9px;
     }
-
     .flexibal-title {
         flex-wrap: wrap;
         margin-bottom: 10px;
     }
-
     .flexibal-title h4 {
         height: auto;
     }
-
     .title-gift {
         line-height: 22px;
         padding: 10px;
     }
-
     .two-same-column .take-gift-content {
         flex-wrap: wrap;
     }
-
     .two-same-column .take-gift-content > div {
         width: 100%;
     }
-
     .two-same-column .take-gift-content .timer {
         width: auto;
         margin: 0 auto 30px auto;
     }
-
     .three-column > div {
         width: 100%;
     }
-
     .all-sale .right-banner .khob {
         padding: 0;
     }

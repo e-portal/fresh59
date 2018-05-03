@@ -159,6 +159,7 @@ img {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 1;
 }
 
 .slider-prod {
@@ -285,6 +286,8 @@ img {
 .product-menu a:hover {
     background: #313e49;
     color: #fff;
+    border-top: 1px solid #313e49;
+    border-bottom: 1px solid #313e49;
 }
 
 .in-stock,
@@ -456,7 +459,8 @@ img {
     width: 100%;
     border: 2px solid #fbd402;
     border-radius: 25px;
-    margin-top: 56px;
+    margin-top: 107px;
+    /*margin-top: 56px;*/
 }
 
 .title-gift {
@@ -640,6 +644,7 @@ img {
 .tabs {
     border: 1px solid #d7d7d7;
     border-radius: 25px;
+    /*margin-top: 56px;*/
     margin-top: 107px;
 }
 

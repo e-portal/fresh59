@@ -539,7 +539,7 @@ input.bask {
 }
 
 .compare-features {
-    padding: 250px 0 20px 0;
+    padding: 20px 0;
     margin-bottom: 30px;
     border-bottom: 1px solid #d7d7d7;
     font-size: 15px;
@@ -548,6 +548,9 @@ input.bask {
     font-family: 'SFUIDisplay-Bold';
 }
 
+.m-top.compare-features {
+    padding: 250px 0 20px 0;
+}
 .compare-features-title span {
     font-family: 'SFUIDisplay-Bold';
     border-bottom: 2px solid #fbd402;
@@ -589,4 +592,9 @@ input.bask {
 .compare-features > .compare-features-feat:nth-child(odd),
 .compare-features li:nth-child(odd) {
     background: #f2f2f2;
+}
+
+.autorisation .popup-content {
+    width: auto;
+    height: auto;
 }
