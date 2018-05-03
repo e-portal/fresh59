@@ -9,10 +9,12 @@
         <div class="ourr">
             <div class="slider-product jq-move-slider-product">
                 <div class="slider-product-icon">
-                    <div class="itee">
-                        <img src="/assets/img/Italy.png" alt="">
-                        <p>Made in <span> Italy</span></p>
-                    </div>
+                    {if $item.country}
+                        <div class="itee">
+                            <img src="/assets/img/{counry arr=$item.country}">
+                            <p>Made in <span> Italy</span></p>
+                        </div>
+                    {/if}
                     {if $item.bonus_amount>0}
                         <div class="itee">
                             <img src="/assets/img/izee0.png" alt="">
