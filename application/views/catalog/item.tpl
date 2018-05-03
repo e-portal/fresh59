@@ -11,8 +11,8 @@
                 <div class="slider-product-icon">
                     {if $item.country}
                         <div class="itee">
-                            <img src="/assets/img/{country arr=$item.country}">
-                            <p>Made in <span> Italy</span></p>
+                            <img src="/images/icons/flags/{country assoc.country=$item.country assoc.source=1}">
+                            <p>Made in <span> {country assoc.country=$item.country assoc.source=0}</span></p>
                         </div>
                     {/if}
                     {if $item.bonus_amount>0}
