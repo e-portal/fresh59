@@ -9,6 +9,10 @@
         <div class="ourr">
             <div class="slider-product jq-move-slider-product">
                 <div class="slider-product-icon">
+                    <div class="itee">
+                        <img src="/assets/img/Italy.png" alt="">
+                        <p>Made in <span> Italy</span></p>
+                    </div>
                     {if $item.bonus_amount>0}
                         <div class="itee">
                             <img src="/assets/img/izee0.png" alt="">
@@ -50,7 +54,11 @@
                          </div>
                     {/if}*}
                 </div>
-
+                <a href="#prod-gift" class="itee present">
+                    <div class="numeral"><img src="/assets/img/present-img.png" alt="present"></div>
+                    <p>Подарок!</p>
+                    <img src="/assets/img/present.png" alt="present">
+                </a>
 
                 <div class="slider-prod slider-for">
 
@@ -198,10 +206,17 @@
                         </span>
                         грн/мес
                     </div>
-                    <div class="">
+                    <div>
+                        <img src="/assets/img/izee1.png" alt="">
                         <a class="green-link">Рассрочка</a> или <a class="green-link">Кредит</a>
                     </div>
-                    <div class="oplata-part">
+
+                    <div>
+                        <img src="/assets/img/izee1.png" alt="">
+                        0% используйте возможность купить товар без переплат
+                    </div>
+
+                    <div>
                         <img src="/assets/img/izee1.png" alt="">
                         <div class="">Доступна&nbsp;<a class="green-link">Оплата частями</a></div>
                     </div>
