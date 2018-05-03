@@ -217,7 +217,7 @@
 
                     <div>
                         <img src="/assets/img/izee1.png" alt="">
-                        <div class="">Доступна&nbsp;<a class="green-link">Оплата частями</a></div>
+                        Доступна&nbsp;<a class="green-link">Оплата частями</a>
                     </div>
                 </div>
             </div>
