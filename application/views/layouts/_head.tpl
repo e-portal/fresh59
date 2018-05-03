@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/assets/css/slick.css">
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="/assets/css/product.css">
+    <link rel="stylesheet" href="/assets/css/order.css">
     <link rel="stylesheet" href="/assets/css/small-page.css">
     <link rel="stylesheet" href="/assets/css/media.css">
     <link rel="stylesheet" href="/assets/css/mob-version.css">

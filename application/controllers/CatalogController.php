@@ -311,16 +311,6 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
             $cache->save($similarItems, $key);
         }
 
-        $this->view->js_int = '
-                <script src="/assets/js/product.js"></script>
-                <script src="/assets/js/order.js"></script>
-            ';
-
-        /*$this->view->css_int = '
-                <link rel="stylesheet" href="/assets/css/product.css">
-            ';*/
-
-
         $this->view->otherItems = $similarItems;
         // var_dump($similarItems['price']);die();
     }
@@ -1105,14 +1095,6 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
                 }
 
                 $this->view->body_class = 'compare-page';
-
-                $this->view->css_int = '
-                    <link rel="stylesheet" href="/assets/css/order.css">
-                ';
-
-                $this->view->js_int = '
-                    <script src="/assets/js/order.js"></script>
-                ';
 
                 $this->view->fields = $res;
                 $this->view->navigation($this->view->menu)->findOneById(1)
