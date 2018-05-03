@@ -406,6 +406,7 @@
                     <div>{if $item.full_info}{$item.full_info}{else}{$item.short_info}{/if}</div>
                 </div>
                 <div id="prod-characteristic">
+                    <div class="liner smaller-liner"><span>Характеристики</span></div>
                     <table class="table-without-border">
 
                         {foreach from=$fields item=_group}
