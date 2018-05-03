@@ -191,19 +191,20 @@
                     </form>
                 </div>
                 <div class="buy-by-part">
-                    <div class="buy-by-part-from">
+                    <div>
                         <img src="/assets/img/izee1.png" alt="">
                         от
-
-                        {if $item.rent >= 25}
-                            {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=8}
-                        {elseif $item.rent > 12.5}
-                            {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=6}
-                        {elseif $item.rent > 7.5}
-                            {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=3}
-                        {else}
-                            {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=3}
-                        {/if}
+                        <span>
+                            {if $item.rent >= 25}
+                                {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=8}
+                            {elseif $item.rent > 12.5}
+                                {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=6}
+                            {elseif $item.rent > 7.5}
+                                {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=3}
+                            {else}
+                                {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=3}
+                            {/if}
+                        </span>
                         грн/мес
                     </div>
                     <div>
