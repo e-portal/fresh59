@@ -300,7 +300,7 @@
                 <!-- Action -->
                 {if $item.acttype=='gift'}
                     <div class="take-gift">
-                        <div class="title-gift"><span>Успей заказать и получить подарок!{$action.end_date}</span></div>
+                        <div class="title-gift"><span>Успей заказать и получить подарок!</span></div>
                         <div class="take-gift-content">
                             <div class="timer" data-year="{getdate arr=$action.end_date arr='Y'}"
                                  data-month="{getdate arr=$action.end_date arr='m'}"
