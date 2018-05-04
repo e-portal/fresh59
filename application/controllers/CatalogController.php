@@ -311,6 +311,15 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
             $cache->save($similarItems, $key);
         }
 
+        $this->view->js_int = '
+                <script src="/assets/js/product.js"></script>
+            ';
+
+        /*$this->view->css_int = '
+                <link rel="stylesheet" href="/assets/css/product.css">
+            ';*/
+
+
         $this->view->otherItems = $similarItems;
         // var_dump($similarItems['price']);die();
     }
