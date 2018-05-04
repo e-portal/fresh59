@@ -227,7 +227,7 @@
                                             {/if}
                                         </div>
                                         <div class="right-bakk">
-                                            {if true}
+                                            {if $item.id_availability == 1}
                                                 <a class="bask acty" href="javascript:void(0)"
                                                    tabindex="-1"><span>В корзину</span></a>
                                             {else}
