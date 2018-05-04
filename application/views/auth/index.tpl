@@ -98,9 +98,9 @@
                                                             <p>ГГГГ *</p>
                                                             <select id="bth-year" name="select" required>
                                                                 <option value=""></option>
-                                                                <option value="ru">2000</option>
-                                                                <option value="ua">2001</option>
-                                                                <option value="en">2002</option>
+                                                                <option value="2000">2000</option>
+                                                                <option value="2001">2001</option>
+                                                                <option value="2002">2002</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -111,9 +111,9 @@
                                                         <p>ГОРОД *</p>
                                                         <select id="city" name="select" required>
                                                             <option value=""></option>
-                                                            <option value="kyiv">Киев</option>
-                                                            <option value="kharkov">Харьков</option>
-                                                            <option value="odesa">Одесса</option>
+                                                            {foreach from=$regions item=region}
+                                                                <option value="region_{$region.id}">{$region.name}</option>
+                                                            {/foreach}
                                                         </select>
                                                         <p>Улица *</p>
                                                         <input type="text" name="name" id="street" required/>
@@ -123,7 +123,7 @@
                                                         </div>
                                                         <div>
                                                             <p>Кв.</p>
-                                                            <input type="text" name="name" id="flat"/>
+                                                            <input type="text" name="number" id="flat"/>
                                                         </div>
                                                     </div>
                                                     <p>ЯЗЫК</p>
