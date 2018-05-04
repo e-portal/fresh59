@@ -188,7 +188,7 @@
                 </div>
 
                 <div class="owls interest">
-                    ----------ARTICLES----------
+                    {*----------ARTICLES----------*}
                     <div class="container">
                         <a class="blue" href="/articles">Все советы<span class="linn"></span></a>
                         <div class="liner"><span>Полезно и интересно</span></div>
@@ -228,7 +228,7 @@
 
                         </div>
                     </div>
-                    ----------ARTICLES----------
+                    {*----------ARTICLES----------*}
                     <div class="interest-sale">
                         <p class="ad-blue">Самые выгодные покупки</p>
                         <p class="ad-cheaper">У нас дешевле! <br> скидки <b>до 60%</b></p>
