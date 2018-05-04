@@ -405,8 +405,8 @@
                 </div>
                 <div id="tab03" class="tab-contents">
                     <div class="tab-contents-wrap">
+                        <a class="bluee" href="/page/guarantee">Гарантия</a>
                         {if $brand_info.guarantee}
-                            <a class="bluee" href="/page/guarantee">Гарантия</a>
                             <p>
                                 {if $item.id_brand == 9 && $item.id_category == 217}
                                     5 лет
