@@ -24,6 +24,14 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
         $this->_forward('page404','index'); return;
     }
 
+    public function actionAction()
+    {
+        parent::actionAction();
+        $siteId = Zend_Registry::get('siteId');
+        $modArticles = new Articles();
+        $this->view->articles = $modArticles->fetchAll("site_id = {$siteId} and visible = '1'", 'date DESC', 8, 0)->toArray();
+    }
+
     public function itemAction() {
         $modActions = new Actions();
         $modCat = new Catalog();
