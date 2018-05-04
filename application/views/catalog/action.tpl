@@ -1,5 +1,5 @@
 {include file='layouts/_header.tpl'}
-
+{debug}
 
 <div class="container">
 
