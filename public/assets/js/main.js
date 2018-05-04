@@ -519,6 +519,38 @@ jQuery(document).ready(function () {
 
     $('selector').selectyboxi();
 
+
+    (function ($) {
+        $.fn.selectypagination = function () {
+
+            var selectDefaultHeight = $('#selectyPagination').height();
+            var rotateDefault = "rotate(0deg)";
+            var h = $('#selectyMenuPagination').height() + 25;
+            $('#selectyPagination > p.valueTags').click(function () {
+
+                var currentHeight = $('#selectyPagination').height();
+
+                if (currentHeight < 50 || currentHeight == selectDefaultHeight) {
+                    $('#selectyPagination').height(h);
+                    $('div#selectyPagination p.valueTags').addClass('rofl');
+                }
+
+                if (currentHeight >= 50) {
+                    $('#selectyPagination').height(selectDefaultHeight);
+                    $('div#selectyPagination p.valueTags').removeClass('rofl');
+                }
+            });
+
+            $('li.options').click(function () {
+                $('#selectyPagination').height(selectDefaultHeight);
+                $('div#selectyPagination p.valueTags').removeClass('rofl');
+                $('p.valueTags').text($(this).text());
+            });
+        };
+    })(jQuery);
+
+    $('selector').selectypagination();
+
     $('.morr').click(function () {
         $(this).toggleClass('opened').toggleClass('closed').next().slideToggle('normal');
         if ($(this).hasClass('opened')) {
@@ -571,6 +603,7 @@ $(document).on("click", ".naccs .tabs-menu div", function () {
         $(".naccs ul").height(listItemHeight + "px");*/
     }
 });
+
 
 
 $('.tabs-legg').click(function () {
@@ -675,6 +708,20 @@ $(function () {
             }
         });
     }
+
+    $slider.each(function () {
+        $('#price-filter-max,#price-filter-min').on("change", function () {
+            a = $("#price-filter-max").val();
+            b = $("#price-filter-min").val();
+            console.log(a, b);
+            if (a < b) {
+                $("#price-filter-max").val(b)
+            }
+
+        });
+
+
+    })
 
 
     $("#price-filter-min, #price-filter-max").map(function () {
