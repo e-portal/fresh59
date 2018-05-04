@@ -1,6 +1,6 @@
 $(document).ready(function () {
     /*---------PRODUCT BIG SLIDER---------*/
-    if ($('.clone-slide').length > 2) {
+    if ($('.clone-slide').length > 1) {
         $('.slider-for').find('.clone-slide').clone().appendTo('.slider-nav');
 
         function sliders() {
