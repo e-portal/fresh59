@@ -154,9 +154,18 @@ class Zend_View_Helper_Country extends Zend_View_Helper_Abstract
         ];
 
         if (1 == $params['source']) {
-            return $countries[$params['country']][0];
+            if (array_key_exists($params['country'], $countries)) {
+                return $countries[$params['country']][0];
+            } else {
+                return 'Sweden.png';
+            }
+
         } else {
-            return $countries[$params['country']][1];
+            if (array_key_exists($params['country'], $countries)) {
+                return $countries[$params['country']][1];
+            } else {
+                return 'Sweden';
+            }
         }
     }
 }
