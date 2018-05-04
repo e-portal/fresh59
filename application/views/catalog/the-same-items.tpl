@@ -129,9 +129,17 @@
                                         <p>Вернем: <span>{$itemtopsale.bonus_amount|round} грн</span></p>
                                     </div>
                                     <div class="right-bakk">
-                                        <object type="lol/wut">
-                                            <a class="bask acty" href="javascript:void(0)"><span>В корзину</span></a>
-                                        </object>
+                                        {if '4' === $itemtopsale.id_availability || '1' === $itemtopsale.id_availability}
+                                            <object type="lol/wut">
+                                                <a class="bask acty"
+                                                   href="javascript:void(0)"><span>В корзину</span></a>
+                                            </object>
+                                        {else}
+                                            <object type="lol/wut">
+                                                <a class="bask acty blue-bask" href="javascript:void(0)"
+                                                   tabindex="-1"><span>Под заказ</span></a>
+                                            </object>
+                                        {/if}
                                     </div>
                                 </div>
                             </a>
