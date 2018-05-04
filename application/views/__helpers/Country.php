@@ -157,14 +157,14 @@ class Zend_View_Helper_Country extends Zend_View_Helper_Abstract
             if (array_key_exists($params['country'], $countries)) {
                 return $countries[$params['country']][0];
             } else {
-                return 'Sweden.png';
+                return 'no_flag.png';
             }
 
         } else {
             if (array_key_exists($params['country'], $countries)) {
                 return $countries[$params['country']][1];
             } else {
-                return 'Sweden';
+                return 'N\A';
             }
         }
     }
