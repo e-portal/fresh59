@@ -187,8 +187,8 @@
                     {/foreach}
                 </div>
 
-                {*<div class="owls interest">
-                    *}{*----------ARTICLES----------*}{*
+                <div class="owls interest">
+                    ----------ARTICLES----------
                     <div class="container">
                         <a class="blue" href="/articles">Все советы<span class="linn"></span></a>
                         <div class="liner"><span>Полезно и интересно</span></div>
@@ -204,7 +204,7 @@
                                                 <img src="/assets/img/articles/{$article.img}">
                                             {else}
                                                 <img src="/assets/img/articles/art{1|rand:6}.png">
-                                                *}{*<img src="/assets/img/noimage.png">*}{*
+                                                <img src="/assets/img/noimage.png">
 
                                             {/if}
 
@@ -228,13 +228,13 @@
 
                         </div>
                     </div>
-                    *}{*----------ARTICLES----------*}{*
+                    ----------ARTICLES----------
                     <div class="interest-sale">
                         <p class="ad-blue">Самые выгодные покупки</p>
                         <p class="ad-cheaper">У нас дешевле! <br> скидки <b>до 60%</b></p>
                         <div><img src="/assets/img/interest-sale.png" alt="sale"></div>
                     </div>
-                </div>*}
+                </div>
             </div>
         </div>
         {*-----------LAST VIEWED-----------*}
@@ -248,113 +248,6 @@
     <!-- SEO -->
     {include file='layouts/orig.tpl'}
 </div>
-
-
-{*
-
-{foreach from=$items item=item name=catitems}
-    <a href="{iurl assoc.cat_latin=$item.cat_latin_single
-                    assoc.parent=$item.parentname
-                    assoc.subdomain=$item.subdomain
-                    assoc.cat=$item.cat_onename
-                    assoc.brand=$item.brand
-                    assoc.item=$item.name}">
-        {$item.brand} {$item.name}
-    </a>
-    <span class="description">{if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if}</span>
-    {if !($item.archive == 1 && $item.id_availability == 3) && $item.id_availability == 1}
-        <span>
-            Есть в наличии
-        </span>
-    {elseif $item.id_availability == 2 && $item.qrm>0}
-        <span>Наличие уточняйте</span>
-    {elseif $altItem.id_availability == 2 && $item.qrm==0 || $item.qrm=="" || $item.id_availability == 3}
-        <span>
-            Под заказ
-        </span>
-    {else}
-        <span>Наличие уточняйте</span>
-    {/if}
-
-
-    {if $item.imgid}
-        <a href="{iurl assoc.cat_latin=$item.cat_latin_single
-                assoc.parent=$item.parentname
-                assoc.subdomain=$item.subdomain
-                assoc.cat=$item.cat_onename
-                assoc.brand=$item.brand
-                assoc.item=$item.name}"
-                title="{$item.brand} {$item.name}">
-            <img itemprop="image" src="{$url.img}/catalog/{$item.imgid}_s.{$item.imgext}"
-                 title="{if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if} {$item.brand} {$item.name}"
-                 alt="{if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if} {$item.brand} {$item.name} - catalog"/>
-        </a>
-    {else}
-        <img src="/images/noimage.jpg" alt="{$item.brand} {$item.name}"/>
-    {/if}
-
-    {if $item.acttype=='gift'}
-        <img src="/images/catalog/{gift assoc.id=$item.actid}" alt="">
-        <span>Подарок</span>
-    {/if}
-
-    {if $item.id_availability == 1}
-        {if $item.rent > 25}
-            {assign var="rent_index" value=8}
-        {elseif $item.rent > 12.5}
-            {assign var="rent_index" value=6}
-        {else}
-            {assign var="rent_index" value=3}
-        {/if}
-        <!-- Credit Logo -->
-        <img src="/images/icons/privatbank_pp_{$rent_index}_logo.png"
-             title="Кредит Оплата Частями Приватбанк" alt="Кредит Оплата Частями Приватбанк">
-        <!-- Credit Logo End -->
-    {/if}
-
-
-    {if $item.acttype !== 'gift' && $item.x_index == '1' || $item.id == '21465'}
-        <a href="/articles/zamena">
-            <img src="/images/icons/zamena_catalog.png" rel="tooltip"
-                 data-original-title="При покупке техники по системе Trade-in, Вы имеете выгоду в:
-                  1) Весомая скидка на технику;
-                   2) Бесплатная доставка в квартиру;
-                    3) Бесплатное подключение;
-                     4) Вывоз и утилизация старой техники. Все ето, в течении короткого времени мы сделаем сами,
-                      тем самым освободив Вас от хлопот и дополнительных финансовых расходов."
-                 alt="zamena">
-        </a>
-    {/if}
-
-    {if $item.specprice  && ($item.bdprice > $item.price) && (($item.bdprice - $item.price)/$item.price > 0.01) }
-        <span class="price_sidebar old">{price $item.bdprice}</span>
-        <span class="price_sidebar new priceForEcommerce">
-            {price $item.price $item.id_currency}
-            <span class="currency">{$smarty.session.Currency.title}</span>
-        </span>
-    {else}
-        <span class="price_sidebar priceForEcommerce">
-            {price $item.price $item.id_currency}
-            <span class="currency">{$smarty.session.Currency.title}</span>
-        </span>
-    {/if}
-
-
-    {if $item.id_availability == 1}
-        {if $item.rent > 25}
-            {assign var="rent_index" value=8}
-        {elseif $item.rent > 12.5}
-            {assign var="rent_index" value=6}
-        {else}
-            {assign var="rent_index" value=3}
-        {/if}
-        от {$item.price/$rent_index*$curs_evro_smarty|round}
-        <br>
-        грн./мес
-    {/if}
-
-
-{/foreach}*}
 
 
 <img src="/assets/img/verh.png" alt="">
