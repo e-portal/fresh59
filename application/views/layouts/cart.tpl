@@ -38,7 +38,7 @@
                                 </object>
                             </div>
                             <div class="take-order-delivery flexibal">
-                                <div class="">По Киеву доставка <span>Бесплатно!</span></div>
+                                <div class="">По киеву доставка и занос в квартиру <span>БЕСПЛАТНО!</span></div>
                                 <img src="/assets/img/orig3.png" alt=""></div>
                         </div>
                     </div>

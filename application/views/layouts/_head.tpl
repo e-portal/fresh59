@@ -18,3 +18,15 @@
     {/if}
 </head>
 <body class="{$body_class|default:'no title'}">
+<!--preloader -->
+<div class="preloader">
+    <div class="load-9">
+
+        <div class="spinner">
+            <div class="bubble-1"></div>
+            <div class="bubble-2"></div>
+            <div class="bubble-3"></div>
+        </div>
+    </div>
+</div>
+<!--/preloader -->
