@@ -115,12 +115,12 @@
                         <img src='/images/catalog/{gift assoc.id=$item.actid}'/>
                     </a>
                 {/if}
-                {if $item.acttype !== 'gift'&& $x3 > 0 || $item.id == '21465'}
+                {*{if $item.acttype !== 'gift'&& $x3 > 0 || $item.id == '21465'}
                     <div class="itee change">
                         <img src="/assets/img/izee5.png" alt="">
                         <p>Замена</p>
                     </div>
-                {/if}
+                {/if}*}
                 <div class="slider-prod slider-for">
 
                     {if $item.images}
