@@ -20,7 +20,7 @@
             <p><a href="/auth/profile">Изменить персональную информацию</a></p>
             {if $user.type=='card'}
                 <div class="data-user-bonus alert alert-info">
-                    <img src="/images/bp/bp-cards-small.png"/><span
+                    <img src="/images/bp/bp-ca<span class='strong'>На бонусном счету</span>tyle=" float:lef<span
                             class='strong'>На бонусном счету</span> <strong>На бонусном счету</strong> <span
                             class="data-user-bonus__count">{if $user.bonus_amount > 0}{$user.bonus_amount}{else} 0 {/if}
                         бонусов</span>
