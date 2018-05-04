@@ -10,7 +10,7 @@
             <div class="slider-product jq-move-slider-product">
                 <div class="slider-product-icon">
                     {if $item.country}
-                        {$item.country}
+                        {*{$item.country}*}
                         <div class="itee">
                             <img src="/images/icons/flags/{country assoc.country=$item.country assoc.source=1}">
                             <p>Made in <span> {country assoc.country=$item.country assoc.source=0}</span></p>
