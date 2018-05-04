@@ -1,8 +1,18 @@
 <?php
 
-class AuthController extends Alcotec_Frontend_Controller_AuthController {
+class AuthController extends Alcotec_Frontend_Controller_AuthController
+{
 
-    public function papClubAction() {
+    public function indexAction()
+    {
+        parent::indexAction();
+        $this->view->css_int = '
+                <link rel="stylesheet" href="/assets/css/accord.css">
+            ';
+    }
+
+    public function papClubAction()
+    {
         $zendAuth = Alcotec_AuthFrontend::getInstance();
         $zendAuth->clearIdentity();
         if ($this->_request->isPost()) {
@@ -32,7 +42,8 @@ class AuthController extends Alcotec_Frontend_Controller_AuthController {
         }
     }
 
-    function profileAction() {
+    function profileAction()
+    {
         $authObj = Alcotec_AuthFrontend::getInstance();
         if ($authObj->hasIdentity()) {
             $db = Zend_Db_Table_Abstract::getDefaultAdapter();
@@ -43,9 +54,9 @@ class AuthController extends Alcotec_Frontend_Controller_AuthController {
             $form->addElement('text', 'name', array('label' => 'Ф.И.О.'));
             $form->addElement('text', 'email', array('label' => 'Email'));
             if ($authObj->getUser()->login == '280') {
-                $form->addElement('text', 'bonus_amount', array('label' => 'Количество бонусов', 'ignore'=>true, 'readonly'=>'true', 'value'=>$db->fetchOne("SELECT points FROM users_bonus_points WHERE user_id = {$authObj->getUser()->id}")));
+                $form->addElement('text', 'bonus_amount', array('label' => 'Количество бонусов', 'ignore' => true, 'readonly' => 'true', 'value' => $db->fetchOne("SELECT points FROM users_bonus_points WHERE user_id = {$authObj->getUser()->id}")));
             }
-            if ($authObj->getUser()->type!='pap-club') {
+            if ($authObj->getUser()->type != 'pap-club') {
                 $form->addElement('password', 'password', array('label' => 'Старый пароль'));
                 $form->addElement('password', 'password2', array('label' => 'Новый пароль'));
                 $form->addElement('password', 'password2_again', array('label' => 'Новый пароль еще раз'));
@@ -61,11 +72,11 @@ class AuthController extends Alcotec_Frontend_Controller_AuthController {
             } else {
                 if ($form->isValid($_POST)) {
                     $values = $form->getValues();
-                    if ($values['password'] && $values['password2'] && ($values['password2'] == $values['password2_again'])){
+                    if ($values['password'] && $values['password2'] && ($values['password2'] == $values['password2_again'])) {
                         if ($values['password'] == $user['password'])
                             $values['password'] = $values['password2'];
                         else {
-                            $this->view->messages= 'Неверно введен старый пароль';
+                            $this->view->messages = 'Неверно введен старый пароль';
                             $form->populate($user->toArray());
                             $this->view->form = $form;
                             return;

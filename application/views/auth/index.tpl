@@ -206,7 +206,7 @@
                                 </div>
                             </li>
                             <li>
-                                {include file='auth/purchase.tpl'}
+                                {include file='auth/purchase-history.tpl'}
                             </li>
                             <li>
                                 <div>
