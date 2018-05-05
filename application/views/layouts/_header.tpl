@@ -138,7 +138,7 @@
                                      xmlns:xlink="http://www.w3.org/1999/xlink"
                                      style="enable-background:new 0 0 586 544;" xml:space="preserve">
                                     <style type="text/css">
-                                        .st0{fill:#313E49;} .st1
+                                        .st0{fill:#313E49;} .st1{fill:#FFFFFF;} .st0{fill:#313E49;} .st1
 
                                         {fill:#FFFFFF;}
                                     </style>
