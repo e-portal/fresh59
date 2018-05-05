@@ -62,11 +62,11 @@
                                             <form method="post" id="change-data">
                                                 <div class="popup-block">
                                                     <p>ИМЯ *</p>
-                                                    <input type="password" name="name-last" id="name-last" required/>
+                                                    <input type="text" name="name-last" id="name-last" required/>
                                                     <p>ФАМИЛИЯ *</p>
-                                                    <input type="password" name="name-first" id="name-first required"/>
+                                                    <input type="text" name="name-first" id="name-first required"/>
                                                     <p>Отчество</p>
-                                                    <input type="password" name="name-second" id="name-second"/>
+                                                    <input type="text" name="name-second" id="name-second"/>
                                                     <p>телефон * </p>
                                                     <input type="text" name="phone" class="numb" required/>
                                                     <p>E-mail *</p>
@@ -77,9 +77,9 @@
                                                             <p>ДД *</p>
                                                             <select id="bth-day" name="select" required>
                                                                 <option value=""></option>
-                                                                <option value="ru">1</option>
-                                                                <option value="ua">2</option>
-                                                                <option value="en">3</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
                                                             </select>
                                                         </div>
                                                         <div>
@@ -145,7 +145,8 @@
                                         </div>
 
                                         <div class="tabs-main">
-                                            <p class="tabs-enter"><b>{$login},</b> Добро пожаловать в личный кабинет!
+                                            <p class="tabs-enter">
+                                                <b>{$login},</b> Добро пожаловать в личный кабинет!
                                             </p>
                                             <div class="tabs-content">
                                                 <div class="tabs-block">
