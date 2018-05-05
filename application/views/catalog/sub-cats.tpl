@@ -206,7 +206,7 @@
                                             </table>*}
 
                                         </div>
-                                        <div class="morr">Больше +</div>
+                                        <a class="morr">Больше +</a>
                                     </div>
                                 </a>
 
