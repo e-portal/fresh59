@@ -28,13 +28,14 @@
                 <img src="/assets/img/logo.png" alt="">
                 <p>Мы в социальных сетях</p>
                 <div class="link">
-                    <a href="https://www.facebook.com/590.ua" class="linky" rel="nofollow">
+                    <a href="https://www.facebook.com/590.ua" class="linky" rel="nofollow" target="_blank">
                         <img src="/assets/img/white-f.svg" alt="">
                     </a>
-                    <a href="https://twitter.com/590Ua" class="linky" rel="nofollow">
+                    <a href="https://twitter.com/590Ua" class="linky" rel="nofollow" target="_blank">
                         <img src="/assets/img/white-twit.svg" alt="">
                     </a>
-                    <a href="https://plus.google.com/101839783687775705263?rel=author" class="linky" rel="nofollow">
+                    <a href="https://plus.google.com/101839783687775705263?rel=author"
+                       class="linky" rel="nofollow" target="_blank">
                         <img src="/assets/img/white-g.svg" alt="">
                     </a>
                 </div>
