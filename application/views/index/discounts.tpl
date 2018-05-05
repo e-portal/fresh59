@@ -94,68 +94,69 @@
                                 {/if}
 
                             </div>
-                            <div class="right-iteem">
-                                <div class="name-iteem">
-                                    {if 1 == $item.id_availability}
-                                        <h5 class="green">В наличии</h5>
-                                    {/if}
-                                    {if 2 == $item.id_availability}
-                                        <h5 class="gray">Наличие уточняйте</h5>
-                                    {/if}
-                                    {if 3 == $item.id_availability}
-                                        <h5 class="blue">Под заказ</h5>
-                                    {/if}
-                                    <h4>
-                                        {if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if}
-                                        {$item.brand} {$item.name}
-                                    </h4>
-                                    <object type="lol/wut">
-                                        <a href="#" class="otzv">
-                                            <div class="left-otzv">
-                                                <img src="/assets/img/patr.png" alt="">
-                                            </div>
-                                            <div class="right-otzv">
-                                                <span>10 отзывов</span>
-                                            </div>
-                                        </a>
-                                    </object>
-                                    <div class="cash">
-
-                                        {if $item.specprice && ($item.bdprice > $item.price) && (($item.bdprice - $item.price)/$item.price > 0.01) }
-                                            {price $item.price $item.id_currency}
-                                            <span>{price $item.bdprice} {$smarty.session.Currency.title}</span>
-                                        {else}
-                                            {price $item.price $item.id_currency} {$smarty.session.Currency.title}
-                                        {/if}
-
-                                    </div>
-
-
-                                    <div class="times">
-                                        <div class="timer" data-year="2019" data-month="04" data-days="05"></div>
-
-                                        <div class="right-times">
-                                            <object type="lol/wut">
-                                                <a class="open-in-popup add-to-cart bask acty" {include file='layouts/cart-item.tpl' cart_item=$item}>
-                                                    <span>В корзину</span>
-                                                </a>
-                                            </object>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="news">
-                                    <div class="left-butt">
-                                        <object type="lol/wut"><a href="">В избранное</a></object>
-                                    </div>
-                                    <div class="right-butt">
-                                        <object type="lol/wut"><a href="">Сравнение</a></object>
-                                    </div>
-                                </div>
-
-
-                            </div>
                         </a>
+                        <div class="right-iteem">
+                            <div class="name-iteem">
+                                {if 1 == $item.id_availability}
+                                    <h5 class="green">В наличии</h5>
+                                {/if}
+                                {if 2 == $item.id_availability}
+                                    <h5 class="gray">Наличие уточняйте</h5>
+                                {/if}
+                                {if 3 == $item.id_availability}
+                                    <h5 class="blue">Под заказ</h5>
+                                {/if}
+                                <h4>
+                                    {if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if}
+                                    {$item.brand} {$item.name}
+                                </h4>
+                                <object type="lol/wut">
+                                    <a href="#" class="otzv">
+                                        <div class="left-otzv">
+                                            <img src="/assets/img/patr.png" alt="">
+                                        </div>
+                                        <div class="right-otzv">
+                                            <span>10 отзывов</span>
+                                        </div>
+                                    </a>
+                                </object>
+                                <div class="cash">
+
+                                    {if $item.specprice && ($item.bdprice > $item.price) && (($item.bdprice - $item.price)/$item.price > 0.01) }
+                                        {price $item.price $item.id_currency}
+                                        <span>{price $item.bdprice} {$smarty.session.Currency.title}</span>
+                                    {else}
+                                        {price $item.price $item.id_currency} {$smarty.session.Currency.title}
+                                    {/if}
+
+                                </div>
+
+
+                                <div class="times">
+                                    <div class="timer" data-year="2019" data-month="04" data-days="05"></div>
+
+                                    <div class="right-times">
+                                        <object type="lol/wut">
+                                            <a class="open-in-popup add-to-cart bask acty" {include file='layouts/cart-item.tpl' cart_item=$item}>
+                                                <span>В корзину</span>
+                                            </a>
+                                        </object>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="news">
+                                <div class="left-butt">
+                                    <object type="lol/wut"><a href="">В избранное</a></object>
+                                </div>
+                                <div class="right-butt">
+                                    <object type="lol/wut"><a href="">Сравнение</a></object>
+                                </div>
+                            </div>
+
+
+                        </div>
+
                     </div>
 
                     {if 0 == $smarty.foreach.action_items.iteration%2 && !$smarty.foreach.action_items.last}
