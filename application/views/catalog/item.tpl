@@ -626,8 +626,8 @@
 
 
 
-    {include file='catalog/also-buy.tpl'}
-    {include file='catalog/the-same-items.tpl'}
+    {*{include file='catalog/also-buy.tpl'}
+    {include file='catalog/the-same-items.tpl'}*}
 
 
     {if $seo_text_bottom}

@@ -235,6 +235,7 @@
                                             </a>
                                         {else}
                                             <a class="open-in-popup add-to-cart bask acty blue-bask"
+                                                    {include file='layouts/cart-item.tpl' cart_item=$item}
                                                tabindex="-1"><span>Под заказ</span></a>
                                         {/if}
                                     </div>
