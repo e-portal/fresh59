@@ -236,7 +236,7 @@
         {*==========================================*}
     {else}
         <!--POPUP AUTORIZATION-TEMPLATE -->
-        <div class="wrap">
+        <div class="wrap no-popup">
             {include file='layouts/login-form.tpl'}
         </div>
         <!--end POPUP AUTORIZATION-TEMPLATE -->
