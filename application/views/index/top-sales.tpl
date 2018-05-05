@@ -114,7 +114,8 @@
 
 
                             </div>
-                            <object type="lol/wut">
+                        </a>
+                        <object type="lol/wut">
                                 <span class="otzv">
                                     <div class="left-otzv">
                                         <img src="assets/img/patr.png" alt="">
@@ -123,25 +124,25 @@
                                         <span>10 отзывов</span>
                                     </div>
                                 </span>
-                            </object>
+                        </object>
 
-                            <div class="bakk">
-                                <div class="left-bakk">
-                                    <p>{price $item.price $item.id_currency} {$smarty.session.Currency.title}
-                                        грн</p>
-                                    {if $item.bonus_amount>0}
-                                        <p>Вернем: <span>{$item.bonus_amount|round} грн</span></p>
-                                    {/if}
-                                </div>
-                                <div class="right-bakk">
-                                    <object type="lol/wut">
-                                        <a class="open-in-popup add-to-cart bask acty" {include file='layouts/cart-item.tpl' cart_item=$item}>
-                                            <span>В корзину</span>
-                                        </a>
-                                    </object>
-                                </div>
+                        <div class="bakk">
+                            <div class="left-bakk">
+                                <p>{price $item.price $item.id_currency} {$smarty.session.Currency.title}
+                                    грн</p>
+                                {if $item.bonus_amount>0}
+                                    <p>Вернем: <span>{$item.bonus_amount|round} грн</span></p>
+                                {/if}
                             </div>
-                        </a>
+                            <div class="right-bakk">
+                                <object type="lol/wut">
+                                    <a class="open-in-popup add-to-cart bask acty" {include file='layouts/cart-item.tpl' cart_item=$item}>
+                                        <span>В корзину</span>
+                                    </a>
+                                </object>
+                            </div>
+                        </div>
+
                         <div class="hovv">
 
 
