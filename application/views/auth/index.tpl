@@ -11,9 +11,7 @@
             <span itemprop="name" class="label1">Личный кабинет</span>
             <meta itemprop="position" content="2">
         </div>
-
     </div>
-
     {if $login}
         <div class="liner cent wrap"><span>Личный кабинет</span></div>
         <div class="tabs-lk wrap">
@@ -263,7 +261,6 @@
     {include file='layouts/orig.tpl'}
 
 </div>
-
 
 <div class="doww"><img src="/assets/img/verh.png" alt=""></div>
 

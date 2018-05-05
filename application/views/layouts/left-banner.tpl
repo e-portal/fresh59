@@ -4,7 +4,7 @@
     <div class="slider-contain">
         <div class="head-item">
             <img src="/assets/img/logo.png" alt="">
-            <span>Покупать очень просто!</span>
+            <span>Официальная техника с гарантией</span>
         </div>
         <div class="slider-text">
             <span>Программа лояльности</span>
