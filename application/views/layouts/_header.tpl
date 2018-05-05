@@ -133,7 +133,7 @@
                     <div class="bask-item baskets">
                         <div class="runn">
                             <div class="imgg">
-                                {include file='layouts/cart_svg.tpl'}
+                                {*{include file='layouts/cart_svg.tpl'}*}
                                 <div class="numeral">3</div>
                             </div>
                         </div>
@@ -142,7 +142,6 @@
             </div>
         </div>
     </div>
-
 </header>
 <!--POPUP AUTORIZATION-TEMPLATE -->
 <div class="popup flexibal autorisation">
