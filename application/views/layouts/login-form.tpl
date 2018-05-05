@@ -7,7 +7,7 @@
                     <label for="enter-login">Login</label>
                     <input id="enter-login" type="text" class="input-min-width" name="login">
                     <label for="pass">Пароль</label>
-                    <input id="pass" type="password" class="input-min-width" name="pass">
+                    <input id="pass" type="password" class="input-min-width" name="pass" autocomplete>
                 </div>
                 <div class="flexibal flex-between">
                     <input class="bask acty without-icon" type="submit" value="Войти">
