@@ -100,7 +100,7 @@
                         </div>
                     </div>
                     {if $login}
-                        <div class="bask-item pipl">
+                        <div class="bask-item pipl logged">
                             <div class="runn">
                                 <div class="imgg"></div>
                                 <div class="names">{$login}</div>
