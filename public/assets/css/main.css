@@ -5113,12 +5113,7 @@ ul.nacc .tabs-saw p {
     display: none;
 }
 
-.slider-for iframe {
-    width: inherit;
-    height: auto;
-}
-
-.slider-nav iframe {
+.clone-slide iframe {
     width: inherit;
     height: inherit;
 }
