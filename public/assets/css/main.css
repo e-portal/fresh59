@@ -5116,6 +5116,7 @@ ul.nacc .tabs-saw p {
 .clone-slide iframe {
     width: inherit;
     height: inherit;
+    pointer-events: none;
 }
 
 @-moz-document url-prefix() {
