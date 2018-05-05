@@ -5113,6 +5113,11 @@ ul.nacc .tabs-saw p {
     display: none;
 }
 
+.clone-slide iframe {
+    width: inherit;
+    height: inherit;
+}
+
 @-moz-document url-prefix() {
     .searc {
         height: 47px;
