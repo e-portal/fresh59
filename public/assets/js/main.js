@@ -627,11 +627,13 @@ $('.tabs-legg').click(function () {
 });
 
 
+
 $('.tabs-more').click(function () {
     $(this).parents('.tabs-brand').toggleClass('more');
     $(this).toggleClass('more');
 
 });
+
 
 
 // $('.tabs-more').click(function () {
@@ -652,7 +654,7 @@ $('.tabs-saw p').click(function () {
 });
 
 $('.tabs-saw div').click(function () {
-    $(".forms.under-senn.forms-saw").remove();
+    $(".forms.under-senn.forms-saw, .tabs-saw").remove();
 });
 $('.tabs-pass').click(function () {
     $('.tabs-main').hide();

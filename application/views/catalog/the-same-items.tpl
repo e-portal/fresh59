@@ -134,7 +134,7 @@
                                     {if '4' === $itemtopsale.id_availability || '1' === $itemtopsale.id_availability}
                                         <object type="lol/wut">
                                             <a class="open-in-popup add-to-cart bask acty"
-                                                    {include file='layouts/cart-item.tpl' cart_item=$item}
+                                                    {include file='layouts/cart-item.tpl' cart_item=$itemtopsale}
                                                tabindex="-1">
                                                 <span>В корзину</span>
                                             </a>
@@ -142,7 +142,7 @@
                                     {else}
                                         <object type="lol/wut">
                                             <a class="bask acty open-in-popup add-to-cart blue-bask"
-                                                    {include file='layouts/cart-item.tpl' cart_item=$item}
+                                                    {include file='layouts/cart-item.tpl' cart_item=$itemtopsale}
                                                tabindex="-1">
                                                 <span>Под заказ</span>
                                             </a>
