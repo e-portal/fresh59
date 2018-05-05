@@ -134,7 +134,7 @@
                         <div class="runn">
                             <div class="imgg">
                                 {*{include file='layouts/cart_svg.tpl'}*}
-                                <img src="/assets/white-g.svg">
+                                <img src="/assets/img/white-g.svg">
                                 <div class="numeral">3</div>
                             </div>
                         </div>
