@@ -1,11 +1,11 @@
-data-id="{$item.id}"
-data-name="{$item.name}" data-img="{$url.img}/catalog/{$item.images[0].id}_s.{$item.images[0].imgext}"
-data-price="{price $item.price $item.id_currency}" data-sale="10750" data-bonus="1500"
-{if $item.actid} data-gift-id="{$assocItem.id|default:''}" data-gift-name="Чайник ELECTROLUX Electro чайник" data-gift-img="/images/catalog/{gift assoc.id=$item.actid}{/if}"
-
-{*
-
-data-id="{$item.id}"
-data-name="{$item.name}" data-img="{$url.img}/catalog/{$item.images[0].id|default:$item.imgid}_s.{$item.images[0].imgext|default:$item.imgext}"
-data-price="{price $item.price $item.id_currency}" data-sale="10750" data-bonus="1500"
-{if $item.actid} data-gift-id="{$assocItem.id|default:''}" data-gift-name="Чайник ELECTROLUX Electro чайник" data-gift-img="/images/catalog/{gift assoc.id=$item.actid}{/if}"*}
+{if is_array($item.images) && !empty($item.images[0])}
+    data-id="{$item.id}"
+    data-name="{$item.name}" data-img="{$url.img}/catalog/{$item.images[0].id}_s.{$item.images[0].imgext}"
+    data-price="{price $item.price $item.id_currency}" data-sale="10750" data-bonus="1500"
+    {if $item.actid} data-gift-id="{$assocItem.id|default:''}" data-gift-name="Чайник ELECTROLUX Electro чайник" data-gift-img="/images/catalog/{gift assoc.id=$item.actid}{/if}"
+{else}
+    data-id="{$item.id}"
+    data-name="{$item.name}" data-img="{$url.img}/catalog/{$item.imgid}_s.{$item.imgext}"
+    data-price="{price $item.price $item.id_currency}" data-sale="10750" data-bonus="1500"
+    {if $item.actid} data-gift-id="{$assocItem.id|default:''}" data-gift-name="Чайник ELECTROLUX Electro чайник" data-gift-img="/images/catalog/{gift assoc.id=$item.actid}{/if}"
+{/if}
