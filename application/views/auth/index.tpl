@@ -201,7 +201,7 @@
                                             </div>
                                             <a class="tabs-option tabs-data">Редактировать данные</a>
                                             <a class="tabs-option tabs-pass">Сменить пароль</a>
-                                            <div class="exit-button">Выход</div>
+                                            <a href="/auth/exit" class="exit-button">Выход</a>
                                         </div>
 
                                     </div>

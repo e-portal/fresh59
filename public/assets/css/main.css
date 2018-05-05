@@ -2047,6 +2047,7 @@ input {
     display: flex;
     align-items: center;
     margin: 4px 0 0;
+    padding: 0 24px;
     z-index: 9;
     /*z-index: 10;*/
 }
@@ -2062,7 +2063,7 @@ input {
 }
 
 .sench {
-    padding: 20px 24px;
+    padding: 20px 24px 0;
 }
 
 .senn-main {
@@ -2102,6 +2103,8 @@ input {
     align-items: center;
     z-index: 1;
     position: relative;
+    padding: 0 24px;
+
 }
 
 .right-otzv {
@@ -3740,9 +3743,10 @@ ul#selectsMenuBoxi > li.options:hover {
 .front-wrap {
     position: relative;
     height: 105px;
-    width: 270px;
+    width: 250px;
     transition: all .1s linear;
     z-index: 5;
+    margin: 0 auto;
 }
 
 .front {
@@ -4522,6 +4526,7 @@ ul.nacc li p {
     cursor: pointer;
     font-size: 14px;
     padding: 10px 20px;
+    display: block;
     width: 80px;
     font-family: SFUIDisplay-Medium;
     color: #313e49;
@@ -5064,9 +5069,8 @@ ul.nacc .tabs-saw p {
 .tabs-container .popup-block input[type='text'] {
     display: block;
 }
-
 /*.popup-block select {*/
-.tabs-container .change-data select {
+.change-data select {
     margin-bottom: 11px;
     width: 325px;
     background: url("./../img/arrow-bottom.png") no-repeat 94%;
@@ -5087,7 +5091,7 @@ ul.nacc .tabs-saw p {
     color: #313e49;
 }
 
-.change-data .bth-date select {
+.tabs-container .change-data .bth-date select {
     width: 135px;
     background: url("./../img/arrow-bottom.png") no-repeat 86%;
 }
