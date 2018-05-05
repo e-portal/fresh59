@@ -1,5 +1,4 @@
 {include file='layouts/_header.tpl'}
-{debug}
 <div class="container">
     <div class="bread-crumbs wrap breadcrumbs mobile-display-none" id="breadcrumbs" itemscope=""
          itemtype="http://schema.org/BreadcrumbList">
