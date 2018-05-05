@@ -131,45 +131,45 @@
                                         </div>
                                     {/if}
                                 </div>
-                                <div class="front-wrap">
-                                    <div class="front">
-                                        {$item.short_info|truncate:1024}
-                                    </div>
-                                    <a href="javascript:void(0)" class="morr">Больше +</a>
-                                </div>
-                                <a href="/" class="otzv" tabindex="-1">
-                                    <div class="left-otzv">
-                                        <img src="/assets/img/patr.png" alt="">
-                                    </div>
-                                    <div class="right-otzv">
-                                        <span>10 отзывов</span>
-                                    </div>
-                                </a>
-                                <div class="bakk">
-                                    <div class="left-bakk">
-                                        {if $item.specprice  && ($item.bdprice > $item.price) && (($item.bdprice - $item.price)/$item.price > 0.01) }
-                                            <p class="newPrice">{price $item.price $item.id_currency} {$smarty.session.Currency.title}</p>
-                                            <p class="oldPrice">{price $item.bdprice} {$smarty.session.Currency.title}</p>
-                                        {else}
-                                            <p>{price $item.price $item.id_currency} {$smarty.session.Currency.title}</p>
-                                        {/if}
-                                    </div>
-                                    <div class="right-bakk">
+                            </a>
 
-                                        {if $item.id_availability == 1}
-                                            <object type="lol/wut">
-                                                <a class="bask acty" href="javascript:void(0)"
-                                                   tabindex="-1"><span>В корзину</span></a>
-                                            </object>
-                                        {else}
-                                            <object type="lol/wut">
-                                                <a class="bask acty blue-bask" href="javascript:void(0)"
-                                                   tabindex="-1"><span>Под заказ</span></a>
-                                            </object>
-                                        {/if}
-                                    </div>
+                            <div class="front-wrap">
+                                <div class="front">
+                                    {$item.short_info|truncate:1024}
+                                </div>
+                                <a href="javascript:void(0)" class="morr">Больше +</a>
+                            </div>
+                            <a href="/" class="otzv" tabindex="-1">
+                                <div class="left-otzv">
+                                    <img src="/assets/img/patr.png" alt="">
+                                </div>
+                                <div class="right-otzv">
+                                    <span>10 отзывов</span>
                                 </div>
                             </a>
+                            <div class="bakk">
+                                <div class="left-bakk">
+                                    {if $item.specprice  && ($item.bdprice > $item.price) && (($item.bdprice - $item.price)/$item.price > 0.01) }
+                                        <p class="newPrice">{price $item.price $item.id_currency} {$smarty.session.Currency.title}</p>
+                                        <p class="oldPrice">{price $item.bdprice} {$smarty.session.Currency.title}</p>
+                                    {else}
+                                        <p>{price $item.price $item.id_currency} {$smarty.session.Currency.title}</p>
+                                    {/if}
+                                </div>
+                                <div class="right-bakk">
+                                    {if $item.id_availability == 1}
+                                        <a class="open-in-popup add-to-cart bask acty"
+                                                {include file='layouts/cart-item.tpl' cart_item=$item}
+                                           tabindex="-1">
+                                            <span>В корзину</span>
+                                        </a>
+                                    {else}
+                                        <a class="open-in-popup add-to-cart bask acty blue-bask"
+                                                {include file='layouts/cart-item.tpl' cart_item=$item}
+                                           tabindex="-1"><span>Под заказ</span></a>
+                                    {/if}
+                                </div>
+                            </div>
 
                             <div class="hovv">
                                 <div class="news">
