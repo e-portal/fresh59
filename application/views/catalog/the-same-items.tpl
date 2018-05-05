@@ -114,35 +114,42 @@
                                     {/if}
 
                                 </div>
-                                <object type="lol/wut">
-                                    <a href="/" class="otzv">
-                                        <div class="left-otzv">
-                                            <img src="/assets/img/patr.png" alt="">
-                                        </div>
-                                        <div class="right-otzv">
-                                            <span>10 отзывов</span>
-                                        </div>
-                                    </a></object>
-                                <div class="bakk">
-                                    <div class="left-bakk">
-                                        <p>{price $itemtopsale.price $item.id_currency} {$smarty.session.Currency.title}</p>
-                                        <p>Вернем: <span>{$itemtopsale.bonus_amount|round} грн</span></p>
-                                    </div>
-                                    <div class="right-bakk">
-                                        {if '4' === $itemtopsale.id_availability || '1' === $itemtopsale.id_availability}
-                                            <object type="lol/wut">
-                                                <a class="bask acty"
-                                                   href="javascript:void(0)"><span>В корзину</span></a>
-                                            </object>
-                                        {else}
-                                            <object type="lol/wut">
-                                                <a class="bask acty blue-bask" href="javascript:void(0)"
-                                                   tabindex="-1"><span>Под заказ</span></a>
-                                            </object>
-                                        {/if}
-                                    </div>
-                                </div>
                             </a>
+
+                            <object type="lol/wut">
+                                <a href="/" class="otzv">
+                                    <div class="left-otzv">
+                                        <img src="/assets/img/patr.png" alt="">
+                                    </div>
+                                    <div class="right-otzv">
+                                        <span>10 отзывов</span>
+                                    </div>
+                                </a></object>
+                            <div class="bakk">
+                                <div class="left-bakk">
+                                    <p>{price $itemtopsale.price $item.id_currency} {$smarty.session.Currency.title}</p>
+                                    <p>Вернем: <span>{$itemtopsale.bonus_amount|round} грн</span></p>
+                                </div>
+                                <div class="right-bakk">
+                                    {if '4' === $itemtopsale.id_availability || '1' === $itemtopsale.id_availability}
+                                        <object type="lol/wut">
+                                            <a class="open-in-popup add-to-cart bask acty"
+                                                    {include file='layouts/cart-item.tpl' cart_item=$item}
+                                               tabindex="-1">
+                                                <span>В корзину</span>
+                                            </a>
+                                        </object>
+                                    {else}
+                                        <object type="lol/wut">
+                                            <a class="bask acty open-in-popup add-to-cart blue-bask"
+                                                    {include file='layouts/cart-item.tpl' cart_item=$item}
+                                               tabindex="-1">
+                                                <span>Под заказ</span>
+                                            </a>
+                                        </object>
+                                    {/if}
+                                </div>
+                            </div>
                             <div class="hovv">
                                 <div class="news">
                                     <div class="left-butt">
