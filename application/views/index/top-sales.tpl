@@ -239,6 +239,7 @@
                                     </div>
                                 {/if}
                             </div>
+                        </a>
                             <object type="lol/wut">
                                 <span class="otzv">
                                     <div class="left-otzv">
@@ -266,7 +267,7 @@
                                     </object>
                                 </div>
                             </div>
-                        </a>
+
                         <div class="hovv">
                             <div class="news">
                                 <div class="left-butt">
