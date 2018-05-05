@@ -122,8 +122,16 @@ jQuery(document).ready(function () {
 
     // -------preloader
     $(window).on('load', function () {
-        $('.preloader').fadeOut();
+        $('html, body').css('position', 'fixed');
+        // $('.preloader').fadeOut();
+        if ($('.preloader').fadeOut()) {
+            $('html, body').removeAttr('style');
+        }
+
+
     });
+
+
     //--------
 
 
