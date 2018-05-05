@@ -138,9 +138,8 @@
                     {/if}
                     {if $video.type=='youtube'}
                         <div class="clone-slide">
-                            <iframe title="YouTube video player"
-                                    src="//www.youtube.com/embed/{$video.code}" frameborder="0"
-                                    allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/{$video.code}" frameborder="0"
+                                    allow="encrypted-media" allowfullscreen></iframe>
                         </div>
                     {/if}
 
