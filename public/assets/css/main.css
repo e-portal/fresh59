@@ -1172,7 +1172,7 @@ input {
 }
 
 .baskets:hover .st0 {
-    fill: #fff;
+    fill: #fff !important;
 }
 
 .names {
