@@ -50,7 +50,6 @@
     .news {
         left: 20px;
     }
-
     .news a {
         font-size: 12px;
     }
@@ -59,9 +58,18 @@
         margin: 0 0 0 30px;
     }
 
-    /*.maii .item-senn:nth-child(2) {*/
-    /*height: 860px;*/
-    /*}*/
+    .maii .sench {
+        padding: 20px 14px 0;
+    }
+
+    .maii .otzv,
+    .maii .item-senn .bakk {
+        padding: 0 14px;
+    }
+
+    .maii .left-bakk p:nth-child(1) {
+        font-size: 17px;
+    }
 
     .left-bakk p:nth-child(2) {
         font-size: 12px;
