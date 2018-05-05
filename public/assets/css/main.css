@@ -5065,7 +5065,7 @@ ul.nacc .tabs-saw p {
 }
 
 /*.popup-block select {*/
-.change-data select {
+.tabs-container .change-data select {
     margin-bottom: 11px;
     width: 325px;
     background: url("./../img/arrow-bottom.png") no-repeat 94%;
