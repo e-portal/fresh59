@@ -228,10 +228,13 @@
                                     </div>
                                     <div class="right-bakk">
                                         {if $item.id_availability == 1}
-                                            <a class="bask acty" href="javascript:void(0)"
-                                               tabindex="-1"><span>В корзину</span></a>
+                                            <a class="open-in-popup add-to-cart bask acty"
+                                                    {include file='layouts/cart-item.tpl' cart_item=$item}
+                                               tabindex="-1">
+                                                <span>В корзину</span>
+                                            </a>
                                         {else}
-                                            <a class="bask acty blue-bask" href="javascript:void(0)"
+                                            <a class="open-in-popup add-to-cart bask acty blue-bask"
                                                tabindex="-1"><span>Под заказ</span></a>
                                         {/if}
                                     </div>
