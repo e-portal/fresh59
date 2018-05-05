@@ -168,6 +168,10 @@ img {
     justify-content: center;
     align-items: center;
 }
+
+.slider-for img {
+    max-height: 60vh;
+}
 .slider-prod .slick-list,
 .cheaper-slider .slick-list {
     width: 90%;
