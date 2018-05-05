@@ -133,6 +133,7 @@
                     <div class="bask-item baskets">
                         <div class="runn">
                             <div class="imgg">
+                                {include file='layouts/cart_svg.tpl'}
                                 <div class="numeral">3</div>
                             </div>
                         </div>
