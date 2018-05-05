@@ -144,5 +144,11 @@
 
 </header>
 <!--POPUP AUTORIZATION-TEMPLATE -->
-{include file='layouts/login-form.tpl'}
+<div class="popup flexibal autorisation">
+    <div class="popup-content show">
+        <div class="closeX"><span></span><span></span></div>
+        {include file='layouts/login-form.tpl'}
+    </div>
+    <div class="close show"></div>
+</div>
 <!--end POPUP AUTORIZATION-TEMPLATE -->

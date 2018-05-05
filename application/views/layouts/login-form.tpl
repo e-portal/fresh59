@@ -23,6 +23,5 @@
                 <a><img src="/assets/img/main/g-red.png"></a>
             </div>
         </div>
-
     </div>
 </div>
