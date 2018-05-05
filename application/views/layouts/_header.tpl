@@ -137,6 +137,11 @@
                                 <svg viewBox="0 0 586 544" version="1.1" id="c_1" xmlns="http://www.w3.org/2000/svg"
                                      xmlns:xlink="http://www.w3.org/1999/xlink"
                                      style="enable-background:new 0 0 586 544;" xml:space="preserve">
+                                    <style type="text/css">
+                                        .st0{fill:#313E49;} .st1
+
+                                        {fill:#FFFFFF;}
+                                    </style>
                                      <g>
                                          <path class="st0" d="M586.2,89.3c-6,19.1-12.1,38.2-18,57.3c-18.8,60.7-37.5,121.4-56.3,182c-3.7,11.8-8.6,15.1-22.9,16.7
         c-24.4,2.7-48.8,5.9-73.3,8.8c-23.6,2.8-47.2,5.5-70.8,8.3c-23.6,2.8-47.2,5.9-70.8,8.7c-23.4,2.8-46.9,5.5-71.1,8.4
