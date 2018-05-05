@@ -77,31 +77,32 @@
                     </div>
                 {/if}
             </div>
-            <object type="lol/wut">
-                <a href="/" class="otzv">
-                    <div class="left-otzv">
-                        <img src="/assets/img/patr.png" alt="">
-                    </div>
-                    <div class="right-otzv">
-                        <span>10 отзывов</span>
-                    </div>
-                </a></object>
-
-            <div class="bakk">
-                <div class="left-bakk">
-                    <p>{price $top_item.price $top_item.id_currency} {$smarty.session.Currency.title} грн</p>
-                    {if $top_item.bonus_amount>0}
-                        <p>Вернем: <span>{$top_item.bonus_amount|round} грн</span></p>
-                    {/if}
-                </div>
-                <div class="right-bakk">
-                    <object type="lol/wut">
-                        <a class="bask acty" href="javascript:void(0)"><span>В корзину</span></a>
-                    </object>
-
-                </div>
-            </div>
         </a>
+
+        <object type="lol/wut">
+            <a href="/" class="otzv">
+                <div class="left-otzv">
+                    <img src="/assets/img/patr.png" alt="">
+                </div>
+                <div class="right-otzv">
+                    <span>10 отзывов</span>
+                </div>
+            </a></object>
+
+        <div class="bakk">
+            <div class="left-bakk">
+                <p>{price $top_item.price $top_item.id_currency} {$smarty.session.Currency.title} грн</p>
+                {if $top_item.bonus_amount>0}
+                    <p>Вернем: <span>{$top_item.bonus_amount|round} грн</span></p>
+                {/if}
+            </div>
+            <div class="right-bakk">
+                <object type="lol/wut">
+                    <a class="open-in-popup add-to-cart bask acty" {include file='layouts/cart-item.tpl' cart_item=$top_item}>
+                        <span>В корзину</span></a>
+                </object>
+            </div>
+        </div>
         <div class="hovv">
 
 
