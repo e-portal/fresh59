@@ -136,7 +136,13 @@
                     {else}
                         <img src="/images/noimage.jpg" alt="{$item.brand} {$item.name}"/>
                     {/if}
-
+                    {if $video.type=='youtube'}
+                        <div class="clone-slide">
+                            <iframe title="YouTube video player" width="480" height="390"
+                                    src="https://www.youtube.com/embed/{$video.code}" frameborder="0"
+                                    allowfullscreen></iframe>
+                        </div>
+                    {/if}
 
                 </div>
                 <div class="slider-prod slider-nav">
