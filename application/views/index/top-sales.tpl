@@ -135,7 +135,9 @@
                                 </div>
                                 <div class="right-bakk">
                                     <object type="lol/wut">
-                                        <a class="bask acty" href="javascript:void(0)"><span>В корзину</span></a>
+                                        <a class="open-in-popup add-to-cart bask acty" {include file='layouts/cart-item.tpl' cart_item=$item}>
+                                            <span>В корзину</span>
+                                        </a>
                                     </object>
                                 </div>
                             </div>
@@ -257,7 +259,9 @@
                                 </div>
                                 <div class="right-bakk">
                                     <object type="lol/wut">
-                                        <a class="bask acty" href="javascript:void(0)"><span>В корзину</span></a>
+                                        <a class="open-in-popup add-to-cart bask acty" {include file='layouts/cart-item.tpl' cart_item=$item}>
+                                            <span>В корзину</span>
+                                        </a>
                                     </object>
                                 </div>
                             </div>
