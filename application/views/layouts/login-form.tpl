@@ -5,9 +5,9 @@
             <form method="post" action="/auth" id="orderformenter" name="order">
                 <div class="">
                     <label for="enter-login">Login</label>
-                    <input id="enter-login" type="text" class="input-min-width">
+                    <input id="enter-login" type="text" class="input-min-width" name="login">
                     <label for="pass">Пароль</label>
-                    <input id="pass" type="password" class="input-min-width" name="password">
+                    <input id="pass" type="password" class="input-min-width" name="pass">
                 </div>
                 <div class="flexibal flex-between">
                     <input class="bask acty without-icon" type="submit" value="Войти">
