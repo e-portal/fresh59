@@ -3730,6 +3730,7 @@ ul#selectsMenuBoxi > li.options:hover {
     color: rgba(38, 36, 56, .7);
     text-decoration: underline;
     font: 12px 'SF-UI-Display-Light';
+    transition: .5s;
 }
 
 .runn.front {

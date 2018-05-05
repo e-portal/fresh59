@@ -139,76 +139,77 @@
                                         {/if}
                                     </div>
 
-                                </a>
-                                <div class="front-wrap">
-                                    <div class="front">
-                                        {$item.short_info|truncate:1024}
-                                        {*<table>
-                                            <tr>
-                                                <td><p>Максимальная загрузка:</p></td>
-                                                <td><span>6 кг</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Тип стиральной машины:</p></td>
-                                                <td><span>Фронтальная</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс энергопотребления:</p></td>
-                                                <td><span>А+</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс отжима:</p></td>
-                                                <td><span>А</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс стирки:</p></td>
-                                                <td><span>C</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Максимальная загрузка:</p></td>
-                                                <td><span>6 кг</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Тип стиральной машины:</p></td>
-                                                <td><span>Фронтальная</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс энергопотребления:</p></td>
-                                                <td><span>А+</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс отжима:</p></td>
-                                                <td><span>А</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс стирки:</p></td>
-                                                <td><span>C</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Максимальная загрузка:</p></td>
-                                                <td><span>6 кг</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Тип стиральной машины:</p></td>
-                                                <td><span>Фронтальная</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс энергопотребления:</p></td>
-                                                <td><span>А+</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс отжима:</p></td>
-                                                <td><span>А</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс стирки:</p></td>
-                                                <td><span>C</span></td>
-                                            </tr>
-                                        </table>*}
+                                    <div class="front-wrap">
+                                        <div class="front">
+                                            {$item.short_info|truncate:1024}
+                                            {*<table>
+                                                <tr>
+                                                    <td><p>Максимальная загрузка:</p></td>
+                                                    <td><span>6 кг</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p>Тип стиральной машины:</p></td>
+                                                    <td><span>Фронтальная</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p>Класс энергопотребления:</p></td>
+                                                    <td><span>А+</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p>Класс отжима:</p></td>
+                                                    <td><span>А</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p>Класс стирки:</p></td>
+                                                    <td><span>C</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p>Максимальная загрузка:</p></td>
+                                                    <td><span>6 кг</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p>Тип стиральной машины:</p></td>
+                                                    <td><span>Фронтальная</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p>Класс энергопотребления:</p></td>
+                                                    <td><span>А+</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p>Класс отжима:</p></td>
+                                                    <td><span>А</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p>Класс стирки:</p></td>
+                                                    <td><span>C</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p>Максимальная загрузка:</p></td>
+                                                    <td><span>6 кг</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p>Тип стиральной машины:</p></td>
+                                                    <td><span>Фронтальная</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p>Класс энергопотребления:</p></td>
+                                                    <td><span>А+</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p>Класс отжима:</p></td>
+                                                    <td><span>А</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p>Класс стирки:</p></td>
+                                                    <td><span>C</span></td>
+                                                </tr>
+                                            </table>*}
 
+                                        </div>
+                                        <div class="morr">Больше +</div>
                                     </div>
-                                    <a href="javascript:void(0)" class="morr">Больше +</a>
-                                </div>
+                                </a>
+
                                 <a href="/" class="otzv" tabindex="-1">
                                     <div class="left-otzv">
                                         <img src="/assets/img/patr.png" alt="">
