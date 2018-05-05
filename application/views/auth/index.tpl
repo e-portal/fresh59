@@ -235,27 +235,9 @@
         </div>
         {*==========================================*}
     {else}
-        <form action="/auth" method="post" class="form-horizontal" id="login-form">
-            <legend>Авторизация</legend>
-            <div class="control-group">
-                <label class="control-label" for="input_login">Логин</label>
-                <div class="controls">
-                    <input class="validate[required]" type="text" name="login" id="input_login" placeholder="Логин">
-                </div>
-            </div>
-            <div class="control-group">
-                <label class="control-label" for="input_password">Пароль</label>
-                <div class="controls">
-                    <input class="validate[required]" type="password" name="pass" id="input_password"
-                           placeholder="Пароль">
-                </div>
-            </div>
-            <div class="control-group">
-                <div class="controls">
-                    <button type="submit" class="btn">Войти</button>
-                </div>
-            </div>
-        </form>
+        <!--POPUP AUTORIZATION-TEMPLATE -->
+        {include file='layouts/login-form.tpl'}
+        <!--end POPUP AUTORIZATION-TEMPLATE -->
     {/if}
 
     {include file='layouts/orig.tpl'}
