@@ -43,7 +43,7 @@
                             {*-------POP-up-------*}
                         </div>
                     {/if}
-                    {*<div class="itee">
+                    <div class="itee">
                         <img src="/assets/img/izee1.png" alt="">
                         <p>от
                             <span>
@@ -80,7 +80,7 @@
                             </div>
                         </div>
                     </div>
-                    {if $item.id_brand == '26' && $item.id_category != 60}
+                    {*{if $item.id_brand == '26' && $item.id_category != 60}
                         <div class="itee">
                             <img src="/assets/img/izee2.png" alt="">
                             <p>Гарантия <span>36</span> мес</p>
