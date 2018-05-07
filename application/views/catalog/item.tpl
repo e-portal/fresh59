@@ -121,7 +121,7 @@
                         <p>Замена</p>
                     </div>
                 {/if}*}
-                <div class="slider-prod slider-for">
+                {*<div class="slider-prod slider-for">
 
                     {if $item.images}
                         {foreach from=$item.images item=item_image name=item_image}
@@ -187,7 +187,7 @@
             </div>
             <div class="in-stock">
                 <div class="prod-code">Код товара {$item.id}</div>
-                {*----------in stock--------*}
+                *}{*----------in stock--------*}{*
                 {if $item.id_availability == 1}
                     <div class="green">В наличии</div>
                 {elseif $item.id_availability == 3}
@@ -195,7 +195,7 @@
                 {else}
                     <div class="gray">Наличие уточняйте</div>
                 {/if}
-                {*----------in stock--------*}
+                *}{*----------in stock--------*}{*
             </div>
             <div class="prod-stars">
                 <object type="lol/wut">
@@ -221,73 +221,74 @@
                 </div>
                 <div class="prod-saler">Продавец:<img src="/assets/img/logo.png" alt=""></div>
 
-            </div>
+            </div>*}
             <!--           end ЗАГОЛОВОК ПРОДУКТА             -->
 
 
-            {*  <!--           ЦЕНА КОРЗИНА             -->
-              <div class="price-busket-kredit">
-                  <div class="prod-price">
-                      {if $item.specprice  && ($item.bdprice > $item.price) && (($item.bdprice - $item.price)/$item.price > 0.01) }
-                          <div class="red big-price">{price $item.price $item.id_currency} {$smarty.session.Currency.title}</div>
-                          <div class="old-price">{price $item.bdprice} {$smarty.session.Currency.title}</div>
-                      {else}
-                          <div class="big-price">{price $item.price $item.id_currency} {$smarty.session.Currency.title}</div>
-                      {/if}
-                      {if $item.bonusAmount > 0}
-                          <div class="return-prod">Вернем: <span class="red">{$item.bonusAmount|round} грн</span></div>
-                          <div class="on-bonus-prod">на <a href="/page/bonus">Бонусный счет</a></div>
-                      {/if}
-                  </div>
-                  <div class="qweek-busket-prodadd-to-cart">
-                      <a class="qweek-busket-prod open-in-popup add-to-cart bask acty"
-                              {include file='layouts/cart-item.tpl' cart_item=$item}>
-                          <span>В корзину</span>
-                      </a>
-                      <div class="without-reg-prod">
-                          Купить без регистрации
-                      </div>
-                      <form>
-                          <div class="qweek-buy">
-                              <form action="">
-                                  <input type="phone" class="numb">
-                                  <div class="buy-btn">Купить</div>
-                              </form>
-                          </div>
-                      </form>
-                  </div>
-                  <div class="buy-by-part">
-                      <div>
-                          <img src="/assets/img/izee1.png" alt="">
-                          от
-                          <span>
-                              {if $item.rent >= 25}
-                                  {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=8}
-                              {elseif $item.rent > 12.5}
-                                  {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=6}
-                              {elseif $item.rent > 7.5}
-                                  {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=3}
-                              {else}
-                                  {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=3}
-                              {/if}
-                          </span>
-                          грн/мес
-                      </div>
-                      <div>
-                          <a class="green-link">Рассрочка</a> или <a class="green-link">Кредит</a>
-                      </div>
+                <!--           ЦЕНА КОРЗИНА             -->
+                <div class="price-busket-kredit">
+                    <div class="prod-price">
+                        {if $item.specprice  && ($item.bdprice > $item.price) && (($item.bdprice - $item.price)/$item.price > 0.01) }
+                            <div class="red big-price">{price $item.price $item.id_currency} {$smarty.session.Currency.title}</div>
+                            <div class="old-price">{price $item.bdprice} {$smarty.session.Currency.title}</div>
+                        {else}
+                            <div class="big-price">{price $item.price $item.id_currency} {$smarty.session.Currency.title}</div>
+                        {/if}
+                        {if $item.bonusAmount > 0}
+                            <div class="return-prod">Вернем: <span class="red">{$item.bonusAmount|round} грн</span>
+                            </div>
+                            <div class="on-bonus-prod">на <a href="/page/bonus">Бонусный счет</a></div>
+                        {/if}
+                    </div>
+                    <div class="qweek-busket-prodadd-to-cart">
+                        <a class="qweek-busket-prod open-in-popup add-to-cart bask acty"
+                                {include file='layouts/cart-item.tpl' cart_item=$item}>
+                            <span>В корзину</span>
+                        </a>
+                        <div class="without-reg-prod">
+                            Купить без регистрации
+                        </div>
+                        <form>
+                            <div class="qweek-buy">
+                                <form action="">
+                                    <input type="phone" class="numb">
+                                    <div class="buy-btn">Купить</div>
+                                </form>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="buy-by-part">
+                        <div>
+                            <img src="/assets/img/izee1.png" alt="">
+                            от
+                            <span>
+                            {if $item.rent >= 25}
+                                {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=8}
+                            {elseif $item.rent > 12.5}
+                                {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=6}
+                            {elseif $item.rent > 7.5}
+                                {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=3}
+                            {else}
+                                {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=3}
+                            {/if}
+                        </span>
+                            грн/мес
+                        </div>
+                        <div>
+                            <a class="green-link">Рассрочка</a> или <a class="green-link">Кредит</a>
+                        </div>
 
-                      <div>
-                          <img src="/assets/img/izee1.png" alt="">
-                          0% используйте возможность купить товар без переплат
-                      </div>
+                        <div>
+                            <img src="/assets/img/izee1.png" alt="">
+                            0% используйте возможность купить товар без переплат
+                        </div>
 
-                      <div>
-                          <img src="/assets/img/izee1.png" alt="">
-                          Доступна&nbsp;<a class="green-link">Оплата частями</a>
-                      </div>
-                  </div>
-              </div>*}
+                        <div>
+                            <img src="/assets/img/izee1.png" alt="">
+                            Доступна&nbsp;<a class="green-link">Оплата частями</a>
+                        </div>
+                    </div>
+                </div>
             <!--           end ЦЕНА КОРЗИНА             -->
 
 
