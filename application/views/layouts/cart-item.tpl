@@ -1,3 +1,6 @@
+<pre>{$cart_item.imgid|var_dump}</pre>
+
+{*
 {if is_array($cart_item.images) && !empty($cart_item.images[0])}
     {assign var="cart_image" value=$cart_item.images[0].id}
     {assign var="cart_image_extension" value=$cart_item.images[0].imgext}
@@ -5,7 +8,6 @@
     {assign var="cart_image" value=$cart_item.imgid}
     {assign var="cart_image_extension" value=$cart_item.imgext}
 {/if}
-{*
 data-id="{$cart_item.id}"
 data-name="{if $cart_item.cat_onename}{$cart_item.cat_onename}{else}{$cart_item.cat}{/if} {$cart_item.brand} {$cart_item.name}"
 data-img="{$url.img}/catalog/{$cart_image}_s.{$cart_image_extension}"
