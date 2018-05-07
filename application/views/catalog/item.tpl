@@ -80,7 +80,7 @@
                             </div>
                         </div>
                     </div>
-                    {*{if $item.id_brand == '26' && $item.id_category != 60}
+                    {if $item.id_brand == '26' && $item.id_category != 60}
                         <div class="itee">
                             <img src="/assets/img/izee2.png" alt="">
                             <p>Гарантия <span>36</span> мес</p>
@@ -115,13 +115,13 @@
                         <img src='/images/catalog/{gift assoc.id=$item.actid}'/>
                     </a>
                 {/if}
-                *}{*{if $item.acttype !== 'gift'&& $x3 > 0 || $item.id == '21465'}
+                {*{if $item.acttype !== 'gift'&& $x3 > 0 || $item.id == '21465'}
                     <div class="itee change">
                         <img src="/assets/img/izee5.png" alt="">
                         <p>Замена</p>
                     </div>
-                {/if}*}{*
-                <div class="slider-prod slider-for">
+                {/if}*}
+                {*<div class="slider-prod slider-for">
 
                     {if $item.images}
                         {foreach from=$item.images item=item_image name=item_image}
