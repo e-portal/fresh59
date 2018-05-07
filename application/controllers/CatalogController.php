@@ -256,6 +256,7 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
                         /*-------viewed-----------*/
                         'id_availability' => $item->id_availability,
                         'cat_onename' => $item->cat_onename,
+                        'cat' => $item->cat,
                     ));
                     if (count($_SESSION ['items']) > 7)
                         array_pop($_SESSION['items']);
