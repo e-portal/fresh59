@@ -1,4 +1,4 @@
-<pre>{$cart_item.imgid|var_dump}</pre>
+
 
 {*
 {if is_array($cart_item.images) && !empty($cart_item.images[0])}
