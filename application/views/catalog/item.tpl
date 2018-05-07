@@ -174,7 +174,7 @@
                 </h1>
                 <div class="title-slide-show flexibal">
                     <div class="gray big-price">
-                        {price $item.price $item.id_currency} {$smarty.session.Currency.title}
+                        {*{price $item.price $item.id_currency} {$smarty.session.Currency.title}*}
                     </div>
 
                     <div class="busket-marg">
