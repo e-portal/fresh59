@@ -164,7 +164,7 @@
             <!--           end ЗАГОЛОВОК ПРОДУКТА             -->
             <div class="title-slide">
                 <h1>
-                    {if $item.category_onename}{$item.category_onename}{else}{$item.category}e{/if}
+                    {if $item.category_onename}{$item.category_onename}rr{else}{$item.category}{/if}
                     <span itemprop="brand">
                         <span itemprop="manufacturer" itemscope itemtype="http://schema.org/Organization">
                             <span itemprop="name">{$item.brand}</span>
