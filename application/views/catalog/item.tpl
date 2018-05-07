@@ -225,119 +225,119 @@
             <!--           end ЗАГОЛОВОК ПРОДУКТА             -->
 
 
-            <!--           ЦЕНА КОРЗИНА             -->
-            <div class="price-busket-kredit">
-                <div class="prod-price">
-                    {if $item.specprice  && ($item.bdprice > $item.price) && (($item.bdprice - $item.price)/$item.price > 0.01) }
-                        <div class="red big-price">{price $item.price $item.id_currency} {$smarty.session.Currency.title}</div>
-                        <div class="old-price">{price $item.bdprice} {$smarty.session.Currency.title}</div>
-                    {else}
-                        <div class="big-price">{price $item.price $item.id_currency} {$smarty.session.Currency.title}</div>
-                    {/if}
-                    {if $item.bonusAmount > 0}
-                        <div class="return-prod">Вернем: <span class="red">{$item.bonusAmount|round} грн</span></div>
-                        <div class="on-bonus-prod">на <a href="/page/bonus">Бонусный счет</a></div>
-                    {/if}
-                </div>
-                <div class="qweek-busket-prodadd-to-cart">
-                    <a class="qweek-busket-prod open-in-popup add-to-cart bask acty"
-                            {include file='layouts/cart-item.tpl' cart_item=$item}>
-                        <span>В корзину</span>
-                    </a>
-                    <div class="without-reg-prod">
-                        Купить без регистрации
-                    </div>
-                    <form>
-                        <div class="qweek-buy">
-                            <form action="">
-                                <input type="phone" class="numb">
-                                <div class="buy-btn">Купить</div>
-                            </form>
-                        </div>
-                    </form>
-                </div>
-                <div class="buy-by-part">
-                    <div>
-                        <img src="/assets/img/izee1.png" alt="">
-                        от
-                        <span>
-                            {if $item.rent >= 25}
-                                {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=8}
-                            {elseif $item.rent > 12.5}
-                                {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=6}
-                            {elseif $item.rent > 7.5}
-                                {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=3}
-                            {else}
-                                {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=3}
-                            {/if}
-                        </span>
-                        грн/мес
-                    </div>
-                    <div>
-                        <a class="green-link">Рассрочка</a> или <a class="green-link">Кредит</a>
-                    </div>
+            {*  <!--           ЦЕНА КОРЗИНА             -->
+              <div class="price-busket-kredit">
+                  <div class="prod-price">
+                      {if $item.specprice  && ($item.bdprice > $item.price) && (($item.bdprice - $item.price)/$item.price > 0.01) }
+                          <div class="red big-price">{price $item.price $item.id_currency} {$smarty.session.Currency.title}</div>
+                          <div class="old-price">{price $item.bdprice} {$smarty.session.Currency.title}</div>
+                      {else}
+                          <div class="big-price">{price $item.price $item.id_currency} {$smarty.session.Currency.title}</div>
+                      {/if}
+                      {if $item.bonusAmount > 0}
+                          <div class="return-prod">Вернем: <span class="red">{$item.bonusAmount|round} грн</span></div>
+                          <div class="on-bonus-prod">на <a href="/page/bonus">Бонусный счет</a></div>
+                      {/if}
+                  </div>
+                  <div class="qweek-busket-prodadd-to-cart">
+                      <a class="qweek-busket-prod open-in-popup add-to-cart bask acty"
+                              {include file='layouts/cart-item.tpl' cart_item=$item}>
+                          <span>В корзину</span>
+                      </a>
+                      <div class="without-reg-prod">
+                          Купить без регистрации
+                      </div>
+                      <form>
+                          <div class="qweek-buy">
+                              <form action="">
+                                  <input type="phone" class="numb">
+                                  <div class="buy-btn">Купить</div>
+                              </form>
+                          </div>
+                      </form>
+                  </div>
+                  <div class="buy-by-part">
+                      <div>
+                          <img src="/assets/img/izee1.png" alt="">
+                          от
+                          <span>
+                              {if $item.rent >= 25}
+                                  {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=8}
+                              {elseif $item.rent > 12.5}
+                                  {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=6}
+                              {elseif $item.rent > 7.5}
+                                  {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=3}
+                              {else}
+                                  {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=3}
+                              {/if}
+                          </span>
+                          грн/мес
+                      </div>
+                      <div>
+                          <a class="green-link">Рассрочка</a> или <a class="green-link">Кредит</a>
+                      </div>
 
-                    <div>
-                        <img src="/assets/img/izee1.png" alt="">
-                        0% используйте возможность купить товар без переплат
-                    </div>
+                      <div>
+                          <img src="/assets/img/izee1.png" alt="">
+                          0% используйте возможность купить товар без переплат
+                      </div>
 
-                    <div>
-                        <img src="/assets/img/izee1.png" alt="">
-                        Доступна&nbsp;<a class="green-link">Оплата частями</a>
-                    </div>
-                </div>
-            </div>
+                      <div>
+                          <img src="/assets/img/izee1.png" alt="">
+                          Доступна&nbsp;<a class="green-link">Оплата частями</a>
+                      </div>
+                  </div>
+              </div>*}
             <!--           end ЦЕНА КОРЗИНА             -->
 
 
-            {*   <!--           СЛАЙДЕР ВМЕСТЕ ДЕШЕВЛЕ             -->
-               {if $assocItems|@count > 0 && !$item.archive}
-                   {include file='catalog/cheaper-slider.tpl'}
-               {/if}
-               <!--           end СЛАЙДЕР ВМЕСТЕ ДЕШЕВЛЕ             -->
+            <!--           СЛАЙДЕР ВМЕСТЕ ДЕШЕВЛЕ             -->
+            {if $assocItems|@count > 0 && !$item.archive}
+                {include file='catalog/cheaper-slider.tpl'}
+            {/if}
+            <!--           end СЛАЙДЕР ВМЕСТЕ ДЕШЕВЛЕ             -->
 
 
-               <!--           ТАЙМЕР УСПЕЙ ЗАКАЗАТЬ             -->
+            <!--           ТАЙМЕР УСПЕЙ ЗАКАЗАТЬ             -->
 
 
-               {if $action}
-                   <!-- Action -->
-                   {if $item.acttype=='gift'}
-                       <div class="take-gift">
-                           <div class="title-gift"><span>Успей заказать и получить подарок!</span></div>
-                           <div class="take-gift-content">
-                               <div class="timer" data-year="{getdate arr=$action.end_date arr='Y'}"
-                                    data-month="{getdate arr=$action.end_date arr='m'}"
-                                    data-days="{getdate arr=$action.end_date arr='d'}"></div>
-                               <div class="gift-prod">
-                                   <div class="gift-prod-img">
-                                       <img src='/images/catalog/{gift assoc.id=$item.actid}'/>
-                                   </div>
-                                   <div class="gift-prod-text">
-                                       <a class="gift-prod-title">{$action.name}</a>
-                                       <div class="in-gift red">в подарок!</div>
-                                   </div>
-                               </div>
-                               <div class="gift-price">
-                                   <div class="">
-                                       {price $item.price $item.id_currency} {$smarty.session.Currency.title}
-                                   </div>
-                                   <div class="busket-marg">
-                                       <object type="lol/wut">
-                                           <a class="open-in-popup add-to-cart bask acty" {include file='layouts/cart-item.tpl' cart_item=$item}>
-                                               <span>В корзину</span></a>
-                                       </object>
-                                   </div>
-                                   <a href="/actions/show/{$action.id}" class="bluee">Подробнее об акции</a>
-                               </div>
-                           </div>
-                       </div>
-                   {/if}
+            {if $action}
+                <!-- Action -->
+                {if $item.acttype=='gift'}
+                    <div class="take-gift">
+                        <div class="title-gift"><span>Успей заказать и получить подарок!</span></div>
+                        <div class="take-gift-content">
+                            <div class="timer" data-year="{getdate arr=$action.end_date arr='Y'}"
+                                 data-month="{getdate arr=$action.end_date arr='m'}"
+                                 data-days="{getdate arr=$action.end_date arr='d'}"></div>
+                            <div class="gift-prod">
+                                <div class="gift-prod-img">
+                                    <img src='/images/catalog/{gift assoc.id=$item.actid}'/>
+                                </div>
+                                <div class="gift-prod-text">
+                                    <a class="gift-prod-title">{$action.name}</a>
+                                    <div class="in-gift red">в подарок!</div>
+                                </div>
+                            </div>
+                            <div class="gift-price">
+                                <div class="">
+                                    {price $item.price $item.id_currency} {$smarty.session.Currency.title}
+                                </div>
+                                <div class="busket-marg">
+                                    <object type="lol/wut">
+                                        <a class="open-in-popup add-to-cart bask acty" {include file='layouts/cart-item.tpl' cart_item=$item}>
+                                            <span>В корзину</span></a>
+                                    </object>
+                                </div>
+                                <a href="/actions/show/{$action.id}" class="bluee">Подробнее об акции</a>
+                            </div>
+                        </div>
+                    </div>
+                {/if}
 
-                   <!-- Action End -->
-               {/if}
-   *}
+                <!-- Action End -->
+            {/if}
+
 
             <!--           end ТАЙМЕР УСПЕЙ ЗАКАЗАТЬ             -->
 
