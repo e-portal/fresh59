@@ -164,7 +164,7 @@
             <!--           end ЗАГОЛОВОК ПРОДУКТА             -->
             <div class="title-slide">
                 <h1>
-                    {*{if $item.category_onename}{$item.category_onename}{else}{$item.category}{/if}*}
+                    {if $item.category_onename}{$item.category_onename}{else}{$item.category}{/if}
                     <span itemprop="brand">
                         <span itemprop="manufacturer" itemscope itemtype="http://schema.org/Organization">
                             <span itemprop="name">{$item.brand}</span>
@@ -174,7 +174,7 @@
                 </h1>
                 <div class="title-slide-show flexibal">
                     <div class="gray big-price">
-                        {*{price $item.price $item.id_currency} {$smarty.session.Currency.title}*}
+                        {price $item.price $item.id_currency} {$smarty.session.Currency.title}
                     </div>
 
                     <div class="busket-marg">
