@@ -14,7 +14,7 @@
                 {foreach from=$smarty.session.items item=vieweditems name=content_vieweditems}
                     {*{if $smarty.foreach.content_vieweditems.index < 1}*}
                         <li>
-                            <h4>{$vieweditems->category_onename}</h4>
+                            <h4>{$vieweditems.category_onename}</h4>
                             {*<a href="/catalog/item/{$vieweditems.id}" alt="{$vieweditems.brand} {$vieweditems.name}">
                                 {$vieweditems.brand} {$vieweditems.name}
                             </a>*}
