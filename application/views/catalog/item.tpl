@@ -629,24 +629,24 @@
     {*--------------------------------------------------------------------------------------------------------*}
 
 
+    {*
+
+        {include file='catalog/also-buy.tpl'}
+        {include file='catalog/the-same-items.tpl'}
 
 
-    {include file='catalog/also-buy.tpl'}
-    {include file='catalog/the-same-items.tpl'}
-
-
-    {if $seo_text_bottom}
-        <div class="equip">
-            <div class="nozer wrap">
-                {$seo_text_bottom}
+        {if $seo_text_bottom}
+            <div class="equip">
+                <div class="nozer wrap">
+                    {$seo_text_bottom}
+                </div>
             </div>
-        </div>
-    {/if}
+        {/if}
 
-    {include file='layouts/slider_view.tpl'}
+        {include file='layouts/slider_view.tpl'}
 
-    {include file='layouts/orig.tpl'}
+        {include file='layouts/orig.tpl'}
 
-    <div class="doww"><img src="/assets/img/verh.png" alt=""></div>
+        <div class="doww"><img src="/assets/img/verh.png" alt=""></div>*}
 </div>
-{*{include file='layouts/_footer.tpl'}*}
+{include file='layouts/_footer.tpl'}
