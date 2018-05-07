@@ -8,7 +8,20 @@
         {assign var=slider_class value='watched-slider'}
     {/if}
     <div class="{$slider_class}">
-        <div class="item-senn">
+
+        {if $smarty.session.items|@count > 0}
+            <ul>
+                {foreach from=$smarty.session.items item=vieweditems name=content_vieweditems}
+                    <li>
+                        <a href="/catalog/item/{$vieweditems.id}" alt="{$vieweditems.brand} {$vieweditems.name}">
+                            {$vieweditems.brand} {$vieweditems.name}
+                        </a>
+                    </li>
+                {/foreach}
+            </ul>
+        {/if}
+
+        {*<div class="item-senn">
             <a class="sench" href="/">
                 <h5 class="green">В наличии</h5>
                 <h4>Микроволновая печь GORENJE MO 6240</h4>
@@ -513,7 +526,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>*}
 
     </div>
 </div>
