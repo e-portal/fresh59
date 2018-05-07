@@ -3917,12 +3917,17 @@ ul#selectsMenuBoxi > li.options:hover {
     background: rgba(255, 255, 255, 1);
 }
 
+.slider-product .change {
+    bottom: 90px;
+}
+
 .change {
     position: absolute;
     bottom: 20px;
     right: 15px;
     height: 26px;
     width: 80px;
+    z-index: 5;
 }
 
 .change img {
