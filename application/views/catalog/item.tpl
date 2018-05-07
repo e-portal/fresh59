@@ -9,8 +9,8 @@
         <div class="ourr">
             <div class="slider-product jq-move-slider-product">
                 <div class="slider-product-icon">
-                    {*{if $item.country}
-                        *}{*{$item.country}*}{*
+                    {if $item.country}
+                        {*{$item.country}*}
                         <div class="itee">
                             <img src="/images/icons/flags/{country assoc.country=$item.country assoc.source=1}">
                             <p>Made in <span> {country assoc.country=$item.country assoc.source=0}</span></p>
@@ -21,7 +21,7 @@
                             <img src="/assets/img/izee0.png" alt="">
                             <p>Вернем: <span>{$item.bonus_amount|round} грн</span></p>
 
-                            *}{*-------POP-up-------*}{*
+                            {*-------POP-up-------*}
                             <div class="pop-stock pay-bonus">
                                 <div class="pop-header">
                                     <span>ОПлачивай бонусами!</span>
@@ -40,7 +40,7 @@
                                          alt="backgroun">
                                 </div>
                             </div>
-                            *}{*-------POP-up-------*}{*
+                            {*-------POP-up-------*}
                         </div>
                     {/if}
                     <div class="itee">
@@ -114,13 +114,13 @@
                         <p>Подарок!</p>
                         <img src='/images/catalog/{gift assoc.id=$item.actid}'/>
                     </a>
+                {/if}
+                {*{if $item.acttype !== 'gift'&& $x3 > 0 || $item.id == '21465'}
+                    <div class="itee change">
+                        <img src="/assets/img/izee5.png" alt="">
+                        <p>Замена</p>
+                    </div>
                 {/if}*}
-                    {*{if $item.acttype !== 'gift'&& $x3 > 0 || $item.id == '21465'}
-                        <div class="itee change">
-                            <img src="/assets/img/izee5.png" alt="">
-                            <p>Замена</p>
-                        </div>
-                    {/if}*}
                 <div class="slider-prod slider-for">
 
                     {if $item.images}
