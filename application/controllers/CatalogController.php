@@ -256,6 +256,7 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
                         /*-------viewed-----------*/
                         'id_availability' => $item->id_availability,
                         'cat_onename' => $item->category_onename ? $item->category_onename : $item->cat_onename,
+                        'category_onename' => $item->category_onename,
                         'cat' => $item->cat,
                         'bonus_amount' => $item->bonus_amount,
                         'price' => $item->price,
