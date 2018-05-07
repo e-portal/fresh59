@@ -162,7 +162,7 @@
                 <a href="#prod-questions">Вопросы</a>
             </div>
             <!--           end ЗАГОЛОВОК ПРОДУКТА             -->
-            {*<div class="title-slide">
+            <div class="title-slide">
                 <h1>
                     {if $item.category_onename}{$item.category_onename}{else}{$item.category}{/if}
                     <span itemprop="brand">
@@ -185,7 +185,7 @@
                     </div>
                 </div>
             </div>
-            <div class="in-stock">
+            {*<div class="in-stock">
                 <div class="prod-code">Код товара {$item.id}</div>
                 *}{*----------in stock--------*}{*
                 {if $item.id_availability == 1}
