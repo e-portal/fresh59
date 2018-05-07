@@ -2883,7 +2883,7 @@ input {
 
 .fresh {
     font-size: 10px;
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     letter-spacing: 2px;
     color: #313e49;
     text-transform: uppercase;
@@ -2900,7 +2900,7 @@ input {
 .creative, .created {
     position: relative;
     top: 0;
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 9.3px;
     color: #313e49;
@@ -3915,7 +3915,6 @@ ul#selectsMenuBoxi > li.options:hover {
     right: 15px;
     background: rgba(255, 255, 255, 1);
 }
-
 .slider-product .change {
     bottom: 90px;
 }
