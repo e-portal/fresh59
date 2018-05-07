@@ -477,152 +477,152 @@
             </div>
             <!--           end ТАБЫ ДОСТАВКА ОПЛАТА             -->
 
-            <div class="product-container">
-                <!--           ТАБЛИЦА ХАРАКТЕРИСТИК                 -->
-                <div id="prod-info">
-                    <div class="liner smaller-liner">
-                        <span>
-                            Описание - {if $item.category_onename}{$item.category_onename}{else}{$item.category}{/if} {$item.brand} {$item.name}
-                        </span>
-                    </div>
-                    <div>{if $item.full_info}{$item.full_info}{else}{$item.short_info}{/if}</div>
-                </div>
-                <div id="prod-characteristic">
-                    <div class="liner smaller-liner"><span>Характеристики</span></div>
-                    <table class="table-without-border">
+            {* <div class="product-container">
+                 <!--           ТАБЛИЦА ХАРАКТЕРИСТИК                 -->
+                 <div id="prod-info">
+                     <div class="liner smaller-liner">
+                         <span>
+                             Описание - {if $item.category_onename}{$item.category_onename}{else}{$item.category}{/if} {$item.brand} {$item.name}
+                         </span>
+                     </div>
+                     <div>{if $item.full_info}{$item.full_info}{else}{$item.short_info}{/if}</div>
+                 </div>
+                 <div id="prod-characteristic">
+                     <div class="liner smaller-liner"><span>Характеристики</span></div>
+                     <table class="table-without-border">
 
-                        {foreach from=$fields item=_group}
-                            {if $_group.name}
-                                <tr>
-                                    <th class="title-bold">{$_group.name}</th>
-                                </tr>
-                                {foreach from=$_group.fields item=_field name=td_dot1}
-                                    {if !empty($_field.value)}
-                                        <tr>
-                                            <td>{$_field.name}</td>
-                                            <td>{$_field.value}</td>
-                                        </tr>
-                                    {/if}
-                                {/foreach}
+                         {foreach from=$fields item=_group}
+                             {if $_group.name}
+                                 <tr>
+                                     <th class="title-bold">{$_group.name}</th>
+                                 </tr>
+                                 {foreach from=$_group.fields item=_field name=td_dot1}
+                                     {if !empty($_field.value)}
+                                         <tr>
+                                             <td>{$_field.name}</td>
+                                             <td>{$_field.value}</td>
+                                         </tr>
+                                     {/if}
+                                 {/foreach}
 
-                            {else}
-                                {foreach from=$_group.fields item=_field name=td_dot}
-                                    {if !empty($_field.value) || $_field.value!=''}
-                                        <tr>
-                                            <td>{$_field.name}</td>
-                                            <td>{$_field.value}</td>
-                                        </tr>
-                                    {/if}
-                                {/foreach}
-                            {/if}
-                        {/foreach}
-                    </table>
-                </div>
-                <!--           end ТАБЛИЦА ХАРАКТЕРИСТИК           -->
-                <!--           ОТЗЫВЫ ВОПРОСЫ_ОТВЕТЫ           -->
-                <div class="tabs tabs-review" id="prod-reviews">
-                    <div class="tab-button-outer" id="prod-questions">
-                        <ul class="tab-button">
-                            <li><a href="#tab11">Отзывы <span>({$comments|@count})</span></a></li>
-                            <li class="tab-quest"><a href="#tab12">Вопросы и ответы <span>(8)</span></a></li>
-                        </ul>
-                    </div>
-                    <div id="tab11" class="tab-contents is-active">
-                        <div class="tab-contents-wrap">
-                            <div class="tab-section flexibal flex-between">
-                                <div class="bonus flexibal">
-                                    <img src="/assets/img/menu1.png"> + 5 бонусов за отзыв
-                                </div>
-                                <div class="">
-                                    <object type="lol/wut">
-                                        <a class="yellow-button acty"><span>Оставить отзыв</span></a>
-                                    </object>
-                                </div>
-                            </div>
+                             {else}
+                                 {foreach from=$_group.fields item=_field name=td_dot}
+                                     {if !empty($_field.value) || $_field.value!=''}
+                                         <tr>
+                                             <td>{$_field.name}</td>
+                                             <td>{$_field.value}</td>
+                                         </tr>
+                                     {/if}
+                                 {/foreach}
+                             {/if}
+                         {/foreach}
+                     </table>
+                 </div>
+                 <!--           end ТАБЛИЦА ХАРАКТЕРИСТИК           -->
+                 <!--           ОТЗЫВЫ ВОПРОСЫ_ОТВЕТЫ           -->
+                 <div class="tabs tabs-review" id="prod-reviews">
+                     <div class="tab-button-outer" id="prod-questions">
+                         <ul class="tab-button">
+                             <li><a href="#tab11">Отзывы <span>({$comments|@count})</span></a></li>
+                             <li class="tab-quest"><a href="#tab12">Вопросы и ответы <span>(8)</span></a></li>
+                         </ul>
+                     </div>
+                     <div id="tab11" class="tab-contents is-active">
+                         <div class="tab-contents-wrap">
+                             <div class="tab-section flexibal flex-between">
+                                 <div class="bonus flexibal">
+                                     <img src="/assets/img/menu1.png"> + 5 бонусов за отзыв
+                                 </div>
+                                 <div class="">
+                                     <object type="lol/wut">
+                                         <a class="yellow-button acty"><span>Оставить отзыв</span></a>
+                                     </object>
+                                 </div>
+                             </div>
 
-                            {foreach from=$comments item=comment}
-                                <div class="tab-section review-from">
-                                    <div class="review-name-date flexibal flex-between">
-                                        <div class="review-name">
-                                            <div>{$comment.name}</div>
-                                            <object type="lol/wut">
-                                                <a href="/" class="otzv">
-                                                    <div class="left-otzv">
-                                                        <img src="/assets/img/patr.png" alt="">
-                                                    </div>
-                                                </a>
-                                            </object>
-                                        </div>
-                                        <div class="review-date">{$comment.date}</div>
-                                    </div>
-                                    <div>
-                                        <p>{$comment.text}</p>
-                                    </div>
-                                    <div>
-                                        <span class="mar-r">Достоинства: </span>Безшумная, узкая
-                                    </div>
-                                    <div>
-                                        <span class="mar-r">Недостатки: </span>Нет
-                                    </div>
-                                    <div class="review-date">
-                                        <span class="mar-r">(7 ответов) </span>
-                                        <a class="bluee">Ответить</a>
-                                    </div>
-                                </div>
-                            {/foreach}
-                            <div class="tab-section all-review">
-                                <a class="arrow-right bluee">Смотреть все отзывы</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="tab12" class="tab-contents tab-quest">
-                        <div class="tab-contents-wrap">
-                            <div class="tab-section review-from">
-                                <div class="review-name-date flexibal flex-between">
-                                    <div class="review-name">
-                                        <div>Ирина Трофимчук</div>
-                                    </div>
-                                    <div class="review-date">10.02.2018</div>
-                                </div>
-                                <div>
-                                    <p>Узкая и компактная, стирает хорошо и негромко отжимает, пользуемся месяц,
-                                        покупкой
-                                        очень довольны! 590
-                                        спасибо за оперативную доставку. Узкая и компактная, стирает хорошо и негромко
-                                        отжимает, пользуемся месяц,
-                                        покупкой очень довольны! 590 спасибо за оперативную доставку.</p>
-                                </div>
-                                <div class="review-date">
-                                    <span class="mar-r">(7 ответов) </span>
-                                    <a class="bluee">Ответить</a>
-                                </div>
-                            </div>
-                            <div class="tab-section review-from">
-                                <div class="review-name-date flexibal flex-between">
-                                    <div class="review-name">
-                                        <div>Ирина Трофимчук</div>
-                                    </div>
-                                    <div class="review-date">10.02.2018</div>
-                                </div>
-                                <div>
-                                    <p>Узкая и компактная, стирает хорошо и негромко отжимает, пользуемся месяц,
-                                        покупкой
-                                        очень довольны! 590
-                                        спасибо за оперативную доставку. Узкая и компактная, стирает хорошо и негромко
-                                        отжимает, пользуемся месяц,
-                                        покупкой очень довольны! 590 спасибо за оперативную доставку.</p>
-                                </div>
-                                <div class="review-date">
-                                    <span class="mar-r">(7 ответов) </span>
-                                    <a class="bluee">Ответить</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--           end ОТЗЫВЫ ВОПРОСЫ_ОТВЕТЫ           -->
-            </div>
-        </div>
+                             {foreach from=$comments item=comment}
+                                 <div class="tab-section review-from">
+                                     <div class="review-name-date flexibal flex-between">
+                                         <div class="review-name">
+                                             <div>{$comment.name}</div>
+                                             <object type="lol/wut">
+                                                 <a href="/" class="otzv">
+                                                     <div class="left-otzv">
+                                                         <img src="/assets/img/patr.png" alt="">
+                                                     </div>
+                                                 </a>
+                                             </object>
+                                         </div>
+                                         <div class="review-date">{$comment.date}</div>
+                                     </div>
+                                     <div>
+                                         <p>{$comment.text}</p>
+                                     </div>
+                                     <div>
+                                         <span class="mar-r">Достоинства: </span>Безшумная, узкая
+                                     </div>
+                                     <div>
+                                         <span class="mar-r">Недостатки: </span>Нет
+                                     </div>
+                                     <div class="review-date">
+                                         <span class="mar-r">(7 ответов) </span>
+                                         <a class="bluee">Ответить</a>
+                                     </div>
+                                 </div>
+                             {/foreach}
+                             <div class="tab-section all-review">
+                                 <a class="arrow-right bluee">Смотреть все отзывы</a>
+                             </div>
+                         </div>
+                     </div>
+                     <div id="tab12" class="tab-contents tab-quest">
+                         <div class="tab-contents-wrap">
+                             <div class="tab-section review-from">
+                                 <div class="review-name-date flexibal flex-between">
+                                     <div class="review-name">
+                                         <div>Ирина Трофимчук</div>
+                                     </div>
+                                     <div class="review-date">10.02.2018</div>
+                                 </div>
+                                 <div>
+                                     <p>Узкая и компактная, стирает хорошо и негромко отжимает, пользуемся месяц,
+                                         покупкой
+                                         очень довольны! 590
+                                         спасибо за оперативную доставку. Узкая и компактная, стирает хорошо и негромко
+                                         отжимает, пользуемся месяц,
+                                         покупкой очень довольны! 590 спасибо за оперативную доставку.</p>
+                                 </div>
+                                 <div class="review-date">
+                                     <span class="mar-r">(7 ответов) </span>
+                                     <a class="bluee">Ответить</a>
+                                 </div>
+                             </div>
+                             <div class="tab-section review-from">
+                                 <div class="review-name-date flexibal flex-between">
+                                     <div class="review-name">
+                                         <div>Ирина Трофимчук</div>
+                                     </div>
+                                     <div class="review-date">10.02.2018</div>
+                                 </div>
+                                 <div>
+                                     <p>Узкая и компактная, стирает хорошо и негромко отжимает, пользуемся месяц,
+                                         покупкой
+                                         очень довольны! 590
+                                         спасибо за оперативную доставку. Узкая и компактная, стирает хорошо и негромко
+                                         отжимает, пользуемся месяц,
+                                         покупкой очень довольны! 590 спасибо за оперативную доставку.</p>
+                                 </div>
+                                 <div class="review-date">
+                                     <span class="mar-r">(7 ответов) </span>
+                                     <a class="bluee">Ответить</a>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <!--           end ОТЗЫВЫ ВОПРОСЫ_ОТВЕТЫ           -->
+             </div>
+         </div>*}
     </div>
 
 
@@ -630,7 +630,7 @@
 
 
 
-    {*
+
         {include file='catalog/also-buy.tpl'}
         {include file='catalog/the-same-items.tpl'}
 
@@ -641,7 +641,7 @@
                     {$seo_text_bottom}
                 </div>
             </div>
-        {/if}*}
+        {/if}
 
     {include file='layouts/slider_view.tpl'}
 
