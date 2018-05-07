@@ -221,7 +221,7 @@
                 </div>
                 <div class="prod-saler">Продавец:<img src="/assets/img/logo.png" alt=""></div>
 
-            </div>*}
+            </div>
             <!--           end ЗАГОЛОВОК ПРОДУКТА             -->
 
 
@@ -517,7 +517,7 @@
                             {/if}
                         {/foreach}
                     </table>
-                </div>
+                </div>*}
                 <!--           end ТАБЛИЦА ХАРАКТЕРИСТИК           -->
                 <!--           ОТЗЫВЫ ВОПРОСЫ_ОТВЕТЫ           -->
                 <div class="tabs tabs-review" id="prod-reviews">
