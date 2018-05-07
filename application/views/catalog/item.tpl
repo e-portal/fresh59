@@ -179,7 +179,7 @@
 
                     <div class="busket-marg">
                         <a class="qweek-busket-prod open-in-popup add-to-cart bask acty"
-                                {include file='layouts/cart-item.tpl' cart_item=$item}>
+                        {*{include file='layouts/cart-item.tpl' cart_item=$item}>*}
                             <span>В корзину</span>
                         </a>
                     </div>
