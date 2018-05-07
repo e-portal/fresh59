@@ -432,7 +432,7 @@
                             </p>
                         {/if}
                     </div>
-                </div>
+                </div>*}
                 <div id="tab04" class="tab-contents">
                     <div class="tab-contents-wrap">
                         {if $item.instruction}
@@ -475,7 +475,7 @@
                     </div>
                 </div>
             </div>
-            <!--           end ТАБЫ ДОСТАВКА ОПЛАТА             -->*}
+            <!--           end ТАБЫ ДОСТАВКА ОПЛАТА             -->
 
             <div class="product-container">
                 <!--           ТАБЛИЦА ХАРАКТЕРИСТИК                 -->
