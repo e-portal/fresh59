@@ -121,7 +121,7 @@
                         <p>Замена</p>
                     </div>
                 {/if}*}
-                {*<div class="slider-prod slider-for">
+                <div class="slider-prod slider-for">
 
                     {if $item.images}
                         {foreach from=$item.images item=item_image name=item_image}
@@ -162,7 +162,7 @@
                 <a href="#prod-questions">Вопросы</a>
             </div>
             <!--           end ЗАГОЛОВОК ПРОДУКТА             -->
-            <div class="title-slide">
+            {*<div class="title-slide">
                 <h1>
                     {if $item.category_onename}{$item.category_onename}{else}{$item.category}{/if}
                     <span itemprop="brand">
