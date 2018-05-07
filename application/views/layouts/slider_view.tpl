@@ -18,7 +18,7 @@
                                 {$vieweditems.brand} {$vieweditems.name}
                             </a>*}
                             {*<pre>{$vieweditems|var_dump}</pre>*}
-                            <pre>{$item|@debug_print_var}</pre>
+                            <pre>{$vieweditems|@debug_print_var}</pre>
                         </li>
                     {/if}
                 {/foreach}
