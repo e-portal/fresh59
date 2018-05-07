@@ -248,7 +248,14 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
                     $_SESSION['items'] = array();
                 }
                 if ($viewed != 1 or !$viewed) {
-                    array_unshift($_SESSION['items'], array('id' => $item->id, 'brand' => $item->brand, 'name' => $item->name, 'img' => $item->images[0]['id'] . '_s.' . $item->images[0]['imgext']));
+                    array_unshift($_SESSION['items'], array(
+                        'id' => $item->id,
+                        'brand' => $item->brand,
+                        'name' => $item->name,
+                        'img' => $item->images[0]['id'] . '_s.' . $item->images[0]['imgext'],
+                        /*-------viewed-----------*/
+                        'id_availability' => $item->id_availability
+                    ));
                     if (count($_SESSION ['items']) > 7)
                         array_pop($_SESSION['items']);
                 }
