@@ -255,19 +255,16 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
                         'img' => $item->images[0]['id'] . '_s.' . $item->images[0]['imgext'],
                         /*-------viewed-----------*/
                         'id_availability' => $item->id_availability,
-                        'cat_onename' => $item->category_onename ? $item->category_onename : $item->cat_onename,
-                        'category_onename' => $item->category_onename,
-                        'cat' => $item->cat,
+                        'category_onename' => $item->category_onename ? $item->category_onename : $item->cat_onename,
+                        'category' => $item->category ? $item->category : $item->cat,
+                        'id_category' => $item->id_category,
                         'bonus_amount' => $item->bonus_amount,
                         'price' => $item->price,
                         'bestprice' => $item->bestprice,
                         'rent' => $item->rent,
                         'id_brand' => $item->id_brand,
-                        'category' => $item->category,
-                        'id_category' => $item->id_category,
                         'acttype' => $item->acttype,
                         'actid' => $item->actid,
-                        'bonus_amount' => $item->bonus_amount,
                     ));
                     if (count($_SESSION ['items']) > 7)
                         array_pop($_SESSION['items']);
