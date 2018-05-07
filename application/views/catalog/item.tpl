@@ -1,7 +1,7 @@
 ﻿{include file='layouts/_header.tpl'}
 
 <div class="container wrap">
-    <pre>{$item|var_dump}</pre>
+    {*<pre>{$item|var_dump}</pre>*}
     {*<pre>{$item|@debug_print_var}</pre>*}
     {*--------------------------------------------------------------------------------------------------------*}
     {php}echo $this->navigation($this->menu)->breadcrumbs()->setPartial(array('catalog/breadcrumbs.tpl', 'default'));{/php}
@@ -9,14 +9,14 @@
         <div class="ourr">
             <div class="slider-product jq-move-slider-product">
                 <div class="slider-product-icon">
-                    {*{if $item.country}
-                        *}{*{$item.country}*}{*
+                    {if $item.country}
+                        {*{$item.country}*}
                         <div class="itee">
                             <img src="/images/icons/flags/{country assoc.country=$item.country assoc.source=1}">
                             <p>Made in <span> {country assoc.country=$item.country assoc.source=0}</span></p>
                         </div>
                     {/if}
-                    {if $item.bonus_amount>0}
+                    {*{if $item.bonus_amount>0}
                         <div class="itee">
                             <img src="/assets/img/izee0.png" alt="">
                             <p>Вернем: <span>{$item.bonus_amount|round} грн</span></p>
