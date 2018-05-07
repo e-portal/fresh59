@@ -1,7 +1,7 @@
 ﻿{include file='layouts/_header.tpl'}
 
 <div class="container wrap">
-    <pre>{$item.category_onename|var_dump}</pre>
+    {*<pre>{$item|var_dump}</pre>*}
     {*<pre>{$item|@debug_print_var}</pre>*}
     {*--------------------------------------------------------------------------------------------------------*}
     {php}echo $this->navigation($this->menu)->breadcrumbs()->setPartial(array('catalog/breadcrumbs.tpl', 'default'));{/php}

@@ -1,3 +1,16 @@
+// -------preloader
+$(window).on('load', function () {
+    $('html, body').css('position', 'fixed');
+    // $('.preloader').fadeOut();
+    if ($('.preloader').fadeOut()) {
+        $('html, body').removeAttr('style');
+    }
+
+
+});
+
+
+//--------
 jQuery(document).ready(function () {
 
     $('.parag-next .parag-item').click(function () {
@@ -120,21 +133,6 @@ jQuery(document).ready(function () {
     });
 
 
-    // -------preloader
-    $(window).on('load', function () {
-        $('html, body').css('position', 'fixed');
-        // $('.preloader').fadeOut();
-        if ($('.preloader').fadeOut()) {
-            $('html, body').removeAttr('style');
-        }
-
-
-    });
-
-
-    //--------
-
-
     $('.filter-open').click(function () {
         $('.left-options').addClass('open-left');
         $('.background-filter-active').addClass('open-left');
@@ -207,7 +205,7 @@ jQuery(document).ready(function () {
             infinite: true,
             fade: false,
             cssEase: 'linear',
-            autoplay: true,
+            // autoplay: true,
             autoplaySpeed: 5000
         });
     } else {
@@ -613,7 +611,6 @@ $(document).on("click", ".naccs .tabs-menu div", function () {
 });
 
 
-
 $('.tabs-legg').click(function () {
 
 
@@ -635,13 +632,11 @@ $('.tabs-legg').click(function () {
 });
 
 
-
 $('.tabs-more').click(function () {
     $(this).parents('.tabs-brand').toggleClass('more');
     $(this).toggleClass('more');
 
 });
-
 
 
 // $('.tabs-more').click(function () {
@@ -883,8 +878,6 @@ $(function () {
 //         }
 //
 //     });
-
-
 
 
     window.requestAnimFrame = (function () {
