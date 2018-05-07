@@ -8,9 +8,9 @@
     <div class="left-right slider-wrap jq-move-slider jq-move-slider-wrap">
         <div class="ourr">
             <div class="slider-product jq-move-slider-product">
-                {*<div class="slider-product-icon">
+                <div class="slider-product-icon">
                     {if $item.country}
-                        *}{*{$item.country}*}{*
+                        {*{$item.country}*}
                         <div class="itee">
                             <img src="/images/icons/flags/{country assoc.country=$item.country assoc.source=1}">
                             <p>Made in <span> {country assoc.country=$item.country assoc.source=0}</span></p>
@@ -21,7 +21,7 @@
                             <img src="/assets/img/izee0.png" alt="">
                             <p>Вернем: <span>{$item.bonus_amount|round} грн</span></p>
 
-                            *}{*-------POP-up-------*}{*
+                            {*-------POP-up-------*}
                             <div class="pop-stock pay-bonus">
                                 <div class="pop-header">
                                     <span>ОПлачивай бонусами!</span>
@@ -40,7 +40,7 @@
                                          alt="backgroun">
                                 </div>
                             </div>
-                            *}{*-------POP-up-------*}{*
+                            {*-------POP-up-------*}
                         </div>
                     {/if}
                     <div class="itee">
@@ -115,12 +115,12 @@
                         <img src='/images/catalog/{gift assoc.id=$item.actid}'/>
                     </a>
                 {/if}
-                *}{*{if $item.acttype !== 'gift'&& $x3 > 0 || $item.id == '21465'}
+                {*{if $item.acttype !== 'gift'&& $x3 > 0 || $item.id == '21465'}
                     <div class="itee change">
                         <img src="/assets/img/izee5.png" alt="">
                         <p>Замена</p>
                     </div>
-                {/if}*}{*
+                {/if}*}
                 <div class="slider-prod slider-for">
 
                     {if $item.images}
@@ -187,7 +187,7 @@
             </div>
             <div class="in-stock">
                 <div class="prod-code">Код товара {$item.id}</div>
-                *}{*----------in stock--------*}{*
+                {*----------in stock--------*}
                 {if $item.id_availability == 1}
                     <div class="green">В наличии</div>
                 {elseif $item.id_availability == 3}
@@ -195,7 +195,7 @@
                 {else}
                     <div class="gray">Наличие уточняйте</div>
                 {/if}
-                *}{*----------in stock--------*}{*
+                {*----------in stock--------*}
             </div>
             <div class="prod-stars">
                 <object type="lol/wut">
@@ -221,12 +221,12 @@
                 </div>
                 <div class="prod-saler">Продавец:<img src="/assets/img/logo.png" alt=""></div>
 
-            </div>*}
+            </div>
             <!--           end ЗАГОЛОВОК ПРОДУКТА             -->
 
 
             <!--           ЦЕНА КОРЗИНА             -->
-            <div class="price-busket-kredit">
+            {*<div class="price-busket-kredit">
                 <div class="prod-price">
                     {if $item.specprice  && ($item.bdprice > $item.price) && (($item.bdprice - $item.price)/$item.price > 0.01) }
                         <div class="red big-price">{price $item.price $item.id_currency} {$smarty.session.Currency.title}</div>
@@ -287,7 +287,7 @@
                         Доступна&nbsp;<a class="green-link">Оплата частями</a>
                     </div>
                 </div>
-            </div>
+            </div>*}
             <!--           end ЦЕНА КОРЗИНА             -->
 
 
