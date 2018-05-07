@@ -262,6 +262,7 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
                         'bestprice' => $item->bestprice,
                         'rent' => $item->rent,
                         'id_brand' => $item->id_brand,
+                        'category' => $item->category,
                         'id_category' => $item->id_category,
                         'acttype' => $item->acttype,
                         'actid' => $item->actid,
