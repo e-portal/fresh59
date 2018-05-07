@@ -12,11 +12,15 @@
         {if $smarty.session.items|@count > 0}
             <ul>
                 {foreach from=$smarty.session.items item=vieweditems name=content_vieweditems}
-                    <li>
-                        <a href="/catalog/item/{$vieweditems.id}" alt="{$vieweditems.brand} {$vieweditems.name}">
-                            {$vieweditems.brand} {$vieweditems.name}
-                        </a>
-                    </li>
+                    {if $smarty.foreach.vieweditems.index == 0}
+                        <li>
+                            {*<a href="/catalog/item/{$vieweditems.id}" alt="{$vieweditems.brand} {$vieweditems.name}">
+                                {$vieweditems.brand} {$vieweditems.name}
+                            </a>*}
+                            <pre>{$item|var_dump}</pre>
+                            {*<pre>{$item|@debug_print_var}</pre>*}
+                        </li>
+                    {/if}
                 {/foreach}
             </ul>
         {/if}
