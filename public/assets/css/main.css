@@ -2268,6 +2268,10 @@ input {
     margin: 10px 10px 30px 0
 }
 
+.watched-small .item-senn:nth-child(6) {
+    margin-top: 37px;
+}
+
 .hovv {
     position: absolute;
     top: 0;
@@ -3203,10 +3207,11 @@ input {
     padding: 5px;
 }
 
-.watched-slider .item-senn:nth-child(4),
-.watched-slider .item-senn:nth-child(6) {
-    margin-top: 37px;
-}
+/*.watched-slider .item-senn:nth-child(4),*/
+/*.watched-slider .item-senn:nth-child(6)*/
+/*{*/
+/*margin-top: 37px;*/
+/*}*/
 
 .saww .item-senn:nth-child(5) {
     position: relative;
@@ -5133,6 +5138,10 @@ ul.nacc .tabs-saw p {
 }
 .slider-nav .clone-slide iframe {
     pointer-events: none;
+}
+
+.title .activate-popup {
+    z-index: 1;
 }
 
 @-moz-document url-prefix() {

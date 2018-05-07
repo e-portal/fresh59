@@ -54,19 +54,22 @@
         font-size: 12px;
     }
 
+    .item-senn:after {
+        left: 14px;
+        width: calc(100% - 28px);
+    }
+
     .left-butt a, .right-butt a {
         margin: 0 0 0 30px;
     }
-
     .maii .sench {
         padding: 20px 14px 0;
+        width: calc(100% - 28px);
     }
-
     .maii .otzv,
     .maii .item-senn .bakk {
         padding: 0 14px;
     }
-
     .maii .left-bakk p:nth-child(1) {
         font-size: 17px;
     }
@@ -154,6 +157,12 @@
 }
 
 @media screen and (max-width: 1367px) {
+
+    .most-item-slider .most-item:nth-child(2),
+    .most-item-slider .most-item:nth-child(3) {
+        margin-left: 30px;
+    }
+
     .main-menu ul li a {
         font-size: 15px;
     }
@@ -185,6 +194,10 @@
     .iteem:nth-child(2) .inpp {
         width: 90%;
     }
+
+    .iteem-mainy {
+        margin: 0;
+    }
 }
 
 @media screen and (max-width: 1281px) {
@@ -213,15 +226,8 @@
         left: -27px;
     }
 
-    .maii .item-senn:nth-child(2) .sench,
-    .ad-sale .sench,
-    .sench {
-        width: calc(100% - 20px);
-        padding: 20px 10px;
-    }
-
     .news a {
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .right-butt a {
@@ -249,6 +255,10 @@
 
     .timm {
         margin: 0 2px;
+    }
+
+    .clock p {
+        font-size: 13px;
     }
 
     .items h4 {
