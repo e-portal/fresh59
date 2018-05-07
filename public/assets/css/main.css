@@ -1166,13 +1166,13 @@ input {
     width: 43px;
     height: 35px;
 }
-
 #c_1 {
     width: 40px;
 }
 
 .baskets:hover .st0 {
-    fill: #fff !important;
+    fill: #fff;
+!important;
 }
 
 .names {
@@ -2109,13 +2109,15 @@ input {
     opacity: 1;
 }
 
+.item-senn .otzv {
+    padding: 0 24px;
+
+}
 .otzv {
     display: flex;
     align-items: center;
     z-index: 1;
     position: relative;
-    padding: 0 24px;
-
 }
 
 .right-otzv {
@@ -2450,7 +2452,7 @@ input {
 
 .banny .ad-blue {
     color: #0088c8;
-    font: 19px 'SF UI Display';
+    font: 19px 'SF-UI-Display-Regular';
     text-transform: uppercase;
     padding: 30px 0 0 0;
 }
@@ -2674,7 +2676,7 @@ input {
 
 .times {
     display: flex;
-    margin: 37px 0 0 0;
+    margin: 0;
     height: 70px;
     background: #fff;
 }
@@ -2708,7 +2710,8 @@ input {
 }
 
 .name-iteem h4 {
-    height: auto;
+    height: 60px;
+    overflow: hidden;
     margin: 10px 0 5px 0;
 }
 
