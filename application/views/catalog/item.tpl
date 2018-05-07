@@ -185,9 +185,9 @@
                     </div>
                 </div>
             </div>
-            {*<div class="in-stock">
+            <div class="in-stock">
                 <div class="prod-code">Код товара {$item.id}</div>
-                *}{*----------in stock--------*}{*
+                {*----------in stock--------*}
                 {if $item.id_availability == 1}
                     <div class="green">В наличии</div>
                 {elseif $item.id_availability == 3}
@@ -195,7 +195,7 @@
                 {else}
                     <div class="gray">Наличие уточняйте</div>
                 {/if}
-                *}{*----------in stock--------*}{*
+                {*----------in stock--------*}
             </div>
             <div class="prod-stars">
                 <object type="lol/wut">
@@ -287,7 +287,7 @@
                         Доступна&nbsp;<a class="green-link">Оплата частями</a>
                     </div>
                 </div>
-            </div>*}
+            </div>
             <!--           end ЦЕНА КОРЗИНА             -->
 
 
