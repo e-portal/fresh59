@@ -1,7 +1,7 @@
 ﻿{include file='layouts/_header.tpl'}
 
 <div class="container wrap">
-    {*<pre>{$item|var_dump}</pre>*}
+    <pre>{$item.category_onename|var_dump}</pre>
     {*<pre>{$item|@debug_print_var}</pre>*}
     {*--------------------------------------------------------------------------------------------------------*}
     {php}echo $this->navigation($this->menu)->breadcrumbs()->setPartial(array('catalog/breadcrumbs.tpl', 'default'));{/php}
@@ -164,7 +164,7 @@
             <!--           end ЗАГОЛОВОК ПРОДУКТА             -->
             <div class="title-slide">
                 <h1>
-                    {if $item.category_onename}{$item.category_onename}rr{else}{$item.category}{/if}
+                    {if $item.category_onename}{$item.category_onename}{else}{$item.category}{/if}
                     <span itemprop="brand">
                         <span itemprop="manufacturer" itemscope itemtype="http://schema.org/Organization">
                             <span itemprop="name">{$item.brand}</span>
