@@ -9,8 +9,8 @@
         <div class="ourr">
             <div class="slider-product jq-move-slider-product">
                 <div class="slider-product-icon">
-                    {if $item.country}
-                        {*{$item.country}*}
+                    {*{if $item.country}
+                        *}{*{$item.country}*}{*
                         <div class="itee">
                             <img src="/images/icons/flags/{country assoc.country=$item.country assoc.source=1}">
                             <p>Made in <span> {country assoc.country=$item.country assoc.source=0}</span></p>
@@ -21,7 +21,7 @@
                             <img src="/assets/img/izee0.png" alt="">
                             <p>Вернем: <span>{$item.bonus_amount|round} грн</span></p>
 
-                            {*-------POP-up-------*}
+                            *}{*-------POP-up-------*}{*
                             <div class="pop-stock pay-bonus">
                                 <div class="pop-header">
                                     <span>ОПлачивай бонусами!</span>
@@ -40,88 +40,88 @@
                                          alt="backgroun">
                                 </div>
                             </div>
-                            {*-------POP-up-------*}
+                            *}{*-------POP-up-------*}{*
+                        </div>
+                    {/if}*}
+                    <div class="itee">
+                        <img src="/assets/img/izee1.png" alt="">
+                        <p>от
+                            <span>
+                                {if $item.rent >= 25}
+                                    {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=8}
+                                {elseif $item.rent > 12.5}
+                                    {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=6}
+                                {elseif $item.rent > 7.5}
+                                    {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=3}
+                                {else}
+                                    {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=3}
+                                {/if}
+                            </span>
+                            грн/мес</p>
+                        {include file='catalog/popup-privat.tpl'}
+                    </div>
+                    <div class="itee">
+                        <img src="/assets/img/izee3.png" alt="">
+                        <p>от <span>
+                                {$item.price*0.0099*$curs_evro_smarty+$item.price/24*$curs_evro_smarty|round}
+                            </span> грн/мес</p>
+
+                        <div class="pop-stock quick-payment">
+                            <div class="pop-header">
+                                <span>мгновенная рассрочка</span>
+                                <img src="/assets/img/main/pop-quick-payment.png" alt="title">
+                            </div>
+                            <div class="pop-text">
+                                <p><b>Получите рассрочку за 30 минут без переплат и очередей</b></p>
+                                <p>Покупайте товары в рассрочку до 24 месяцев с небольшой ежемесячной комиссией от
+                                    стоимости товара.</p>
+                                <img class="pop-background" src="/assets/img/main/pop-quick-payment-back.png"
+                                     alt="backgroun">
+                            </div>
+                        </div>
+                    </div>
+                    {if $item.id_brand == '26' && $item.id_category != 60}
+                        <div class="itee">
+                            <img src="/assets/img/izee2.png" alt="">
+                            <p>Гарантия <span>36</span> мес</p>
                         </div>
                     {/if}
-                    {* <div class="itee">
-                         <img src="/assets/img/izee1.png" alt="">
-                         <p>от
-                             <span>
-                                 {if $item.rent >= 25}
-                                     {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=8}
-                                 {elseif $item.rent > 12.5}
-                                     {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=6}
-                                 {elseif $item.rent > 7.5}
-                                     {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=3}
-                                 {else}
-                                     {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=3}
-                                 {/if}
-                             </span>
-                             грн/мес</p>
-                         {include file='catalog/popup-privat.tpl'}
-                     </div>
-                     <div class="itee">
-                         <img src="/assets/img/izee3.png" alt="">
-                         <p>от <span>
-                                 {$item.price*0.0099*$curs_evro_smarty+$item.price/24*$curs_evro_smarty|round}
-                             </span> грн/мес</p>
-
-                         <div class="pop-stock quick-payment">
-                             <div class="pop-header">
-                                 <span>мгновенная рассрочка</span>
-                                 <img src="/assets/img/main/pop-quick-payment.png" alt="title">
-                             </div>
-                             <div class="pop-text">
-                                 <p><b>Получите рассрочку за 30 минут без переплат и очередей</b></p>
-                                 <p>Покупайте товары в рассрочку до 24 месяцев с небольшой ежемесячной комиссией от
-                                     стоимости товара.</p>
-                                 <img class="pop-background" src="/assets/img/main/pop-quick-payment-back.png"
-                                      alt="backgroun">
-                             </div>
-                         </div>
-                     </div>
-                     {if $item.id_brand == '26' && $item.id_category != 60}
-                         <div class="itee">
-                             <img src="/assets/img/izee2.png" alt="">
-                             <p>Гарантия <span>36</span> мес</p>
-                         </div>
-                     {/if}
-                     {if $item.bestprice > $item.price || $item.id2==41385}
-                         <div class="itee">
-                             <img src="/assets/img/izee4.png" alt="">
-                             <p>Лучшая <span>цена</span></p>
-                             <div class="pop-stock best-price">
-                                 <div class="pop-header">
-                                     <span>Отличный выбор</span>
-                                     <img src="/assets/img/main/pop-best-price.png" alt="title">
-                                 </div>
-                                 <div class="pop-text">
-                                     <p>Мы <b>отследили цены</b> во многих интернет магазинах по этому товару. И смело
-                                         можем утверждать, что <b>наша
-                                             цена является лучшей</b>!</p>
-                                     <p>Товары, на которых Вы заметили иконку с пальцем вверх - достойны Вашего внимания
-                                         :)</p>
-                                     <img class="pop-background" src="/assets/img/main/pop-best-price-back.png"
-                                          alt="backgroun">
-                                 </div>
-                             </div>
-                         </div>
-                     {/if}
-                 </div>
-                 {if $item.acttype=='gift'}
-                     <a href="#prod-gift" class="itee present">
-                         <div class="numeral"><img src="/assets/img/present-img.png" alt="present"></div>
-                         <p>Подарок!</p>
-                         <img src='/images/catalog/{gift assoc.id=$item.actid}'/>
-                     </a>
-                 {/if}*}
+                    {if $item.bestprice > $item.price || $item.id2==41385}
+                        <div class="itee">
+                            <img src="/assets/img/izee4.png" alt="">
+                            <p>Лучшая <span>цена</span></p>
+                            <div class="pop-stock best-price">
+                                <div class="pop-header">
+                                    <span>Отличный выбор</span>
+                                    <img src="/assets/img/main/pop-best-price.png" alt="title">
+                                </div>
+                                <div class="pop-text">
+                                    <p>Мы <b>отследили цены</b> во многих интернет магазинах по этому товару. И смело
+                                        можем утверждать, что <b>наша
+                                            цена является лучшей</b>!</p>
+                                    <p>Товары, на которых Вы заметили иконку с пальцем вверх - достойны Вашего внимания
+                                        :)</p>
+                                    <img class="pop-background" src="/assets/img/main/pop-best-price-back.png"
+                                         alt="backgroun">
+                                </div>
+                            </div>
+                        </div>
+                    {/if}
+                </div>
+                {if $item.acttype=='gift'}
+                    <a href="#prod-gift" class="itee present">
+                        <div class="numeral"><img src="/assets/img/present-img.png" alt="present"></div>
+                        <p>Подарок!</p>
+                        <img src='/images/catalog/{gift assoc.id=$item.actid}'/>
+                    </a>
+                {/if}
                 {*{if $item.acttype !== 'gift'&& $x3 > 0 || $item.id == '21465'}
                     <div class="itee change">
                         <img src="/assets/img/izee5.png" alt="">
                         <p>Замена</p>
                     </div>
                 {/if}*}
-                    <div class="slider-prod slider-for">
+                <div class="slider-prod slider-for">
 
                     {if $item.images}
                         {foreach from=$item.images item=item_image name=item_image}
