@@ -1274,7 +1274,8 @@ input {
     transition: .2s;
 }
 
-.most-item:hover {
+.most-item-slider .most-item:hover,
+.most-item-sale .most-item:hover img {
     box-shadow: 0 0 9px -1px rgba(0, 0, 0, .5);
 }
 .most-item-slider {
@@ -1325,10 +1326,14 @@ input {
     position: relative;
 }
 
+.most-item:nth-child(3) .blue:after {
+    top: auto;
+}
 .most-item:nth-child(3) .blue {
     position: absolute;
     top: 40%;
     left: 30px;
+    width: max-content;
 }
 
 .most-item-sale {
@@ -1769,7 +1774,6 @@ input {
 
 .orig {
     height: 265px;
-    padding-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: center
@@ -2416,7 +2420,7 @@ input {
     bottom: -2px;
     left: 24px;
     width: calc(100% - 48px);
-    height: 2px;
+    height: 1px;
     background: #eaeaea;
     transition: .5s;
     opacity: 0;

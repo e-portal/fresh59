@@ -49,6 +49,7 @@
 
     .news {
         left: 20px;
+        width: calc(100% - 37px);
     }
     .news a {
         font-size: 12px;
@@ -293,38 +294,30 @@
     .left-bakk p:nth-child(2) {
         font-size: 10px;
     }
-
     .bask {
         width: 92px;
     }
-
     .bask span {
         margin: 0 15px 0 0;
     }
-
     .bask:after {
         right: 9px;
         width: 16px;
     }
-
     right-otzv {
         font-size: 11px;
     }
-
     .timer {
         width: 150px;
     }
-
     .timm p {
         font-size: 9px;
     }
-
     /*.slider-product-icon .itee:nth-child(2),*/
     .itee {
         display: flex;
         width: 75px;
     }
-
     .present {
         width: 70px;
     }
@@ -332,11 +325,9 @@
     .clock p {
         font-size: 11px;
     }
-
     .owl .clock img {
         margin: 0 5px 0 0;
     }
-
     .items h4 {
         overflow: hidden;
         height: 60px;
@@ -368,26 +359,29 @@
     .item-score:nth-child(3) {
         width: 350px;
     }
-
     .item-score:nth-child(3) .inpp input {
         width: 280px;
     }
-
     .item-foot:nth-child(2) ul li:hover a,
     .item-foot:nth-child(3) ul li:hover a {
         letter-spacing: 0.2px;
     }
-
     .item-foot:nth-child(2) ul li a, .item-foot:nth-child(3) ul li a {
         font-size: 16px;
     }
-
     .adree p {
         margin: 0;
     }
-
     .item-foot:nth-child(1) span {
         font-size: 13px;
+    }
+
+    .head-item:nth-child(2) {
+        padding: 0 10px;
+    }
+
+    .most-item .slick-dots {
+        padding: 0 0 0 10px;
     }
 }
 
@@ -1077,7 +1071,6 @@
 
     .orig {
         height: 391px;
-        padding: 0;
     }
 
     .orii {
