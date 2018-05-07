@@ -6,7 +6,7 @@
     {assign var="cart_image_extension" value=$cart_item.imgext}
 {else}
     {assign var="cart_image" value="noimage"}
-    {assign var="cart_image_extension" value=".jpg"}
+    {assign var="cart_image_extension" value="jpg"}
 {/if}
 data-id="{$cart_item.id}"
 data-name="{if $cart_item.cat_onename}{$cart_item.cat_onename}{else}{$cart_item.cat}{/if} {$cart_item.brand} {$cart_item.name}"
