@@ -336,7 +336,7 @@
                 {/if}
 
                 <!-- Action End -->
-            {/if}
+            {/if}*}
 
 
             <!--           end ТАЙМЕР УСПЕЙ ЗАКАЗАТЬ             -->
@@ -432,7 +432,7 @@
                             </p>
                         {/if}
                     </div>
-                </div>*}
+                </div>
                 <div id="tab04" class="tab-contents">
                     <div class="tab-contents-wrap">
                         {if $item.instruction}
