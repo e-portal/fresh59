@@ -8,8 +8,8 @@
     <div class="left-right slider-wrap jq-move-slider jq-move-slider-wrap">
         <div class="ourr">
             <div class="slider-product jq-move-slider-product">
-                {*<div class="slider-product-icon">
-                    {if $item.country}
+                <div class="slider-product-icon">
+                    {*{if $item.country}
                         *}{*{$item.country}*}{*
                         <div class="itee">
                             <img src="/images/icons/flags/{country assoc.country=$item.country assoc.source=1}">
@@ -114,13 +114,13 @@
                         <p>Подарок!</p>
                         <img src='/images/catalog/{gift assoc.id=$item.actid}'/>
                     </a>
-                {/if}
-                *}{*{if $item.acttype !== 'gift'&& $x3 > 0 || $item.id == '21465'}
-                    <div class="itee change">
-                        <img src="/assets/img/izee5.png" alt="">
-                        <p>Замена</p>
-                    </div>
-                {/if}*}{*
+                {/if}*}
+                    {*{if $item.acttype !== 'gift'&& $x3 > 0 || $item.id == '21465'}
+                        <div class="itee change">
+                            <img src="/assets/img/izee5.png" alt="">
+                            <p>Замена</p>
+                        </div>
+                    {/if}*}
                 <div class="slider-prod slider-for">
 
                     {if $item.images}
@@ -187,7 +187,7 @@
             </div>
             <div class="in-stock">
                 <div class="prod-code">Код товара {$item.id}</div>
-                *}{*----------in stock--------*}{*
+                {*----------in stock--------*}
                 {if $item.id_availability == 1}
                     <div class="green">В наличии</div>
                 {elseif $item.id_availability == 3}
@@ -195,7 +195,7 @@
                 {else}
                     <div class="gray">Наличие уточняйте</div>
                 {/if}
-                *}{*----------in stock--------*}{*
+                {*----------in stock--------*}
             </div>
             <div class="prod-stars">
                 <object type="lol/wut">
@@ -287,7 +287,7 @@
                         Доступна&nbsp;<a class="green-link">Оплата частями</a>
                     </div>
                 </div>
-            </div>*}
+            </div>
             <!--           end ЦЕНА КОРЗИНА             -->
 
 
