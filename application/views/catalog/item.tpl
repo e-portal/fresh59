@@ -16,12 +16,12 @@
                             <p>Made in <span> {country assoc.country=$item.country assoc.source=0}</span></p>
                         </div>
                     {/if}
-                    {*{if $item.bonus_amount>0}
+                    {if $item.bonus_amount>0}
                         <div class="itee">
                             <img src="/assets/img/izee0.png" alt="">
                             <p>Вернем: <span>{$item.bonus_amount|round} грн</span></p>
 
-                            *}{*-------POP-up-------*}{*
+                            {*-------POP-up-------*}
                             <div class="pop-stock pay-bonus">
                                 <div class="pop-header">
                                     <span>ОПлачивай бонусами!</span>
@@ -40,10 +40,10 @@
                                          alt="backgroun">
                                 </div>
                             </div>
-                            *}{*-------POP-up-------*}{*
+                            {*-------POP-up-------*}
                         </div>
                     {/if}
-                    <div class="itee">
+                    {*<div class="itee">
                         <img src="/assets/img/izee1.png" alt="">
                         <p>от
                             <span>
