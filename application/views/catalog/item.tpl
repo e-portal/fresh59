@@ -291,190 +291,190 @@
             <!--           end ЦЕНА КОРЗИНА             -->
 
 
-            <!--           СЛАЙДЕР ВМЕСТЕ ДЕШЕВЛЕ             -->
-            {if $assocItems|@count > 0 && !$item.archive}
-                {include file='catalog/cheaper-slider.tpl'}
-            {/if}
-            <!--           end СЛАЙДЕР ВМЕСТЕ ДЕШЕВЛЕ             -->
+            {*   <!--           СЛАЙДЕР ВМЕСТЕ ДЕШЕВЛЕ             -->
+               {if $assocItems|@count > 0 && !$item.archive}
+                   {include file='catalog/cheaper-slider.tpl'}
+               {/if}
+               <!--           end СЛАЙДЕР ВМЕСТЕ ДЕШЕВЛЕ             -->
 
 
-            <!--           ТАЙМЕР УСПЕЙ ЗАКАЗАТЬ             -->
+               <!--           ТАЙМЕР УСПЕЙ ЗАКАЗАТЬ             -->
 
 
-            {if $action}
-                <!-- Action -->
-                {if $item.acttype=='gift'}
-                    <div class="take-gift">
-                        <div class="title-gift"><span>Успей заказать и получить подарок!</span></div>
-                        <div class="take-gift-content">
-                            <div class="timer" data-year="{getdate arr=$action.end_date arr='Y'}"
-                                 data-month="{getdate arr=$action.end_date arr='m'}"
-                                 data-days="{getdate arr=$action.end_date arr='d'}"></div>
-                            <div class="gift-prod">
-                                <div class="gift-prod-img">
-                                    <img src='/images/catalog/{gift assoc.id=$item.actid}'/>
-                                </div>
-                                <div class="gift-prod-text">
-                                    <a class="gift-prod-title">{$action.name}</a>
-                                    <div class="in-gift red">в подарок!</div>
-                                </div>
-                            </div>
-                            <div class="gift-price">
-                                <div class="">
-                                    {price $item.price $item.id_currency} {$smarty.session.Currency.title}
-                                </div>
-                                <div class="busket-marg">
-                                    <object type="lol/wut">
-                                        <a class="open-in-popup add-to-cart bask acty" {include file='layouts/cart-item.tpl' cart_item=$item}>
-                                            <span>В корзину</span></a>
-                                    </object>
-                                </div>
-                                <a href="/actions/show/{$action.id}" class="bluee">Подробнее об акции</a>
-                            </div>
-                        </div>
-                    </div>
-                {/if}
+               {if $action}
+                   <!-- Action -->
+                   {if $item.acttype=='gift'}
+                       <div class="take-gift">
+                           <div class="title-gift"><span>Успей заказать и получить подарок!</span></div>
+                           <div class="take-gift-content">
+                               <div class="timer" data-year="{getdate arr=$action.end_date arr='Y'}"
+                                    data-month="{getdate arr=$action.end_date arr='m'}"
+                                    data-days="{getdate arr=$action.end_date arr='d'}"></div>
+                               <div class="gift-prod">
+                                   <div class="gift-prod-img">
+                                       <img src='/images/catalog/{gift assoc.id=$item.actid}'/>
+                                   </div>
+                                   <div class="gift-prod-text">
+                                       <a class="gift-prod-title">{$action.name}</a>
+                                       <div class="in-gift red">в подарок!</div>
+                                   </div>
+                               </div>
+                               <div class="gift-price">
+                                   <div class="">
+                                       {price $item.price $item.id_currency} {$smarty.session.Currency.title}
+                                   </div>
+                                   <div class="busket-marg">
+                                       <object type="lol/wut">
+                                           <a class="open-in-popup add-to-cart bask acty" {include file='layouts/cart-item.tpl' cart_item=$item}>
+                                               <span>В корзину</span></a>
+                                       </object>
+                                   </div>
+                                   <a href="/actions/show/{$action.id}" class="bluee">Подробнее об акции</a>
+                               </div>
+                           </div>
+                       </div>
+                   {/if}
 
-                <!-- Action End -->
-            {/if}
-
+                   <!-- Action End -->
+               {/if}
+   *}
 
             <!--           end ТАЙМЕР УСПЕЙ ЗАКАЗАТЬ             -->
 
             <!--            ТАБЫ ДОСТАВКА ОПЛАТА             -->
-            {*  <div class="tabs tabs-delivery-pay">
-                  <div class="tab-button-outer">
-                      <ul class="tab-button">
-                          <li class="is-active"><a href="#tab01">Доставка</a></li>
-                          <li><a href="#tab02">Оплата</a></li>
-                          <li><a href="#tab03">Гарантия</a></li>
-                          <li><a href="#tab04">Инструкция</a></li>
-                      </ul>
-                  </div>
-                  <div id="tab01" class="tab-contents is-active">
-                      <div class="tab-contents-wrap">
-                          <div class="flexibal">
-                              <div class="threee">
-                                  <img src="/assets/img/orig3.png" alt="">
-                                  <div class="">
-                                      {if $item.price > 2000/$currencies[6].rate}
-                                          <p>По Киеву c заносом в квартиру</p>
-                                          <p><span>БЕСПЛАТНО</span></p>
-                                      {else}
-                                          <p>доставка по Киеву 40грн.</p>
-                                          <p>доставляем по Украине</p>
-                                      {/if}
-                                  </div>
-                              </div>
-                              <div class="threee">
-                                  <img src="/assets/img/orig3.png" alt="">
-                                  <div class="">
-                                      <p><span>В пригород г.Киева:</span></p>
-                                      <p>10грн/1км (отсчет от КПП г.Киева)</p>
-                                  </div>
-                              </div>
-                              <div class="threee">
-                                  <img src="/assets/img/orig3.png" alt="">
-                                  <div class="">
-                                      <p><span>По Украине</span></p>
-                                      <p>согласно тарифов перевозчика</p>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div id="tab02" class="tab-contents">
-                      <div class="tab-contents-wrap">
-                          <ul class="one_item_additional_ul">
-                              <li>
-                                  <a class="li_payment" href="/page/payment">Оплата</a>
-                                  <ul>
-                                      <li>наличными курьеру</li>
-                                      <li>наличными через отделение банка</li>
-                                      <li>по безналичному расчету</li>
-                                      <li>оплата карточкой</li>
-                                  </ul>
-                              </li>
-                              <li>
-                                  <ul>
-                                      <li><img src="/assets/img/payment/liqpay2.png"></li>
-                                      <li><img src="/assets/img/payment/mastercard-logo.png"></li>
-                                      <li><img src="/assets/img/payment/visa-logo.png"></li>
-                                      <li><img src="/assets/img/payment/privat-bonus.png"></li>
+            <div class="tabs tabs-delivery-pay">
+                <div class="tab-button-outer">
+                    <ul class="tab-button">
+                        <li class="is-active"><a href="#tab01">Доставка</a></li>
+                        <li><a href="#tab02">Оплата</a></li>
+                        <li><a href="#tab03">Гарантия</a></li>
+                        <li><a href="#tab04">Инструкция</a></li>
+                    </ul>
+                </div>
+                <div id="tab01" class="tab-contents is-active">
+                    <div class="tab-contents-wrap">
+                        <div class="flexibal">
+                            <div class="threee">
+                                <img src="/assets/img/orig3.png" alt="">
+                                <div class="">
+                                    {if $item.price > 2000/$currencies[6].rate}
+                                        <p>По Киеву c заносом в квартиру</p>
+                                        <p><span>БЕСПЛАТНО</span></p>
+                                    {else}
+                                        <p>доставка по Киеву 40грн.</p>
+                                        <p>доставляем по Украине</p>
+                                    {/if}
+                                </div>
+                            </div>
+                            <div class="threee">
+                                <img src="/assets/img/orig3.png" alt="">
+                                <div class="">
+                                    <p><span>В пригород г.Киева:</span></p>
+                                    <p>10грн/1км (отсчет от КПП г.Киева)</p>
+                                </div>
+                            </div>
+                            <div class="threee">
+                                <img src="/assets/img/orig3.png" alt="">
+                                <div class="">
+                                    <p><span>По Украине</span></p>
+                                    <p>согласно тарифов перевозчика</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab02" class="tab-contents">
+                    <div class="tab-contents-wrap">
+                        <ul class="one_item_additional_ul">
+                            <li>
+                                <a class="li_payment" href="/page/payment">Оплата</a>
+                                <ul>
+                                    <li>наличными курьеру</li>
+                                    <li>наличными через отделение банка</li>
+                                    <li>по безналичному расчету</li>
+                                    <li>оплата карточкой</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li><img src="/assets/img/payment/liqpay2.png"></li>
+                                    <li><img src="/assets/img/payment/mastercard-logo.png"></li>
+                                    <li><img src="/assets/img/payment/visa-logo.png"></li>
+                                    <li><img src="/assets/img/payment/privat-bonus.png"></li>
 
-                                      <li><img title="Дисконтный клуб ПриватБанка"
-                                               src="/assets/img/payment/vip_discount.png"></li>
-                                  </ul>
-                              </li>
-                          </ul>
-                      </div>
-                  </div>
-                  <div id="tab03" class="tab-contents">
-                      <div class="tab-contents-wrap">
-                          <a class="bluee" href="/page/guarantee">Гарантия</a>
-                          {if $brand_info.guarantee}
-                              <p>
-                                  {if $item.id_brand == 9 && $item.id_category == 217}
-                                      5 лет
-                                  {else}
-                                      {if $brand_info.guarantee!=0}
-                                          {$brand_info.guarantee}
-                                          {if $brand_info.guarantee==1}
-                                              год
-                                          {elseif $brand_info.guarantee>1 && $brand_info.guarantee<5}
-                                              года
-                                          {else}
-                                              лет
-                                          {/if}
-                                      {/if}
-                                  {/if}
-                                  официальной гарантии от производителя
-                              </p>
-                          {/if}
-                      </div>
-                  </div>
-                  <div id="tab04" class="tab-contents">
-                      <div class="tab-contents-wrap">
-                          {if $item.instruction}
-                              <div>
-                                  <div><p>Отдельностоящая стиральная машина Electrolux EWF 1076 GDW с фронтальной
-                                          загрузкой. Имеет
-                                          специальную программу
-                                          Обработки паром для мягкого разглаживания складок на одежде и устранению
-                                          неприятного запаха.
-                                          ФункцияTime Manager позволит адаптировать цикл стирки по Вашему расписанию.
-                                          Светодиодные
-                                          индикаторы обеспечат интуитивно понятный выбор настроек. Большой загрузочный люк
-                                          значительно
-                                          упрощает загрузку и выгрузку белья.</p></div>
-                                  <div><p>Отдельностоящая стиральная машина Electrolux EWF 1076 GDW с фронтальной
-                                          загрузкой. Имеет
-                                          специальную программу
-                                          Обработки паром для мягкого разглаживания складок на одежде и устранению
-                                          неприятного запаха.
-                                          ФункцияTime Manager позволит адаптировать цикл стирки по Вашему расписанию.
-                                          Светодиодные
-                                          индикаторы обеспечат интуитивно понятный выбор настроек. Большой загрузочный люк
-                                          значительно
-                                          упрощает загрузку и выгрузку белья.</p></div>
-                                  <div><p>Отдельностоящая стиральная машина Electrolux EWF 1076 GDW с фронтальной
-                                          загрузкой. Имеет
-                                          специальную программу
-                                          Обработки паром для мягкого разглаживания складок на одежде и устранению
-                                          неприятного запаха.
-                                          ФункцияTime Manager позволит адаптировать цикл стирки по Вашему расписанию.
-                                          Светодиодные
-                                          индикаторы обеспечат интуитивно понятный выбор настроек. Большой загрузочный люк
-                                          значительно
-                                          упрощает загрузку и выгрузку белья.</p></div>
-                                  <a class="bask acty" href="/files/instruction/{$item.id}.{$item.instruction}">
-                                      <span>Скачать</span>
-                                  </a>
-                              </div>
-                          {/if}
-                      </div>
-                  </div>
-              </div>*}
+                                    <li><img title="Дисконтный клуб ПриватБанка"
+                                             src="/assets/img/payment/vip_discount.png"></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="tab03" class="tab-contents">
+                    <div class="tab-contents-wrap">
+                        <a class="bluee" href="/page/guarantee">Гарантия</a>
+                        {if $brand_info.guarantee}
+                            <p>
+                                {if $item.id_brand == 9 && $item.id_category == 217}
+                                    5 лет
+                                {else}
+                                    {if $brand_info.guarantee!=0}
+                                        {$brand_info.guarantee}
+                                        {if $brand_info.guarantee==1}
+                                            год
+                                        {elseif $brand_info.guarantee>1 && $brand_info.guarantee<5}
+                                            года
+                                        {else}
+                                            лет
+                                        {/if}
+                                    {/if}
+                                {/if}
+                                официальной гарантии от производителя
+                            </p>
+                        {/if}
+                    </div>
+                </div>
+                <div id="tab04" class="tab-contents">
+                    <div class="tab-contents-wrap">
+                        {if $item.instruction}
+                            <div>
+                                <div><p>Отдельностоящая стиральная машина Electrolux EWF 1076 GDW с фронтальной
+                                        загрузкой. Имеет
+                                        специальную программу
+                                        Обработки паром для мягкого разглаживания складок на одежде и устранению
+                                        неприятного запаха.
+                                        ФункцияTime Manager позволит адаптировать цикл стирки по Вашему расписанию.
+                                        Светодиодные
+                                        индикаторы обеспечат интуитивно понятный выбор настроек. Большой загрузочный люк
+                                        значительно
+                                        упрощает загрузку и выгрузку белья.</p></div>
+                                <div><p>Отдельностоящая стиральная машина Electrolux EWF 1076 GDW с фронтальной
+                                        загрузкой. Имеет
+                                        специальную программу
+                                        Обработки паром для мягкого разглаживания складок на одежде и устранению
+                                        неприятного запаха.
+                                        ФункцияTime Manager позволит адаптировать цикл стирки по Вашему расписанию.
+                                        Светодиодные
+                                        индикаторы обеспечат интуитивно понятный выбор настроек. Большой загрузочный люк
+                                        значительно
+                                        упрощает загрузку и выгрузку белья.</p></div>
+                                <div><p>Отдельностоящая стиральная машина Electrolux EWF 1076 GDW с фронтальной
+                                        загрузкой. Имеет
+                                        специальную программу
+                                        Обработки паром для мягкого разглаживания складок на одежде и устранению
+                                        неприятного запаха.
+                                        ФункцияTime Manager позволит адаптировать цикл стирки по Вашему расписанию.
+                                        Светодиодные
+                                        индикаторы обеспечат интуитивно понятный выбор настроек. Большой загрузочный люк
+                                        значительно
+                                        упрощает загрузку и выгрузку белья.</p></div>
+                                <a class="bask acty" href="/files/instruction/{$item.id}.{$item.instruction}">
+                                    <span>Скачать</span>
+                                </a>
+                            </div>
+                        {/if}
+                    </div>
+                </div>
+            </div>
             <!--           end ТАБЫ ДОСТАВКА ОПЛАТА             -->
 
             <div class="product-container">
