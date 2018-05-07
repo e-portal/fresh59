@@ -475,7 +475,7 @@
                     </div>
                 </div>
             </div>
-            <!--           end ТАБЫ ДОСТАВКА ОПЛАТА             -->
+            <!--           end ТАБЫ ДОСТАВКА ОПЛАТА             -->*}
 
             <div class="product-container">
                 <!--           ТАБЛИЦА ХАРАКТЕРИСТИК                 -->
@@ -517,7 +517,7 @@
                             {/if}
                         {/foreach}
                     </table>
-                </div>*}
+                </div>
                 <!--           end ТАБЛИЦА ХАРАКТЕРИСТИК           -->
                 <!--           ОТЗЫВЫ ВОПРОСЫ_ОТВЕТЫ           -->
                 <div class="tabs tabs-review" id="prod-reviews">
