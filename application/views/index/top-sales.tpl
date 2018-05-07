@@ -95,7 +95,7 @@
                                 {if $item.bestprice > $item.price || $item.id2==41385}
                                     <div class="itee">
                                         <img src="/assets/img/izee4.png" alt="">
-                                        <p>Лучша <span>цена</span></p>
+                                        <p>Лучшая <span>цена</span></p>
                                     </div>
                                 {/if}
                                 {if $item.acttype=='gift'}
@@ -128,8 +128,9 @@
 
                         <div class="bakk">
                             <div class="left-bakk">
-                                <p>{price $item.price $item.id_currency} {$smarty.session.Currency.title}
-                                    грн</p>
+                                <p>
+                                    {price $item.price $item.id_currency} {$smarty.session.Currency.title}
+                                </p>
                                 {if $item.bonus_amount>0}
                                     <p>Вернем: <span>{$item.bonus_amount|round} грн</span></p>
                                 {/if}
@@ -253,8 +254,9 @@
 
                             <div class="bakk">
                                 <div class="left-bakk">
-                                    <p>{price $item.price $item.id_currency} {$smarty.session.Currency.title}
-                                        грн</p>
+                                    <p>
+                                        {price $item.price $item.id_currency} {$smarty.session.Currency.title}
+                                    </p>
                                     {if $item.bonus_amount>0}
                                         <p>Вернем: <span>{$item.bonus_amount|round} грн</span></p>
                                     {/if}
