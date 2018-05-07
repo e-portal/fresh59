@@ -123,7 +123,7 @@
                 {/if}*}
                 <div class="slider-prod slider-for">
 
-                    {if $item.images}
+                    {*{if $item.images}
                         {foreach from=$item.images item=item_image name=item_image}
                             {if $smarty.foreach.item_image.index<20}
                                 <div class="clone-slide">
@@ -135,7 +135,7 @@
                         {/foreach}
                     {else}
                         <img src="/images/noimage.jpg" alt="{$item.brand} {$item.name}"/>
-                    {/if}
+                    {/if}*}
                     {if $video.type=='youtube'}
                         <div class="clone-slide">
                             <iframe src="https://www.youtube.com/embed/{$video.code}" frameborder="0"
