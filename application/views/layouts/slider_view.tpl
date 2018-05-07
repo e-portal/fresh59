@@ -17,8 +17,8 @@
                             {*<a href="/catalog/item/{$vieweditems.id}" alt="{$vieweditems.brand} {$vieweditems.name}">
                                 {$vieweditems.brand} {$vieweditems.name}
                             </a>*}
-                            <pre>{$vieweditems|var_dump}</pre>
-                            {*<pre>{$item|@debug_print_var}</pre>*}
+                            {*<pre>{$vieweditems|var_dump}</pre>*}
+                            <pre>{$item|@debug_print_var}</pre>
                         </li>
                     {/if}
                 {/foreach}
