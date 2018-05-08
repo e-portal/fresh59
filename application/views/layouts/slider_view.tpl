@@ -92,30 +92,29 @@
                             {/if}
 
 
+                            {if $vieweditems.bestprice > $vieweditems.price}
+                                <div class="itee">
+                                    <img src="/assets/img/izee4.png" alt="">
+                                    <p>Лучшая <span>цена</span></p>
+                                </div>
+                            {/if}
 
-
-
-
-
-                            {*
+                            {if $vieweditems.acttype=='gift'}
+                                <div class="itee present">
+                                    <div class="numeral">
+                                        <img src="/assets/img/present-img.png" alt="present">
+                                    </div>
+                                    <p>Подарок!</p>
+                                    <img src='/images/catalog/{gift assoc.id=$vieweditems.actid}'/>
+                                </div>
+                            {/if}
+                            {if $vieweditems.bestprice > $vieweditems.price}
+                                <div class="itee change">
+                                    <img src="/assets/img/izee5.png" alt="">
+                                    <p>Замена</p>
+                                </div>
+                            {/if}
                             
-                            <div class="itee">
-                                <img src="/assets/img/izee2.png" alt="">
-                                <p>Гарантия <span>12</span> мес</p>
-                            </div>
-                            <div class="itee">
-                                <img src="/assets/img/izee4.png" alt="">
-                                <p>Лучша <span>цена</span></p>
-                            </div>
-                            <div class="itee present">
-                                <div class="numeral"><img src="/assets/img/present-img.png" alt="present"></div>
-                                <p>Подарок!</p>
-                                <img src="/assets/img/present.png" alt="present">
-                            </div>
-                            <div class="itee change">
-                                <img src="/assets/img/izee5.png" alt="">
-                                <p>Замена</p>
-                            </div>*}
                         </div>
                     </a>
                     <object type="lol/wut">
