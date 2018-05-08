@@ -216,7 +216,7 @@
                         <a href="">Сравнение</a>
                     </div>
                     <div class="look-for">
-                        <a href="">Следить за ценой</a>
+                        <a href="!#">Следить за ценой</a>
                     </div>
                 </div>
                 <div class="prod-saler">Продавец:<img src="/assets/img/logo.png" alt=""></div>

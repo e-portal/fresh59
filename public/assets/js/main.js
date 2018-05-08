@@ -1002,3 +1002,7 @@ function addItemToCompare(e) {
         });
     }
 }
+
+$('.right-butt a').click(function () {
+    e.preventDefault();
+})

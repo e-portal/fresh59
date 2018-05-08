@@ -158,10 +158,10 @@
 
                         <div class="news">
                             <div class="left-butt">
-                                <a href="" tabindex="0">В избранное</a>
+                                <a href="!#" tabindex="0">В избранное</a>
                             </div>
                             <div class="right-butt" data-id="{$vieweditems.id}">
-                                <a href="" tabindex="0">Сравнение</a>
+                                <a href="!#" tabindex="0">Сравнение</a>
                             </div>
                         </div>
                     </div>

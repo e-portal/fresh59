@@ -156,7 +156,7 @@
                                         <a href="">В избранное</a>
                                     </div>
                                     <div class="right-butt" data-id="{$itemtopsale.id}">
-                                        <a href="">Сравнение</a>
+                                        <a href="!#">Сравнение</a>
                                     </div>
                                 </div>
                             </div>
