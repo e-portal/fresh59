@@ -975,7 +975,7 @@ window.onload = function () {
                 $('.mode-comp-pop').html('<h1>EMPTY</h1>')
             }
         });
-})
+})()
 
 
 
