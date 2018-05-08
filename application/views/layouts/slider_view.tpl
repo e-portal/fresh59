@@ -56,12 +56,20 @@
                             </div>
 
 
-                            <div class="itee">
-                                <img src="/assets/img/izee0.png" alt="">
-                                <p>Вернем: <span>500 грн</span></p>
-                            </div>
+                            {if $vieweditems.bonus_amount>0}
+                                <div class="itee">
+                                    <img src="/assets/img/izee0.png" alt="">
+                                    <p>Вернем: <span>{$vieweditems.bonus_amount|round} грн</span></p>
+                                </div>
+                            {/if}
 
-                            <div class="itee">
+
+
+
+
+
+
+                            {*<div class="itee">
                                 <img src="/assets/img/izee1.png" alt="">
                                 <p>от <span>500</span> грн/мес</p>
                             </div>
@@ -85,7 +93,7 @@
                             <div class="itee change">
                                 <img src="/assets/img/izee5.png" alt="">
                                 <p>Замена</p>
-                            </div>
+                            </div>*}
                         </div>
                     </a>
                     <object type="lol/wut">
