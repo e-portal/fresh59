@@ -1,5 +1,5 @@
 {include file='layouts/_header.tpl'}
-{debug}
+
 {if $id}
 {include file='faq/one.tpl'}
 {else}
