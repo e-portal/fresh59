@@ -993,6 +993,9 @@ function addItemToCompare(e) {
     if (_this.hasClass('checked')) {
         return;
     }
+
+    console.log(_this);
+
     itemId = _this.attributes('data-id');
 
     if (itemId) {
