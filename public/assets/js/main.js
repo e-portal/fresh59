@@ -171,7 +171,7 @@ jQuery(document).ready(function () {
             autoplaySpeed: 5000,
             responsive: [
                 {
-                    breakpoint: 1152,
+                    breakpoint: 1281,
                     settings: {
                         slidesToShow: 3
                     }
@@ -286,6 +286,13 @@ jQuery(document).ready(function () {
             dots: true,
             speed: 500,
             cssEase: 'linear',
+            responsive: [
+                {
+                    breakpoint: 1281,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                }]
         });
     }
 
@@ -646,6 +653,7 @@ $('.tabs-more').click(function () {
     $(this).toggleClass('more');
 
 });
+
 
 
 // $('.tabs-more').click(function () {

@@ -2243,6 +2243,9 @@ input {
 .item-senn:nth-child(4) {
     margin: 0
 }
+
+.watched-small .item-senn:nth-child(4),
+.watched-small .item-senn:nth-child(6),
 .watched-slider .item-senn:nth-child(4),
 .watched-slider .item-senn:nth-child(6) {
     margin-top: 37px
