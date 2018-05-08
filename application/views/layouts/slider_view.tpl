@@ -129,12 +129,10 @@
                     </object>
 
                     <div class="bakk">
-                        <div class="left-bakk">
                             <div class="left-bakk">
                                 <p>{price $vieweditems.price $item.id_currency} {$smarty.session.Currency.title}</p>
                                 <p>Вернем: <span>{$vieweditems.bonus_amount|round} грн</span></p>
                             </div>
-                        </div>
                         <div class="right-bakk">
                             {if '4' === $vieweditems.id_availability || '1' === $vieweditems.id_availability}
                                 <object type="lol/wut">
