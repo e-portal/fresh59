@@ -136,10 +136,23 @@
                             </div>
                         </div>
                         <div class="right-bakk">
-                            <object type="lol/wut">
-                                <a class="bask acty" href="javascript:void(0)" tabindex="0"><span>В корзину</span></a>
-                            </object>
-
+                            {if '4' === $vieweditems.id_availability || '1' === $vieweditems.id_availability}
+                                <object type="lol/wut">
+                                    <a class="open-in-popup add-to-cart bask acty"
+                                            {include file='layouts/cart-item.tpl' cart_item=$vieweditems}
+                                       tabindex="-1">
+                                        <span>В корзину</span>
+                                    </a>
+                                </object>
+                            {else}
+                                <object type="lol/wut">
+                                    <a class="bask acty open-in-popup add-to-cart blue-bask"
+                                            {include file='layouts/cart-item.tpl' cart_item=$vieweditems}
+                                       tabindex="-1">
+                                        <span>Под заказ</span>
+                                    </a>
+                                </object>
+                            {/if}
                         </div>
                     </div>
                     <div class="hovv">
