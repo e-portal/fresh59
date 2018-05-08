@@ -40,8 +40,12 @@
                         {*----------in stock--------*}
 
                         <h4>
-                            {if $vieweditems.cat_onename}{$vieweditems.cat_onename}{else}{$vieweditems.cat}{/if} {$vieweditems.brand}
-                            {$vieweditems.name}
+                            {if $vieweditems.category_onename}
+                                {$vieweditems.category_onename}
+                            {else}
+                                {$vieweditems.category}
+                            {/if}
+                            {$vieweditems.brand} {$vieweditems.name}
                         </h4>
 
                         <div class="centr">
