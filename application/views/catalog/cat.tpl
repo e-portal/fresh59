@@ -33,7 +33,6 @@
         {include file='catalog/sub-cats.tpl'}
     {else}
         {if $catId!=1}
-            {debug}
             <!--Categories-->
             {include file='catalog/categories.tpl'}
             <!--Categories-->
