@@ -108,7 +108,7 @@
                                     <img src='/images/catalog/{gift assoc.id=$vieweditems.actid}'/>
                                 </div>
                             {/if}
-                            {if $vieweditems.bestprice > $vieweditems.price}
+                            {if $vieweditems.bestprice > $vieweditems.price || $item.acttype !== 'gift'}
                                 <div class="itee change">
                                     <img src="/assets/img/izee5.png" alt="">
                                     <p>Замена</p>
@@ -129,12 +129,12 @@
                     </object>
 
                     <div class="bakk">
-                        {*<div class="left-bakk">
+                        <div class="left-bakk">
                             <div class="left-bakk">
                                 <p>{price $vieweditems.price $item.id_currency} {$smarty.session.Currency.title}</p>
                                 <p>Вернем: <span>{$vieweditems.bonus_amount|round} грн</span></p>
                             </div>
-                        </div>*}
+                        </div>
                         <div class="right-bakk">
                             <object type="lol/wut">
                                 <a class="bask acty" href="javascript:void(0)" tabindex="0"><span>В корзину</span></a>
