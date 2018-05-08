@@ -110,7 +110,9 @@
 
     </div>
 {else}
-    {$error}
+    <div class="container wrap">
+        <h2>{$error}</h2>
+    </div>
 {/if}
 
 {include file='layouts/_footer.tpl'}
