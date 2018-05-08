@@ -12,10 +12,10 @@
 {else}
 	<li class="compare-empty">Пусто</li>
 {/if}
+{*
 
 {literal}
-    {*
-    <script type="text/javascript">
+	<script type="text/javascript">
 		$(document).ready(function(){
 			$('.data-delCompare').on('click',function(){
 				var itemId = $(this).data('id');
@@ -27,6 +27,5 @@
 					});
 			});
 		})
-    </script>
-    *}
-{/literal}
+	</script>
+{/literal}*}
