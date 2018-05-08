@@ -267,7 +267,7 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
                         'actid' => $item->actid,
                         'imgid' => $item->imgid,
                         'imgext' => $item->imgext,
-                        'id_currency' => $item->id_currency,
+//                        'id_currency' => $item->id_currency,
                     ));
                     if (count($_SESSION ['items']) > 7)
                         array_pop($_SESSION['items']);
