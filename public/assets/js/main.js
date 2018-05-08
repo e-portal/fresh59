@@ -965,7 +965,7 @@ window.onload = function () {
     CDT();
 }
 
-(function () {
+function getCompareNew() {
     console.log(43543);
     $.get("/catalog/getcompareitem", {},
         function (data) {
@@ -976,9 +976,9 @@ window.onload = function () {
                 $('.mode-comp-pop').html('<h1>EMPTY</h1>')
             }
         });
-})()
+}
 
-
+getCompareNew();
 
 
 
