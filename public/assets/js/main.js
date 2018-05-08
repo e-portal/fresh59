@@ -1005,6 +1005,18 @@ function addItemToCompare(e) {
     }
 }
 
+$('.compare-delete-icon').bind('click', deleteItemFromCompare);
+
+function deleteItemFromCompare(e) {
+    itemId = $(this).data('id');
+    catId = $(this).data('category');
+
+    $.get("/catalog/delcompareitem", {id: itemId, cat: catId},
+        function (data) {
+            getCompareNew();
+        });
+}
+
 $('.right-butt a').click(function (e) {
     e.preventDefault();
 })

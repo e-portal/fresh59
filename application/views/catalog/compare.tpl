@@ -45,7 +45,8 @@
                         {foreach from=$items item=item}
                             <div class="compare-fixed">
                                 <div class="compare-thead">
-                                    <div class="basket-delete-icon"></div>
+                                    <div class="basket-delete-icon compare-delete-icon" data-id="{$item.id}"
+                                         data-category="{$item.category|mblower}"></div>
                                 </div>
                                 <div class="compare-product">
                                     <div class="basket-prod flexibal">
