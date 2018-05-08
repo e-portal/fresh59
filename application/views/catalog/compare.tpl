@@ -1,20 +1,19 @@
 {include file='layouts/_header.tpl'}
-{if !$error}
-    <div class="container wrap">
-        <div class="bread-crumbs breadcrumbs mobile-display-none" id="breadcrumbs" itemscope=""
-             itemtype="http://schema.org/BreadcrumbList">
-            <div itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="button">
-                <a href="/" itemprop="item">Главная</a>
-                <meta itemprop="position" content="1">
-            </div>
-            <div itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="button">
-                <span itemprop="name" class="label1">Сравнение товаров</span>
-                <meta itemprop="position" content="2">
-            </div>
-
+<div class="container wrap">
+    <div class="bread-crumbs breadcrumbs mobile-display-none" id="breadcrumbs" itemscope=""
+         itemtype="http://schema.org/BreadcrumbList">
+        <div itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="button">
+            <a href="/" itemprop="item">Главная</a>
+            <meta itemprop="position" content="1">
         </div>
-        <h1 class="liner cent"><span>Сравнение товаров - {$cat_name_temporary_celebration[$catId]}</span></h1>
+        <div itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="button">
+            <span itemprop="name" class="label1">Сравнение товаров</span>
+            <meta itemprop="position" content="2">
+        </div>
+    </div>
 
+    {if !$error}
+        <h1 class="liner cent"><span>Сравнение товаров - {$cat_name_temporary_celebration[$catId]}</span></h1>
         <div class="compare-all-blocks">
             <div class="compare-block compare-block-left">
                 <div class="compare-fixed">
@@ -105,14 +104,10 @@
 
             </div>
         </div>
-
         <div class="doww"><img src="/assets/img/verh.png" alt=""></div>
-
-    </div>
-{else}
-    <div class="container wrap">
-        <h2>{$error}</h2>
-    </div>
-{/if}
+    {else}
+        <h1>{$error}</h1>
+    {/if}
+</div>
 
 {include file='layouts/_footer.tpl'}
