@@ -988,7 +988,6 @@ $(".bask-item.comp").mouseout(function () {
 $('.right-butt').bind('click', addItemToCompare);
 
 function addItemToCompare(e) {
-    e.preventDefault();
     _this = $(this);
     if (_this.hasClass('checked')) {
         return;
@@ -996,7 +995,7 @@ function addItemToCompare(e) {
 
     console.log(_this);
 
-    itemId = _this.attributes('data-id');
+    itemId = _this.attr('data-id');
 
     if (itemId) {
         $.get("/catalog/addcompareitem", {id: itemId}, function (data) {
