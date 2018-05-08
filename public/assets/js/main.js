@@ -966,6 +966,7 @@ window.onload = function () {
 }
 
 (function () {
+    console.log(43543);
     $.get("/catalog/getcompareitem", {},
         function (data) {
             console.log(data);
