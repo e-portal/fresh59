@@ -1003,6 +1003,6 @@ function addItemToCompare(e) {
     }
 }
 
-$('.right-butt a').click(function () {
+$('.right-butt a').click(function (e) {
     e.preventDefault();
 })
