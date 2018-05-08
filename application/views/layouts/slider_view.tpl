@@ -40,10 +40,10 @@
                         {*----------in stock--------*}
 
                         <h4>
-                            {if $vieweditems.category_onename}
-                                {$vieweditems.category_onename}
+                            {if $vieweditems.cat_onename}
+                                {$vieweditems.cat_onename}
                             {else}
-                                {$vieweditems.category}
+                                {$vieweditems.cat}
                             {/if}
                             {$vieweditems.brand} {$vieweditems.name}
                         </h4>
@@ -125,12 +125,15 @@
                             <div class="right-otzv">
                                 <span>10 отзывов</span>
                             </div>
-                        </a></object>
+                        </a>
+                    </object>
 
                     <div class="bakk">
                         <div class="left-bakk">
-                            <p>2 500 грн</p>
-                            <p>Вернем: <span>500 грн</span></p>
+                            <div class="left-bakk">
+                                <p>{price $vieweditems.price $item.id_currency} {$smarty.session.Currency.title}</p>
+                                <p>Вернем: <span>{$vieweditems.bonus_amount|round} грн</span></p>
+                            </div>
                         </div>
                         <div class="right-bakk">
                             <object type="lol/wut">
