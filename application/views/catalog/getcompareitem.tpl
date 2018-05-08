@@ -1,7 +1,7 @@
 <div>
 {if $items}
     {assign var="items_count" value=0}
-    <div>
+    <div class="compare-result-popup" data-count="{$items_count}">
         {foreach from=$items item=grp key=grpname name=grpname}
             {foreach from=$grp.items item=item}
                 <li class="compare-itm">
@@ -17,7 +17,6 @@
             {/if}
         {/foreach}
     </div>
-    <div class="compare-result-popup" data-count="{$items_count}"></div>
 {else}
     <div class="compare-result-popup" data-count="0">
         <li class="compare-empty">Пусто</li>
