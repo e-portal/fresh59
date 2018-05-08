@@ -2103,10 +2103,6 @@ input {
     overflow: hidden;
 }
 
-.more-senn .otzv {
-    padding: 0 24px;
-}
-
 .runn .otzv {
     opacity: 1;
 }
@@ -2247,7 +2243,6 @@ input {
 .item-senn:nth-child(4) {
     margin: 0
 }
-
 .watched-slider .item-senn:nth-child(4),
 .watched-slider .item-senn:nth-child(6) {
     margin-top: 37px

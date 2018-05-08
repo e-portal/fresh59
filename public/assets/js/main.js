@@ -1,3 +1,4 @@
+
 // -------preloader
 $(window).on('load', function () {
     $('html, body').css('position', 'fixed');
@@ -169,6 +170,12 @@ jQuery(document).ready(function () {
             autoplay: true,
             autoplaySpeed: 5000,
             responsive: [
+                {
+                    breakpoint: 1152,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                },
                 {
                     breakpoint: 1025,
                     settings: {
@@ -611,6 +618,7 @@ $(document).on("click", ".naccs .tabs-menu div", function () {
 });
 
 
+
 $('.tabs-legg').click(function () {
 
 
@@ -630,6 +638,7 @@ $('.tabs-legg').click(function () {
     // $('.tabs-brand .tabs-his-content').animate({height: 'show'}, 500);
 
 });
+
 
 
 $('.tabs-more').click(function () {

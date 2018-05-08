@@ -63,12 +63,10 @@
     .left-butt a, .right-butt a {
         margin: 0 0 0 30px;
     }
-
     .slick-slider .sench {
         padding: 20px 14px 0;
         width: calc(100% - 28px);
     }
-
     .slick-slider .item-senn .otzv,
     .slick-slider .item-senn .bakk {
         /*.maii .otzv,*/
@@ -285,6 +283,21 @@
         margin: 47px 25px 0;
     }
 
+    .right-options {
+        width: calc(100% - 320px);
+        width: -moz-calc(100% - 320px);
+        width: -webkit-calc(100% - 320px);
+        margin: 0 0 0 20px;
+    }
+
+    .under-senn .item-senn {
+        width: 285px;
+    }
+
+    .front-wrap {
+        width: 240px;
+    }
+
     .item-score:nth-child(1) {
         font-size: 18px;
     }
@@ -312,7 +325,6 @@
         right: 9px;
         width: 16px;
     }
-
     .right-otzv {
         font-size: 11px;
     }
@@ -365,6 +377,24 @@
         font-size: 11px;
     }
 
+    .under-senn .item-senn {
+        width: 246px;
+    }
+
+    .item-senn .otzv,
+    .item-senn .bakk {
+        padding: 0 14px;
+    }
+
+    .sench {
+        padding: 20px 14px 0;
+        width: calc(100% - 28px);
+    }
+
+    .front-wrap {
+        width: 220px;
+    }
+
     .item-score:nth-child(3) {
         width: 350px;
     }
@@ -373,7 +403,7 @@
     }
     .item-foot:nth-child(2) ul li:hover a,
     .item-foot:nth-child(3) ul li:hover a {
-        letter-spacing: 0.2px;
+        letter-spacing: .2px;
     }
     .item-foot:nth-child(2) ul li a, .item-foot:nth-child(3) ul li a {
         font-size: 16px;
