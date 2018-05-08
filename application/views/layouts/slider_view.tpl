@@ -26,11 +26,32 @@
 
             {foreach from=$smarty.session.items item=vieweditems name=content_vieweditems}
                 <div class="item-senn">
-                    <a class="sench" href="/" tabindex="0">
-                        <h5 class="green">В наличии</h5>
-                        <h4>Стиральная машина Electro ELECTROLUX</h4>
+                    <a class="sench" href="/catalog/item/{$vieweditems.id}" tabindex="0"
+                       alt="{$vieweditems.brand} {$vieweditems.name}">
+
+                        {*----------in stock--------*}
+                        {if $vieweditems.id_availability == 1}
+                            <div class="green">В наличии</div>
+                        {elseif $vieweditems.id_availability == 3}
+                            <div class="bluee">Под заказ</div>
+                        {else}
+                            <div class="gray">Наличие уточняйте</div>
+                        {/if}
+                        {*----------in stock--------*}
+
+                        <h4>
+                            {if $vieweditems.cat_onename}{$vieweditems.cat_onename}{else}{$vieweditems.cat}{/if} {$vieweditems.brand}
+                            {$vieweditems.name}
+                        </h4>
+
                         <div class="centr">
-                            <div class="itee-imgg"><img src="/assets/img/senn2.png" alt=""></div>
+                            <div class="itee-imgg">
+                                <img {if $vieweditems.img} src="/images/catalog/{$vieweditems.img}" {else}
+                                    src="{$url.img}/noimage.jpg" {/if}
+                                        alt="{$vieweditems.name}-{$vieweditems.brand}">
+                            </div>
+
+
                             <div class="itee">
                                 <img src="/assets/img/izee0.png" alt="">
                                 <p>Вернем: <span>500 грн</span></p>
