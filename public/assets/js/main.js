@@ -979,9 +979,9 @@ function getCompareNew() {
 getCompareNew();
 
 $(".bask-item.comp").mouseover(function () {
-    this.find(".mode-comp-pop").show();
+    $(this).find(".mode-comp-pop").show();
 });
 $(".bask-item.comp").mouseout(function () {
-    this.find(".mode-comp-pop").hide();
+    $(this).find(".mode-comp-pop").hide();
 });
 
