@@ -213,7 +213,7 @@
                         <a href="">В избранное</a>
                     </div>
                     <div class="right-butt" data-id="{$item.id}">
-                        <a href="">Сравнение</a>
+                        <a href="!#">Сравнение</a>
                     </div>
                     <div class="look-for">
                         <a href="!#">Следить за ценой</a>
