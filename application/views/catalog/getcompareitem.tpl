@@ -1,7 +1,7 @@
 {if $items}
 	{foreach from=$items item=grp key=grpname name=grpname}
 	    {foreach from=$grp.items item=item}
-	        <li class="compare-itm">
+            <li class="compare-itm sssssss">
 	            <i class="icon-remove data-delCompare" data-id='{$item.id}' data-category='{$item.category|mblower}' ></i>
 	            <a href="{iurl assoc.parent=$item.parentname assoc.subdomain=$item.subdomain assoc.cat=$item.cat_onename assoc.brand=$item.brand assoc.item=$item.name}">{$item.brand} {$item.name}</a>
 	        </li>
