@@ -969,14 +969,15 @@ function getCompareNew() {
     $.get("/catalog/getcompareitem", {},
         function (data) {
             if (data.length > 1) {
-                $(".mode-comp-pop").html(data);
+                $(".mode-comp-pop").html(data).hide();
             } else {
-                $('.mode-comp-pop').html('<h1>EMPTY</h1>')
+                $('.mode-comp-pop').html('<h1>EMPTY</h1>').hide();
             }
         });
 }
 
 getCompareNew();
 
-
+$(".mode-comp-pop").onmouseover().show();
+$(".mode-comp-pop").onmouseout().hide();
 
