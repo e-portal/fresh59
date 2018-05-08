@@ -973,7 +973,7 @@ function getCompareNew() {
                 $(".bask-item comp").find('.numeral').html($(data).find('.compare-result-popup').attr('data-count'));
             } else {
                 $('.mode-comp-pop').html('<h1>EMPTY</h1>').hide();
-                $(".mode-comp-pop").find('.numeral').html('0');
+                $(".bask-item comp").find('.numeral').html('0');
             }
         });
 }
