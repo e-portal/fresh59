@@ -129,7 +129,7 @@
                             </div>
                             <div class="names">Сравнение</div>
                         </div>
-                        <div class="mode-pop" style="position: absolute; bottom: -100%;background: #fff"></div>
+                        <div class="mode-comp-pop" style="position: absolute; bottom: -100%;background: #fff"></div>
                     </div>
                     <div class="bask-item baskets">
                         <div class="runn">

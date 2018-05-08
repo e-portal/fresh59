@@ -969,10 +969,9 @@ window.onload = function () {
     $.get("/catalog/getcompareitem", {},
         function (data) {
             if (data.length > 1) {
-                $(".data-navbar").show();
-                $(".data-compareItems").html(data);
+                $(".mode-comp-pop").html(data);
             } else {
-                $('.data-CompareLnk').removeClass('open')
+                $('.mode-comp-pop').html('<h1>EMPTY</h1>')
             }
         });
 })
