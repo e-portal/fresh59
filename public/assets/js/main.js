@@ -978,6 +978,10 @@ function getCompareNew() {
 
 getCompareNew();
 
-$(".mode-comp-pop").onmouseover().show();
-$(".mode-comp-pop").onmouseout().hide();
+$(".bask-item.comp").onmouseover(function () {
+    this.find(".mode-comp-pop").show();
+});
+$(".bask-item.comp").onmouseout(function () {
+    this.find(".mode-comp-pop").hide();
+});
 
