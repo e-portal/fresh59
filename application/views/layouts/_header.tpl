@@ -122,13 +122,14 @@
                             <div class="names">Желания</div>
                         </div>
                     </div>
-                    <div class="bask-item comp">
+                    <div class="bask-item comp" style="position: relative">
                         <div class="runn">
                             <div class="imgg">
                                 <div class="numeral">0</div>
                             </div>
                             <div class="names">Сравнение</div>
                         </div>
+                        <div class="mode-pop" style="position: absolute; bottom: -100%;background: #fff"></div>
                     </div>
                     <div class="bask-item baskets">
                         <div class="runn">

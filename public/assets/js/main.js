@@ -965,7 +965,17 @@ window.onload = function () {
     CDT();
 }
 
-
+(function () {
+    $.get("/catalog/getcompareitem", {},
+        function (data) {
+            if (data.length > 1) {
+                $(".data-navbar").show();
+                $(".data-compareItems").html(data);
+            } else {
+                $('.data-CompareLnk').removeClass('open')
+            }
+        });
+})
 
 
 
