@@ -968,10 +968,9 @@ window.onload = function () {
 function getCompareNew() {
     $.get("/catalog/getcompareitem", {},
         function (data) {
-            console.log($(data).find('.compare-result-popup').attr('data-count'));
             if (data.length > 1) {
                 $(".mode-comp-pop").html(data).hide();
-                $(".mode-comp-pop").find('.numeral').html($(data).find('.compare-result-popup').attr('data-count'));
+                $(".bask-item comp").find('.numeral').html($(data).find('.compare-result-popup').attr('data-count'));
             } else {
                 $('.mode-comp-pop').html('<h1>EMPTY</h1>').hide();
                 $(".mode-comp-pop").find('.numeral').html('0');
