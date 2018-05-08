@@ -997,7 +997,7 @@ function addItemToCompare(e) {
 
     if (itemId) {
         $.get("/catalog/addcompareitem", {id: itemId}, function (data) {
-            getCompareItems();
+            getCompareNew();
             _this.addClass('checked');
         });
     }
