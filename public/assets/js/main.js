@@ -968,6 +968,7 @@ window.onload = function () {
 (function () {
     $.get("/catalog/getcompareitem", {},
         function (data) {
+            console.log(data);
             if (data.length > 1) {
                 $(".mode-comp-pop").html(data);
             } else {
