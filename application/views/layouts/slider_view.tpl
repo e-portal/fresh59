@@ -63,20 +63,42 @@
                                 </div>
                             {/if}
 
+                            {if $vieweditems.id_availability == 1}
+                                <div class="itee">
+                                    <img src="/assets/img/izee1.png" alt="">
+                                    <p>
+                                        от
+                                        <span>
+                                            {if $vieweditems.rent >= 25}
+                                                {math equation="x/y*$curs_evro_smarty|round" x=$vieweditems.price y=8}
+                                            {elseif $vieweditems.rent > 12.5}
+                                                {math equation="x/y*$curs_evro_smarty|round" x=$vieweditems.price y=6}
+                                            {elseif $vieweditems.rent > 7.5}
+                                                {math equation="x/y*$curs_evro_smarty|round" x=$vieweditems.price y=3}
+                                            {else}
+                                                {math equation="x/y*$curs_evro_smarty|round" x=$vieweditems.price y=3}
+                                            {/if}
+                                        </span>
+                                        грн/мес
+                                    </p>
+                                </div>
+                                <div class="itee">
+                                    <img src="/assets/img/izee3.png" alt="">
+                                    <p>от
+                                        <span>{$vieweditems.price*0.0099*$curs_evro_smarty+$vieweditems.price/24*$curs_evro_smarty|round}</span>
+                                        грн/мес
+                                    </p>
+                                </div>
+                            {/if}
 
 
 
 
 
 
-                            {*<div class="itee">
-                                <img src="/assets/img/izee1.png" alt="">
-                                <p>от <span>500</span> грн/мес</p>
-                            </div>
-                            <div class="itee">
-                                <img src="/assets/img/izee3.png" alt="">
-                                <p>от <span>1200</span> грн/мес</p>
-                            </div>
+
+                            {*
+                            
                             <div class="itee">
                                 <img src="/assets/img/izee2.png" alt="">
                                 <p>Гарантия <span>12</span> мес</p>
