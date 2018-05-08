@@ -149,7 +149,7 @@
                                 <div class="left-butt">
                                     <a href="">В избранное</a>
                                 </div>
-                                <div class="right-butt">
+                                <div class="right-butt" data-id="{$item.id}">
                                     <a href="">Сравнение</a>
                                 </div>
                             </div>
@@ -272,7 +272,7 @@
                                 <div class="left-butt">
                                     <a href="">В избранное</a>
                                 </div>
-                                <div class="right-butt">
+                                <div class="right-butt" data-id="{$item.id}">
                                     <a href="">Сравнение</a>
                                 </div>
                             </div>

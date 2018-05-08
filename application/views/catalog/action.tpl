@@ -176,7 +176,7 @@
                                     <div class="left-butt">
                                         <a href="" tabindex="-1">В избранное</a>
                                     </div>
-                                    <div class="right-butt">
+                                    <div class="right-butt" data-id="{$item.id}">
                                         <a href="" tabindex="-1">Сравнение</a>
                                     </div>
                                 </div>

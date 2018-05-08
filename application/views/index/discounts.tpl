@@ -149,7 +149,7 @@
                                 <div class="left-butt">
                                     <object type="lol/wut"><a href="">В избранное</a></object>
                                 </div>
-                                <div class="right-butt">
+                                <div class="right-butt" data-id="{$item.id}">
                                     <object type="lol/wut"><a href="">Сравнение</a></object>
                                 </div>
                             </div>

@@ -985,3 +985,20 @@ $(".bask-item.comp").mouseout(function () {
     $(this).find(".mode-comp-pop").hide();
 });
 
+$('.right-butt').bind('click', addItemToCompare);
+
+function addItemToCompare(e) {
+    e.preventDefault();
+    _this = $(this);
+    if (_this.hasClass('checked')) {
+        return;
+    }
+    itemId = _this.getAttribute('data-id');
+
+    if (itemId) {
+        $.get("/catalog/addcompareitem", {id: itemId}, function (data) {
+            getCompareItems();
+            _this.addClass('checked');
+        });
+    }
+}
