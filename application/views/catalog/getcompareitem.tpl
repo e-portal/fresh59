@@ -24,20 +24,3 @@
         </div>
 {/if}
 </div>
-{*
-
-{literal}
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$('.data-delCompare').on('click',function(){
-				var itemId = $(this).data('id');
-				var catId =  $(this).data('category');
-				$.get("/catalog/delcompareitem", {id:itemId, cat:catId},
-					function(data){
-						getCompareItems();
-						$('#comp_' + itemId).removeClass('checked');
-					});
-			});
-		})
-	</script>
-{/literal}*}
