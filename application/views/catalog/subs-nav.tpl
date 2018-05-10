@@ -1,4 +1,4 @@
-{if $zf.params.controller=='catalog' && $zf.params.action=='cat' && !$finalCat && $filters|@count > 1}
+{if $zf.params.controller=='catalog' && $zf.params.action=='cat' && !$finalCat}
     <div class="left-options">
         <div class="opti">
             <div class="liner"><span>Выбор по параметрам</span></div>
@@ -66,7 +66,7 @@
 
 
         {if !$accepted_filters}
-            {if $filters}
+            {if $filters|@count > 1}
                 {foreach from=$filters item=filters key=type}
                     {if $type == 'select'}
 
