@@ -202,8 +202,8 @@
                                 <div class="flexibal two-col reg-social">
                                     <div class=""><p>Вы можете войти через социальную сеть</p></div>
                                     <div class="">
-                                        <a><img src="img/main/fb-blue.png"></a>
-                                        <a><img src="img/main/g-red.png"></a>
+                                        <a><img src="/assets/img/main/fb-blue.png"></a>
+                                        <a><img src="/assets/img/main/g-red.png"></a>
                                     </div>
                                 </div>
 
@@ -364,14 +364,14 @@
                     <div class="blue-link">
                         <a class="bluee">Редактировать заказ</a>
                         <a class="bluee icon-question">Использовать промокод<span><img
-                                        src="img/main/bluee-question.png"></span></a>
+                                        src="/assets/img/main/bluee-question.png"></span></a>
                         <a class="bluee icon-question">Оплатить бонусами<span><img
-                                        src="img/main/bluee-question.png"></span></a>
+                                        src="/assets/img/main/bluee-question.png"></span></a>
                     </div>
                     <div class="">
                         <div class="take-order-delivery flexibal">
                             <div class="">По Киеву доставка <span>Бесплатно!</span></div>
-                            <img src="./img/orig3.png" alt="">
+                            <img src="/assets//img/orig3.png" alt="">
                         </div>
                         <div class="total-take">
                             <div class="total red">
