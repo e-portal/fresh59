@@ -175,10 +175,6 @@
                                                         <a {if $brand.selected}class="active"{/if}
                                                            href="{url2 assoc.brand=$brand.add assoc.page=null param=$route}">{$brand.name}
                                                         </a>
-                                                        <label for="pol1">
-                                                            <span>В наличии <span>({$smarty.foreach.brands.total}
-                                                                    )</span></span>
-                                                        </label>
                                                     </li>
                                                 {else}
                                                     <li><span class="inactive">{$brand.name}</span></li>
