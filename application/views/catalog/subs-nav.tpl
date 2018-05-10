@@ -69,102 +69,47 @@
             {if $filters}
                 {foreach from=$filters item=filters key=type}
                     {if $type == 'select'}
-                        <div class="brand">
-                            <div></div>
-                            <div class="opti">
-                                <div class="legg"><span>Тип стиральной машины</span><i></i></div>
+
+                        {foreach from=$filters item=filter}
+                            <div class="brand">
+                                <div></div>
+                                <div class="opti">
+                                    <div class="legg"><span>{$filter.name}</span><i></i></div>
 
 
-                                <div class="under-forms">
-                                    <div class="forms">
-                                        <form action="">
+                                    <div class="under-forms">
+                                        <div class="forms">
+
                                             <ul>
-                                                <li>
-                                                    <input type="checkbox" id="pol1" name="selects" value="pol1"
-                                                           class="checkbox">
-                                                    <label for="pol1">
-                                                        <span>В наличии <span>(154)</span></span>
-                                                    </label>
-                                                    <div class="check"></div>
-                                                </li>
-
-
-                                                <li>
-                                                    <input type="checkbox" id="pol2" name="selects" value="pol1"
-                                                           class="checkbox">
-                                                    <label for="pol2">
-                                                        <span>Акционные предложения <span>(122)</span></span>
-                                                    </label>
-                                                    <div class="check"></div>
-                                                </li>
-
-
-                                                <li>
-                                                    <input type="checkbox" id="pol3" name="selects" value="pol3"
-                                                           class="checkbox">
-                                                    <label for="pol3">
-                                                        <span>Товары со скидками <span>(140)</span></span>
-                                                    </label>
-                                                    <div class="check"></div>
-                                                </li>
-
-
-                                                <li>
-                                                    <input type="checkbox" id="pol4" name="selects" value="pol4"
-                                                           class="checkbox">
-                                                    <label for="pol4">
-                                                        <span>Товары со скидками <span>(140)</span></span>
-                                                    </label>
-                                                    <div class="check"></div>
-                                                </li>
-
-
-                                                <li>
-                                                    <input type="checkbox" id="pol5" name="selects" value="pol5"
-                                                           class="checkbox">
-                                                    <label for="pol5">
-                                                        <span>Товары со скидками <span>(140)</span></span>
-                                                    </label>
-                                                    <div class="check"></div>
-                                                </li>
-
-
-                                                <li>
-                                                    <input type="checkbox" id="pol7" name="selects" value="pol7"
-                                                           class="checkbox">
-                                                    <label for="pol7">
-                                                        <span>Товары со скидками <span>(140)</span></span>
-                                                    </label>
-                                                    <div class="check"></div>
-                                                </li>
-
-
-                                                <li>
-                                                    <input type="checkbox" id="pol8" name="selects" value="pol8"
-                                                           class="checkbox">
-                                                    <label for="pol8">
-                                                        <span>Товары со скидками <span>(140)</span></span>
-                                                    </label>
-                                                    <div class="check"></div>
-                                                </li>
-
+                                                {foreach from=$filter.values item=value}
+                                                    {if $value.possible}
+                                                        <li>
+                                                            <a class="checkbox{if $value.selected}active{/if}"
+                                                               href="{url2 $filter.urlhelperarg=$value.add param=$route}">{$value.value}</a>
+                                                        </li>
+                                                        <div class="check"></div>
+                                                    {else}
+                                                        <li>
+                                                            <a class="checkbox inactive">{$value.value}</a>
+                                                        </li>
+                                                        <div class="check"></div>
+                                                    {/if}
+                                                {/foreach}
 
                                             </ul>
-                                        </form>
-                                        <div class="clik">Показать все</div>
-
+                                        </div>
                                     </div>
                                 </div>
+
+
                             </div>
-
-
-                        </div>
+                        {/foreach}
                     {elseif $type == 'brands' && ($filters|@count > 1)}
                         {*=============================================================*}
                         <div class="brand">
                             <div></div>
                             <div class="opti">
-                                <div class="legg"><span>Бренд:</span><i></i></div>
+                                <div class="legg"><span>Бренд</span><i></i></div>
                                 <div class="under-forms">
                                     <div class="forms">
 

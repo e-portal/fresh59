@@ -2243,7 +2243,6 @@ input {
 .item-senn:nth-child(4) {
     margin: 0
 }
-
 .watched-small .item-senn:nth-child(4),
 .watched-small .item-senn:nth-child(6),
 .watched-slider .item-senn:nth-child(4),
@@ -3535,13 +3534,14 @@ ul#selectsMenuBoxi > li.options:hover {
     list-style-type: none;
 }
 
+.opti ul li a,
 .opti ul li label {
     display: flex;
     width: 100%;
     cursor: pointer;
     padding: 7px 0 7px 24px;
     transition: .3s;
-    letter-spacing: 0px;
+    letter-spacing: 0;
 }
 
 .opti ul li input {
@@ -3569,14 +3569,16 @@ ul#selectsMenuBoxi > li.options:hover {
     top: 7px;
 }
 
+.opti ul li a,
 .opti ul li span {
     font-family: 'SF-UI-Display-Light';
     font-size: 14px;
     color: #2a353f;
     transition: .3s;
-    letter-spacing: 0px;
+    letter-spacing: 0;
 }
 
+.opti ul li:hover a,
 .opti ul li:hover label span {
     font-family: 'SFUIDisplay-Bold';
     letter-spacing: .4px;
@@ -3772,7 +3774,7 @@ ul#selectsMenuBoxi > li.options:hover {
 .front-wrap {
     position: relative;
     height: 105px;
-    width: 250px;
+    width: 255px;
     transition: all .1s linear;
     z-index: 5;
     margin: 0 auto;
@@ -4620,6 +4622,7 @@ ul.nacc li p {
 
 .tabs-empty .bask {
     margin: 0 auto;
+    padding: 0 12px;
 }
 .tabs-empty .bask span {
     font-size: 14px;
@@ -4719,13 +4722,24 @@ ul.nacc li p {
     border-radius: 25px;
     position: relative;
     margin-top: 0;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .create-list::after {
     content: '+';
     position: absolute;
     right: 27px;
+}
+
+.create-name {
+    position: relative;
+    overflow: hidden;
+    transition: .3s;
+    height: 0;
+}
+
+.create-name.open {
+    height: 100px;
 }
 
 .lists .brand {
@@ -4914,9 +4928,14 @@ ul.nacc li p {
     justify-content: center;
     display: flex;
 }
+
+.tabs-container .create-name .bask span,
 .tabs-review-lk div:nth-child(4) .bask span {
     margin: 0;
+    color: #313e49;
 }
+
+.tabs-container .create-name .bask:after,
 .tabs-review-lk div:nth-child(4) .bask:after {
     content: none;
 }
@@ -5102,6 +5121,19 @@ ul.nacc .tabs-saw p {
 .tabs-container .popup-block input[type='text'] {
     display: block;
 }
+
+.tabs-container .create-name .popup-block input[type='text'] {
+    display: inline;
+    margin-right: 60px;
+}
+
+.create-name .popup-block .button {
+    margin-top: 0;
+}
+
+.create-name .bask {
+    display: inline-flex;
+}
 /*.popup-block select {*/
 .change-data select {
     margin-bottom: 11px;
@@ -5155,6 +5187,31 @@ ul.nacc .tabs-saw p {
 
 .title .activate-popup {
     z-index: 1;
+}
+
+.comp {
+    position: relative;
+}
+
+.mode-comp-pop {
+    position: absolute;
+    background: rgb(255, 255, 255);
+    width: 400px;
+    right: 0;
+    z-index: 10;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    box-shadow: 0 0 9px -1px rgba(0, 0, 0, .5);
+    top: 120%;
+    transition: .3s;
+}
+
+.mode-comp-pop ul {
+    list-style-image: url("./../img/main/list-style.png");
+}
+
+.compare-itm {
+    padding: 5px 0;
 }
 
 @-moz-document url-prefix() {
