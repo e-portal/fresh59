@@ -1178,12 +1178,14 @@ function addItemToCompare(e) {
 $('.compare-delete-icon').bind('click', deleteItemFromCompare);
 
 function deleteItemFromCompare(e) {
+    e.preventDefault();
     itemId = $(this).data('id');
     catId = $(this).data('category');
 
     $.get("/catalog/delcompareitem", {id: itemId, cat: catId},
         function (data) {
             getCompareNew();
+            $('[data-id=' + itemId + ']').removeClass('checked');
         });
 }
 
