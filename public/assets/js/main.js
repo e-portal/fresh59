@@ -1137,11 +1137,12 @@ function getCompareNew() {
             if (data.length > 1) {
                 $(".mode-comp-pop").html(data).hide();
                 $(".bask-item.comp").find('.numeral').html($(data).find('.compare-result-popup').attr('data-count'));
+                $('.compare-delete-icon').bind('click', deleteItemFromCompare);
             } else {
                 $('.mode-comp-pop').html('<h1>EMPTY</h1>').hide();
                 $(".bask-item.comp").find('.numeral').html('0');
             }
-            $('.compare-delete-icon').bind('click', deleteItemFromCompare);
+
 
         });
 }
