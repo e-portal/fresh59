@@ -1194,10 +1194,6 @@ function deleteItemFromCompare(e) {
         });
 }
 
-$('.right-butt a').click(function (e) {
-    e.preventDefault();
-})
-
 
 /*---------BIND UNBIND---------*/
 // function bindings() {
