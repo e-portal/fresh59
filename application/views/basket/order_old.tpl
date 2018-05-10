@@ -1,5 +1,5 @@
 <div class="container">
-    {if $smarty.session.Basket.items || $smarty.session.Basket.sets}
+    {if $smarty.session.Basket.items || $smarty.session.Basket.sets || true}
         <h1 class="liner smaller-liner liner-basket"><span>Оформление заказа</span></h1>
         <div class="basket-two-column">
             <div class="basket-first-column order">
