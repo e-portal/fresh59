@@ -60,8 +60,7 @@
                                     <div class="order-title"><span>3</span> Способы доставки</div>
                                     <div class="flexibal">
                                         <input type="radio" id="new-delivery-1" class="ShowOrHide delivery-show-select"
-                                               name="delivery"
-                                               value="myDivId1">
+                                               name="delivery" value="myDivId1">
                                         <label for="new-delivery-1">Самовывоз</label>
                                     </div>
                                     <div id="myDivId1" class="ShowOrHide delivery-detail basket-two-column">
@@ -108,8 +107,7 @@
                                     </div>
                                     <div class="flexibal">
                                         <input type="radio" id="new-delivery-3" class="ShowOrHide delivery-show-select"
-                                               name="delivery"
-                                               value="myDivId3">
+                                               name="delivery" value="myDivId3">
                                         <label for="new-delivery-3">Курьер</label>
                                     </div>
                                     <div id="myDivId3" class="ShowOrHide delivery-detail flexibal">
@@ -136,8 +134,7 @@
                                     </div>
                                     <div class="flexibal">
                                         <input type="radio" id="new-delivery-4" class="ShowOrHide delivery-show-select"
-                                               name="delivery"
-                                               value="myDivId4">
+                                               name="delivery" value="myDivId4">
                                         <label for="new-delivery-4">Trade-in "ZAMENA"</label>
                                     </div>
                                     <div id="myDivId4" class="ShowOrHide delivery-detail flexibal">
@@ -169,8 +166,9 @@
                                 </div>
 
                                 <div class="take-order">
-                                    <div class="">Подтверждая заказ, я принимаю условия <a class="bluee">пользовательского
-                                            соглашения</a>
+                                    <div class="">
+                                        Подтверждая заказ, я принимаю условия
+                                        <a class="bluee">пользовательского соглашения</a>
                                     </div>
                                     <div class="">
                                         <input class="send bask acty without-icon" type="submit"
@@ -227,8 +225,7 @@
                                 <div class="order-title"><span>3</span> Способы доставки</div>
                                 <div class="flexibal">
                                     <input type="radio" id="new-delivery-1-1" class="ShowOrHide delivery-show-select"
-                                           name="delivery"
-                                           value="myDivId1-1">
+                                           name="delivery" value="myDivId1-1">
                                     <label for="new-delivery-1-1">Самовывоз</label>
                                 </div>
                                 <div id="myDivId1-1" class="ShowOrHide delivery-detail basket-two-column">
@@ -251,8 +248,7 @@
                                 </div>
                                 <div class="flexibal">
                                     <input type="radio" id="new-delivery-2-1" class="ShowOrHide delivery-show-select"
-                                           name="delivery"
-                                           value="myDivId2-1">
+                                           name="delivery" value="myDivId2-1">
                                     <label for="new-delivery-2-1">Новая почта</label>
                                 </div>
                                 <div id="myDivId2-1" class="ShowOrHide delivery-detail basket-two-column">
@@ -275,8 +271,7 @@
                                 </div>
                                 <div class="flexibal">
                                     <input type="radio" id="new-delivery-3-1" class="ShowOrHide delivery-show-select"
-                                           name="delivery"
-                                           value="myDivId3-1">
+                                           name="delivery" value="myDivId3-1">
                                     <label for="new-delivery-3-1">Курьер</label>
                                 </div>
                                 <div id="myDivId3-1" class="ShowOrHide delivery-detail flexibal">
@@ -303,8 +298,7 @@
                                 </div>
                                 <div class="flexibal">
                                     <input type="radio" id="new-delivery-4-1" class="ShowOrHide delivery-show-select"
-                                           name="delivery"
-                                           value="myDivId4-1">
+                                           name="delivery" value="myDivId4-1">
                                     <label for="new-delivery-4-1">Trade-in "ZAMENA"</label>
                                 </div>
                                 <div id="myDivId4-1" class="ShowOrHide delivery-detail flexibal">
@@ -336,8 +330,9 @@
                             </div>
 
                             <div class="take-order">
-                                <div class="">Подтверждая заказ, я принимаю условия <a class="bluee">пользовательского
-                                        соглашения</a>
+                                <div class="">
+                                    Подтверждая заказ, я принимаю условия
+                                    <a href="/page/confidentiality" class="bluee">пользовательского соглашения</a>
                                 </div>
                                 <div class="">
                                     <input class="bask acty without-icon" type="submit" value="Заказ подтверждаю">
@@ -363,10 +358,14 @@
                 <div class="total-section">
                     <div class="blue-link">
                         <a class="bluee">Редактировать заказ</a>
-                        <a class="bluee icon-question">Использовать промокод<span><img
-                                        src="/assets/img/main/bluee-question.png"></span></a>
-                        <a class="bluee icon-question">Оплатить бонусами<span><img
-                                        src="/assets/img/main/bluee-question.png"></span></a>
+                        <a class="bluee icon-question">
+                            Использовать промокод
+                            <span><img src="/assets/img/main/bluee-question.png"></span>
+                        </a>
+                        <a class="bluee icon-question">
+                            Оплатить бонусами
+                            <span><img src="/assets/img/main/bluee-question.png"></span>
+                        </a>
                     </div>
                     <div class="">
                         <div class="take-order-delivery flexibal">
@@ -377,14 +376,13 @@
                             <div class="total red">
                                 Итого: <span class="count-total">0</span>грн
                             </div>
-
                         </div>
                     </div>
-
                 </div>
                 <div class="take-order">
-                    <div class="">Подтверждая заказ, я принимаю условия <a class="bluee">пользовательского
-                            соглашения</a>
+                    <div class="">
+                        Подтверждая заказ, я принимаю условия
+                        <a href="/page/confidentiality" class="bluee">пользовательского соглашения</a>
                     </div>
                     <div class="">
                         <object type="lol/wut">
