@@ -17,6 +17,7 @@
         </div>
         <div class="compare-result-popup" data-count="{$items_count}"></div>
     {else}
+        <div class="compare-result-popup" data-count="0"></div>
         <div class="compare-itm">Пусто</div>
     {/if}
 </div>

@@ -51,7 +51,8 @@
         left: 20px;
         width: calc(100% - 37px);
     }
-    .news a {
+
+    .news span {
         font-size: 12px;
     }
 
@@ -60,7 +61,7 @@
         width: calc(100% - 28px);
     }
 
-    .left-butt a, .right-butt a {
+    .left-butt span, .right-butt span {
         margin: 0 0 0 30px;
     }
     .slick-slider .sench {
@@ -175,7 +176,7 @@
     .next-menu ul li:nth-child(1) a:after,
     .next-menu ul li:nth-child(2) a:after {
         left: -30px;
-        background-size: 21px;
+        background-size: 20px;
         top: -6px;
     }
 
@@ -233,15 +234,15 @@
         left: -27px;
     }
 
-    .news a {
+    .news span {
         font-size: 11px;
     }
 
-    .right-butt a {
+    .right-butt span {
         margin: 0 0 0 15px;
     }
 
-    .left-butt a {
+    .left-butt span {
         margin: 0 0 0 20px;
     }
 
@@ -393,10 +394,6 @@
         width: 220px;
     }
 
-    .item-score:nth-child(1) {
-        width: 300px;
-    }
-
     .item-score:nth-child(3) {
         width: 350px;
     }
@@ -408,7 +405,7 @@
         letter-spacing: .2px;
     }
     .item-foot:nth-child(2) ul li a, .item-foot:nth-child(3) ul li a {
-        font-size: 15px;
+        font-size: 16px;
     }
     .adree p {
         margin: 0;
@@ -2359,15 +2356,15 @@
         width: calc(100% - 36px);
     }
 
-    .senn-main .news a {
+    .senn-main .news span {
         font-size: 10px;
     }
 
-    .senn-main .right-butt a {
+    .senn-main .right-butt span {
         margin: 0 0 0 30px;
     }
 
-    .senn-main .left-butt a {
+    .senn-main .left-butt span {
         margin: 0 0 0 13px;
     }
 
@@ -2901,7 +2898,7 @@
         height: 35px;
     }
 
-    .senn-main .news a {
+    .senn-main .news span {
         font-size: 8px;
     }
 
@@ -2955,7 +2952,8 @@
     .liner {
         font-size: 12px;
     }
-    .senn-main .news a {
+
+    .senn-main .news span {
         font-size: 6px;
     }
     .timer {

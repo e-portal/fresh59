@@ -2355,7 +2355,6 @@ input {
     height: 49px;
     display: flex;
     align-items: center;
-    /*justify-content: center;*/
     opacity: 0;
     transition: .2s;
 }
@@ -2368,24 +2367,25 @@ input {
     justify-content: flex-end;
 }
 
-.news a {
+.news span {
     font-family: 'SF-UI-Display-Light';
     color: #979797;
     font-size: 13px;
     line-height: 21px;
     position: relative;
+    cursor: pointer;
     transition: .3s
 }
 
-.news a:focus {
+.news span:focus {
     outline: none;
 }
 
-.news a:hover {
+.news span:hover {
     color: #313e49
 }
 
-.left-butt a:after {
+.left-butt span:after {
     position: absolute;
     left: -24px;
     top: 1px;
@@ -2396,11 +2396,11 @@ input {
     transition: .3s
 }
 
-.left-butt a {
+.left-butt span {
     margin: 0
 }
 
-.right-butt a:after {
+.right-butt span:after {
     position: absolute;
     left: -24px;
     top: 1px;
@@ -2411,8 +2411,8 @@ input {
     transition: .3s
 }
 
-.left-butt a,
-.right-butt a {
+.left-butt span,
+.right-butt span {
     margin: 0 0 0 37px
 }
 
@@ -2435,11 +2435,13 @@ input {
     transition-delay: 0s;
 }
 
-.right-butt a:hover:after {
+/*.right-butt a:hover:after {*/
+.right-butt span:hover:after {
     background: url(../img/right-butt-hover.png) center no-repeat
 }
 
-.left-butt a:hover:after {
+/*.left-butt a:hover:after {*/
+.left-butt span:hover:after {
     background: url(../img/left-butt.png) center no-repeat
 }
 
@@ -5216,7 +5218,6 @@ ul.nacc .tabs-saw p {
     margin-top: 10px;
     transition: .3s;
 }
-
 .comp-link:hover {
     background: #fbd402;
 }
@@ -5224,15 +5225,12 @@ ul.nacc .tabs-saw p {
     padding: 10px 0 0 10px;
     position: relative;
 }
-
 .compare-itm a {
     padding-left: 30px;
 }
-
 .compare-itm:hover .icon-remove {
     opacity: 1;
 }
-
 .icon-remove {
     background: url(./../img/item-close.png);
     opacity: .7;

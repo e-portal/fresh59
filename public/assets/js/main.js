@@ -1149,7 +1149,6 @@ function getCompareNew(status) {
                 $(".bask-item.comp").find('.numeral').html('0');
             }
 
-
         });
 }
 
