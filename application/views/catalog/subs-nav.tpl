@@ -86,13 +86,13 @@
                                                         <li>
                                                             <a class="checkbox{if $value.selected}active{/if}"
                                                                href="{url2 $filter.urlhelperarg=$value.add param=$route}">{$value.value}</a>
+                                                            <div class="check"></div>
                                                         </li>
-                                                        <div class="check"></div>
                                                     {else}
                                                         <li>
                                                             <a class="checkbox inactive">{$value.value}</a>
+                                                            <div class="check"></div>
                                                         </li>
-                                                        <div class="check"></div>
                                                     {/if}
                                                 {/foreach}
 
@@ -120,9 +120,12 @@
                                                         <a class="checkbox{if $brand.selected}active{/if}"
                                                            href="{url2 assoc.brand=$brand.add assoc.page=null param=$route}">{$brand.name}
                                                         </a>
+                                                        <div class="check"></div>
                                                     </li>
                                                 {else}
-                                                    <li><span class="inactive">{$brand.name}</span></li>
+                                                    <li><span class="inactive">{$brand.name}</span>
+                                                        <div class="check"></div>
+                                                    </li>
                                                 {/if}
                                             {/foreach}
 
