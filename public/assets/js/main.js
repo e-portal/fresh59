@@ -1131,15 +1131,21 @@ window.onload = function () {
     CDT();
 }
 
-function getCompareNew() {
+function getCompareNew(status) {
     $.get("/catalog/getcompareitem", {},
         function (data) {
             if (data.length > 1) {
-                $(".mode-comp-pop").html(data)//.hide();
+
+                if (status) {
+                    $(".mode-comp-pop").html(data);
+                } else {
+                    $(".mode-comp-pop").html(data).hide();
+                }
+
                 $(".bask-item.comp").find('.numeral').html($(data).find('.compare-result-popup').attr('data-count'));
                 $('.compare-delete-icon').bind('click', deleteItemFromCompare);
             } else {
-                $('.mode-comp-pop').html('<h1>EMPTY</h1>')//.hide();
+                $('.mode-comp-pop').html('<h1>EMPTY</h1>').hide();
                 $(".bask-item.comp").find('.numeral').html('0');
             }
 
@@ -1147,7 +1153,7 @@ function getCompareNew() {
         });
 }
 
-getCompareNew();
+getCompareNew(false);
 
 $(".bask-item.comp").mouseover(function () {
     $(this).find(".mode-comp-pop").show();
@@ -1169,7 +1175,7 @@ function addItemToCompare(e) {
 
     if (itemId) {
         $.get("/catalog/addcompareitem", {id: itemId}, function (data) {
-            getCompareNew();
+            getCompareNew(false);
             _this.addClass('checked');
         });
     }
@@ -1184,7 +1190,7 @@ function deleteItemFromCompare(e) {
 
     $.get("/catalog/delcompareitem", {id: itemId, cat: catId},
         function (data) {
-            getCompareNew();
+            getCompareNew(true);
             $('[data-id=' + itemId + ']').removeClass('checked');
         });
 }
