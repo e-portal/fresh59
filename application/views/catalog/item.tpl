@@ -630,8 +630,9 @@
 
 
 
-
-    {include file='catalog/also-buy.tpl'}
+    {if $assocItemsVmeste|@count > 0}
+        {include file='catalog/also-buy.tpl'}
+    {/if}
     {include file='catalog/the-same-items.tpl'}
 
 

@@ -22,6 +22,17 @@
                 </tr>
                 </thead>
                 <tbody>
+
+                {literal}
+                    <script type="text/javascript">
+                        function my_reload() {
+                            setTimeout(function () {
+                                location.reload();
+                            }, 1000)
+                        }
+                    </script>
+                {/literal}
+
                 {foreach from=$data.Basket.items item=item key=id}
                     <tr {if $item.hasGift}class="data-gift"{/if}>
                         <td class="remove_from_basket_td"><i class="remove_from_basket data-remove" id="item_{$id}"
@@ -51,7 +62,7 @@
                         <td><strong>{price $item.price $item.id_currency}</strong></td>
 
                         {if $basketStats.discount>0}
-                            <td>
+                            <td style="color: #1dbc1c; text-decoration: underline;    padding-left: 35px;">
                                 <strong>{$basketStats.price_of_each[$id]|round}</strong></td>
                         {/if}
 
@@ -85,31 +96,27 @@
                             <table>
                                 {foreach from=$item.items item=setItemId}
                                     <tr>
-                                        <td class="basket-img">
-                                            <img class="data-zoom"
-                                                 data-url="/images/catalog/{$data.itemsInfo[$setItemId].imgid}.{$data.itemsInfo[$setItemId].imgext}"
-                                                 src="/images/catalog/{$data.itemsInfo[$setItemId].imgid}_s.{$data.itemsInfo[$setItemId].imgext}"
-                                                 alt="{$data.itemsInfo[$id].brand} {$data.itemsInfo[$id].name}"/>
+                                        <td class="basket-img"><img class="data-zoom"
+                                                                    data-url="/images/catalog/{$data.itemsInfo[$setItemId].imgid}.{$data.itemsInfo[$setItemId].imgext}"
+                                                                    src="/images/catalog/{$data.itemsInfo[$setItemId].imgid}_s.{$data.itemsInfo[$setItemId].imgext}"
+                                                                    alt="{$data.itemsInfo[$id].brand} {$data.itemsInfo[$id].name}"/>
                                         </td>
                                         <td>
                                             <a href="/catalog/item/{$setItemId}">{if $data.itemsInfo[$setItemId].cat_onename}{$data.itemsInfo[$setItemId].cat_onename}{else}{$data.itemsInfo[$setItemId].cat}{/if} {$data.itemsInfo[$setItemId].brand} {$data.itemsInfo[$setItemId].name}</a>
-                                            {if $login=='Покупатель' && $data.itemsInfo[$id].bonus_amount > 0}
-                                                <p class="bp__product-summ">
-                                                    <span>+ {$data.itemsInfo[$id].bonus_amount|round} грн</span> на
-                                                    бонусный
-                                                    счет</p>
-                                            {/if}
+                                            {if $login=='Покупатель' && $data.itemsInfo[$id].bonus_amount > 0}<p
+                                                    class="bp__product-summ">
+                                                <span>+ {$data.itemsInfo[$id].bonus_amount|round} грн</span> на бонусный
+                                                счет</p>{/if}
                                         </td>
                                     </tr>
                                 {/foreach}
                             </table>
                         </td>
                         <td>{price $item.price $item.id_currency} </td>
-                        <td class="count">
-                            <input type="hidden" name='type' value='set'/>
-                            <input type="hidden" name='price' value='{price $item.price $item.id_currency}'/>
-                            <input class="data-amount span1" type="text" id="itema_{$id}" value="{$item.amount}"/>
-                        </td>
+                        <td class="count"><input type="hidden" name='type' value='set'/><input type="hidden"
+                                                                                               name='price'
+                                                                                               value='{price $item.price $item.id_currency}'/><input
+                                    class="data-amount span1" type="text" id="itema_{$id}" value="{$item.amount}"/></td>
                         <td class="data-itemPrice">{price $item.price $item.id_currency $item.amount} грн.</td>
                     </tr>
                 {/foreach}
@@ -136,92 +143,168 @@
                     <td colspan="4" class="cart-mini-summ">
                         <!--<p class="data-transfer transfer_info"></p>-->
                         {if $basketStats.discount>0}
-                            <p id="summ_za_vse"></p>
-                            <!--Вывод суммы-->
+                            <p style="margin-top: 15px; text-decoration: line-through; font-size: 20px !important;color: #8b8888 !important;"
+                            " id="summ_za_vse"></p> <!--Вывод суммы-->
                         {else}
-                            <p id="summ_za_vse"></p>
+                            <p style="margin-top: 15px;" id="summ_za_vse"></p>
                             <!--Вывод суммы-->
                         {/if}
 
-                        <img id="img_dostavka" src="https://590.ua/assets/media/dost_gorod.png">
-                        <p id="text_dostavka_info"></p>
+                        <img id="img_dostavka" style="display: none; float: right; width: 70px;"
+                             src="https://590.ua/assets/media/dost_gorod.png">
+                        <p style="float: right; margin-top: 11px; margin-right: -5px;" id="text_dostavka_info"></p>
                         <!--Вывод информации о доставке-->
                         {if $basketStats.discount>0}
-                            <p>Итого:
-                                <span id="real_price_for_pay">{$basketStats.summ_with_discount}</span>
-                                {$smarty.session.Currency.title}
+                            <p style="display: none;">Итого: <span
+                                        id="real_price_for_pay">{$basketStats.summ_with_discount}</span> {$smarty.session.Currency.title}
                             </p>
                         {else}
-                            <p>Итого:
-                                <span id="real_price_for_pay">{$basketStats.summ}</span>
-                                {$smarty.session.Currency.title}
+                            <p style="display: none;">Итого: <span
+                                        id="real_price_for_pay">{$basketStats.summ}</span> {$smarty.session.Currency.title}
                             </p>
                         {/if}
                         {if $basketStats.discount>0}
-                            <p id="how_economy">
-                                Вы экономите:<span>{$basketStats.discount|round}
-                                    грн ({$basketStats.discount*100/$basketStats.summ|round}
+                            <p id="how_economy"
+                               style="margin-top:-5px;font-size: 14px !important;color: #0d8abc !important;">Вы
+                                экономите:<span style="color: #fb515d !important;
+    font-size: 14px !important;">{$basketStats.discount|round} грн ({$basketStats.discount*100/$basketStats.summ|round}
                                     %)</span></p>
-                            <p>Сумма со скидкой:
-                                <span id="real_sum_with_discount">{$basketStats.summ|round}</span>грн
+                            <p style="font-size: 20px !important;color: #0d8abc !important;">Сумма со скидкой:<span
+                                        id="real_sum_with_discount"
+                                        style="color: #fb515d !important;font-size: 20px !important;">{$basketStats.summ|round}</span>грн
                             </p>
                         {else}
-                            <span id="real_sum_with_discount">{$basketStats.summ|round}</span>
+                            <span id="real_sum_with_discount" style="display: none;">{$basketStats.summ|round}</span>
                         {/if}
+
                     </td>
                 </tr>
                 </tfoot>
             </table>
         </div>
 
+        {if $login=='акция рождество' || $login=='Гальченко Владимир'}
+            {assign var="blackid_count" value=0}
+            {assign var="black_price" value=0}
+            {assign var="regular_price" value=0}
+            {assign var="iteration_celebration" value=0}
+            {foreach from=$item_id_temporary_celebration item=foo}
+                {foreach from=$basketStats.ids item=blackid}
+                    {if $blackid == $foo && !$item.hasGift}
+                        {assign var="black_price" value=$black_price+$regular_price+$data.itemsInfo[$blackid].bdprice*$curs_evro_smarty*$data.Basket.items[$blackid].amount-$summ_temporary_celebration[$iteration_celebration]*$data.Basket.items[$blackid].amount}
+                        {assign var="blackid_count" value=$blackid_count+1}
+                    {/if}
+                {/foreach}
+                {assign var="iteration_celebration" value=$iteration_celebration+1}
+            {/foreach}
+
+            {if ($blackid_count > 0 ) && ($basketStats.discount<=0)}
+                <img src="/images/hint/black_friday_basket.jpg">
+                <div style="
+    position: absolute;
+        width: 135px;
+        margin-top: -118px;
+        text-align: center;
+        margin-left: 703px;
+        font-family: cursive;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 26px;
+        text-shadow: black 2px 2px 8px;">{$black_price|round} грн
+                </div>
+            {/if}{/if}
         <div class="b-items">
             <span class="bordered">Оформление заказа</span>
 
             <form class="form-horizontal make_order" id="order" method="post" name='basketForm'
                   enctype="application/x-www-form-urlencoded">
+                {if $manager}
+                    <div class="control-group">
+                        <div class="control-label">id во внутренней базе</div>
+                        <div class="controls" style="margin-left: 160px;"><input class="custom_select" name="id2"
+                                                                                 type="text"/></div>
+                    </div>
+                    <div class="control-group">
+                        <div class="control-label">Откуда узнал о нас?</div>
+                        <div class="controls" style="margin-left: 160px;"><select class="custom_select"
+                                                                                  name="idsrc">{foreach from=$form->idsrc->getMultiOptions() item=name key=id}
+                                    <option {if $id==$form->idsrc->getValue()} selected="selected" {/if}
+                                    value="{$id}">{$name}</option>{/foreach}</select></div>
+                    </div>
+                    <div class="control-group">
+                        <div class="control-label">Статус заказа</div>
+                        <div class="controls" style="margin-left: 160px;"><select class="custom_select"
+                                                                                  name="status">{foreach from=$form->status->getMultiOptions() item=name key=id}
+                                    <option {if $id==$form->status->getValue()} selected="selected" {/if}
+                                    value="{$id}">{$name}</option>{/foreach}</select></div>
+                    </div>
+                    <div class="control-group">
+                        <div class="control-label"><strong>Дата доставки *</strong></div>
+                        <div class="controls" style="margin-left: 160px;"><input class="custom_select"
+                                                                                 id="processing_date" type="text"
+                                                                                 name="processing_date"/>
+                            <a href="#" id="processing_date_calendar"
+                               style="position: absolute; margin-left: -25px; margin-top: 5px;"><img
+                                        class="calendar-image" src="/js/calendar/calendar.gif"></a>
+                            {literal}
+                                <script type="text/javascript">
+                                    Calendar.setup(
+                                        {
+                                            inputField: "processing_date",
+                                            ifFormat: "%Y-%m-%d",
+                                            button: "processing_date_calendar",
+                                            firstDay: 1,
+                                            singleClick: false,
+                                            electric: false
+                                        }
+                                    );
+                                </script>
+                            {/literal}
+                        </div>
+                    </div>
+                {/if}
                 <div class="control-group">
                     <div class="control-label"><strong>Имя и Фамилия *</strong></div>
-                    <div class="controls">
-                        <input type="text" id="name" class="validate[required,custom[onlyLetterSp]] custom_select"
-                               name="name" value="{$form->name->getValue()}"/>
-                    </div>
+                    <div class="controls" style="margin-left: 160px;"><input type="text" id="name"
+                                                                             class="validate[required,custom[onlyLetterSp]] custom_select"
+                                                                             name="name"
+                                                                             value="{$form->name->getValue()}"/></div>
                 </div>
-                <div class="control-group name2">
-                    <div class="control-label"><strong>Фамилия *</strong></div>
-                    <div class="controls">
-                        <input class="custom_select" type="text" id="name2" name="name2" value=" "
-                               class="validate[required]"/>
-                    </div>
+                <div class="control-group name2" style="display: none !important;">
+                    <div class="control-label" style="display: none !important;"><strong>Фамилия *</strong></div>
+                    <div class="controls" style="display: none !important; margin-left: 160px;"><input
+                                class="custom_select" type="text" id="name2" name="name2" value=" "
+                                class="validate[required]"/></div>
                 </div>
                 <div class="control-group">
                     <div class="control-label">
                         <strong>Телефон *</strong>
                         <!--[if lt IE 9 ]>
-                        <br/>в формате<br/>
+                        <br/>
+                        в формате<br/>
                         <span class="label label-warning">+38(099) 123-45-67</span>
                         <![endif]-->
                     </div>
-                    <div class="controls">
+                    <div class="controls" style="margin-left: 160px;">
                         <input placeholder="093 111 22 33" type="text" id="phone" name="phone"
                                value="{$form->phone->getValue()}" class="validate[required] custom_select"/>
                     </div>
                 </div>
                 <div class="control-group">
                     <div class="control-label">Телефон доп.</div>
-                    <div class="controls">
-                        <input class="custom_select" type="text" name="phone2" value="{$form->phone2->getValue()}"/>
-                    </div>
+                    <div class="controls" style="margin-left: 160px;"><input class="custom_select" type="text"
+                                                                             name="phone2"
+                                                                             value="{$form->phone2->getValue()}"/></div>
                 </div>
                 <div class="control-group">
                     <div class="control-label">E-mail</div>
-                    <div class="controls">
-                        <input id="email" class="custom_select" type="text" name="email"
-                               value="{$form->email->getValue()}"/>
-                    </div>
+                    <div class="controls" style="margin-left: 160px;"><input id="email" class="custom_select"
+                                                                             type="text" name="email"
+                                                                             value="{$form->email->getValue()}"/></div>
                 </div>
                 <div class="control-group">
                     <div class="control-label">Регион</div>
-                    <div class="controls">
+                    <div class="controls" style="margin-left: 160px;">
                         <select id="region_id_for_delivery" class="custom_select" type="text" name="region_id">
                             {foreach from=$regions item=region key=id}
                                 <option value="{$region.id}"
@@ -234,7 +317,10 @@
                 {if $form->paytype}
                     <div class="control-group">
                         <div class="control-label">Способы оплаты</div>
-                        <div class="controls">
+                        <div class="controls" style="margin-left: 160px;">
+                            <!-- <p><label><input type="radio" name="paytype" value="0" {if $form->paytype->getValue()!=1} checked="checked" {/if} /> Наличными курьеру</label></p>
+                            <p><label><input type="radio" name="paytype" value="1" {if $form->paytype->getValue()==1} checked="checked" {/if} /> Платежная карта </label></p> -->
+
                             <p><input type="radio" name="paytype" id="nal"
                                       value="0" {if $form->paytype->getValue()!=1} checked="checked" {/if} /> <label
                                         for="nal">Наличными курьеру</label></p>
@@ -248,21 +334,22 @@
                                       value="2" {if $form->paytype->getValue()==2} checked="checked" {/if} /> <label
                                         for="credit">Кредит</label></p>
                             <!-- manager end -->
+
                         </div>
                     </div>
                     <!-- manager -->
-                    <div class="control-group credit-block hidden">
+                    <div class="control-group credit-block hidden" style="margin-left: 20px">
                         <div class="control-label">Выберите кредит</div>
-                        <div class="controls">
+                        <div class="controls" style="margin-left: 160px;">
                             <p><input type="radio" name="bank_name" id="privatbank_pp" value="0" checked="checked"/>
                                 <label for="privatbank_pp">ПриватБанк Оплата Частями</label></p>
                             <p><input type="radio" name="bank_name" id="privatbank_op" value="1"/> <label
                                         for="privatbank_op">ПриватБанк Мгновенная рассрочка</label></p>
                         </div>
                     </div>
-                    <div class="control-group credit-block hidden">
+                    <div class="control-group credit-block hidden" style="margin-left: 20px">
                         <div class="control-label">Количество месяцев</div>
-                        <div class="controls">
+                        <div class="controls" style="margin-left: 160px;">
                             <select class="credit_period">
                                 {foreach from=$payParts item=period key=k}
                                     <option value="{$period}">{$period}</option>
@@ -270,9 +357,9 @@
                             </select>
                         </div>
                     </div>
-                    <div class="control-group credit-block credit-info hidden">
+                    <div class="control-group credit-block credit-info hidden" style="margin-left: 20px">
                         <div class="control-label"></div>
-                        <div class="controls">
+                        <div class="controls" style="margin-left: 160px;">
                             3 платежа на 3 месяца {math equation="x/y|round" x=$basketStats.summ y=3} грн
                         </div>
                     </div>
@@ -406,11 +493,13 @@
                 <!-- Delivery End -->
                 <div class="control-group delivery-block">
                     <div class="control-label">Способ доставки</div>
-                    <div class="controls">
+                    <div class="controls" style="margin-left: 160px;">
                         <p><input type="radio" name="delivery_name" id="delivery_myself" value="1" checked="checked"/>
                             <label for="delivery_myself">Самовывоз</label></p>
                         <p><input type="radio" name="delivery_name" id="delivery_curier" value="2"/> <label
                                     for="delivery_curier">Курьер</label></p>
+                        <!-- <p><input type="radio" name="delivery_name" id="delivery_privatbank" value="3" /><label for="delivery_privatbank"> Почтомат ПриватБанк</label></p>
+                        <p><input type="radio" name="delivery_name" id="delivery_nova_poshta" value="4" /> <label for="delivery_nova_poshta">Новая Почта</label></p> -->
                         <p><input type="radio" name="delivery_name" id="delivery_tradein" value="5"/> <label
                                     for="delivery_tradein" rel="tooltip"
                                     data-original-title="Программа обмена старой техники на новую">Trade-in
@@ -421,9 +510,16 @@
                 <div class="control-group delivery-block-tradein hidden">
                     <div class="alert alert-info">
                         <span><strong>Для уточнения стоимости товара по <a href="/articles/zamena"
-                                >программе Trade-in "ZAMENA"</a>, с Вами свяжется менеджер</strong></span>
+                                                                           style="color: #ff6c00; text-decoration: underline;">программе Trade-in "ZAMENA"</a>, с Вами свяжется менеджер</strong></span>
                     </div>
                 </div>
+
+                <!--             		<div class="control-group delivery-block-privatbank" style="margin-left: 20px">
+                                        <div class="control-label">Выберите точку доставки</div>
+                                        <div class="controls">
+                                            <select id="delivery-block-privatbank"></select>
+                                           </div>
+                                    </div> -->
 
                 {literal}
                     <script>
@@ -439,26 +535,58 @@
 
                 <!-- Delivery End -->
 
+                {if $manager}
+                    <div class="control-group">
+                        <div class="control-label">Район покупателя</div>
+                        <div class="controls" style="margin-left: 160px;">
+                            {php}echo $this->formSelect('district',null,null, $this->form->district->getAttrib('options'));{/php}
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="control-label">Платная доставка</div>
+                        <div class="controls" style="margin-left: 160px;"><input type="checkbox" name="payed_delivery"
+                                                                                 value="1"/></div>
+                    </div>
+                {/if}
+                {if $login=='Shishko'}
+                    <div class="control-group">
+                        <div class="control-label">Адрес доставки</div>
+                        <div class="controls dropdown">
+                            <textarea type="text" id="adresss" name="address"
+                                      class="data-adress">{$form->address->getValue()}</textarea>
+                            <ul class="dropdown-menu data-adress-popup" id="address-dropdown">
+                                <li><a href="#">Дегтяревская 25А</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                {else}
+                    <div class="control-group">
+                        <div class="control-label">Адрес доставки</div>
+                        <div class="controls" style="margin-left: 160px;"><textarea type="text" id="adresss"
+                                                                                    name="address">{$form->address->getValue()}</textarea>
+                        </div>
+                    </div>
+                {/if}
 
                 <div class="control-group">
                     <div class="control-label">Комментарии</div>
-                    <div class="controls">
-                        <textarea type="text" name="comments">{$form->comments->getValue()}</textarea>
+                    <div class="controls" style="margin-left: 160px;"><textarea type="text"
+                                                                                name="comments">{$form->comments->getValue()}</textarea>
                     </div>
-                    {if $basketStats.discount>0}
-                        <textarea type="hidden" name="comments">{$form->comments->getValue()}Нужно исправить
+                    {if $basketStats.discount>0}<textarea style="display: none;" type="hidden"
+                                                          name="comments">{$form->comments->getValue()}Нужно исправить
                         цены (по акции Вместе Дешевле):
-                            {foreach from=$data.Basket.items item=item key=id}
-                                {$data.itemsInfo[$id].cat_onename} {$data.itemsInfo[$id].brand} {$data.itemsInfo[$id].name} = {$basketStats.price_of_each[$id]/$curs_evro_smarty|round:2}
-                            {/foreach}
+                        {foreach from=$data.Basket.items item=item key=id}{$data.itemsInfo[$id].cat_onename} {$data.itemsInfo[$id].brand} {$data.itemsInfo[$id].name} = {$basketStats.price_of_each[$id]/$curs_evro_smarty|round:2}
+                        {/foreach}
 
-                            Нужно исправить сумму "Взять оплату" на: {$basketStats.summ|round}</textarea>
-                        <!--<textarea type="text" id="adresss" name="address" >{$form->address->getValue()}123</textarea>-->
+                        Нужно исправить сумму "Взять оплату" на: {$basketStats.summ|round}</textarea>
+
+                        <!--<textarea type="text" id="adresss" name="address" style="display: none;">{$form->address->getValue()}123</textarea>-->
                     {/if}
                 </div>
                 <div class="control-group">
                     <div class="control-label"></div>
-                    <div class="controls">
+                    <div class="controls" style="margin-left: 160px;">
                         <button type="submit" class="btn btn-large btn-info">Оформить заказ</button>
                     </div>
                     <input type="hidden" name="site" value="{$site}"/>
@@ -466,11 +594,9 @@
 
 
                 {if $basketStats.discount>0}
-                    <span id="oplata_chast_vmeste_deshevle">
-                        {foreach from=$data.Basket.items item=item key=id}
-                            {$data.itemsInfo[$id].cat_onename} {$data.itemsInfo[$id].brand} {$data.itemsInfo[$id].name} = {$basketStats.price_of_each[$id]/$curs_evro_smarty|round:2}
-                        {/foreach}
-                    </span>
+                    <span id="oplata_chast_vmeste_deshevle"
+                          style="display: none;">{foreach from=$data.Basket.items item=item key=id}{$data.itemsInfo[$id].cat_onename} {$data.itemsInfo[$id].brand} {$data.itemsInfo[$id].name} = {$basketStats.price_of_each[$id]/$curs_evro_smarty|round:2}
+{/foreach}</span>
                 {/if}
 
 
@@ -539,8 +665,8 @@
                         590</a> относительно защиты персональных данных покупателя.</p>
 
 
-                <div class="summa_za_tovar"></div>
-                <div id="summ_cupon">{$data.bonus->amount}</div>
+                <div style="display: none;" class="summa_za_tovar"></div>
+                <div style="display: none;" id="summ_cupon">{$data.bonus->amount}</div>
 
                 {literal}
                 <script type="text/javascript">
@@ -596,6 +722,8 @@
                     });
                 </script>
                 {/literal}
+
+
                 {if !$login}
                     <div class="basket-bonus alert">
                         <p class="basket-bonus__head">
@@ -604,26 +732,16 @@
                         </p>
                         <img src="{$url.img}/bp/bp-cards-small.png" alt="cards-small"/>
                         <ul>
-                            <li>
-                                <label for="question__one">
-                                    <input {if $basketStats.summ < 1000} disabled="disabled"{/if}
-                                            type="radio" value="1" name="bonus_card" id="question__one"/>
-                                    {if $basketStats.summ < 2500}
+                            <li><label for="question__one"><input {if $basketStats.summ < 1000} disabled="disabled"
+                                                                                                {/if}type="radio"
+                                                                                                value="1"
+                                                                                                name="bonus_card"
+                                                                                                id="question__one"/> {if $basketStats.summ < 2500}
                                         <span rel="tooltip"
-                                              title="Для получения бонусной карты сумма покупки должна быть больше 1000грн">
-                                            Да
-                                        </span>
-                                    {else}
-                                        Да
-                                    {/if}
-                                </label>
-                            </li>
-                            <li>
-                                <label for="question__two">
-                                    <input type="radio" value="0" name="bonus_card" id="question__two"/>
-                                    Нет
-                                </label>
-                            </li>
+                                              title="Для получения бонусной карты сумма покупки должна быть больше 1000грн">Да</span>
+                                    {else}Да{/if}</label></li>
+                            <li><label for="question__two"><input type="radio" value="0" name="bonus_card"
+                                                                  id="question__two"/> Нет</label></li>
                         </ul>
                         <div class="clear"></div>
                         <p><a href="/page/bonus" target="_blank">Информация о бонусной карте</a></p>
@@ -650,7 +768,32 @@
                 {/if}
             </form>
         </div>
+
+        {if $manager}
+        {literal}
+            <!-- Google Code for &#1052;&#1086;&#1088;&#1086;&#1078;&#1077;&#1085;&#1080;&#1094;&#1072; Conversion Page -->
+            <script type="text/javascript">
+                /* <![CDATA[ */
+                var google_conversion_id = 846411199;
+                var google_conversion_language = "uk";
+                var google_conversion_format = "1";
+                var google_conversion_color = "ffffff";
+                var google_conversion_label = "KhGhCNTVtlEQ7Nmx5gM";
+                var google_conversion_value = 1;
+                /* ]]> */
+            </script>
+            <script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+            </script>
+            <noscript>
+                <div style="display:inline;">
+                    <img height="1" width="1" style="border-style:none;" alt=""
+                         src="http://www.googleadservices.com/pagead/conversion/1020030188/?value=1&amp;label=KhGhCNTVtlEQ7Nmx5gM&amp;guid=ON&amp;script=0"/>
+                </div>
+            </noscript>
+        {/literal}
+        {/if}
     </div>
 {else}
-    <a href="https://590.ua/"><img src="https://590.ua/assets/media/emptybasket.png"></a>
+    <center><a href="https://590.ua/"><img src="https://590.ua/assets/media/emptybasket.png" style="width: 80%;"></a>
+    </center>
 {/if}

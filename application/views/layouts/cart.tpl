@@ -34,7 +34,7 @@
                             <div class="">
                                 <object type="lol/wut">
                                     <a class="bask acty take-order-btn"
-                                       href=""><span>Оформить заказ</span></a>
+                                       href="/basket/order"><span>Оформить заказ</span></a>
                                 </object>
                             </div>
                             <div class="take-order-delivery flexibal">
