@@ -131,7 +131,7 @@
                         </div>
                         <div class="mode-comp-pop" style="position: absolute; bottom: -100%;background: #fff"></div>
                     </div>
-                    <div class="bask-item baskets">
+                    <div class="bask-item baskets add-to-cart">
                         <div class="runn">
                             <div class="imgg">
                                 {include file='layouts/cart_svg.tpl'}
