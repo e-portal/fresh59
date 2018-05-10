@@ -1,656 +1,404 @@
-{if $smarty.session.Basket.items || $smarty.session.Basket.sets}
-    <div class="breadcrumbs span-12 no_margin">
-        <a href="/">Интернет магазин бытовой техники</a>
-        <span>→</span>
-        <span>Корзина</span>
-    </div>
-    <div class="data-order">
-        <div class="basket">
-            <h1>Заказанные товары</h1>
-            <table class="table basket-items">
-                <thead>
-                <tr>
-                    <th class="basket-items-num"></th>
-                    <th colspan="2">Наименование</th>
-                    <th>К-во</th>
-                    <th>Цена</th>
-                    {if $basketStats.discount>0}
-                        <th>Цена со скидкой</th>
-                    {/if}
+<div class="container">
+    {if $smarty.session.Basket.items || $smarty.session.Basket.sets}
+        <h1 class="liner smaller-liner liner-basket"><span>Оформление заказа</span></h1>
+        <div class="basket-two-column">
+            <div class="basket-first-column order">
 
-                    <th class="basketSummTh">Сумма, {$smarty.session.Currency.title}</th>
-                </tr>
-                </thead>
-                <tbody>
-                {foreach from=$data.Basket.items item=item key=id}
-                    <tr {if $item.hasGift}class="data-gift"{/if}>
-                        <td class="remove_from_basket_td"><i class="remove_from_basket data-remove" id="item_{$id}"
-                                                             onclick="my_reload()" title="Удалить"></i></td>
-                        <td class="basket-img">
-                            {if $data.itemsInfo[$id].imgid}
-                                <img class="data-zoom" rel="tooltip" data-original-title="Увеличить изображение"
-                                     data-url="/images/catalog/{$data.itemsInfo[$id].imgid}.{$data.itemsInfo[$id].imgext}"
-                                     src="/images/catalog/{$data.itemsInfo[$id].imgid}_s.{$data.itemsInfo[$id].imgext}"
-                                     data-alt="{$data.itemsInfo[$id].brand} {$data.itemsInfo[$id].name}"/>
-                            {else}
-                                <img src="{$url.img}/noimage.jpg" alt=""/>
-                            {/if}
-                        </td>
-                        <td>
-                            <a href="/catalog/item/{$id}"
-                               class="basket_product_title">{$data.itemsInfo[$id].cat_onename} {$data.itemsInfo[$id].brand} {$data.itemsInfo[$id].name}</a>
-                            {if $data.itemsInfo[$id].bonus_amount > 0}<p class="bonus"><span>+ <span
-                                            class='data-bonusSum'>{math equation="x*y" x=$data.itemsInfo[$id].bonus_amount y=$item.amount}</span> грн</span>
-                                на бонусный счет</p>{/if}
-                            <input type="hidden" class='data-bonus' value="{$data.itemsInfo[$id].bonus_amount}"/>
-                        </td>
-                        <td class="basket_items"><input type="hidden" name='price'
-                                                        value='{price $item.price $item.id_currency}'/>
-                            <input oninput="my_reload()" class="data-amount span1" type="text" id="itema_{$id}"
-                                   value="{$item.amount}"/></td>
-                        <td><strong>{price $item.price $item.id_currency}</strong></td>
-
-                        {if $basketStats.discount>0}
-                            <td>
-                                <strong>{$basketStats.price_of_each[$id]|round}</strong></td>
-                        {/if}
-
-                        <td class="data-itemPrice">
-                            <strong>{math equation="x * y" x=$basketStats.price_of_each[$id]|round y=$basketStats.amount_of_each_item[$id]}</strong>
-                        </td>
-                    </tr>
-                    {if $item.hasGift}
-                        <tr class="data-giftItem alert gift_basket">
-                            <td></td>
-                            <td class="basket-img"><img src="/images/catalog/{$item.gift.imgid}.{$item.gift.imgext}"
-                                                        alt=""/></td>
-                            <td>
-                                <p class="b-gift"><strong>Подарок
-                                        - {$item.gift.category} {$item.gift.brand} {$item.gift.name}</strong></p>
-                            </td>
-                            <td></td>
-                            <td></td>
-
-                            {if $basketStats.discount>0}
-                                <td></td>
-                            {/if}
-                            <td></td>
-                        </tr>
-                    {/if}
-                {/foreach}
-                {foreach from=$data.Basket.sets item=item key=id}
-                    <tr>
-                        <td><i class="icon-remove data-remove" id="set_{$id}" title="Удалить"></i></td>
-                        <td colspan="2"><a href="/catalog/set/{$id}">{$data.setsInfo[$id].short_info}</a>
-                            <table>
-                                {foreach from=$item.items item=setItemId}
-                                    <tr>
-                                        <td class="basket-img">
-                                            <img class="data-zoom"
-                                                 data-url="/images/catalog/{$data.itemsInfo[$setItemId].imgid}.{$data.itemsInfo[$setItemId].imgext}"
-                                                 src="/images/catalog/{$data.itemsInfo[$setItemId].imgid}_s.{$data.itemsInfo[$setItemId].imgext}"
-                                                 alt="{$data.itemsInfo[$id].brand} {$data.itemsInfo[$id].name}"/>
-                                        </td>
-                                        <td>
-                                            <a href="/catalog/item/{$setItemId}">{if $data.itemsInfo[$setItemId].cat_onename}{$data.itemsInfo[$setItemId].cat_onename}{else}{$data.itemsInfo[$setItemId].cat}{/if} {$data.itemsInfo[$setItemId].brand} {$data.itemsInfo[$setItemId].name}</a>
-                                            {if $login=='Покупатель' && $data.itemsInfo[$id].bonus_amount > 0}
-                                                <p class="bp__product-summ">
-                                                    <span>+ {$data.itemsInfo[$id].bonus_amount|round} грн</span> на
-                                                    бонусный
-                                                    счет</p>
-                                            {/if}
-                                        </td>
-                                    </tr>
-                                {/foreach}
-                            </table>
-                        </td>
-                        <td>{price $item.price $item.id_currency} </td>
-                        <td class="count">
-                            <input type="hidden" name='type' value='set'/>
-                            <input type="hidden" name='price' value='{price $item.price $item.id_currency}'/>
-                            <input class="data-amount span1" type="text" id="itema_{$id}" value="{$item.amount}"/>
-                        </td>
-                        <td class="data-itemPrice">{price $item.price $item.id_currency $item.amount} грн.</td>
-                    </tr>
-                {/foreach}
-                </tbody>
-                <tfoot>
-                <tr>
-                    <td rowspan="2" colspan="3">
-                        {if $data.bonus}
-                            {if $data.bonus->used == "1"}
-                                <span class="promo-button alert-info">Ваш промо-код уже был использован.</span>
-                            {else}
-                                <span class="promo-button alert-info">Промо-код принят. Ваша скидка составляет <span
-                                            class="promo-summ">{$data.bonus->amount} {$smarty.session.Currency.title}</span> </span>
-                            {/if}
-                        {else}
-                            <span class="promo-button">
-                                <a class="promo-link" href="#promocode" data-toggle="modal">Ввести промо-код</a>
-                                <a href="#" class="info-mini" data-toggle="popover" data-placement="top" data-content="Программа лояльности 590.ua для постоянных покупателей. <br>
-    Детали можно узнать по телефону: (095) 757 22 41" title="" data-original-title="Условия"></a>
-                            </span>
-                        {/if}
-                    </td>
-
-                    <td colspan="4" class="cart-mini-summ">
-                        <!--<p class="data-transfer transfer_info"></p>-->
-                        {if $basketStats.discount>0}
-                            <p id="summ_za_vse"></p>
-                            <!--Вывод суммы-->
-                        {else}
-                            <p id="summ_za_vse"></p>
-                            <!--Вывод суммы-->
-                        {/if}
-
-                        <img id="img_dostavka" src="https://590.ua/assets/media/dost_gorod.png">
-                        <p id="text_dostavka_info"></p>
-                        <!--Вывод информации о доставке-->
-                        {if $basketStats.discount>0}
-                            <p>Итого:
-                                <span id="real_price_for_pay">{$basketStats.summ_with_discount}</span>
-                                {$smarty.session.Currency.title}
-                            </p>
-                        {else}
-                            <p>Итого:
-                                <span id="real_price_for_pay">{$basketStats.summ}</span>
-                                {$smarty.session.Currency.title}
-                            </p>
-                        {/if}
-                        {if $basketStats.discount>0}
-                            <p id="how_economy">
-                                Вы экономите:<span>{$basketStats.discount|round}
-                                    грн ({$basketStats.discount*100/$basketStats.summ|round}
-                                    %)</span></p>
-                            <p>Сумма со скидкой:
-                                <span id="real_sum_with_discount">{$basketStats.summ|round}</span>грн
-                            </p>
-                        {else}
-                            <span id="real_sum_with_discount">{$basketStats.summ|round}</span>
-                        {/if}
-                    </td>
-                </tr>
-                </tfoot>
-            </table>
-        </div>
-
-        <div class="b-items">
-            <span class="bordered">Оформление заказа</span>
-
-            <form class="form-horizontal make_order" id="order" method="post" name='basketForm'
-                  enctype="application/x-www-form-urlencoded">
-                <div class="control-group">
-                    <div class="control-label"><strong>Имя и Фамилия *</strong></div>
-                    <div class="controls">
-                        <input type="text" id="name" class="validate[required,custom[onlyLetterSp]] custom_select"
-                               name="name" value="{$form->name->getValue()}"/>
-                    </div>
-                </div>
-                <div class="control-group name2">
-                    <div class="control-label"><strong>Фамилия *</strong></div>
-                    <div class="controls">
-                        <input class="custom_select" type="text" id="name2" name="name2" value=" "
-                               class="validate[required]"/>
-                    </div>
-                </div>
-                <div class="control-group">
-                    <div class="control-label">
-                        <strong>Телефон *</strong>
-                        <!--[if lt IE 9 ]>
-                        <br/>в формате<br/>
-                        <span class="label label-warning">+38(099) 123-45-67</span>
-                        <![endif]-->
-                    </div>
-                    <div class="controls">
-                        <input placeholder="093 111 22 33" type="text" id="phone" name="phone"
-                               value="{$form->phone->getValue()}" class="validate[required] custom_select"/>
-                    </div>
-                </div>
-                <div class="control-group">
-                    <div class="control-label">Телефон доп.</div>
-                    <div class="controls">
-                        <input class="custom_select" type="text" name="phone2" value="{$form->phone2->getValue()}"/>
-                    </div>
-                </div>
-                <div class="control-group">
-                    <div class="control-label">E-mail</div>
-                    <div class="controls">
-                        <input id="email" class="custom_select" type="text" name="email"
-                               value="{$form->email->getValue()}"/>
-                    </div>
-                </div>
-                <div class="control-group">
-                    <div class="control-label">Регион</div>
-                    <div class="controls">
-                        <select id="region_id_for_delivery" class="custom_select" type="text" name="region_id">
-                            {foreach from=$regions item=region key=id}
-                                <option value="{$region.id}"
-                                        {if $smarty.cookies.region==$region.id}selected="selected"{/if}>{$region.name}</option>
-                            {/foreach}
-                        </select>
-                    </div>
-                </div>
-
-                {if $form->paytype}
-                    <div class="control-group">
-                        <div class="control-label">Способы оплаты</div>
-                        <div class="controls">
-                            <p><input type="radio" name="paytype" id="nal"
-                                      value="0" {if $form->paytype->getValue()!=1} checked="checked" {/if} /> <label
-                                        for="nal">Наличными курьеру</label></p>
-                            <p><input type="radio" name="paytype" id="plat"
-                                      value="1" {if $form->paytype->getValue()==1} checked="checked" {/if} /> <label
-                                        for="plat">Платежная карта</label></p>
-                            <p><i class="visa-icon"></i></p>
-
-                            <!-- manager -->
-                            <p><input type="radio" name="paytype" id="credit"
-                                      value="2" {if $form->paytype->getValue()==2} checked="checked" {/if} /> <label
-                                        for="credit">Кредит</label></p>
-                            <!-- manager end -->
-                        </div>
-                    </div>
-                    <!-- manager -->
-                    <div class="control-group credit-block hidden">
-                        <div class="control-label">Выберите кредит</div>
-                        <div class="controls">
-                            <p><input type="radio" name="bank_name" id="privatbank_pp" value="0" checked="checked"/>
-                                <label for="privatbank_pp">ПриватБанк Оплата Частями</label></p>
-                            <p><input type="radio" name="bank_name" id="privatbank_op" value="1"/> <label
-                                        for="privatbank_op">ПриватБанк Мгновенная рассрочка</label></p>
-                        </div>
-                    </div>
-                    <div class="control-group credit-block hidden">
-                        <div class="control-label">Количество месяцев</div>
-                        <div class="controls">
-                            <select class="credit_period">
-                                {foreach from=$payParts item=period key=k}
-                                    <option value="{$period}">{$period}</option>
-                                {/foreach}
-                            </select>
-                        </div>
-                    </div>
-                    <div class="control-group credit-block credit-info hidden">
-                        <div class="control-label"></div>
-                        <div class="controls">
-                            3 платежа на 3 месяца {math equation="x/y|round" x=$basketStats.summ y=3} грн
-                        </div>
-                    </div>
-                {literal}
-                    <script>
-                        $("#phone").keyup(function (e) {
-                            var phone = $(this).val().replace(/[^\d]+/g, "");
-                            if (phone.length == 12) {
-                                $.post("/api/getpostmat", {phone: phone}, function (r) {
-                                    if (r.status == "ok") {
-                                        $("#delivery-block-privatbank").html("");
-                                        $.each(r.postamats, function (a, b) {
-                                            $("#delivery-block-privatbank").append(
-                                                $("<option />").attr("value", b.address_ua)
-                                                    .text(b.address_street))
-                                        })
-                                    }
-                                }, "json");
-                            }
-                        });
-                        $('input[name="bank_name"]').change(function (e) {
-                            var payParts = {/literal}{$payParts|@json_encode}{literal},
-                                creditPeriod = $(".credit_period");
-                            creditPeriod.find("option").remove();
-                            if (this.value == 1) {
-                                for (var i = 3; i <= 24; i++) {
-                                    creditPeriod.append($("<option />").val(i).text(i));
-                                }
-                            } else {
-                                $.each(payParts, function (a, b) {
-                                    creditPeriod.append($("<option />").val(b).text(b));
-                                });
-                            }
-                        });
-                        $("input:radio[name='paytype']").change(function (e) {
-                            if (e.target.value == 2) {
-                                $(".credit-block").removeClass("hidden");
-                            } else {
-                                $(".credit-block").addClass("hidden");
-                            }
-                        })
-                        var inp = $('input[name="bank_name"]');
-                        $("#privatbank_pp").change(function (e) {
-                            // {/literal}
-                            var _text = parseInt($(".credit_period option[value='" + e.target.value + "']").text()),
-                                _plat = _text,
-                                _summ = Math.round({$basketStats.summ} / _plat),
-                            inp = $('input[name="bank_name"]');
-                            $(".credit-info .controls").text('3 платежа на 3 месяца по {math equation="x/y|round" x=$basketStats.summ y=3} грн');
-                            // {literal}
-                            //
-                            if (inp[1].checked === true) {
-                                $(".credit_period").change(function (e) {
-                                    // {/literal}
-                                    var _text = parseInt($(".credit_period option[value='" + e.target.value + "']").text()),
-                                        _plat = _text,
-                                        _summ = Math.round({$basketStats.summ});
-                                    $(".credit-info .controls").text(_plat + ' платежа(ей) на ' + _plat + ' мес. по ' + Math.round((_summ + (_summ * 0.0099 * _plat)) / _plat) + ' грн.\nКомиссия от ПриватБанк: ' + Math.round(_summ * 0.0099 * _plat) + ' грн.\nСумма с комиссией: ' + Math.round(_summ + (_summ * 0.0099 * _plat)) + ' грн.');
-                                    // {literal}
-                                })
-                            } else {
-                                $(".credit_period").change(function (e) {
-                                    // {/literal}
-                                    var _text = parseInt($(".credit_period option[value='" + e.target.value + "']").text()),
-                                        _plat = _text,
-                                        _summ = Math.round({$basketStats.summ} / _plat);
-                                    $(".credit-info .controls").text(_plat + ' платежа(ей) на ' + _plat + ' мес. по ' + _summ + ' грн.');
-                                    // {literal}
-                                })
-                            }
-                        })
-
-                        $("#privatbank_op").change(function (e) {
-                            // {/literal}
-                            var _text = parseInt($(".credit_period option[value='" + e.target.value + "']").text()),
-                                _plat = _text,
-                                _summ = Math.round({$basketStats.summ}),
-                                inp = $('input[name="bank_name"]');
-                            $(".credit-info .controls").text('3 платежа на 3 месяца по {math equation="(x+z)/y|round" x=$basketStats.summ y=3 z=$basketStats.summ*0.0099*3} грн.\nКомиссия от ПриватБанк: {$basketStats.summ*0.0099*3|round} грн. \nСумма с комиссией: {math equation="x+z|round" x=$basketStats.summ z=$basketStats.summ*0.0099*3} грн.');
-                            // {literal}
-                            //
-                            //
-                            if (inp[1].checked === true) {
-                                $(".credit_period").change(function (e) {
-                                    // {/literal}
-                                    var _text = parseInt($(".credit_period option[value='" + e.target.value + "']").text()),
-                                        _plat = _text,
-                                        _summ = Math.round({$basketStats.summ});
-                                    $(".credit-info .controls").text(_plat + ' платежа(ей) на ' + _plat + ' мес. по ' + Math.round((_summ + (_summ * 0.0099 * _plat)) / _plat) + ' грн.\nКомиссия от ПриватБанк: ' + Math.round(_summ * 0.0099 * _plat) + ' грн.\nСумма с комиссией: ' + Math.round(_summ + (_summ * 0.0099 * _plat)) + ' грн.');
-                                    // {literal}
-                                })
-                            } else {
-                                $(".credit_period").change(function (e) {
-                                    // {/literal}
-                                    var _text = parseInt($(".credit_period option[value='" + e.target.value + "']").text()),
-                                        _plat = _text,
-                                        _summ = Math.round({$basketStats.summ} / _plat);
-                                    $(".credit-info .controls").text(_plat + ' платежа(ей) на ' + _plat + ' мес. по ' + _summ + ' грн.');
-                                    // {literal}
-                                })
-                            }
-                        })
-
-                        if (inp[1].checked === true) {
-                            $(".credit_period").change(function (e) {
-                                // {/literal}
-                                var _text = parseInt($(".credit_period option[value='" + e.target.value + "']").text()),
-                                    _plat = _text,
-                                    _summ = Math.round({$basketStats.summ} / _plat);
-                                $(".credit-info .controls").text(_plat + ' платежа(ей) на ' + _plat + ' мес. по ' + Math.round((_summ + _summ * 0.0099 * _plat) / _plat) + ' грн.<br> Комиссия от ПриватБанк: ' + Math.round(_summ * 0.0099) + ' грн., вместе ' + Math.round(_summ + _summ * 0.0099 * _plat) + ' грн.)');
-                                // {literal}
-                            })
-                        } else {
-                            $(".credit_period").change(function (e) {
-                                // {/literal}
-                                var _text = parseInt($(".credit_period option[value='" + e.target.value + "']").text()),
-                                    _plat = _text,
-                                    _summ = Math.round({$basketStats.summ} / _plat);
-                                $(".credit-info .controls").text(_plat + ' платежа(ей) на ' + _plat + ' мес. по ' + _summ + ' грн.');
-                                // {literal}
-                            })
-                        }
-
-
-                    </script>
-                {/literal}
-                    <!--  manager end -->
-
-                {/if}
-
-                <!-- Delivery End -->
-                <div class="control-group delivery-block">
-                    <div class="control-label">Способ доставки</div>
-                    <div class="controls">
-                        <p><input type="radio" name="delivery_name" id="delivery_myself" value="1" checked="checked"/>
-                            <label for="delivery_myself">Самовывоз</label></p>
-                        <p><input type="radio" name="delivery_name" id="delivery_curier" value="2"/> <label
-                                    for="delivery_curier">Курьер</label></p>
-                        <p><input type="radio" name="delivery_name" id="delivery_tradein" value="5"/> <label
-                                    for="delivery_tradein" rel="tooltip"
-                                    data-original-title="Программа обмена старой техники на новую">Trade-in
-                                "ZAMENA"</label></p>
-                    </div>
-                </div>
-
-                <div class="control-group delivery-block-tradein hidden">
-                    <div class="alert alert-info">
-                        <span><strong>Для уточнения стоимости товара по <a href="/articles/zamena"
-                                >программе Trade-in "ZAMENA"</a>, с Вами свяжется менеджер</strong></span>
-                    </div>
-                </div>
-
-                {literal}
-                    <script>
-                        $("input:radio[name='delivery_name']").change(function (e) {
-                            if (e.target.value == 5) {
-                                $(".delivery-block-tradein").removeClass("hidden");
-                            } else {
-                                $(".delivery-block-tradein").addClass("hidden");
-                            }
-                        })
-                    </script>
-                {/literal}
-
-                <!-- Delivery End -->
-
-
-                <div class="control-group">
-                    <div class="control-label">Комментарии</div>
-                    <div class="controls">
-                        <textarea type="text" name="comments">{$form->comments->getValue()}</textarea>
-                    </div>
-                    {if $basketStats.discount>0}
-                        <textarea type="hidden" name="comments">{$form->comments->getValue()}Нужно исправить
-                        цены (по акции Вместе Дешевле):
-                            {foreach from=$data.Basket.items item=item key=id}
-                                {$data.itemsInfo[$id].cat_onename} {$data.itemsInfo[$id].brand} {$data.itemsInfo[$id].name} = {$basketStats.price_of_each[$id]/$curs_evro_smarty|round:2}
-                            {/foreach}
-
-                            Нужно исправить сумму "Взять оплату" на: {$basketStats.summ|round}</textarea>
-                        <!--<textarea type="text" id="adresss" name="address" >{$form->address->getValue()}123</textarea>-->
-                    {/if}
-                </div>
-                <div class="control-group">
-                    <div class="control-label"></div>
-                    <div class="controls">
-                        <button type="submit" class="btn btn-large btn-info">Оформить заказ</button>
-                    </div>
-                    <input type="hidden" name="site" value="{$site}"/>
-                </div>
-
-
-                {if $basketStats.discount>0}
-                    <span id="oplata_chast_vmeste_deshevle">
-                        {foreach from=$data.Basket.items item=item key=id}
-                            {$data.itemsInfo[$id].cat_onename} {$data.itemsInfo[$id].brand} {$data.itemsInfo[$id].name} = {$basketStats.price_of_each[$id]/$curs_evro_smarty|round:2}
-                        {/foreach}
-                    </span>
-                {/if}
-
-
-                {literal}
-                <script type="text/javascript">
-                    $("#order").validationEngine();
-
-                    $("#order").submit(function (e) {
-                        if ($('input:radio[name="paytype"]:checked').val() == 2) {
-                            if (document.getElementById('email').value == "") {
-                                var email_new = "";
-                            } else {
-                                var email_new = "E-mail: " + document.getElementById('email').value + "\n";
-                            }
-
-                            if (document.getElementById('oplata_chast_vmeste_deshevle') == null) {
-                                var vmeste_deshevle = "";
-                            } else {
-                                var vmeste_deshevle = "Нужно исправить цены (по акции Вместе Дешевле):\n" + document.getElementById('oplata_chast_vmeste_deshevle').innerHTML + "\n\nНужно исправить сумму 'Взять оплату' на: {/literal}{$basketStats.summ|round}{literal}";
-                            }
-
-                            document.getElementById('email').value = "";
-
-                            if ($("#order").validationEngine('validate')) {
-                                var _products = [
-                                    {/literal}
-                                    {foreach from=$data.Basket.items item=item key=id}
-                                        {literal}{ {/literal}
-                                        name: "{$data.itemsInfo[$id].cat_onename} {$data.itemsInfo[$id].brand} {$data.itemsInfo[$id].name}",
-                                        price: "{$basketStats.price_of_each[$id]|round}",
-                                        count: "{$basketStats.amount_of_each_item[$id]}",
-                                        {literal}}, {/literal}
-                                    {/foreach}
-                                    {literal}
-                                ];
-                                var data = {
-                                    name: $("input#name").val(),
-                                    email: document.getElementById('email').value,
-                                    phone: $("input#phone").val(),
-                                    address: document.getElementById('adresss').value,
-                                    type: $('input[name="bank_name"]:checked').val(),
-                                    period: parseInt($(".credit_period").val()),
-                                    product: _products,
-                                    summ: {/literal}{$basketStats.summ|round}{literal},
-                                    comment: "Оформлен кредит\n" + email_new + "\n" + vmeste_deshevle,
-                                    id_currency: $("#currencies_select").val(),
-                                }
-
-                                $.post("/basket/privatpayparts", data, function (r) {
-                                    if (r.status) {
-                                        location.href = r.url
-                                    }
-                                    console.log(r);
-                                }, "json");
-                            } else {
-                                console.log('Validatiion failed.');
-                            }
-                            return false;
-                        }
-                    });
-                </script>
-                {/literal}
-
-
-                <p class="confidentiality">Отправляя заказ, Вы соглашаетесь с <a href="/page/confidentiality">политикой
-                        590</a> относительно защиты персональных данных покупателя.</p>
-
-
-                <div class="summa_za_tovar"></div>
-                <div id="summ_cupon">{$data.bonus->amount}</div>
-
-                {literal}
-                <script type="text/javascript">
-                    $(document).ready(function () {
-                        function get_id_region() {
-                            var sel = document.getElementById("region_id_for_delivery");
-                            var txt = sel.options[sel.selectedIndex].text;
-                            return txt;
-                        }
-
-                        setInterval(get_id_region, 500);
-
-                        function get_price_sum() {
-                            $(".summa_za_tovar").html($('#real_price_for_pay').text());
-                        }
-
-                        setInterval(get_price_sum, 500);
-
-                        function show_delivery_information() {
-                            if (document.getElementById('summ_cupon').innerHTML > 0) {
-                                var cupon_summ = document.getElementsByClassName('summa_za_tovar')[0].innerHTML - document.getElementById('summ_cupon').innerHTML;
-                                var testElements = document.getElementsByClassName('summa_za_tovar')[0].innerHTML + ' - ' + document.getElementById('summ_cupon').innerHTML + ' = ' + cupon_summ;
-                            } else {
-                                var testElements = document.getElementsByClassName('summa_za_tovar')[0].innerHTML;
-                            }
-
-                            document.getElementById('summ_za_vse').innerHTML = "Итого: " + testElements + "{/literal} {$smarty.session.Currency.title} {literal}";
-
-                            if (get_id_region() == "Киев" && document.getElementsByName("delivery_name")[1].checked) {
-                                if (testElements < 2000) {
-                                    document.getElementById('text_dostavka_info').innerHTML = '<b>Доставка по Киеву 40 грн.</b>';
-                                    document.getElementById('img_dostavka').style.display = "";
-                                    document.getElementById('how_economy').style = "margin-top:40px;font-size: 14px !important;color: #0d8abc !important;";
-                                } else {
-                                    document.getElementById('text_dostavka_info').innerHTML = '<b>Доставка по Киеву бесплатно!</b>';
-                                    document.getElementById('img_dostavka').style.display = "";
-                                    document.getElementById('how_economy').style = "margin-top:40px;font-size: 14px !important;color: #0d8abc !important;";
-                                }
-                            } else {
-                                document.getElementById('text_dostavka_info').innerHTML = '';
-                                document.getElementById('img_dostavka').style.display = "none";
-                                document.getElementById('how_economy').style = "margin-top:-5px;font-size: 14px !important;color: #0d8abc !important;";
-                            }
-
-                            if (get_id_region() != "Киев" && document.getElementsByName("delivery_name")[1].checked) {
-                                document.getElementById('text_dostavka_info').innerHTML = '<b>Детали доставки у оператора</b>';
-                                document.getElementById('img_dostavka').style.display = "";
-                                document.getElementById('how_economy').style = "margin-top:40px;font-size: 14px !important;color: #0d8abc !important;";
-                            }
-                        }
-
-                        setInterval(show_delivery_information, 1000);
-                    });
-                </script>
-                {/literal}
-                {if !$login}
-                    <div class="basket-bonus alert">
-                        <p class="basket-bonus__head">
-                            <span class="red">Хотите получить бонусную карту {if $bonusAmount > 0}и {$bonusAmount|round} грн. на бонусный счет{/if}
-                                ?</span>
-                        </p>
-                        <img src="{$url.img}/bp/bp-cards-small.png" alt="cards-small"/>
-                        <ul>
-                            <li>
-                                <label for="question__one">
-                                    <input {if $basketStats.summ < 1000} disabled="disabled"{/if}
-                                            type="radio" value="1" name="bonus_card" id="question__one"/>
-                                    {if $basketStats.summ < 2500}
-                                        <span rel="tooltip"
-                                              title="Для получения бонусной карты сумма покупки должна быть больше 1000грн">
-                                            Да
-                                        </span>
-                                    {else}
-                                        Да
-                                    {/if}
-                                </label>
-                            </li>
-                            <li>
-                                <label for="question__two">
-                                    <input type="radio" value="0" name="bonus_card" id="question__two"/>
-                                    Нет
-                                </label>
-                            </li>
+                <div class="tabs tabs-order" id="prod-reviews">
+                    <div class="tab-button-outer" id="prod-questions">
+                        <ul class="tab-button">
+                            <li class="is-active"><a href="#tab21">Я новый покупатель</a></li>
+                            <li class="tab-quest"><a href="#tab22">Я постоянный клиент</a></li>
                         </ul>
-                        <div class="clear"></div>
-                        <p><a href="/page/bonus" target="_blank">Информация о бонусной карте</a></p>
                     </div>
-                {elseif $user_type == 'card' }
-                    {if $user->bonus_amount > 0 }
-                        <div class="basket-bonus alert">
-                            <p class="basket-bonus__head">
-                                Использовать бонусы <br/>(У Вас
-                                <strong>{if $user->bonus_amount}{$user->bonus_amount}{else}0 бонусов{/if}</strong>)
-                            </p>
-                            <img src="{$url.img}/bp/bp-cards-small.png" alt="cards-small"/>
-                            <input type="text" placeholder="Введите количество бонусов" id="bonus_used"
-                                   name="bonus_used"
-                                   class="validate[custom[integer],max[{if $user->bonus_amount > $basketStats.summ}{php}echo $this->basketStats.summ+$this->basketStats['delivery'];{/php}{else}{$user->bonus_amount}{/if}]]"/>
-                            <p class="bp-question__terms"><a href="/page/bonus">Информация о бонусной карте</a></p>
+                    <div id="tab21" class="tab-contents is-active form" style="">
+                        <div class="tab-contents-wrap">
+                            <form id="jform" action="" method="post">
+                                <div class="tab-section">
+                                    <div class="order-title"><span>1</span> Контактные данные</div>
+
+                                    <div class="basket-two-column">
+
+                                        <div class="">
+                                            <label for="fullname">Фио*</label>
+                                            <input id="fullname" type="text" class="input-min-width">
+                                            <label for="mail">E-mail* <span>(для отслеживания заказа)</span></label>
+                                            <input id="mail" type="email" class="email input-min-width">
+                                        </div>
+                                        <div class="">
+                                            <label for="phone">Телефон* <span>(для подтверждения заказа)</span></label>
+                                            <input id="phone" type="text" class="input-min-width numb phone">
+                                            <label for="city">Город* <span>(для отслеживания заказа)</span></label>
+                                            <select id="city" name="select">
+                                                <option value=""></option>
+                                                <option value="Киев">Киев</option>
+                                                <option value="Винницв">Винница</option>
+                                                <option value="Черкасы">Черкасы</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="step-hidden step2-hidden tab-section">
+                                    <div class="order-title"><span>2</span> Способы оплаты</div>
+                                    <div class="flexibal">
+                                        <input type="radio" id="new-payment-1" name="payment"
+                                               value="Наличными курьером">
+                                        <label for="new-payment-1">Наличными курьером</label>
+                                    </div>
+                                    <div class="flexibal">
+                                        <input type="radio" id="new-payment-2" name="payment" value="Банковская карта">
+                                        <label for="new-payment-2">Банковская карта</label>
+                                    </div>
+                                    <div class="flexibal">
+                                        <input type="radio" id="new-payment-3" name="payment" value="Кредит">
+                                        <label for="new-payment-3">Кредит</label>
+                                    </div>
+                                </div>
+                                <div class="step-hidden step3-hidden tab-section tab-delivery">
+                                    <div class="order-title"><span>3</span> Способы доставки</div>
+                                    <div class="flexibal">
+                                        <input type="radio" id="new-delivery-1" class="ShowOrHide delivery-show-select"
+                                               name="delivery"
+                                               value="myDivId1">
+                                        <label for="new-delivery-1">Самовывоз</label>
+                                    </div>
+                                    <div id="myDivId1" class="ShowOrHide delivery-detail basket-two-column">
+                                        <div class="">
+                                            <label for="new-city-self">Город</label>
+                                            <select id="new-city-self" name="select">
+                                                <option value="Киев">Киев</option>
+                                                <option value="Винницв">Винницa</option>
+                                                <option value="Черкасы">Черкасы</option>
+                                            </select>
+                                        </div>
+                                        <div class="">
+                                            <label for="new-magazine-self">Адрес Магазина</label>
+                                            <select id="new-magazine-self" name="select">
+                                                <option value="ул.Дегтяревская 25а">ул.Дегтяревская 25а</option>
+                                                <option value="ул.Попудренка 3">ул.Попудренка 3</option>
+                                                <option value="ул.Васильковская 12">ул.Васильковская 12</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="flexibal">
+                                        <input type="radio" id="new-delivery-2" class="ShowOrHide delivery-show-select"
+                                               name="delivery"
+                                               value="myDivId2">
+                                        <label for="new-delivery-2">Новая почта</label>
+                                    </div>
+                                    <div id="myDivId2" class="ShowOrHide delivery-detail basket-two-column">
+                                        <div class="">
+                                            <label for="new-city-np">Город</label>
+                                            <select id="new-city-np" name="select">
+                                                <option value="Киев">Киев</option>
+                                                <option value="Винницa">Винницa</option>
+                                                <option value="Черкасы">Черкасы</option>
+                                            </select>
+                                        </div>
+                                        <div class="">
+                                            <label for="new-magazine-np">Отделение новой почты</label>
+                                            <select id="new-magazine-np" name="select">
+                                                <option value="ул.Дегтяревская 25а">№ 15</option>
+                                                <option value="ул.Попудренка 3">№ 91</option>
+                                                <option value="ул.Васильковская 12">№ 150</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="flexibal">
+                                        <input type="radio" id="new-delivery-3" class="ShowOrHide delivery-show-select"
+                                               name="delivery"
+                                               value="myDivId3">
+                                        <label for="new-delivery-3">Курьер</label>
+                                    </div>
+                                    <div id="myDivId3" class="ShowOrHide delivery-detail flexibal">
+                                        <div class="delivery-adress-width">
+                                            <label for="new-city-courier">Город</label>
+                                            <select id="new-city-courier" name="select" class="input-min-width">
+                                                <option value="Киев">Киев</option>
+                                                <option value="Винницв">Винницa</option>
+                                                <option value="Черкасы">Черкасы</option>
+                                            </select>
+                                        </div>
+                                        <div class="delivery-adress-width">
+                                            <label for="new-street-courier">Улица*</label>
+                                            <input id="new-street-courier" type="text" class="input-min-width">
+                                        </div>
+                                        <div class="delivery-adress-width">
+                                            <label for="new-house-courier">Дом*</label>
+                                            <input id="new-house-courier" type="text" class="input-min-width">
+                                        </div>
+                                        <div class="delivery-adress-width">
+                                            <label for="new-flat-courier">Кв.*</label>
+                                            <input id="new-flat-courier" type="text" class="input-min-width">
+                                        </div>
+                                    </div>
+                                    <div class="flexibal">
+                                        <input type="radio" id="new-delivery-4" class="ShowOrHide delivery-show-select"
+                                               name="delivery"
+                                               value="myDivId4">
+                                        <label for="new-delivery-4">Trade-in "ZAMENA"</label>
+                                    </div>
+                                    <div id="myDivId4" class="ShowOrHide delivery-detail flexibal">
+                                        <div class="delivery-adress-width">
+                                            <label for="new-city-trade">Город</label>
+                                            <select id="new-city-trade" name="select" class="input-min-width">
+                                                <option value="Киев">Киев</option>
+                                                <option value="Винницв">Винницa</option>
+                                                <option value="Черкасы">Черкасы</option>
+                                            </select>
+                                        </div>
+                                        <div class="delivery-adress-width">
+                                            <label for="new-street-trade">Улица*</label>
+                                            <input id="new-street-trade" type="text" class="input-min-width">
+                                        </div>
+                                        <div class="delivery-adress-width">
+                                            <label for="new-house-trade">Дом*</label>
+                                            <input id="new-house-trade" type="text" class="input-min-width">
+                                        </div>
+                                        <div class="delivery-adress-width">
+                                            <label for="new-flat-trade">Кв.*</label>
+                                            <input id="new-flat-trade" type="text" class="input-min-width">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="step-hidden step4-hidden tab-section">
+                                    <div class="order-title"><span>4</span> Коментарии к заказу</div>
+                                    <textarea rows="4" class="input-min-width"></textarea>
+                                </div>
+
+                                <div class="take-order">
+                                    <div class="">Подтверждая заказ, я принимаю условия <a class="bluee">пользовательского
+                                            соглашения</a>
+                                    </div>
+                                    <div class="">
+                                        <input class="send bask acty without-icon" type="submit"
+                                               value="Заказ подтверждаю">
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                    {else}
-                        <div class="basket-bonus alert">
-                            <p class="basket-bonus__head">Вы участник программы лояльности 590.</p>
-                            На вашем бонусном счете 0 бонусов.
+                    </div>
+                    <div id="tab22" class="tab-contents">
+                        <div class="tab-contents-wrap">
+                            <div class="tab-section flexibal tab-new-client">
+                                <div class="two-col">
+                                    <div class="order-title"><span>1</span> Контактные данные</div>
+                                    <form method="post" action="" id="orderformenter" name="order">
+                                        <div class="">
+                                            <label for="mail">E-mail</label>
+                                            <input id="enter-email" type="email" class="input-min-width">
+                                            <label for="pass">Пароль</label>
+                                            <input id="pass" type="password" class="input-min-width" name="password">
+                                        </div>
+                                        <div class="flexibal flex-between">
+                                            <input class="bask acty without-icon" type="submit" value="Войти">
+                                            <a class="black-link">Забыли пароль?</a>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="border-plus"><span>или</span></div>
+                                <div class="flexibal two-col reg-social">
+                                    <div class=""><p>Вы можете войти через социальную сеть</p></div>
+                                    <div class="">
+                                        <a><img src="img/main/fb-blue.png"></a>
+                                        <a><img src="img/main/g-red.png"></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="step-hidden step2-hidden tab-section">
+                                <div class="order-title"><span>2</span> Способы оплаты</div>
+                                <div class="flexibal">
+                                    <input type="radio" id="payment-1" name="payment" value="Наличными курьером">
+                                    <label for="payment-1">Наличными курьером</label>
+                                </div>
+                                <div class="flexibal">
+                                    <input type="radio" id="payment-2" name="payment" value="Банковская карта">
+                                    <label for="payment-2">Банковская карта</label>
+                                </div>
+                                <div class="flexibal">
+                                    <input type="radio" id="payment-3" name="payment" value="Кредит">
+                                    <label for="payment-3">Кредит</label>
+                                </div>
+                            </div>
+                            <div class="step-hidden step3-hidden tab-section tab-delivery">
+                                <div class="order-title"><span>3</span> Способы доставки</div>
+                                <div class="flexibal">
+                                    <input type="radio" id="new-delivery-1-1" class="ShowOrHide delivery-show-select"
+                                           name="delivery"
+                                           value="myDivId1-1">
+                                    <label for="new-delivery-1-1">Самовывоз</label>
+                                </div>
+                                <div id="myDivId1-1" class="ShowOrHide delivery-detail basket-two-column">
+                                    <div class="">
+                                        <label for="new-city-self-1">Город</label>
+                                        <select id="new-city-self-1" name="select">
+                                            <option value="Киев">Киев</option>
+                                            <option value="Винницв">Винницa</option>
+                                            <option value="Черкасы">Черкасы</option>
+                                        </select>
+                                    </div>
+                                    <div class="">
+                                        <label for="new-magazine-self-1">Адрес Магазина</label>
+                                        <select id="new-magazine-self-1" name="select">
+                                            <option value="ул.Дегтяревская 25а">ул.Дегтяревская 25а</option>
+                                            <option value="ул.Попудренка 3">ул.Попудренка 3</option>
+                                            <option value="ул.Васильковская 12">ул.Васильковская 12</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="flexibal">
+                                    <input type="radio" id="new-delivery-2-1" class="ShowOrHide delivery-show-select"
+                                           name="delivery"
+                                           value="myDivId2-1">
+                                    <label for="new-delivery-2-1">Новая почта</label>
+                                </div>
+                                <div id="myDivId2-1" class="ShowOrHide delivery-detail basket-two-column">
+                                    <div class="">
+                                        <label for="new-city-np-1">Город</label>
+                                        <select id="new-city-np-1" name="select">
+                                            <option value="Киев">Киев</option>
+                                            <option value="Винницa">Винницa</option>
+                                            <option value="Черкасы">Черкасы</option>
+                                        </select>
+                                    </div>
+                                    <div class="">
+                                        <label for="new-magazine-np-1">Отделение новой почты</label>
+                                        <select id="new-magazine-np-1" name="select">
+                                            <option value="ул.Дегтяревская 25а">№ 15</option>
+                                            <option value="ул.Попудренка 3">№ 91</option>
+                                            <option value="ул.Васильковская 12">№ 150</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="flexibal">
+                                    <input type="radio" id="new-delivery-3-1" class="ShowOrHide delivery-show-select"
+                                           name="delivery"
+                                           value="myDivId3-1">
+                                    <label for="new-delivery-3-1">Курьер</label>
+                                </div>
+                                <div id="myDivId3-1" class="ShowOrHide delivery-detail flexibal">
+                                    <div class="delivery-adress-width">
+                                        <label for="new-city-courier-1">Город</label>
+                                        <select id="new-city-courier-1" name="select" class="input-min-width">
+                                            <option value="Киев">Киев</option>
+                                            <option value="Винницв">Винницa</option>
+                                            <option value="Черкасы">Черкасы</option>
+                                        </select>
+                                    </div>
+                                    <div class="delivery-adress-width">
+                                        <label for="new-street-courier-1">Улица*</label>
+                                        <input id="new-street-courier-1" type="text" class="input-min-width">
+                                    </div>
+                                    <div class="delivery-adress-width">
+                                        <label for="new-house-courier-1">Дом*</label>
+                                        <input id="new-house-courier-1" type="text" class="input-min-width">
+                                    </div>
+                                    <div class="delivery-adress-width">
+                                        <label for="new-flat-courier-1">Кв.*</label>
+                                        <input id="new-flat-courier-1" type="text" class="input-min-width">
+                                    </div>
+                                </div>
+                                <div class="flexibal">
+                                    <input type="radio" id="new-delivery-4-1" class="ShowOrHide delivery-show-select"
+                                           name="delivery"
+                                           value="myDivId4-1">
+                                    <label for="new-delivery-4-1">Trade-in "ZAMENA"</label>
+                                </div>
+                                <div id="myDivId4-1" class="ShowOrHide delivery-detail flexibal">
+                                    <div class="delivery-adress-width">
+                                        <label for="new-city-trade-1">Город</label>
+                                        <select id="new-city-trade-1" name="select" class="input-min-width">
+                                            <option value="Киев">Киев</option>
+                                            <option value="Винницв">Винницa</option>
+                                            <option value="Черкасы">Черкасы</option>
+                                        </select>
+                                    </div>
+                                    <div class="delivery-adress-width">
+                                        <label for="new-street-trade-1">Улица*</label>
+                                        <input id="new-street-trade-1" type="text" class="input-min-width">
+                                    </div>
+                                    <div class="delivery-adress-width">
+                                        <label for="new-house-trade-1">Дом*</label>
+                                        <input id="new-house-trade-1" type="text" class="input-min-width">
+                                    </div>
+                                    <div class="delivery-adress-width">
+                                        <label for="new-flat-trade-1">Кв.*</label>
+                                        <input id="new-flat-trade-1" type="text" class="input-min-width">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="step-hidden step4-hidden tab-section">
+                                <div class="order-title"><span>4</span> Коментарии к заказу</div>
+                                <textarea rows="4" class="input-min-width"></textarea>
+                            </div>
+
+                            <div class="take-order">
+                                <div class="">Подтверждая заказ, я принимаю условия <a class="bluee">пользовательского
+                                        соглашения</a>
+                                </div>
+                                <div class="">
+                                    <input class="bask acty without-icon" type="submit" value="Заказ подтверждаю">
+                                </div>
+                            </div>
+                            </form>
                         </div>
-                    {/if}
-                {/if}
-            </form>
+                    </div>
+                </div>
+
+            </div>
+            <div class="basket-last-column">
+                <div class="basket-header">
+                    <div class="basket-name">Наименование</div>
+                    <div class="">Кол-во</div>
+                    <div class="">Сумма (грн)</div>
+                    <div class="">Удалить</div>
+                </div>
+                <div class="basket-table">
+
+
+                </div>
+                <div class="total-section">
+                    <div class="blue-link">
+                        <a class="bluee">Редактировать заказ</a>
+                        <a class="bluee icon-question">Использовать промокод<span><img
+                                        src="img/main/bluee-question.png"></span></a>
+                        <a class="bluee icon-question">Оплатить бонусами<span><img
+                                        src="img/main/bluee-question.png"></span></a>
+                    </div>
+                    <div class="">
+                        <div class="take-order-delivery flexibal">
+                            <div class="">По Киеву доставка <span>Бесплатно!</span></div>
+                            <img src="./img/orig3.png" alt="">
+                        </div>
+                        <div class="total-take">
+                            <div class="total red">
+                                Итого: <span class="count-total">0</span>грн
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="take-order">
+                    <div class="">Подтверждая заказ, я принимаю условия <a class="bluee">пользовательского
+                            соглашения</a>
+                    </div>
+                    <div class="">
+                        <object type="lol/wut">
+                            <a class="bask acty btn-dissable"
+                               href="javascript:void(0)"><span>Заказ подтверждаю</span></a>
+                        </object>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-{else}
-    <a href="https://590.ua/"><img src="https://590.ua/assets/media/emptybasket.png"></a>
-{/if}
+    {else}
+        <a href="https://590.ua/"><img src="https://590.ua/assets/media/emptybasket.png"></a>
+    {/if}
+    {include file='layouts/orig.tpl'}
+</div>
+
+<div class="doww"><img src="/assets/img/verh.png" alt=""></div>
