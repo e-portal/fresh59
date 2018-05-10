@@ -2197,9 +2197,9 @@ input {
     cursor: pointer;
 }
 
-.itee:nth-child(2) {
-    margin: 10px 0 0
-}
+/*.itee:nth-child(2) {*/
+/*margin: 10px 0 0*/
+/*}*/
 
 .itee-imgg img {
     width: auto;
@@ -3270,6 +3270,15 @@ input {
     display: none;
 }
 
+.left-options .btn {
+    background: rgba(255, 0, 0, 0.3);
+    display: block;
+    text-align: center;
+    border-radius: 25px;
+    margin-top: 5px;
+    padding: 5px;
+}
+
 .right-options {
     width: calc(100% - 350px);
     width: -moz-calc(100% - 350px);
@@ -3312,7 +3321,6 @@ div#selectyPagination {
     right: 0;
     height: 32px;
     /*border-radius: 30px;*/
-
 }
 
 
@@ -3594,7 +3602,7 @@ ul#selectsMenuBoxi > li.options:hover {
     /*z-index: 4;*/
     font-family: 'SFUIDisplay-Bold';
     color: #313e49;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .tabs-legg i,
@@ -4928,13 +4936,11 @@ ul.nacc li p {
     justify-content: center;
     display: flex;
 }
-
 .tabs-container .create-name .bask span,
 .tabs-review-lk div:nth-child(4) .bask span {
     margin: 0;
     color: #313e49;
 }
-
 .tabs-container .create-name .bask:after,
 .tabs-review-lk div:nth-child(4) .bask:after {
     content: none;
@@ -5121,16 +5127,13 @@ ul.nacc .tabs-saw p {
 .tabs-container .popup-block input[type='text'] {
     display: block;
 }
-
 .tabs-container .create-name .popup-block input[type='text'] {
     display: inline;
     margin-right: 60px;
 }
-
 .create-name .popup-block .button {
     margin-top: 0;
 }
-
 .create-name .bask {
     display: inline-flex;
 }
@@ -5192,7 +5195,6 @@ ul.nacc .tabs-saw p {
 .comp {
     position: relative;
 }
-
 .mode-comp-pop {
     position: absolute;
     background: rgb(255, 255, 255);
@@ -5202,17 +5204,44 @@ ul.nacc .tabs-saw p {
     border: 1px solid #ddd;
     border-radius: 25px;
     box-shadow: 0 0 9px -1px rgba(0, 0, 0, .5);
-    top: 120%;
+    top: 100%;
+    padding: 5px;
     transition: .3s;
 }
 
-.mode-comp-pop ul {
-    list-style-image: url("./../img/main/list-style.png");
+.comp-link {
+    text-align: center;
+    padding: 5px;
+    border-radius: 25px;
+    margin-top: 10px;
+    transition: .3s;
 }
 
-.compare-itm {
-    padding: 5px 0;
+.comp-link:hover {
+    background: #fbd402;
 }
+.compare-itm {
+    padding: 10px 0 0 10px;
+    position: relative;
+}
+
+.compare-itm a {
+    padding-left: 30px;
+}
+
+.compare-itm:hover .icon-remove {
+    opacity: 1;
+}
+
+.icon-remove {
+    background: url(./../img/item-close.png);
+    opacity: .7;
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    transition: .3s;
+}
+
 
 @-moz-document url-prefix() {
     .searc {
