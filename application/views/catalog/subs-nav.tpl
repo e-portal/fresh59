@@ -176,7 +176,7 @@
                                                            href="{url2 assoc.brand=$brand.add assoc.page=null param=$route}">{$brand.name}
                                                         </a>
                                                         <label for="pol1">
-                                                            <span>В наличии <span>({$brands|@count})</span></span>
+                                                            <span>В наличии <span>({$filters|@count})</span></span>
                                                         </label>
                                                     </li>
                                                 {else}
