@@ -133,7 +133,6 @@ jQuery(document).ready(function () {
         $("html, body").css('overflow', 'visible')
     });
 
-
     $('.filter-open').click(function () {
         $('.left-options').addClass('open-left');
         $('.background-filter-active').addClass('open-left');
@@ -607,6 +606,11 @@ naccs();*/
 //
 // }
 // tabs_h();
+
+// if ($('body').hasClass('auth')) {  /*page of auth*/
+//     bindings();
+// }
+
 $(document).on("click", ".naccs .tabs-menu div", function () {
     var numberIndex = $(this).index();
 
@@ -660,10 +664,11 @@ $('.tabs-more').click(function () {
 //     $(this).toggleClass('more');
 //     $(this).parents(".brand.active").height('auto');
 // });
+
 $('.close-item').click(function () {
     $(this).parents('.item-senn').remove();
 });
-$('.legg-close').click(function () {
+$('.legg-close').click(function legClose() {
     // $(this).parents('.brand').fadeOut(300);
     $(this).parents('.brand').remove();
 });
@@ -690,6 +695,145 @@ $('.cancel').click(function () {
     $(".change-data").hide();
     $(".change-pass").hide();
 });
+
+$('.create-list').click(function () {
+    $('.create-name').addClass('open');
+});
+$('.create-name .cancel').click(function () {
+    $('.create-name').removeClass('open');
+});
+
+$('.create-name .bask').click(function () {
+    $(' <div class="brand"  data-full="511" data-short="40" style="height: 40px;">\n' +
+        '                                            <div></div>\n' +
+        '                                            <div class="opti">\n' +
+        '                                                <div class="legg"><span>Новый список желаний</span><i></i></div>\n' +
+        '                                                <img class="first-img" src="./img/rename.png" alt="">\n' +
+        '                                                <img class="legg-close" src="./img/item-close.png" alt="">\n' +
+        '\n' +
+        '                                                <div class="forms under-senn">\n' +
+        '                                                    <div class="item-senn empty">\n' +
+        '                                                        <div class="text-empty empty-half"></div>\n' +
+        '                                                        <div class="text-empty"></div>\n' +
+        '                                                        <div class="text-empty"></div>\n' +
+        '                                                        <span class="sench" tabindex="-1">\n' +
+        '                                                            <div class="centr">\n' +
+        '                                                                <div class="itee-imgg">\n' +
+        '                                                                    <img src="./img/empty.png" alt="">\n' +
+        '                                                                </div>\n' +
+        '                                                            </div>\n' +
+        '                                                             <object type="lol/wut">\n' +
+        '                                                                    <div class="left-otzv">\n' +
+        '                                                                        <img src="./img/empty-stars.png" alt="">\n' +
+        '                                                                    </div>\n' +
+        '                                                             </object>\n' +
+        '                                                            <div class="bakk">\n' +
+        '                                                                <div class="left-bakk">\n' +
+        '                                                                    <div class="text-empty empty-half"></div>\n' +
+        '                                                                    <div class="text-empty empty-half"></div>\n' +
+        '                                                                </div>\n' +
+        '                                                                <div class="right-bakk">\n' +
+        '                                                                     <div class="bask acty empty-but"\n' +
+        '                                                                          tabindex="-1"><span></span></div>\n' +
+        '                                                                </div>\n' +
+        '                                                            </div>\n' +
+        '\n' +
+        '                                                        </span>\n' +
+        '                                                    </div>\n' +
+        '                                                    <div class="item-senn empty">\n' +
+        '                                                        <div class="text-empty empty-half"></div>\n' +
+        '                                                        <div class="text-empty"></div>\n' +
+        '                                                        <div class="text-empty"></div>\n' +
+        '                                                        <span class="sench" tabindex="-1">\n' +
+        '                                                            <div class="centr">\n' +
+        '                                                                <div class="itee-imgg">\n' +
+        '                                                                    <img src="./img/empty.png" alt="">\n' +
+        '                                                                </div>\n' +
+        '                                                            </div>\n' +
+        '                                                             <object type="lol/wut">\n' +
+        '                                                                    <div class="left-otzv">\n' +
+        '                                                                        <img src="./img/empty-stars.png" alt="">\n' +
+        '                                                                    </div>\n' +
+        '                                                             </object>\n' +
+        '                                                            <div class="bakk">\n' +
+        '                                                                <div class="left-bakk">\n' +
+        '                                                                    <div class="text-empty empty-half"></div>\n' +
+        '                                                                    <div class="text-empty empty-half"></div>\n' +
+        '                                                                </div>\n' +
+        '                                                                <div class="right-bakk">\n' +
+        '                                                                     <div class="bask acty empty-but"\n' +
+        '                                                                          tabindex="-1"><span></span></div>\n' +
+        '                                                                </div>\n' +
+        '                                                            </div>\n' +
+        '\n' +
+        '                                                        </span>\n' +
+        '                                                    </div>\n' +
+        '                                                    <div class="item-senn empty">\n' +
+        '                                                        <div class="text-empty empty-half"></div>\n' +
+        '                                                        <div class="text-empty"></div>\n' +
+        '                                                        <div class="text-empty"></div>\n' +
+        '                                                        <span class="sench" tabindex="-1">\n' +
+        '                                                            <div class="centr">\n' +
+        '                                                                <div class="itee-imgg">\n' +
+        '                                                                    <img src="./img/empty.png" alt="">\n' +
+        '                                                                </div>\n' +
+        '                                                            </div>\n' +
+        '                                                             <object type="lol/wut">\n' +
+        '                                                                    <div class="left-otzv">\n' +
+        '                                                                        <img src="./img/empty-stars.png" alt="">\n' +
+        '                                                                    </div>\n' +
+        '                                                             </object>\n' +
+        '                                                            <div class="bakk">\n' +
+        '                                                                <div class="left-bakk">\n' +
+        '                                                                    <div class="text-empty empty-half"></div>\n' +
+        '                                                                    <div class="text-empty empty-half"></div>\n' +
+        '                                                                </div>\n' +
+        '                                                                <div class="right-bakk">\n' +
+        '                                                                     <div class="bask acty empty-but"\n' +
+        '                                                                          tabindex="-1"><span></span></div>\n' +
+        '                                                                </div>\n' +
+        '                                                            </div>\n' +
+        '\n' +
+        '                                                        </span>\n' +
+        '                                                    </div>\n' +
+        '                                                    <div class="item-senn empty">\n' +
+        '                                                        <div class="text-empty empty-half"></div>\n' +
+        '                                                        <div class="text-empty"></div>\n' +
+        '                                                        <div class="text-empty"></div>\n' +
+        '                                                        <span class="sench" tabindex="-1">\n' +
+        '                                                            <div class="centr">\n' +
+        '                                                                <div class="itee-imgg">\n' +
+        '                                                                    <img src="./img/empty.png" alt="">\n' +
+        '                                                                </div>\n' +
+        '                                                            </div>\n' +
+        '                                                             <object type="lol/wut">\n' +
+        '                                                                    <div class="left-otzv">\n' +
+        '                                                                        <img src="./img/empty-stars.png" alt="">\n' +
+        '                                                                    </div>\n' +
+        '                                                             </object>\n' +
+        '                                                            <div class="bakk">\n' +
+        '                                                                <div class="left-bakk">\n' +
+        '                                                                    <div class="text-empty empty-half"></div>\n' +
+        '                                                                    <div class="text-empty empty-half"></div>\n' +
+        '                                                                </div>\n' +
+        '                                                                <div class="right-bakk">\n' +
+        '                                                                     <div class="bask acty empty-but"\n' +
+        '                                                                          tabindex="-1"><span></span></div>\n' +
+        '                                                                </div>\n' +
+        '                                                            </div>\n' +
+        '\n' +
+        '                                                        </span>\n' +
+        '                                                    </div>\n' +
+        '\n' +
+        '                                                </div>\n' +
+        '                                            </div>\n' +
+        '\n' +
+        '\n' +
+        '                                        </div>').appendTo('.lists');
+    // bindings();
+});
+
+
 
 
 //--------Price----
@@ -854,7 +998,7 @@ $(function () {
 
     var cross = '4';
 
-
+    // function brandAcc() {
     $(".legg").click(function () {
         var full = $(this).parents('.brand').attr('data-full');
         var short = $(this).parents('.brand').attr('data-short');
@@ -869,6 +1013,11 @@ $(function () {
         }
 
     });
+    // }
+    // brandAcc();
+
+
+
 //     $('.brand').click(function () {
 //         var full = $(this).attr('data-full');
 //         var short = $(this).attr('data-short');
@@ -1037,3 +1186,16 @@ function deleteItemFromCompare(e) {
 $('.right-butt a').click(function (e) {
     e.preventDefault();
 })
+
+
+/*---------BIND UNBIND---------*/
+// function bindings() {
+// $('.legg').unbind('click', brandAcc);
+// $('.legg-close').unbind('click', legClose);
+
+
+// $('.legg').bind('click', brandAcc);
+// $('.legg-close').bind('click', legClose);
+// }
+
+/*---------end BIND UNBIND---------*/
