@@ -176,7 +176,7 @@
                                                            href="{url2 assoc.brand=$brand.add assoc.page=null param=$route}">{$brand.name}
                                                         </a>
                                                         <label for="pol1">
-                                                            <span>В наличии <span>(154)</span></span>
+                                                            <span>В наличии <span>({$brands|@count})</span></span>
                                                         </label>
                                                     </li>
                                                 {else}
@@ -186,9 +186,9 @@
 
                                         </ul>
 
-                                        {if $zf.params.brand}<a href="{url2 assoc.brand=null param=$route}"
-                                                                class="clik">
-                                                Показать все</a>{/if}
+                                        {if $zf.params.brand}
+                                            <a href="{url2 assoc.brand=null param=$route}" class="clik">Показать все</a>
+                                        {/if}
 
                                     </div>
                                 </div>
