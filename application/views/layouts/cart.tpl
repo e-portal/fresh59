@@ -1,5 +1,5 @@
 <!--POPUP CART-TEMPLATE -->
-<div class="popup flexibal">
+<div class="popup flexibal popup-baskets">
     <div class="popup-content show">
         <div class="closeX"><span></span><span></span></div>
         <div class="activate-popup">

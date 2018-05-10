@@ -114,6 +114,9 @@ $(document).ready(function () {
 
     }
 
+    $('.baskets').click(function () {
+        $('.popup-baskets').css('display', 'flex');
+    };
     /*---------autorisation---------*/
     $('.pipl').click(function () {
         $('.autorisation').css('display', 'flex');
