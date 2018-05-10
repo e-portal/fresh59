@@ -1141,6 +1141,8 @@ function getCompareNew() {
                 $('.mode-comp-pop').html('<h1>EMPTY</h1>').hide();
                 $(".bask-item.comp").find('.numeral').html('0');
             }
+            $('.compare-delete-icon').bind('click', deleteItemFromCompare);
+
         });
 }
 
@@ -1154,6 +1156,7 @@ $(".bask-item.comp").mouseout(function () {
 });
 
 $('.right-butt').bind('click', addItemToCompare);
+
 
 function addItemToCompare(e) {
     _this = $(this);
