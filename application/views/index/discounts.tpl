@@ -147,10 +147,14 @@
 
                             <div class="news">
                                 <div class="left-butt">
-                                    <object type="lol/wut"><a href="">В избранное</a></object>
+                                    <object type="lol/wut">
+                                        <span>В избранное</span>
+                                    </object>
                                 </div>
                                 <div class="right-butt" data-id="{$item.id}">
-                                    <object type="lol/wut"><a href="!#">Сравнение</a></object>
+                                    <object type="lol/wut">
+                                        <span>Сравнение</span>
+                                    </object>
                                 </div>
                             </div>
 

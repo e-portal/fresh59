@@ -147,10 +147,10 @@
 
                             <div class="news">
                                 <div class="left-butt">
-                                    <a href="">В избранное</a>
+                                    <span>В избранное</span>
                                 </div>
                                 <div class="right-butt" data-id="{$item.id}">
-                                    <a href="!#">Сравнение</a>
+                                    <span>Сравнение</span>
                                 </div>
                             </div>
                         </div>
@@ -270,10 +270,10 @@
                         <div class="hovv">
                             <div class="news">
                                 <div class="left-butt">
-                                    <a href="">В избранное</a>
+                                    <span>В избранное</span>
                                 </div>
                                 <div class="right-butt" data-id="{$item.id}">
-                                    <a href="!#">Сравнение</a>
+                                    <span>Сравнение</span>
                                 </div>
                             </div>
                         </div>

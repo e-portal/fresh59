@@ -210,10 +210,10 @@
                 </object>
                 <div class="compare-found">
                     <div class="left-butt">
-                        <a href="">В избранное</a>
+                        <span>В избранное</span>
                     </div>
                     <div class="right-butt" data-id="{$item.id}">
-                        <a href="!#">Сравнение</a>
+                        <span>Сравнение</span>
                     </div>
                     <div class="look-for">
                         <a href="!#">Следить за ценой</a>

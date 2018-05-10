@@ -219,10 +219,10 @@
                                 <div class="hovv">
                                     <div class="news">
                                         <div class="left-butt">
-                                            <a href="" tabindex="-1">В избранное</a>
+                                            <span tabindex="-1">В избранное</span>
                                         </div>
                                         <div class="right-butt" data-id="{$item.id}">
-                                            <a href="!#" tabindex="-1">Сравнение</a>
+                                            <span tabindex="-1">Сравнение</span>
                                         </div>
                                     </div>
                                 </div>
