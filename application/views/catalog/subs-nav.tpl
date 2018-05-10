@@ -171,8 +171,8 @@
                                         <ul>
                                             {foreach from=$filters name=brands item=brand}
                                                 {if $brand.possible}
-                                                    <li class="checkbox">
-                                                        <a {if $brand.selected}class="active"{/if}
+                                                    <li>
+                                                        <a class="checkbox{if $brand.selected}active{/if}"
                                                            href="{url2 assoc.brand=$brand.add assoc.page=null param=$route}">{$brand.name}
                                                         </a>
                                                     </li>
