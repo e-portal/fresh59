@@ -23,74 +23,10 @@
     <div class="iteem iteem-menu">
         <nav class="mobile-display-none">
             <div class="base-menu">
-                <ul class="categ-menu">
-                    <li><a class="menu-one">Отдельностоящая техника</a>
-                        <ul class="menu-0">
-                            <li><a href="javascript:void(0)">Вакууматоры</a></li>
-                            <li><a href="javascript:void(0)">Вытяжки</a></li>
-                            <li><a href="javascript:void(0)">Духовки</a></li>
-                            <li><a href="javascript:void(0)">Морозильные камеры</a></li>
-                            <li><a href="javascript:void(0)">Мойки и смесители</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="" class="menu-one">Встраиваемая техника</a>
-                        <ul class="menu-0">
-                            <li><a href="javascript:void(0)">Вакууматоры</a></li>
-                            <li><a href="javascript:void(0)">Вытяжки</a></li>
-                            <li><a href="javascript:void(0)">Духовки</a></li>
-                            <li><a href="javascript:void(0)">Морозильные камеры</a></li>
-                            <li><a href="javascript:void(0)">Мойки и смесители</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="" class="menu-one">мелкая бытовая техника</a>
-                        <ul class="menu-0">
-                            <li><a href="javascript:void(0)">Вакууматоры</a></li>
-                            <li><a href="javascript:void(0)">Вытяжки</a></li>
-                            <li><a href="javascript:void(0)">Духовки</a></li>
-                            <li><a href="javascript:void(0)">Морозильные камеры</a></li>
-                            <li><a href="javascript:void(0)">Мойки и смесители</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="" class="menu-one">Красота и здоровье</a>
-                        <ul class="menu-0">
-                            <li><a href="javascript:void(0)">Вакууматоры</a></li>
-                            <li><a href="javascript:void(0)">Вытяжки</a></li>
-                            <li><a href="javascript:void(0)">Духовки</a></li>
-                            <li><a href="javascript:void(0)">Морозильные камеры</a></li>
-                            <li><a href="javascript:void(0)">Мойки и смесители</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="" class="menu-one">Техника для уборки</a>
-                        <ul class="menu-0">
-                            <li><a href="javascript:void(0)">Вакууматоры</a></li>
-                            <li><a href="javascript:void(0)">Вытяжки</a></li>
-                            <li><a href="javascript:void(0)">Духовки</a></li>
-                            <li><a href="javascript:void(0)">Морозильные камеры</a></li>
-                            <li><a href="javascript:void(0)">Мойки и смесители</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="" class="menu-one">Кухонная посуда</a>
-                        <ul class="menu-0">
-                            <li><a href="javascript:void(0)">Вакууматоры</a></li>
-                            <li><a href="javascript:void(0)">Вытяжки</a></li>
-                            <li><a href="javascript:void(0)">Духовки</a></li>
-                            <li><a href="javascript:void(0)">Морозильные камеры</a></li>
-                            <li><a href="javascript:void(0)">Мойки и смесители</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="" class="menu-one">мойки и смесители</a>
-                        <ul class="menu-0">
-                            <li><a href="javascript:void(0)">Вакууматоры</a></li>
-                            <li><a href="javascript:void(0)">Вытяжки</a></li>
-                            <li><a href="javascript:void(0)">Духовки</a></li>
-                            <li><a href="javascript:void(0)">Морозильные камеры</a></li>
-                            <li><a href="javascript:void(0)">Мойки и смесители</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="" class="menu-one">климатическая техника</a></li>
-                    <li><a href="" class="menu-one">Аксессуары</a></li>
-                    <li><a href="" class="menu-one">Бытовая химия</a></li>
-                </ul>
+                {php}
+                    echo
+                    $this->navigation()->menu($this->menu)->setPartial('layouts/menu.tpl')->setMinDepth(1)->setMaxDepth(2);
+                {/php}
                 <div class="mob-next-menu">
                     <ul>
                         <li><a href="">Бонус-клуб</a></li>

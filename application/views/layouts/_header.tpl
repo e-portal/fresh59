@@ -77,10 +77,12 @@
                     </div>
 
                     <div class="item-base">
-                        {php}
-                            echo
-                            $this->navigation()->menu($this->menu)->setPartial('layouts/menu.tpl')->setMinDepth(1)->setMaxDepth(2);
-                        {/php}
+                        <div class="base-menu">
+                            {php}
+                                echo
+                                $this->navigation()->menu($this->menu)->setPartial('layouts/menu.tpl')->setMinDepth(1)->setMaxDepth(2);
+                            {/php}
+                        </div>
                     </div>
 
                 </div>
