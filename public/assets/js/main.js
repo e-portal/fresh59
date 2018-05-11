@@ -339,19 +339,20 @@ jQuery(document).ready(function () {
             });
         }
 
-        /*if ($('article').length) {
+        if ($('article').length) {
             $('article').readmore({
                 maxHeight: 70,
                 speed: 275,
                 moreLink: '<a class="moreLink" href="#">Еще</a>',
                 lessLink: '<a class="moreLink" href="#">Скрыть</a>'
             });
-        }*/
+        }
 
         /*IPAD MENU*/
-        $(".burgerBtn").bind("click", function () {
-            $(this).parent().toggleClass('mobile-menu');
-            if ($('.item-base').hasClass('base-menu')) {
+        $(".burger").bind("click", function () {
+            $(this).toggleClass('active');
+            $('.mobile-display-none .base-menu').toggleClass('mobile-menu-all');
+            if ($('.burger').hasClass('active')) {
                 $('html, body').css('overflow', 'hidden');
 
             } else {
@@ -378,24 +379,24 @@ jQuery(document).ready(function () {
     if (window.matchMedia("(max-width: 767px)").matches) {
 
         /*MOBILE MENU*/
-        $('.burgerBtn').click(function () {
-            $('.iteem-menu').toggleClass('mobile-menu-all');
-            if ($('.iteem-menu').hasClass('mobile-menu-all')) {
-                $('html, body').css('overflow', 'hidden');
-            } else {
-                $('html, body').css('overflow', 'auto');
-            }
-        });
+        // $('.burgerBtn').click(function () {
+        //     $('.iteem-menu').toggleClass('mobile-menu-all');
+        //     if ($('.iteem-menu').hasClass('mobile-menu-all')) {
+        //         $('html, body').css('overflow', 'hidden');
+        //     } else {
+        //         $('html, body').css('overflow', 'auto');
+        //     }
+        // });
 
-        $('.burger').click(function () {
-            $(this).toggleClass('active')
-            $('.iteem-menu').toggleClass('mobile-menu-all');
-            if ($('.iteem-menu').hasClass('mobile-menu-all')) {
-                $('html, body').css('overflow', 'hidden');
-            } else {
-                $('html, body').css('overflow', 'auto');
-            }
-        });
+        // $('.burger').click(function () {
+        //     $(this).toggleClass('active');
+        //     $('.mobile-display-none .base-menu').toggleClass('mobile-menu-all');
+        //     if ($('.iteem-menu').hasClass('mobile-menu-all')) {
+        //         $('html, body').css('overflow', 'hidden');
+        //     } else {
+        //         $('html, body').css('overflow', 'auto');
+        //     }
+        // });
 
 
         $('.seo-text').click(function () {
