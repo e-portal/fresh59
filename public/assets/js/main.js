@@ -339,14 +339,14 @@ jQuery(document).ready(function () {
             });
         }
 
-        if ($('article').length) {
+        /*if ($('article').length) {
             $('article').readmore({
                 maxHeight: 70,
                 speed: 275,
                 moreLink: '<a class="moreLink" href="#">Еще</a>',
                 lessLink: '<a class="moreLink" href="#">Скрыть</a>'
             });
-        }
+        }*/
 
         /*IPAD MENU*/
         $(".burgerBtn").bind("click", function () {
