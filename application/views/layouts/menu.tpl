@@ -6,7 +6,7 @@
     {foreach from=$container item=page}
         {foreach from=$page->pages item=page}
             <li>
-                <a class="menu-one" href="{$page->getHref()}">{$page->getLabel()}</a>
+                <a class="{$page->getClass()}" href="{$page->getHref()}">{$page->getLabel()}</a>
                 <ul class="menu-0">
                     {foreach from=$page->pages item=page name=links}
                         <li><a href="{$page->getHref()|mblower}">{$page->getLabel()}</a></li>
