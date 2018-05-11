@@ -40,8 +40,7 @@
                     </a>
                 </div>
 
-
-                <span>2007-{$smarty.now|date_format:"%Y"}. Все права защищены</span>
+                <span class="rights-security"><b>2007-{$smarty.now|date_format:"%Y"}.</b> Все права защищены</span>
             </div>
 
             <div class="item-foot">
