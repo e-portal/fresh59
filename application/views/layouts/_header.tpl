@@ -143,6 +143,9 @@
             </div>
         </div>
     </div>
+    {*============Mobile Menu============*}
+    {include file='layouts/mobile_menu.tpl'}
+    {*============Mobile Menu============*}
 </header>
 <!--POPUP AUTORIZATION-TEMPLATE -->
 <div class="popup flexibal autorisation">

@@ -64,7 +64,8 @@
             </p>
         </div>
 
-
+        {*<pre>{$item|var_dump}</pre>*}
+        {*<pre>{$item|@debug_print_var}</pre>*}
         {if !$accepted_filters}
             {if $filters|@count > 0}
                 {foreach from=$filters item=filters key=type}
