@@ -25,7 +25,7 @@
             <div class="base-menu">
                 {php}
                     echo
-                    $this->navigation()->menu($this->menu)->setPartial('layouts/menu.tpl')->setMinDepth(1)->setMaxDepth(2);
+                    $this->navigation()->menu($this->menu)->setPartial('layouts/menu.tpl')->setClass()->setMinDepth(1)->setMaxDepth(2);
                 {/php}
                 <div class="mob-next-menu">
                     <ul>
