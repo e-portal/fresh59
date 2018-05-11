@@ -2995,6 +2995,7 @@ input {
     background: #fff;
 }
 
+.mobile-display-none,
 .mob-next-menu,
 .mob-main-menu,
 .mob-social {
@@ -4810,12 +4811,10 @@ ul.nacc li p {
     height: 420px;
     width: 24%;
 }
-
 .nacc .under-senn .empty {
     width: calc(24% - 20px);
     padding: 0 10px;
 }
-
 .empty .bakk {
     padding: 0;
 }
