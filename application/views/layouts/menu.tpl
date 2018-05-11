@@ -3,11 +3,10 @@
 <!-- navigation -->
 
 <ul class="categ-menu">
-
     {foreach from=$container item=page}
         {foreach from=$page->pages item=page}
             <li>
-                <a class="{php} $this->navigation()->menu()->getClass() {/php}" href="{$page->getHref()}">
+                <a class="{php} echo $this->navigation()->menu()->getClass() {/php}" href="{$page->getHref()}">
                     {$page->getLabel()}
                 </a>
                 <ul class="menu-0">

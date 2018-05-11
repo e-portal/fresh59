@@ -80,7 +80,7 @@
                         <div class="base-menu">
                             {php}
                                 echo
-                                $this->navigation()->menu($this->menu)->setClass('123')->setPartial('layouts/menu.tpl')->setMinDepth(1)->setMaxDepth(2);
+                                $this->navigation()->menu($this->menu)->setUlClass('123')->setPartial('layouts/menu.tpl')->setMinDepth(1)->setMaxDepth(2);
                             {/php}
                         </div>
                     </div>
