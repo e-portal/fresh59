@@ -7,7 +7,7 @@ $(document).ready(function () {
             $('.slider-for').slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                fade: true,
+                fade: false,
                 arrows: false,
                 asNavFor: '.slider-nav'
             });
