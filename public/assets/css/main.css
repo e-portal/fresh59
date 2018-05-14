@@ -1882,7 +1882,7 @@ input {
 
 .owls {
     display: flex;
-    margin: 40px auto 97px
+    margin: 0 auto 57px
 }
 
 .owl .items {
@@ -2655,7 +2655,7 @@ input {
 }
 
 .iteem-mainy {
-    margin: 44px 0 0 0;
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -2760,7 +2760,7 @@ input {
     display: flex !important;
     flex-wrap: wrap !important;
     justify-content: space-between !important;
-    margin: 7px auto;
+    margin: 0 auto;
     width: 100%;
 }
 
@@ -5220,7 +5220,7 @@ ul.nacc .tabs-saw p {
     border: 1px solid #ddd;
     box-shadow: 0 0 9px -1px rgba(0, 0, 0, .5);
     top: 100%;
-    padding: 5px;
+    padding: 10px;
     transition: .3s;
 }
 
@@ -5245,14 +5245,11 @@ ul.nacc .tabs-saw p {
 .compare-itm:hover .icon-remove {
     opacity: 1;
 }
-.icon-remove {
-    background: url(./../img/item-close.png);
-    opacity: .7;
-    position: absolute;
-    width: 21px;
-    height: 21px;
-    transition: .3s;
+
+.tab-button li a span {
+    white-space: pre;
 }
+
 
 
 @-moz-document url-prefix() {

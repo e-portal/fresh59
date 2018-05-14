@@ -54,7 +54,7 @@
                             <form>
                                 <div class="qweek-buy">
 
-                                    <input type="phone" class="numb">
+                                    <input type="phone" class="numb" placeholder="Введите номер">
                                     <div class="buy-btn">Жду звонка</div>
 
                                 </div>
