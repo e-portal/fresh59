@@ -48,8 +48,8 @@ $(document).ready(function () {
                 '                                    <span class="input-number-increment">+</span>\n' +
                 '                                </div>\n' +
                 '                            </div>\n' +
-                '                            <div class="basket-price">' + ( obj[prod_data].price > obj[prod_data].sale ? obj[prod_data].sale : obj[prod_data].price ) + '</div>\n' +
-                '                            <div class="prod-price-total" data-value="' + (( obj[prod_data].price > obj[prod_data].sale ? obj[prod_data].sale : obj[prod_data].price ) * obj[prod_data].quantity ) + '">' + (( obj[prod_data].price > obj[prod_data].sale ? obj[prod_data].sale : obj[prod_data].price ) * obj[prod_data].quantity ) + '</div>\n' +
+                '                            <div class="basket-price">' + (obj[prod_data].price > obj[prod_data].sale ? obj[prod_data].sale : obj[prod_data].price) + '</div>\n' +
+                '                            <div class="prod-price-total" data-value="' + ((obj[prod_data].price > obj[prod_data].sale ? obj[prod_data].sale : obj[prod_data].price) * obj[prod_data].quantity) + '">' + ((obj[prod_data].price > obj[prod_data].sale ? obj[prod_data].sale : obj[prod_data].price) * obj[prod_data].quantity) + '</div>\n' +
                 '                            <div class="basket-delete"><div class="basket-delete-icon"></div></div>\n' +
                 '                        </div>\n' +
                 '                    </div>').appendTo('.basket-table');
@@ -93,30 +93,33 @@ $(document).ready(function () {
         totalCart();
         bindings();
 
-        /*close popup*/
-        $('.closeX, .close, .closeBtn, .take-order-btn').on('click', function () {
-
-            $('.popup-content').removeClass('show').addClass('hide');
-            $('.close').removeClass('show').addClass('hide');
-
-            if (window.matchMedia('(max-width: 900px)').matches) {
-                $('html, body').css('overflow', 'auto');
-            } else {
-                $('html, body').css('overflow', 'auto');
-            }
-
-            setTimeout(function () {
-                $('.popup-content').removeClass('hide');
-                $('.close').removeClass('hide');
-                $('.popup').css('display', 'none');
-            }, 1000);
-        });
 
     }
+
+    /*close popup*/
+    $('.closeX, .close, .closeBtn, .take-order-btn').on('click', function () {
+
+        $('.popup-content').removeClass('show').addClass('hide');
+        $('.close').removeClass('show').addClass('hide');
+
+        if (window.matchMedia('(max-width: 900px)').matches) {
+            $('html, body').css('overflow', 'auto');
+        } else {
+            $('html, body').css('overflow', 'auto');
+        }
+
+        setTimeout(function () {
+            $('.popup-content').removeClass('hide');
+            $('.close').removeClass('hide');
+            $('.popup').css('display', 'none');
+        }, 1000);
+    });
+    /*end close popup*/
 
     $('.baskets').click(function () {
         $('.popup-baskets').css('display', 'flex');
     });
+
     /*---------autorisation---------*/
     $('.pipl').click(function () {
         $('.autorisation').css('display', 'flex');
@@ -131,24 +134,6 @@ $(document).ready(function () {
         $('.popup-content').addClass('show');
         $('.close').addClass('show');
 
-        /*close popup*/
-        $('.closeX, .close, .closeBtn, .take-order-btn').on('click', function () {
-
-            $('.popup-content').removeClass('show').addClass('hide');
-            $('.close').removeClass('show').addClass('hide');
-
-            if (window.matchMedia('(max-width: 900px)').matches) {
-                $('html, body').css('overflow', 'auto');
-            } else {
-                $('html, body').css('overflow', 'auto');
-            }
-
-            setTimeout(function () {
-                $('.popup-content').removeClass('hide');
-                $('.close').removeClass('hide');
-                $('.popup').css('display', 'none');
-            }, 1000);
-        });
     });
     /*---------end autorisation---------*/
     /*---------end POPUP---------*/
