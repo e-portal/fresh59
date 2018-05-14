@@ -196,9 +196,7 @@ h2 {
 }
 
 h3 {
-
 }
-
 h4 {
     font-family: 'SFUIDisplay-Semibold';
     font-size: 17px;
@@ -206,13 +204,11 @@ h4 {
     margin: 7px 0 0;
     height: 50px;
 }
-
 h5 {
     margin: 0;
     font-family: 'SF-UI-Display-Regular';
     font-size: 14px;
 }
-
 .items h4 {
     color: #313e49;
     height: 50px;
@@ -220,7 +216,6 @@ h5 {
 }
 
 h6 {
-
 }
 
 /*PAGINATION*/
@@ -453,11 +448,8 @@ h6 {
     position: relative;
     right: -6px;
 }
-
-
-
-
 /*end POP-UPS*/
+
 
 .maii-item {
     position: relative;
@@ -575,8 +567,8 @@ h6 {
 .blue-bask:after {
     background: url(../img/salo.svg) center no-repeat
 }
-
 /*--------------------end ALL STYLES--------------------*/
+
 
 .hedd {
     margin: 25px auto 17px;
@@ -585,9 +577,7 @@ h6 {
 .main-hedd {
     display: flex;
     justify-content: space-between;
-
 }
-
 .menu-mob {
     display: none;
 }
@@ -996,6 +986,26 @@ input {
     cursor: pointer
 }
 
+.send:hover img {
+    animation: swing .6s ease;
+    animation-iteration-count: 2;
+}
+
+@keyframes swing {
+    25% {
+        transform: translateX(1px)
+    }
+    50% {
+        transform: translateX(-1px)
+    }
+    75% {
+        transform: translateX(.5px)
+    }
+    100% {
+        transform: translateX(0)
+    }
+}
+
 .send img {
     display: block;
     margin: 0 2px 0 0
@@ -1209,6 +1219,64 @@ input {
     display: none;
 }
 
+.item-base {
+    height: 65px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+    transition-delay: .3s;
+    overflow: hidden;
+}
+
+.base-menu {
+    transform: translateY(-650px);
+    transition: .3s;
+    background: #fff;
+}
+
+.mobile-display-none,
+.mob-next-menu,
+.mob-main-menu,
+.mob-social {
+    display: none;
+}
+
+.base-menu ul {
+    transition: .3s;
+    opacity: 0;
+}
+
+.iteem:hover .item-base {
+    height: 714px;
+    transition-delay: 0s;
+    overflow: visible;
+}
+
+.iteem:hover .item-base .base-menu {
+    transform: translateY(0px);
+    transition-delay: 0s;
+}
+
+.iteem:hover .item-base .base-menu ul {
+    opacity: 1;
+    transition-delay: .17s;
+}
+
+.home-page .item-base {
+    height: 714px;
+    overflow: visible;
+}
+
+.home-page .base-menu {
+    transform: translate(0);
+}
+
+.home-page .base-menu ul {
+    opacity: 1 !important;
+}
+
 .base-menu {
     position: absolute;
     top: 65px;
@@ -1268,6 +1336,59 @@ input {
     background: url(../img/right-aroww.png) center no-repeat;
     content: '';
     top: calc(50% - 7px)
+}
+
+.base-menu ul.categ-menu li:nth-child(odd) {
+    background: #fff;
+}
+
+.menu-0 {
+    position: absolute;
+    background: #fff;
+    left: 100%;
+    top: 0;
+    width: 359px;
+    -webkit-transition: -webkit-transform .3s ease-in-out;
+    transition: -webkit-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+    -webkit-transition-delay: .12s;
+}
+
+.base-menu .categ-menu ul.menu-0 li {
+    margin: 0;
+    /*list-style-type: disc;*/
+}
+
+.base-menu .categ-menu ul.menu-0 li a:after {
+    content: none;
+}
+
+.base-menu .categ-menu .menu-0 li a {
+    height: auto;
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 30px;
+    position: relative;
+    font-family: 'SF-UI-Display-Light';
+    font-size: 14px;
+    color: #313e49;
+    text-transform: none;
+    transition: .2s;
+}
+
+.base-menu .categ-menu .menu-0 li a::before {
+    content: '\2022';
+    padding-right: 20px;
+}
+
+.base-menu .categ-menu .menu-0 li:hover {
+    background: #fff;
+    cursor: pointer;
+}
+
+.base-menu .categ-menu .menu-0 li:hover a {
+    color: #fbd402;
 }
 
 .most-item {
@@ -1836,6 +1957,10 @@ input {
     top: 1px;
     left: 0;
     text-transform: uppercase
+}
+
+.liner em {
+    font-style: normal;
 }
 
 .equip {
@@ -2587,25 +2712,6 @@ input {
 .blue {
     font-size: 14px;
 }
-
-.menu-0 {
-    position: absolute;
-    height: 649px;
-    background: #fff;
-    left: 100%;
-    top: 0;
-    width: 359px;
-    -webkit-transition: -webkit-transform .3s ease-in-out;
-    transition: -webkit-transform .3s ease-in-out;
-    transition: transform .3s ease-in-out;
-    transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
-    -webkit-transition-delay: .12s;
-}
-
-.base-menu ul.categ-menu li:nth-child(odd) {
-    background: #fff;
-}
-
 .seap .blue,
 .owls .blue,
 .senn .blue {
@@ -2976,63 +3082,6 @@ input {
 .slick-slide {
     margin: 37px auto 57px;
     /*margin: 5px auto 57px;*/
-}
-
-.item-base {
-    height: 65px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 5;
-    transition-delay: .3s;
-    overflow: hidden;
-}
-
-.base-menu {
-    transform: translateY(-650px);
-    transition: .3s;
-    background: #fff;
-}
-
-.mobile-display-none,
-.mob-next-menu,
-.mob-main-menu,
-.mob-social {
-    display: none;
-}
-
-.base-menu ul {
-    transition: .3s;
-    opacity: 0;
-}
-
-.iteem:hover .item-base {
-    height: 714px;
-    transition-delay: 0s;
-}
-
-.iteem:hover .item-base .base-menu {
-    transform: translateY(0px);
-    transition-delay: 0s;
-}
-
-.iteem:hover .item-base .base-menu ul {
-    opacity: 1;
-    transition-delay: .17s;
-}
-
-.home-page .item-base {
-    height: 714px
-    /*!important*/
-}
-
-.home-page .base-menu {
-    transform: translate(0);
-}
-
-.home-page .base-menu ul {
-    opacity: 1 !important;
 }
 
 .item-libe .khob {
@@ -3945,7 +3994,7 @@ ul#selectsMenuBoxi > li.options:hover {
     background: rgba(255, 255, 255, 1);
 }
 .slider-product .change {
-    bottom: 90px;
+    bottom: 110px;
 }
 
 .change {
@@ -3957,7 +4006,7 @@ ul#selectsMenuBoxi > li.options:hover {
     z-index: 5;
 }
 
-.change img {
+.itee.change img {
     width: 16px;
 }
 
@@ -4002,7 +4051,7 @@ ul#selectsMenuBoxi > li.options:hover {
 .price-filters {
     display: flex;
     justify-content: space-between;
-    padding: 0 35px;
+    padding: 0 20px;
 }
 
 .price-filters span {
@@ -4017,7 +4066,7 @@ input[type=number] {
     -moz-appearance: textfield;
     border: 1px solid #fbd402;
     border-radius: 20px;
-    width: 70px;
+    width: 90px;
     color: #000;
     padding: 6px 0;
     font-weight: 400;
@@ -5245,7 +5294,6 @@ ul.nacc .tabs-saw p {
 .compare-itm:hover .icon-remove {
     opacity: 1;
 }
-
 .tab-button li a span {
     white-space: pre;
 }
