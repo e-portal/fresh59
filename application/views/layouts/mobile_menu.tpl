@@ -11,7 +11,7 @@
         </div>
     </div>
     <div class="iteem">
-        <div class="bask-item baskets add-to-cart">
+        <div class="bask-item baskets">
             <div class="runn">
                 <div class="imgg">
                     {include file='layouts/cart_svg.tpl'}

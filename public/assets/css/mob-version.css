@@ -431,6 +431,13 @@
     }
 }
 
+@media screen and (min-width: 1025px) {
+    .base-menu ul.categ-menu li:hover .menu-0 {
+        display: block;
+        border: 1px solid #f9d724;
+    }
+}
+
 @media screen and (max-width: 1025px) {
     .wrap {
         width: 97%;
@@ -484,6 +491,7 @@
         position: absolute;
         top: 20px;
         right: 23px;
+        z-index: 5;
     }
     .burger span {
         display: block;
@@ -516,7 +524,7 @@
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         -wo-box-shadow: none;
-        top: 0;
+        /*top: 0;*/
         transform: translateY(0px);
         width: 100%;
         overflow: auto;

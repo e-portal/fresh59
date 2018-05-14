@@ -118,6 +118,7 @@ $(document).ready(function () {
 
     $('.baskets').click(function () {
         $('.popup-baskets').css('display', 'flex');
+        doBasket(basket);
     });
 
     /*---------autorisation---------*/
