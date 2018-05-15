@@ -197,7 +197,6 @@ h2 {
 
 h3 {
 }
-
 h3 em {
     font-style: normal;
     font-family: 'SFUIDisplay-Medium';
@@ -265,6 +264,8 @@ h6 {
 
 .blocks-pagination .blocks-pagination-more img {
     padding-left: 10px;
+    width: auto;
+    height: auto;
 }
 
 .blocks-pagination .blocks-pagination-more:hover,
@@ -1124,7 +1125,6 @@ input {
 .searc:hover {
     box-shadow: 5px 0 17px -1px rgba(0, 0, 0, 0.6);
 }
-
 .searc:hover img {
     transform: scale(1.1);
 
@@ -1239,7 +1239,6 @@ input {
     align-items: center;
     justify-content: center
 }
-
 .baskets .numeral {
     right: -8px;
     top: -7px;
@@ -1254,7 +1253,7 @@ input {
     left: 0;
     top: 0;
     width: 100%;
-    z-index: 5;
+    z-index: 10;
     transition-delay: .3s;
     overflow: hidden;
 }
@@ -1356,7 +1355,6 @@ input {
 .base-menu .categ-menu {
     border: 1px solid #ddd;
 }
-
 .base-menu ul.categ-menu li:hover {
     /*.base-menu ul.categ-menu li:nth-child(odd):hover {*/
     background: #fbd402;
@@ -3402,6 +3400,7 @@ div#selectyPagination {
     /*border-radius: 30px;*/
 }
 
+
 div#selectyPagination p.valueTagsPag,
 div#selectyBoxi p.valueTags {
     cursor: pointer;
@@ -5317,16 +5316,13 @@ ul.nacc .tabs-saw p {
 .tab-button li a span {
     white-space: pre;
 }
-
 .search-list {
     display: flex;
     flex-wrap: wrap;
 }
-
 .search-list h3 {
     width: 100%;
 }
-
 .search-item {
     display: flex;
     flex-wrap: wrap;
@@ -5335,45 +5331,36 @@ ul.nacc .tabs-saw p {
     list-style-type: none;
     padding: 0;
 }
-
 .search-list ul {
     font-size: 17px;
     padding-bottom: 7px;
 }
-
 .search-list ul li:first-child {
     margin-top: 7px;
 }
-
 .search-list ul li {
     font-size: 15px;
     padding: 3px 0;
 }
-
 .one-content .search-item a:hover,
 .one-content .under-senn a:hover {
     text-decoration: none;
 }
-
 .search-list .search-item a:hover {
     color: #fbd402;
 }
-
 .search-list .search-item a {
     color: #313e49;
     outline: none;
     transition: .1s;
 }
-
 .one-content .under-senn h4 {
     margin: 10px 0 19px;
 
 }
-
 .one-content .under-senn a {
     color: #000;
 }
-
 .one-content .under-senn .item-senn {
     width: 295px;
 }

@@ -433,7 +433,8 @@
 
 @media screen and (min-width: 1025px) {
     .base-menu ul.categ-menu li:hover .menu-0 {
-        display: block;
+        display: flex;
+        flex-wrap: wrap;
         border: 1px solid #f9d724;
     }
 }
