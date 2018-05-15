@@ -4,8 +4,8 @@
     </div>
     <div class="iteem">
         <div class="inpp">
-            <form action="">
-                <input type="поиск" placeholder="Поиск товара">
+            <form action="/catalog/search" method="get">
+                <input type="text" placeholder="Поиск товара">
                 <div class="searc"><img src="/assets/img/seac.png" alt=""></div>
             </form>
         </div>
