@@ -6,7 +6,9 @@
                 {foreach from=$grp.items item=item}
                     <div class="compare-itm">
                         <i class="icon-remove data-delCompare compare-delete-icon" data-id='{$item.id}'
-                           data-category='{$item.category|mblower}'></i>
+                           data-category='{$item.category|mblower}'>
+                            <img src="/assets/img/item-close.png" alt="">
+                        </i>
                         <a href="{iurl assoc.parent=$item.parentname assoc.subdomain=$item.subdomain assoc.cat=$item.cat_onename assoc.brand=$item.brand assoc.item=$item.name}">{$item.brand} {$item.name}</a>
                     </div>
                     {assign var="items_count" value=$items_count+1}

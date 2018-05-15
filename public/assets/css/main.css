@@ -973,7 +973,8 @@ h6 {
 .inpp input {
     font-size: 13px;
     padding: 11px 0 9px 27px;
-    font-family: 'SF-UI-Display-Regular';
+    font-family: sans-serif;
+    /*font-family: 'SF-UI-Display-Regular';*/
     color: #979797;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
@@ -1359,8 +1360,9 @@ input {
 .base-menu .categ-menu {
     border: 1px solid #ddd;
 }
-.base-menu ul.categ-menu li:hover {
-    /*.base-menu ul.categ-menu li:nth-child(odd):hover {*/
+
+.base-menu ul.categ-menu li:hover,
+.base-menu ul.categ-menu li:nth-child(odd):hover {
     background: #fbd402;
 }
 
@@ -5313,6 +5315,12 @@ ul.nacc .tabs-saw p {
 .compare-itm a {
     padding-left: 30px;
     font-family: SFUIDisplay-Bold;
+}
+
+.compare-itm .icon-remove {
+    transition: .2s;
+    position: absolute;
+    opacity: .6;
 }
 .compare-itm:hover .icon-remove {
     opacity: 1;

@@ -168,7 +168,6 @@ img {
     justify-content: center;
     align-items: center;
 }
-
 .slider-for img {
     max-height: 60vh;
 }
@@ -193,7 +192,7 @@ img {
     height: 10vh;
     cursor: pointer;
     border: 1px solid #d7d7d7;
-    margin: 0 10px;
+    margin: 0 10px 1px;
     padding: .5%;
 }
 
@@ -1227,6 +1226,9 @@ div.review-date > span {
 
 .total-take .total span {
     margin-left: 20px;
+    display: inline-block;
+    width: 85px;
+    text-align: right;
 }
 
 .take-order {

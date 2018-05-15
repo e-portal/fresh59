@@ -112,6 +112,7 @@
 .order input,
 .order select,
 .order textarea {
+    font-size: 14px;
     font-family: 'SFUIDisplay-Bold';
     border: 1px solid #e6e6e6;
     border-radius: 25px;
