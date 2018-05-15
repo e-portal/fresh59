@@ -1302,6 +1302,7 @@ input {
 
 .home-page .base-menu {
     transform: translate(0);
+    opacity: 1;
 }
 
 .home-page .base-menu ul {
@@ -1380,7 +1381,7 @@ input {
     background: #fff;
     left: 100%;
     top: 0;
-    width: 600px;
+    width: 700px;
     display: none;
     -webkit-transition: -webkit-transform .3s ease-in-out;
     transition: -webkit-transform .3s ease-in-out;
@@ -1391,7 +1392,7 @@ input {
 
 .base-menu .categ-menu ul.menu-0 li {
     margin: 0;
-    width: 300px;
+    width: 350px;
 }
 .base-menu .categ-menu ul.menu-0 li a:after {
     content: none;
@@ -5393,6 +5394,13 @@ input:focus::-moz-placeholder {
 
 input:focus:-ms-input-placeholder {
     opacity: 0;
+}
+
+.wrap-search {
+    z-index: 30;
+    background: #fff;
+    display: block;
+    position: absolute;
 }
 
 
