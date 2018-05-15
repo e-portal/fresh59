@@ -774,6 +774,30 @@
                             </div>
                         </div>
                     </div>
+                    <div class="blocks-pagination">
+                        <a class="blocks-pagination-more">Показать еще<img src="/assets/img/arrow-circle.png"
+                                                                           alt="more"></a>
+                        <a class="blocks-pagination-back blocks-pagination-arrow"></a>
+                        <a class="pagin-number active-pagin-number">1</a>
+                        <span>...</span>
+                        <a class="pagin-number">13</a>
+                        <a class="pagin-number pagin-number-active">14</a>
+                        <a class="pagin-number">15</a>
+                        <span>...</span>
+                        <a class="pagin-number">27</a>
+                        <a class="blocks-pagination-forward blocks-pagination-arrow"></a>
+                        <div class="blocks-pagination-empty">
+                            <div id=selectyPagination class="blocks-pagination-selecty">
+                                <p class=valueTagsPag name=selects>Показать по 24</p>
+                                <ul id=selectyMenuPagination>
+                                    <li class=optionsPag>Показать по 16</li>
+                                    <li class=optionsPag>Показать по 32</li>
+                                    <li class=optionsPag>Показать по 64</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--<a class="blocks-pagination-more">Показать 16/32/64</a>-->
+                    </div>
                 </div>
 
             </div>

@@ -197,6 +197,12 @@ h2 {
 
 h3 {
 }
+
+h3 em {
+    font-style: normal;
+    font-family: 'SFUIDisplay-Medium';
+
+}
 h4 {
     font-family: 'SFUIDisplay-Semibold';
     font-size: 17px;
@@ -220,13 +226,13 @@ h6 {
 
 /*PAGINATION*/
 .blocks-pagination {
-    /*width: 100% !important;*/
+    width: 100% !important;
     display: flex;
     position: relative;
-    /*justify-content: center;*/
+    justify-content: center;
     align-items: center;
     margin: 55px auto;
-    width: 83% !important;
+    /*width: 83% !important;*/
 
 }
 
@@ -299,7 +305,14 @@ h6 {
     background-size: 20%;
 }
 
-.blocks-pagination-
+.blocks-pagination .blocks-pagination-empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 194px;
+    height: 32px;
+    position: relative;
+}
 
 /*end PAGINATION*/
 
@@ -965,7 +978,6 @@ h6 {
     border-bottom-left-radius: 25px;
     border: 1px solid #d7d7d7;
     width: 300px;
-
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
 }
@@ -977,6 +989,7 @@ input {
 .send {
     width: 62px;
     height: 37px;
+    transition: .5s;
     background: #313e49;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -1086,7 +1099,7 @@ input {
 }
 
 .iteem:nth-child(2) .send {
-    height: 47px
+    height: 47px;
 }
 
 .iteem:nth-child(3) {
@@ -1103,11 +1116,23 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer
+    cursor: pointer;
+    transition: .5s;
 }
 
+.send:hover,
+.searc:hover {
+    box-shadow: 5px 0 17px -1px rgba(0, 0, 0, 0.6);
+}
+
+.searc:hover img {
+    transform: scale(1.1);
+
+}
 .searc img {
     display: block;
+    width: 15px;
+    transition: 0.1s;
     margin: 0 2px 0 0
 }
 
@@ -1215,10 +1240,14 @@ input {
     justify-content: center
 }
 
+.baskets .numeral {
+    right: -8px;
+    top: -7px;
+}
+
 .burgerBtn {
     display: none;
 }
-
 .item-base {
     height: 65px;
     position: absolute;
@@ -1328,6 +1357,11 @@ input {
     border: 1px solid #ddd;
 }
 
+.base-menu ul.categ-menu li:hover {
+    /*.base-menu ul.categ-menu li:nth-child(odd):hover {*/
+    background: #fbd402;
+}
+
 .base-menu ul.categ-menu li a:after {
     position: absolute;
     right: 24px;
@@ -1337,17 +1371,16 @@ input {
     content: '';
     top: calc(50% - 7px)
 }
-
 .base-menu ul.categ-menu li:nth-child(odd) {
     background: #fff;
 }
-
 .menu-0 {
     position: absolute;
     background: #fff;
     left: 100%;
     top: 0;
-    width: 359px;
+    width: 600px;
+    display: none;
     -webkit-transition: -webkit-transform .3s ease-in-out;
     transition: -webkit-transform .3s ease-in-out;
     transition: transform .3s ease-in-out;
@@ -1357,13 +1390,11 @@ input {
 
 .base-menu .categ-menu ul.menu-0 li {
     margin: 0;
-    /*list-style-type: disc;*/
+    width: 300px;
 }
-
 .base-menu .categ-menu ul.menu-0 li a:after {
     content: none;
 }
-
 .base-menu .categ-menu .menu-0 li a {
     height: auto;
     display: inline-block;
@@ -1376,17 +1407,14 @@ input {
     text-transform: none;
     transition: .2s;
 }
-
 .base-menu .categ-menu .menu-0 li a::before {
     content: '\2022';
     padding-right: 20px;
 }
-
 .base-menu .categ-menu .menu-0 li:hover {
     background: #fff;
     cursor: pointer;
 }
-
 .base-menu .categ-menu .menu-0 li:hover a {
     color: #fbd402;
 }
@@ -1479,6 +1507,7 @@ input {
 
 .most-item-sale .most-item img {
     width: 100%;
+    transition: .3s;
 }
 
 .ourr {
@@ -2698,7 +2727,7 @@ input {
 }
 
 .acty:active {
-    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .4), inset 0 -3px 1px -3px rgba(204, 198, 197, .5) !important;
+    box-shadow: inset 0 3px 5px 0 rgba(0, 0, 0, .4), 0 -3px 1px -3px rgba(204, 198, 197, .5) !important;
 }
 
 .blue:hover .linn:after, .blue:hover .linn:before {
@@ -2736,14 +2765,6 @@ input {
     display: inline-block;
     width: 100%;
     position: relative;
-}
-
-.base-menu ul.categ-menu li:hover {
-    background: #fbd402
-}
-
-.menu-0 {
-    display: none;
 }
 
 .left-iteem {
@@ -3381,8 +3402,7 @@ div#selectyPagination {
     /*border-radius: 30px;*/
 }
 
-
-div#selectyPagination p.valueTags,
+div#selectyPagination p.valueTagsPag,
 div#selectyBoxi p.valueTags {
     cursor: pointer;
     transition: .2s;
@@ -3397,11 +3417,11 @@ div#selectyBoxi p.valueTags {
     position: relative;
 }
 
-div#selectyPagination p.valueTags {
+div#selectyPagination p.valueTagsPag {
     height: 32px;
 }
 
-div#selectyPagination p.valueTags:after,
+div#selectyPagination p.valueTagsPag:after,
 div#selectyBoxi p.valueTags:after {
     position: absolute;
     right: 18px;
@@ -3464,12 +3484,12 @@ ul#selectsMenuBoxi > li {
     cursor: pointer;
 }
 
-ul#selectyMenuPagination > li.options,
+ul#selectyMenuPagination > li.optionsPag,
 ul#selectsMenuBoxi > li.options {
     width: 100%;
 }
 
-ul#selectyMenuPagination > li.options:hover {
+ul#selectyMenuPagination > li.optionsPag:hover {
     background: #fbd402;
     transition: .2s;
 }
@@ -5298,6 +5318,92 @@ ul.nacc .tabs-saw p {
     white-space: pre;
 }
 
+.search-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search-list h3 {
+    width: 100%;
+}
+
+.search-item {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 33%;
+    list-style-type: none;
+    padding: 0;
+}
+
+.search-list ul {
+    font-size: 17px;
+    padding-bottom: 7px;
+}
+
+.search-list ul li:first-child {
+    margin-top: 7px;
+}
+
+.search-list ul li {
+    font-size: 15px;
+    padding: 3px 0;
+}
+
+.one-content .search-item a:hover,
+.one-content .under-senn a:hover {
+    text-decoration: none;
+}
+
+.search-list .search-item a:hover {
+    color: #fbd402;
+}
+
+.search-list .search-item a {
+    color: #313e49;
+    outline: none;
+    transition: .1s;
+}
+
+.one-content .under-senn h4 {
+    margin: 10px 0 19px;
+
+}
+
+.one-content .under-senn a {
+    color: #000;
+}
+
+.one-content .under-senn .item-senn {
+    width: 295px;
+}
+
+input::-webkit-input-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+input::-moz-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+input:-ms-input-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+input:focus::-webkit-input-placeholder {
+    opacity: 0;
+}
+
+input:focus::-moz-placeholder {
+    opacity: 0;
+}
+
+input:focus:-ms-input-placeholder {
+    opacity: 0;
+}
 
 
 @-moz-document url-prefix() {

@@ -294,6 +294,16 @@
                                 <a class="blocks-pagination-forward blocks-pagination-arrow"
                                    href="{$firstPageUrl}/page/{$pages->current+1}"></a>
                             {/if}
+                            <div class="blocks-pagination-empty">
+                                <div id=selectyPagination class="blocks-pagination-selecty">
+                                    <p class=valueTagsPag name=selects>Показать по 24</p>
+                                    <ul id=selectyMenuPagination>
+                                        <li class=optionsPag>Показать по 16</li>
+                                        <li class=optionsPag>Показать по 32</li>
+                                        <li class=optionsPag>Показать по 64</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                         <!--            End pagination-->
                     {/if}
