@@ -1259,8 +1259,10 @@ input {
 }
 
 .base-menu {
-    transform: translateY(-650px);
+    /*transform: translateY(-650px);*/
     transition: .3s;
+    /*transition-delay: 1.2s;*/
+    opacity: 0;
     background: #fff;
 }
 
@@ -1285,6 +1287,7 @@ input {
 .iteem:hover .item-base .base-menu {
     transform: translateY(0px);
     transition-delay: 0s;
+    opacity: 1;
 }
 
 .iteem:hover .item-base .base-menu ul {
