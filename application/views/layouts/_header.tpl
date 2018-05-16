@@ -101,7 +101,9 @@
                 <div class="iteem">
                     <div class="bask-item bonus">
                         <div class="runn">
-                            <div class="imgg"></div>
+                            <div class="imgg">
+                                <div class="numeral">150</div>
+                            </div>
                             <div class="names">Бонусы</div>
                         </div>
                     </div>

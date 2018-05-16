@@ -7,6 +7,7 @@
 
 
         <div class="parag parag-home">
+            <div class="parag-item active">Популярные модели</div>
             <div class="parag-item">Отдельностоящая</div>
             <div class="parag-item">Встраиваемая</div>
             <div class="parag-item">Мелкая бытовая</div>

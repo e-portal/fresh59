@@ -6,7 +6,8 @@
 
         <div class="liner"><span>Топ продаж</span></div>
         <div class="parag parag-prev ">
-            <div class="parag-item active">Отдельностоящая</div>
+            <div class="parag-item active">Популярные модели</div>
+            <div class="parag-item">Отдельностоящая</div>
             <div class="parag-item">Встраиваемая</div>
             <div class="parag-item">Мелкая бытовая</div>
             <div class="parag-item">Красота и здоровье</div>
