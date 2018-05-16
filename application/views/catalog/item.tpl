@@ -45,7 +45,7 @@
                     {/if}
                     <div class="itee">
                         <img src="/assets/img/izee1.png" alt="">
-                        <span>{$item.rent_index}</span>
+                        <span>{*{$item.rent_index}*}</span>
                         <p>от
                             <span>
                                 {if $item.rent >= 25}
