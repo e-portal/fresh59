@@ -45,7 +45,7 @@
                     {/if}
                     <div class="itee">
                         <img src="/assets/img/izee1.png" alt="">
-                        <span>{*{$item.rent_index}*}</span>
+                        <span>{if $item.rent > 25}8{elseif $item.rent > 12.5}6{else}3{/if}</span>
                         <p>от
                             <span>
                                 {if $item.rent >= 25}
@@ -230,8 +230,8 @@
             <div class="price-busket-kredit">
                 <div class="prod-price">
                     {if $item.specprice  && ($item.bdprice > $item.price) && (($item.bdprice - $item.price)/$item.price > 0.01) }
-                        <div class="red big-price">{price $item.price $item.id_currency} {$smarty.session.Currency.title}</div>
                         <div class="old-price">{price $item.bdprice} {$smarty.session.Currency.title}</div>
+                        <div class="red big-price">{price $item.price $item.id_currency} {$smarty.session.Currency.title}</div>
                     {else}
                         <div class="big-price">{price $item.price $item.id_currency} {$smarty.session.Currency.title}</div>
                     {/if}

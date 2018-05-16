@@ -220,8 +220,8 @@
                                 <div class="bakk">
                                     <div class="left-bakk">
                                         {if $item.specprice  && ($item.bdprice > $item.price) && (($item.bdprice - $item.price)/$item.price > 0.01) }
-                                            <p class="newPrice">{price $item.price $item.id_currency} {$smarty.session.Currency.title}</p>
                                             <p class="oldPrice">{price $item.bdprice} {$smarty.session.Currency.title}</p>
+                                            <p class="newPrice">{price $item.price $item.id_currency} {$smarty.session.Currency.title}</p>
                                         {else}
                                             <p>{price $item.price $item.id_currency} {$smarty.session.Currency.title}</p>
                                         {/if}
