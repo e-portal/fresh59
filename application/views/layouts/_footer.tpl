@@ -102,7 +102,7 @@
                 <div class="fresh">
                     <div class="created">САЙТ РАЗРАБОТАН</div>
 
-                    <a href="http://freshweb.agency/" target="_blank">
+                    <a href="http://freshweb.agency/?utm_source=our-site&utm_medium=590.ua" target="_blank">
                         <div class="fresh-logo"><span>F</span><span>R</span><span>E</span><span>S</span><span>H</span>
                         </div>
                     </a>
