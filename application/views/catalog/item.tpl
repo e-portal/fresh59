@@ -45,7 +45,7 @@
                     {/if}
                     <div class="itee">
                         <img src="/assets/img/izee1.png" alt="">
-                        <m>{if $item.rent > 25}8{elseif $item.rent > 12.5}6{else}3{/if}</m>
+                        <em>{if $item.rent > 25}8{elseif $item.rent > 12.5}6{else}3{/if}</em>
                         <p>от
                             <span>
                                 {if $item.rent >= 25}
@@ -416,10 +416,11 @@
                         {if $brand_info.guarantee}
                             <p>
                                 {if $item.id_brand == 9 && $item.id_category == 217}
-                                    5 лет
+                                    <em>5</em>
+                                    лет
                                 {else}
                                     {if $brand_info.guarantee!=0}
-                                        {$brand_info.guarantee}
+                                        <em>{$brand_info.guarantee}</em>
                                         {if $brand_info.guarantee==1}
                                             год
                                         {elseif $brand_info.guarantee>1 && $brand_info.guarantee<5}

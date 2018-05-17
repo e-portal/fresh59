@@ -95,7 +95,7 @@
                                         {/if}
                                         <div class="itee">
                                             <img src="/assets/img/izee1.png" alt="">
-                                            <m>{$item.rent_index}</m>
+                                            <em>{$item.rent_index}</em>
                                             <p>от
                                                 <span>
                                                     {$item.price/$item.rent_index*$curs_evro_smarty|round}
