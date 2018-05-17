@@ -442,6 +442,8 @@ jQuery(document).ready(function () {
                 modal_error_class: 'search-modal-error',
                 noimageSrc: 'noimage.jpg'
             };
+
+            options.searchPhrase = $(this).val();
             console.log(342433);
             var modal = $(options.modal);
             modal.html('');
@@ -474,14 +476,13 @@ jQuery(document).ready(function () {
                             </div>\
                         </a></div> \
                         ';
-                        html += '<button class="header-search__button"> \
+
+                        // modal.show();
+                    })
+                    html += '<button class="header-search__button"> \
                                  <a href="/catalog/search/' + options.searchPhrase + '">Показать все результаты поиска &rarr;</a> \
                                 </button>\
                                 </div>';
-                        // modal.show();
-
-
-                    })
                     modal.append(html)
 
                 }
