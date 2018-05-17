@@ -450,7 +450,7 @@ jQuery(document).ready(function () {
             // var limit = Math.floor(($(window).height() - 250) / 60) - 1;
             $.getJSON(options.url, {q: $(this).val(), l: 2}, function (data) {
 
-                var html = '<div class="search-list">';
+                var html = '<div class="search-list__item search-result">';
                 if (data.length > 0) {
                     console.log(data);
                     $(data).each(function () {
@@ -463,8 +463,7 @@ jQuery(document).ready(function () {
                             var imgSrc = options.noimageSrc;
                         }
                         console.log(data);
-                        html += '<div class="search-list__item search-result">\
-                        <a href="/catalog/item/' + i.id + '"> \
+                        html += '<a href="/catalog/item/' + i.id + '"> \
                         <div class="search-result__inner"> \
                             <div class="search-result__img"><img src="/images/' + imgSrc + '" alt="" /></div>  \
                                 <div class="search-result__content">\
@@ -474,7 +473,7 @@ jQuery(document).ready(function () {
                                     <p class="search-result__coast">2500 грн</p> \
                                 </div>\
                             </div>\
-                        </a></div> \
+                        </a> \
                         ';
 
                         // modal.show();
