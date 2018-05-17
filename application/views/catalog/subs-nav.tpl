@@ -85,7 +85,7 @@
                                                 {foreach from=$filter.values item=value}
                                                     {if $value.possible}
                                                         <li>
-                                                            <a class="checkbox{if $value.selected} active{/if}"
+                                                            <a class="checkbox {if $value.selected}active{/if}"
                                                                href="{url2 $filter.urlhelperarg=$value.add param=$route}">{$value.value}</a>
                                                             <div class="check"></div>
                                                         </li>
