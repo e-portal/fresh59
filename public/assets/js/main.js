@@ -452,7 +452,7 @@ jQuery(document).ready(function () {
         var options = {
             url: '/catalog/autocomplete',
             minLength: 2,
-            modal: ".search-list",
+            modal: ".header-bottom__input",
             modal_error_class: 'search-modal-error',
             noimageSrc: 'noimage.jpg'
         };
