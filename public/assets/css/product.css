@@ -441,6 +441,7 @@ img {
 }
 
 .buy-by-part-from {
+    position: relative;
     font-family: 'SF-UI-Display-Light';
     margin: 15px 0 0 0;
 }
