@@ -439,7 +439,7 @@ jQuery(document).ready(function () {
                 url: '/catalog/autocomplete',
                 minLength: 2,
                 modal: ".search-list",
-                modal_error_class: 'search_ren',
+                modal_error_class: ".search_ren",
                 noimageSrc: 'noimage.jpg'
             };
 
@@ -450,7 +450,7 @@ jQuery(document).ready(function () {
             //                 }
             console.log(342433);
             var modal = $(options.modal);
-            var modal_ = $(options.modal);
+            var modal_ = $(options.modal_error_class);
 
             modal.html('');
             // var limit = Math.floor(($(window).height() - 250) / 60) - 1;
@@ -485,11 +485,13 @@ jQuery(document).ready(function () {
                         ';
 
                     });
-                    html += '<button class="header-search__button"> \
+                    html += '</div>'
+                    html_ += '<button class="header-search__button"> \
                                  <a href="/catalog/search/' + options.searchPhrase + '">Показать все результаты поиска &rarr;</a> \
                                 </button>\
-                                </div>';
+                                ';
                     modal.append(html)
+                    modal_.append(html_)
                     modal.show();
 
 
