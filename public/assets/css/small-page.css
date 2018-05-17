@@ -1,11 +1,3 @@
-/*.one-content a {*/
-/*color: #0088c8;*/
-/*}*/
-
-/*.one-content a:hover {*/
-/*text-decoration: underline;*/
-/*}*/
-
 /*SALE banner-slider*/
 
 .left-right-banner {
@@ -501,9 +493,9 @@ li {
     border-bottom: 1px solid #d7d7d7;
 }
 
-.table-grey-border td {
-    padding: 15px 25px;
-}
+/*.table-grey-border td {*/
+/*padding: 15px 25px;*/
+/*}*/
 
 .table-grey-border td,
 .table-grey-border td p,
@@ -513,6 +505,10 @@ li {
     font-size: 15px;
     line-height: 21px;
     vertical-align: text-top;
+}
+
+.table-grey-border tr > td:first-child {
+    padding: 20px;
 }
 
 .table-grey-border tr > td:first-child,

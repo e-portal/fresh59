@@ -949,6 +949,7 @@
     .parag-item {
         text-align: center;
         padding: 6px 0;
+        font-size: 14px;
     }
 
     .parag .slick-prev,
@@ -1207,7 +1208,7 @@
     .senn-main .item-senn:nth-child(1),
     .senn-main .item-senn:nth-child(5) {
         width: 45%;
-        height: 425px;
+        height: 415px;
         display: flex;
         margin: 24px auto 65px;
         flex-direction: column;
@@ -1224,15 +1225,21 @@
     }
 
     .slide-item:nth-child(odd) .item-senn .centr {
-        height: 643px;
+        height: 740px;
     }
 
-    .slide-item:nth-child(odd) .item-senn:nth-child(2) {
+    .slide-item:nth-child(odd) .item-senn:nth-child(2),
+    .slide-item:nth-child(odd) .item-senn:nth-child(3),
+    .slide-item:nth-child(odd) .item-senn:nth-child(4) {
         display: none;
     }
 
+    .maii .item-senn:nth-child(2) .sench {
+        padding: 20px 14px 0;
+    }
+
     .slide-item:nth-child(odd) .item-senn {
-        height: 827px;
+        height: 920px;
         width: 663px;
     }
 

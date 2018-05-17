@@ -369,15 +369,18 @@ img {
 }
 
 .price-busket-kredit > div:nth-child(1) {
-    width: 28%;
+    width: 26%;
 }
 
 .price-busket-kredit > div:nth-child(2) {
-    width: 30%;
+    width: 28%;
 }
 
 .price-busket-kredit > div:nth-child(3) {
-    width: 31%;
+    width: 39%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .old-price {
@@ -423,7 +426,7 @@ img {
     border-right: 0;
     color: #979797;
     font-family: 'SF-UI-Display-Light';
-    padding: 3px 0 3px 11px;
+    padding: 2px 0 4px 11px;
 }
 
 .qweek-buy .buy-btn {
@@ -436,11 +439,15 @@ img {
 
 .buy-by-part-from {
     font-family: 'SF-UI-Display-Light';
-    margin: 15px 0 -3px 0;
+    margin: 15px 0 0 0;
 }
 
+.buy-by-part-from img {
+    position: relative;
+    top: 5px;
+}
 .buy-by-part-from span {
-    font-size: 24px;
+    font-size: 15px;
     font-family: 'SFUIDisplay-Medium';
 }
 
@@ -718,7 +725,6 @@ img {
 .tabs-delivery-pay .tab-contents {
     padding: 20px;
 }
-
 .tab-contents {
     width: calc(100% - 40px);
     height: inherit;
@@ -731,6 +737,11 @@ img {
     transition: .5s;
 }
 
+.tab-contents-wrap em {
+    font-style: normal;
+    color: #fbd402;
+    font-size: 30px;
+}
 .tab-contents.is-active .tab-contents-wrap {
     margin-top: 0;
     opacity: 1;
@@ -1048,7 +1059,7 @@ div.review-date > span {
 
 .popup .basket-table {
     margin: 0 10px;
-    width: 100%;
+    width: calc(100% - 20px);
 }
 .basket-table {
     display: table;
@@ -1352,4 +1363,80 @@ div.review-date > span {
 
 .itee img {
     width: 20px;
+}
+
+.servs {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    padding-right: 90px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'SF-UI-Display-Regular';
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.servs:last-child {
+    margin-bottom: 0;
+}
+
+.servs input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    transition: .2s;
+    /*border: 1px solid #ddd;*/
+    background-color: #eee;
+}
+
+.servs:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.servs input:checked ~ .checkmark {
+    background-color: #fbd402;
+    /*border: 1px solid #fbd402;*/
+
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.servs input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.servs .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.servs em {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-style: normal;
+    font-family: SFUIDisplay-Bold;
 }

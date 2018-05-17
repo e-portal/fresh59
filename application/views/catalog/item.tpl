@@ -235,6 +235,13 @@
                     {else}
                         <div class="big-price">{price $item.price $item.id_currency} {$smarty.session.Currency.title}</div>
                     {/if}
+                    {if true==$certificates}
+                        <div class="buy-by-part-from">
+                            <img src="/assets/img/izee1.png" alt="">
+                            <em>{$item.rent_index}</em>
+                            от <span>1 500</span> грн/мес
+                        </div>
+                    {/if}
                     {if $item.bonusAmount > 0}
                         <div class="return-prod">Вернем: <span class="red">{$item.bonusAmount|round} грн</span></div>
                         <div class="on-bonus-prod">на <a href="/page/bonus">Бонусный счет</a></div>
@@ -258,10 +265,27 @@
                     </form>
                 </div>
                 <div class="buy-by-part">
-                    <div>
-                        <img src="/assets/img/izee1.png" alt="">
-                        от
-                        <span>
+                    {*===================Certificate=================*}
+                    {if true==$certificates}
+                        <form>
+                            <label class="servs">ТехноЗабота Универсальная на 36 месяцев
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                                <em>940 грн</em>
+                            </label>
+                            <label class="servs">ТехноЗабота Прочь Ремонты на 36 месяцев
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <em>940 грн</em>
+                            </label>
+
+                        </form>
+                        {*===================Certificate=================*}
+                    {else}
+                        <div>
+                            <img src="/assets/img/izee1.png" alt="">
+                            от
+                            <span>
                             {if $item.rent >= 25}
                                 {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=8}
                             {elseif $item.rent > 12.5}
@@ -272,21 +296,20 @@
                                 {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=3}
                             {/if}
                         </span>
-                        грн/мес
-                    </div>
-                    <div>
-                        <a class="green-link">Рассрочка</a> или <a class="green-link">Кредит</a>
-                    </div>
-
-                    <div>
-                        <img src="/assets/img/izee1.png" alt="">
-                        0% используйте возможность купить товар без переплат
-                    </div>
-
-                    <div>
-                        <img src="/assets/img/izee1.png" alt="">
-                        Доступна&nbsp;<a class="green-link">Оплата частями</a>
-                    </div>
+                            грн/мес
+                        </div>
+                        <div>
+                            <a class="green-link">Рассрочка</a> или <a class="green-link">Кредит</a>
+                        </div>
+                        <div>
+                            <img src="/assets/img/izee1.png" alt="">
+                            0% используйте возможность купить товар без переплат
+                        </div>
+                        <div>
+                            <img src="/assets/img/izee1.png" alt="">
+                            Доступна&nbsp;<a class="green-link">Оплата частями</a>
+                        </div>
+                    {/if}
                 </div>
             </div>
             <!--           end ЦЕНА КОРЗИНА             -->
