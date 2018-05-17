@@ -482,7 +482,7 @@ jQuery(document).ready(function () {
                                     <p class="search-result__coast">2500 грн</p> \
                                 </div>\
                             </div>\
-                        </a>  \
+                        </a> </div> \
                         ';
 
                     });
