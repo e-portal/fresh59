@@ -452,11 +452,11 @@ jQuery(document).ready(function () {
             var modal = $(options.modal);
             var modal_ = $(options.modal_error_class);
 
-            modal.html('');
-            var limit = Math.floor(($(window).height() - 160) / 100) - 1;
-            $.getJSON(options.url, {q: $(this).val(), l: limit}, function (data) {
 
+            // var limit = Math.floor(($(window).height() - 160) / 100) - 1;
+            $.getJSON(options.url, {q: $(this).val(), l: 2}, function (data) {
 
+                modal.html('');
                 if (data.length > 0) {
                     console.log(data);
                     modal_.html('');
