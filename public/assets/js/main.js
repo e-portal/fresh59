@@ -447,7 +447,7 @@ jQuery(document).ready(function () {
             $.getJSON(options.url, {q: $(this).val(), l: limit}, function (data) {
                 var modal = $(options.modal);
                 modal.html('');
-                var html = '<div class="search-list"';
+                var html = '<div class="search-list">';
                 if (data.length > 0) {
                     console.log(data);
                     $(data).each(function () {
