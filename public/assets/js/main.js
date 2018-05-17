@@ -439,7 +439,7 @@ jQuery(document).ready(function () {
                 url: '/catalog/autocomplete',
                 minLength: 2,
                 modal: ".search-list",
-                modal_error_class: 'search-modal-error',
+                modal_error_class: '.search_ren',
                 noimageSrc: 'noimage.jpg'
             };
 
@@ -450,12 +450,15 @@ jQuery(document).ready(function () {
             //                 }
             console.log(342433);
             var modal = $(options.modal);
+            var modal_ = $(options.modal_error_class);
 
             modal.html('');
+            modal_.html('');
             // var limit = Math.floor(($(window).height() - 250) / 60) - 1;
             $.getJSON(options.url, {q: $(this).val(), l: 2}, function (data) {
 
                 var html = '<div class="search-list__item search-result">';
+                var html_ = '<button class="header-search__button">';
                 if (data.length > 0) {
                     console.log(data);
                     $(data).each(function () {
@@ -478,15 +481,16 @@ jQuery(document).ready(function () {
                                     <p class="search-result__coast">2500 грн</p> \
                                 </div>\
                             </div>\
-                        </a> </div>\
+                        </a> \
                         ';
 
                     });
-                    html += '<button class="header-search__button"> \
+                    html_ += '</div> \
                                  <a href="/catalog/search/' + options.searchPhrase + '">Показать все результаты поиска &rarr;</a> \
                                 </button>\
                                 ';
                     modal.append(html)
+                    modal_.append(html_)
                     modal.show();
 
 
