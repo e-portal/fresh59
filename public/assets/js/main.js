@@ -443,10 +443,11 @@ jQuery(document).ready(function () {
                 noimageSrc: 'noimage.jpg'
             };
             console.log(342433);
+            modal.html('');
             // var limit = Math.floor(($(window).height() - 250) / 60) - 1;
             $.getJSON(options.url, {q: $(this).val(), l: 2}, function (data) {
                 var modal = $(options.modal);
-                modal.html('');
+
                 var html = '<div class="search-list">';
                 if (data.length > 0) {
                     console.log(data);
@@ -473,6 +474,10 @@ jQuery(document).ready(function () {
                             </div>\
                         </a></div> \
                         ';
+                        html += '<button class="header-search__button"> \
+                                 <a href="/catalog/search/' + options.searchPhrase + '">Показать все результаты поиска &rarr;</a> \
+                                </button>\
+                                </div>';
                         modal.append(html)
                         // modal.show();
 
