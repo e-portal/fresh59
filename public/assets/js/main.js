@@ -476,13 +476,14 @@ jQuery(document).ready(function () {
                         </a> \
                         ';
 
-                        // modal.show();
-                    })
-                    html = '<button class="header-search__button"> \
+                    });
+                    html += '<button class="header-search__button"> \
                                  <a href="/catalog/search/' + options.searchPhrase + '">Показать все результаты поиска &rarr;</a> \
                                 </button>\
                                 </div>';
                     modal.append(html)
+                    modal.show();
+
 
 
                 }
