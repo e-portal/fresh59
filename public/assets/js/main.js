@@ -460,7 +460,7 @@ jQuery(document).ready(function () {
                 if (data.length > 0) {
                     console.log(data);
                     modal_.html('');
-                    var html = '<div class="search-list__item search-result">';
+                    var html = '<div class="123">';
                     $(data).each(function () {
                         var i = $(this)[0];
 
@@ -471,7 +471,8 @@ jQuery(document).ready(function () {
                             var imgSrc = options.noimageSrc;
                         }
                         console.log(data);
-                        html += '<a href="/catalog/item/' + i.id + '"> \
+                        html += '<div class="search-list__item search-result">\
+                            <a href="/catalog/item/' + i.id + '"> \
                         <div class="search-result__inner"> \
                             <div class="search-result__img"><img src="/images/' + imgSrc + '" alt="" /></div>  \
                                 <div class="search-result__content">\
