@@ -459,7 +459,7 @@ jQuery(document).ready(function () {
 
                 if (data.length > 0) {
                     console.log(data);
-
+                    modal_.html('');
                     var html = '<div class="search-list__item search-result">';
                     $(data).each(function () {
                         var i = $(this)[0];
