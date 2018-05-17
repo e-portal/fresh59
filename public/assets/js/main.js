@@ -438,7 +438,7 @@ jQuery(document).ready(function () {
             var options = {
                 url: '/catalog/autocomplete',
                 minLength: 2,
-                modal: ".search-list",
+                modal: ".search-result",
                 modal_error_class: '.search_ren',
                 noimageSrc: 'noimage.jpg'
             };
@@ -457,7 +457,7 @@ jQuery(document).ready(function () {
             // var limit = Math.floor(($(window).height() - 250) / 60) - 1;
             $.getJSON(options.url, {q: $(this).val(), l: 2}, function (data) {
 
-                var html = '<div class="search-list__item search-result">';
+                var html = '<div class="123">';
                 var html_ = '<button class="header-search__button">';
                 if (data.length > 0) {
                     console.log(data);

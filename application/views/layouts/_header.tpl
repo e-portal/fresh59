@@ -98,7 +98,7 @@
                             <div class="header-bottom__exit"></div>
                         </form>
                         <div class="search-list">
-
+                            <div class="search-list__item search-result"></div>
                             <div class="search_ren"></div>
 
                         </div>
