@@ -473,6 +473,7 @@ jQuery(document).ready(function () {
                 if (val && val.length > options.minLength) {
                     $.getJSON(options.url, {q: $(this).val(), l: limit}, function (data) {
                         if (data.length > 0) {
+                            console.log(data);
                             methods.formatResult(data);
                         }
                         else {
