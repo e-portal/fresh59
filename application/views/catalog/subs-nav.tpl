@@ -118,7 +118,7 @@
                                             {foreach from=$filters name=brands item=brand}
                                                 {if $brand.possible}
                                                     <li>
-                                                        <a class="checkbox{if $brand.selected}active{/if}"
+                                                        <a class="checkbox {if $brand.selected}active{/if}"
                                                            href="{url2 assoc.brand=$brand.add assoc.page=null param=$route}">{$brand.name}
                                                         </a>
                                                         <div class="check"></div>
@@ -139,13 +139,9 @@
                                     </div>
                                 </div>
                             </div>
-
-
                         </div>
                         {*=============================================================*}
-
                     {/if}
-
                 {/foreach}
             {/if}
             <a href="/catalog/cat/{$catId}" class="btn btn-mini btn-danger">Сбросить все фильтры</a>
