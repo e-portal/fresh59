@@ -438,8 +438,8 @@ jQuery(document).ready(function () {
             var options = {
                 url: '/catalog/autocomplete',
                 minLength: 2,
-                modal: ".search-result",
-                modal_error_class: '.search_ren',
+                modal: ".search-list",
+                modal_error_class: 'search_ren',
                 noimageSrc: 'noimage.jpg'
             };
 
@@ -450,19 +450,17 @@ jQuery(document).ready(function () {
             //                 }
             console.log(342433);
             var modal = $(options.modal);
-            var modal_ = $(options.modal_error_class);
-            if (modal.hasClass(options.modal_error_class)) {
-                modal.removeClass(options.modal_error_class);
-            }
-            modal.html('');
-            modal_.html('');
+            var modal_ = $(options.modal);
+
+
             // var limit = Math.floor(($(window).height() - 250) / 60) - 1;
             $.getJSON(options.url, {q: $(this).val(), l: 2}, function (data) {
 
-                var html = '<div class="123">';
-                var html_ = '<button class="header-search__button">';
+
                 if (data.length > 0) {
                     console.log(data);
+                    modal.html('');
+                    var html = '<div class="search-list__item search-result">';
                     $(data).each(function () {
                         var i = $(this)[0];
 
@@ -483,16 +481,15 @@ jQuery(document).ready(function () {
                                     <p class="search-result__coast">2500 грн</p> \
                                 </div>\
                             </div>\
-                        </a> \
+                        </a>  \
                         ';
 
                     });
-                    html_ += '</div> \
+                    html += '<button class="header-search__button"> \
                                  <a href="/catalog/search/' + options.searchPhrase + '">Показать все результаты поиска &rarr;</a> \
                                 </button>\
-                                ';
+                                </div>';
                     modal.append(html)
-                    modal_.append(html_)
                     modal.show();
 
 
@@ -505,104 +502,104 @@ jQuery(document).ready(function () {
         })
     })(jQuery);
 
-    // (function ($) {
-    //     var options = {
-    //         url: '/catalog/autocomplete',
-    //         minLength: 2,
-    //         modal: ".header-bottom__exit",
-    //         modal_error_class: 'search-modal-error',
-    //         noimageSrc: 'noimage.jpg'
-    //     };
-    //     var methods = {
-    //         init: function (data) {
-    //             var el = $(this);
-    //             el.live('keyup', methods.search);
-    //             $('.' + options.modal_error_class).live('click', function (e) {
-    //                 $(this).removeClass(options.modal_error_class);
-    //                 $(this).hide();
-    //                 el.val('');
-    //                 el.focus();
-    //             });
-    //         }, search: function () {
-    //             var val = $(this).val();
-    //             options.searchPhrase = val;
-    //             var limit = Math.floor(($(window).height() - 160) / 60) - 1;
-    //             if (val && val.length > options.minLength) {
-    //                 $.getJSON(options.url, {q: $(this).val(), l: limit}, function (data) {
-    //                     if (data.length > 0) {
-    //                         methods.formatResult(data);
-    //
-    //
-    //                     }
-    //                     else {
-    //                         methods.noResults();
-    //                     }
-    //                 });
-    //             }
-    //             else {
-    //                 $(options.modal).hide();
-    //             }
-    //         }, noResults: function () {
-    //             var modal = $(options.modal);
-    //             modal.addClass(options.modal_error_class);
-    //             modal.html('<ul><li>По Вашему запросу ничего не найдено.</li></ul>');
-    //         }, formatResult: function (data) {
-    //             var modal = $(options.modal);
-    //             if (modal.hasClass(options.modal_error_class)) {
-    //                 modal.removeClass(options.modal_error_class);
-    //             }
-    //             modal.html('');
-    //             var html = '<div class="search-list"';
-    //             $(data).each(function () {
-    //                 var i = $(this)[0];
-    //                 if (i.imgid != null) {
-    //                     var imgSrc = 'catalog/' + i.imgid + '_s.' + i.imgext + '';
-    //                 }
-    //                 else {
-    //                     var imgSrc = options.noimageSrc;
-    //                 }
-    //                 // html += '<li>\
-    //                 // <a href="/catalog/item/' + i.id + '"> \
-    //                 //     <span class="search-modal__img"><img src="/images/' + imgSrc + '" alt="" /></span> \
-    //                 //     <p>' + i.category + ' ' + i.brand + ' ' + i.name + '</p> \
-    //                 // </a></li> \
-    //
-    //                 html += '<div class="search-list__item search-result">\
-    //                 <a href="/catalog/item/' + i.id + '"> \
-    //                 <div class="search-result__inner"> \
-    //                     <div class="search-result__img"><img src="/images/' + imgSrc + '" alt="" /></div>  \
-    //                         <div class="search-result__content">\
-    //                             <div class="search-result__content-top">\
-    //                                 <h5 class="search-result__name">\' + i.category + \' \' + i.brand + \' \' + i.name + \'</h5>\
-    //                             </div>\
-    //                             <p class="search-result__coast">2500 грн</p> \
-    //                         </div>\
-    //                     </div>\
-    //                 </a></div> \
-    //             ';
-    //             });
-    //             // html += '<li class="search-modal__link"> \
-    //             //         <a href="/catalog/search/' + options.searchPhrase + '">Показать все результаты поиска &rarr;</a> \
-    //             //     </li>\
-    //             //     </ul>';
-    //             html += '<button class="header-search__button"> \
-    //                 <a href="/catalog/search/' + options.searchPhrase + '">Показать все результаты поиска &rarr;</a> \
-    //             </button>>\
-    //             </div>';
-    //             modal.append(html)
-    //             modal.show();
-    //         }
-    //     };
-    //     $.fn.siteSearch = function (method) {
-    //         if (methods[method]) {
-    //             return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
-    //         } else if (typeof method === 'object' || !method) {
-    //             return methods.init.apply(this, arguments);
-    //         } else {
-    //             $.error('Метод с именем ' + method + ' не существует');
-    //         }
-    //     };
-    // })(jQuery);
+    (function ($) {
+        var options = {
+            url: '/catalog/autocomplete',
+            minLength: 2,
+            modal: ".header-bottom__exit",
+            modal_error_class: 'search-modal-error',
+            noimageSrc: 'noimage.jpg'
+        };
+        var methods = {
+            init: function (data) {
+                var el = $(this);
+                el.live('keyup', methods.search);
+                $('.' + options.modal_error_class).live('click', function (e) {
+                    $(this).removeClass(options.modal_error_class);
+                    $(this).hide();
+                    el.val('');
+                    el.focus();
+                });
+            }, search: function () {
+                var val = $(this).val();
+                options.searchPhrase = val;
+                var limit = Math.floor(($(window).height() - 160) / 60) - 1;
+                if (val && val.length > options.minLength) {
+                    $.getJSON(options.url, {q: $(this).val(), l: limit}, function (data) {
+                        if (data.length > 0) {
+                            methods.formatResult(data);
+
+
+                        }
+                        else {
+                            methods.noResults();
+                        }
+                    });
+                }
+                else {
+                    $(options.modal).hide();
+                }
+            }, noResults: function () {
+                var modal = $(options.modal);
+                modal.addClass(options.modal_error_class);
+                modal.html('<ul><li>По Вашему запросу ничего не найдено.</li></ul>');
+            }, formatResult: function (data) {
+                var modal = $(options.modal);
+                if (modal.hasClass(options.modal_error_class)) {
+                    modal.removeClass(options.modal_error_class);
+                }
+                modal.html('');
+                var html = '<div class="search-list"';
+                $(data).each(function () {
+                    var i = $(this)[0];
+                    if (i.imgid != null) {
+                        var imgSrc = 'catalog/' + i.imgid + '_s.' + i.imgext + '';
+                    }
+                    else {
+                        var imgSrc = options.noimageSrc;
+                    }
+                    // html += '<li>\
+                    // <a href="/catalog/item/' + i.id + '"> \
+                    //     <span class="search-modal__img"><img src="/images/' + imgSrc + '" alt="" /></span> \
+                    //     <p>' + i.category + ' ' + i.brand + ' ' + i.name + '</p> \
+                    // </a></li> \
+
+                    html += '<div class="search-list__item search-result">\
+                    <a href="/catalog/item/' + i.id + '"> \
+                    <div class="search-result__inner"> \
+                        <div class="search-result__img"><img src="/images/' + imgSrc + '" alt="" /></div>  \
+                            <div class="search-result__content">\
+                                <div class="search-result__content-top">\
+                                    <h5 class="search-result__name">\' + i.category + \' \' + i.brand + \' \' + i.name + \'</h5>\
+                                </div>\
+                                <p class="search-result__coast">2500 грн</p> \
+                            </div>\
+                        </div>\
+                    </a></div> \
+                ';
+                });
+                // html += '<li class="search-modal__link"> \
+                //         <a href="/catalog/search/' + options.searchPhrase + '">Показать все результаты поиска &rarr;</a> \
+                //     </li>\
+                //     </ul>';
+                html += '<button class="header-search__button"> \
+                    <a href="/catalog/search/' + options.searchPhrase + '">Показать все результаты поиска &rarr;</a> \
+                </button>>\
+                </div>';
+                modal.append(html)
+                modal.show();
+            }
+        };
+        $.fn.siteSearch = function (method) {
+            if (methods[method]) {
+                return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
+            } else if (typeof method === 'object' || !method) {
+                return methods.init.apply(this, arguments);
+            } else {
+                $.error('Метод с именем ' + method + ' не существует');
+            }
+        };
+    })(jQuery);
 
 
     /********************************************************/
