@@ -444,8 +444,13 @@ jQuery(document).ready(function () {
             };
 
             options.searchPhrase = $(this).val();
+
+            // if (modal.hasClass(options.modal_error_class)) {
+            //                     modal.removeClass(options.modal_error_class);
+            //                 }
             console.log(342433);
             var modal = $(options.modal);
+
             modal.html('');
             // var limit = Math.floor(($(window).height() - 250) / 60) - 1;
             $.getJSON(options.url, {q: $(this).val(), l: 2}, function (data) {
@@ -473,14 +478,14 @@ jQuery(document).ready(function () {
                                     <p class="search-result__coast">2500 грн</p> \
                                 </div>\
                             </div>\
-                        </a> \
+                        </a> </div>\
                         ';
 
                     });
                     html += '<button class="header-search__button"> \
                                  <a href="/catalog/search/' + options.searchPhrase + '">Показать все результаты поиска &rarr;</a> \
                                 </button>\
-                                </div>';
+                                ';
                     modal.append(html)
                     modal.show();
 
