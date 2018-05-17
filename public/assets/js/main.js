@@ -443,8 +443,8 @@ jQuery(document).ready(function () {
                 noimageSrc: 'noimage.jpg'
             };
             console.log(342433);
-            var limit = Math.floor(($(window).height() - 250) / 60) - 1;
-            $.getJSON(options.url, {q: $(this).val(), l: limit}, function (data) {
+            // var limit = Math.floor(($(window).height() - 250) / 60) - 1;
+            $.getJSON(options.url, {q: $(this).val(), l: 2}, function (data) {
                 var modal = $(options.modal);
                 modal.html('');
                 var html = '<div class="search-list">';
