@@ -437,7 +437,7 @@ jQuery(document).ready(function () {
         $('.header-bottom__input').bind('keyup', function () {
             console.log(342433);
             var limit = Math.floor(($(window).height() - 160) / 60) - 1;
-            $.getJSON('https://590.ua/catalog/autocomplete', {q: $(this).val(), l: limit}, function (data) {
+            $.getJSON('/catalog/autocomplete', {q: $(this).val(), l: limit}, function (data) {
                 if (data.length > 0) {
                     console.log(data);
                     // methods.formatResult(data);
