@@ -459,7 +459,7 @@ jQuery(document).ready(function () {
                         else {
                             var imgSrc = options.noimageSrc;
                         }
-                        console.log(111111);
+                        console.log(data);
                         html += '<div class="search-list__item search-result">\
                         <a href="/catalog/item/' + i.id + '"> \
                         <div class="search-result__inner"> \
