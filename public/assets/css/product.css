@@ -378,6 +378,9 @@ img {
 
 .price-busket-kredit > div:nth-child(3) {
     width: 39%;
+}
+
+.certificates {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -736,7 +739,6 @@ img {
     opacity: 0;
     transition: .5s;
 }
-
 .tab-contents-wrap em {
     font-style: normal;
     color: #fbd402;
@@ -1379,17 +1381,14 @@ div.review-date > span {
     -ms-user-select: none;
     user-select: none;
 }
-
 .servs:last-child {
     margin-bottom: 0;
 }
-
 .servs input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
 }
-
 .checkmark {
     position: absolute;
     top: 0;
@@ -1400,27 +1399,22 @@ div.review-date > span {
     /*border: 1px solid #ddd;*/
     background-color: #eee;
 }
-
 .servs:hover input ~ .checkmark {
     background-color: #ccc;
 }
-
 .servs input:checked ~ .checkmark {
     background-color: #fbd402;
     /*border: 1px solid #fbd402;*/
 
 }
-
 .checkmark:after {
     content: "";
     position: absolute;
     display: none;
 }
-
 .servs input:checked ~ .checkmark:after {
     display: block;
 }
-
 .servs .checkmark:after {
     left: 6px;
     top: 2px;
@@ -1432,7 +1426,6 @@ div.review-date > span {
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
-
 .servs em {
     position: absolute;
     right: 0;

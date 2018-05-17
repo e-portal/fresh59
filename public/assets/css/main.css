@@ -1097,7 +1097,7 @@ input {
 .iteem:nth-child(2) .inpp {
     margin: 0;
     width: 74%;
-
+    position: relative;
 }
 
 .iteem:nth-child(2) .send {
@@ -1415,7 +1415,9 @@ input {
     content: '\2022';
     padding-right: 20px;
 }
-.base-menu .categ-menu .menu-0 li:hover {
+
+.base-menu .categ-menu .menu-0 li:hover,
+.base-menu .categ-menu .menu-0 li:nth-child(odd):hover {
     background: #fff;
     cursor: pointer;
 }
@@ -2355,6 +2357,14 @@ input {
     cursor: pointer;
 }
 
+.itee em {
+    font-size: 11px;
+    color: #000;
+    position: absolute;
+    left: 20px;
+    font-style: italic;
+}
+
 /*.itee:nth-child(2) {*/
 /*margin: 10px 0 0*/
 /*}*/
@@ -2982,7 +2992,7 @@ input {
     justify-content: center;
     border-radius: 9px;
     cursor: pointer;
-    right: 159px;
+    left: 130px;
     bottom: 47px;
     transition: .3s;
     z-index: 13;
@@ -5316,7 +5326,6 @@ ul.nacc .tabs-saw p {
     padding-left: 30px;
     font-family: SFUIDisplay-Bold;
 }
-
 .compare-itm .icon-remove {
     transition: .2s;
     position: absolute;
