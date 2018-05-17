@@ -67,7 +67,7 @@
         {*<pre>{$item|var_dump}</pre>*}
         {*<pre>{$item|@debug_print_var}</pre>*}
         {if !$accepted_filters}
-            {if $filters|@count > 0}
+            {if $filters}
                 {foreach from=$filters item=filters key=type}
                     {if $type == 'select'}
 
