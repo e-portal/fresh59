@@ -1211,9 +1211,10 @@ div.review-date > span {
 
 .total-section .bask {
     width: fit-content;
-    padding: 10px 40px;
+    padding: 10px 60px;
     height: auto;
     line-height: 14px;
+    margin-bottom: 15px;
 }
 
 .total-section .bask::after {
@@ -1227,7 +1228,9 @@ div.review-date > span {
 .total-take {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: flex-end;
+    /*justify-content: space-between;*/
+    flex-wrap: wrap;
 }
 
 .total-take .total {
@@ -1249,6 +1252,7 @@ div.review-date > span {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    width: 100%;
 }
 
 .take-order .bask {

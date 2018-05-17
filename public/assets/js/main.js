@@ -436,11 +436,51 @@ jQuery(document).ready(function () {
     (function ($) {
         $('.header-bottom__input').bind('keyup', function () {
             console.log(342433);
-            var limit = Math.floor(($(window).height() - 160) / 60) - 1;
-            $.getJSON('/catalog/autocomplete', {q: $(this).val(), l: limit}, function (data) {
-                if (data.length > 0) {
-                    console.log(data);
-                    // methods.formatResult(data);
+            var options = {
+                url: '/catalog/autocomplete',
+                minLength: 2,
+                modal: ".search-modal",
+                modal_error_class: 'search-modal-error',
+                noimageSrc: 'noimage.jpg'
+            };
+            var methods = {
+                init: function (data) {
+                    var el = $(this);
+                    el.live('keyup', methods.search);
+                    $('.' + options.modal_error_class).live('click', function (e) {
+                        $(this).removeClass(options.modal_error_class);
+                        $(this).hide();
+                        el.val('');
+                        el.focus();
+                    });
+                }, search: function () {
+                    var val = $(this).val();
+                    options.searchPhrase = val;
+                    var limit = Math.floor(($(window).height() - 160) / 60) - 1;
+                    if (val && val.length > options.minLength) {
+                        $.getJSON(options.url, {q: $(this).val(), l: limit}, function (data) {
+                            if (data.length > 0) {
+                                methods.formatResult(data);
+                            }
+                            else {
+                                methods.noResults();
+                            }
+                        });
+                    }
+                    else {
+                        $(options.modal).hide();
+                    }
+                }, noResults: function () {
+                    var modal = $(options.modal);
+                    modal.addClass(options.modal_error_class);
+                    modal.html('<ul><li>По Вашему запросу ничего не найдено.</li></ul>');
+                }, formatResult: function (data) {
+                    var modal = $(options.modal);
+                    if (modal.hasClass(options.modal_error_class)) {
+                        modal.removeClass(options.modal_error_class);
+                    }
+                    modal.html('');
+                    var html = '<div class="search-list"';
                     $(data).each(function () {
                         var i = $(this)[0];
                         if (i.imgid != null) {
@@ -456,31 +496,41 @@ jQuery(document).ready(function () {
                         // </a></li> \
 
                         html += '<div class="search-list__item search-result">\
-                                    <a href="/catalog/item/' + i.id + '"> \
-                                    <div class="search-result__inner"> \
-                                        <div class="search-result__img"><img src="/images/' + imgSrc + '" alt="" /></div>  \
-                                            <div class="search-result__content">\
-                                                <div class="search-result__content-top">\
-                                                    <h5 class="search-result__name">\' + i.category + \' \' + i.brand + \' \' + i.name + \'</h5>\
-                                                </div>\
-                                                <p class="search-result__coast">2500 грн</p> \
-                                            </div>\
-                                        </div>\
-                                    </a></div> \
-                                ';
+                    <a href="/catalog/item/' + i.id + '"> \
+                    <div class="search-result__inner"> \
+                        <div class="search-result__img"><img src="/images/' + imgSrc + '" alt="" /></div>  \
+                            <div class="search-result__content">\
+                                <div class="search-result__content-top">\
+                                    <h5 class="search-result__name">\' + i.category + \' \' + i.brand + \' \' + i.name + \'</h5>\
+                                </div>\
+                                <p class="search-result__coast">2500 грн</p> \
+                            </div>\
+                        </div>\
+                    </a></div> \
+                ';
                     });
+                    // html += '<li class="search-modal__link"> \
+                    //         <a href="/catalog/search/' + options.searchPhrase + '">Показать все результаты поиска &rarr;</a> \
+                    //     </li>\
+                    //     </ul>';
                     html += '<button class="header-search__button"> \
-                                 <a href="/catalog/search/' + options.searchPhrase + '">Показать все результаты поиска &rarr;</a> \
-                                </button>\
-                                </div>';
-                    $('.search-list').append(html)
-                    $('.search-list').show();
+                    <a href="/catalog/search/' + options.searchPhrase + '">Показать все результаты поиска &rarr;</a> \
+                </button>>\
+                </div>';
+                    modal.append(html)
+                    modal.show();
+                }
+            };
+            $.fn.siteSearch = function (method) {
+                if (methods[method]) {
+                    return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
+                } else if (typeof method === 'object' || !method) {
+                    return methods.init.apply(this, arguments);
+                } else {
+                    $.error('Метод с именем ' + method + ' не существует');
+                }
+            };
 
-                }
-                else {
-                    methods.noResults();
-                }
-            });
         })
     })(jQuery);
 
