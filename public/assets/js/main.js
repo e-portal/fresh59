@@ -433,20 +433,20 @@ jQuery(document).ready(function () {
     }
 
     /********************************************************/
-    (function ($) {
-        $('.header-bottom__input').bind('keyup', function () {
-            console.log(342433);
-
-            $.getJSON('https://590.ua/catalog/autocomplete', {q: $(this).val(), l: 100}, function (data) {
-                if (data.length > 0) {
-                    console.log(data);
-                }
-                else {
-                    methods.noResults();
-                }
-            });
-        })
-    })(jQuery);
+    // (function ($) {
+    //     $('.header-bottom__input').bind('keyup', function () {
+    //         console.log(342433);
+    //
+    //         $.getJSON('https://590.ua/catalog/autocomplete', {q: $(this).val(), l: 100}, function (data) {
+    //             if (data.length > 0) {
+    //                 console.log(data);
+    //             }
+    //             else {
+    //                 methods.noResults();
+    //             }
+    //         });
+    //     })
+    // })(jQuery);
 
     (function ($) {
         var options = {
