@@ -453,8 +453,8 @@ jQuery(document).ready(function () {
             var modal_ = $(options.modal_error_class);
 
             modal.html('');
-            // var limit = Math.floor(($(window).height() - 250) / 60) - 1;
-            $.getJSON(options.url, {q: $(this).val(), l: 2}, function (data) {
+            var limit = Math.floor(($(window).height() - 160) / 60) - 1;
+            $.getJSON(options.url, {q: $(this).val(), l: limit}, function (data) {
 
 
                 if (data.length > 0) {
