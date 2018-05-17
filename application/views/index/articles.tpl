@@ -6,8 +6,22 @@
         <div class="owl-main">
 
             <div class="owl owl-slide">
-                {foreach from=$footer_articles item=article}
+                {foreach from=$footer_articles item=article name=articles_slider}
                     {*{$article|@debug_print_var}*}
+                    {if 3 == $smarty.foreach.articles_slider.index}
+                        <div class="formu items">
+
+                            <div class="liner"><span>Узнавай о новых акциях!</span></div>
+
+                            <form action="">
+                                <input type="text" placeholder="Имя">
+                                <input type="email" placeholder="E-mail">
+                                <input type="text" placeholder="Телефон" class="numb">
+                                <div class="sendy acty">Подписаться</div>
+                            </form>
+
+                        </div>
+                    {/if}
                     <div class="items">
                         <a href="/articles/{$article.url|mblower}">
 

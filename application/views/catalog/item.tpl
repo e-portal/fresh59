@@ -235,7 +235,7 @@
                     {else}
                         <div class="big-price">{price $item.price $item.id_currency} {$smarty.session.Currency.title}</div>
                     {/if}
-                    {if true!==$certificates}
+                    {if true==$certificates}
                         <div class="buy-by-part-from">
                             <img src="/assets/img/izee1.png" alt="">
                             <em>{if $item.rent > 25}8{elseif $item.rent > 12.5}6{else}3{/if}</em>
@@ -276,7 +276,7 @@
                 </div>
                 <div class="buy-by-part">
                     {*===================Certificate=================*}
-                    {if true!==$certificates}
+                    {if true==$certificates}
                         <form>
                             <label class="servs">ТехноЗабота Универсальная на 36 месяцев
                                 <input type="checkbox" checked="checked">
