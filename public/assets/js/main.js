@@ -473,7 +473,7 @@ jQuery(document).ready(function () {
                             </div>\
                         </a></div> \
                         ';
-                        modal.append(html)
+                        modal.append('<div>')
                         // modal.show();
 
 
