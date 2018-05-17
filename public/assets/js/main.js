@@ -485,7 +485,7 @@ jQuery(document).ready(function () {
                         ';
 
                     });
-                    html_ += '</div> \
+                    html_ = '</div> \
                                  <a href="/catalog/search/' + options.searchPhrase + '">Показать все результаты поиска &rarr;</a> \
                                 </button>\
                                 ';
