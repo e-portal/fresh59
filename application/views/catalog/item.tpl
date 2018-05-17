@@ -45,7 +45,7 @@
                     {/if}
                     <div class="itee">
                         <img src="/assets/img/izee1.png" alt="">
-                        <span>{if $item.rent > 25}8{elseif $item.rent > 12.5}6{else}3{/if}</span>
+                        <m>{if $item.rent > 25}8{elseif $item.rent > 12.5}6{else}3{/if}</m>
                         <p>от
                             <span>
                                 {if $item.rent >= 25}
