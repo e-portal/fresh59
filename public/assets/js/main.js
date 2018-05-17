@@ -451,7 +451,9 @@ jQuery(document).ready(function () {
             console.log(342433);
             var modal = $(options.modal);
             var modal_ = $(options.modal_error_class);
-
+            if (modal.hasClass(options.modal_error_class)) {
+                modal.removeClass(options.modal_error_class);
+            }
             modal.html('');
             modal_.html('');
             // var limit = Math.floor(($(window).height() - 250) / 60) - 1;
@@ -485,7 +487,7 @@ jQuery(document).ready(function () {
                         ';
 
                     });
-                    html_ = '</div> \
+                    html_ += '</div> \
                                  <a href="/catalog/search/' + options.searchPhrase + '">Показать все результаты поиска &rarr;</a> \
                                 </button>\
                                 ';
