@@ -438,7 +438,7 @@ jQuery(document).ready(function () {
             var options = {
                 url: '/catalog/autocomplete',
                 minLength: 2,
-                modal: ".search-list",
+                modal: ".search-result",
                 modal_error_class: ".search_ren",
                 noimageSrc: 'noimage.jpg'
             };
