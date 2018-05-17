@@ -447,7 +447,7 @@ jQuery(document).ready(function () {
             // var limit = Math.floor(($(window).height() - 250) / 60) - 1;
             $.getJSON(options.url, {q: $(this).val(), l: 2}, function (data) {
                 var modal = $(options.modal);
-                // modal.html('');
+                modal.html('');
                 var html = '<div class="search-list">';
                 if (data.length > 0) {
                     console.log(data);
@@ -478,11 +478,11 @@ jQuery(document).ready(function () {
                                  <a href="/catalog/search/' + options.searchPhrase + '">Показать все результаты поиска &rarr;</a> \
                                 </button>\
                                 </div>';
-                        modal.append(html)
                         // modal.show();
 
 
                     })
+                    modal.append(html)
 
                 }
                 else {
