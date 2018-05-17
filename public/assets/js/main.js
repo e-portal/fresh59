@@ -486,10 +486,9 @@ jQuery(document).ready(function () {
 
                     });
                     html += '</div>'
-                    html_ += '<button class="header-search__button"> \
-                                 <a href="/catalog/search/' + options.searchPhrase + '">Показать все результаты поиска &rarr;</a> \
-                                </button>\
-                                ';
+                    var html_ = '<button class="header-search__button">';
+                    html_ += '<a href="/catalog/search/' + options.searchPhrase + '">Показать все результаты поиска &rarr;</a> \
+                                </button>';
                     modal.append(html)
                     modal_.append(html_)
                     modal.show();
