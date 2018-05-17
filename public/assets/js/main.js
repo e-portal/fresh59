@@ -452,14 +452,14 @@ jQuery(document).ready(function () {
             var modal = $(options.modal);
             var modal_ = $(options.modal);
 
-
+            modal.html('');
             // var limit = Math.floor(($(window).height() - 250) / 60) - 1;
             $.getJSON(options.url, {q: $(this).val(), l: 2}, function (data) {
 
 
                 if (data.length > 0) {
                     console.log(data);
-                    modal.html('');
+
                     var html = '<div class="search-list__item search-result">';
                     $(data).each(function () {
                         var i = $(this)[0];
