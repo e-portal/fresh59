@@ -1383,7 +1383,8 @@ input {
     background: #fff;
     left: 100%;
     top: 0;
-    width: 700px;
+    width: 1050px;
+    /*width: 700px;*/
     display: none;
     -webkit-transition: -webkit-transform .3s ease-in-out;
     transition: -webkit-transform .3s ease-in-out;
@@ -1415,7 +1416,6 @@ input {
     content: '\2022';
     padding-right: 20px;
 }
-
 .base-menu .categ-menu .menu-0 li:hover,
 .base-menu .categ-menu .menu-0 li:nth-child(odd):hover {
     background: #fff;
@@ -2357,14 +2357,19 @@ input {
     cursor: pointer;
 }
 
+.buy-by-part-from em,
 .itee em {
     font-size: 11px;
     color: #000;
     position: absolute;
-    left: 20px;
+    left: 17px;
     font-style: italic;
 }
 
+.buy-by-part-from em {
+    top: 6px;
+    left: 13px;
+}
 /*.itee:nth-child(2) {*/
 /*margin: 10px 0 0*/
 /*}*/
@@ -4024,7 +4029,7 @@ ul#selectsMenuBoxi > li.options:hover {
     height: 107px;
     z-index: 5;
     flex-wrap: wrap;
-    top: -3px;
+    top: 3px;
     right: 15px;
     background: rgba(255, 255, 255, 1);
 }
@@ -5314,6 +5319,11 @@ ul.nacc .tabs-saw p {
     border-radius: 25px;
     margin-top: 10px;
     transition: .3s;
+}
+
+.comp-link a {
+    display: inline-block;
+    width: 100%;
 }
 .comp-link:hover {
     background: #fbd402;
