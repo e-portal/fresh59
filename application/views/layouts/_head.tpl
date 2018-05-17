@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/assets/css/small-page.css">
     <link rel="stylesheet" href="/assets/css/media.css">
     <link rel="stylesheet" href="/assets/css/mob-version.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
     {if isset($css_int) }
     {$css_int}
     {/if}

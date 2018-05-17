@@ -1,0 +1,133 @@
+.search-list {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    background: #fff;
+    margin: 8px 0 30px;
+    padding: 0;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 9px -1px rgba(0, 0, 0, .5);
+    display: flex;
+    flex-direction: column;
+}
+
+.iteem:nth-child(2) .inpp.action .search-list {
+    z-index: 9;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.search-list__item.search-result a {
+    display: block;
+}
+
+.search-list button {
+    text-align: center;
+    padding: 5px;
+    border-radius: 25px;
+    transition: .3s;
+    border: none;
+    position: relative;
+    text-transform: uppercase;
+    display: flex;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto 30px;
+    cursor: pointer;
+    width: 88%;
+}
+
+.search-list button:hover {
+    background: #fbd402;
+}
+
+.search-result__inner {
+    display: flex;
+}
+
+.search-result {
+    padding: 14px 32px;
+    position: relative;
+    -ms-transition: all .5s;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.search-result__img {
+    width: 60px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.search-result__inner {
+    padding-left: 76px;
+    position: relative;
+}
+
+.search-result__content {
+    display: flex;
+    flex-wrap: wrap;
+    height: 60px;
+    align-items: center;
+}
+
+.search-result__content-top {
+    width: 100%;
+}
+
+.search-result__name {
+    font-weight: 500;
+    position: relative;
+    width: max-content;
+    transition: .5s;
+}
+
+.search-result__coast {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.header-bottom__exit {
+    position: absolute;
+    top: 50%;
+    display: block;
+    transform: translateY(-50%) rotate(45deg);
+    right: 97px;
+    width: 18px;
+    height: 18px;
+    background: 0 0;
+    border: none;
+    opacity: 0;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.header-bottom__exit:after, .header-bottom__exit:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    box-shadow: 0 0 0 1px #000;
+    transform-origin: center;
+}
+
+.header-bottom__exit:before {
+    transform: translateX(-50%) rotate(90deg);
+}
+
+header.search-open .header-bottom__exit {
+    display: block;
+    opacity: 1;
+    z-index: 5;
+}
