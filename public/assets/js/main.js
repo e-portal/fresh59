@@ -443,11 +443,11 @@ jQuery(document).ready(function () {
                 noimageSrc: 'noimage.jpg'
             };
             console.log(342433);
-
+            var modal = $(options.modal);
+            modal.html('');
             // var limit = Math.floor(($(window).height() - 250) / 60) - 1;
             $.getJSON(options.url, {q: $(this).val(), l: 2}, function (data) {
-                var modal = $(options.modal);
-                modal.html('');
+
                 var html = '<div class="search-list">';
                 if (data.length > 0) {
                     console.log(data);
@@ -518,40 +518,7 @@ jQuery(document).ready(function () {
     //                 $.getJSON(options.url, {q: $(this).val(), l: limit}, function (data) {
     //                     if (data.length > 0) {
     //                         methods.formatResult(data);
-    //                         $(data).each(function () {
-    //                             var i = $(this)[0];
-    //                             if (i.imgid != null) {
-    //                                 var imgSrc = 'catalog/' + i.imgid + '_s.' + i.imgext + '';
-    //                             }
-    //                             else {
-    //                                 var imgSrc = options.noimageSrc;
-    //                             }
-    //                             // html += '<li>\
-    //                             // <a href="/catalog/item/' + i.id + '"> \
-    //                             //     <span class="search-modal__img"><img src="/images/' + imgSrc + '" alt="" /></span> \
-    //                             //     <p>' + i.category + ' ' + i.brand + ' ' + i.name + '</p> \
-    //                             // </a></li> \
     //
-    //                               html += '<div class="search-list__item search-result">\
-    //                                 <a href="/catalog/item/' + i.id + '"> \
-    //                                 <div class="search-result__inner"> \
-    //                                     <div class="search-result__img"><img src="/images/' + imgSrc + '" alt="" /></div>  \
-    //                                         <div class="search-result__content">\
-    //                                             <div class="search-result__content-top">\
-    //                                                 <h5 class="search-result__name">\' + i.category + \' \' + i.brand + \' \' + i.name + \'</h5>\
-    //                                             </div>\
-    //                                             <p class="search-result__coast">2500 грн</p> \
-    //                                         </div>\
-    //                                     </div>\
-    //                                 </a></div> \
-    //                             ';
-    //                         });
-    //                         html += '<button class="header-search__button"> \
-    //                              <a href="/catalog/search/' + options.searchPhrase + '">Показать все результаты поиска &rarr;</a> \
-    //                             </button>\
-    //                             </div>';
-    //                         modal.append(html)
-    //                         modal.show();
     //
     //                     }
     //                     else {
