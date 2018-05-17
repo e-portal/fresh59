@@ -438,7 +438,7 @@ jQuery(document).ready(function () {
             var options = {
                 url: '/catalog/autocomplete',
                 minLength: 2,
-                modal: ".search-modal",
+                modal: ".search-list",
                 modal_error_class: 'search-modal-error',
                 noimageSrc: 'noimage.jpg'
             };
@@ -473,7 +473,7 @@ jQuery(document).ready(function () {
                             </div>\
                         </a></div> \
                         ';
-                        modal.append('<div>')
+                        modal.append(html)
                         // modal.show();
 
 
