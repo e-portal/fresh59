@@ -274,7 +274,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="buy-by-part {if true==$certificates}certificates{/if}">
+                <div class="buy-by-part {if true!==$certificates}certificates{/if}">
                     {*===================Certificate=================*}
                     {if true!==$certificates}
                         <form>
