@@ -605,47 +605,7 @@ jQuery(document).ready(function () {
 
 
 
-    function refreshBasketStats() {
-        $.getJSON("/basket/getBasketStats", {}, function (data) {
-            $(".data-basket-amount").html(data.amount);
-            $(".data-basketSumm").html(data.summ);
-            $('.data-tableSumm').html(data.summ);
-            if ($(".data-tableSumm").size() > 0)
-                $(".data-tableSumm").html(data.summ + data.delivery);
-            if ($(".data-transfer").size() > 0) {
-                getTransferSumm();
-            }
-            if ($('.data-gift').size() == 0) {
-                $('.data-giftItem').remove();
-            }
-            if ((data.amount == '0' && data.creditAmount == '0'))
-                $(".data-basket").html("<center><a href='https://590.ua/'><img src='https://590.ua/assets/media/emptybasket.png' style='max-width: 100% !important;max-height: 100% !important;'></a></center>");
-            if ((data.amount == '0')) {
-                $(".data-order").html("<center><a href='https://590.ua/'><img src='https://590.ua/assets/media/emptybasket.png' style='max-width: 100% !important;max-height: 100% !important;'></a></center>");
-                $('.modal-footer .btn-warning').hide();
-                $('.shopping-cart a').removeClass('active');
-            } else {
-                $('.modal-footer .btn-warning').show();
-            }
-        });
-    }
 
-    function getTransferSumm() {
-        if ($(".data-transfer").size() > 0) {
-            $.get("/basket/transfersumm", {}, function (data) {
-                console.log(data);
-                if (data.length > 0) {
-                    $(".data-transfer").html(data);
-                } else {
-                    $(".data-transfer").html('');
-                }
-            });
-        }
-    }
-
-    $('.kiev').bind('click',function () {
-        getTransferSumm()
-    })
 
 
 
@@ -1481,3 +1441,67 @@ function deleteItemFromCompare(e) {
 // }
 
 /*---------end BIND UNBIND---------*/
+
+
+
+function selectRegion(regionId) {
+    $(".data-region-list a").each(function () {
+        $(this).removeClass('active');
+    });
+    $.cookie('region', regionId, {expires: 7, path: "/", domain: document.location.hostname, secure: false});
+    var el = $("#region_" + regionId);
+    $(".data-phones").html($(el).data('phone'));
+    $(".kiev").html($(el).html());
+    $("#region_" + regionId).addClass('active');
+    $('.region-choose > .dropdown').removeClass('open');
+    if ($('.kiev').text() === 'Киев') {
+        $('header .work-time p').first().show();
+        $('header .work-time p').last().hide();
+    } else {
+        $('header .work-time p').first().hide();
+        $('header .work-time p').last().show();
+    }
+    refreshBasketStats();
+}
+
+function refreshBasketStats() {
+    $.getJSON("/basket/getBasketStats", {}, function (data) {
+        $(".data-basket-amount").html(data.amount);
+        $(".data-basketSumm").html(data.summ);
+        $('.data-tableSumm').html(data.summ);
+        if ($(".data-tableSumm").size() > 0)
+            $(".data-tableSumm").html(data.summ + data.delivery);
+        if ($(".data-transfer").size() > 0) {
+            getTransferSumm();
+        }
+        if ($('.data-gift').size() == 0) {
+            $('.data-giftItem').remove();
+        }
+        if ((data.amount == '0' && data.creditAmount == '0'))
+            $(".data-basket").html("<center><a href='https://590.ua/'><img src='https://590.ua/assets/media/emptybasket.png' style='max-width: 100% !important;max-height: 100% !important;'></a></center>");
+        if ((data.amount == '0')) {
+            $(".data-order").html("<center><a href='https://590.ua/'><img src='https://590.ua/assets/media/emptybasket.png' style='max-width: 100% !important;max-height: 100% !important;'></a></center>");
+            $('.modal-footer .btn-warning').hide();
+            $('.shopping-cart a').removeClass('active');
+        } else {
+            $('.modal-footer .btn-warning').show();
+        }
+    });
+}
+
+function getTransferSumm() {
+    if ($(".data-transfer").size() > 0) {
+        $.get("/basket/transfersumm", {}, function (data) {
+            console.log(data);
+            if (data.length > 0) {
+                $(".data-transfer").html(data);
+            } else {
+                $(".data-transfer").html('');
+            }
+        });
+    }
+}
+
+$('.kiev').bind('click',function () {
+    getTransferSumm()
+})
