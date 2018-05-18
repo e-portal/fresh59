@@ -55,6 +55,15 @@
                                             <li data-value="kyiv">Киев</li>
                                             <li data-value="kirovograd">Кировоград</li>
                                             <li data-value="kremenchug">Кременчуг</li>
+
+                                            <li data-value="kremenchug">Кривой Рог</li>
+                                            <li data-value="kremenchug">Львов</li>
+                                            <li data-value="kremenchug">Мариуполь</li>
+                                            <li data-value="kremenchug">Николаев</li>
+                                            <li data-value="kremenchug">Одесса</li>
+                                            <li data-value="kremenchug">Харьков</li>
+                                            <li data-value="kremenchug">Херсон</li>
+                                            <li data-value="kremenchug">Черкассы</li>
                                         </ul>
                                     </li>
                                 </ul>
