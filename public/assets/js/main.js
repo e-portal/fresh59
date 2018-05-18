@@ -1476,7 +1476,7 @@ function deleteItemFromCompare(e) {
 
 
 function selectRegion(regionId) {
-    $(".data-region-list a").each(function () {
+    $(".data-region-list li").data('value').each(function () {
         $(this).removeClass('active');
     });
     $.cookie('region', regionId, {expires: 7, path: "/", domain: document.location.hostname, secure: false});

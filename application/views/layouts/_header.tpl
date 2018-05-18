@@ -42,7 +42,7 @@
                 <div class="head-item">
                     <div class="info">
                         <div class="name-info">
-                            <div class="city">
+                            <div class="city data-region-list">
                                 <img class="header-visible" src="./img/point.png" alt="1">
                                 <div class="your">Ваш город</div>
                                 <ul class="faux-select" data-selected-value="kyiv">
