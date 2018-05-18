@@ -19,21 +19,22 @@ $(document).ready(function () {
                 dots: false,
                 focusOnSelect: true,
                 centerPadding: '60px',
-                /*responsive: [
+                responsive: [
                     {
-                        breakpoint: 1024,
+                        breakpoint: 1441,
                         settings: {
-                            arrows: false,
                             slidesToShow: 4
                         }
                     },
                     {
                         breakpoint: 768,
                         settings: {
+                            arrows: false,
+
                             slidesToShow: 3
                         }
                     }
-                ]*/
+                ]
             });
         }
 
