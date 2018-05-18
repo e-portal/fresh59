@@ -1473,8 +1473,9 @@ function deleteItemFromCompare(e) {
 
 /*---------end BIND UNBIND---------*/
 $(document).ready(function () {
-    console.log($.cookie('region'));
-
+    // console.log($.cookie('region'));
+    // if()
+    $.cookie('region')
 })
 
 
