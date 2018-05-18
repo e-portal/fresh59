@@ -87,8 +87,8 @@
                                             {*<li data-value="homephone"><a href="tel:+380442238520">(044) 223-8-520</a>*}
                                             {*</li>*}
 
-                                            <li><a href="tel:+380432572777" class="t_region_6" >(0432) 57-27-77</a></li>
-                                            <li><a href="tel:+380672624343"  class="t_region_6" >(067) 262-43-43</a></li>
+                                            <li><a href="tel:+380432572777" class="tregion_6" >(0432) 57-27-77</a></li>
+                                            <li><a href="tel:+380672624343"  class="tregion_6" >(067) 262-43-43</a></li>
                                             <li><a href="#"  data-phone='(056) 788-71-71, (095) 270-50-71' >Днепропетровск</a></li>
                                             <li><a href="#"  data-phone='(062) 207-46-90;  (050) 444-68-25' >Донецк</a></li>
                                             <li><a href="#"  data-phone='(061) 701 19 60;  (098) 867-13-92' >Запорожье</a></li>
