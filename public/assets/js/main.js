@@ -507,6 +507,11 @@ jQuery(document).ready(function () {
             }
 
         })
+
+        $('.header-search__button').on('click',function () {
+            $(this).find('a').trigger('click');
+
+        })
     })(jQuery);
 
     // (function ($) {
