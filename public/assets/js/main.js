@@ -630,7 +630,9 @@ jQuery(document).ready(function () {
             // }
         });
     }
-    refreshBasketStats();
+    $('.kiev').bind('click',function () {
+        refreshBasketStats();
+    })
 
 
 
