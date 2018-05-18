@@ -60,7 +60,7 @@
                                     {foreach from=$children item=child key=key}
                                         <li>
                                             <a href="{url assoc.catid=$key assoc.searchtext=$searchtext param=search}">
-                                                {$child} ({$counts[$key]})
+                                                {$child}
                                             </a>
                                         </li>
                                     {/foreach}
