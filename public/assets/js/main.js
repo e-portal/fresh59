@@ -452,26 +452,28 @@ jQuery(document).ready(function () {
             var modal = $(options.modal);
             var modal_ = $(options.modal_error_class);
 
+            var val = $(this).val();
 
             var limit = Math.floor(($(window).height() - 160) / 100) - 1;
-            $.getJSON(options.url, {q: $(this).val(), l: limit}, function (data) {
+            if(val && val.length > options.minLength) {
+                $.getJSON(options.url, {q: $(this).val(), l: limit}, function (data) {
 
-                modal.html('');
-                if (data.length > 0) {
-                    console.log(data);
-                    modal_.html('');
-                    var html = '<div class="123">';
-                    $(data).each(function () {
-                        var i = $(this)[0];
-
-                        if (i.imgid != null) {
-                            var imgSrc = 'catalog/' + i.imgid + '_s.' + i.imgext + '';
-                        }
-                        else {
-                            var imgSrc = options.noimageSrc;
-                        }
+                    modal.html('');
+                    if (data.length > 0) {
                         console.log(data);
-                        html += '<div class="search-list__item search-result">\
+                        modal_.html('');
+                        var html = '<div class="123">';
+                        $(data).each(function () {
+                            var i = $(this)[0];
+
+                            if (i.imgid != null) {
+                                var imgSrc = 'catalog/' + i.imgid + '_s.' + i.imgext + '';
+                            }
+                            else {
+                                var imgSrc = options.noimageSrc;
+                            }
+                            console.log(data);
+                            html += '<div class="search-list__item search-result">\
                             <a href="/catalog/item/' + i.id + '"> \
                         <div class="search-result__inner"> \
                             <div class="search-result__img"><img src="/images/' + imgSrc + '" alt="" /></div>  \
@@ -485,22 +487,25 @@ jQuery(document).ready(function () {
                         </a> </div> \
                         ';
 
-                    });
-                    html += '</div>'
-                    var html_ = '<button class="header-search__button">';
-                    html_ += '<a href="/catalog/search/' + options.searchPhrase + '">Показать все результаты поиска &rarr;</a> \
+                        });
+                        html += '</div>'
+                        var html_ = '<button class="header-search__button">';
+                        html_ += '<a href="/catalog/search/' + options.searchPhrase + '">Показать все результаты поиска &rarr;</a> \
                                 </button>';
-                    modal.append(html)
-                    modal_.append(html_)
-                    modal.show();
+                        modal.append(html)
+                        modal_.append(html_)
+                        modal.show();
 
 
 
-                }
-                else {
-                    // methods.noResults();
-                }
-            });
+                    }
+                    else {
+                        // methods.noResults();
+                    }
+                });
+
+            }
+
         })
     })(jQuery);
 
@@ -1450,7 +1455,7 @@ function selectRegion(regionId) {
     });
     $.cookie('region', regionId, {expires: 7, path: "/", domain: document.location.hostname, secure: false});
     var el = $("#region_" + regionId);
-    $(".data-phones").html($(el).data('phone'));
+    $(".numbers").html($(el).data('phone'));
     $(".kiev").html($(el).html());
     $("#region_" + regionId).addClass('active');
     $('.region-choose > .dropdown').removeClass('open');
