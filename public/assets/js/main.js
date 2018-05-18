@@ -516,9 +516,9 @@ jQuery(document).ready(function () {
                     }
                     else {
                         modal_.html('');
-                        var html_ = '<button class="header-search__button">';
-                        html_ += '<a href="">По Вашему запросу ничего не найдено.</a> \
-                                </button>';
+                        var html_ = '<div class="compare-itm">';
+                        html_ += 'По Вашему запросу ничего не найдено. \
+                               </div>';
                         modal_.append(html_)
 
                         // methods.noResults();
