@@ -1485,13 +1485,13 @@ function selectRegion(regionId) {
     $(".data-region-list span").html($(el).html());
     $("#region_" + regionId).addClass('active');
     $('.region-choose > .dropdown').removeClass('open');
-    if ($('.data-region-list span').text() === 'Киев') {
-        $('header .work-time p').first().show();
-        $('header .work-time p').last().hide();
-    } else {
-        $('header .work-time p').first().hide();
-        $('header .work-time p').last().show();
-    }
+    // if ($('.data-region-list span').text() === 'Киев') {
+    //     $('header .work-time p').first().show();
+    //     $('header .work-time p').last().hide();
+    // } else {
+    //     $('header .work-time p').first().hide();
+    //     $('header .work-time p').last().show();
+    // }
     refreshBasketStats();
 }
 

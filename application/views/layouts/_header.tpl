@@ -48,8 +48,8 @@
                                 <ul class="faux-select" data-selected-value="kyiv">
                                     <li class="selected-option"><span>Киев</span>
                                         <ul class="options">
-                                            <li data-value="vinnitsa" onclick="selectRegion(6)">Винница</li>
-                                            <li data-value="dnepr" onclick="selectRegion(2)">Днепр</li>
+                                            <li id="region_6" data-value="vinnitsa" onclick="selectRegion(6)">Винница</li>
+                                            <li id="region_2" data-value="dnepr" onclick="selectRegion(2)">Днепр</li>
                                             <li data-value="donetsk">Донецк</li>
                                             <li data-value="zaporoze">Запорожье</li>
                                             <li data-value="kyiv">Киев</li>
@@ -86,8 +86,8 @@
                                             </li>
                                             {*<li data-value="homephone"><a href="tel:+380442238520">(044) 223-8-520</a>*}
                                             {*</li>*}
-                                            <li><a href="#" id="region_6" data-phone='(0432) 57-27-77; (067) 262-43-43' >Винница</a></li>
-                                            <li><a href="#" id="region_2" data-phone='(056) 788-71-71, (095) 270-50-71' >Днепропетровск</a></li>
+                                            <li><a href="#"  data-phone='(0432) 57-27-77; (067) 262-43-43' >Винница</a></li>
+                                            <li><a href="#"  data-phone='(056) 788-71-71, (095) 270-50-71' >Днепропетровск</a></li>
                                             <li><a href="#" id="region_12" data-phone='(062) 207-46-90;  (050) 444-68-25' onclick="selectRegion(12)">Донецк</a></li>
                                             <li><a href="#" id="region_9" data-phone='(061) 701 19 60;  (098) 867-13-92' onclick="selectRegion(9)">Запорожье</a></li>
                                             <li><a href="#" id="region_1" data-phone='(050) 590-0-590, (044) 223-8-520, (067) 590-0-591, (093) 590-0-590' onclick="selectRegion(1)">Киев</a></li>
