@@ -893,6 +893,11 @@ div.review-date > span {
 
 .other-model {
     margin-right: 15px;
+    display: flex;
+}
+
+.small-product .parag {
+    overflow-x: auto;
 }
 
 .other-model-item span {

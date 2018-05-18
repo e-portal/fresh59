@@ -1,4 +1,3 @@
-
 @media screen and (max-width: 1601px) {
     .title-slide.active-slide {
         -webkit-box-shadow: -15px 10px 25px 3px rgba(255, 255, 255, 1);
@@ -6,6 +5,7 @@
         box-shadow: -15px 10px 25px 3px rgba(255, 255, 255, 1);
     }
 }
+
 @media screen and (max-width: 1441px) {
     .head-item:nth-child(2) {
         padding: 0 55px;
@@ -211,6 +211,34 @@
         width: 370px;
     }
 
+    .big-price {
+        font-size: 32px;
+    }
+
+    .qweek-busket-prodadd-to-cart .bask.acty {
+        width: 185px;
+        font-size: 18px;
+        height: 40px;
+    }
+
+    .qweek-buy {
+        width: 185px;
+    }
+
+    .qweek-busket-prodadd-to-cart .bask:after {
+        right: 35px;
+    }
+
+    .qweek-buy input {
+        font-size: 11px;
+        padding: 4px 0 5px 11px;
+    }
+
+    .servs {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
     .iteem:nth-child(2) .inpp {
         width: 90%;
     }
@@ -314,6 +342,37 @@
         width: 285px;
     }
 
+    .product-menu a {
+        font-size: 14px;
+    }
+
+    .prod-stars,
+    .compare-found a {
+        font-size: 12px;
+    }
+
+    .compare-found .right-butt span {
+        margin: 0 0 0 32px;
+    }
+    .big-price {
+        font-size: 30px;
+    }
+    .qweek-busket-prodadd-to-cart .bask.acty {
+        width: 175px;
+    }
+    .qweek-buy {
+        width: 180px;
+    }
+
+    .qweek-buy input {
+        padding: 4px 0 5px 5px;
+    }
+    .servs {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+
     .front-wrap {
         width: 240px;
     }
@@ -403,6 +462,59 @@
 
     .under-senn .item-senn {
         width: 246px;
+    }
+
+    .product-menu a {
+        font-size: 13px;
+        line-height: 41px;
+    }
+
+    .look-for a:after {
+        top: -8px;
+    }
+    .qweek-busket-prodadd-to-cart .bask.acty {
+        width: 160px;
+        font-size: 17px;
+        height: 40px;
+    }
+    .qweek-busket-prodadd-to-cart .bask:after {
+        right: 29px;
+    }
+    .without-reg-prod {
+        font-size: 14px;
+    }
+    .qweek-buy {
+        width: 160px;
+    }
+    .qweek-buy input {
+        font-size: 9px;
+        padding: 5px 0 6px 5px;
+    }
+    .servs {
+        line-height: 16px;
+        font-size: 13px;
+    }
+
+    .slider-product-icon .itee {
+        width: 87px;
+    }
+
+    .right-butt span,
+    .left-butt span,
+    .look-for a {
+        display: inline-block;
+        width: 40px;
+    }
+    .right-butt span > span,
+    .left-butt span > span,
+    .look-for a > span {
+        display: none;
+    }
+
+
+    .threee p {
+        line-height: 18px;
+        font-size: 13px;
     }
 
     .item-senn .otzv,

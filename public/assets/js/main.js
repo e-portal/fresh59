@@ -1479,6 +1479,7 @@ function selectRegion(regionId) {
     $(".data-region-list .options li").each(function () {
         $(this).removeClass('active');
     });
+    console.log(regionId);
     $.cookie('region', regionId, {expires: 7, path: "/", domain: document.location.hostname, secure: false});
     var el = $("#region_" + regionId);
     $(".numbers").html($(el).data('phone'));
