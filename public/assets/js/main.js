@@ -509,8 +509,6 @@ jQuery(document).ready(function () {
                         $('.header-bottom__input').keypress(function (e) {
                             if(e.which == 13) {
                                 e.preventDefault()
-                                $('.searc').click()
-                                console.log(123);
                                 location.href ="/catalog/search/" + options.searchPhrase + "";
                             }
                         })
