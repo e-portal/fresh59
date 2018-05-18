@@ -506,11 +506,9 @@ jQuery(document).ready(function () {
                             // a = href="/catalog/search/' + options.searchPhrase + '"
                             location.href ="/catalog/search/" + options.searchPhrase + "";
                         })
+
                         if(e.which == 13){//Enter key pressed
-                            $('.searc').click(function () {
-                                // a = href="/catalog/search/' + options.searchPhrase + '"
-                                location.href ="/catalog/search/" + options.searchPhrase + "";
-                            })
+                            $('.searc').click();//Trigger search button click event
                         }
 
                     }
