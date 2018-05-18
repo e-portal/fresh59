@@ -43,25 +43,72 @@
                     <div class="info">
                         <div class="name-info">
                             <div class="city">
+                                <img class="header-visible" src="./img/point.png" alt="1">
                                 <div class="your">Ваш город</div>
-                                <div class="kiev">Киев</div>
+                                <ul class="faux-select" data-selected-value="kyiv">
+                                    <li class="selected-option"><span>Киев</span>
+                                        <ul class="options">
+                                            <li data-value="vinnitsa">Винница</li>
+                                            <li data-value="dnepr">Днепр</li>
+                                            <li data-value="donetsk">Донецк</li>
+                                            <li data-value="zaporoze">Запорожье</li>
+                                            <li data-value="kyiv">Киев</li>
+                                            <li data-value="kirovograd">Кировоград</li>
+                                            <li data-value="kremenchug">Кременчуг</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <!--<div class="kiev">Киев</div>-->
                             </div>
                             <div class="phone">
+                                <img class="header-visible" src="./img/phons.png" alt="2">
                                 <div class="time-work">Пн-Вс: 09:00 - 18:00 Call центр</div>
 
-                                <div class="numbers">+38 (067) 223 85 20</div>
+                                <!--<div class="numbers">+38 (067) 223 85 20</div>-->
+                                <ul class="faux-select" data-selected-value="kievstar">
+                                    <li class="selected-option"><span><a
+                                                    href="tel:+380675900591">(067) 590-0-591</a></span>
+                                        <ul class="options">
+                                            <li data-value="kievstar"><a href="tel:+380675900591">(067) 590-0-591</a>
+                                            </li>
+                                            <li data-value="mts"><a href="tel:+380505900590">(050) 590-0-590</a></li>
+                                            <li data-value="lifecell"><a href="tel:+380935900590">(093) 590-0-590</a>
+                                            </li>
+                                            <li data-value="homephone"><a href="tel:+380442238520">(044) 223-8-520</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <!--<div class="selectyNumb">-->
+                                <!--<select name="selectyMenuNumb" id="selectyMenuNumb">-->
+                                <!--<option selected><img src="./img/kiev.png" alt="">(067) 590-0-591</option>-->
+                                <!--<option ><img src="./img/kiev.png" alt="">(050) 590-0-590</option>-->
+                                <!--<option ><img src="./img/kiev.png" alt="">(044) 223-8-520</option>-->
+                                <!--<option><img src="./img/kiev.png" alt="">(093) 590-0-590</option>-->
+                                <!--</select>-->
+                                <!---->
+                                <!--</div>-->
+
+
+                            </div>
+                            <div class="inpp">
+                                <form action="">
+                                    <input type="поиск" placeholder="Перезвонить? Введите номер...">
+                                    <div class="send"><img src="./img/phon.png" alt=""></div>
+                                </form>
                             </div>
                         </div>
 
 
                         <div class="inpp">
                             <form action="">
-                                <input type="tel" placeholder="Перезвонить? Введите номер..." class="numb">
-
-                                <div class="send"><img src="/assets/img/phon.png" alt=""></div>
+                                <input type="поиск" class="numb" placeholder="Перезвонить? Введите номер...">
+                                <div class="send"><img src="./img/phon.png" alt=""></div>
                             </form>
                         </div>
                     </div>
+
+
                 </div>
             </div>
         </div>
