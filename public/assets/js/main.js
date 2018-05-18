@@ -1473,6 +1473,7 @@ function deleteItemFromCompare(e) {
 
 /*---------end BIND UNBIND---------*/
 
+console.log($.cookie('region'));
 
 
 function selectRegion(regionId) {
@@ -1484,7 +1485,6 @@ function selectRegion(regionId) {
     });
     console.log(regionId);
     $.cookie('region', regionId, {expires: 7, path: "/", domain: document.location.hostname, secure: false});
-    console.log($.cookie('region'));
     var el = $("#region_" + regionId);
     $(".numbers").html($(el).data('phone'));
     $(".data-region-list span").html($(el).html());
