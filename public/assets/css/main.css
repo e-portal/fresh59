@@ -902,7 +902,7 @@ h6 {}
 }
 
 .faux-select li .options.open {
-    max-height: 1000%;
+    max-height: 600px;
     background: #fff;
     z-index: 10;
     border: 1px solid #ddd;
@@ -914,16 +914,17 @@ h6 {}
     content: ' ';
     background: url(../img/mark.png) no-repeat;
     width: 10px;
-    height: 10px;
+    height: 5px;
     position: absolute;
-    top: 1em;
+    top: 50%;
     right: .7em;
+    transform: translate(0,-50%);
     transition: all ease 0.25s;
 }
 
 .faux-select.open:before {
-    transform: rotate(180deg);
-    top: 0.6em;
+    transform: rotate(180deg) translate(0,50%);
+    top: 50%;
 }
 
 .time-work:after {
