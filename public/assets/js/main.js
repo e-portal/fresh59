@@ -1479,7 +1479,7 @@ function selectRegion(regionId) {
     $(".data-region-list .options li").each(function () {
         $(this).removeClass('active');
     });
-    $("header .phone .selected-option .options.open li").each(function () {
+    $("header .phone .selected-option .options li").each(function () {
         $(this).removeClass('active');
     });
     console.log(regionId);
@@ -1508,7 +1508,7 @@ $(document).ready(function () {
         // $(".numbers").html($(el).data('phone'));
         $(".data-region-list span").html($(el).html());
         $(".data-region-list .options li").removeClass('active')
-        $("header .phone .selected-option .options.open li").removeClass('active')
+        $("header .phone .selected-option .options li").removeClass('active')
         $("#region_" + a).addClass('active');
         $(".tregion_" + a).addClass('active');
 
