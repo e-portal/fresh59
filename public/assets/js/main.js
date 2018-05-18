@@ -644,7 +644,7 @@ jQuery(document).ready(function () {
     }
 
     $('.kiev').bind('click',function () {
-        refreshBasketStats();
+        getTransferSumm()
     })
 
 
