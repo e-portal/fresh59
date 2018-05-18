@@ -110,13 +110,14 @@ jQuery(document).ready(function () {
 
     //-------
 
-    if ($(".modalbox").length) {
-        $(".modalbox").fancybox();
-    }
-    ;
+    // if ($(".modalbox").length) {
+    //     $(".modalbox").fancybox();
+    // }
+    // ;
 
 
     $('.modalbox').click(function () {
+        $('.popup-question').css('display', 'block')
         $("html, body").css('overflow', 'hidden')
     });
 
@@ -127,8 +128,8 @@ jQuery(document).ready(function () {
     $(".button").on("click", function () {
     });
 
-    $(".close").click(function () {
-        $("#popup").fadeOut(600);
+    $(".close, .close-question").click(function () {
+        $(this).parents('.popup-question').css('display', 'none');
         $("html, body").css('overflow', 'visible')
     });
 
@@ -369,6 +370,8 @@ jQuery(document).ready(function () {
     });
 
 
+
+
     // $('header .header-bottom__input ').focus(function () {
     //     $('.search-list').addClass('action');
     // });
@@ -399,6 +402,8 @@ jQuery(document).ready(function () {
                 $('.headers').removeClass('link-hover')
             })
         }
+
+
 
 
         $('body').on('input', 'header .header-bottom__input', function () {
@@ -486,7 +491,7 @@ jQuery(document).ready(function () {
                             </div>\
                         </a> </div> \
                         ';
-
+                            
 
                         });
                         html += '</div>'
