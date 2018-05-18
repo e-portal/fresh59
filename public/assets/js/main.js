@@ -479,12 +479,12 @@ jQuery(document).ready(function () {
                             }
                             console.log(data);
                             html += '<div class="search-list__item search-result">\
-                            <a href="/catalog/item/' + i.id + '"> \
+                            <a href="http://fresh.590.ua/catalog/item/' + i.id + '"> \
                         <div class="search-result__inner"> \
                             <div class="search-result__img"><img src="/images/' + imgSrc + '" alt="" /></div>  \
                                 <div class="search-result__content">\
                                     <div class="search-result__content-top">\
-                                        <h5 class="search-result__name"><a href="/catalog/item/' + i.id + '">' + i.category + ' ' + i.brand + ' ' + i.name + '</a></h5>\
+                                        <h5 class="search-result__name">' + i.category + ' ' + i.brand + ' ' + i.name + '</h5>\
                                     </div>\
                                     <p class="search-result__coast">2500 грн</p> \
                                 </div>\
