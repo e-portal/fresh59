@@ -487,6 +487,7 @@ jQuery(document).ready(function () {
                         </a> </div> \
                         ';
 
+
                         });
                         html += '</div>'
                         var html_ = '<div class="header-search__button">';
