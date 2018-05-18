@@ -1482,10 +1482,10 @@ function selectRegion(regionId) {
     $.cookie('region', regionId, {expires: 7, path: "/", domain: document.location.hostname, secure: false});
     var el = $("#region_" + regionId);
     $(".numbers").html($(el).data('phone'));
-    $(".kiev").html($(el).html());
+    $(".data-region-list").html($(el).html());
     $("#region_" + regionId).addClass('active');
     $('.region-choose > .dropdown').removeClass('open');
-    if ($('.kiev').text() === 'Киев') {
+    if ($('.data-region-list span').text() === 'Киев') {
         $('header .work-time p').first().show();
         $('header .work-time p').last().hide();
     } else {
