@@ -280,16 +280,13 @@
 
                 </div>
             {else}
-                <br/>
-                <div class="alert alert-error">
-                    По Вашему запросу ничего не найдено.
-                    <br/>
+                <div class="not-found">
+                    <p>По заданным параметрам ничего не найдено</p>
+                    <a href="javascript:history.back(-1)" class="khob khob-back">Вернуться назад</a>
                     {if $maybe}
                         Возможно, вы имели ввиду
                         <a class="link" href="https://590.ua/catalog/search/{$maybe|htmlspecialchars}">{$maybe}</a>
                     {/if}
-                    <br/>
-                    <a class="btn btn-mini" href="javascript:history.back(-1)">&larr; Вернуться</a>
                 </div>
             {/if}
         </div>
