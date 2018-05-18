@@ -503,7 +503,8 @@ jQuery(document).ready(function () {
                         modal.show();
 
                         $('.searc').click(function () {
-                            location.href ="/catalog/search/' + options.searchPhrase + '";
+                            // a = href="/catalog/search/' + options.searchPhrase + '"
+                            location.href ="/catalog/search/" + options.searchPhrase + "";
                         })
 
                     }
