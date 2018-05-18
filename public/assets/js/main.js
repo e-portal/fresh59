@@ -1504,12 +1504,11 @@ $(document).ready(function () {
     // console.log($.cookie('region'));
     function cookie_tel() {
         a = $.cookie('region')
-        $(".data-region-list .options li").each(function () {
-            $(this).removeClass('active');
-        });
-        $("header .phone .selected-option .options.open li").each(function () {
-            $(this).removeClass('active');
-        });
+        var el = $("#region_" + a);
+        // $(".numbers").html($(el).data('phone'));
+        $(".data-region-list span").html($(el).html());
+        $(".data-region-list .options li").removeClass('active')
+        $("header .phone .selected-option .options.open li").removeClass('active')
         $("#region_" + a).addClass('active');
         $(".tregion_" + a).addClass('active');
 
