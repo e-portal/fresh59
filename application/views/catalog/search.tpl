@@ -13,7 +13,7 @@
             <meta itemprop="position" content="2">
         </div>
     </div>
-    <h1 class="liner cent"><span>РЕЗУЛЬТАТЫ ПОИСКА “<em>LG</em>”</span></h1>
+    <h1 class="liner cent"><span>РЕЗУЛЬТАТЫ ПОИСКА “<em>{$searchtext}</em>”</span></h1>
     <div class="ourr left-right-banner">
         <div class="left-banner">
             <div class="left-banner-content">
@@ -42,7 +42,7 @@
                                     {$parent}
                                     {foreach from=$children item=child key=key}
                                         <li>
-                                            <a href="/catalog/cat/{$key}/brand/{$brand.id}">{$child}({$counts[$key]}
+                                            <a href="/catalog/cat/{$key}/brand/{$brand.id}">{$child} ({$counts[$key]}
                                                 )</a>
                                         </li>
                                     {/foreach}
@@ -50,6 +50,28 @@
                             {/foreach}
                         </div>
                     {/if}
+
+                    {if $pages->totalItemCount > 3 && !$brand && !$zf.params.catid}
+                        <div class="search-list-res">
+                            <h3 class="">РЕЗУЛЬТАТЫ ПОИСКА В КАТЕГОРИЯХ “<em>{$brand.name}</em>”</h3>
+                            {foreach from=$categories key=parent item=children name=tree}
+                                <ul class="search-item">
+                                    {$parent}
+                                    {foreach from=$children item=child key=key}
+                                        <li>
+                                            <a href="{url assoc.catid=$key assoc.searchtext=$searchtext param=search}">
+                                                {$child} ({$counts[$key]})
+                                            </a>
+                                        </li>
+                                    {/foreach}
+                                </ul>
+                            {/foreach}
+                        </div>
+                    {/if}
+
+
+
+
                     <div>
                         <h3 class="">РЕЗУЛЬТАТЫ ПОИСКА ПО ТОВАРАМ “<em>LG</em>”</h3>
                         <div class="under-senn">
