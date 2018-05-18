@@ -211,13 +211,13 @@
                 </object>
                 <div class="compare-found">
                     <div class="left-butt">
-                        <span>В избранное</span>
+                        <span><span>В избранное</span></span>
                     </div>
                     <div class="right-butt" data-id="{$item.id}">
-                        <span>Сравнение</span>
+                        <span><span>Сравнение</span></span>
                     </div>
                     <div class="look-for">
-                        <a href="!#">Следить за ценой</a>
+                        <a href="!#"><span>Следить за ценой</span></a>
                     </div>
                 </div>
                 <div class="prod-saler">Продавец:<img src="/assets/img/logo.png" alt=""></div>
