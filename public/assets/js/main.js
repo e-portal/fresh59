@@ -417,7 +417,7 @@ jQuery(document).ready(function () {
 
     function s(obj, obj2, className, e, clbck) {
         if (!$(e.target).hasClass('header-bottom__exit')) {
-            e.preventDefault();
+            // e.preventDefault();
             e.stopPropagation();
         }
 
