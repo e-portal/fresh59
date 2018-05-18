@@ -508,8 +508,8 @@ jQuery(document).ready(function () {
 
         })
 
-        $('.header-search__button').on('click',function () {
-            $(this).find('a').trigger('click');
+        $('.header-search__button a').on('click',function () {
+            $('.header-search__button').trigger('click');
 
         })
     })(jQuery);
