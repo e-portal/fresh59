@@ -450,13 +450,13 @@ jQuery(document).ready(function () {
 
             options.searchPhrase = $(this).val();
 
-            // if (modal.hasClass(options.modal_error_class)) {
-            //                     modal.removeClass(options.modal_error_class);
-            //                 }
+
             console.log(342433);
             var modal = $(options.modal);
             var modal_ = $(options.modal_error_class);
-
+            if (modal.hasClass(options.modal_error_class)) {
+                modal.removeClass(options.modal_error_class);
+            }
             var val = $(this).val();
             options.searchPhrase = val;
             var limit = Math.floor(($(window).height() - 160) / 100) - 1;
