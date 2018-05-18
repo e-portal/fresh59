@@ -489,9 +489,9 @@ jQuery(document).ready(function () {
 
                         });
                         html += '</div>'
-                        var html_ = '<button class="header-search__button">';
+                        var html_ = '<div class="header-search__button">';
                         html_ += '<a href="/catalog/search/' + options.searchPhrase + '">Показать все результаты поиска &rarr;</a> \
-                                </button>';
+                                </div>';
                         modal.append(html)
                         modal_.append(html_)
                         modal.show();
@@ -508,10 +508,10 @@ jQuery(document).ready(function () {
 
         })
 
-        $('.header-search__button a').on('click',function () {
-            $('.header-search__button').trigger('click');
-
-        })
+        // $('.header-search__button a').on('click',function () {
+        //     $('.header-search__button').trigger('click');
+        //
+        // })
     })(jQuery);
 
     // (function ($) {
