@@ -143,4 +143,4 @@ $('form').on('submit', function (e) {
 $('form').each(function () {
     $(this).prepend($('<input name="utm" type="hidden">').val(location.href));
 });*/
-// <------------ end test validity
+// <------------ end test validit
