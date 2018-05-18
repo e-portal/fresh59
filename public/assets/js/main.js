@@ -1485,7 +1485,7 @@ function selectRegion(regionId) {
     $(".numbers").html($(el).data('phone'));
     $(".data-region-list span").html($(el).html());
     $("#region_" + regionId).addClass('active');
-    $("tregion_" + regionId).addClass('active');
+    $(".tregion_" + regionId).addClass('active');
     $('.region-choose > .dropdown').removeClass('open');
     if ($('.data-region-list span').text() === 'Киев') {
         $('header .work-time p').first().show();
