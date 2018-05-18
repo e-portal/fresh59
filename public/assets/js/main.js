@@ -513,6 +513,7 @@ jQuery(document).ready(function () {
                                 // location.href ="/catalog/search/" + options.searchPhrase + "";
                             }
                         })
+
                         // if(e.which == 13){
                         //     $('.searc').click();
                         // }
