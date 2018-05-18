@@ -1,4 +1,4 @@
-<div class="orig wrap">
+<div class="orig">
     <div class="orii">
         <div class="orig-item">
             <img src="/assets/img/orig1.png" alt="">
