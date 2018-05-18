@@ -76,6 +76,21 @@
                                             </li>
                                             <li data-value="homephone"><a href="tel:+380442238520">(044) 223-8-520</a>
                                             </li>
+                                            <li><a href="#" id="region_6" data-phone='(0432) 57-27-77; (067) 262-43-43' onclick="selectRegion(6)">Винница</a></li>
+                                            <li><a href="#" id="region_2" data-phone='(056) 788-71-71, (095) 270-50-71' onclick="selectRegion(2)">Днепропетровск</a></li>
+                                            <li><a href="#" id="region_12" data-phone='(062) 207-46-90;  (050) 444-68-25' onclick="selectRegion(12)">Донецк</a></li>
+                                            <li><a href="#" id="region_9" data-phone='(061) 701 19 60;  (098) 867-13-92' onclick="selectRegion(9)">Запорожье</a></li>
+                                            <li><a href="#" id="region_1" data-phone='(050) 590-0-590, (044) 223-8-520, (067) 590-0-591, (093) 590-0-590' onclick="selectRegion(1)">Киев</a></li>
+                                            <li><a href="#" id="region_5" data-phone='(0522) 59-50-39;  (066) 520-80-66' onclick="selectRegion(5)">Кировоград</a></li>
+                                            <li><a href="#" id="region_17" data-phone='(068) 322 99 22' onclick="selectRegion(17)">Кременчуг</a></li>
+                                            <li><a href="#" id="region_13" data-phone='(056) 443-50-39;  (098) 786-42-86' onclick="selectRegion(13)">Кривой Рог</a></li>
+                                            <li><a href="#" id="region_4" data-phone='(032) 247-04-09; (067) 434-68-00' onclick="selectRegion(4)">Львов</a></li>
+                                            <li><a href="#" id="region_21" data-phone='(093) 929-46-37' onclick="selectRegion(21)">Мариуполь</a></li>
+                                            <li><a href="#" id="region_20" data-phone='(0552) 44-12-87' onclick="selectRegion(20)">Николаев</a></li>
+                                            <li><a href="#" id="region_7" data-phone='(048) 702-56-84;  (050) 333-41-33' onclick="selectRegion(7)">Одесса</a></li>
+                                            <li><a href="#" id="region_3" data-phone='(057) 762-60-33;  (050) 443-61-43' onclick="selectRegion(3)">Харьков</a></li>
+                                            <li><a href="#" id="region_22" data-phone='(0552) 44-12-87' onclick="selectRegion(22)">Херсон</a></li>
+                                            <li><a href="#" id="region_19" data-phone='(0472) 51-15-39; (098) 786-42-86' onclick="selectRegion(19)">Черкассы</a></li>
                                         </ul>
                                     </li>
                                 </ul>
