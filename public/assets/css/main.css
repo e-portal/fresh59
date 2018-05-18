@@ -885,7 +885,9 @@ h6 {}
     transition: all ease 0.25s;
     opacity: 0;
 }
-
+.phone .faux-select li .options {
+    top: 2.4em;
+}
 .faux-select li .options li {
     padding: 0.4em 0;
 }
