@@ -502,7 +502,9 @@ jQuery(document).ready(function () {
                         modal_.append(html_)
                         modal.show();
 
-
+                        $('.searc').click(function () {
+                            location.href ="/catalog/search/' + options.searchPhrase + '";
+                        })
 
                     }
                     else {

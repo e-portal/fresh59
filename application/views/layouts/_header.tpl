@@ -93,11 +93,10 @@
                 </div>
                 <div class="iteem">
                     <div class="inpp">
-                        <form action="/catalog/search" method="post">
+                        <form action="/catalog/search" method="get">
                             <input type="text" class="header-bottom__input" placeholder="Поиск товара">
 
                             <div class="searc"><img src="/assets/img/seac.png" alt=""></div>
-                            <button type="submit" class="button_v1">Найти</button>
                             <div class="header-bottom__exit"></div>
                         </form>
                         <div class="search-list">
