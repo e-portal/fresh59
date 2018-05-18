@@ -9,7 +9,7 @@
             <meta itemprop="position" content="1">
         </div>
         <div itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="button">
-            <span itemprop="name" class="label1">Поиск</span>
+            <span itemprop="name" class="label1">Поиск "{$searchtext}"</span>
             <meta itemprop="position" content="2">
         </div>
     </div>
@@ -53,7 +53,7 @@
 
                     {if $pages->totalItemCount > 3 && !$brand && !$zf.params.catid}
                         <div class="search-list-res">
-                            <h3 class="">РЕЗУЛЬТАТЫ ПОИСКА В КАТЕГОРИЯХ “<em>{$brand.name}</em>”</h3>
+                            <h3 class="">РЕЗУЛЬТАТЫ ПОИСКА В КАТЕГОРИЯХ “<em>{$searchtext}</em>”</h3>
                             {foreach from=$categories key=parent item=children name=tree}
                                 <ul class="search-item">
                                     {$parent}
@@ -790,32 +790,74 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="blocks-pagination">
-                            <a class="blocks-pagination-more">Показать еще<img src="/assets/img/arrow-circle.png"
-                                                                               alt="more"></a>
-                            <a class="blocks-pagination-back blocks-pagination-arrow"></a>
-                            <a class="pagin-number active-pagin-number">1</a>
-                            <span>...</span>
-                            <a class="pagin-number">13</a>
-                            <a class="pagin-number pagin-number-active">14</a>
-                            <a class="pagin-number">15</a>
-                            <span>...</span>
-                            <a class="pagin-number">27</a>
-                            <a class="blocks-pagination-forward blocks-pagination-arrow"></a>
-                            <div class="blocks-pagination-empty">
-                                <div id=selectyPagination class="blocks-pagination-selecty">
-                                    <p class=valueTagsPag name=selects>Показать по 24</p>
-                                    <ul id=selectyMenuPagination>
-                                        <li class=optionsPag>Показать по 16</li>
-                                        <li class=optionsPag>Показать по 32</li>
-                                        <li class=optionsPag>Показать по 64</li>
-                                    </ul>
+                        <!--            START pagination-->
+                        {if $pages->pageCount > 1}
+                            <div class="blocks-pagination">
+                                <a class="blocks-pagination-more">
+                                    Показать еще<img src="/assets/img/arrow-circle.png" alt="more">
+                                </a>
+                                {if $pages->current > 1}
+                                    <a class="blocks-pagination-back blocks-pagination-arrow"
+                                       href="{if $pages->current-1=='1'}{$firstPageUrl}{else}{$firstPageUrl}/page/{$pages->current-1}{/if}"></a>
+                                {/if}
+                                {if $pages->firstPageInRangeNum!=1}
+                                    <a class="pagin-number active-pagin-number" href="{$firstPageUrl}">1</a>
+                                    <span>...</span>
+                                {/if}
+                                {if $pages->pagesInRange}
+                                    {foreach from=$pages->pagesInRange item=p key=k}
+                                        {if $pages->current!=$k}
+                                            <a class="pagin-number"
+                                               href="{if $k=='1'}{$firstPageUrl}{else}{$firstPageUrl}/page/{$k}{/if}">{$k}</a>
+                                        {else}
+                                            <span class="pagin-number pagin-number-active">{$pages->current}</span>
+                                        {/if}
+                                    {/foreach}
+                                {/if}
+                                {if $pages->pageCount && $pages->lastPageInRange != $pages->last}
+                                    <span>...</span>
+                                    <a class="pagin-number"
+                                       href="{$firstPageUrl}/page/{$pages->pageCount}">{$pages->pageCount}</a>
+                                {/if}
+
+                                {if $pages->current < $pages->pageCount}
+                                    <a class="blocks-pagination-forward blocks-pagination-arrow"
+                                       href="{$firstPageUrl}/page/{$pages->current+1}"></a>
+                                {/if}
+                                <div class="blocks-pagination-empty">
+                                    <div id=selectyPagination class="blocks-pagination-selecty">
+                                        <p class=valueTagsPag name=selects>Показать по 24</p>
+                                        <ul id=selectyMenuPagination>
+                                            <li class=optionsPag>Показать по 16</li>
+                                            <li class=optionsPag>Показать по 32</li>
+                                            <li class=optionsPag>Показать по 64</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                            <!--<a class="blocks-pagination-more">Показать 16/32/64</a>-->
-                        </div>
+                        {/if}
+                        <!--            End pagination-->
+
+
+                        {if !$brand}
+                            <div>
+                                Найдено <span>{$pages->totalItemCount}</span> записей.
+                            </div>
+                        {/if}
                     </div>
 
+                </div>
+            {else}
+                <br/>
+                <div class="alert alert-error">
+                    По Вашему запросу ничего не найдено.
+                    <br/>
+                    {if $maybe}
+                        Возможно, вы имели ввиду
+                        <a class="link" href="https://590.ua/catalog/search/{$maybe|htmlspecialchars}">{$maybe}</a>
+                    {/if}
+                    <br/>
+                    <a class="btn btn-mini" href="javascript:history.back(-1)">&larr; Вернуться</a>
                 </div>
             {/if}
         </div>

@@ -568,10 +568,10 @@
                         {/if}
 
                         {if $item.bonus_amount>0}
-                            <div onmouseover="hide_icons_bonus({$number_of_element})"
-                                 onmouseout="show_icons_bonus({$number_of_element})"
-                                 class="bonus_on_card_{$number_of_element}"><img src="/images/hint/piggy-bank.png"
-                                                                                 style="position: absolute;margin-left: -29px;margin-top: 1px;">вернем<br><span
+                        <div onmouseover="hide_icons_bonus({$number_of_element})"
+                             onmouseout="show_icons_bonus({$number_of_element})"
+                             class="bonus_on_card_{$number_of_element}"><img src="/images/hint/piggy-bank.png"
+                                                                             style="position: absolute;margin-left: -29px;margin-top: 1px;">вернем<br><span
                                     style="color: rgba(255, 39, 2, 0.81);font-weight: bold;font-size: 10px;font-style: italic;">{$item.bonus_amount|round}
                                 грн.</span>
                             <div class="overlay_icons"
@@ -599,29 +599,32 @@
                                  onmouseout="show_icons_oplata_chast({$number_of_element})"
                                  class="oplata_chast_icon_{$number_of_element}"><img src="/images/hint/oplata_chast.png"
                                                                                      style="position: absolute;margin-left: -32px;margin-top: 1px;">от
-                            <span style="color: rgba(255, 39, 2, 0.81);font-weight: bold;font-size: 10px;font-style: italic;">{$item.price/$rent_index*$curs_evro_smarty|round}</span><br><span
-                                    style="font-size: 10px;font-weight: bold;font-style: italic;"> грн./мес.</span>
-                            <div class="overlay_icons"
-                                 style="margin-top: -30px;margin-left: -145px;font-style: italic;">
-                                <div class="wrapper_body">
-                                    <div class="cbm_wrap ">
-                                        <noindex><a href="https://chast.privatbank.ua/" rel="nofollow" target="_blank">
-                                                <h1 title="Узнать подробнее...">Оплата частями</h1></a></noindex>
-                                        <noindex><a href="https://chast.privatbank.ua/" rel="nofollow"
-                                                    target="_blank"><img title="Узнать подробнее..."
-                                                                         src="/images/hint/op_chast.png"></a></noindex>
-                                        <span style="margin-top: 10px;display: block;font-weight: bold;font-size: 13px;">Этот товар Вы сможете оплатить частями. Без переплат!</span><br>
-                                        <span style="font-size: 13px;font-weight: bold;margin-left: -120px;display: block;margin-bottom: 5px;">Все что Вам нужно:</span>
-                                        <span style="font-size: 13px;font-weight: bold;margin-left: -100px;display: block;">1. Наличие карты ПриватБанк.</span>
-                                        <noindex><a href="https://chast.privatbank.ua/" rel="nofollow"
-                                                    target="_blank"><img title="Узнать подробнее..."
-                                                                         src="/images/hint/cardprivat.png"></a>
-                                        </noindex>
-                                        <span style="font-size: 13px;font-weight: bold;margin-left: -165px;display: block;">2. Доступный лимит.</span>
-                                        <span style="font-size: 12px;margin-left: 30px;display: block;">Узнать максимальную суму покупки по сервису очень просто. Нужно отправить SMS сообщение на номер 10060 с текстом chast</span>
+                                <span style="color: rgba(255, 39, 2, 0.81);font-weight: bold;font-size: 10px;font-style: italic;">{$item.price/$rent_index*$curs_evro_smarty|round}</span><br><span
+                                        style="font-size: 10px;font-weight: bold;font-style: italic;"> грн./мес.</span>
+                                <div class="overlay_icons"
+                                     style="margin-top: -30px;margin-left: -145px;font-style: italic;">
+                                    <div class="wrapper_body">
+                                        <div class="cbm_wrap ">
+                                            <noindex><a href="https://chast.privatbank.ua/" rel="nofollow"
+                                                        target="_blank">
+                                                    <h1 title="Узнать подробнее...">Оплата частями</h1></a></noindex>
+                                            <noindex><a href="https://chast.privatbank.ua/" rel="nofollow"
+                                                        target="_blank"><img title="Узнать подробнее..."
+                                                                             src="/images/hint/op_chast.png"></a>
+                                            </noindex>
+                                            <span style="margin-top: 10px;display: block;font-weight: bold;font-size: 13px;">Этот товар Вы сможете оплатить частями. Без переплат!</span><br>
+                                            <span style="font-size: 13px;font-weight: bold;margin-left: -120px;display: block;margin-bottom: 5px;">Все что Вам нужно:</span>
+                                            <span style="font-size: 13px;font-weight: bold;margin-left: -100px;display: block;">1. Наличие карты ПриватБанк.</span>
+                                            <noindex><a href="https://chast.privatbank.ua/" rel="nofollow"
+                                                        target="_blank"><img title="Узнать подробнее..."
+                                                                             src="/images/hint/cardprivat.png"></a>
+                                            </noindex>
+                                            <span style="font-size: 13px;font-weight: bold;margin-left: -165px;display: block;">2. Доступный лимит.</span>
+                                            <span style="font-size: 12px;margin-left: 30px;display: block;">Узнать максимальную суму покупки по сервису очень просто. Нужно отправить SMS сообщение на номер 10060 с текстом chast</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div></div>
+                            </div>
                             <div onmouseover="hide_icons_oplata_rassrochka({$number_of_element})"
                                  onmouseout="show_icons_oplata_rassrochka({$number_of_element})"
                                  class="oplata_rassrochka_icon_{$number_of_element}"><img
@@ -825,6 +828,7 @@
                 <span>Купить</span>
                     </a>{/if}
             {else}
+
 
                 <a style="
     float: left;
