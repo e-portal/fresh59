@@ -69,13 +69,13 @@
                                     <li class="selected-option"><span><a
                                                     href="tel:+380675900591">(067) 590-0-591</a></span>
                                         <ul class="options">
-                                            <li data-value="kievstar"><a href="tel:+380675900591">(067) 590-0-591</a>
-                                            </li>
+                                            {*<li data-value="kievstar"><a href="tel:+380675900591">(067) 590-0-591</a>*}
+                                            {*</li>*}
                                             <li data-value="mts"><a href="tel:+380505900590">(050) 590-0-590</a></li>
                                             <li data-value="lifecell"><a href="tel:+380935900590">(093) 590-0-590</a>
                                             </li>
-                                            <li data-value="homephone"><a href="tel:+380442238520">(044) 223-8-520</a>
-                                            </li>
+                                            {*<li data-value="homephone"><a href="tel:+380442238520">(044) 223-8-520</a>*}
+                                            {*</li>*}
                                             <li><a href="#" id="region_6" data-phone='(0432) 57-27-77; (067) 262-43-43' onclick="selectRegion(6)">Винница</a></li>
                                             <li><a href="#" id="region_2" data-phone='(056) 788-71-71, (095) 270-50-71' onclick="selectRegion(2)">Днепропетровск</a></li>
                                             <li><a href="#" id="region_12" data-phone='(062) 207-46-90;  (050) 444-68-25' onclick="selectRegion(12)">Донецк</a></li>
