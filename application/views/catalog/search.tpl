@@ -75,720 +75,149 @@
                     <div>
                         <h3 class="">РЕЗУЛЬТАТЫ ПОИСКА ПО ТОВАРАМ “<em>LG</em>”</h3>
                         <div class="under-senn">
-                            <div class="item-senn more-senn">
-                                <a class="sench" href="/" tabindex="-1">
-                                    <div class="in-stock">
-                                        <h5 class="green">В наличии</h5>
-                                        <div class="prod-code">Код: 274567</div>
-                                    </div>
-                                    <h4>Микроволновая печь GORENJE MO 6240</h4>
-                                    <div class="centr">
-                                        <div class="itee-imgg"><img src="/assets/img/senn0.png" alt=""></div>
-                                        <div class="itee">
-                                            <img src="/assets/img/izee0.png" alt="">
-                                            <p>Вернем: <span>500 грн</span></p>
-                                        </div>
-                                        <div class="itee">
-                                            <img src="/assets/img/izee1.png" alt="">
-                                            <p>от <span>500</span> грн/мес</p>
-                                        </div>
-                                    </div>
 
-                                </a>
-                                <div class="front-wrap">
-                                    <div class="front">
+                            {foreach from=$items item=item name=catitems}
+                                {*<pre>
+                                {$item|@debug_print_var}
+                                    </pre>
+                                {php}
+                                    die;
+                                {/php}*}
+                                <div class="item-senn more-senn">
+                                    <a href="{iurl assoc.cat_latin=$item.cat_latin_single  assoc.parent=$item.parentname assoc.subdomain=$item.subdomain assoc.cat=$item.cat_onename assoc.brand=$item.brand assoc.item=$item.name}"
+                                       tabindex="-1" class="sench">
 
-                                        <table>
-                                            <tr>
-                                                <td><p>Максимальная загрузка:</p></td>
-                                                <td><span>6 кг</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Тип стиральной машины:</p></td>
-                                                <td><span>Фронтальная</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс энергопотребления:</p></td>
-                                                <td><span>А+</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс отжима:</p></td>
-                                                <td><span>А</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс стирки:</p></td>
-                                                <td><span>C</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Максимальная загрузка:</p></td>
-                                                <td><span>6 кг</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Тип стиральной машины:</p></td>
-                                                <td><span>Фронтальная</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс энергопотребления:</p></td>
-                                                <td><span>А+</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс отжима:</p></td>
-                                                <td><span>А</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс стирки:</p></td>
-                                                <td><span>C</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Максимальная загрузка:</p></td>
-                                                <td><span>6 кг</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Тип стиральной машины:</p></td>
-                                                <td><span>Фронтальная</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс энергопотребления:</p></td>
-                                                <td><span>А+</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс отжима:</p></td>
-                                                <td><span>А</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс стирки:</p></td>
-                                                <td><span>C</span></td>
-                                            </tr>
-                                        </table>
+                                        <div class="in-stock">
+                                            {*----------in stock--------*}
+                                            {if $item.id_availability == 1}
+                                                <h5 class="green">В наличии</h5>
+                                            {elseif $item.id_availability == 3}
+                                                <h5 class="bluee">Под заказ</h5>
+                                            {else}
+                                                <h5 class="gray">Наличие уточняйте</h5>
+                                            {/if}
+                                            {*----------in stock--------*}
+                                            <div class="prod-code">Код: {$item.id}</div>
+                                        </div>
 
-                                    </div>
-                                    <a href="javascript:void(0)" class="morr">Больше +</a>
-                                </div>
-                                <a href="/" class="otzv" tabindex="-1">
-                                    <div class="left-otzv">
-                                        <img src="/assets/img/patr.png" alt="">
-                                    </div>
-                                    <div class="right-otzv">
-                                        <span>10 отзывов</span>
-                                    </div>
-                                </a>
-                                <div class="bakk">
-                                    <div class="left-bakk">
-                                        <p>2 500 грн</p>
-                                        <p>Вернем: <span>500 грн</span></p>
-                                    </div>
-                                    <div class="right-bakk">
-                                        <a class="bask acty" href="javascript:void(0)"
-                                           tabindex="-1"><span>В корзину</span></a>
-                                    </div>
-                                </div>
+                                        <h4>
+                                            {if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if} {$item.brand} {$item.name}
+                                        </h4>
+                                        <div class="centr">
+                                            <div class="itee-imgg">
+                                                {if $item.imgid}
+                                                    <img src="{$url.img}/catalog/{$item.imgid}_s.{$item.imgext}"
+                                                         title="{if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if} {$item.brand} {$item.name}"
+                                                         alt="{if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if} {$item.brand} {$item.name} - catalog">
+                                                {else}
+                                                    <img src="/images/noimage.jpg" alt="{$item.brand} {$item.name}"/>
+                                                {/if}
+                                            </div>
+                                            {if $item.bonus_amount>0}
+                                                <div class="itee">
+                                                    <img src="/assets/img/izee0.png" alt="">
+                                                    <p>Вернем: <span>{$item.bonus_amount|round} грн</span></p>
+                                                </div>
+                                            {/if}
+                                            <div class="itee">
+                                                <img src="/assets/img/izee1.png" alt="">
+                                                <em>{$item.rent_index}</em>
+                                                <p>от
+                                                    <span>
+                                                    {$item.price/$item.rent_index*$curs_evro_smarty|round}
+                                                </span>
+                                                    грн/мес</p>
+                                            </div>
+                                            <div class="itee">
+                                                <img src="/assets/img/izee3.png" alt="">
+                                                <p>
+                                                    от
+                                                    <span>
+                                                    {$item.price*0.0099*$curs_evro_smarty+$item.price/24*$curs_evro_smarty|round}
+                                                </span>
+                                                    грн/мес
+                                                </p>
+                                            </div>
+                                            {if $item.id_brand == '26' && $item.id_category != 60}
+                                                <div class="itee">
+                                                    <img src="/assets/img/izee2.png" alt="">
+                                                    <p>Гарантия <span>36</span> мес</p>
+                                                </div>
+                                            {/if}
+                                            {if $item.bestprice > $item.price || $item.id2==41385}
+                                                <div class="itee">
+                                                    <img src="/assets/img/izee4.png" alt="">
+                                                    <p>Лучшая <span>цена</span></p>
+                                                </div>
+                                            {/if}
+                                            {if $item.acttype != 'gift' && $item.x_index == '1' || $item.id == '21465'}
+                                                <div class="itee change">
+                                                    <img src="/assets/img/izee5.png" alt="">
+                                                    <p>Замена</p>
+                                                </div>
+                                            {/if}
+                                            {if $item.acttype=='gift'}
+                                                <div class="itee present">
+                                                    <div class="numeral">
+                                                        <img src="/assets/img/present-img.png" alt="present"></div>
+                                                    <p>Подарок!</p>
+                                                    <img src='/images/catalog/{gift assoc.id=$item.actid}'/>
+                                                </div>
+                                            {/if}
+                                        </div>
 
-                                <div class="hovv">
-                                    <div class="news">
-                                        <div class="left-butt">
-                                            <a href="" tabindex="-1">В избранное</a>
+                                    </a>
+                                    <div class="front-wrap">
+                                        <div class="front">
+                                            {$item.short_info|truncate:1024}
                                         </div>
-                                        <div class="right-butt">
-                                            <a href="" tabindex="-1">Сравнение</a>
-                                        </div>
+                                        <a class="morr">Больше +</a>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="item-senn more-senn">
-                                <a class="sench" href="/" tabindex="-1">
-                                    <div class="in-stock">
-                                        <h5 class="green">В наличии</h5>
-                                        <div class="prod-code">Код: 274567</div>
-                                    </div>
-                                    <h4>Микроволновая печь GORENJE MO 6240</h4>
-                                    <div class="centr">
-                                        <div class="itee-imgg"><img src="/assets/img/senn0.png" alt=""></div>
-                                        <div class="itee">
-                                            <img src="/assets/img/izee0.png" alt="">
-                                            <p>Вернем: <span>500 грн</span></p>
+                                    <a href="/" class="otzv" tabindex="-1">
+                                        <div class="left-otzv">
+                                            <img src="/assets/img/patr.png" alt="">
                                         </div>
-                                        <div class="itee">
-                                            <img src="/assets/img/izee1.png" alt="">
-                                            <p>от <span>500</span> грн/мес</p>
+                                        <div class="right-otzv">
+                                            <span>10 отзывов</span>
+                                        </div>
+                                    </a>
+                                    <div class="bakk">
+                                        <div class="left-bakk">
+                                            {if $item.specprice  && ($item.bdprice > $item.price) && (($item.bdprice - $item.price)/$item.price > 0.01) }
+                                                <p class="oldPrice">{price $item.bdprice} {$smarty.session.Currency.title}</p>
+                                                <p class="newPrice">{price $item.price $item.id_currency} {$smarty.session.Currency.title}</p>
+                                            {else}
+                                                <p>{price $item.price $item.id_currency} {$smarty.session.Currency.title}</p>
+                                            {/if}
+                                        </div>
+                                        <div class="right-bakk">
+                                            {if $item.id_availability == 1}
+                                                <a class="open-in-popup add-to-cart bask acty"
+                                                        {include file='layouts/cart-item.tpl' cart_item=$item}
+                                                   tabindex="-1">
+                                                    <span>В корзину</span>
+                                                </a>
+                                            {else}
+                                                <a class="open-in-popup add-to-cart bask acty blue-bask"
+                                                        {include file='layouts/cart-item.tpl' cart_item=$item}
+                                                   tabindex="-1"><span>Под заказ</span></a>
+                                            {/if}
                                         </div>
                                     </div>
 
-                                </a>
-                                <div class="front-wrap">
-                                    <div class="front">
-
-                                        <table>
-                                            <tr>
-                                                <td><p>Максимальная загрузка:</p></td>
-                                                <td><span>6 кг</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Тип стиральной машины:</p></td>
-                                                <td><span>Фронтальная</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс энергопотребления:</p></td>
-                                                <td><span>А+</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс отжима:</p></td>
-                                                <td><span>А</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс стирки:</p></td>
-                                                <td><span>C</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Максимальная загрузка:</p></td>
-                                                <td><span>6 кг</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Тип стиральной машины:</p></td>
-                                                <td><span>Фронтальная</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс энергопотребления:</p></td>
-                                                <td><span>А+</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс отжима:</p></td>
-                                                <td><span>А</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс стирки:</p></td>
-                                                <td><span>C</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Максимальная загрузка:</p></td>
-                                                <td><span>6 кг</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Тип стиральной машины:</p></td>
-                                                <td><span>Фронтальная</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс энергопотребления:</p></td>
-                                                <td><span>А+</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс отжима:</p></td>
-                                                <td><span>А</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс стирки:</p></td>
-                                                <td><span>C</span></td>
-                                            </tr>
-                                        </table>
-
-                                    </div>
-                                    <a href="javascript:void(0)" class="morr">Больше +</a>
-                                </div>
-                                <a href="/" class="otzv" tabindex="-1">
-                                    <div class="left-otzv">
-                                        <img src="/assets/img/patr.png" alt="">
-                                    </div>
-                                    <div class="right-otzv">
-                                        <span>10 отзывов</span>
-                                    </div>
-                                </a>
-                                <div class="bakk">
-                                    <div class="left-bakk">
-                                        <p>2 500 грн</p>
-                                        <p>Вернем: <span>500 грн</span></p>
-                                    </div>
-                                    <div class="right-bakk">
-                                        <a class="bask acty" href="javascript:void(0)"
-                                           tabindex="-1"><span>В корзину</span></a>
-                                    </div>
-                                </div>
-
-                                <div class="hovv">
-                                    <div class="news">
-                                        <div class="left-butt">
-                                            <a href="" tabindex="-1">В избранное</a>
-                                        </div>
-                                        <div class="right-butt">
-                                            <a href="" tabindex="-1">Сравнение</a>
+                                    <div class="hovv">
+                                        <div class="news">
+                                            <div class="left-butt">
+                                                <span tabindex="-1">В избранное</span>
+                                            </div>
+                                            <div class="right-butt" data-id="{$item.id}">
+                                                <span tabindex="-1">Сравнение</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="item-senn more-senn">
-                                <a class="sench" href="/" tabindex="-1">
-                                    <div class="in-stock">
-                                        <h5 class="green">В наличии</h5>
-                                        <div class="prod-code">Код: 274567</div>
-                                    </div>
-                                    <h4>Микроволновая печь GORENJE MO 6240</h4>
-                                    <div class="centr">
-                                        <div class="itee-imgg"><img src="/assets/img/senn0.png" alt=""></div>
-                                        <div class="itee">
-                                            <img src="/assets/img/izee0.png" alt="">
-                                            <p>Вернем: <span>500 грн</span></p>
-                                        </div>
-                                        <div class="itee">
-                                            <img src="/assets/img/izee1.png" alt="">
-                                            <p>от <span>500</span> грн/мес</p>
-                                        </div>
-                                    </div>
+                            {/foreach}
 
-                                </a>
-                                <div class="front-wrap">
-                                    <div class="front">
-
-                                        <table>
-                                            <tr>
-                                                <td><p>Максимальная загрузка:</p></td>
-                                                <td><span>6 кг</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Тип стиральной машины:</p></td>
-                                                <td><span>Фронтальная</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс энергопотребления:</p></td>
-                                                <td><span>А+</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс отжима:</p></td>
-                                                <td><span>А</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс стирки:</p></td>
-                                                <td><span>C</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Максимальная загрузка:</p></td>
-                                                <td><span>6 кг</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Тип стиральной машины:</p></td>
-                                                <td><span>Фронтальная</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс энергопотребления:</p></td>
-                                                <td><span>А+</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс отжима:</p></td>
-                                                <td><span>А</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс стирки:</p></td>
-                                                <td><span>C</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Максимальная загрузка:</p></td>
-                                                <td><span>6 кг</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Тип стиральной машины:</p></td>
-                                                <td><span>Фронтальная</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс энергопотребления:</p></td>
-                                                <td><span>А+</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс отжима:</p></td>
-                                                <td><span>А</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс стирки:</p></td>
-                                                <td><span>C</span></td>
-                                            </tr>
-                                        </table>
-
-                                    </div>
-                                    <a href="javascript:void(0)" class="morr">Больше +</a>
-                                </div>
-                                <a href="/" class="otzv" tabindex="-1">
-                                    <div class="left-otzv">
-                                        <img src="/assets/img/patr.png" alt="">
-                                    </div>
-                                    <div class="right-otzv">
-                                        <span>10 отзывов</span>
-                                    </div>
-                                </a>
-                                <div class="bakk">
-                                    <div class="left-bakk">
-                                        <p>2 500 грн</p>
-                                        <p>Вернем: <span>500 грн</span></p>
-                                    </div>
-                                    <div class="right-bakk">
-                                        <a class="bask acty" href="javascript:void(0)"
-                                           tabindex="-1"><span>В корзину</span></a>
-                                    </div>
-                                </div>
-
-                                <div class="hovv">
-                                    <div class="news">
-                                        <div class="left-butt">
-                                            <a href="" tabindex="-1">В избранное</a>
-                                        </div>
-                                        <div class="right-butt">
-                                            <a href="" tabindex="-1">Сравнение</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item-senn more-senn">
-                                <a class="sench" href="/" tabindex="-1">
-                                    <div class="in-stock">
-                                        <h5 class="green">В наличии</h5>
-                                        <div class="prod-code">Код: 274567</div>
-                                    </div>
-                                    <h4>Микроволновая печь GORENJE MO 6240</h4>
-                                    <div class="centr">
-                                        <div class="itee-imgg"><img src="/assets/img/senn0.png" alt=""></div>
-                                        <div class="itee">
-                                            <img src="/assets/img/izee0.png" alt="">
-                                            <p>Вернем: <span>500 грн</span></p>
-                                        </div>
-                                        <div class="itee">
-                                            <img src="/assets/img/izee1.png" alt="">
-                                            <p>от <span>500</span> грн/мес</p>
-                                        </div>
-                                    </div>
-
-                                </a>
-                                <div class="front-wrap">
-                                    <div class="front">
-
-                                        <table>
-                                            <tr>
-                                                <td><p>Максимальная загрузка:</p></td>
-                                                <td><span>6 кг</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Тип стиральной машины:</p></td>
-                                                <td><span>Фронтальная</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс энергопотребления:</p></td>
-                                                <td><span>А+</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс отжима:</p></td>
-                                                <td><span>А</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс стирки:</p></td>
-                                                <td><span>C</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Максимальная загрузка:</p></td>
-                                                <td><span>6 кг</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Тип стиральной машины:</p></td>
-                                                <td><span>Фронтальная</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс энергопотребления:</p></td>
-                                                <td><span>А+</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс отжима:</p></td>
-                                                <td><span>А</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс стирки:</p></td>
-                                                <td><span>C</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Максимальная загрузка:</p></td>
-                                                <td><span>6 кг</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Тип стиральной машины:</p></td>
-                                                <td><span>Фронтальная</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс энергопотребления:</p></td>
-                                                <td><span>А+</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс отжима:</p></td>
-                                                <td><span>А</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс стирки:</p></td>
-                                                <td><span>C</span></td>
-                                            </tr>
-                                        </table>
-
-                                    </div>
-                                    <a href="javascript:void(0)" class="morr">Больше +</a>
-                                </div>
-                                <a href="/" class="otzv" tabindex="-1">
-                                    <div class="left-otzv">
-                                        <img src="/assets/img/patr.png" alt="">
-                                    </div>
-                                    <div class="right-otzv">
-                                        <span>10 отзывов</span>
-                                    </div>
-                                </a>
-                                <div class="bakk">
-                                    <div class="left-bakk">
-                                        <p>2 500 грн</p>
-                                        <p>Вернем: <span>500 грн</span></p>
-                                    </div>
-                                    <div class="right-bakk">
-                                        <a class="bask acty" href="javascript:void(0)"
-                                           tabindex="-1"><span>В корзину</span></a>
-                                    </div>
-                                </div>
-
-                                <div class="hovv">
-                                    <div class="news">
-                                        <div class="left-butt">
-                                            <a href="" tabindex="-1">В избранное</a>
-                                        </div>
-                                        <div class="right-butt">
-                                            <a href="" tabindex="-1">Сравнение</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item-senn more-senn">
-                                <a class="sench" href="/" tabindex="-1">
-                                    <div class="in-stock">
-                                        <h5 class="green">В наличии</h5>
-                                        <div class="prod-code">Код: 274567</div>
-                                    </div>
-                                    <h4>Микроволновая печь GORENJE MO 6240</h4>
-                                    <div class="centr">
-                                        <div class="itee-imgg"><img src="/assets/img/senn0.png" alt=""></div>
-                                        <div class="itee">
-                                            <img src="/assets/img/izee0.png" alt="">
-                                            <p>Вернем: <span>500 грн</span></p>
-                                        </div>
-                                        <div class="itee">
-                                            <img src="/assets/img/izee1.png" alt="">
-                                            <p>от <span>500</span> грн/мес</p>
-                                        </div>
-                                    </div>
-
-                                </a>
-                                <div class="front-wrap">
-                                    <div class="front">
-
-                                        <table>
-                                            <tr>
-                                                <td><p>Максимальная загрузка:</p></td>
-                                                <td><span>6 кг</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Тип стиральной машины:</p></td>
-                                                <td><span>Фронтальная</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс энергопотребления:</p></td>
-                                                <td><span>А+</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс отжима:</p></td>
-                                                <td><span>А</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс стирки:</p></td>
-                                                <td><span>C</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Максимальная загрузка:</p></td>
-                                                <td><span>6 кг</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Тип стиральной машины:</p></td>
-                                                <td><span>Фронтальная</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс энергопотребления:</p></td>
-                                                <td><span>А+</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс отжима:</p></td>
-                                                <td><span>А</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс стирки:</p></td>
-                                                <td><span>C</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Максимальная загрузка:</p></td>
-                                                <td><span>6 кг</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Тип стиральной машины:</p></td>
-                                                <td><span>Фронтальная</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс энергопотребления:</p></td>
-                                                <td><span>А+</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс отжима:</p></td>
-                                                <td><span>А</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс стирки:</p></td>
-                                                <td><span>C</span></td>
-                                            </tr>
-                                        </table>
-
-                                    </div>
-                                    <a href="javascript:void(0)" class="morr">Больше +</a>
-                                </div>
-                                <a href="/" class="otzv" tabindex="-1">
-                                    <div class="left-otzv">
-                                        <img src="/assets/img/patr.png" alt="">
-                                    </div>
-                                    <div class="right-otzv">
-                                        <span>10 отзывов</span>
-                                    </div>
-                                </a>
-                                <div class="bakk">
-                                    <div class="left-bakk">
-                                        <p>2 500 грн</p>
-                                        <p>Вернем: <span>500 грн</span></p>
-                                    </div>
-                                    <div class="right-bakk">
-                                        <a class="bask acty" href="javascript:void(0)"
-                                           tabindex="-1"><span>В корзину</span></a>
-                                    </div>
-                                </div>
-
-                                <div class="hovv">
-                                    <div class="news">
-                                        <div class="left-butt">
-                                            <a href="" tabindex="-1">В избранное</a>
-                                        </div>
-                                        <div class="right-butt">
-                                            <a href="" tabindex="-1">Сравнение</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item-senn more-senn">
-                                <a class="sench" href="/" tabindex="-1">
-                                    <div class="in-stock">
-                                        <h5 class="green">В наличии</h5>
-                                        <div class="prod-code">Код: 274567</div>
-                                    </div>
-                                    <h4>Микроволновая печь GORENJE MO 6240</h4>
-                                    <div class="centr">
-                                        <div class="itee-imgg"><img src="/assets/img/senn0.png" alt=""></div>
-                                        <div class="itee">
-                                            <img src="/assets/img/izee0.png" alt="">
-                                            <p>Вернем: <span>500 грн</span></p>
-                                        </div>
-                                        <div class="itee">
-                                            <img src="/assets/img/izee1.png" alt="">
-                                            <p>от <span>500</span> грн/мес</p>
-                                        </div>
-                                    </div>
-
-                                </a>
-                                <div class="front-wrap">
-                                    <div class="front">
-
-                                        <table>
-                                            <tr>
-                                                <td><p>Максимальная загрузка:</p></td>
-                                                <td><span>6 кг</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Тип стиральной машины:</p></td>
-                                                <td><span>Фронтальная</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс энергопотребления:</p></td>
-                                                <td><span>А+</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс отжима:</p></td>
-                                                <td><span>А</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс стирки:</p></td>
-                                                <td><span>C</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Максимальная загрузка:</p></td>
-                                                <td><span>6 кг</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Тип стиральной машины:</p></td>
-                                                <td><span>Фронтальная</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс энергопотребления:</p></td>
-                                                <td><span>А+</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс отжима:</p></td>
-                                                <td><span>А</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс стирки:</p></td>
-                                                <td><span>C</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Максимальная загрузка:</p></td>
-                                                <td><span>6 кг</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Тип стиральной машины:</p></td>
-                                                <td><span>Фронтальная</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс энергопотребления:</p></td>
-                                                <td><span>А+</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс отжима:</p></td>
-                                                <td><span>А</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Класс стирки:</p></td>
-                                                <td><span>C</span></td>
-                                            </tr>
-                                        </table>
-
-                                    </div>
-                                    <a href="javascript:void(0)" class="morr">Больше +</a>
-                                </div>
-                                <a href="/" class="otzv" tabindex="-1">
-                                    <div class="left-otzv">
-                                        <img src="/assets/img/patr.png" alt="">
-                                    </div>
-                                    <div class="right-otzv">
-                                        <span>10 отзывов</span>
-                                    </div>
-                                </a>
-                                <div class="bakk">
-                                    <div class="left-bakk">
-                                        <p>2 500 грн</p>
-                                        <p>Вернем: <span>500 грн</span></p>
-                                    </div>
-                                    <div class="right-bakk">
-                                        <a class="bask acty" href="javascript:void(0)"
-                                           tabindex="-1"><span>В корзину</span></a>
-                                    </div>
-                                </div>
-
-                                <div class="hovv">
-                                    <div class="news">
-                                        <div class="left-butt">
-                                            <a href="" tabindex="-1">В избранное</a>
-                                        </div>
-                                        <div class="right-butt">
-                                            <a href="" tabindex="-1">Сравнение</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <!--            START pagination-->
                         {if $pages->pageCount > 1}
