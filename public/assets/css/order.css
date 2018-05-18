@@ -359,11 +359,15 @@ input.bask {
 .compare-fixed-over,
 .compare-block-wrap {
     display: flex;
+    /*transform: scaleY(-1);*/
 }
 
 .compare-all-blocks-wrap {
     overflow-x: auto;
     width: 100%;
+    /*transform: scaleY(-1);*/
+    /*position: relative;*/
+    /*top: -10px;*/
 }
 
 .compare-fixed-over {
@@ -593,6 +597,8 @@ input.bask {
 .compare-features li:nth-child(odd) {
     background: #f2f2f2;
 }
+
+
 
 .autorisation .popup-content {
     width: auto;

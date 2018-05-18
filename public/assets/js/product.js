@@ -73,9 +73,7 @@ $(document).ready(function () {
                 //scroll_block + 60  - с высотой фиксированного меня
                 if (scroll_block > baner_top + 27 && scroll_block + baner.height() + 67 < $('.jq-move-slider').height() + foot) {
                     baner.css({"position": 'fixed', top: '0px'});
-
                 } else if (scroll_block + baner.height() + 67 >= $('.jq-move-slider').height() + foot) {
-
                     if (befScroll < scroll_block) {
                         baner.css({'position': 'absolute', 'bottom': '67px', 'top': 'auto'});
                     }
@@ -83,12 +81,11 @@ $(document).ready(function () {
                 else if (scroll_block < baner_top + 27) {
                     baner.css({'position': 'relative', top: '0px'});
                 }
-
                 //title scroll
-                var title = $('.title-slide');
+                var title = $('.slide-tabs');
+                // var title = $('.title-slide');
                 var mBottom = 67;
-
-                if (scroll_block > baner_top + 103 && scroll_block + title.height() + mBottom < $('.jq-move-slider').height() + foot) {
+                if (scroll_block > baner_top && scroll_block + title.height() + mBottom < $('.jq-move-slider').height() + foot) {
                     title.css({"position": 'fixed', top: '0px'});
                     title.addClass('active-slide');
                 } else if (scroll_block + title.height() + mBottom >= $('.jq-move-slider').height() + foot) {
@@ -96,7 +93,7 @@ $(document).ready(function () {
                         title.css({'position': 'absolute', 'bottom': mBottom + 'px', 'top': 'auto'});
                     }
                 }
-                else if (scroll_block < baner_top + 103) {
+                else if (scroll_block < baner_top) {
                     title.css({'position': 'relative', top: '0px'});
                     title.removeClass('active-slide');
                 }

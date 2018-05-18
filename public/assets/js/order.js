@@ -76,6 +76,30 @@ $(document).ready(function () {
                 $('<span class="red"> + ' + obj[prod_data].bonus + ' грн</span> на <a>Бонусный счет</a>').appendTo('.basket-bonus' + i);
             }
 
+           /* if (obj[prod_data].giftId !== undefined) {*/
+            $('<div class="basket-section-service flexibal">\n' +
+                '                                      <div class="basket-prod flexibal">\n' +
+                '                                           <div class="basket-prod-img"></div>\n' +
+                '                                           <div class="certificates">\n' +
+                '                            <form>\n' +
+                '                                <label class="servs">ТехноЗабота Универсальная на 36 месяцев\n' +
+                '                                    <input type="checkbox" checked="checked">\n' +
+                '                                    <span class="checkmark"></span>\n' +
+                '                                    <!--<em>940 грн</em>-->\n' +
+                '                                </label>\n' +
+                '                            </form>\n' +
+                '                        </div>\n' +
+                '                                       </div>\n' +
+                '                                       <div class="basket-prod-number red"></div>\n' +
+                '                                       <div class="basket-price">499</div>\n' +
+                '                                       <div class=""></div>\n' +
+                '                                       <div class=""></div>\n' +
+                '                                    </div>').appendTo('.basket-section' /*+ i*/);
+
+           /* }*/
+
+
+
             i++
         }
 
@@ -304,11 +328,13 @@ $(document).ready(function () {
                 var baner = $('.compare-fixed-wrap, .compare-block-left .compare-fixed');
                 var baner_top = $('.compare-all-blocks').offset().top;
                 if (scroll_block > baner_top + 0 && scroll_block + baner.height() + 100 < $('.compare-all-blocks').height() + foot) {
+                    // baner.css({'position': 'fixed', bottom: '0px'});
                     baner.css({'position': 'fixed', top: '0px'});
                     $('.compare-fixed-over, .compare-block-left .compare-fixed').addClass('fixed-shadow');
 
                 } else if (scroll_block + baner.height() + 100 >= $('.compare-all-blocks').height() + foot) {
                     if (befScroll < scroll_block) {
+                        // baner.css({'position': 'absolute', 'top': 'auto', 'bottom': 'auto'});
                         baner.css({'position': 'absolute', 'bottom': 'auto', 'top': 'auto'});
                     }
                 }
@@ -317,6 +343,7 @@ $(document).ready(function () {
                         var compareScroll = e.currentTarget.scrollLeft;
                         $('.compare-fixed-wrap').scrollLeft(compareScroll);
                     });
+                    // baner.css({'position': 'absolute', bottom: '0px'});
                     baner.css({'position': 'absolute', top: '0px'});
                     $('body').find('.compare-features').addClass('m-top');
                     $('.compare-fixed-over, .compare-block-left .compare-fixed').removeClass('fixed-shadow');
