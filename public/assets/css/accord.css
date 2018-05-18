@@ -4,9 +4,9 @@
     float: left;
 }
 .accordion .accordion_item {
-    margin-bottom: 1px;
-    position: relative;
-    border-bottom: 1px solid #eaeaea;
+    margin-bottom:1px;
+    position:relative;
+    border-bottom:1px solid #eaeaea ;
     padding-left: 38px;
 }
 .accordion .title_block:first-child {
@@ -15,39 +15,38 @@
 .accordion .title_block {
     font: 17.3px 'SFUIDisplay-Semibold';
     color: #000;
-    cursor: pointer;
-    -o-transition: all .2s linear 0s;
-    -moz-transition: all .2s linear 0s;
-    -webkit-transition: all .2s linear 0s;
-    transition: all .2s linear 0s;
+    cursor:pointer;
+    -o-transition:all .2s linear 0s;
+    -moz-transition:all .2s linear 0s;
+    -webkit-transition:all .2s linear 0s;
+    transition:all .2s linear 0s;
     position: relative;
     padding: 4px 0 1px;
 }
 .accordion .title_block:before {
     content: url('../img/qa-arrow.png');
-    height: 26px;
+    height: 27px;
     text-align: center;
-    width: 26px;
-    border: 1px solid #ececec;
+    width: 27px;
+    border:1px solid #ececec;
     border-radius: 25px;
-    position: absolute;
-    right: 22px;
-    top: -3px;
+    position:absolute;
+    right:22px;
+    top:-3px;
 }
 .accordion_item:hover .title_block:before {
-    border-color: #fbd402;
+    border-color: #fbd402 ;
     background: #fbd402;
-    transition: all .5s ease 0s;
-    -webkit-transition: all .5s ease 0s;
-    -moz-transition: all .5s ease 0s;
-    -o-transition: all .5s ease 0s;
+    transition:all .5s ease 0s;
+    -webkit-transition:all .5s ease 0s;
+    -moz-transition:all .5s ease 0s;
+    -o-transition:all .5s ease 0s;
 
 }
-
 .accordion_item.open .title_block:before {
     background: #fbd402;
     transform: rotate(-180deg);
-    border-color: #fbd402;
+    border-color: #fbd402 ;
 }
 .accordion .info-accord {
     overflow: hidden;
@@ -55,9 +54,8 @@
     max-height: 0;
     transition: all .3s ease;
 }
-
 .accordion_item.open .info-accord {
-    max-height: 1300px;
+    max-height: 1330px;
 }
 .info-accord .article {
     padding-bottom: 20px;
@@ -94,7 +92,8 @@
     object-fit: contain;
 }
 /*-----pop-up-----*/
-#popup {
+/*#popup {*/
+.popup-question {
     display: none;
     width: 100%;
     background: rgba(0, 0, 0, .3);
@@ -103,7 +102,16 @@
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 100;
+}
+.close-question {
+    width: 100%;
+    height: 100%;
+    z-index: 90;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: block;
 }
 .popup-inner {
     top: 20%;
@@ -114,6 +122,7 @@
     padding: 10px 23px 43px;
     margin: 0 auto;
     overflow: hidden;
+    z-index: 95;
 }
 .popup-inner .liner {
     font-size: 23px;
@@ -128,8 +137,7 @@
     background: none;
     cursor: pointer;
 }
-
-.popup-block {
+ .popup-block {
     width: 48%;
     padding-left: 7px;
     display: inline-block;
@@ -142,7 +150,6 @@
 #popup .popup-block:last-child p {
     padding: 0 0 6px 41px;
 }
-
 .popup-block p {
     font: 14px 'SFUIDisplay-Medium';
     color: #aaadb1;
@@ -152,7 +159,6 @@
     text-align: left;
     width: 100%;
 }
-
 .popup-block textarea {
     font: 13px 'SFUIDisplay-Bold';
     color: #313e49;
@@ -162,14 +168,13 @@
     border-radius: 25px;
     width: 82%;
     margin-bottom: 11px;
+    overflow: auto;
 }
-
 .popup-block select {
     display: block;
 }
-
 .popup-block select,
-.popup-block input {
+.popup-block input{
     font: 14px 'SFUIDisplay-Bold';
     color: #313e49;
     padding: 11px 22px;
