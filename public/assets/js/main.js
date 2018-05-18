@@ -1484,46 +1484,47 @@ function selectRegion(regionId) {
     });
     console.log(regionId);
     $.cookie('region', regionId, {expires: 7, path: "/", domain: document.location.hostname, secure: false});
+    console.log($.cookie('region'));
     var el = $("#region_" + regionId);
     $(".numbers").html($(el).data('phone'));
     $(".data-region-list span").html($(el).html());
     $("#region_" + regionId).addClass('active');
     $(".tregion_" + regionId).addClass('active');
-    $('.region-choose > .dropdown').removeClass('open');
-    if ($('.data-region-list span').text() === 'Киев') {
-        $('header .work-time p').first().show();
-        $('header .work-time p').last().hide();
-    } else {
-        $('header .work-time p').first().hide();
-        $('header .work-time p').last().show();
-    }
-    refreshBasketStats();
+    // $('.region-choose > .dropdown').removeClass('open');
+    // if ($('.data-region-list span').text() === 'Киев') {
+    //     $('header .work-time p').first().show();
+    //     $('header .work-time p').last().hide();
+    // } else {
+    //     $('header .work-time p').first().hide();
+    //     $('header .work-time p').last().show();
+    // }
+    // refreshBasketStats();
 }
 
-function refreshBasketStats() {
-    $.getJSON("/basket/getBasketStats", {}, function (data) {
-        // $(".data-basket-amount").html(data.amount);
-        // $(".data-basketSumm").html(data.summ);
-        // $('.data-tableSumm').html(data.summ);
-        // if ($(".data-tableSumm").size() > 0)
-        //     $(".data-tableSumm").html(data.summ + data.delivery);
-        // if ($(".data-transfer").size() > 0) {
-        //     getTransferSumm();
-        // }
-        // if ($('.data-gift').size() == 0) {
-        //     $('.data-giftItem').remove();
-        // }
-        // if ((data.amount == '0' && data.creditAmount == '0'))
-        //     $(".data-basket").html("<center><a href='https://590.ua/'><img src='https://590.ua/assets/media/emptybasket.png' style='max-width: 100% !important;max-height: 100% !important;'></a></center>");
-        // if ((data.amount == '0')) {
-        //     $(".data-order").html("<center><a href='https://590.ua/'><img src='https://590.ua/assets/media/emptybasket.png' style='max-width: 100% !important;max-height: 100% !important;'></a></center>");
-        //     $('.modal-footer .btn-warning').hide();
-        //     $('.shopping-cart a').removeClass('active');
-        // } else {
-        //     $('.modal-footer .btn-warning').show();
-        // }
-    });
-}
+// function refreshBasketStats() {
+//     $.getJSON("/basket/getBasketStats", {}, function (data) {
+//         // $(".data-basket-amount").html(data.amount);
+//         // $(".data-basketSumm").html(data.summ);
+//         // $('.data-tableSumm').html(data.summ);
+//         // if ($(".data-tableSumm").size() > 0)
+//         //     $(".data-tableSumm").html(data.summ + data.delivery);
+//         // if ($(".data-transfer").size() > 0) {
+//         //     getTransferSumm();
+//         // }
+//         // if ($('.data-gift').size() == 0) {
+//         //     $('.data-giftItem').remove();
+//         // }
+//         // if ((data.amount == '0' && data.creditAmount == '0'))
+//         //     $(".data-basket").html("<center><a href='https://590.ua/'><img src='https://590.ua/assets/media/emptybasket.png' style='max-width: 100% !important;max-height: 100% !important;'></a></center>");
+//         // if ((data.amount == '0')) {
+//         //     $(".data-order").html("<center><a href='https://590.ua/'><img src='https://590.ua/assets/media/emptybasket.png' style='max-width: 100% !important;max-height: 100% !important;'></a></center>");
+//         //     $('.modal-footer .btn-warning').hide();
+//         //     $('.shopping-cart a').removeClass('active');
+//         // } else {
+//         //     $('.modal-footer .btn-warning').show();
+//         // }
+//     });
+// }
 
 // function getTransferSumm() {
 //     if ($(".data-transfer").size() > 0) {
@@ -1542,38 +1543,38 @@ function refreshBasketStats() {
 //     getTransferSumm()
 // })
 
-function addToCart(itemId, credit, type, url) {
-    if (!itemId)
-        return false;
-    var getvars = {itemId: itemId};
-    if (credit)
-        getvars.credit = 1;
-    if (type)
-        getvars.type = type;
-    var url = $(this).closest('div').find('p.cat-item-name a').attr('href');
-    $.get("/basket/addtocart", getvars, function (data) {
-        $('.data-basket').html(data);
-        $(".data-amount").keyfilter(/[\d\-]/);
-        $('.shopping-cart a').addClass('active');
-        if (credit)
-            initCalc();
-        if (window.location.href.match('order')) {
-            if (typeof(dojo) != 'undefined') {
-                if ($("#basket").html() != "<center><a href='https://590.ua/'><img src='https://590.ua/assets/media/emptybasket.png' style='max-width: 100% !important;max-height: 100% !important;'></a></center>") {
-                    var newStore = new dojo.data.ItemFileWriteStore({url: "/basket/getItems"});
-                    if (newStore) {
-                        grid.setStore(newStore);
-                    }
-                } else
-                    window.location.reload();
-            } else
-                window.location.reload();
-        } else {
-            refreshBasketStats();
-        }
-        GIHhtQfW_AtmPixel('http://590.ua/basket/addtocart');
-        setTimeout(function () {
-            GIHhtQfW_AtmPixel(url);
-        }, 1000);
-    });
-}
+// function addToCart(itemId, credit, type, url) {
+//     if (!itemId)
+//         return false;
+//     var getvars = {itemId: itemId};
+//     if (credit)
+//         getvars.credit = 1;
+//     if (type)
+//         getvars.type = type;
+//     var url = $(this).closest('div').find('p.cat-item-name a').attr('href');
+//     $.get("/basket/addtocart", getvars, function (data) {
+//         $('.data-basket').html(data);
+//         $(".data-amount").keyfilter(/[\d\-]/);
+//         $('.shopping-cart a').addClass('active');
+//         if (credit)
+//             initCalc();
+//         if (window.location.href.match('order')) {
+//             if (typeof(dojo) != 'undefined') {
+//                 if ($("#basket").html() != "<center><a href='https://590.ua/'><img src='https://590.ua/assets/media/emptybasket.png' style='max-width: 100% !important;max-height: 100% !important;'></a></center>") {
+//                     var newStore = new dojo.data.ItemFileWriteStore({url: "/basket/getItems"});
+//                     if (newStore) {
+//                         grid.setStore(newStore);
+//                     }
+//                 } else
+//                     window.location.reload();
+//             } else
+//                 window.location.reload();
+//         } else {
+//             refreshBasketStats();
+//         }
+//         GIHhtQfW_AtmPixel('http://590.ua/basket/addtocart');
+//         setTimeout(function () {
+//             GIHhtQfW_AtmPixel(url);
+//         }, 1000);
+//     });
+// }
