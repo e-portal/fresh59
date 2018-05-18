@@ -801,14 +801,15 @@
                                        href="{if $pages->current-1=='1'}{$firstPageUrl}{else}{$firstPageUrl}/page/{$pages->current-1}{/if}"></a>
                                 {/if}
                                 {if $pages->firstPageInRangeNum!=1}
-                                    <a class="pagin-number active-pagin-number" href="{$firstPageUrl}">1</a>
+                                    <a class="pagin-number active-pagin-number"
+                                       href="/catalog/search{$searchtext}/{$firstPageUrl}">1</a>
                                     <span>...</span>
                                 {/if}
                                 {if $pages->pagesInRange}
                                     {foreach from=$pages->pagesInRange item=p key=k}
                                         {if $pages->current!=$k}
                                             <a class="pagin-number"
-                                               href="{if $k=='1'}{$firstPageUrl}{else}{$firstPageUrl}/page/{$k}{/if}">{$k}</a>
+                                               href="/catalog/search/{$searchtext}{if $k=='1'}{$firstPageUrl}{else}{$firstPageUrl}/page/{$k}{/if}">{$k}</a>
                                         {else}
                                             <span class="pagin-number pagin-number-active">{$pages->current}</span>
                                         {/if}
@@ -817,12 +818,14 @@
                                 {if $pages->pageCount && $pages->lastPageInRange != $pages->last}
                                     <span>...</span>
                                     <a class="pagin-number"
-                                       href="{$firstPageUrl}/page/{$pages->pageCount}">{$pages->pageCount}</a>
+                                       href="/catalog/search/{$searchtext}{$firstPageUrl}/page/{$pages->pageCount}">
+                                        {$pages->pageCount}
+                                    </a>
                                 {/if}
 
                                 {if $pages->current < $pages->pageCount}
                                     <a class="blocks-pagination-forward blocks-pagination-arrow"
-                                       href="{$firstPageUrl}/page/{$pages->current+1}"></a>
+                                       href="/catalog/search/{$searchtext}{$firstPageUrl}/page/{$pages->current+1}"></a>
                                 {/if}
                                 <div class="blocks-pagination-empty">
                                     <div id=selectyPagination class="blocks-pagination-selecty">
