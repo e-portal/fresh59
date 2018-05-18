@@ -1472,11 +1472,7 @@ function deleteItemFromCompare(e) {
 // }
 
 /*---------end BIND UNBIND---------*/
-$(document).ready(function () {
-    // console.log($.cookie('region'));
-    // if()
-    $.cookie('region')
-})
+
 
 
 function selectRegion(regionId) {
@@ -1504,6 +1500,24 @@ function selectRegion(regionId) {
     // refreshBasketStats();
 }
 
+$(document).ready(function () {
+    // console.log($.cookie('region'));
+    function cookie_tel() {
+        a = $.cookie('region')
+        $(".data-region-list .options li").each(function () {
+            $(this).removeClass('active');
+        });
+        $("header .phone .selected-option .options.open li").each(function () {
+            $(this).removeClass('active');
+        });
+        $("#region_" + a).addClass('active');
+        $(".tregion_" + a).addClass('active');
+
+    }
+    // if()
+    cookie_tel();
+
+})
 // function refreshBasketStats() {
 //     $.getJSON("/basket/getBasketStats", {}, function (data) {
 //         // $(".data-basket-amount").html(data.amount);
