@@ -458,7 +458,7 @@ jQuery(document).ready(function () {
             var modal_ = $(options.modal_error_class);
 
             var val = $(this).val();
-
+            options.searchPhrase = val;
             var limit = Math.floor(($(window).height() - 160) / 100) - 1;
             if(val && val.length > options.minLength) {
                 $.getJSON(options.url, {q: $(this).val(), l: limit}, function (data) {
