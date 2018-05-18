@@ -484,7 +484,7 @@ jQuery(document).ready(function () {
                             <div class="search-result__img"><img src="/images/' + imgSrc + '" alt="" /></div>  \
                                 <div class="search-result__content">\
                                     <div class="search-result__content-top">\
-                                        <h5 class="search-result__name">' + i.category + ' ' + i.brand + ' ' + i.name + '</h5>\
+                                        <h5 class="search-result__name"><a href="/catalog/item/' + i.id + '">' + i.category + ' ' + i.brand + ' ' + i.name + '</a></h5>\
                                     </div>\
                                     <p class="search-result__coast">2500 грн</p> \
                                 </div>\
