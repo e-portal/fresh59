@@ -155,6 +155,7 @@
 
         </div>
         <div class="ourr">
+            <div class="slide-tabs">
             <div class="product-menu">
                 <a href="#prod-info">Описание товара</a>
                 <a href="#prod-characteristic">Характеристики</a>
@@ -185,6 +186,7 @@
                         </a>
                     </div>
                 </div>
+            </div>
             </div>
             <div class="in-stock">
                 <div class="prod-code">Код товара {$item.id}</div>
