@@ -57,6 +57,7 @@
                         <div class="inpp">
                             <form action="">
                                 <input type="tel" placeholder="Перезвонить? Введите номер..." class="numb">
+
                                 <div class="send"><img src="/assets/img/phon.png" alt=""></div>
                             </form>
                         </div>
@@ -94,7 +95,9 @@
                     <div class="inpp">
                         <form action="/catalog/search" method="get">
                             <input type="text" class="header-bottom__input" placeholder="Поиск товара">
+
                             <div class="searc"><img src="/assets/img/seac.png" alt=""></div>
+                            <button type="submit" class="button_v1">Найти</button>
                             <div class="header-bottom__exit"></div>
                         </form>
                         <div class="search-list">
