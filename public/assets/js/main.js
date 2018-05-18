@@ -510,6 +510,13 @@ jQuery(document).ready(function () {
                         if(e.which == 13){//Enter key pressed
                             $('.searc').click();//Trigger search button click event
                         }
+                        $('.header-bottom__input').keypress(function (e) {
+                            var key = e.which;
+                            if(key == 13)  // the enter key code
+                            {
+                                location.href ="/catalog/search/" + options.searchPhrase + "";
+                            }
+                        });
 
                     }
                     else {
