@@ -506,17 +506,23 @@ jQuery(document).ready(function () {
                             // a = href="/catalog/search/' + options.searchPhrase + '"
                             location.href ="/catalog/search/" + options.searchPhrase + "";
                         })
-
-                        if(e.which == 13){//Enter key pressed
-                            $('.searc').click();//Trigger search button click event
-                        }
                         $('.header-bottom__input').keypress(function (e) {
-                            var key = e.which;
-                            if(key == 13)  // the enter key code
-                            {
-                                location.href ="/catalog/search/" + options.searchPhrase + "";
+                            if(e.which == 13) {
+                                     e.preventDefault()
+                                console.log(123);
+                                // location.href ="/catalog/search/" + options.searchPhrase + "";
                             }
-                        });
+                        })
+                        // if(e.which == 13){
+                        //     $('.searc').click();
+                        // }
+                        // $('.header-bottom__input').keypress(function (e) {
+                        //     var key = e.which;
+                        //     if(key == 13)  // the enter key code
+                        //     {
+                        //         location.href ="/catalog/search/" + options.searchPhrase + "";
+                        //     }
+                        // });
 
                     }
                     else {
