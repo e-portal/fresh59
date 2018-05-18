@@ -88,32 +88,32 @@
                                             {*<li data-value="homephone"><a href="tel:+380442238520">(044) 223-8-520</a>*}
                                             {*</li>*}
 
-                                            <li><a href="tel:+380432572777" class="tregion_6" >(0432) 57-27-77</a></li>
-                                            <li><a href="tel:+380672624343"  class="tregion_6" >(067) 262-43-43</a></li>
-                                            <li><a href="tel:+380567887171"  class="tregion_2" >(056) 788-71-71</a></li>
-                                            <li><a href="tel:+380952705071"  class="tregion_2" >(095) 270-50-71</a></li>
-                                            <li><a href="tel:+380622074690"    class="tregion_12">(062) 207-46-90</a></li>
-                                            <li><a href="tel:+380504446825"   class="tregion_12">(050) 444-68-25</a></li>
-                                            <li><a href="tel:+380617011960"  class="tregion_9"  >(061) 701 19 60</a></li>
-                                            <li><a href="tel:+380988671292"  class="tregion_9"  >(098) 867-13-92</a></li>
-                                            <li><a href="tel:+380442238520"  class="tregion_1 active" >(044) 223-8-520</a></li>
-                                            <li><a href="tel:+380675900591"   class="tregion_1 active" >(067) 590-0-591</a></li>
-                                            <li><a href="tel:+380522595039" class="tregion_5"  >(0522) 59-50-39</a></li>
-                                            <li><a href="tel:+380665208066" class="tregion_5"  >(066) 520-80-66</a></li>
-                                            <li><a href="tel:+380683229922"  class="tregion_17"  >(068) 322 99 22</a></li>
-                                            <li><a href="tel:+380564435039"  class="tregion_13"  >(056) 443-50-39</a></li>
-                                            <li><a href="tel:+380987864286"  class="tregion_13"  >(098) 786-42-86</a></li>
-                                            <li><a href="tel:+380322470409" class="tregion_4"  >(032) 247-04-09</a></li>
-                                            <li><a href="tel:+380674346800" class="tregion_4"  >(067) 434-68-00</a></li>
-                                            <li><a href="tel:+380939294637"  class="tregion_21"  >(093) 929-46-37</a></li>
-                                            <li><a href="tel:+380552441287"  class="tregion_20" >(0552) 44-12-87</a></li>
-                                            <li><a href="tel:+380487025684"  class="tregion_7" >(048) 702-56-84</a></li>
-                                            <li><a href="tel:+380503334133"  class="tregion_7" >(050) 333-41-33</a></li>
-                                            <li><a href="tel:+380577626033" class="tregion_3"  >(057) 762-60-33</a></li>
-                                            <li><a href="tel:+380504436143"  class="tregion_3" >(050) 443-61-43</a></li>
-                                            <li><a href="tel:+380552441287" class="tregion_22" >(0552) 44-12-87</a></li>
-                                            <li><a href="tel:+380472511539" class="tregion_19"  >(0472) 51-15-39</a></li>
-                                            <li><a href="tel:+380987864286" class="tregion_19"  >(098) 786-42-86</a></li>
+                                            <li class="tregion_6"><a href="tel:+380432572777"  >(0432) 57-27-77</a></li>
+                                            <li class="tregion_6"><a href="tel:+380672624343"   >(067) 262-43-43</a></li>
+                                            <li class="tregion_2"><a href="tel:+380567887171"   >(056) 788-71-71</a></li>
+                                            <li class="tregion_2"><a href="tel:+380952705071"   >(095) 270-50-71</a></li>
+                                            <li class="tregion_12"><a href="tel:+380622074690"    >(062) 207-46-90</a></li>
+                                            <li class="tregion_12"><a href="tel:+380504446825"   >(050) 444-68-25</a></li>
+                                            <li class="tregion_9"><a href="tel:+380617011960"    >(061) 701 19 60</a></li>
+                                            <li class="tregion_9"><a href="tel:+380988671292"   >(098) 867-13-92</a></li>
+                                            <li class="tregion_1 active"><a href="tel:+380442238520"   >(044) 223-8-520</a></li>
+                                            <li class="tregion_1 active"><a href="tel:+380675900591"   >(067) 590-0-591</a></li>
+                                            <li class="tregion_5"><a href="tel:+380522595039"   >(0522) 59-50-39</a></li>
+                                            <li class="tregion_5"><a href="tel:+380665208066"   >(066) 520-80-66</a></li>
+                                            <li class="tregion_17" ><a href="tel:+380683229922"   >(068) 322 99 22</a></li>
+                                            <li class="tregion_13"><a href="tel:+380564435039"    >(056) 443-50-39</a></li>
+                                            <li class="tregion_13"><a href="tel:+380987864286"    >(098) 786-42-86</a></li>
+                                            <li class="tregion_4"><a href="tel:+380322470409"   >(032) 247-04-09</a></li>
+                                            <li class="tregion_4"><a href="tel:+380674346800"   >(067) 434-68-00</a></li>
+                                            <li class="tregion_21"><a href="tel:+380939294637"    >(093) 929-46-37</a></li>
+                                            <li class="tregion_20"><a href="tel:+380552441287"   >(0552) 44-12-87</a></li>
+                                            <li class="tregion_7"><a href="tel:+380487025684"   >(048) 702-56-84</a></li>
+                                            <li class="tregion_7"><a href="tel:+380503334133"   >(050) 333-41-33</a></li>
+                                            <li class="tregion_3"><a href="tel:+380577626033"   >(057) 762-60-33</a></li>
+                                            <li class="tregion_3"><a href="tel:+380504436143"   >(050) 443-61-43</a></li>
+                                            <li  class="tregion_22"><a href="tel:+380552441287" >(0552) 44-12-87</a></li>
+                                            <li class="tregion_19"><a href="tel:+380472511539"   >(0472) 51-15-39</a></li>
+                                            <li class="tregion_19"><a href="tel:+380987864286"  >(098) 786-42-86</a></li>
                                         </ul>
                                     </li>
                                 </ul>

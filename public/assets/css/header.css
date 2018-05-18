@@ -131,9 +131,9 @@ header.search-open .header-bottom__exit {
     opacity: 1;
     z-index: 5;
 }
-header .phone .selected-option .options.open li a {
+header .phone .selected-option .options.open li {
     display: none;
 }
-header .phone .selected-option .options.open li a.active {
+header .phone .selected-option .options.open li.active {
     display: block;
 }
