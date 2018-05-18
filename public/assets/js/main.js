@@ -503,7 +503,6 @@ jQuery(document).ready(function () {
                         modal.show();
 
                         $('.searc').click(function () {
-                            // a = href="/catalog/search/' + options.searchPhrase + '"
                             location.href ="/catalog/search/" + options.searchPhrase + "";
                         })
                         $('.header-bottom__input').keypress(function (e) {
@@ -513,19 +512,15 @@ jQuery(document).ready(function () {
                             }
                         })
 
-                        // if(e.which == 13){
-                        //     $('.searc').click();
-                        // }
-                        // $('.header-bottom__input').keypress(function (e) {
-                        //     var key = e.which;
-                        //     if(key == 13)  // the enter key code
-                        //     {
-                        //         location.href ="/catalog/search/" + options.searchPhrase + "";
-                        //     }
-                        // });
 
                     }
                     else {
+                        modal_.html('');
+                        var html_ = '<button class="header-search__button">';
+                        html_ += '<a href="">По Вашему запросу ничего не найдено.</a> \
+                                </button>';
+                        modal_.append(html_)
+
                         // methods.noResults();
                     }
                 });
