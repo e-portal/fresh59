@@ -607,29 +607,42 @@ jQuery(document).ready(function () {
 
     function refreshBasketStats() {
         $.getJSON("/basket/getBasketStats", {}, function (data) {
-            console.log(data);
-            // $(".data-basket-amount").html(data.amount);
-            // $(".data-basketSumm").html(data.summ);
-            // $('.data-tableSumm').html(data.summ);
-            // if ($(".data-tableSumm").size() > 0)
-            //     $(".data-tableSumm").html(data.summ + data.delivery);
-            // if ($(".data-transfer").size() > 0) {
-            //     getTransferSumm();
-            // }
-            // if ($('.data-gift').size() == 0) {
-            //     $('.data-giftItem').remove();
-            // }
-            // if ((data.amount == '0' && data.creditAmount == '0'))
-            //     $(".data-basket").html("<center><a href='https://590.ua/'><img src='https://590.ua/assets/media/emptybasket.png' style='max-width: 100% !important;max-height: 100% !important;'></a></center>");
-            // if ((data.amount == '0')) {
-            //     $(".data-order").html("<center><a href='https://590.ua/'><img src='https://590.ua/assets/media/emptybasket.png' style='max-width: 100% !important;max-height: 100% !important;'></a></center>");
-            //     $('.modal-footer .btn-warning').hide();
-            //     $('.shopping-cart a').removeClass('active');
-            // } else {
-            //     $('.modal-footer .btn-warning').show();
-            // }
+            $(".data-basket-amount").html(data.amount);
+            $(".data-basketSumm").html(data.summ);
+            $('.data-tableSumm').html(data.summ);
+            if ($(".data-tableSumm").size() > 0)
+                $(".data-tableSumm").html(data.summ + data.delivery);
+            if ($(".data-transfer").size() > 0) {
+                getTransferSumm();
+            }
+            if ($('.data-gift').size() == 0) {
+                $('.data-giftItem').remove();
+            }
+            if ((data.amount == '0' && data.creditAmount == '0'))
+                $(".data-basket").html("<center><a href='https://590.ua/'><img src='https://590.ua/assets/media/emptybasket.png' style='max-width: 100% !important;max-height: 100% !important;'></a></center>");
+            if ((data.amount == '0')) {
+                $(".data-order").html("<center><a href='https://590.ua/'><img src='https://590.ua/assets/media/emptybasket.png' style='max-width: 100% !important;max-height: 100% !important;'></a></center>");
+                $('.modal-footer .btn-warning').hide();
+                $('.shopping-cart a').removeClass('active');
+            } else {
+                $('.modal-footer .btn-warning').show();
+            }
         });
     }
+
+    function getTransferSumm() {
+        if ($(".data-transfer").size() > 0) {
+            $.get("/basket/transfersumm", {}, function (data) {
+                console.log(data);
+                if (data.length > 0) {
+                    $(".data-transfer").html(data);
+                } else {
+                    $(".data-transfer").html('');
+                }
+            });
+        }
+    }
+
     $('.kiev').bind('click',function () {
         refreshBasketStats();
     })
