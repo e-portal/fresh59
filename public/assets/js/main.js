@@ -508,7 +508,10 @@ jQuery(document).ready(function () {
                         })
                         $('.header-bottom__input').keypress(function (e) {
                             if(e.which == 13) {
-                                location.href ="/catalog/search/" + options.searchPhrase + "";
+                                $('.searc').click(function () {
+                                    // a = href="/catalog/search/' + options.searchPhrase + '"
+                                    location.href ="/catalog/search/" + options.searchPhrase + "";
+                                })
                             }
                         })
 
