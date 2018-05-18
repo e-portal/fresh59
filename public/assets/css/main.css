@@ -2365,7 +2365,6 @@ input {
     left: 17px;
     font-style: italic;
 }
-
 .buy-by-part-from em {
     top: 6px;
     left: 13px;
@@ -5320,7 +5319,6 @@ ul.nacc .tabs-saw p {
     margin-top: 10px;
     transition: .3s;
 }
-
 .comp-link a {
     display: inline-block;
     width: 100%;
@@ -5347,11 +5345,13 @@ ul.nacc .tabs-saw p {
 .tab-button li a span {
     white-space: pre;
 }
-.search-list {
+
+.search-list-res {
     display: flex;
     flex-wrap: wrap;
 }
-.search-list h3 {
+
+.search-list-res h3 {
     width: 100%;
 }
 .search-item {
@@ -5362,14 +5362,17 @@ ul.nacc .tabs-saw p {
     list-style-type: none;
     padding: 0;
 }
-.search-list ul {
+
+.search-list-res ul {
     font-size: 17px;
     padding-bottom: 7px;
 }
-.search-list ul li:first-child {
+
+.search-list-res ul li:first-child {
     margin-top: 7px;
 }
-.search-list ul li {
+
+.search-list-res ul li {
     font-size: 15px;
     padding: 3px 0;
 }
@@ -5377,10 +5380,12 @@ ul.nacc .tabs-saw p {
 .one-content .under-senn a:hover {
     text-decoration: none;
 }
-.search-list .search-item a:hover {
+
+.search-list-res .search-item a:hover {
     color: #fbd402;
 }
-.search-list .search-item a {
+
+.search-list-res .search-item a {
     color: #313e49;
     outline: none;
     transition: .1s;
@@ -5423,12 +5428,6 @@ input:focus:-ms-input-placeholder {
     opacity: 0;
 }
 
-.wrap-search {
-    z-index: 30;
-    background: #fff;
-    display: block;
-    position: absolute;
-}
 
 
 @-moz-document url-prefix() {

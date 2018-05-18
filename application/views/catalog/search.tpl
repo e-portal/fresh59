@@ -32,7 +32,7 @@
         </div>
         <div class="right-banner">
             <div class="one-content">
-                <div class="search-list">
+                <div class="search-list-res">
                     <h3 class="">РЕЗУЛЬТАТЫ ПОИСКА В КАТЕГОРИЯХ ПО БРЕНДУ “<em>LG</em>”</h3>
                     <ul class="search-item">Крупная техника
                         <li><a>Микроволновые печи (1)</a></li>
