@@ -129,10 +129,10 @@
 <script src="/assets/js/mask.js"></script>
 <script src="/assets/js/order.js"></script>
 <script src="/assets/js/jquery.cookie.js"></script>
-<!-- Tidiochat --><script src="//code.tidio.co/nnyvrxcw6rbyxx6ryjnoioigpohmsben.js"></script><!-- Tidiochat End -->
+<script src="//code.tidio.co/nnyvrxcw6rbyxx6ryjnoioigpohmsben.js"></script>
 <script>
     if ($('#disqus_thread').length) {
-        (function() { // DON'T EDIT BELOW THIS LINE
+        (function() {
             var d = document, s = d.createElement('script');
             s.src = 'https://590.disqus.com/embed.js';
             s.setAttribute('data-timestamp', +new Date());
