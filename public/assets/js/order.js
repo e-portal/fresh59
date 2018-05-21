@@ -263,7 +263,7 @@ $(document).ready(function () {
 
     function servs() {
         var sertficat = $('.sertficat').find('.basket-price.total').text()
-        var startPrice_ = 0;
+        var startPrice_
         // var check;
         // check = $(".servs input").prop("checked");
         if($(".servs input").is(':checked')) {
