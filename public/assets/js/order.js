@@ -238,22 +238,13 @@ $(document).ready(function () {
 
     /*---------Count price---------*/
     function inNumberProd() {
-        var check;
+
         var numcount = $(this).val();
         idObj = $(this).parents('.basket-section-prod').find('.prod-code span').html()
         basket[idObj].quantity = $(this).val();
-        var sertficat = $('.sertficat').find('.basket-price.total').text()
-        var startPrice_ = $(".servs input").on("click", function(){
-            check = $(".servs input").prop("checked");
-            if(check) {
-                sertficat
-            } else {
-                0
-            }
-        });
 
         var startPrice = $(this).parents('.basket-section-prod').find('.prod-price-total').attr('data-value');
-        $(this).parents('.basket-section-prod').find('.prod-price-total').html((startPrice + startPrice_) * numcount);
+        $(this).parents('.basket-section-prod').find('.prod-price-total').html((startPrice) * numcount);
         // $(this).parents('.basket-section-prod').find('.prod-price-total').attr('data-value', startPrice * numcount);
         totalCart();
 
@@ -273,7 +264,19 @@ $(document).ready(function () {
             totalPrice += parseInt($(this).html());
 
         });
-        $('.count-total').html(totalPrice);
+        var check;
+        var sertficat = $('.sertficat').find('.basket-price.total').text()
+        var startPrice_ = $(".servs input").on("click", function(){
+            check = $(".servs input").prop("checked");
+            if(check) {
+                sertficat
+            } else {
+                sertficat = 0
+            }
+        });
+
+
+        $('.count-total').html(totalPrice + startPrice_);
     }
 
     /*---------end Count total price---------*/
