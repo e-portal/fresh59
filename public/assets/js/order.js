@@ -4,7 +4,7 @@ $(document).ready(function () {
     $('.add-to-cart').bind('click', doObject);
 
 
-    // var basket = localStorage.getItem('basket') != undefined ? JSON.parse(localStorage.getItem('basket')) : {};
+    var basket = localStorage.getItem('basket') != undefined ? JSON.parse(localStorage.getItem('basket')) : {};
 
     if ($('body').hasClass('cart')) {
         basket != null ? doBasket(basket) : ''
@@ -18,7 +18,7 @@ $(document).ready(function () {
             prod_data = $(this).data();
             prod_data.quantity = 1;
             basket[prod_id] = prod_data;
-            // doBasket(basket);
+            doBasket(basket);
         } else {
             basket[prod_id].quantity = parseInt(basket[prod_id].quantity) + 1;
             doBasket(basket);
