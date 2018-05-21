@@ -260,12 +260,10 @@
                                         <div class="items">
                                             <a href="/articles/{$article.url|mblower}">
 
-                                                {if isset($article.img) }
-                                                    <img src="/assets/img/articles/{$article.img}">
+                                                {if $item.picture}
+                                                    <img src="/assets/img/articles/{$item.picture}">
                                                 {else}
-                                                    <img src="/assets/img/articles/art{1|rand:6}.png">
-                                                    {*<img src="/assets/img/noimage.png">*}
-
+                                                    <img src="/assets/img/noimage.png">
                                                 {/if}
 
                                                 {*<h4>{$article.title|default:'title'}</h4>*}
