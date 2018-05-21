@@ -105,7 +105,7 @@ $(document).ready(function () {
 
 
             i++
-            console.log(i);
+
         }
 
         /*stop scroll*/
@@ -122,11 +122,16 @@ $(document).ready(function () {
         totalCart();
         bindings();
         servs_total();
+        numeral();
 
 
 
     }
-
+    function numeral(){
+        console.log(i);
+        $('.numeral').html(i);
+        window.localStorage.setItem('basket', JSON.stringify(basket));
+    }
     /*close popup*/
     $('.closeX, .close, .closeBtn, .take-order-btn').on('click', function () {
 
