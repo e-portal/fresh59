@@ -267,7 +267,7 @@ $(document).ready(function () {
         var check;
         check = $(".servs input").prop("checked");
         if(check) {
-            startPrice_ = sertficat
+            startPrice_ += sertficat
         } else {
             startPrice_ = 0
         }
