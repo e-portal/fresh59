@@ -18,7 +18,6 @@ $(document).ready(function () {
             prod_data = $(this).data();
             prod_data.quantity = 1;
             basket[prod_id] = prod_data;
-            console.log( prod_data);
             doBasket(basket);
         } else {
             basket[prod_id].quantity = parseInt(basket[prod_id].quantity) + 1;
@@ -29,6 +28,7 @@ $(document).ready(function () {
 
 
     function doBasket(obj) {/* add basket-section-prod*/
+        console.log(obj);
         $('.basket-table').html(' ');
         i = 0;
         for (prod_data in obj) {
