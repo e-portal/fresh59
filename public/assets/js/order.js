@@ -9,8 +9,7 @@ $(document).ready(function () {
     if ($('body').hasClass('cart')) {
         basket != null ? doBasket(basket) : ''
     }
-    var numeral;
-    console.log(numeral);
+
 
     function doObject() {/* create object product*/
         var prod_id = $(this).attr('data-id');
@@ -35,7 +34,7 @@ $(document).ready(function () {
 
         $('.basket-table').html(' ');
         i = 0;
-        numeral = i
+
         for (prod_data in obj) {
 
             /*---------POPUP---------*/
@@ -85,7 +84,7 @@ $(document).ready(function () {
             }
 
             if (obj[prod_data].serttitle !== undefined) {
-            $('<div class="basket-section-service flexibal">\n' +
+            $('<div class="basket-section-service flexibal sertficat">\n' +
                 '                                      <div class="basket-prod flexibal">\n' +
                 '                                           <div class="basket-prod-img"></div>\n' +
                 '                                           <div class="certificates">\n' +
@@ -125,7 +124,7 @@ $(document).ready(function () {
         $('.close').addClass('show');
         totalCart();
         bindings();
-        servs_total();
+        // servs_total();
         // numeral();
 
 
@@ -135,29 +134,29 @@ $(document).ready(function () {
 
 
 
-    function servs_total() {
-
-        var check;
-        $(".servs input").on("click", function(){
-            check = $(".servs input").prop("checked");
-            if(check) {
-                console.log(check);
-            } else {
-                console.log(555);
-            }
-        });
-
-
-        // var $checked = $('.servs input[type="checkbox"]:checked');
-        // $checked.each(function(){
-        //     if ($checked.length == 0) {
-        //         console.log(123);
-        //     } else {
-        //         console.log(555);
-        //     }
-        // });
-
-    }
+    // function servs_total() {
+    //
+    //     var check;
+    //     $(".servs input").on("click", function(){
+    //         check = $(".servs input").prop("checked");
+    //         if(check) {
+    //             console.log(check);
+    //         } else {
+    //             console.log(555);
+    //         }
+    //     });
+    //
+    //
+    //     // var $checked = $('.servs input[type="checkbox"]:checked');
+    //     // $checked.each(function(){
+    //     //     if ($checked.length == 0) {
+    //     //         console.log(123);
+    //     //     } else {
+    //     //         console.log(555);
+    //     //     }
+    //     // });
+    //
+    // }
 
 
     /*close popup*/
@@ -239,13 +238,26 @@ $(document).ready(function () {
 
     /*---------Count price---------*/
     function inNumberProd() {
+        var check;
         var numcount = $(this).val();
         idObj = $(this).parents('.basket-section-prod').find('.prod-code span').html()
         basket[idObj].quantity = $(this).val();
+        var sertficat = $('.sertficat').find('.basket-price.total').text()
+        var startPrice_ = $(".servs input").on("click", function(){
+            check = $(".servs input").prop("checked");
+            if(check) {
+                sertficat
+            } else {
+                0
+            }
+        });
+
         var startPrice = $(this).parents('.basket-section-prod').find('.prod-price-total').attr('data-value');
-        $(this).parents('.basket-section-prod').find('.prod-price-total').html(startPrice * numcount);
+        $(this).parents('.basket-section-prod').find('.prod-price-total').html((startPrice + startPrice_) * numcount);
         // $(this).parents('.basket-section-prod').find('.prod-price-total').attr('data-value', startPrice * numcount);
         totalCart();
+
+
     }
 
 
