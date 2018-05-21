@@ -25,14 +25,13 @@
                     <div class="items">
                         <a href="/articles/{$article.url|mblower}">
 
-                            {if isset($article.img) }
+                            {if isset($item.picture) }
                                 <div class="one-article-img">
-                                    <img src="/assets/img/articles/{$article.img}">
+                                    <img src="/assets/img/articles/{$item.picture}">
                                 </div>
                             {else}
                                 <div class="one-article-img">
-                                    <img src="/assets/img/articles/art{1|rand:6}.png">
-                                    {*<img src="/assets/img/noimage.png">*}
+                                    <img src="/assets/img/noimage.png">
                                 </div>
                             {/if}
 
