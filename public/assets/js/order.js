@@ -126,7 +126,7 @@ $(document).ready(function () {
         bindings();
         // servs_total();
         // numeral();
-
+        servs();
 
 
     }
@@ -283,7 +283,7 @@ $(document).ready(function () {
         console.log(startPrice_,sertficat);
 
     }
-    servs();
+
 
     function totalCart() {
         totalPrice = 0;
