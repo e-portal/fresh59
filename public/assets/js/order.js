@@ -266,11 +266,19 @@ $(document).ready(function () {
         var startPrice_
         // var check;
         // check = $(".servs input").prop("checked");
-        if($(".servs input").is(':checked')) {
-            startPrice_ = sertficat
-        } else {
-            startPrice_ = sertficat
-        }
+        // if($(".servs input").is(':checked')) {
+        //     startPrice_ = sertficat
+        // } else {
+        //     startPrice_ = sertficat
+        // }
+        //
+        $(".servs input").on("click", function() {
+            if ($(".servs input").is(':checked')) {
+                startPrice_ = sertficat
+            } else {
+                startPrice_ = 0
+            }
+        })
         console.log(startPrice_);
 
     }
