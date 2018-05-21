@@ -12,12 +12,13 @@ $(document).ready(function () {
 
     function doObject() {/* create object product*/
         var prod_id = $(this).attr('data-id');
-        console.log(prod_id);
+
 
         if (basket[prod_id] == undefined) {
             prod_data = $(this).data();
             prod_data.quantity = 1;
             basket[prod_id] = prod_data;
+            console.log( basket[prod_id]);
             doBasket(basket);
         } else {
             basket[prod_id].quantity = parseInt(basket[prod_id].quantity) + 1;
