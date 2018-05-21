@@ -130,7 +130,7 @@ $(document).ready(function () {
     function numeral(){
         console.log(i);
         $('.numeral').html(i);
-        window.localStorage.setItem('basket', JSON.stringify(basket));
+        // window.localStorage.setItem('basket', JSON.stringify(basket));
     }
     /*close popup*/
     $('.closeX, .close, .closeBtn, .take-order-btn').on('click', function () {
