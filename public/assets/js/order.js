@@ -128,14 +128,15 @@ $(document).ready(function () {
 
     }
 
-    // numeral();
-    // function numeral(){
-    //     // doBasket()
-    //     console.log(i);
-    //     $('.numeral').html(i);
-    //     window.localStorage.setItem('basket', JSON.stringify(basket));
-    //
-    // }
+
+    function numeral(){
+        // doBasket()
+        console.log(basket[idObj].quantity);
+        // $('.numeral').html(i);
+        // window.localStorage.setItem('basket', JSON.stringify(basket));
+
+    } numeral();
+
     function servs_total() {
 
         var check;
