@@ -130,9 +130,35 @@ $(document).ready(function () {
     function numeral(){
         console.log(i);
         $('.numeral').html(i);
-        // window.localStorage.setItem('basket', JSON.stringify(basket));
+        window.localStorage.setItem('basket', JSON.stringify(basket));
 
     }
+
+    function servs_total() {
+
+        var check;
+        $(".servs input").on("click", function(){
+            check = $(".servs input").prop("checked");
+            if(check) {
+                console.log(check);
+            } else {
+                console.log(555);
+            }
+        });
+
+
+        // var $checked = $('.servs input[type="checkbox"]:checked');
+        // $checked.each(function(){
+        //     if ($checked.length == 0) {
+        //         console.log(123);
+        //     } else {
+        //         console.log(555);
+        //     }
+        // });
+
+    }
+
+
     /*close popup*/
     $('.closeX, .close, .closeBtn, .take-order-btn').on('click', function () {
 
@@ -221,29 +247,6 @@ $(document).ready(function () {
         totalCart();
     }
 
-    function servs_total() {
-
-        var check;
-        $(".servs input").on("click", function(){
-            check = $(".servs input").prop("checked");
-            if(check) {
-                console.log(check);
-            } else {
-                console.log(555);
-            }
-        });
-
-
-        // var $checked = $('.servs input[type="checkbox"]:checked');
-        // $checked.each(function(){
-        //     if ($checked.length == 0) {
-        //         console.log(123);
-        //     } else {
-        //         console.log(555);
-        //     }
-        // });
-
-    }
 
     /*---------end Count price---------*/
 
