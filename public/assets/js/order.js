@@ -22,8 +22,6 @@ $(document).ready(function () {
         } else {
             basket[prod_id].quantity = parseInt(basket[prod_id].quantity) + 1;
             doBasket(basket);
-            console.log(basket[prod_id].quantity);
-
         }
         window.localStorage.setItem('basket', JSON.stringify(basket));
     }
@@ -34,7 +32,7 @@ $(document).ready(function () {
         $('.basket-table').html(' ');
         i = 0;
         for (prod_data in obj) {
-            console.log(obj);
+
             /*---------POPUP---------*/
             $('<div class="basket-section basket-section' + i + '">\n' +
                 '                        <div class="basket-section-prod flexibal">\n' +
@@ -96,7 +94,7 @@ $(document).ready(function () {
                 '                        </div>\n' +
                 '                                       </div>\n' +
                 '                                       <div class="basket-prod-number red"></div>\n' +
-                '                                       <div class="basket-price">'+ obj[prod_data].sertPrice +'</div>\n' +
+                '                                       <div class="basket-price">'+ obj[prod_data].sertPrice * obj[prod_data].quantity +'</div>\n' +
                 '                                       <div class=""></div>\n' +
                 '                                       <div class=""></div>\n' +
                 '                                    </div>').appendTo('.basket-section' /*+ i*/);
