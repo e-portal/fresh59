@@ -86,7 +86,7 @@ $(document).ready(function () {
                 '                                           <div class="basket-prod-img"></div>\n' +
                 '                                           <div class="certificates">\n' +
                 '                            <form>\n' +
-                '                                <label class="servs">'+ obj[prod_data].serttitle +'\n' +
+                '                                <label class="servs">'+ obj[prod_data].sertTitle +'\n' +
                 '                                    <input type="checkbox" checked="checked">\n' +
                 '                                    <span class="checkmark"></span>\n' +
                 '                                    <!--<em>940 грн</em>-->\n' +
