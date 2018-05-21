@@ -9,6 +9,8 @@ $(document).ready(function () {
     if ($('body').hasClass('cart')) {
         basket != null ? doBasket(basket) : ''
     }
+    var numeral;
+    console.log(numeral);
 
     function doObject() {/* create object product*/
         var prod_id = $(this).attr('data-id');
@@ -24,7 +26,7 @@ $(document).ready(function () {
             doBasket(basket);
 
         }
-        $('.numeral').html(i);
+        // $('.numeral').html(i);
         window.localStorage.setItem('basket', JSON.stringify(basket));
     }
 
@@ -33,6 +35,7 @@ $(document).ready(function () {
 
         $('.basket-table').html(' ');
         i = 0;
+        numeral = i
         for (prod_data in obj) {
 
             /*---------POPUP---------*/
