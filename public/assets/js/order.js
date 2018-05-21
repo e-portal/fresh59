@@ -259,15 +259,15 @@ $(document).ready(function () {
     var totalPrice = 0;
 
 
-    var startPrice_ = 0;
+
 
     function servs() {
         var sertficat = $('.sertficat').find('.basket-price.total').text()
-
+        var startPrice_ = 0;
         var check;
         check = $(".servs input").prop("checked");
         if(check) {
-            startPrice_ += sertficat
+            startPrice_ = sertficat
         } else {
             startPrice_ = 0
         }
