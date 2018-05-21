@@ -24,6 +24,7 @@ $(document).ready(function () {
             doBasket(basket);
 
         }
+        $('.numeral').html(i);
         window.localStorage.setItem('basket', JSON.stringify(basket));
     }
 
@@ -123,25 +124,13 @@ $(document).ready(function () {
         bindings();
         servs_total();
         // numeral();
-        $('.numeral').html(i);
+
 
 
     }
 
 
-    function numeral(){
-        // doBasket()
 
-        // $('.numeral').html(i);
-        window.localStorage.setItem('basket', JSON.stringify(basket));
-        var prod_id = $(this).attr('data-id');
-
-        prod_data = $(this).data();
-        // prod_data.quantity = 1;
-        basket[prod_id] = prod_data;
-
-        console.log(basket[prod_id]);
-    } numeral();
 
     function servs_total() {
 
