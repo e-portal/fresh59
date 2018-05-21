@@ -29,10 +29,11 @@ $(document).ready(function () {
 
 
     function doBasket(obj) {/* add basket-section-prod*/
-        console.log(prod_data);
+
         $('.basket-table').html(' ');
         i = 0;
         for (prod_data in obj) {
+            console.log(prod_data);
             /*---------POPUP---------*/
             $('<div class="basket-section basket-section' + i + '">\n' +
                 '                        <div class="basket-section-prod flexibal">\n' +
