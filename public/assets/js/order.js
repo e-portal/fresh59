@@ -213,23 +213,15 @@ $(document).ready(function () {
     }
 
     function servs_total() {
-        var $checked = $(".popup .servs input:checked").length;
+        var $checked = $('.popup .servs input[type="checkbox"]:checked');
         $checked.each(function(){
-            if ($checked == 0) {
+            if ($checked.length == 0) {
                 console.log(123);
             } else {
                 console.log(555);
             }
         });
-        // console.log(checked);
-        // if (checked == 0) {
-        //     console.log(123);
-        // } else {
-        //     console.log(555);
-        // }
-        // $('.servs input').checked(function () {
-        //     console.log(123);
-        // });
+
     }
     servs_total();
     /*---------end Count price---------*/
