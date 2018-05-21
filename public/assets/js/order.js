@@ -79,13 +79,13 @@ $(document).ready(function () {
                 $('<span class="red"> + ' + obj[prod_data].bonus + ' грн</span> на <a>Бонусный счет</a>').appendTo('.basket-bonus' + i);
             }
 
-            if (obj[prod_data].giftId !== undefined) {
+            if (obj[prod_data].sert !== undefined) {
             $('<div class="basket-section-service flexibal">\n' +
                 '                                      <div class="basket-prod flexibal">\n' +
                 '                                           <div class="basket-prod-img"></div>\n' +
                 '                                           <div class="certificates">\n' +
                 '                            <form>\n' +
-                '                                <label class="servs">ТехноЗабота Универсальная на 36 месяцев\n' +
+                '                                <label class="servs">'+ obj[prod_data].sert_title +'\n' +
                 '                                    <input type="checkbox" checked="checked">\n' +
                 '                                    <span class="checkmark"></span>\n' +
                 '                                    <!--<em>940 грн</em>-->\n' +
