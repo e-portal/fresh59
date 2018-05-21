@@ -277,7 +277,6 @@ $(document).ready(function () {
             }
         });
 
-
         $('.count-total').html(totalPrice + startPrice_);
     }
 
