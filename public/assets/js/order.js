@@ -95,7 +95,7 @@ $(document).ready(function () {
                 '                        </div>\n' +
                 '                                       </div>\n' +
                 '                                       <div class="basket-prod-number red"></div>\n' +
-                '                                       <div class="basket-price">'+ obj[prod_data].sertprice +'</div>\n' +
+                '                                       <div class="basket-price total">'+ obj[prod_data].sertprice +'</div>\n' +
                 '                                       <div class=""></div>\n' +
                 '                                       <div class=""></div>\n' +
                 '                                    </div>').appendTo('.basket-section' + i);
@@ -211,7 +211,12 @@ $(document).ready(function () {
         // $(this).parents('.basket-section-prod').find('.prod-price-total').attr('data-value', startPrice * numcount);
         totalCart();
     }
-
+    function servs_total() {
+        $('.servs input').checked(function () {
+            console.log(123);
+        });
+    }
+    servs_total();
     /*---------end Count price---------*/
 
 
@@ -222,6 +227,7 @@ $(document).ready(function () {
         totalPrice = 0;
         $('.prod-price-total').each(function () {
             totalPrice += parseInt($(this).html());
+
         });
         $('.count-total').html(totalPrice);
     }
@@ -234,6 +240,7 @@ $(document).ready(function () {
         $('.input-number-decrement').unbind('click', incremProd);
         $('.input-number-increment').unbind('click', incremProd);
         $('.input-number').unbind('change', inNumberProd);
+        
 
 
         $('.basket-delete').bind('click', delProd);
