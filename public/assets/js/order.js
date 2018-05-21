@@ -120,6 +120,8 @@ $(document).ready(function () {
         $('.close').addClass('show');
         totalCart();
         bindings();
+        servs_total();
+
 
 
     }
@@ -235,7 +237,7 @@ $(document).ready(function () {
         // });
 
     }
-    servs_total();
+
     /*---------end Count price---------*/
 
 
