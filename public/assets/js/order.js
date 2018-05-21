@@ -12,6 +12,7 @@ $(document).ready(function () {
 
     function doObject() {/* create object product*/
         var prod_id = $(this).attr('data-id');
+        console.log(prod_id);
 
         if (basket[prod_id] == undefined) {
             prod_data = $(this).data();
