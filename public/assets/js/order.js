@@ -275,7 +275,7 @@ $(document).ready(function () {
         var startPrice_ = 0
         $(".servs input").on("click", function() {
             if ($(".servs input").is(':checked')) {
-                startPrice_ = sertficat
+                startPrice_ += sertficat
             } else {
                 startPrice_ = 0
             }
