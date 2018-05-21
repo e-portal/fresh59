@@ -257,14 +257,14 @@ $(document).ready(function () {
 
     /*---------Count total price---------*/
     var totalPrice = 0;
+
+
     var startPrice_ = 0;
 
-    function totalCart() {
-        totalPrice = 0;
-
-        var check;
+    function servs() {
         var sertficat = $('.sertficat').find('.basket-price.total').text()
 
+        var check;
         check = $(".servs input").prop("checked");
         if(check) {
             startPrice_ = sertficat
@@ -273,14 +273,19 @@ $(document).ready(function () {
         }
         console.log(startPrice_);
 
+    }
+    servs();
+
+    function totalCart() {
+        totalPrice = 0;
+
+
+
+
+
+
         $('.prod-price-total').each(function () {
-            check = $(".servs input").prop("checked");
-            if(check) {
-                startPrice_ = sertficat
-            } else {
-                startPrice_ = 0
-            }
-            totalPrice += parseInt($(this).html()) + startPrice_;
+            totalPrice += parseInt($(this).html());
 
 
         });
