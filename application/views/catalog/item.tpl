@@ -578,34 +578,35 @@
                             </div>
 
                             {foreach from=$comments item=comment}
-                                <div class="tab-section review-from">
-                                    <div class="review-name-date flexibal flex-between">
-                                        <div class="review-name">
-                                            <div>{$comment.name}</div>
-                                            <object type="lol/wut">
-                                                <a href="/" class="otzv">
-                                                    <div class="left-otzv">
-                                                        <img src="/assets/img/patr.png" alt="">
-                                                    </div>
-                                                </a>
-                                            </object>
-                                        </div>
-                                        <div class="review-date">{$comment.date}</div>
-                                    </div>
-                                    <div>
-                                        <p>{$comment.text}</p>
-                                    </div>
-                                    <div>
-                                        <span class="mar-r">Достоинства: </span>Безшумная, узкая
-                                    </div>
-                                    <div>
-                                        <span class="mar-r">Недостатки: </span>Нет
-                                    </div>
-                                    <div class="review-date">
-                                        <span class="mar-r">(7 ответов) </span>
-                                        <a class="bluee">Ответить</a>
-                                    </div>
-                                </div>
+                                {*<div class="tab-section review-from">*}
+                                    {*<div class="review-name-date flexibal flex-between">*}
+                                        {*<div class="review-name">*}
+                                            {*<div>{$comment.name}</div>*}
+                                            {*<object type="lol/wut">*}
+                                                {*<a href="/" class="otzv">*}
+                                                    {*<div class="left-otzv">*}
+                                                        {*<img src="/assets/img/patr.png" alt="">*}
+                                                    {*</div>*}
+                                                {*</a>*}
+                                            {*</object>*}
+                                        {*</div>*}
+                                        {*<div class="review-date">{$comment.date}</div>*}
+                                    {*</div>*}
+                                    {*<div>*}
+                                        {*<p>{$comment.text}</p>*}
+                                    {*</div>*}
+                                    {*<div>*}
+                                        {*<span class="mar-r">Достоинства: </span>Безшумная, узкая*}
+                                    {*</div>*}
+                                    {*<div>*}
+                                        {*<span class="mar-r">Недостатки: </span>Нет*}
+                                    {*</div>*}
+                                    {*<div class="review-date">*}
+                                        {*<span class="mar-r">(7 ответов) </span>*}
+                                        {*<a class="bluee">Ответить</a>*}
+                                    {*</div>*}
+                                {*</div>*}
+                                <div  id="disqus_thread" class="tab-section"></div>
                             {/foreach}
                             <div class="tab-section all-review">
                                 <a class="arrow-right bluee">Смотреть все отзывы</a>
