@@ -22,14 +22,14 @@ $(document).ready(function () {
         } else {
             basket[prod_id].quantity = parseInt(basket[prod_id].quantity) + 1;
             doBasket(basket);
-            console.log(prod_data);
+
         }
         window.localStorage.setItem('basket', JSON.stringify(basket));
     }
 
 
     function doBasket(obj) {/* add basket-section-prod*/
-
+        console.log(prod_data);
         $('.basket-table').html(' ');
         i = 0;
         for (prod_data in obj) {
