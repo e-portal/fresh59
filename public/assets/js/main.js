@@ -1630,7 +1630,6 @@ $(document).ready(function () {
 
     btn = form.find('input[type="submit"]');
 
-
     form.on('submit', function (event) {
         validform();
         if (!btn.length > 0) {
