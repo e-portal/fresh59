@@ -269,7 +269,7 @@ $(document).ready(function () {
         if($(".servs input").is(':checked')) {
             startPrice_ = sertficat
         } else {
-            startPrice_ = 0
+            startPrice_ = sertficat
         }
         console.log(startPrice_);
 
