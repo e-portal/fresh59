@@ -86,7 +86,7 @@ $(document).ready(function () {
                 '                                           <div class="basket-prod-img"></div>\n' +
                 '                                           <div class="certificates">\n' +
                 '                            <form>\n' +
-                '                                <label class="servs">'+ obj[prod_data].sertTitle +'\n' +
+                '                                <label class="servs">'+ obj[prod_data].serttitle +'\n' +
                 '                                    <input type="checkbox" checked="checked">\n' +
                 '                                    <span class="checkmark"></span>\n' +
                 '                                    <!--<em>940 грн</em>-->\n' +
@@ -95,7 +95,7 @@ $(document).ready(function () {
                 '                        </div>\n' +
                 '                                       </div>\n' +
                 '                                       <div class="basket-prod-number red"></div>\n' +
-                '                                       <div class="basket-price">499</div>\n' +
+                '                                       <div class="basket-price">'+ obj[prod_data].sertprice +'</div>\n' +
                 '                                       <div class=""></div>\n' +
                 '                                       <div class=""></div>\n' +
                 '                                    </div>').appendTo('.basket-section' + i);
@@ -364,6 +364,7 @@ $(document).ready(function () {
             $('.compare-block-wrap').find('.compare-block').eq(compareIndex).remove();
             $(this).parents('.compare-fixed').remove();
             compareLength();
+            window.localStorage.setItem('basket', JSON.stringify(basket));
         });
 
 //Active button
