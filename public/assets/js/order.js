@@ -4,7 +4,7 @@ $(document).ready(function () {
     $('.add-to-cart').bind('click', doObject);
 
 
-    var basket = localStorage.getItem('basket') != undefined ? JSON.parse(localStorage.getItem('basket')) : {};
+    // var basket = localStorage.getItem('basket') != undefined ? JSON.parse(localStorage.getItem('basket')) : {};
 
     if ($('body').hasClass('cart')) {
         basket != null ? doBasket(basket) : ''
