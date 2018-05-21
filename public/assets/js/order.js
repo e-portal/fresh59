@@ -129,7 +129,7 @@ $(document).ready(function () {
 
     }
     function numeral(){
-
+        doBasket(obj)
         console.log(i);
         $('.numeral').html(i);
         window.localStorage.setItem('basket', JSON.stringify(basket));
