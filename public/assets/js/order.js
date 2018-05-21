@@ -267,12 +267,12 @@ $(document).ready(function () {
         var check;
         var sertficat = $('.sertficat').find('.basket-price.total').text()
         console.log(sertficat);
-        var startPrice_ = $(".servs input").on("click", function(){
+        $(".servs input").on("click", function(){
             check = $(".servs input").prop("checked");
             if(check) {
-                sertficat
+                startPrice_ = sertficat
             } else {
-                sertficat = 0
+                startPrice_ = 0
             }
         });
 
