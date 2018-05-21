@@ -86,7 +86,7 @@ $(document).ready(function () {
                 // var title = $('.title-slide');
                 var mBottom = 67;
                 if (scroll_block > baner_top && scroll_block + title.height() + mBottom < $('.jq-move-slider').height() + foot) {
-                    title.css({"position": 'fixed', top: '0px'});
+                    title.css({"position": 'fixed', top: '0px', bottom: 'auto'});
                     title.addClass('active-slide');
                 } else if (scroll_block + title.height() + mBottom >= $('.jq-move-slider').height() + foot) {
                     if (befScroll < scroll_block) {

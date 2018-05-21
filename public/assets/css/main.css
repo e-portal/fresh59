@@ -817,12 +817,12 @@ h6 {}
 
 .city .faux-select > li {
 
-    text-indent: 0.8em;
+    /*text-indent: 0.8em;*/
 }
 
 .faux-select {
     list-style-type: none;
-    padding: 0.4em 0;
+    padding: 0.2em 0;
     margin: 0;
     background: #fff;
     color: #313e49;
@@ -836,14 +836,19 @@ h6 {}
 .faux-select li span {
     font-family: 'SF-UI-Display-Regular';
     font-size: 17px;
+    display: inline-block;
+}
+
+.phone .selected-option > span {
+    padding: 0 0 .4em;
 }
 
 .faux-select > li {
     font-family: 'SF-UI-Display-Regular';
     font-size: 17px;
-    padding: 0.1em 0;
+    padding: 0.1em 5px;
     position: relative;
-    text-indent: 1.5em;
+    /*text-indent: 1.5em;*/
     border: 1px solid #ddd;
     border-radius: 15px;
     transition: all ease .2s;
@@ -852,21 +857,27 @@ h6 {}
 .faux-select.open > li {
     border-bottom: 1px solid transparent;
     border-radius: 15px 15px 0 0;
+
     /*transition-delay: .1s;*/
 }
 
-.faux-select li:before {
-    position: absolute;
-    content: '';
-    left: 7px;
-    width: 17px;
-    padding-top: 4px;
-    bottom: auto;
-    height: 15px;
-    background: url(../img/kiev.png) no-repeat center;
-    background-size: 17px
-}
+/*.faux-select li:before {*/
+    /*position: absolute;*/
+    /*content: '';*/
+    /*left: 7px;*/
+    /*width: 17px;*/
+    /*padding-top: 4px;*/
+    /*bottom: auto;*/
+    /*height: 15px;*/
+    /*background: url(../img/kiev.png) no-repeat center;*/
+    /*background-size: 17px*/
+/*}*/
 
+
+
+.phone .faux-select li .options {
+    top: 2.9em;
+}
 .faux-select li .options {
     display: block;
     list-style-type: none;
@@ -880,16 +891,14 @@ h6 {}
     border-top: none;
     /*border: 1px solid #000;*/
     border-radius: 0 0 15px 15px;
-    top: 1.4em;
+    top: 1.2em;
     left: -0.05em;
-    transition: all ease 0.25s;
+    /*transition: all ease 0.25s;*/
     opacity: 0;
 }
-.phone .faux-select li .options {
-    top: 2.4em;
-}
+
 .faux-select li .options li {
-    padding: 0.4em 0;
+    padding: 0.4em 5px 0;
 }
 
 .faux-select li .options li:hover {
