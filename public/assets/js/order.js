@@ -213,14 +213,26 @@ $(document).ready(function () {
     }
 
     function servs_total() {
-        var $checked = $('.servs input[type="checkbox"]:checked');
-        $checked.each(function(){
-            if ($checked.length == 0) {
+
+        var check;
+        $(".servs input").on("click", function(){
+            check = $(".servs input").is(":checked");
+            if(check) {
                 console.log(123);
             } else {
                 console.log(555);
             }
         });
+
+
+        // var $checked = $('.servs input[type="checkbox"]:checked');
+        // $checked.each(function(){
+        //     if ($checked.length == 0) {
+        //         console.log(123);
+        //     } else {
+        //         console.log(555);
+        //     }
+        // });
 
     }
     servs_total();
