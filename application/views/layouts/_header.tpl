@@ -132,7 +132,7 @@
                             <div class="inpp">
                                 <form action="">
                                     <input type="поиск" placeholder="Перезвонить? Введите номер...">
-                                    <div class="send"><img src="./img/phon.png" alt=""></div>
+                                    <div class="send"><img src="/assets/img/phon.png" alt=""></div>
                                 </form>
                             </div>
                         </div>
@@ -141,7 +141,7 @@
                         <div class="inpp">
                             <form action="">
                                 <input type="поиск" class="numb" placeholder="Перезвонить? Введите номер...">
-                                <div class="send"><img src="./img/phon.png" alt=""></div>
+                                <div class="send"><img src="/assets/img/phon.png" alt=""></div>
                             </form>
                         </div>
                     </div>
