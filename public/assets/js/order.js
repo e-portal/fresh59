@@ -136,6 +136,10 @@ $(document).ready(function () {
         window.localStorage.setItem('basket', JSON.stringify(basket));
         var prod_id = $(this).attr('data-id');
 
+        prod_data = $(this).data();
+        prod_data.quantity = 1;
+        basket[prod_id] = prod_data;
+
         console.log(basket[prod_id]);
     } numeral();
 
