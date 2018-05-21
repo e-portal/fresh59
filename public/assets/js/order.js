@@ -214,6 +214,13 @@ $(document).ready(function () {
 
     function servs_total() {
         var checked = $(".popup .servs input:checked").length;
+        checked.each(function(){
+            if (checked == 0) {
+                console.log(123);
+            } else {
+                console.log(555);
+            }
+        });
         console.log(checked);
         if (checked == 0) {
             console.log(123);
