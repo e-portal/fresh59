@@ -262,8 +262,7 @@ $(document).ready(function () {
     // var startPrice_ = 0;
 
     function servs() {
-        var sertficat = $('.sertficat').find('.basket-price.total').text()
-        var startPrice_
+
         // var check;
         // check = $(".servs input").prop("checked");
         // if($(".servs input").is(':checked')) {
@@ -273,6 +272,8 @@ $(document).ready(function () {
         // }
         //
         $(".servs input").on("click", function() {
+            var sertficat = $('.sertficat').find('.basket-price.total').text()
+            startPrice_ = 0
             if ($(".servs input").is(':checked')) {
                 startPrice_ = sertficat
             } else {
