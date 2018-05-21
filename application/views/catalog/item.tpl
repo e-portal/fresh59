@@ -606,8 +606,9 @@
                                         {*<a class="bluee">Ответить</a>*}
                                     {*</div>*}
                                 {*</div>*}
-                                <div  id="disqus_thread" class="tab-section"></div>
+
                             {/foreach}
+                            <div  id="disqus_thread" class="tab-section"></div>
                             <div class="tab-section all-review">
                                 <a class="arrow-right bluee">Смотреть все отзывы</a>
                             </div>
