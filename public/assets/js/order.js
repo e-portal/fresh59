@@ -257,6 +257,7 @@ $(document).ready(function () {
 
     /*---------Count total price---------*/
     var totalPrice = 0;
+    var startPrice_ = 0;
 
     function totalCart() {
         totalPrice = 0;
