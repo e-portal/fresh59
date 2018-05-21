@@ -213,7 +213,7 @@ $(document).ready(function () {
     }
 
     function servs_total() {
-        var $checked = $('.popup .servs input[type="checkbox"]:checked');
+        var $checked = $('.servs input[type="checkbox"]:checked');
         $checked.each(function(){
             if ($checked.length == 0) {
                 console.log(123);
