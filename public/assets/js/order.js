@@ -33,7 +33,7 @@ $(document).ready(function () {
         $('.basket-table').html(' ');
         i = 0;
         for (prod_data in obj) {
-            console.log(prod_data);
+            console.log(obj);
             /*---------POPUP---------*/
             $('<div class="basket-section basket-section' + i + '">\n' +
                 '                        <div class="basket-section-prod flexibal">\n' +
