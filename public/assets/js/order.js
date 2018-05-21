@@ -79,7 +79,7 @@ $(document).ready(function () {
                 $('<span class="red"> + ' + obj[prod_data].bonus + ' грн</span> на <a>Бонусный счет</a>').appendTo('.basket-bonus' + i);
             }
 
-            // if (obj[prod_data].sertTitle !== undefined) {
+            if (obj[prod_data].sertTitle !== undefined) {
             $('<div class="basket-section-service flexibal">\n' +
                 '                                      <div class="basket-prod flexibal">\n' +
                 '                                           <div class="basket-prod-img"></div>\n' +
@@ -94,12 +94,12 @@ $(document).ready(function () {
                 '                        </div>\n' +
                 '                                       </div>\n' +
                 '                                       <div class="basket-prod-number red"></div>\n' +
-                '                                       <div class="basket-price">'+ obj[prod_data].sertPrice +'</div>\n' +
+                '                                       <div class="basket-price">'+ obj[prod_data].sertPrice  +'</div>\n' +
                 '                                       <div class=""></div>\n' +
                 '                                       <div class=""></div>\n' +
                 '                                    </div>').appendTo('.basket-section' /*+ i*/);
 
-           // }
+           }
 
 
 
