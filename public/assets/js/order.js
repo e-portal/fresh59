@@ -180,6 +180,8 @@ $(document).ready(function () {
         delete basket[idObj];
         $(this).parents('.basket-section').remove();
         totalCart();
+        doObject();
+        window.localStorage.setItem('basket', JSON.stringify(basket));
     }
 
     /*---------end delete PRODUCT---------*/
@@ -364,7 +366,7 @@ $(document).ready(function () {
             $('.compare-block-wrap').find('.compare-block').eq(compareIndex).remove();
             $(this).parents('.compare-fixed').remove();
             compareLength();
-            window.localStorage.setItem('basket', JSON.stringify(basket));
+
         });
 
 //Active button
