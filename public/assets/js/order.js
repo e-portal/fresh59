@@ -264,14 +264,13 @@ $(document).ready(function () {
 
         var check;
         var sertficat = $('.sertficat').find('.basket-price.total').text()
-        $(".servs input").on("click", function(){
-            check = $(".servs input").prop("checked");
-            if(check) {
-                startPrice_ = sertficat
-            } else {
-                startPrice_ = 0
-            }
-        });
+
+        check = $(".servs input").prop("checked");
+        if(check) {
+            startPrice_ = sertficat
+        } else {
+            startPrice_ = 0
+        }
         console.log(startPrice_);
 
         $('.prod-price-total').each(function () {
