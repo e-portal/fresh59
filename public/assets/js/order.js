@@ -97,7 +97,7 @@ $(document).ready(function () {
                 '                                       <div class="basket-price">'+ obj[prod_data].sertprice  +'</div>\n' +
                 '                                       <div class=""></div>\n' +
                 '                                       <div class=""></div>\n' +
-                '                                    </div>').appendTo('.basket-section' /*+ i*/);
+                '                                    </div>').appendTo('.basket-section' + i);
 
            }
 
