@@ -95,7 +95,7 @@ $(document).ready(function () {
                 '                        </div>\n' +
                 '                                       </div>\n' +
                 '                                       <div class="basket-prod-number red"></div>\n' +
-                '                                       <div class="basket-price">499</div>\n' +
+                '                                       <div class="basket-price">'+ obj[prod_data].sertPrice +'</div>\n' +
                 '                                       <div class=""></div>\n' +
                 '                                       <div class=""></div>\n' +
                 '                                    </div>').appendTo('.basket-section' /*+ i*/);
