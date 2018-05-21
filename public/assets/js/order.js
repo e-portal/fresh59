@@ -123,17 +123,19 @@ $(document).ready(function () {
         bindings();
         servs_total();
         numeral();
+        $('.numeral').html(i);
 
 
 
     }
     function numeral(){
-        doObject()
+
         console.log(i);
         $('.numeral').html(i);
         window.localStorage.setItem('basket', JSON.stringify(basket));
 
     }
+    numeral();
 
     function servs_total() {
 
