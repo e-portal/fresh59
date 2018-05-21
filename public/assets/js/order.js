@@ -33,7 +33,7 @@ $(document).ready(function () {
         $('.basket-table').html(' ');
         i = 0;
         for (prod_data in obj) {
-            console.log(obj);
+            console.log(obj.length);
             /*---------POPUP---------*/
             $('<div class="basket-section basket-section' + i + '">\n' +
                 '                        <div class="basket-section-prod flexibal">\n' +
@@ -218,7 +218,7 @@ $(document).ready(function () {
 
         var check;
         $(".servs input").on("click", function(){
-            check = $(".servs input").is(":checked");
+            check = $(".servs input").prop("checked");
             if(check) {
                 console.log(check);
             } else {
