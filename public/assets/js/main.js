@@ -1615,7 +1615,17 @@ $(document).ready(function () {
                 } else {
                     mailfield.addClass('empty_field');
                 }
-            } else if ($(this).val() != '' && $(this).val().length > 3) {
+            } else if ($(this).hasClass('step2-hidden')) {
+                var a = $(this);
+                if ($('input').is(':checked')) {
+                    a.removeClass('empty_field');
+                } else {
+                    a.addClass('empty_field');
+                }
+            }
+
+
+            else if ($(this).val() != '' && $(this).val().length > 3) {
                 $(this).removeClass('empty_field');
             } else {
                 $(this).addClass('empty_field');
