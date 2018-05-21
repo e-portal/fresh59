@@ -21,7 +21,7 @@
 
                 <div class="one-article">
 
-                    {if isset($item.picture) }
+                    {if $item.picture }
                     <div class="one-article-img">
                         <img src="/assets/img/articles/{$item.picture}">
                     </div>
