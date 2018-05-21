@@ -212,9 +212,15 @@ $(document).ready(function () {
         totalCart();
     }
     function servs_total() {
-        $('.servs input').checked(function () {
+        var checked = $(".popup .servs input:checked").length;
+        if (checked == 0) {
             console.log(123);
-        });
+        } else {
+            console.log(555);
+        }
+        // $('.servs input').checked(function () {
+        //     console.log(123);
+        // });
     }
     servs_total();
     /*---------end Count price---------*/
