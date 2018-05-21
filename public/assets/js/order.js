@@ -131,10 +131,10 @@ $(document).ready(function () {
 
     function numeral(){
         // doBasket()
-        console.log(basket[idObj].quantity);
-        // $('.numeral').html(i);
-        // window.localStorage.setItem('basket', JSON.stringify(basket));
 
+        // $('.numeral').html(i);
+        window.localStorage.setItem('basket', JSON.stringify(basket));
+        console.log(basket[idObj].quantity);
     } numeral();
 
     function servs_total() {
