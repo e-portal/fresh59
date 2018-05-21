@@ -220,7 +220,7 @@ $(document).ready(function () {
         $(".servs input").on("click", function(){
             check = $(".servs input").is(":checked");
             if(check) {
-                console.log(123);
+                console.log(check);
             } else {
                 console.log(555);
             }
