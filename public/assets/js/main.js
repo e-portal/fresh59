@@ -1639,9 +1639,9 @@ $(document).ready(function () {
         btn.addClass('disabled');
         var formData = new FormData(this);
         event.preventDefault();
-        // for (var id in queue) {
-        //     formData.append('images[]', queue[id]);
-        // }
+        for (var id in queue) {
+            formData.append('images[]', queue[id]);
+        }
 
         $.ajax({
             url: $(this).attr('action'),
