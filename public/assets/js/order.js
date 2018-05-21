@@ -18,7 +18,7 @@ $(document).ready(function () {
             prod_data = $(this).data();
             prod_data.quantity = 1;
             basket[prod_id] = prod_data;
-            doBasket(basket);
+            // doBasket(basket);
         } else {
             basket[prod_id].quantity = parseInt(basket[prod_id].quantity) + 1;
             doBasket(basket);
