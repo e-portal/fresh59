@@ -122,20 +122,20 @@ $(document).ready(function () {
         totalCart();
         bindings();
         servs_total();
-        numeral();
+        // numeral();
         $('.numeral').html(i);
 
 
     }
-    function numeral(){
-        doBasket(obj)
-        console.log(i);
-        $('.numeral').html(i);
-        window.localStorage.setItem('basket', JSON.stringify(basket));
 
-    }
-    numeral();
-
+    // numeral();
+    // function numeral(){
+    //     // doBasket()
+    //     console.log(i);
+    //     $('.numeral').html(i);
+    //     window.localStorage.setItem('basket', JSON.stringify(basket));
+    //
+    // }
     function servs_total() {
 
         var check;
