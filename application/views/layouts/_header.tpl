@@ -43,8 +43,8 @@
                     <div class="info">
                         <div class="name-info">
                             <div class="city data-region-list">
-                                <img class="header-visible" src="./img/point.png" alt="1">
-                                <div class="your">Ваш город</div>
+                                <img class="header-visible" src="/assets/img/point.png" alt="1">
+                                {*<div class="your">Ваш город</div>*}
                                 <ul class="faux-select" data-selected-value="kyiv">
                                     <li class="selected-option"><span>Киев</span>
                                         <ul class="options">
@@ -70,7 +70,7 @@
                                 <!--<div class="kiev">Киев</div>-->
                             </div>
                             <div class="phone">
-                                <img class="header-visible" src="./img/phons.png" alt="2">
+                                <img class="header-visible" src="/assets/img/phons.png" alt="2">
                                 <div class="time-work">Пн-Вс: 09:00 - 18:00 Call центр</div>
 
 
@@ -119,10 +119,10 @@
                                 </ul>
                                 <!--<div class="selectyNumb">-->
                                 <!--<select name="selectyMenuNumb" id="selectyMenuNumb">-->
-                                <!--<option selected><img src="./img/kiev.png" alt="">(067) 590-0-591</option>-->
-                                <!--<option ><img src="./img/kiev.png" alt="">(050) 590-0-590</option>-->
-                                <!--<option ><img src="./img/kiev.png" alt="">(044) 223-8-520</option>-->
-                                <!--<option><img src="./img/kiev.png" alt="">(093) 590-0-590</option>-->
+                                <!--<option selected><img src="/assets/img/kiev.png" alt="">(067) 590-0-591</option>-->
+                                <!--<option ><img src="/assets/img/kiev.png" alt="">(050) 590-0-590</option>-->
+                                <!--<option ><img src="/assets/img/kiev.png" alt="">(044) 223-8-520</option>-->
+                                <!--<option><img src="/assets/img/kiev.png" alt="">(093) 590-0-590</option>-->
                                 <!--</select>-->
                                 <!---->
                                 <!--</div>-->

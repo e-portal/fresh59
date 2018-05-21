@@ -241,9 +241,9 @@ img {
     background: #fff;
     padding-bottom: 15px;
     z-index: 10;
-    -webkit-box-shadow: -15px 10px 25px 25px rgba(255, 255, 255, 1);
-    -moz-box-shadow: -15px 10px 25px 25px rgba(255, 255, 255, 1);
-    box-shadow: -15px 10px 25px 25px rgba(255, 255, 255, 1);
+    -webkit-box-shadow: -15px 10px 25px 10px rgba(255, 255, 255, 1);
+    -moz-box-shadow: -15px 10px 25px 10px rgba(255, 255, 255, 1);
+    box-shadow: -15px 10px 25px 10px rgba(255, 255, 255, 1);
 }
 
 .title-slide-show {
@@ -298,6 +298,10 @@ img {
     color: #fff;
     border-top: 1px solid #313e49;
     border-bottom: 1px solid #313e49;
+}
+
+.slide-tabs.active-slide .product-menu {
+    margin-bottom: 0px;
 }
 
 .in-stock,
