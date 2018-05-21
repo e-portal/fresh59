@@ -1633,7 +1633,7 @@ $(document).ready(function () {
 
 
     form.on('submit', function (event) {
-        checkInput();
+        validform();
         if (!btn.length > 0) {
             btn = form.find('input[type="text"]');
             form.find('.valid').addClass('empty_field');
