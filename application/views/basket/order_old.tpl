@@ -21,15 +21,15 @@
 
                                         <div class="">
                                             <label for="fullname">Фио*</label>
-                                            <input id="fullname" type="text" class="input-min-width">
+                                            <input id="fullname" type="text" class="input-min-width valid">
                                             <label for="mail">E-mail* <span>(для отслеживания заказа)</span></label>
-                                            <input id="mail" type="email" class="email input-min-width">
+                                            <input id="mail" type="email" class="email input-min-width valid">
                                         </div>
                                         <div class="">
                                             <label for="phone">Телефон* <span>(для подтверждения заказа)</span></label>
-                                            <input id="phone" type="text" class="input-min-width numb phone">
+                                            <input id="phone" type="text" class="input-min-width numb phone valid">
                                             <label for="city">Город* <span>(для отслеживания заказа)</span></label>
-                                            <select id="city" name="select">
+                                            <select id="city" name="select" class="valid">
                                                 <option value=""></option>
                                                 <option value="Киев">Киев</option>
                                                 <option value="Винницв">Винница</option>
@@ -40,7 +40,7 @@
                                     </div>
 
                                 </div>
-                                <div class="step-hidden step2-hidden tab-section">
+                                <div class="step-hidden step2-hidden tab-section valid">
                                     <div class="order-title"><span>2</span> Способы оплаты</div>
                                     <div class="flexibal">
                                         <input type="radio" id="new-payment-1" name="payment"
@@ -56,7 +56,7 @@
                                         <label for="new-payment-3">Кредит</label>
                                     </div>
                                 </div>
-                                <div class="step-hidden step3-hidden tab-section tab-delivery">
+                                <div class="step-hidden step3-hidden tab-section tab-delivery valid">
                                     <div class="order-title"><span>3</span> Способы доставки</div>
                                     <div class="flexibal">
                                         <input type="radio" id="new-delivery-1" class="ShowOrHide delivery-show-select"
