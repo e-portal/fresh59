@@ -19,7 +19,7 @@
     {$css_int}
     {/if}
 </head>
-<body class="{$body_class|default:'no title'}">
+<body class="{$body_class|default:'no title'}" style="position: fixed">
 <!--preloader -->
 <div class="preloader">
     <div class="load-9">
