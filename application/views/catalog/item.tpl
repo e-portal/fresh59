@@ -261,7 +261,7 @@
                 </div>
                 <div class="qweek-busket-prodadd-to-cart">
                     <a class="qweek-busket-prod open-in-popup add-to-cart bask acty"
-                            {include file='layouts/cart-item.tpl' cart_item=$item}>
+                            {include file='layouts/cart-item.tpl' cart_item=$item} data-sert-title="ТехноЗабота Универсальная на 36 месяцев" data-sert-price="940">
                         <span>В корзину</span>
                     </a>
                     <div class="without-reg-prod">
