@@ -271,9 +271,9 @@ $(document).ready(function () {
         //     startPrice_ = sertficat
         // }
         //
+        var sertficat = $('.sertficat').find('.basket-price.total').text()
+        var startPrice_ = 0
         $(".servs input").on("click", function() {
-            var sertficat = $('.sertficat').find('.basket-price.total').text()
-            startPrice_ = 0
             if ($(".servs input").is(':checked')) {
                 startPrice_ = sertficat
             } else {
