@@ -274,14 +274,20 @@ $(document).ready(function () {
         console.log(startPrice_);
 
         $('.prod-price-total').each(function () {
-            totalPrice += parseInt($(this).html());
+            check = $(".servs input").prop("checked");
+            if(check) {
+                startPrice_ = sertficat
+            } else {
+                startPrice_ = 0
+            }
+            totalPrice += parseInt($(this).html()) + startPrice_;
 
 
         });
 
 
 
-        $('.count-total').html(totalPrice + startPrice_);
+        $('.count-total').html(totalPrice );
     }
 
     /*---------end Count total price---------*/
