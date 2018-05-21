@@ -211,8 +211,10 @@ $(document).ready(function () {
         // $(this).parents('.basket-section-prod').find('.prod-price-total').attr('data-value', startPrice * numcount);
         totalCart();
     }
+
     function servs_total() {
         var checked = $(".popup .servs input:checked").length;
+        console.log(checked);
         if (checked == 0) {
             console.log(123);
         } else {
