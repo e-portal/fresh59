@@ -22,6 +22,7 @@ $(document).ready(function () {
         } else {
             basket[prod_id].quantity = parseInt(basket[prod_id].quantity) + 1;
             doBasket(basket);
+            console.log(basket[prod_id].quantity);
 
         }
         window.localStorage.setItem('basket', JSON.stringify(basket));
