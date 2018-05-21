@@ -134,7 +134,7 @@ $(document).ready(function () {
 
         // $('.numeral').html(i);
         window.localStorage.setItem('basket', JSON.stringify(basket));
-        console.log(basket[idObj].quantity);
+        console.log(basket);
     } numeral();
 
     function servs_total() {
