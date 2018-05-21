@@ -280,7 +280,7 @@ $(document).ready(function () {
                 startPrice_ = 0
             }
         })
-        console.log(startPrice_);
+        console.log(startPrice_,sertficat);
 
     }
     servs();
