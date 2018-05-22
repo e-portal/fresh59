@@ -114,25 +114,7 @@ $(document).ready(function () {
         } else {
             $('html, body').css('overflow', 'hidden');
         }
-        // if ($('.servs').checked) {
-        //     console.log(123);
-        // }
-        // else {
-        //     console.log(321);
-        // }
-        // var certificates_price
 
-        $('.certificates input').val($(this).is(':checked'));
-
-        $('.certificates input').change(function() {
-            $('.certificates input').val($(this).is(':checked'));
-        });
-        if ($('.certificates input').is(':checked')) {
-            a  = $('.sertficat .basket-price.total').text();
-            var certificates_price = a;
-
-        }
-        console.log(certificates_price);
 
 
 
