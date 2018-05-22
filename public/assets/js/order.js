@@ -10,7 +10,7 @@ $(document).ready(function () {
         basket != null ? doBasket(basket) : ''
     }
 
-
+    doObject();
     function doObject() {/* create object product*/
         var prod_id = $(this).attr('data-id');
 
@@ -263,14 +263,6 @@ $(document).ready(function () {
 
     function servs() {
 
-        // var check;
-        // check = $(".servs input").prop("checked");
-        // if($(".servs input").is(':checked')) {
-        //     startPrice_ = sertficat
-        // } else {
-        //     startPrice_ = sertficat
-        // }
-        //
         var sertficat = $('.sertficat').find('.basket-price.total').text()
         var startPrice_ = 0
         $(".servs input").on("click", function() {
@@ -280,7 +272,6 @@ $(document).ready(function () {
                 startPrice_ = 0
             }
         })
-        console.log(startPrice_,sertficat);
 
     }
 
