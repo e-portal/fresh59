@@ -182,6 +182,7 @@ $(document).ready(function () {
         $('html, body').css('overflow', 'auto');
         $('.popup').css('display', 'none');
         bindings();
+        console.log(i);
     }
 
 
