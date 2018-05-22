@@ -122,7 +122,7 @@ $(document).ready(function () {
         // }
         $(".servs").change(function () {
             // var str = "";
-            if ($('.servs').checked) {
+            if ($(this).find('input').checked) {
                 console.log(123);
             }
             else {
