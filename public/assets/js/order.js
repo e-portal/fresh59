@@ -9,7 +9,7 @@ $(document).ready(function () {
     if ($('body').hasClass('cart')) {
         basket != null ? doBasket(basket) : ''
     }
-    doObject()
+
     function doObject() {/* create object product*/
         var prod_id = $(this).attr('data-id');
 
