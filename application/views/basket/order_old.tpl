@@ -42,123 +42,129 @@
                                 </div>
                                 <div class="step-hidden step2-hidden tab-section valid">
                                     <div class="order-title"><span>2</span> Способы оплаты</div>
-                                    <div class="flexibal">
-                                        <input type="radio" id="new-payment-1" name="payment"
-                                               value="Наличными курьером">
-                                        <label for="new-payment-1">Наличными курьером</label>
+                                    <div>
+                                        <div class="flexibal">
+                                            <input type="radio" id="new-payment-1" name="payment"
+                                                   value="Наличными курьером">
+                                            <label for="new-payment-1">Наличными курьером</label>
+                                        </div>
+                                        <div class="flexibal">
+                                            <input type="radio" id="new-payment-2" name="payment" value="Банковская карта">
+                                            <label for="new-payment-2">Банковская карта</label>
+                                        </div>
+                                        <div class="flexibal">
+                                            <input type="radio" id="new-payment-3" name="payment" value="Кредит">
+                                            <label for="new-payment-3">Кредит</label>
+                                        </div>
                                     </div>
-                                    <div class="flexibal">
-                                        <input type="radio" id="new-payment-2" name="payment" value="Банковская карта">
-                                        <label for="new-payment-2">Банковская карта</label>
-                                    </div>
-                                    <div class="flexibal">
-                                        <input type="radio" id="new-payment-3" name="payment" value="Кредит">
-                                        <label for="new-payment-3">Кредит</label>
-                                    </div>
+
                                 </div>
                                 <div class="step-hidden step3-hidden tab-section tab-delivery valid">
-                                    <div class="order-title"><span>3</span> Способы доставки</div>
-                                    <div class="flexibal">
-                                        <input type="radio" id="new-delivery-1" class="ShowOrHide delivery-show-select"
-                                               name="delivery" value="myDivId1">
-                                        <label for="new-delivery-1">Самовывоз</label>
+                                    <div>
+                                        <div class="order-title"><span>3</span> Способы доставки</div>
+                                        <div class="flexibal">
+                                            <input type="radio" id="new-delivery-1" class="ShowOrHide delivery-show-select"
+                                                   name="delivery" value="myDivId1">
+                                            <label for="new-delivery-1">Самовывоз</label>
+                                        </div>
+                                        <div id="myDivId1" class="ShowOrHide delivery-detail basket-two-column">
+                                            <div class="">
+                                                <label for="new-city-self">Город</label>
+                                                <select id="new-city-self" name="select">
+                                                    <option value="Киев">Киев</option>
+                                                    <option value="Винницв">Винницa</option>
+                                                    <option value="Черкасы">Черкасы</option>
+                                                </select>
+                                            </div>
+                                            <div class="">
+                                                <label for="new-magazine-self">Адрес Магазина</label>
+                                                <select id="new-magazine-self" name="select">
+                                                    <option value="ул.Дегтяревская 25а">ул.Дегтяревская 25а</option>
+                                                    <option value="ул.Попудренка 3">ул.Попудренка 3</option>
+                                                    <option value="ул.Васильковская 12">ул.Васильковская 12</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="flexibal">
+                                            <input type="radio" id="new-delivery-2" class="ShowOrHide delivery-show-select"
+                                                   name="delivery"
+                                                   value="myDivId2">
+                                            <label for="new-delivery-2">Новая почта</label>
+                                        </div>
+                                        <div id="myDivId2" class="ShowOrHide delivery-detail basket-two-column">
+                                            <div class="">
+                                                <label for="new-city-np">Город</label>
+                                                <select id="new-city-np" name="select">
+                                                    <option value="Киев">Киев</option>
+                                                    <option value="Винницa">Винницa</option>
+                                                    <option value="Черкасы">Черкасы</option>
+                                                </select>
+                                            </div>
+                                            <div class="">
+                                                <label for="new-magazine-np">Отделение новой почты</label>
+                                                <select id="new-magazine-np" name="select">
+                                                    <option value="ул.Дегтяревская 25а">№ 15</option>
+                                                    <option value="ул.Попудренка 3">№ 91</option>
+                                                    <option value="ул.Васильковская 12">№ 150</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="flexibal">
+                                            <input type="radio" id="new-delivery-3" class="ShowOrHide delivery-show-select"
+                                                   name="delivery" value="myDivId3">
+                                            <label for="new-delivery-3">Курьер</label>
+                                        </div>
+                                        <div id="myDivId3" class="ShowOrHide delivery-detail flexibal">
+                                            <div class="delivery-adress-width">
+                                                <label for="new-city-courier">Город</label>
+                                                <select id="new-city-courier" name="select" class="input-min-width">
+                                                    <option value="Киев">Киев</option>
+                                                    <option value="Винницв">Винницa</option>
+                                                    <option value="Черкасы">Черкасы</option>
+                                                </select>
+                                            </div>
+                                            <div class="delivery-adress-width">
+                                                <label for="new-street-courier">Улица*</label>
+                                                <input id="new-street-courier" type="text" class="input-min-width">
+                                            </div>
+                                            <div class="delivery-adress-width">
+                                                <label for="new-house-courier">Дом*</label>
+                                                <input id="new-house-courier" type="text" class="input-min-width">
+                                            </div>
+                                            <div class="delivery-adress-width">
+                                                <label for="new-flat-courier">Кв.*</label>
+                                                <input id="new-flat-courier" type="text" class="input-min-width">
+                                            </div>
+                                        </div>
+                                        <div class="flexibal">
+                                            <input type="radio" id="new-delivery-4" class="ShowOrHide delivery-show-select"
+                                                   name="delivery" value="myDivId4">
+                                            <label for="new-delivery-4">Trade-in "ZAMENA"</label>
+                                        </div>
+                                        <div id="myDivId4" class="ShowOrHide delivery-detail flexibal">
+                                            <div class="delivery-adress-width">
+                                                <label for="new-city-trade">Город</label>
+                                                <select id="new-city-trade" name="select" class="input-min-width">
+                                                    <option value="Киев">Киев</option>
+                                                    <option value="Винницв">Винницa</option>
+                                                    <option value="Черкасы">Черкасы</option>
+                                                </select>
+                                            </div>
+                                            <div class="delivery-adress-width">
+                                                <label for="new-street-trade">Улица*</label>
+                                                <input id="new-street-trade" type="text" class="input-min-width">
+                                            </div>
+                                            <div class="delivery-adress-width">
+                                                <label for="new-house-trade">Дом*</label>
+                                                <input id="new-house-trade" type="text" class="input-min-width">
+                                            </div>
+                                            <div class="delivery-adress-width">
+                                                <label for="new-flat-trade">Кв.*</label>
+                                                <input id="new-flat-trade" type="text" class="input-min-width">
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div id="myDivId1" class="ShowOrHide delivery-detail basket-two-column">
-                                        <div class="">
-                                            <label for="new-city-self">Город</label>
-                                            <select id="new-city-self" name="select">
-                                                <option value="Киев">Киев</option>
-                                                <option value="Винницв">Винницa</option>
-                                                <option value="Черкасы">Черкасы</option>
-                                            </select>
-                                        </div>
-                                        <div class="">
-                                            <label for="new-magazine-self">Адрес Магазина</label>
-                                            <select id="new-magazine-self" name="select">
-                                                <option value="ул.Дегтяревская 25а">ул.Дегтяревская 25а</option>
-                                                <option value="ул.Попудренка 3">ул.Попудренка 3</option>
-                                                <option value="ул.Васильковская 12">ул.Васильковская 12</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="flexibal">
-                                        <input type="radio" id="new-delivery-2" class="ShowOrHide delivery-show-select"
-                                               name="delivery"
-                                               value="myDivId2">
-                                        <label for="new-delivery-2">Новая почта</label>
-                                    </div>
-                                    <div id="myDivId2" class="ShowOrHide delivery-detail basket-two-column">
-                                        <div class="">
-                                            <label for="new-city-np">Город</label>
-                                            <select id="new-city-np" name="select">
-                                                <option value="Киев">Киев</option>
-                                                <option value="Винницa">Винницa</option>
-                                                <option value="Черкасы">Черкасы</option>
-                                            </select>
-                                        </div>
-                                        <div class="">
-                                            <label for="new-magazine-np">Отделение новой почты</label>
-                                            <select id="new-magazine-np" name="select">
-                                                <option value="ул.Дегтяревская 25а">№ 15</option>
-                                                <option value="ул.Попудренка 3">№ 91</option>
-                                                <option value="ул.Васильковская 12">№ 150</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="flexibal">
-                                        <input type="radio" id="new-delivery-3" class="ShowOrHide delivery-show-select"
-                                               name="delivery" value="myDivId3">
-                                        <label for="new-delivery-3">Курьер</label>
-                                    </div>
-                                    <div id="myDivId3" class="ShowOrHide delivery-detail flexibal">
-                                        <div class="delivery-adress-width">
-                                            <label for="new-city-courier">Город</label>
-                                            <select id="new-city-courier" name="select" class="input-min-width">
-                                                <option value="Киев">Киев</option>
-                                                <option value="Винницв">Винницa</option>
-                                                <option value="Черкасы">Черкасы</option>
-                                            </select>
-                                        </div>
-                                        <div class="delivery-adress-width">
-                                            <label for="new-street-courier">Улица*</label>
-                                            <input id="new-street-courier" type="text" class="input-min-width">
-                                        </div>
-                                        <div class="delivery-adress-width">
-                                            <label for="new-house-courier">Дом*</label>
-                                            <input id="new-house-courier" type="text" class="input-min-width">
-                                        </div>
-                                        <div class="delivery-adress-width">
-                                            <label for="new-flat-courier">Кв.*</label>
-                                            <input id="new-flat-courier" type="text" class="input-min-width">
-                                        </div>
-                                    </div>
-                                    <div class="flexibal">
-                                        <input type="radio" id="new-delivery-4" class="ShowOrHide delivery-show-select"
-                                               name="delivery" value="myDivId4">
-                                        <label for="new-delivery-4">Trade-in "ZAMENA"</label>
-                                    </div>
-                                    <div id="myDivId4" class="ShowOrHide delivery-detail flexibal">
-                                        <div class="delivery-adress-width">
-                                            <label for="new-city-trade">Город</label>
-                                            <select id="new-city-trade" name="select" class="input-min-width">
-                                                <option value="Киев">Киев</option>
-                                                <option value="Винницв">Винницa</option>
-                                                <option value="Черкасы">Черкасы</option>
-                                            </select>
-                                        </div>
-                                        <div class="delivery-adress-width">
-                                            <label for="new-street-trade">Улица*</label>
-                                            <input id="new-street-trade" type="text" class="input-min-width">
-                                        </div>
-                                        <div class="delivery-adress-width">
-                                            <label for="new-house-trade">Дом*</label>
-                                            <input id="new-house-trade" type="text" class="input-min-width">
-                                        </div>
-                                        <div class="delivery-adress-width">
-                                            <label for="new-flat-trade">Кв.*</label>
-                                            <input id="new-flat-trade" type="text" class="input-min-width">
-                                        </div>
-                                    </div>
+
                                 </div>
                                 <div class="step-hidden step4-hidden tab-section">
                                     <div class="order-title"><span>4</span> Коментарии к заказу</div>
