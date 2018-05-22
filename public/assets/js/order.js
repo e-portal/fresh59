@@ -128,16 +128,19 @@ $(document).ready(function () {
             $('.certificates input').val($(this).is(':checked'));
         });
 
-        var certificates_price = $('.certificates input').click(function() {
+        var certificates_price = sertficat()
 
-            if ($(this).is(':checked')) {
-                // console.log(1223);
-                a  = $('.sertficat .basket-price.total').text()
-                certificates_price = a
+            function sertficat(){
+                var x
+
+                if ($(this).is(':checked')) {
+                    // console.log(1223);
+                    a  = $('.sertficat .basket-price.total').text();
+                    x += a;
+                }
+
             }
-            // console.log(certificates_price);
 
-        });
         console.log(certificates_price, 123);
 
         // $(".certificates input").change(function () {
