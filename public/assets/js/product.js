@@ -3,43 +3,68 @@ $(document).ready(function () {
     if ($('.clone-slide').length > 1) {
         $('.slider-for').find('.clone-slide').clone().appendTo('.slider-nav');
 
-        function sliders() {
-            $('.slider-for').slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                fade: false,
-                arrows: false,
-                asNavFor: '.slider-nav'
-            });
-            $('.slider-nav').slick({
-                slidesToShow: 5,
-                slidesToScroll: 1,
-                asNavFor: '.slider-for',
-                arrows: true,
-                dots: false,
-                focusOnSelect: true,
-                centerPadding: '60px',
-                responsive: [
-                    {
-                        breakpoint: 1441,
-                        settings: {
-                            slidesToShow: 4
-                        }
-                    },
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            arrows: false,
 
-                            slidesToShow: 3
+        if (window.matchMedia("(min-width: 1026px)").matches) {
+            function sliders() {
+                $('.slider-for').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    fade: false,
+                    arrows: false,
+                    asNavFor: '.slider-nav'
+                });
+                $('.slider-nav').slick({
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
+                    asNavFor: '.slider-for',
+                    arrows: true,
+                    dots: false,
+                    focusOnSelect: true,
+                    centerPadding: '60px',
+                    responsive: [
+                        {
+                            breakpoint: 1441,
+                            settings: {
+                                slidesToShow: 4
+                            }
                         }
-                    }
-                ]
-            });
+                    ]
+                });
+            }
+
+            sliders();
         }
 
-        sliders();
+        if (window.matchMedia("(max-width: 1025px)").matches) {
+            function sliders() {
+                $('.slider-for').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    fade: false,
+                    arrows: false,
+                    asNavFor: '.slider-nav'
+                });
+                $('.slider-nav').slick({
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    asNavFor: '.slider-for',
+                    arrows: true,
+                    dots: false,
+                    focusOnSelect: true,
+                    centerPadding: '60px',
+                    vertical: true,
+                    verticalSwiping: true
+
+                });
+            }
+
+            sliders();
+
+            $('.green').after($('.stars-ipad'));
+        }
     }
+
+
 
     $('.slider-nav a[data-slide]').click(function (e) {
         e.preventDefault();
@@ -62,7 +87,7 @@ $(document).ready(function () {
     }
 
 
-    if (window.matchMedia('(min-width: 768px)').matches) {
+    if (window.matchMedia('(min-width: 1025px)').matches) {
         var befScroll = 0;
         $(window).scroll(function () {  //Scroll slider product
             if ($('.jq-move-slider-wrap').length) {
