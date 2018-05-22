@@ -60,8 +60,9 @@
 
                                 </div>
                                 <div class="step-hidden step3-hidden tab-section tab-delivery valid">
+                                    <div class="order-title"><span>3</span> Способы доставки</div>
                                     <div class="close_deliver">
-                                        <div class="order-title"><span>3</span> Способы доставки</div>
+
                                         <div class="flexibal">
                                             <input type="radio" id="new-delivery-1" class="ShowOrHide delivery-show-select"
                                                    name="delivery" value="myDivId1">
