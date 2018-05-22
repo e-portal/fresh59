@@ -120,7 +120,7 @@ $(document).ready(function () {
         // else {
         //     console.log(321);
         // }
-
+        var certificates_price = 0
 
         $('.certificates input').val($(this).is(':checked'));
 
@@ -131,8 +131,11 @@ $(document).ready(function () {
         $('.certificates input').click(function() {
             if ($(this).is(':checked')) {
                 console.log(1223);
+                a  = $('.sertficat .basket-price.total').text()
+                certificates_price += a
             }
         });
+        console.log(certificates_price);
         // $(".certificates input").change(function () {
         //     // var str = "";
         //     if ($('input').checked) {
