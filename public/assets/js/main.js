@@ -491,7 +491,7 @@ jQuery(document).ready(function () {
                             </div>\
                         </a> </div> \
                         ';
-                            
+
 
                         });
                         html += '</div>'
@@ -714,7 +714,7 @@ jQuery(document).ready(function () {
         //     $('.slick-active').addClass('live');
         //     $('.slick-dots li button').click(function(){
         //         $(this).parent().addClass('lave');setTimeout(function(){$('.live').removeClass('live');}, 250);
-        //        setTimeout(function(){$('.slick-active').removeClass('lave');},550);   
+        //        setTimeout(function(){$('.slick-active').removeClass('lave');},550);
         //     });
 
         //var countLi = $('.slick-dots li').length;
@@ -1252,8 +1252,8 @@ $(function () {
 //      var l = t.find('.legg').height();
 //      var o = t.find('.forms').height() - 70;
 //      var hater = l + o + 140;
-//      t.attr('data-heig', hater);t.find('.forms').css({'top':-o});    
-//                      
+//      t.attr('data-heig', hater);t.find('.forms').css({'top':-o});
+//
 //      t.find('.forms').attr('data-hizz', o);
 
 
@@ -1594,77 +1594,3 @@ $(document).ready(function () {
 //         }, 1000);
 //     });
 // }
-
-$(document).ready(function () {
-    var form = $('.tab-contents.form.is-active form')
-    function validform() {
-        form.find('.valid').each(function (){
-            if ($(this).hasClass('phone')) {
-                var pmc = $(this);
-                var regCheck = /^[0-9()\-+ ]+$/;
-                if (!regCheck.test(pmc.val()) || pmc.val() == '') {
-                    pmc.addClass('empty_field');
-                } else {
-                    pmc.removeClass('empty_field');
-                }
-            } else if ($(this).hasClass('email')) {
-                var mailfield = $(this);
-                var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
-                if (pattern.test(mailfield.val())) {
-                    mailfield.removeClass('empty_field');
-                } else {
-                    mailfield.addClass('empty_field');
-                }
-            } else if ($(this).hasClass('step2-hidden')) {
-                var a = $(this);
-                if ($('input').is(':checked')) {
-                    a.removeClass('empty_field');
-                } else {
-                    a.addClass('empty_field');
-                }
-            }
-
-
-            else if ($(this).val() != '' && $(this).val().length > 3) {
-                $(this).removeClass('empty_field');
-            } else {
-                $(this).addClass('empty_field');
-            }
-
-
-
-
-
-        })
-    }
-
-    btn = form.find('input[type="submit"]');
-
-    form.on('submit', function (event) {
-        validform();
-        if (!btn.length > 0) {
-            btn = form.find('input[type="text"]');
-            form.find('.valid').addClass('empty_field');
-        }
-        btn.addClass('disabled');
-        var formData = new FormData(this);
-        event.preventDefault();
-        for (var id in queue) {
-            formData.append('images[]', queue[id]);
-        }
-
-        $.ajax({
-            url: $(this).attr('action'),
-            type: 'POST',
-            data: formData,
-            async: true,
-
-            cache: false,
-            contentType: false,
-            processData: false
-        });
-
-        return false;
-    });
-
-})
