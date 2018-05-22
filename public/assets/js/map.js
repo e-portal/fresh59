@@ -250,7 +250,7 @@ function initMap() {
     function placeMarker(shop) {
         var latLng = new google.maps.LatLng(shop[1], shop[2]);
         var image = {
-            url: '../img/main/marker.png'
+            url: '../assets/img/main/marker.png'
         };
         var shape = {
             coords: [1, 1, 1, 20, 18, 20, 18, 1],
