@@ -187,7 +187,8 @@ $(document).ready(function () {
     }
     if ($('body')) {  /*page of cart*/
         basket != null ? doBasket(basket) : ''
-        bindings();
+        $('.popup').css('display', 'none');
+        // bindings();
         console.log(i);
         $('header .numeral').text(i)
 
