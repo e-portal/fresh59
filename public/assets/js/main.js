@@ -439,8 +439,6 @@ jQuery(document).ready(function () {
 
     /********************************************************/
     (function ($) {
-
-
         $('.header-bottom__input').bind('keyup', function () {
             var options = {
                 url: '/catalog/autocomplete',
@@ -1160,37 +1158,6 @@ $(function () {
 
 });
 
-
-// $(function () {
-//     var g_list = $('.view-tile-list .pos-fix i.x4x4');
-//     var v_list = $('.view-tile-list .pos-fix i.x3x3');
-//
-//     g_list.click(function () {
-//         $('.katalog .product-katalog .articles-horizontal').removeClass('item_4 item_3');
-//         $('.katalog .product-katalog .articles-horizontal').addClass('item_4');
-//     })
-//     v_list.click(function () {
-//         $('.katalog .product-katalog .articles-horizontal').removeClass('item_4 item_3');
-//         $('.katalog .product-katalog .articles-horizontal').addClass('item_3');
-//     })
-//
-// })
-
-
-$(function () {
-    // var g_list = $('.view-tile-list .pos-fix i.x4x4');
-    // var v_list = $('.view-tile-list .pos-fix i.x3x3');
-    //
-    // g_list.click(function () {
-    //     $('.katalog .product-katalog .articles-horizontal').removeClass('item_4 item_3');
-    //     $('.katalog .product-katalog .articles-horizontal').addClass('item_4');
-    // })
-    // v_list.click(function () {
-    //     $('.katalog .product-katalog .articles-horizontal').removeClass('item_4 item_3');
-    //     $('.katalog .product-katalog .articles-horizontal').addClass('item_3');
-    // })
-
-
     jQuery(function ($) {
         $(document).mouseup(function (e) {
             var div = $(".linsa");
@@ -1285,35 +1252,6 @@ $(function () {
     // }
     // brandAcc();
 
-
-//     $('.brand').click(function () {
-//         var full = $(this).attr('data-full');
-//         var short = $(this).attr('data-short');
-//
-//         if ($(this).hasClass('active')) {
-//             $(this).removeClass('active');
-//             $(this).height(short);
-//         }
-// //         else if ($(this).hasClass('foxx')) {
-// //             $(this).addClass('active');
-// //
-// //             //var a = $(this).find('.forms').attr('data-heig');
-// //             $(this).height('auto');
-// //             $(this).find('.forms').height('auto');
-// //             $(this).find('.under-forms').height('auto');
-//             // $(this).height('290px');
-//             // $(this).find('.forms').height('150px');
-//             // $(this).find('.under-forms').height('170px');
-// //            $(this).find('.opti').prepend($('<div class="clik">Показать все</div>'));
-// //         }
-//         else {
-//             $(this).addClass('active');
-//             $(this).height(full);
-//         }
-//
-//     });
-
-
     window.requestAnimFrame = (function () {
         return window.requestAnimationFrame ||
             window.webkitRequestAnimationFrame ||
@@ -1335,7 +1273,7 @@ $(function () {
     step();
 
 
-});
+// });
 
 
 function CountdownTimer(elm, tl, mes) {
