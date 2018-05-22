@@ -721,8 +721,7 @@ h6 {}
 }
 
 .info {
-    /*margin: 9px 0 0 0;*/
-    /*margin: 13px 0 0 90px*/
+
 }
 
 .info .inpp {
@@ -5361,6 +5360,7 @@ ul.nacc .tabs-saw p {
     width: 295px;
 }
 
+input::placeholder { font-family: 'SF-UI-Display-Regular'; }
 input::-webkit-input-placeholder { opacity: 1; transition: opacity 0.3s ease; }
 input::-moz-placeholder          { opacity: 1; transition: opacity 0.3s ease; }
 input:-ms-input-placeholder      { opacity: 1; transition: opacity 0.3s ease; }
