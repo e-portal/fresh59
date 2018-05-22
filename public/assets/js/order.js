@@ -81,28 +81,27 @@ $(document).ready(function () {
                 $('<span class="red"> + ' + obj[prod_data].bonus + ' грн</span> на <a>Бонусный счет</a>').appendTo('.basket-bonus' + i);
             }
 
-            if (obj[prod_data].serttitle  !== undefined) {
-            $('<div class="basket-section-service flexibal sertficat">\n' +
-                '                                      <div class="basket-prod flexibal">\n' +
-                '                                           <div class="basket-prod-img"></div>\n' +
-                '                                           <div class="certificates">\n' +
-                '                            <form>\n' +
-                '                                <label class="servs">'+ obj[prod_data].serttitle +'\n' +
-                '                                    <input type="checkbox" >\n' +
-                '                                    <span class="checkmark"></span>\n' +
-                '                                    <!--<em>940 грн</em>-->\n' +
-                '                                </label>\n' +
-                '                            </form>\n' +
-                '                        </div>\n' +
-                '                                       </div>\n' +
-                '                                       <div class="basket-prod-number red"></div>\n' +
-                '                                       <div class="basket-price total">'+ obj[prod_data].sertprice +'</div>\n' +
-                '                                       <div class=""></div>\n' +
-                '                                       <div class=""></div>\n' +
-                '                                    </div>').appendTo('.basket-section' + i);
+            if (obj[prod_data].serttitle !== undefined) {
+                $('<div class="basket-section-service flexibal sertficat">\n' +
+                    '                                      <div class="basket-prod flexibal">\n' +
+                    '                                           <div class="basket-prod-img"></div>\n' +
+                    '                                           <div class="certificates">\n' +
+                    '                            <form>\n' +
+                    '                                <label class="servs">' + obj[prod_data].serttitle + '\n' +
+                    '                                    <input type="checkbox" >\n' +
+                    '                                    <span class="checkmark"></span>\n' +
+                    '                                    <!--<em>940 грн</em>-->\n' +
+                    '                                </label>\n' +
+                    '                            </form>\n' +
+                    '                        </div>\n' +
+                    '                                       </div>\n' +
+                    '                                       <div class="basket-prod-number red"></div>\n' +
+                    '                                       <div class="basket-price total">' + obj[prod_data].sertprice + '</div>\n' +
+                    '                                       <div class=""></div>\n' +
+                    '                                       <div class=""></div>\n' +
+                    '                                    </div>').appendTo('.basket-section' + i);
 
-           }
-
+            }
 
 
             i++
@@ -115,14 +114,21 @@ $(document).ready(function () {
         } else {
             $('html, body').css('overflow', 'hidden');
         }
-        if ($('.servs').checked) {
-            console.log(123);
-        }
-        else {
+        // if ($('.servs').checked) {
+        //     console.log(123);
+        // }
+        // else {
+        //     console.log(321);
+        // }
+        $(".servs").change(function () {
+            // var str = "";
+            $("input.servs:checked").each(function () {
+                // str += $(this).text() + " ";
+                console.log(123);
+            });
+            // $("div").text(str);
             console.log(321);
-        }
-
-
+        })
 
 
         /*show popup*/
@@ -135,13 +141,7 @@ $(document).ready(function () {
         // servs();
 
 
-
     }
-
-
-
-
-
 
 
     /*close popup*/
@@ -211,8 +211,6 @@ $(document).ready(function () {
     }
 
 
-
-
     /*---------delete PRODUCT---------*/
     function delProd() {
         idObj = $(this).parents('.basket-section-prod').find('.prod-code span').html();
@@ -267,14 +265,13 @@ $(document).ready(function () {
     var totalPrice = 0;
 
 
-
     function totalCart() {
         totalPrice = 0;
         $('.prod-price-total').each(function () {
             totalPrice += parseInt($(this).html());
         });
 
-        $('.count-total').html(totalPrice );
+        $('.count-total').html(totalPrice);
     }
 
     /*---------end Count total price---------*/
@@ -285,7 +282,6 @@ $(document).ready(function () {
         $('.input-number-decrement').unbind('click', incremProd);
         $('.input-number-increment').unbind('click', incremProd);
         $('.input-number').unbind('change', inNumberProd);
-        
 
 
         $('.basket-delete').bind('click', delProd);
