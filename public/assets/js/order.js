@@ -122,12 +122,12 @@ $(document).ready(function () {
         // }
         $(".servs").change(function () {
             // var str = "";
-            $("input.servs:checked").each(function () {
-                // str += $(this).text() + " ";
+            if ($('.servs').checked) {
                 console.log(123);
-            });
-            // $("div").text(str);
-            console.log(321);
+            }
+            else {
+                console.log(321);
+            }
         })
 
 
