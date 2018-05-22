@@ -121,6 +121,7 @@ $(document).ready(function () {
         $('body').find('.popup').css('display', 'flex');
         $('.popup-content').addClass('show');
         $('.close').addClass('show');
+        $('header .baskets .numeral').text(i);
         totalCart();
         bindings();
         // servs();
