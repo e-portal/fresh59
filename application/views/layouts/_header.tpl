@@ -51,7 +51,7 @@
 
                                             {foreach from=$regions item=region}
                                                 <li id="region_{$region.id}"
-                                                    onclick="selectRegion($region.id)">{$region.name}</li>
+                                                    onclick="selectRegion({$region.id})">{$region.name}</li>
                                             {/foreach}
 
                                         </ul>
@@ -65,8 +65,17 @@
 
                                 <ul class="faux-select" data-selected-value="kievstar">
                                     <li class="selected-option">
-                                        <span><a href="tel:+380505900590">(050) 590-0-590</a></span>
-                                        <span><a href="tel:+380935900590">(093) 590-0-590</a></span>
+
+                                        <span>
+                                            <a href="tel:+380505900590">
+                                                <img src="/assets/img/vodafone-phone.png" alt="">(050) 590-0-590
+                                            </a>
+                                        </span>
+                                        <span>
+                                            <a href="tel:+380935900590">
+                                                <img src="/assets/img/lifecell-phone.png" alt="">(093) 590-0-590
+                                            </a>
+                                        </span>
                                         <ul class="options">
 
 
