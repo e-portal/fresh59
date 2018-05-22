@@ -201,7 +201,7 @@
                 {*----------in stock--------*}
             </div>
             <div class="prod-stars">
-                <object type="lol/wut">
+                <object type="lol/wut" class="stars-ipad">
                     <a href="/" class="otzv">
                         <div class="left-otzv">
                             <img src="/assets/img/patr.png" alt="">

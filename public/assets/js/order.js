@@ -127,7 +127,7 @@ $(document).ready(function () {
         $('.certificates input').change(function() {
             $('.certificates input').val($(this).is(':checked'));
         });
-        var certificates_price = 0
+        var certificates_price
         if ($(this).is(':checked')) {
             // console.log(1223);
             a  = $('.sertficat .basket-price.total').text();
