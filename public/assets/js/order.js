@@ -127,7 +127,12 @@ $(document).ready(function () {
         $('.certificates input').change(function() {
             $('.certificates input').val($(this).is(':checked'));
         });
+        if ($('.certificates input').is(':checked')) {
+            a  = $('.sertficat .basket-price.total').text();
+            var certificates_price = a;
 
+        }
+        console.log(certificates_price);
 
 
 
@@ -285,12 +290,7 @@ $(document).ready(function () {
 
 
 
-        if ($('.certificates input').is(':checked')) {
-            a  = $('.sertficat .basket-price.total').text();
-           var certificates_price = a;
 
-        }
-        console.log(certificates_price);
 
         $('.count-total').html(totalPrice);
     }
