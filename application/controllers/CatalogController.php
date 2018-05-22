@@ -9,19 +9,23 @@
  *
  * @author Vadyus
  */
-class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
+class CatalogController extends Alcotec_Frontend_Controller_CatalogController
+{
 
-    public function fixAction() {
+    public function fixAction()
+    {
         exit;
         $db = Zend_Db_Table_Abstract::getDefaultAdapter();
         $pageIds = $db->fetchAssoc("SELECT page_id, count(page_id) as cnt FROM `seo_links_placements` group by page_id having cnt != 5");
-        foreach (array_keys($pageIds) as $pageId){
-            $db->delete('seo_links_placements',"page_id = {$pageId}");
+        foreach (array_keys($pageIds) as $pageId) {
+            $db->delete('seo_links_placements', "page_id = {$pageId}");
         }
     }
 
-    public function actionsAction() {
-        $this->_forward('page404','index'); return;
+    public function actionsAction()
+    {
+        $this->_forward('page404', 'index');
+        return;
     }
 
     public function actionAction()
@@ -32,7 +36,8 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
         $this->view->articles = $modArticles->fetchAll("site_id = {$siteId} and visible = '1'", 'date DESC', 8, 0)->toArray();
     }
 
-    public function itemAction() {
+    public function itemAction()
+    {
         $modActions = new Actions();
         $modCat = new Catalog();
 
@@ -65,7 +70,7 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
                 $item = $modCat->find($itemId)->current();
                 if (!$item) {
                     $this->_response->setHttpResponseCode(404);
-                    $this->_forward('page404','index');
+                    $this->_forward('page404', 'index');
                     return;
                 }
                 $db = Zend_Db_Table_Abstract::getDefaultAdapter();
@@ -73,18 +78,18 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
                 $this->view->cat_info = $catInfo;
                 $brand_info = $db->fetchRow("SELECT * FROM catalog_brands where id = {$item->id_brand}");
                 $this->view->brand_info = $brand_info;
-                if ($itemRow['visible']===NULL) {
-                    if ($catInfo["visible_{$siteId}"]!=1) {
+                if ($itemRow['visible'] === NULL) {
+                    if ($catInfo["visible_{$siteId}"] != 1) {
                         $this->_response->setHttpResponseCode(404);
-                        $this->_forward('page404','index');
+                        $this->_forward('page404', 'index');
                         return;
                     } else {
-                        $otherItemsWithSameCategory = $modCat->getItemList()->where('c.archive = 0')->where('c.id_category = ?',$item->id_category)->where('c.id_brand = ?',$item->id_brand)->query()->fetchAll();
+                        $otherItemsWithSameCategory = $modCat->getItemList()->where('c.archive = 0')->where('c.id_category = ?', $item->id_category)->where('c.id_brand = ?', $item->id_brand)->query()->fetchAll();
                         $newUrl = '/' .
                             str_replace(' ', '-', $item->parent_name) . '/' .
                             str_replace(' ', '-', $item->cat);
                         if (count($otherItemsWithSameCategory) > 0) {
-                            $newUrl.='/brand/'.$item->brand;
+                            $newUrl .= '/brand/' . $item->brand;
                         }
                         $_SESSION['itemNotFound'] = 1;
                         $this->_redirect($newUrl, array('code' => 301));
@@ -113,17 +118,17 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
                 $this->_redirect('/' . $item['subdomain'] . '/' . $_SERVER['REQUEST_URI'], array('code' => 301));
                 exit;
             }
-/*
-            if ($item->id_programm == 3 && !Alcotec_AuthFrontend::getInstance()->getUser()->manager && $item->id_brand != 3 && $item->id_brand != 13 && !in_array($item->id2, array(84151,84871,84870,84150,84872,84869,60193,60191,60192,60369,60189,60370,61830,64053,69540,41385,69536,69538,78931,80376,51394,22643,22644,82820,82822,82821,82818,82819,82816,82815,82817,82811,82813)) && !in_array($siteId, array(1, 3))) {
-                $this->_helper->removeHelper('viewRenderer');
-                $this->getResponse()->setHttpResponseCode(301);
-                $newUrl = '/' .
-                    str_replace(' ', '-', $item->parent_name) . '/' .
-                    str_replace(' ', '-', $item->cat) . '/brand/' .
-                    str_replace(' ', '-', $item->brand);
-                $this->_redirect($newUrl);
-            }
-*/
+            /*
+                        if ($item->id_programm == 3 && !Alcotec_AuthFrontend::getInstance()->getUser()->manager && $item->id_brand != 3 && $item->id_brand != 13 && !in_array($item->id2, array(84151,84871,84870,84150,84872,84869,60193,60191,60192,60369,60189,60370,61830,64053,69540,41385,69536,69538,78931,80376,51394,22643,22644,82820,82822,82821,82818,82819,82816,82815,82817,82811,82813)) && !in_array($siteId, array(1, 3))) {
+                            $this->_helper->removeHelper('viewRenderer');
+                            $this->getResponse()->setHttpResponseCode(301);
+                            $newUrl = '/' .
+                                str_replace(' ', '-', $item->parent_name) . '/' .
+                                str_replace(' ', '-', $item->cat) . '/brand/' .
+                                str_replace(' ', '-', $item->brand);
+                            $this->_redirect($newUrl);
+                        }
+            */
 
             $modComments = new Comments();
             $this->view->comments = $modComments->getComments($item['id']);
@@ -140,7 +145,7 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
                 if ($item['id2'] == NULL) {
                     $this->view->type_program = 'Не связан с внутренней БД';
                 } else {
-                    $type_program=$db->fetchRow("SELECT * FROM `innerdb_items` WHERE `id` =".$item['id2']);
+                    $type_program = $db->fetchRow("SELECT * FROM `innerdb_items` WHERE `id` =" . $item['id2']);
                     $this->view->type_program = $type_program["marketing"];
                 }
 
@@ -159,7 +164,7 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
                 $rates = Zend_Registry::get('currencies');
                 $itemPrice = round($item->price * $rates[6]['rate']);
                 $x1 = round(($itemPrice / ($item['rent'] / 100 + 1)) * 1.1);
-                $x2 = round($itemPrice - ($itemPrice/ 100 * 15));
+                $x2 = round($itemPrice - ($itemPrice / 100 * 15));
                 $x3 = $x2 - $x1;
                 $this->view->itemPrice = $itemPrice;
                 $this->view->x1 = $x1;
@@ -169,7 +174,7 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
                 $rrc = $db->fetchAssoc("SELECT c.id, r.price, r.currency FROM catalog c INNER JOIN innerdb_items_recomended_prices r on c.id2 = r.id_item WHERE r.price > 0");
                 $this->view->rrc = $rrc[$item['id']]['price'];
 
-                $item->shows = $item->shows+1;
+                $item->shows = $item->shows + 1;
                 $item->save();
                 if ($action = $modActions->findAction($item['id'])) {
                     $this->view->action = $action;
@@ -236,8 +241,8 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
                             'uri' => $page->getHref() . '/brand/' . $item->brand
                         ));
                 $this->view->navigation($this->view->menu)->findOneById($item->id_category . '_' . $item->id_brand)
-                    ->addPage(array('id' => $item->id_category .'_'. $item->id, 'label' => $item->name, 'uri' => $_SERVER['REQUEST_URI']));
-                $this->view->navigation($this->view->menu)->findOneById($item->id_category .'_'. $item->id)->setActive(true);
+                    ->addPage(array('id' => $item->id_category . '_' . $item->id, 'label' => $item->name, 'uri' => $_SERVER['REQUEST_URI']));
+                $this->view->navigation($this->view->menu)->findOneById($item->id_category . '_' . $item->id)->setActive(true);
 
                 if (is_array($_SESSION['items'])) {
                     foreach ($_SESSION['items'] as $vieweditms) {
@@ -299,7 +304,7 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
 
                     if ($assocItemsVmeste)
                         $this->view->assocItemsVmeste = $assocItemsVmeste;
-                        $this->view->assocItemsVmesteCount = $assocItemsVmeste;
+                    $this->view->assocItemsVmesteCount = $assocItemsVmeste;
                 }
                 if (Alcotec_AuthFrontend::getInstance()->getUser()->manager == 1) {
                     $modMonitoring = new Alcotec_Frontend_Model_MonitoringResults();
@@ -307,12 +312,12 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
                 }
             } else {
                 $this->_response->setHttpResponseCode(404);
-                $this->_forward('page404','index');
+                $this->_forward('page404', 'index');
                 return;
             }
         } else {
             $this->_response->setHttpResponseCode(404);
-            $this->_forward('page404','index');
+            $this->_forward('page404', 'index');
             return;
         }
         $cache = Zend_Registry::get('cache');
@@ -330,7 +335,7 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
                 }
                 $similarItems[$item['id_brand']]['items'][] = $item;
             }
-            uasort($similarItems, function($a, $b) {
+            uasort($similarItems, function ($a, $b) {
                 return ($a['brand'] < $b['brand']) ? -1 : 1;
             });
 
@@ -339,6 +344,15 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
 
         $this->view->js_int = '
                 <script src="/assets/js/product.js"></script>
+                <script>
+                    (function() { // DON\'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement(\'script\');
+                    s.src = \'https://590.disqus.com/embed.js\';
+                    s.setAttribute(\'data-timestamp\', +new Date());
+                    (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <script id="dsq-count-scr" src="//590.disqus.com/count.js" async></script>
             ';
 
         /*$this->view->css_int = '
@@ -350,7 +364,8 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
         // var_dump($similarItems['price']);die();
     }
 
-    public function addCommentAction() {
+    public function addCommentAction()
+    {
         if ($this->_request->isPost()) {
             $post = $this->_request->getPost();
             $modComments = new Comments();
@@ -358,7 +373,8 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
         }
     }
 
-    public function catAction() {
+    public function catAction()
+    {
         $catId = intval($this->_getParam('catid'));
 //        if (strpos($_SERVER['REQUEST_URI'], "/i/")!==FALSE){
 //            $this->_forward('item', null, null, ['itemName'=>$this->_getParam('i')]);
@@ -375,15 +391,15 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
 
         if (end($arr) == "") {
             $path = explode('/', $_SERVER['REQUEST_URI']);
-              array_pop($path);
+            array_pop($path);
 //            $this->_redirect(implode("/", $path), array('code' => 301));
         }
         if (strpos($_SERVER['REQUEST_URI'], 'sitemap.shtml')) {
             $this->_response->setHttpResponseCode(404);
-            $this->_forward('page404','index');
+            $this->_forward('page404', 'index');
             return;
         }
-        if ($_SERVER['REQUEST_URI']=='/%D0%9C%D0%B5%D0%BB%D0%BA%D0%B0%D1%8F-%D0%B1%D1%8B%D1%82%D0%BE%D0%B2%D0%B0%D1%8F-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0/%D0%A8%D0%B2%D0%B5%D0%B9%D0%BD%D1%8B%D0%B5-%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%BA%D0%B8') {
+        if ($_SERVER['REQUEST_URI'] == '/%D0%9C%D0%B5%D0%BB%D0%BA%D0%B0%D1%8F-%D0%B1%D1%8B%D1%82%D0%BE%D0%B2%D0%B0%D1%8F-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0/%D0%A8%D0%B2%D0%B5%D0%B9%D0%BD%D1%8B%D0%B5-%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%BA%D0%B8') {
             $this->_redirect('https://590.ua/smallbt');
             exit;
         }
@@ -442,7 +458,7 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
             $modNamedFilters = new NamedFilters();
             $namedFilters = $modNamedFilters->getAllByCategoryId($catId);
             $this->view->namedFilters = $namedFilters;
-            $params = array_diff_key($this->_getAllParams(), array('controller' => '','route'=>'', 'action' => '', 'catid' => '', 'page' => ''));
+            $params = array_diff_key($this->_getAllParams(), array('controller' => '', 'route' => '', 'action' => '', 'catid' => '', 'page' => ''));
             ksort($params);
 
             $modCatalog = new Catalog();
@@ -452,42 +468,42 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
             }
 
             $assembledParams = array();
-            foreach ($params as $key=>$val) {
+            foreach ($params as $key => $val) {
                 $assembledParams[] = $key;
                 $assembledParams[] = $val;
             }
-/*
-            if (isset($namedFilters[join('/',$assembledParams)])){
-                $this->_redirect($page->getHref().'/'.$namedFilters[join('/',$assembledParams)],array('code'=>301));
-            }
+            /*
+                        if (isset($namedFilters[join('/',$assembledParams)])){
+                            $this->_redirect($page->getHref().'/'.$namedFilters[join('/',$assembledParams)],array('code'=>301));
+                        }
 
-            $currentUrl = urldecode($this->getRequest()->getRequestUri());
-            $currentUrlArr = explode('/',$currentUrl);
-            $namedFilter = $currentUrlArr[3];
-            if (in_array($namedFilter, $namedFilters)){
-                $filterVal = array_search($namedFilter, $namedFilters);
-                $filterValArr = explode('/',$filterVal);
-                $filterValArr2 = array();
-                for ($s=0;$s<count($filterValArr);$s+=2){
-                    $filterValArr2[$filterValArr[$s]] = $filterValArr[$s+1];
-                }
-                foreach ($filterValArr2 as $f=>$v){
-                    $filterType = substr(explode('/',$f)[0],0,6);
-                    if ($filterType=='filter'){
-                        $filters ['fields'] [substr(explode('/',$f)[0], 6)] = explode('-',$v);
-                    }
-                    else{
-                        $filtersArr = explode('/',$v);
-                        $filterBrands = explode('-',end($filtersArr));
-                        foreach ($filterBrands as $brandName){
-                            if ($bId = array_search($brandName, $allBrands)){
-                                $filters['brand'][] = $bId;
+                        $currentUrl = urldecode($this->getRequest()->getRequestUri());
+                        $currentUrlArr = explode('/',$currentUrl);
+                        $namedFilter = $currentUrlArr[3];
+                        if (in_array($namedFilter, $namedFilters)){
+                            $filterVal = array_search($namedFilter, $namedFilters);
+                            $filterValArr = explode('/',$filterVal);
+                            $filterValArr2 = array();
+                            for ($s=0;$s<count($filterValArr);$s+=2){
+                                $filterValArr2[$filterValArr[$s]] = $filterValArr[$s+1];
+                            }
+                            foreach ($filterValArr2 as $f=>$v){
+                                $filterType = substr(explode('/',$f)[0],0,6);
+                                if ($filterType=='filter'){
+                                    $filters ['fields'] [substr(explode('/',$f)[0], 6)] = explode('-',$v);
+                                }
+                                else{
+                                    $filtersArr = explode('/',$v);
+                                    $filterBrands = explode('-',end($filtersArr));
+                                    foreach ($filterBrands as $brandName){
+                                        if ($bId = array_search($brandName, $allBrands)){
+                                            $filters['brand'][] = $bId;
+                                        }
+                                    }
+                                }
                             }
                         }
-                    }
-                }
-            }
-*/
+            */
             $this->view->categoryUrl = $page->getHref();
             $this->view->navigation($this->view->menu)->findOneById($cat['id'])->setActive(true);
             $this->view->route = 'cat' . $cat->id;
@@ -510,7 +526,7 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
             $this->view->rod_padezh = $cat->rod_padezh;
             $this->view->vin_padezh = $cat->vin_padezh;
 
-            $sitesIds = [2,4,5,8,10,12,14];
+            $sitesIds = [2, 4, 5, 8, 10, 12, 14];
             if ($this->view->finalCat && (in_array($siteId, $sitesIds) || ($_SERVER['HTTP_HOST'] == 'leroymerlin.alcotec.com.devel' || ($config->pupsic == 1 && $siteId == 6)))) {
                 foreach ($this->view->navigation($this->view->menu)->findOneById($cat['id'])->getPages() as $page) {
                     $ids[] = $page->id;
@@ -535,7 +551,7 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
             preg_match('/page\/(\d+)/', $_SERVER['REQUEST_URI'], $pageNumberMatch);
             $pageNumber = $pageNumberMatch[1];
 
-            $this->view->firstPageUrl = rtrim(preg_replace('/page\/(\d+)/','',$_SERVER['REQUEST_URI']),'/');
+            $this->view->firstPageUrl = rtrim(preg_replace('/page\/(\d+)/', '', $_SERVER['REQUEST_URI']), '/');
             if ($this->_hasParam('brand')) {
                 if (preg_match('/[A-Za-zА-Яа-я]/', $this->_getParam('brand')) == 0) {
                     $bIds = array_map('intval', explode('-', $this->_getParam('brand')));
@@ -560,18 +576,18 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
                         return;
                     }
                 }
-                if (count($brands)===1) {
+                if (count($brands) === 1) {
                     $this->view->singleBrand = true;
-		    $this->view->countBrand = 1;
+                    $this->view->countBrand = 1;
                     $page->addPage(
-                            array('id' => $catId . '_' . $filters['brand'][0],
-                                'label' => $brands[0],
-                                'uri' => $page->getHref() . '/brand/' . $brands[0]
-                            ));
+                        array('id' => $catId . '_' . $filters['brand'][0],
+                            'label' => $brands[0],
+                            'uri' => $page->getHref() . '/brand/' . $brands[0]
+                        ));
                     $this->view->navigation($this->view->menu)->findOneById($catId . '_' . $filters['brand'][0])->setActive(true);
                 } elseif (count($brands >= 1)) {
-		    $this->view->countBrand = count($brands);
-		}
+                    $this->view->countBrand = count($brands);
+                }
             }
             if ($this->_getParam('availability') === '1')/*mycom*/
                 $filters['availability'] = 1;
@@ -581,14 +597,14 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
                 $filters['specprice'] = true;
             } elseif ($this->_hasParam('specprice')) {
                 $this->_response->setHttpResponseCode(404);
-                $this->_forward('page404','index');
+                $this->_forward('page404', 'index');
                 return;
             }
             if ($this->_getParam('sale') == 'only') {
                 $filters['sale'] = true;
             } elseif ($this->_hasParam('sale')) {
                 $this->_response->setHttpResponseCode(404);
-                $this->_forward('page404','index');
+                $this->_forward('page404', 'index');
                 return;
             }
             if ($pregFilters = preg_grep('/(?<=filter)[1-9]{1}\d*/', array_keys($this->_getAllParams()))) {
@@ -605,12 +621,12 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
                         $filters['price'][substr($p, 5)] = $this->_getParam($p);
             }
             if ($filters) {
-                $params = array_diff_key($this->_getAllParams(), array('utm_source'=>'','utm_campaign'=>'','utm_medium'=>'','utm_content'=>'','controller' => '', 'action' => '', 'catid' => '', 'page' => '','sort'=>'','availability'=>'','sale'=>'','route'=>'','specprice'));
+                $params = array_diff_key($this->_getAllParams(), array('utm_source' => '', 'utm_campaign' => '', 'utm_medium' => '', 'utm_content' => '', 'controller' => '', 'action' => '', 'catid' => '', 'page' => '', 'sort' => '', 'availability' => '', 'sale' => '', 'route' => '', 'specprice'));
                 $rightFilters = $params;
                 ksort($rightFilters);
                 if (join('', array_keys($params)) != join('', array_keys($rightFilters))) {
                     $this->_response->setHttpResponseCode(404);
-                    $this->_forward('page404','index');
+                    $this->_forward('page404', 'index');
                     return;
                 }
 
@@ -648,7 +664,7 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
             $baseUrl = $this->view->navigation($this->view->menu)->findOneById($cat['id'])->getHref();
             $this->view->baseUrl = $baseUrl;
             if ($namedFilter) {
-                $baseUrl.='/'.$namedFilter;
+                $baseUrl .= '/' . $namedFilter;
             }
             $urlpath = new Alcotec_Urlpath(array('baseUrl' => $baseUrl, 'urlParams' => $paginatorParams));
             if ($filters['price']) {
@@ -691,7 +707,7 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
                 $rates = Zend_Registry::get('currencies');
                 $itemPrice = $curItem['price'] * $rates[6]['rate'];
                 $x4 = round(($itemPrice / ($currentRent / 100 + 1)) * 1.1);
-                $x5 = round($itemPrice - ($itemPrice/ 100 * 15));
+                $x5 = round($itemPrice - ($itemPrice / 100 * 15));
                 $x6 = round($x5 - $x4);
                 $curItem['x_index'] = ($x6 > 0) ? 1 : 0;
             }
@@ -710,12 +726,12 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
                 $this->_redirect(preg_replace('/\/page\/\d+/', '', $_SERVER['REQUEST_URI']), array('code' => 301));
             }
             if ($paginator->getPages()->pageCount == 0 && $this->_getParam('page')) {
-                $this->_redirect($this->view->navigation($this->view->menu)->findOneById($catId)->getHref(),array('code'=>301));
+                $this->_redirect($this->view->navigation($this->view->menu)->findOneById($catId)->getHref(), array('code' => 301));
                 return;
             }
             $catFilers = $modCatalog->getCatFilters($cat['id'], $filters);
             $this->view->filters = $catFilers;
-            if (strpos($_SERVER['REQUEST_URI'],'only-filters')!=FALSE) {
+            if (strpos($_SERVER['REQUEST_URI'], 'only-filters') != FALSE) {
                 echo $this->view->render('_filter_ajax.tpl');
                 exit;
             }
@@ -766,46 +782,47 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
                 'sale',
                 'specprice',
             ];
-            foreach ($this->_getAllParams() as $k=>$v) {
+            foreach ($this->_getAllParams() as $k => $v) {
                 $bad = true;
                 foreach ($allowedKeys as $key) {
-                    if (strpos($k,$key)!==FALSE) {
+                    if (strpos($k, $key) !== FALSE) {
                         $bad = FALSE;
                     }
                 }
                 if ($bad) {
                     $this->_response->setHttpResponseCode(404);
-                    $this->_forward('page404','index');
+                    $this->_forward('page404', 'index');
                     return;
                 }
             }
         } else {
             $this->_response->setHttpResponseCode(404);
-            $this->_forward('page404','index');
+            $this->_forward('page404', 'index');
             return;
         }
     }
 
-    public function brandAction() {
+    public function brandAction()
+    {
         $requestUri = $this->getRequest()->getRequestUri();
         if ($requestUri != strtolower($requestUri)) {
-            $this->_redirect(strtolower($requestUri), ['code'=>301]);
+            $this->_redirect(strtolower($requestUri), ['code' => 301]);
         }
         $siteId = Zend_Registry::get('siteId');
         $brandId = $this->_hasParam('brandId') ? intval($this->_getParam('brandId')) : NULL;
         $db = Zend_Db_Table_Abstract::getDefaultAdapter();
         if ($brand = $db->fetchRow("SELECT * FROM catalog_brands where id = '$brandId}' and visible_{$siteId}=1")) {
             if (strpos($_SERVER['REQUEST_URI'], 'brand') != 0) {
-                $this->_redirect(str_replace('/catalog/brand/' . $brandId, '/' . $brand->name, $_SERVER['REQUEST_URI']),array('code'=>301));
+                $this->_redirect(str_replace('/catalog/brand/' . $brandId, '/' . $brand->name, $_SERVER['REQUEST_URI']), array('code' => 301));
             }
             $this->view->brand = $brandId;
             $this->view->brandName = $brand['name'];
 
-            $uriParts = explode('/',$_SERVER['REQUEST_URI']);
-            if (urldecode(end($uriParts))=='Встраиваемая-техника') {
+            $uriParts = explode('/', $_SERVER['REQUEST_URI']);
+            if (urldecode(end($uriParts)) == 'Встраиваемая-техника') {
                 $and = ' AND cc2.id =  7 ';
             }
-            if (urldecode(end($uriParts))=='Отдельностоящая-техника') {
+            if (urldecode(end($uriParts)) == 'Отдельностоящая-техника') {
                 $and = ' AND cc2.id =  17 ';
             }
             $cats = $db->fetchAll("SELECT cc.id, cc.name as name,cc2.name as parent from catalog_categories cc inner join catalog_categories cc2 on cc.parent = cc2.id where cc.id = ANY(SELECT distinct(id_category) FROM catalog INNER JOIN catalog_items_sites_visibility cisv on catalog.id = cisv.item_id and cisv.site_id = {$siteId} where id_brand = {$brandId} and archive!=1) and cc.visible_{$siteId}=1 and cc2.visible_{$siteId}=1 {$and} order by cc2.left_key,cc.name");
@@ -838,7 +855,7 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
             $urlpath = new Alcotec_Urlpath(array('baseUrl' => "/{$brand['name']}", 'urlParams' => array_diff_key($this->getRequest()->getParams(), array('module' => '', 'brandid' => '', 'brandId' => '', 'action' => '', 'route' => '', 'controller' => ''))));
             $paginator = Alcotec_Paginator::factory($select, $urlpath);
             $paginator->setItemsPerPage(19);
-            $this->view->firstPageUrl = rtrim(preg_replace('/page\/(\d+)/','',$_SERVER['REQUEST_URI']),'/');
+            $this->view->firstPageUrl = rtrim(preg_replace('/page\/(\d+)/', '', $_SERVER['REQUEST_URI']), '/');
             $this->view->paginator = $paginator->setCurrentPageNumber($this->_getParam('page'));
             $this->view->items = $paginator->getCurrentItems();
             $this->view->brandText = $db->fetchOne("SELECT text FROM catalog_brands_texts WHERE id_brand = {$brandId} and site={$siteId}");
@@ -846,12 +863,13 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
 
         } else {
             $this->_response->setHttpResponseCode(404);
-            $this->_forward('page404','index');
+            $this->_forward('page404', 'index');
             return;
         }
     }
 
-    public function giftsAction() {
+    public function giftsAction()
+    {
         if ($this->_hasParam('price')) {
             $price = intval($this->_getParam('price'));
             if ($price < 50) {
@@ -899,19 +917,22 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
         }
     }
 
-    public function updateBonusAmountAction() {
+    public function updateBonusAmountAction()
+    {
         $this->_helper->removeHelper('viewRenderer');
         $modCatalog = new Catalog();
         $modCatalog->updateBonusAmount();
     }
 
-    public function updateVipPriceAction() {
+    public function updateVipPriceAction()
+    {
         $this->_helper->removeHelper('viewRenderer');
         $modCatalog = new Catalog();
         $modCatalog->updateVipPrice();
     }
 
-    public function autocompleteAction() {
+    public function autocompleteAction()
+    {
         $q = $this->_hasParam('q') ? $this->_getParam('q') : NULL;
         $limit = $this->_hasParam('l') ? intval($this->_getParam('l')) : NULL;
         $result = array();
@@ -923,20 +944,21 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
         $this->_helper->json($result);
     }
 
-    public function exportAction() {
+    public function exportAction()
+    {
         $modExport = new Export();
 
         $modExport->generateGoogleTxt();
         $modExport->generateGoogleCsv();
         $modExport->generateGoogleAllCsv();
-		$modExport->generateTrafmagXml();
+        $modExport->generateTrafmagXml();
         $modExport->generateYML(4);
         $modExport->generateZprice(4);
         $modExport->generatePrivatmarket(4);
         $modExport->generateYuspXml(4);
 
         $modExport->generateGiftXML(4);
-		$modExport->generateYMLrozetka(4);
+        $modExport->generateYMLrozetka(4);
         // $modExport->adtarget();
         // $modExport->generateTPYML(4);
         // $modExport->generateKidsXml(4);
@@ -944,12 +966,14 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
         parent::exportAction();
     }
 
-	public function exportymlrozetkaAction() {
+    public function exportymlrozetkaAction()
+    {
         $modExport = new Export();
         $modExport->generateYMLrozetka(4);
     }
 
-    public function setAction() {
+    public function setAction()
+    {
         if (!$this->_hasParam('setId'))
             throw new Exception('set not found');
         $setId = intval($this->_getParam('setId'));
@@ -958,7 +982,7 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
         $set = $modSets->getSet($setId);
         if ($set['visible'] == 0) {
             $this->_response->setHttpResponseCode(404);
-            $this->_forward('page404','index');
+            $this->_forward('page404', 'index');
             return;
         }
 
@@ -966,9 +990,10 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
         $this->view->setItems = $modSets->getSetItems($setId);
     }
 
-    public function commentsAction() {
+    public function commentsAction()
+    {
         $this->_response->setHttpResponseCode(404);
-        $this->_forward('page404','index');
+        $this->_forward('page404', 'index');
         return;
         //$this->_helper->removeHelper('viewRenderer');
         require_once(APPLICATION_PATH . '/views/__helpers/Iurl.php');
@@ -1002,61 +1027,63 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
     */
 
     // public function trafmagAction() {
-        // $modCatalog = new Catalog();
-        // require_once(APPLICATION_PATH . '/views/__helpers/Price.php');
-        // require_once(APPLICATION_PATH . '/views/__helpers/Iurl.php');
-        // $priceHelper = new Zend_View_Helper_Price();
-        // $iUrl = new Zend_View_Helper_Iurl();
-        // $modCategories = new Categories();
-        // $categories = $modCategories->all();
-        // $items = $modCatalog->getItemList()->query()->fetchAll();
-        /* $xml = new SimpleXMLElement("<?xml version='1.0' encoding='utf-8'?><catalog></catalog>"); */
-        // $categoriesXml = $xml->addChild('categories');
-        // foreach ($categories as $category) {
-        //     @$categoryXml = $categoriesXml->addChild('category', $category['name']);
-        //     $categoryXml->addAttribute('id',$category['id']);
-        // }
-        // $offersXml = $xml->addChild('offers');
-        // foreach ($items as $item) {
-        //     $offerXml = $offersXml->addChild('offer');
-        //     $offerXml->addAttribute('id',$item['id']);
-        //     $offerXml->addAttribute('available','true');
-        //     $subdomain = !empty($categories[$item['id_category']]['subdomain']) ? $categories[$item['id_category']]['subdomain'].'.' : '';
-        //     $offerXml->url = 'https://590.ua/' . $subdomain . $iUrl->iurl(
-        //             array(
-        //                 'parent'=>$item['parentname'],
-        //                 'cat'=>$item['cat_onename'],
-        //                 'brand'=>$item['brand'],
-        //                 'item'=>$item['name'],
-        //             ));
+    // $modCatalog = new Catalog();
+    // require_once(APPLICATION_PATH . '/views/__helpers/Price.php');
+    // require_once(APPLICATION_PATH . '/views/__helpers/Iurl.php');
+    // $priceHelper = new Zend_View_Helper_Price();
+    // $iUrl = new Zend_View_Helper_Iurl();
+    // $modCategories = new Categories();
+    // $categories = $modCategories->all();
+    // $items = $modCatalog->getItemList()->query()->fetchAll();
+    /* $xml = new SimpleXMLElement("<?xml version='1.0' encoding='utf-8'?><catalog></catalog>"); */
+    // $categoriesXml = $xml->addChild('categories');
+    // foreach ($categories as $category) {
+    //     @$categoryXml = $categoriesXml->addChild('category', $category['name']);
+    //     $categoryXml->addAttribute('id',$category['id']);
+    // }
+    // $offersXml = $xml->addChild('offers');
+    // foreach ($items as $item) {
+    //     $offerXml = $offersXml->addChild('offer');
+    //     $offerXml->addAttribute('id',$item['id']);
+    //     $offerXml->addAttribute('available','true');
+    //     $subdomain = !empty($categories[$item['id_category']]['subdomain']) ? $categories[$item['id_category']]['subdomain'].'.' : '';
+    //     $offerXml->url = 'https://590.ua/' . $subdomain . $iUrl->iurl(
+    //             array(
+    //                 'parent'=>$item['parentname'],
+    //                 'cat'=>$item['cat_onename'],
+    //                 'brand'=>$item['brand'],
+    //                 'item'=>$item['name'],
+    //             ));
 
-        //     $itemPrice = $priceHelper->price($item['price'], $item['id_currency']);
-        //     if ($item['specprice']&& $item['bdprice'] > $item['price'] && ($item['bdprice']-$item['price'])/$item['price'] > 0.01) {
-        //         $oldPrice = $priceHelper->price($item['bdprice'], $item['id_currency']);
-        //         $offerXml->addChild('oldprice', $oldPrice);
-        //         $offerXml->addChild('skidka', round(($item['bdprice']-$item['price'])/$item['bdprice']*100));
-        //     } else {
-        //         $offerXml->addChild('oldprice', '');
-        //         $offerXml->addChild('skidka', '');
-        //     }
-        //     $offerXml->addChild('price', $itemPrice);
-        //     $offerXml->addChild('currencyId', 'UAH');
-        //     $offerXml->addChild('categoryId', $item['id_category']);
-        //     $offerXml->addChild('image', "/images/catalog/{$item['imgid']}.{$item['imgext']}");
-        //     $offerXml->addChild('vendor', $item['brand']);
-        //     $offerXml->model = $item['name'];
-        // }
-        // header ('Content-type: text/xml');
-        // $xml->asXML('/tmp/trafmag.xml');
-        // readfile('/tmp/trafmag.xml');
-        // die;
+    //     $itemPrice = $priceHelper->price($item['price'], $item['id_currency']);
+    //     if ($item['specprice']&& $item['bdprice'] > $item['price'] && ($item['bdprice']-$item['price'])/$item['price'] > 0.01) {
+    //         $oldPrice = $priceHelper->price($item['bdprice'], $item['id_currency']);
+    //         $offerXml->addChild('oldprice', $oldPrice);
+    //         $offerXml->addChild('skidka', round(($item['bdprice']-$item['price'])/$item['bdprice']*100));
+    //     } else {
+    //         $offerXml->addChild('oldprice', '');
+    //         $offerXml->addChild('skidka', '');
+    //     }
+    //     $offerXml->addChild('price', $itemPrice);
+    //     $offerXml->addChild('currencyId', 'UAH');
+    //     $offerXml->addChild('categoryId', $item['id_category']);
+    //     $offerXml->addChild('image', "/images/catalog/{$item['imgid']}.{$item['imgext']}");
+    //     $offerXml->addChild('vendor', $item['brand']);
+    //     $offerXml->model = $item['name'];
+    // }
+    // header ('Content-type: text/xml');
+    // $xml->asXML('/tmp/trafmag.xml');
+    // readfile('/tmp/trafmag.xml');
+    // die;
     // }
 
-    public function getMenuAction() {
+    public function getMenuAction()
+    {
 
     }
 
-    public function compareAction() {
+    public function compareAction()
+    {
         $ns = new Zend_Session_Namespace('compare');
         if ($this->_hasParam('items')) {
             if ($ids = explode(',', $this->_getParam('items'))) {
@@ -1144,13 +1171,14 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
                 $this->_redirect($url);
             } else {
                 $this->_response->setHttpResponseCode(404);
-                $this->_forward('page404','index');
+                $this->_forward('page404', 'index');
                 return;
             }
         }
     }
 
-    public function aaaaAction() {
+    public function aaaaAction()
+    {
         exit;
         $modCatalog = new Catalog();
         $items = $modCatalog->getItemList()->having('cost > price')->query()->fetchAll();
@@ -1160,7 +1188,8 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
         exit;
     }
 
-    public function priceNotifyAction() {
+    public function priceNotifyAction()
+    {
         if ($this->_request->isPost()) {
             $post = $this->_request->getPost();
             $modCatalog = new Catalog();
@@ -1168,14 +1197,14 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
                 $modPN = new PriceNotifications();
                 $rates = Zend_Registry::get('currencies');
                 $email = $post['email'];
-                if(filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
                     $itemPrice = round($item->price * $rates[6]['rate']);
                     $modPN->insert([
-                        'item_id'=>$item->id,
-                        'insert_date'=>date('Y-m-d'),
-                        'price'=> $itemPrice,
-                        'notification_sent'=>0,
-                        'email'=>$email,
+                        'item_id' => $item->id,
+                        'insert_date' => date('Y-m-d'),
+                        'price' => $itemPrice,
+                        'notification_sent' => 0,
+                        'email' => $email,
                     ]);
                 }
 
@@ -1198,7 +1227,8 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
         $this->_redirect($_SERVER['HTTP_REFERER']);
     }
 
-    public function checkPriceNotificationsAction() {
+    public function checkPriceNotificationsAction()
+    {
         $modPN = new PriceNotifications();
         $rates = Zend_Registry::get('currencies');
         $modCatalog = new Catalog();
@@ -1212,13 +1242,13 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
             if (!$item) {
                 continue;
             }
-            $itemPrice = $item->price*$rates[6]['rate'];
-            if ($itemPrice/$row->price > 0.97) {
+            $itemPrice = $item->price * $rates[6]['rate'];
+            if ($itemPrice / $row->price > 0.97) {
                 continue;
             }
 
             $catInfo = $db->fetchRow("SELECT * FROM catalog_categories where id = {$item->id_category}");
-            $itemUrl = $urlHelper->iurl(array('cat_latin'=>$catInfo['latin_name_single'],'parent'=>urlencode(str_replace(' ','-',$item['parent_name'])),'cat'=>urlencode(str_replace(' ','-',$item['cat_onename'])), 'brand'=>urlencode(str_replace(' ','-',$item['brand'])),'item'=>urlencode(str_replace(array(' ','/'),array('-',''),$item['name']))));
+            $itemUrl = $urlHelper->iurl(array('cat_latin' => $catInfo['latin_name_single'], 'parent' => urlencode(str_replace(' ', '-', $item['parent_name'])), 'cat' => urlencode(str_replace(' ', '-', $item['cat_onename'])), 'brand' => urlencode(str_replace(' ', '-', $item['brand'])), 'item' => urlencode(str_replace(array(' ', '/'), array('-', ''), $item['name']))));
 
             $mail = new Zend_Mail('UTF-8');
             $mail->addTo($row->email);
@@ -1230,13 +1260,14 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
             $mail->setBodyHtml($text);
             $mail->send($transport);
 
-            $row->notification_sent  = 1;
+            $row->notification_sent = 1;
             $row->save();
         }
         exit;
     }
 
-    public function mgAction() {
+    public function mgAction()
+    {
         // $db = Zend_Db_Table_Abstract::getDefaultAdapter();
         // ini_set('display_errors',1);
         // $smarty = new Smarty();
@@ -1253,39 +1284,48 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController {
     }
 }
 
-class Goods implements ArrayAccess {
+class Goods implements ArrayAccess
+{
 
-    public function getImageSizeAttributes() {
+    public function getImageSizeAttributes()
+    {
         return '';
     }
 
-    public function usePlug() {
+    public function usePlug()
+    {
         return false;
     }
 
-    public function getEncodingToString() {
+    public function getEncodingToString()
+    {
         return 'utf-8';
     }
 
-    public function offsetExists($offset) {
+    public function offsetExists($offset)
+    {
         // TODO: Implement offsetExists() method.
     }
 
-    public function offsetGet($offset) {
-        if ($offset=='id'){
+    public function offsetGet($offset)
+    {
+        if ($offset == 'id') {
             return 8;
         }
     }
 
-    public function offsetSet($offset, $value) {
+    public function offsetSet($offset, $value)
+    {
         // TODO: Implement offsetSet() method.
     }
 
-    public function offsetUnset($offset) {
+    public function offsetUnset($offset)
+    {
         // TODO: Implement offsetUnset() method.
     }
 
-    public function getBlocksAddress() {
+    public function getBlocksAddress()
+    {
         // return 'http://aa-gb.marketgid.com/8/';
     }
 }

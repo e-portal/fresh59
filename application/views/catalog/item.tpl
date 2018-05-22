@@ -576,7 +576,7 @@
                                     </object>
                                 </div>
                             </div>
-
+                            <div id="disqus_thread" class="tab-section"></div>
                             {foreach from=$comments item=comment}
                                 <div class="tab-section review-from">
                                     <div class="review-name-date flexibal flex-between">

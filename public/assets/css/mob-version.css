@@ -499,12 +499,27 @@
         width: 87px;
     }
 
-    .right-butt span,
-    .left-butt span,
+    .right-butt > span,
+    .left-butt > span,
     .look-for a {
         display: inline-block;
-        width: 40px;
+        width: 66px;
     }
+
+    .news {
+        width: calc(100% - 30px);
+    }
+
+    .left-butt span:after {
+        left: -20px;
+        top: auto;
+    }
+
+    .right-butt span:after {
+        left: -17px;
+        top: auto;
+    }
+
     .right-butt span > span,
     .left-butt span > span,
     .look-for a > span {
