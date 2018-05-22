@@ -128,7 +128,7 @@ $(document).ready(function () {
             $('.certificates input').val($(this).is(':checked'));
         });
 
-        var certificates_price = sertficat()
+
 
             function sertficat(){
                 var x
@@ -139,11 +139,12 @@ $(document).ready(function () {
                     x = a;
 
                 }
-                window.certificates_price=x
-                certificates_price = x
+                return x
+                // window.certificates_price=x
+                // certificates_price = x
 
             }
-
+        var certificates_price = sertficat()
         console.log(certificates_price, 123);
 
         // $(".certificates input").change(function () {
