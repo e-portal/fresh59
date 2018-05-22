@@ -753,24 +753,24 @@ h6 {}
 }
 
 /*.kiev {*/
-/*font-family: 'SF-UI-Display-Regular';*/
-/*font-size: 17px;*/
-/*color: #313e49;*/
-/*position: relative;*/
-/*display: inline-block;*/
-/*cursor: pointer;*/
-/*margin: 2px 0 0;*/
-/*padding: 0 19px 0 0*/
+    /*font-family: 'SF-UI-Display-Regular';*/
+    /*font-size: 17px;*/
+    /*color: #313e49;*/
+    /*position: relative;*/
+    /*display: inline-block;*/
+    /*cursor: pointer;*/
+    /*margin: 2px 0 0;*/
+    /*padding: 0 19px 0 0*/
 /*}*/
 
 /*.kiev:after {*/
-/*position: absolute;*/
-/*content: '';*/
-/*right: 5px;*/
-/*width: 9px;*/
-/*bottom: 3px;*/
-/*height: 7px;*/
-/*background: url(../img/mark.png) no-repeat center*/
+    /*position: absolute;*/
+    /*content: '';*/
+    /*right: 5px;*/
+    /*width: 9px;*/
+    /*bottom: 3px;*/
+    /*height: 7px;*/
+    /*background: url(../img/mark.png) no-repeat center*/
 /*}*/
 
 .time-work {
@@ -847,7 +847,7 @@ h6 {}
 }
 
 .phone .faux-select li .options {
-    top: calc(3.2em - 46px);
+    top: calc( 3.2em - 46px);
     padding-top: 42px;
 }
 .faux-select li .options {
@@ -970,7 +970,7 @@ input {
 }
 
 .send img {
-    /*.send:hover img {*/
+/*.send:hover img {*/
     animation: swing .6s infinite;
     /*animation-iteration-count: 2;*/
 }
@@ -980,12 +980,8 @@ input {
 }
 
 @keyframes swing {
-    25% {
-        transform: translateX(2px)
-    }
-    50% {
-        transform: translateX(-2px)
-    }
+    25% {transform: translateX(2px)}
+    50% {transform: translateX(-2px)}
     75% {transform: translateX(.5px)}
     100% {transform: translateX(0)}
 }

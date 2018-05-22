@@ -254,7 +254,7 @@
 
 @media screen and (max-width: 1281px) {
     .head-item .inpp input {
-        padding: 10px 0 11px 27px;
+        padding: 9px 0 9px 27px;
     }
     .popup-inner {
         top: 10%;
@@ -505,7 +505,6 @@
         display: inline-block;
         width: 66px;
     }
-
     .news {
         width: calc(100% - 30px);
     }
@@ -514,7 +513,6 @@
         left: -20px;
         top: auto;
     }
-
     .right-butt span:after {
         left: -17px;
         top: auto;
@@ -587,7 +585,7 @@
 
     .head-item:nth-child(1) {
         width: 20%;
-        padding-right: 20px;
+        padding-right: 40px;
     }
 
     .head-item:nth-child(1) img {
@@ -671,7 +669,7 @@
         width: 100%;
         overflow: auto;
         height: 0;
-        top: 183px;
+        top: 200px;
         /*height: calc(100vh - 49px);*/
         /*max-height: 100vh;*/
     }
@@ -922,9 +920,19 @@
         display: none;
     }
 
-    .header-visible {
+    .header-visible,
+    .phone .header-visible {
         display: inline-block;
     }
+
+    .phone .faux-select {
+        left: auto;
+    }
+    .phone .header-visible {
+        position: relative;
+        top: -15px;
+    }
+
 
     .kiev,
     .numbers {
@@ -939,7 +947,7 @@
 
     .name-info .inpp input {
         width: 200px;
-        padding: 10px 0 10px 15px;
+        padding: 8px 0 9px 15px;
     }
 
     .inpp {
