@@ -186,9 +186,11 @@ $(document).ready(function () {
         $('header .numeral').text(i)
     }
     if ($('body')) {  /*page of cart*/
+        basket != null ? doBasket(basket) : ''
         bindings();
         console.log(i);
         $('header .numeral').text(i)
+
     }
 
 
