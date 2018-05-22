@@ -1469,3 +1469,6 @@ div.review-date > span {
 .close_deliver {
     display: none;
 }
+.close_deliver.active {
+    display: block;
+}
