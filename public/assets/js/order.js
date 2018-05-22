@@ -24,7 +24,6 @@ $(document).ready(function () {
             doBasket(basket);
 
         }
-        // $('.numeral').html(i);
         window.localStorage.setItem('basket', JSON.stringify(basket));
     }
 
@@ -33,7 +32,7 @@ $(document).ready(function () {
 
         $('.basket-table').html(' ');
         i = 0;
-
+        console.log(doBasket(obj));
         for (prod_data in obj) {
 
             /*---------POPUP---------*/
