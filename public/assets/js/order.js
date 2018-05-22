@@ -124,6 +124,7 @@ $(document).ready(function () {
         totalCart();
         bindings();
         // servs();
+        $('header .numeral').text(i)
 
 
     }
