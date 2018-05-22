@@ -183,6 +183,7 @@ $(document).ready(function () {
         $('.popup').css('display', 'none');
         bindings();
         console.log(i);
+        $('header .numeral').text(i)
     }
 
 
