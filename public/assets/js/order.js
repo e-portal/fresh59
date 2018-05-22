@@ -121,7 +121,7 @@ $(document).ready(function () {
         else {
             console.log(321);
         }
-    }
+
 
 
         /*show popup*/
