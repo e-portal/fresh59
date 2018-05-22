@@ -120,9 +120,9 @@ $(document).ready(function () {
         // else {
         //     console.log(321);
         // }
-        $(".servs").change(function () {
+        $("input").change(function () {
             // var str = "";
-            if ($(this).find('input').checked) {
+            if ($('input').checked) {
                 console.log(123);
             }
             else {
