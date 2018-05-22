@@ -127,25 +127,25 @@ $(document).ready(function () {
         $('.certificates input').change(function() {
             $('.certificates input').val($(this).is(':checked'));
         });
+        var certificates_price = 0
+        if ($(this).is(':checked')) {
+            // console.log(1223);
+            a  = $('.sertficat .basket-price.total').text();
+            certificates_price += a;
 
+        }
+        console.log(certificates_price);
 
-
-            function sertficat(){
-                var x
-
-                if ($(this).is(':checked')) {
-                    // console.log(1223);
-                    a  = $('.sertficat .basket-price.total').text();
-                    x = a;
-
-                }
-                return x
-                // window.certificates_price=x
-                // certificates_price = x
-
-            }
-        var certificates_price = sertficat()
-        console.log(certificates_price, 123);
+        //     function sertficat(){
+        //         var x
+        //
+        //
+        //         return x
+        //         // window.certificates_price=x
+        //         // certificates_price = x
+        //
+        //     }
+        // var certificates_price = sertficat()
 
         // $(".certificates input").change(function () {
         //     // var str = "";
