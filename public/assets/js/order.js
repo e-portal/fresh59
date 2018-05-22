@@ -10,7 +10,7 @@ $(document).ready(function () {
         basket != null ? doBasket(basket) : ''
     }
 
-    doObject();
+    window.localStorage.setItem('basket', JSON.stringify(basket));
     function doObject() {/* create object product*/
         var prod_id = $(this).attr('data-id');
 
