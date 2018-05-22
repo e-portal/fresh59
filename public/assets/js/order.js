@@ -129,7 +129,7 @@ $(document).ready(function () {
         });
 
         $('.certificates input').click(function() {
-            if (!$(this).is(':checked')) {
+            if ($(this).is(':checked')) {
                 console.log(1223);
             }
         });
