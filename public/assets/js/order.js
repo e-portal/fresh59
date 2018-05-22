@@ -123,7 +123,7 @@ $(document).ready(function () {
         $('.close').addClass('show');
         totalCart();
         bindings();
-        servs();
+        // servs();
 
 
     }
