@@ -120,15 +120,28 @@ $(document).ready(function () {
         // else {
         //     console.log(321);
         // }
-        $("input").change(function () {
-            // var str = "";
-            if ($('input').checked) {
-                console.log(123);
+
+
+        $('.certificates input').val($(this).is(':checked'));
+
+        $('.certificates input').change(function() {
+            $('.certificates input').val($(this).is(':checked'));
+        });
+
+        $('.certificates input').click(function() {
+            if (!$(this).is(':checked')) {
+                console.log(1223);
             }
-            else {
-                console.log(321);
-            }
-        })
+        });
+        // $(".certificates input").change(function () {
+        //     // var str = "";
+        //     if ($('input').checked) {
+        //         console.log(123);
+        //     }
+        //     else {
+        //         console.log(321);
+        //     }
+        // })
 
 
         /*show popup*/
