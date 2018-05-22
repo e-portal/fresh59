@@ -115,6 +115,14 @@ $(document).ready(function () {
         } else {
             $('html, body').css('overflow', 'hidden');
         }
+        if ($('.servs').checked) {
+            console.log(123);
+        }
+        else {
+            console.log(321);
+        }
+    }
+
 
         /*show popup*/
         $('body').find('.popup').css('display', 'flex');
