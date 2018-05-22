@@ -136,8 +136,11 @@ $(document).ready(function () {
                 if ($(this).is(':checked')) {
                     // console.log(1223);
                     a  = $('.sertficat .basket-price.total').text();
-                    x += a;
+                    x = a;
+
                 }
+                window.certificates_price=x
+                certificates_price = x
 
             }
 
