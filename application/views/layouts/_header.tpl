@@ -78,86 +78,9 @@
                                         </span>
                                         <ul class="options">
 
-
-                                            <li class="tregion_6"><a href="tel:+380432572777"><img
-                                                            src="/assets/img/city-phone.png" alt="">(0432) 57-27-77</a>
-                                            </li>
-                                            <li class="tregion_6"><a href="tel:+380672624343"><img
-                                                            src="/assets/img/kievstar-phone.png" alt="">(067) 262-43-43</a>
-                                            </li>
-                                            <li class="tregion_2"><a href="tel:+380567887171"><img
-                                                            src="/assets/img/city-phone.png" alt="">(056) 788-71-71</a>
-                                            </li>
-                                            <li class="tregion_2"><a href="tel:+380952705071"><img
-                                                            src="/assets/img/vodafone-phone.png" alt="">(095) 270-50-71</a>
-                                            </li>
-                                            <li class="tregion_12"><a href="tel:+380622074690"><img
-                                                            src="/assets/img/city-phone.png" alt="">(062) 207-46-90</a>
-                                            </li>
-                                            <li class="tregion_12"><a href="tel:+380504446825"><img
-                                                            src="/assets/img/vodafone-phone.png" alt="">(050) 444-68-25</a>
-                                            </li>
-                                            <li class="tregion_9"><a href="tel:+380617011960"><img
-                                                            src="/assets/img/city-phone.png" alt="">(061) 701 19 60</a>
-                                            </li>
-                                            <li class="tregion_9"><a href="tel:+380988671292"><img
-                                                            src="/assets/img/kievstar-phone.png" alt="">(098) 867-13-92</a>
-                                            </li>
-                                            <li class="tregion_1 active"><a href="tel:+380442238520"><img
-                                                            src="/assets/img/city-phone.png" alt="">(044) 223-8-520</a>
-                                            </li>
-                                            <li class="tregion_1 active"><a href="tel:+380675900591"><img
-                                                            src="/assets/img/kievstar-phone.png" alt="">(067) 590-0-591</a>
-                                            </li>
-                                            <li class="tregion_5"><a href="tel:+380522595039"><img
-                                                            src="/assets/img/city-phone.png" alt="">(0522) 59-50-39</a>
-                                            </li>
-                                            <li class="tregion_5"><a href="tel:+380665208066"><img
-                                                            src="/assets/img/vodafone-phone.png" alt="">(066) 520-80-66</a>
-                                            </li>
-                                            <li class="tregion_17"><a href="tel:+380683229922"><img
-                                                            src="/assets/img/kievstar-phone.png" alt="">(068) 322 99 22</a>
-                                            </li>
-                                            <li class="tregion_13"><a href="tel:+380564435039"><img
-                                                            src="/assets/img/city-phone.png" alt="">(056) 443-50-39</a>
-                                            </li>
-                                            <li class="tregion_13"><a href="tel:+380987864286"><img
-                                                            src="/assets/img/kievstar-phone.png" alt="">(098) 786-42-86</a>
-                                            </li>
-                                            <li class="tregion_4"><a href="tel:+380322470409"><img
-                                                            src="/assets/img/city-phone.png" alt="">(032) 247-04-09</a>
-                                            </li>
-                                            <li class="tregion_4"><a href="tel:+380674346800"><img
-                                                            src="/assets/img/kievstar-phone.png" alt="">(067) 434-68-00</a>
-                                            </li>
-                                            <li class="tregion_21"><a href="tel:+380939294637"><img
-                                                            src="/assets/img/lifecell-phone.png" alt="">(093) 929-46-37</a>
-                                            </li>
-                                            <li class="tregion_20"><a href="tel:+380552441287"><img
-                                                            src="/assets/img/city-phone.png" alt="">(0552) 44-12-87</a>
-                                            </li>
-                                            <li class="tregion_7"><a href="tel:+380487025684"><img
-                                                            src="/assets/img/city-phone.png" alt="">(048) 702-56-84</a>
-                                            </li>
-                                            <li class="tregion_7"><a href="tel:+380503334133"><img
-                                                            src="/assets/img/vodafone-phone.png" alt="">(050) 333-41-33</a>
-                                            </li>
-                                            <li class="tregion_3"><a href="tel:+380577626033"><img
-                                                            src="/assets/img/city-phone.png" alt="">(057) 762-60-33</a>
-                                            </li>
-                                            <li class="tregion_3"><a href="tel:+380504436143"><img
-                                                            src="/assets/img/vodafone-phone.png" alt="">(050) 443-61-43</a>
-                                            </li>
-                                            <li class="tregion_22"><a href="tel:+380552441287"><img
-                                                            src="/assets/img/city-phone.png" alt="">(0552) 44-12-87</a>
-                                            </li>
-                                            <li class="tregion_19"><a href="tel:+380472511539"><img
-                                                            src="/assets/img/city-phone.png" alt="">(0472) 51-15-39</a>
-                                            </li>
-                                            <li class="tregion_19"><a href="tel:+380987864286"><img
-                                                            src="/assets/img/kievstar-phone.png" alt="">(098) 786-42-86</a>
-                                            </li>
-
+                                            {foreach from=$regions item=region}
+                                                {phones assoc.id=$region.id assoc.str=$region.phone}
+                                            {/foreach}
 
                                         </ul>
                                     </li>

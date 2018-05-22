@@ -327,7 +327,7 @@ class BasketController extends Alcotec_Frontend_Controller_BasketController
          * генерим id для аналитики
          */
         $this->view->transactionId = str_replace('.', '', microtime(true));
-
+        $this->view->body_class = 'cart';
 
         $bonusAmount = 0;
         $firstItem = array_values($basketData['itemsInfo'])[0];

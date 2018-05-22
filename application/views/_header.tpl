@@ -14,35 +14,36 @@
 </head>
 <body>
 {literal}
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript"> (function (d, w, c) {
-        (w[c] = w[c] || []).push(function () {
-            try {
-                w.yaCounter173141 = new Ya.Metrika({
-                    id: 173141,
-                    clickmap: true,
-                    trackLinks: true,
-                    accurateTrackBounce: true,
-                    webvisor: true
-                });
-            } catch (e) {
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript"> (function (d, w, c) {
+            (w[c] = w[c] || []).push(function () {
+                try {
+                    w.yaCounter173141 = new Ya.Metrika({
+                        id: 173141,
+                        clickmap: true,
+                        trackLinks: true,
+                        accurateTrackBounce: true,
+                        webvisor: true
+                    });
+                } catch (e) {
+                }
+            });
+            var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () {
+                n.parentNode.insertBefore(s, n);
+            };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/watch.js";
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else {
+                f();
             }
-        });
-        var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () {
-            n.parentNode.insertBefore(s, n);
-        };
-        s.type = "text/javascript";
-        s.async = true;
-        s.src = "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/watch.js";
-        if (w.opera == "[object Opera]") {
-            d.addEventListener("DOMContentLoaded", f, false);
-        } else {
-            f();
-        }
-    })(document, window, "yandex_metrika_callbacks"); </script>
-<noscript>
-    <div><img src="https://mc.yandex.ru/watch/173141" style="position:absolute; left:-9999px;" alt=""/></div>
-</noscript> <!-- /Yandex.Metrika counter -->{/literal}
+        })(document, window, "yandex_metrika_callbacks"); </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/173141" style="position:absolute; left:-9999px;" alt=""/></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->{/literal}
 
 
 <div class="main_block holder_{$zf.params.controller}_{$zf.params.action}{if $manager} holder_logged{/if}">
@@ -51,10 +52,11 @@
         <div class="site_panel_left_side">
             <a href="https://590.ua/" class="main_page_link">Главная</a>
             {if $login}
-            <span class="autorization_link autorization_name"><a href="/auth"><span class='strong'>{$login}</span></a> / <a
-                        href="/auth/exit">Выйти</a></span>
+                <span class="autorization_link autorization_name"><a href="/auth"><span
+                                class='strong'>{$login}</span></a> / <a
+                            href="/auth/exit">Выйти</a></span>
             {else}
-            <a href="#login" class="autorization_link" data-toggle="modal">Авторизация</a>
+                <a href="#login" class="autorization_link" data-toggle="modal">Авторизация</a>
             {/if}
         </div>
         <div class="site_panel_right_side">
@@ -102,16 +104,17 @@
                     <span class="btn btn-mini city-button"
                           data-toggle="dropdown">
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <span class="data-current-city">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   {foreach from=$regions item=region}{if $region.active}<span
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   id="this_city_name"
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   style="font-weight: bold;">{$region.name}</span>{/if}{/foreach}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   <i class="caret"></i>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   {foreach from=$regions item=region}{if $region.active}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       <span
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               id="this_city_name"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               style="font-weight: bold;">{$region.name}</span>{/if}{/foreach}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           <i class="caret"></i>
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </span>
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </span>
                     <ul class="dropdown-menu data-region-list">
                         {foreach from=$regions item=region}
-                        <li><a href="#" id="region_{$region.id}" data-phone='{$region.phone}'
-                               onclick="selectRegion({$region.id})">{$region.name}</a></li>
+                            <li><a href="#" id="region_{$region.id}" data-phone='{$region.phone}'
+                                   onclick="selectRegion({$region.id})">{$region.name}</a></li>
                         {/foreach}
                     </ul>
                 </div>
@@ -121,18 +124,19 @@
                     <span>{$region.phone}</span>{/if}{/if}{/foreach}</span>
                 </div>
                 {foreach from=$regions item=region1}{if $region1.active}
-                {if $region1.id==1}
-                <div class="days">
-                    <p style="float: right;margin-right: 30px;margin-top: -3px;">пн - чт: 9:30 - 18:00<br>пт-вс: 10:00 -
-                        18:00<br>Call центр</p>
-                    <p class="work-time__region hide">пн - пт: 9:00 - 18:00, сб, вс: выходной</p>
-                </div>
-                {else}
-                <div class="days">
-                    <p>пн - чт: 9:30 - 18:00, пт-вс: 10:00 - 18:00 Call центр</p>
-                    <p class="work-time__region hide">пн - пт: 9:00 - 18:00, сб, вс: выходной</p>
-                </div>
-                {/if}{/if}{/foreach}
+                    {if $region1.id==1}
+                        <div class="days">
+                            <p style="float: right;margin-right: 30px;margin-top: -3px;">пн - чт: 9:30 - 18:00<br>пт-вс:
+                                10:00 -
+                                18:00<br>Call центр</p>
+                            <p class="work-time__region hide">пн - пт: 9:00 - 18:00, сб, вс: выходной</p>
+                        </div>
+                    {else}
+                        <div class="days">
+                            <p>пн - чт: 9:30 - 18:00, пт-вс: 10:00 - 18:00 Call центр</p>
+                            <p class="work-time__region hide">пн - пт: 9:00 - 18:00, сб, вс: выходной</p>
+                        </div>
+                    {/if}{/if}{/foreach}
             </div>
         </div>
     </div>
@@ -144,12 +148,12 @@
         <div class="menu_wrapper">
             <ul>
                 {foreach from=$topmenu item=menutop name=topmenu}
-                {if $menutop.type=='text'}
-                <li><a href="https://590.ua/page/{$menutop.alias}">{$menutop.label|translate}</a></li>
-                {/if}
-                {if $menutop.type=='link'}
-                <li><a href="https://590.ua{$menutop.param}">{$menutop.label|translate}</a></li>
-                {/if}
+                    {if $menutop.type=='text'}
+                        <li><a href="https://590.ua/page/{$menutop.alias}">{$menutop.label|translate}</a></li>
+                    {/if}
+                    {if $menutop.type=='link'}
+                        <li><a href="https://590.ua{$menutop.param}">{$menutop.label|translate}</a></li>
+                    {/if}
                 {/foreach}
             </ul>
             <div class="shadow"></div>
@@ -157,22 +161,22 @@
 
         <div class="basket">
             <a id="data-basket-order" {if $zf.params.action=='order' || $zf.params.action=='paybycard' ||
-               $zf.params.action=='thankyou'}style="pointer-events: none;cursor: default;color: #999;"{/if}
-            href="#data-basket" class="basket_info {if $basketStats.amount > 0}active {/if}data-openBasket
+            $zf.params.action=='thankyou'}style="pointer-events: none;cursor: default;color: #999;"{/if}
+               href="#data-basket" class="basket_info {if $basketStats.amount > 0}active {/if}data-openBasket
             shopping-cart-lnk">
-            <span class="count data-basket-amount">{$basketStats.amount}</span>&nbsp;
-            <span>товаров на сумму</span>&nbsp;
-            <span class="summ data-basketSumm" id="summm_all">{$basketStats.summ}</span>&nbsp;
-            <span><span class='strong'>{$smarty.session.Currency.title}</span></span>
+                <span class="count data-basket-amount">{$basketStats.amount}</span>&nbsp;
+                <span>товаров на сумму</span>&nbsp;
+                <span class="summ data-basketSumm" id="summm_all">{$basketStats.summ}</span>&nbsp;
+                <span><span class='strong'>{$smarty.session.Currency.title}</span></span>
             </a>
             <div class="currency_selector custom_select" style="visibility: hidden;">
                 <select id="currencies_select" onchange="if (this.value) window.location.href=this.value">
                     {foreach from=$currencies item=currency name=currencies}
-                    {if $currency.id==$smarty.session.Currency.active}
-                    <option selected="selected">{$currency.name}</option>
-                    {else}
-                    <option value="/catalog/changecurrency/id/{$currency.id}">{$currency.name}</option>
-                    {/if}
+                        {if $currency.id==$smarty.session.Currency.active}
+                            <option selected="selected">{$currency.name}</option>
+                        {else}
+                            <option value="/catalog/changecurrency/id/{$currency.id}">{$currency.name}</option>
+                        {/if}
                     {/foreach}
                 </select>
             </div>
@@ -192,122 +196,124 @@
                 </li>
             </ul>
             {php} echo
-            $this->navigation()->menu($this->menu)->setPartial('menu3.tpl')->setMinDepth(1)->setMaxDepth(2);{/php}
+                $this->navigation()->menu($this->menu)->setPartial('menu3.tpl')->setMinDepth(1)->setMaxDepth(2);{/php}
             {if $zf.params.controller=='catalog' && $zf.params.action=='item'}
             {literal}
-            <script>
-                $(document).ready(function () {
-                    var itemCurrentID = {;
-                    /literal}{$item.id}{literal};
-                    if (itemCurrentID && $('.other-items-box .data-item-' + itemCurrentID)) {
-                        $('.other-items-box .data-item-' + itemCurrentID).parent().click();
-                        $('.other-items-box .data-item-' + itemCurrentID).addClass('item-current');
-                    }
-                });
-            </script>
+                <script>
+                    $(document).ready(function () {
+                        var itemCurrentID = {;
+                        /literal}{$item.id}{literal};
+                        if (itemCurrentID && $('.other-items-box .data-item-' + itemCurrentID)) {
+                            $('.other-items-box .data-item-' + itemCurrentID).parent().click();
+                            $('.other-items-box .data-item-' + itemCurrentID).addClass('item-current');
+                        }
+                    });
+                </script>
             {/literal}
             {if $otherItems}
-            <div class="other-items">
-                <div class="other-items-head">Другие модели</div>
-                <div class="other-items-box">
-                    <ul>
-                        {foreach from=$otherItems item=brand}
-                        <li>
-                            <span>{$brand.brand}</span>
-                            <ul>
-                                {foreach from=$brand.items item=itemtopsale}
-                                <li class="data-item-{$itemtopsale.id}">
-                                    <em><a href="/{$cat_info.subdomain}{iurl assoc.cat_latin=$itemtopsale.cat_latin_single assoc.parent=$itemtopsale.parentname assoc.cat=$itemtopsale.cat_onename assoc.brand=$itemtopsale.brand assoc.item=$itemtopsale.name}"
-                                           {if $itemtopsale.id_availability== 2 || $itemtopsale.id_availability==
-                                           3}class="disabled"
-                                           rel="tooltip" {/if} {if $itemtopsale.id_availability ==
-                                        2}data-original-title="Наличие уточняйте"{/if} {if $itemtopsale.id_availability
-                                        == 3}data-original-title="Под заказ"{/if}>{$itemtopsale.name}</a></em>
-                                    {if $itemtopsale.acttype=='gift'}
-                                    <i class="mini-icon mini-icon-gift" rel="tooltip"
-                                       data-original-title="Подарок"></i>
-                                    {/if}
-                                    {if $itemtopsale.specprice && ($itemtopsale.bdprice > $itemtopsale.price) &&
-                                    (($itemtopsale.bdprice - $itemtopsale.price)/$itemtopsale.price > 0.01)}
-                                    <i class="mini-icon mini-icon-sale" rel="tooltip"
-                                       data-original-title="Скидка"></i>
-                                    {/if}
-                                    {if $itemtopsale.bestprice > $itemtopsale.price}
-                                    <i class="mini-icon mini-icon-price" rel="tooltip"
-                                       data-original-title="Лучшая цена"></i>
-                                    {/if}
+                <div class="other-items">
+                    <div class="other-items-head">Другие модели</div>
+                    <div class="other-items-box">
+                        <ul>
+                            {foreach from=$otherItems item=brand}
+                                <li>
+                                    <span>{$brand.brand}</span>
+                                    <ul>
+                                        {foreach from=$brand.items item=itemtopsale}
+                                            <li class="data-item-{$itemtopsale.id}">
+                                                <em><a href="/{$cat_info.subdomain}{iurl assoc.cat_latin=$itemtopsale.cat_latin_single assoc.parent=$itemtopsale.parentname assoc.cat=$itemtopsale.cat_onename assoc.brand=$itemtopsale.brand assoc.item=$itemtopsale.name}"
+                                                       {if $itemtopsale.id_availability== 2 || $itemtopsale.id_availability==
+                                                       3}class="disabled"
+                                                       rel="tooltip" {/if} {if $itemtopsale.id_availability ==
+                                                    2}data-original-title="Наличие уточняйте"{/if} {if $itemtopsale.id_availability
+                                                    == 3}data-original-title="Под заказ"{/if}>{$itemtopsale.name}</a></em>
+                                                {if $itemtopsale.acttype=='gift'}
+                                                    <i class="mini-icon mini-icon-gift" rel="tooltip"
+                                                       data-original-title="Подарок"></i>
+                                                {/if}
+                                                {if $itemtopsale.specprice && ($itemtopsale.bdprice > $itemtopsale.price) &&
+                                                (($itemtopsale.bdprice - $itemtopsale.price)/$itemtopsale.price > 0.01)}
+                                                    <i class="mini-icon mini-icon-sale" rel="tooltip"
+                                                       data-original-title="Скидка"></i>
+                                                {/if}
+                                                {if $itemtopsale.bestprice > $itemtopsale.price}
+                                                    <i class="mini-icon mini-icon-price" rel="tooltip"
+                                                       data-original-title="Лучшая цена"></i>
+                                                {/if}
+                                            </li>
+                                        {/foreach}
+                                    </ul>
                                 </li>
-                                {/foreach}
-                            </ul>
-                        </li>
-                        {/foreach}
-                    </ul>
+                            {/foreach}
+                        </ul>
+                    </div>
                 </div>
-            </div><!-- / .other-items -->
+                <!-- / .other-items -->
             {/if}
             {/if}
             {include file=_filter.tpl}
             {if $banners}
-            {foreach from=$banners item=banner}
-            <div class="banner-aside" id="banner_{$banner.id}">
-                <a href="/news/%D0%BC%D0%B5%D0%BD%D1%8F%D0%B9%D1%82%D0%B5-%D0%B1%D0%BE%D0%BD%D1%83%D1%81%D1%8B-%D0%BD%D0%B0-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D1%83"
-                   title="{$banner.name}"><img style="width: 279px;" src='/uploads/{$banner.filename}'
-                                               alt="{$banner.filename}"/></a>
-            </div>
-            {/foreach}
+                {foreach from=$banners item=banner}
+                    <div class="banner-aside" id="banner_{$banner.id}">
+                        <a href="/news/%D0%BC%D0%B5%D0%BD%D1%8F%D0%B9%D1%82%D0%B5-%D0%B1%D0%BE%D0%BD%D1%83%D1%81%D1%8B-%D0%BD%D0%B0-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D1%83"
+                           title="{$banner.name}"><img style="width: 279px;" src='/uploads/{$banner.filename}'
+                                                       alt="{$banner.filename}"/></a>
+                    </div>
+                {/foreach}
             {/if}
             {if $page=='payment'}
-            <div class="banner-aside">
-                {literal}
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <!-- 590_оплата -->
-                <ins class="adsbygoogle"
-                     style="display:inline-block;width:200px;height:200px"
-                     data-ad-client="ca-pub-7416138730155689"
-                     data-ad-slot="9782349057"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-                {/literal}
-            </div>
+                <div class="banner-aside">
+                    {literal}
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- 590_оплата -->
+                        <ins class="adsbygoogle"
+                             style="display:inline-block;width:200px;height:200px"
+                             data-ad-client="ca-pub-7416138730155689"
+                             data-ad-slot="9782349057"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    {/literal}
+                </div>
             {/if}
 
             {if $zf.params.controller=='catalog' && $zf.params.action=='cat' && !$finalCat}
-            {if $topsales_items}
-            <div class="top_sales_block">
+                {if $topsales_items}
+                    <div class="top_sales_block">
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <span class="title">
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  {if $zf.params.controller=='catalog' && $zf.params.action=='item' && $altItems}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Похожие модели
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             {else}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Топ продаж
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         {/if}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Похожие модели
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 {else}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Топ продаж
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 {/if}
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  </span>
-                <div class="top_sales_subblock">
-                    {foreach from=$topsales_items item=item name=topsales_items}
-                    <div class="top_sales_item">
-                        <a href="{iurl assoc.subdomain=$item.subdomain assoc.parent=$item.parentname assoc.cat_latin=$item.cat_latin_single assoc.brand=$item.brand assoc.item=$item.name}">
-                            <img {if $item.imgid}src="/images/catalog/{$item.imgid}_s.{$item.imgext}"
-                                 {else}src="{$url.img}/no-image.jpg" {/if} alt="{$item.name}-{$item.brand}"/>
-                        </a>
-                        <a href="{iurl assoc.subdomain=$item.subdomain assoc.parent=$item.parentname assoc.cat_latin=$item.cat_latin_single assoc.brand=$item.brand assoc.item=$item.name}">{$item.brand}
-                            {$item.name}</a>
-                        <span class="description">{if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if}</span>
-                        {if $item.id_availability == 1}
-                        <span class="in_stock_status">Есть в наличии</span>
-                        {/if}
-                        {if $item.id_availability == 2}
-                        <span class="out_stock_status">Наличие уточняйте</span>
-                        {/if}
-                        {if $item.id_availability == 3}
-                        <span class="un_order"><a href="/articles/4" target="_blank"
-                                                  title="Как получить товар под заказ">Под заказ</a></span>
-                        {/if}
-                        <span class="price_sidebar">{price $item.price $item.id_currency} {$smarty.session.Currency.title}</span>
-                        {if $smarty.foreach.topsales_items.first}<i class="topsale-icon"></i>{/if}
-                    </div>
-                    {/foreach}
-                </div><!-- / .top-sale --></div>
-            {/if}
+                        <div class="top_sales_subblock">
+                            {foreach from=$topsales_items item=item name=topsales_items}
+                                <div class="top_sales_item">
+                                    <a href="{iurl assoc.subdomain=$item.subdomain assoc.parent=$item.parentname assoc.cat_latin=$item.cat_latin_single assoc.brand=$item.brand assoc.item=$item.name}">
+                                        <img {if $item.imgid}src="/images/catalog/{$item.imgid}_s.{$item.imgext}"
+                                             {else}src="{$url.img}/no-image.jpg" {/if}
+                                             alt="{$item.name}-{$item.brand}"/>
+                                    </a>
+                                    <a href="{iurl assoc.subdomain=$item.subdomain assoc.parent=$item.parentname assoc.cat_latin=$item.cat_latin_single assoc.brand=$item.brand assoc.item=$item.name}">{$item.brand}
+                                        {$item.name}</a>
+                                    <span class="description">{if $item.cat_onename}{$item.cat_onename}{else}{$item.cat}{/if}</span>
+                                    {if $item.id_availability == 1}
+                                        <span class="in_stock_status">Есть в наличии</span>
+                                    {/if}
+                                    {if $item.id_availability == 2}
+                                        <span class="out_stock_status">Наличие уточняйте</span>
+                                    {/if}
+                                    {if $item.id_availability == 3}
+                                        <span class="un_order"><a href="/articles/4" target="_blank"
+                                                                  title="Как получить товар под заказ">Под заказ</a></span>
+                                    {/if}
+                                    <span class="price_sidebar">{price $item.price $item.id_currency} {$smarty.session.Currency.title}</span>
+                                    {if $smarty.foreach.topsales_items.first}<i class="topsale-icon"></i>{/if}
+                                </div>
+                            {/foreach}
+                        </div><!-- / .top-sale --></div>
+                {/if}
             {/if}
         </div><!-- /.sidebar -->
         <div class="span-12 content">
