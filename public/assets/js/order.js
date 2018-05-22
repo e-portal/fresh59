@@ -203,6 +203,7 @@ $(document).ready(function () {
         $(this).parents('.basket-section').remove();
         totalCart();
         // doObject();
+        $('header .numeral').text(i)
         window.localStorage.setItem('basket', JSON.stringify(basket));
     }
 
