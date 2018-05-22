@@ -124,7 +124,7 @@ $(document).ready(function () {
         totalCart();
         bindings();
         // servs();
-        $('header .numeral').text(i)
+
 
 
     }
@@ -186,14 +186,16 @@ $(document).ready(function () {
         console.log(i);
         $('header .numeral').text(i)
     }
-    if ($('body')) {  /*page of cart*/
+    $('body').each(function () {
         basket != null ? doBasket(basket) : ''
         $('.popup').css('display', 'none');
         // bindings();
         console.log(i);
-        $('header .numeral').text(i)
+        $('header .baskets .numeral').text(i)
+    })   /*page of cart*/
 
-    }
+
+
 
 
     /*---------delete PRODUCT---------*/
@@ -203,7 +205,6 @@ $(document).ready(function () {
         $(this).parents('.basket-section').remove();
         totalCart();
         // doObject();
-        $('header .numeral').text(i)
         window.localStorage.setItem('basket', JSON.stringify(basket));
     }
 

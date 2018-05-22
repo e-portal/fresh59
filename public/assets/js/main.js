@@ -439,6 +439,8 @@ jQuery(document).ready(function () {
 
     /********************************************************/
     (function ($) {
+
+
         $('.header-bottom__input').bind('keyup', function () {
             var options = {
                 url: '/catalog/autocomplete',
@@ -1159,34 +1161,34 @@ $(function () {
 });
 
 
+// $(function () {
+//     var g_list = $('.view-tile-list .pos-fix i.x4x4');
+//     var v_list = $('.view-tile-list .pos-fix i.x3x3');
+//
+//     g_list.click(function () {
+//         $('.katalog .product-katalog .articles-horizontal').removeClass('item_4 item_3');
+//         $('.katalog .product-katalog .articles-horizontal').addClass('item_4');
+//     })
+//     v_list.click(function () {
+//         $('.katalog .product-katalog .articles-horizontal').removeClass('item_4 item_3');
+//         $('.katalog .product-katalog .articles-horizontal').addClass('item_3');
+//     })
+//
+// })
+
+
 $(function () {
-    var g_list = $('.view-tile-list .pos-fix i.x4x4');
-    var v_list = $('.view-tile-list .pos-fix i.x3x3');
-
-    g_list.click(function () {
-        $('.katalog .product-katalog .articles-horizontal').removeClass('item_4 item_3');
-        $('.katalog .product-katalog .articles-horizontal').addClass('item_4');
-    })
-    v_list.click(function () {
-        $('.katalog .product-katalog .articles-horizontal').removeClass('item_4 item_3');
-        $('.katalog .product-katalog .articles-horizontal').addClass('item_3');
-    })
-
-})
-
-
-$(function () {
-    var g_list = $('.view-tile-list .pos-fix i.x4x4');
-    var v_list = $('.view-tile-list .pos-fix i.x3x3');
-
-    g_list.click(function () {
-        $('.katalog .product-katalog .articles-horizontal').removeClass('item_4 item_3');
-        $('.katalog .product-katalog .articles-horizontal').addClass('item_4');
-    })
-    v_list.click(function () {
-        $('.katalog .product-katalog .articles-horizontal').removeClass('item_4 item_3');
-        $('.katalog .product-katalog .articles-horizontal').addClass('item_3');
-    })
+    // var g_list = $('.view-tile-list .pos-fix i.x4x4');
+    // var v_list = $('.view-tile-list .pos-fix i.x3x3');
+    //
+    // g_list.click(function () {
+    //     $('.katalog .product-katalog .articles-horizontal').removeClass('item_4 item_3');
+    //     $('.katalog .product-katalog .articles-horizontal').addClass('item_4');
+    // })
+    // v_list.click(function () {
+    //     $('.katalog .product-katalog .articles-horizontal').removeClass('item_4 item_3');
+    //     $('.katalog .product-katalog .articles-horizontal').addClass('item_3');
+    // })
 
 
     jQuery(function ($) {
