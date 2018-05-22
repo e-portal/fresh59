@@ -189,13 +189,17 @@ $(document).ready(function () {
     // $('body').each(function () {
     //
     // })   /*page of cart*/
-    $('body').bind(function () {
+    // $('body').bind(function () {
+    //
+    // })
+
+    if ($('body')) {  /*page of cart*/
         basket != null ? doBasket(basket) : ''
         $('.popup').css('display', 'none');
         // bindings();
         console.log(i);
         $('header .baskets .numeral').text(i)
-    })
+    }
 
 
 
@@ -208,6 +212,10 @@ $(document).ready(function () {
         totalCart();
         // doObject();
         window.localStorage.setItem('basket', JSON.stringify(basket));
+        basket != null ? doBasket(basket) : ''
+        // bindings();
+        console.log(i);
+        $('header .baskets .numeral').text(i)
     }
 
     /*---------end delete PRODUCT---------*/
