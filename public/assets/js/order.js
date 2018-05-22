@@ -186,14 +186,16 @@ $(document).ready(function () {
         console.log(i);
         $('header .numeral').text(i)
     }
-    $('body').each(function () {
+    // $('body').each(function () {
+    //
+    // })   /*page of cart*/
+    $('body').bind(function () {
         basket != null ? doBasket(basket) : ''
         $('.popup').css('display', 'none');
         // bindings();
         console.log(i);
         $('header .baskets .numeral').text(i)
-    })   /*page of cart*/
-
+    })
 
 
 
