@@ -185,6 +185,11 @@ $(document).ready(function () {
         console.log(i);
         $('header .numeral').text(i)
     }
+    if ($('body')) {  /*page of cart*/
+        bindings();
+        console.log(i);
+        $('header .numeral').text(i)
+    }
 
 
     /*---------delete PRODUCT---------*/
