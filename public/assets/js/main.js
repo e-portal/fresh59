@@ -1539,31 +1539,17 @@ $(document).ready(function () {
     var form = $('.tab-contents.form.is-active form')
 
 
-    // function validform_1() {
-    //     form.find('.valid').each(function (){
-    //         if ($(this).hasClass('phone')) {
-    //             var pmc = $(this);
-    //             var regCheck = /^[0-9()\-+ ]+$/;
-    //             if (!regCheck.test(pmc.val()) || pmc.val() == '') {
-    //                 pmc.addClass('empty_field');
-    //             } else {
-    //                 pmc.removeClass('empty_field');
-    //             }
-    //         } else if ($(this).hasClass('email')) {
-    //             var mailfield = $(this);
-    //             var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
-    //             if (pattern.test(mailfield.val())) {
-    //                 mailfield.removeClass('empty_field');
-    //             } else {
-    //                 mailfield.addClass('empty_field');
-    //             }
-    //         }
-    //     })
-    // }
-    //
-    // form.change(function() {
-    //     validform_1()
-    // });
+    function validform_1() {
+        form.change(function () {
+            form.each(function (){
+                if ($('.basket-two-column input').val() != '') {
+                    $('.step2-hidden .close_deliver').addClass('active')
+                }
+            })
+        })
+    }
+    validform_1()
+
 
     function validform() {
         form.find('.valid').each(function (){
