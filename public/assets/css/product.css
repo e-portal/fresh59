@@ -1466,4 +1466,6 @@ div.review-date > span {
 .basket-section-service .servs {
     padding-right: 0;
 }
-
+.close_deliver {
+    display: none;
+}

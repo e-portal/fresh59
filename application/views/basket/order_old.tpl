@@ -42,7 +42,7 @@
                                 </div>
                                 <div class="step-hidden step2-hidden tab-section valid">
                                     <div class="order-title"><span>2</span> Способы оплаты</div>
-                                    <div>
+                                    <div class="close_deliver">
                                         <div class="flexibal">
                                             <input type="radio" id="new-payment-1" name="payment"
                                                    value="Наличными курьером">
@@ -60,7 +60,7 @@
 
                                 </div>
                                 <div class="step-hidden step3-hidden tab-section tab-delivery valid">
-                                    <div>
+                                    <div class="close_deliver">
                                         <div class="order-title"><span>3</span> Способы доставки</div>
                                         <div class="flexibal">
                                             <input type="radio" id="new-delivery-1" class="ShowOrHide delivery-show-select"
