@@ -127,35 +127,11 @@ $(document).ready(function () {
         $('.certificates input').change(function() {
             $('.certificates input').val($(this).is(':checked'));
         });
-        var certificates_price
-        if ($(this).is(':checked')) {
-            // console.log(1223);
-            a  = $('.sertficat .basket-price.total').text();
-            certificates_price += a;
 
-        }
-        console.log(certificates_price);
 
-        //     function sertficat(){
-        //         var x
-        //
-        //
-        //         return x
-        //         // window.certificates_price=x
-        //         // certificates_price = x
-        //
-        //     }
-        // var certificates_price = sertficat()
 
-        // $(".certificates input").change(function () {
-        //     // var str = "";
-        //     if ($('input').checked) {
-        //         console.log(123);
-        //     }
-        //     else {
-        //         console.log(321);
-        //     }
-        // })
+
+
 
 
         /*show popup*/
@@ -169,7 +145,16 @@ $(document).ready(function () {
 
 
     }
-
+    $(".certificates input").change(function () {
+        doBasket(basket);
+        var str = "";
+        if ($('input').checked) {
+            console.log(123);
+        }
+        else {
+            console.log(321);
+        }
+    })
 
     /*close popup*/
     $('.closeX, .close, .closeBtn, .take-order-btn').on('click', function () {
@@ -297,6 +282,15 @@ $(document).ready(function () {
         $('.prod-price-total').each(function () {
             totalPrice += parseInt($(this).html());
         });
+
+
+
+        if ($('.certificates input').is(':checked')) {
+            a  = $('.sertficat .basket-price.total').text();
+            certificates_price += a;
+
+        }
+        console.log(certificates_price);
 
         $('.count-total').html(totalPrice);
     }
