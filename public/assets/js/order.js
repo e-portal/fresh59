@@ -230,10 +230,10 @@ $(document).ready(function () {
     /*---------Plus-minus PRODUCT---------*/
     function incremProd() {
         var $input = $(this).parent().find('input');
-        // c = $(this).hasClass('decrement') ? parseInt($input.val()) - 1 : parseInt($input.val()) + 1;
-        // if (c <= 0) {
-        //     c = 1;
-        // }
+        c = $(this).hasClass('decrement') ? parseInt($input.val()) - 1 : parseInt($input.val()) + 1;
+        if (c <= 0) {
+            c = 1;
+        }
         $input.val(c);
         $input.trigger('change');
     }
