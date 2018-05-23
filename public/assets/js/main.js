@@ -1620,7 +1620,7 @@ $(document).ready(function () {
         })
         .trigger("change");
     btn = form.find('input[type="submit"]');
-
+    $('.container.wrap .take-order a.acty').trigger(btn);
     form.on('submit', function (event) {
         validform();
         if (!btn.length > 0) {
