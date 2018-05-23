@@ -12,6 +12,8 @@ $(document).ready(function () {
         $('header .baskets .numeral').text(i)
     }
 
+
+
     function doObject() {/* create object product*/
         var prod_id = $(this).attr('data-id');
 
@@ -180,11 +182,13 @@ $(document).ready(function () {
     }
 
 
-    // if ($('body')) {  /*page of cart*/
-    //     basket != null ? doBasket(basket) : ''
-    //     $('.popup').css('display', 'none');
-    //     $('header .baskets .numeral').text(i)
-    // }
+    if ( basket != null ? doBasket(basket) : '') {  /*page of cart*/
+        basket != null ? doBasket(basket) : ''
+        $('.popup').css('display', 'none');
+        $('header .baskets .numeral').text(i)
+    } else {
+        $('header .baskets .numeral').text(0)
+    }
 
 
     /*---------delete PRODUCT---------*/
