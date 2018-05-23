@@ -116,11 +116,6 @@ $(document).ready(function () {
         }
 
 
-
-
-
-
-
         /*show popup*/
         $('body').find('.popup').css('display', 'flex');
         $('.popup-content').addClass('show');
@@ -246,21 +241,20 @@ $(document).ready(function () {
 
     function totalCart() {
         totalPrice = 0;
+        if ($('body').hasClass('cart')) {
+            $('.count-total').html(totalPrice / 2);
+        }
+        $('.prod-price-total').each(function () {
+            totalPrice += parseInt($(this).html());
+        });
 
-            $('.prod-price-total').each(function () {
-                totalPrice += parseInt($(this).html());
-            });
 
-
-            console.log(i);
-
+        console.log(i);
 
 
         $('.count-total').html(totalPrice);
     }
-    if ($('body').hasClass('cart')) {
-        $('.count-total').html(totalPrice / 2);
-    }
+
 
     /*---------end Count total price---------*/
 
