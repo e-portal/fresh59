@@ -253,6 +253,7 @@ $(document).ready(function () {
 
 
         $('.count-total').html(totalPrice);
+        window.localStorage.setItem('basket', JSON.stringify(basket));
     }
 
 
