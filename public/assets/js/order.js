@@ -206,7 +206,7 @@ $(document).ready(function () {
         delete basket[idObj];
         $(this).parents('.basket-section').remove();
         totalCart();
-        doObject();
+        // doObject();
         window.localStorage.setItem('basket', JSON.stringify(basket));
         basket != null ? doBasket(basket) : ''
         bindings();
