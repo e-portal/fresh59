@@ -213,7 +213,6 @@ $(document).ready(function () {
         }
         $input.val(c);
         $input.trigger('change');
-        window.localStorage.setItem('basket', JSON.stringify(basket));
     }
 
     /*---------end Plus-minus PRODUCT---------*/
