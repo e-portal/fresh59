@@ -172,18 +172,18 @@ $(document).ready(function () {
     /*---------end POPUP---------*/
 
 
-    if ($('body').hasClass('cart')) {  /*page of cart*/
-        $('html, body').css('overflow', 'auto');
-        $('.popup').css('display', 'none');
-        bindings();
-    }
+    // if ($('body').hasClass('cart')) {  /*page of cart*/
+    //     $('html, body').css('overflow', 'auto');
+    //     $('.popup').css('display', 'none');
+    //     bindings();
+    // }
 
 
-    if ($('body')) {  /*page of cart*/
-        basket != null ? doBasket(basket) : ''
-        $('.popup').css('display', 'none');
-        $('header .baskets .numeral').text(i)
-    }
+    // if ($('body')) {  /*page of cart*/
+    //     basket != null ? doBasket(basket) : ''
+    //     $('.popup').css('display', 'none');
+    //     $('header .baskets .numeral').text(i)
+    // }
 
 
     /*---------delete PRODUCT---------*/
@@ -246,9 +246,6 @@ $(document).ready(function () {
             totalPrice += parseInt($(this).html());
         });
 
-        if ($('body').hasClass('cart')) {
-            $('.count-total').html(totalPrice / 2);
-        }
 
 
         $('.count-total').html(totalPrice);
