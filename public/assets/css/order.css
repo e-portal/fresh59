@@ -269,9 +269,9 @@
     padding: 10px 30px;
 }
 
-.cart .basket-section > div > div {
-    width: 16%;
-}
+/*.cart .basket-section > div > div {*/
+    /*width: 16%;*/
+/*}*/
 
 .basket-last-column .total-section {
     border-bottom: 1px solid #d7d7d7;
