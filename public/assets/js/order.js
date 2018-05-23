@@ -267,8 +267,9 @@ $(document).ready(function () {
         totalPrice = 0;
         $('.prod-price-total').each(function () {
             totalPrice += parseInt($(this).html());
+            console.log(parseInt($(this).html()));
         });
-        console.log(totalPrice);
+
         $('.count-total').html(totalPrice);
     }
 
