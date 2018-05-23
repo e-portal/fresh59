@@ -117,7 +117,7 @@
 </footer>
 
 {*--------------CART--------------*}
-{if $zf.params.action=='order'}
+{if $zf.params.action!=='order'}
     {include file='layouts/cart.tpl'}
 {/if}
 {*--------------CART--------------*}
