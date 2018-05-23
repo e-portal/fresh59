@@ -215,12 +215,11 @@ $(document).ready(function () {
         idObj = $(this).parents('.basket-section-prod').find('.prod-code span').html();
         delete basket[idObj];
         $(this).parents('.basket-section').remove();
-        // totalCart();
+        totalCart();
         // doObject();
         window.localStorage.setItem('basket', JSON.stringify(basket));
         basket != null ? doBasket(basket) : ''
         // bindings();
-        console.log(i);
         $('header .baskets .numeral').text(i)
     }
 
@@ -251,7 +250,7 @@ $(document).ready(function () {
         var startPrice = $(this).parents('.basket-section-prod').find('.prod-price-total').attr('data-value');
         $(this).parents('.basket-section-prod').find('.prod-price-total').html((startPrice) * numcount);
         // $(this).parents('.basket-section-prod').find('.prod-price-total').attr('data-value', startPrice * numcount);
-        totalCart();
+        // totalCart();
 
 
     }

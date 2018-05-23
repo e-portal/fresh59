@@ -2962,6 +2962,11 @@
     .right-times {
         margin: 0;
     }
+    .left-right .ourr:nth-child(1) {
+        margin-bottom: 0;
+        padding-bottom: 27px;
+        border-bottom: 1px solid #ddd;
+    }
     .slider-for {
         width: 100vw;
     }
@@ -2975,6 +2980,49 @@
     .slider-product .present {
         right: 0;
     }
+    .prod-stars {
+        border-bottom: none;
+    }
+    .in-stock {
+        justify-content: space-between;
+    }
+    .prod-saler,
+    .slide-tabs,
+    .left-butt > span > span,
+    .right-butt > span > span ,
+    .look-for a span{
+        display: none
+    }
+    .look-for a:after {
+        top: -9px;
+    }
+    .slider-for .slick-slide {
+        padding: 0.2%;
+    }
+    .price-busket-kredit {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .price-busket-kredit > div {
+        width: 100%;
+        padding-bottom: 30px;
+    }
+    .price-busket-kredit > div:nth-child(1), .price-busket-kredit > div:nth-child(2) {
+         border: none;
+    }
+    .prod-price > div {
+        display: inline-block;
+        width: 49%;
+    }
+    .qweek-busket-prodadd-to-cart form,
+    .qweek-buy,
+    .qweek-buy input {
+        width: 100%;
+    }
+    .threee {
+        flex-wrap: wrap;
+    }
+
 }
 
 @media screen and (max-width: 500px) {
