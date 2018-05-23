@@ -173,7 +173,7 @@ $(document).ready(function () {
 
     if ($('body').hasClass('cart')) {  /*page of cart*/
         $('html, body').css('overflow', 'auto');
-        $('.popup.flexibal.popup-baskets').remove;
+        $('.popup-baskets').remove;
         bindings();
     }
 
