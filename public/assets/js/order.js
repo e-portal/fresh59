@@ -247,7 +247,7 @@ $(document).ready(function () {
         totalPrice = 0;
 
         $('.prod-price-total').each(function () {
-            totalPrice += parseInt($(this).html());
+            totalPrice = parseInt($(this).html());
         });
 
 
