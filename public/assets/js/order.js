@@ -226,7 +226,7 @@ $(document).ready(function () {
         basket[idObj].quantity = $(this).val();
 
         var startPrice = $(this).parents('.basket-section-prod').find('.prod-price-total').attr('data-value');
-        // $(this).parents('.basket-section-prod').find('.prod-price-total').html((startPrice) * numcount);
+        $(this).parents('.basket-section-prod').find('.prod-price-total').html((startPrice) * numcount);
         // $(this).parents('.basket-section-prod').find('.prod-price-total').attr('data-value', startPrice * numcount);
         totalCart();
 
