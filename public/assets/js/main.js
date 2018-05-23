@@ -1546,7 +1546,7 @@ $(document).ready(function () {
                     $('.basket-two-column #mail').val() != '' &&
                     $('.basket-two-column #phone').val() != '' &&
                     $('.basket-two-column #city').val() != '' ) {
-                    $('.step2-hidden .close_deliver').addClass('active')
+                    $('.step2-hidden').removeClass('step-hidden')
                 }
             })
         })
