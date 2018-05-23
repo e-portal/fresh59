@@ -258,6 +258,9 @@ $(document).ready(function () {
 
         $('.count-total').html(totalPrice);
     }
+    if ($('body').hasClass('cart')) {
+        $('.count-total').html(totalPrice / 2);
+    }
 
     /*---------end Count total price---------*/
 
