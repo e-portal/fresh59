@@ -265,10 +265,14 @@ $(document).ready(function () {
 
     function totalCart() {
         totalPrice = 0;
-        $('.prod-price-total').each(function () {
-            totalPrice += parseInt($(this).html());
+        $('.prod-price-total').change(function () {
+            $('.prod-price-total').each(function () {
+                totalPrice += parseInt($(this).html());
+
+            });
             console.log(parseInt($(this).html()));
-        });
+        }
+
 
         $('.count-total').html(totalPrice);
     }
