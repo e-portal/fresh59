@@ -181,23 +181,14 @@ $(document).ready(function () {
         $('html, body').css('overflow', 'auto');
         $('.popup').css('display', 'none');
         bindings();
-        console.log(i);
-        $('header .baskets .numeral').text(i);
     }
-    // $('body').each(function () {
-    //
-    // })   /*page of cart*/
-    // $('body').bind(function () {
-    //
-    // })
 
-    // if ($('body')) {  /*page of cart*/
-    //     basket != null ? doBasket(basket) : ''
-    //     $('.popup').css('display', 'none');
-    //     // bindings();
-    //     console.log(i);
-    //     $('header .baskets .numeral').text(i)
-    // }
+
+    if ($('body')) {  /*page of cart*/
+        basket != null ? doBasket(basket) : ''
+        $('.popup').css('display', 'none');
+        $('header .baskets .numeral').text(i)
+    }
 
 
     /*---------delete PRODUCT---------*/
