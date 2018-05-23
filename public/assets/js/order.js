@@ -190,12 +190,12 @@ $(document).ready(function () {
         idObj = $(this).parents('.basket-section-prod').find('.prod-code span').html();
         delete basket[idObj];
         $(this).parents('.basket-section').remove();
-        totalCart();
+
         // doObject();
         window.localStorage.setItem('basket', JSON.stringify(basket));
-        basket != null ? doBasket(basket) : ''
-        bindings();
-        // $('header .baskets .numeral').text(i)
+        // basket != null ? doBasket(basket) : ''
+        // bindings();
+        totalCart();
     }
 
     /*---------end delete PRODUCT---------*/
