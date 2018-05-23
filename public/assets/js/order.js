@@ -125,7 +125,7 @@ $(document).ready(function () {
         $('.popup-content').addClass('show');
         $('.close').addClass('show');
         $('header .baskets .numeral').text(i);
-        totalCart();
+        // totalCart();
         bindings();
 
 
