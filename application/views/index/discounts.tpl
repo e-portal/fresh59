@@ -134,7 +134,10 @@
 
 
                                 <div class="times">
-                                    <div class="timer" data-year="2019" data-month="04" data-days="05"></div>
+                                    <div class="timer"
+                                         data-year="{getdate arr=$item.end_date arr='Y'}"
+                                         data-month="{getdate arr=$item.end_date arr='m'}"
+                                         data-days="{getdate arr=$item.end_date arr='d'}"></div>
 
                                     <div class="right-times">
                                         <object type="lol/wut">
