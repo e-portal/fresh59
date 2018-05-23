@@ -182,11 +182,11 @@ $(document).ready(function () {
     }
 
 
-    // if ( $('body')) {  /*page of cart*/
-    //     basket != null ? doBasket(basket) : ''
-    //     $('.popup').css('display', 'none');
-    //     $('header .baskets .numeral').text(i)
-    // }
+    if ( $('body')) {  /*page of cart*/
+        basket != null ? doBasket(basket) : ''
+        $('.popup').css('display', 'none');
+        $('header .baskets .numeral').text(i)
+    }
 
     /*---------delete PRODUCT---------*/
     function delProd() {
@@ -213,6 +213,7 @@ $(document).ready(function () {
         }
         $input.val(c);
         $input.trigger('change');
+        window.localStorage.setItem('basket', JSON.stringify(basket));
     }
 
     /*---------end Plus-minus PRODUCT---------*/
@@ -229,6 +230,7 @@ $(document).ready(function () {
         $(this).parents('.basket-section-prod').find('.prod-price-total').html((startPrice) * numcount);
         // $(this).parents('.basket-section-prod').find('.prod-price-total').attr('data-value', startPrice * numcount);
         totalCart();
+        window.localStorage.setItem('basket', JSON.stringify(basket));
 
 
     }
