@@ -271,7 +271,7 @@ $(document).ready(function () {
 
             });
             console.log(parseInt($(this).html()));
-        }
+        })
 
 
         $('.count-total').html(totalPrice);
