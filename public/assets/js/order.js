@@ -213,6 +213,7 @@ $(document).ready(function () {
         }
         $input.val(c);
         $input.trigger('change');
+        totalCart();
     }
 
     /*---------end Plus-minus PRODUCT---------*/
