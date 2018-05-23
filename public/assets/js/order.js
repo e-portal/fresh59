@@ -213,6 +213,7 @@ $(document).ready(function () {
         window.localStorage.setItem('basket', JSON.stringify(basket));
         // basket != null ? doBasket(basket) : ''
         // bindings();
+        doBasket(basket);
 
 
     }
