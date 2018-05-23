@@ -1560,6 +1560,17 @@ $(document).ready(function () {
         })
     }
     validform_1()
+    function validform_2(){
+        var client_new = $('tab-new-client')
+        client_new.change(function () {
+            client_new.each(function (){
+                if (client_new.find('#enter-email').val() != '' && client_new.find('#pass').val() != '') {
+                    client_new.find('.step2-hidden').removeClass('step-hidden')
+                }
+            })
+        })
+    }
+    validform_2()
 
 
     function validform() {
