@@ -3,9 +3,15 @@ $(document).ready(function () {
     /*click on cart-button*/
     $('.add-to-cart').bind('click', doObject);
     $('.add-to-cart').bind('click', function () {
+        if (window.matchMedia('(max-width: 900px)').matches) {
+            $('html, body').css('overflow', 'hidden');
+        } else {
+            $('html, body').css('overflow', 'hidden');
+        }
         $('body').find('.popup').css('display', 'flex');
         $('.popup-content').addClass('show');
         $('.close').addClass('show');
+
     });
 
 
@@ -118,11 +124,7 @@ $(document).ready(function () {
         }
 
         /*stop scroll*/
-        if (window.matchMedia('(max-width: 900px)').matches) {
-            $('html, body').css('overflow', 'hidden');
-        } else {
-            $('html, body').css('overflow', 'hidden');
-        }
+
 
 
         /*show popup*/
