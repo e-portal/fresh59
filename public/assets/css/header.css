@@ -89,6 +89,7 @@
     position: relative;
     width: max-content;
     transition: .5s;
+    overflow: hidden;
 }
 
 .search-result__coast {
