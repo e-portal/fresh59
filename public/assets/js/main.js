@@ -1556,6 +1556,13 @@ $(document).ready(function () {
                 if ($('.step3-hidden input').is(':checked')) {
                     $('.step4-hidden').removeClass('step-hidden')
                 }
+                if ($('.basket-two-column input').val().length > 3 &&
+                    $('.step2-hidden input').is(':checked') &&
+                    $('.step3-hidden input').is(':checked')){
+                        $('.take-order a').removeClass('btn-dissable')
+                } else {
+                    $('.take-order a').addClass('btn-dissable')
+                }
             })
         })
     }
