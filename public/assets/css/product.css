@@ -868,6 +868,9 @@ img {
     border-bottom: 1px solid #d7d7d7;
     padding: 15px 30px;
     width: calc(100% - 20px);
+    max-height: 500px;
+    transition: .5s;
+    opacity: 1;
 }
 .tabs-review .tab-section:last-child {
     border-bottom: none;

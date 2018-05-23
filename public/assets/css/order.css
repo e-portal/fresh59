@@ -37,7 +37,7 @@
 
 .step-hidden
  {
-    height: 45px;
+    max-height: 45px;
     overflow: hidden;
     opacity: .3;
 }
