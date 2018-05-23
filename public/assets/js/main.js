@@ -1556,18 +1556,18 @@ $(document).ready(function () {
 
     validform_1()
 
-    function validform_2() {
-        var client_new = $('tab-new-client')
-        client_new.change(function () {
-            client_new.each(function () {
-                if (client_new.find('#enter-email').val() != '' && client_new.find('#pass').val() != '') {
-                    client_new.find('.step2-hidden').removeClass('step-hidden')
-                }
-            })
-        })
-    }
-
-    validform_2()
+    // function validform_2() {
+    //     var client_new = $('tab-new-client')
+    //     client_new.change(function () {
+    //         client_new.each(function () {
+    //             if (client_new.find('#enter-email').val() != '' && client_new.find('#pass').val() != '') {
+    //                 client_new.find('.step2-hidden').removeClass('step-hidden')
+    //             }
+    //         })
+    //     })
+    // }
+    //
+    // validform_2()
 
 
     function validform() {
@@ -1633,6 +1633,7 @@ $(document).ready(function () {
         btn.addClass('disabled');
         var formData = new FormData(this);
         event.preventDefault();
+        console.log(уряяяя);
         // for (var id in queue) {
         //     formData.append('images[]', queue[id]);
         // }
