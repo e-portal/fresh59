@@ -183,11 +183,12 @@ $(document).ready(function () {
 
 
     if ( basket != null ? doBasket(basket) : '') {  /*page of cart*/
+        $('header .baskets .numeral').text(0)
+
+    } else {
         basket != null ? doBasket(basket) : ''
         $('.popup').css('display', 'none');
         $('header .baskets .numeral').text(i)
-    } else {
-        $('header .baskets .numeral').text(0)
     }
 
 
