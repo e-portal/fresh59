@@ -1597,6 +1597,15 @@ $(document).ready(function () {
     $('.valid, select.valid option:selected').bind('keyup', function () {
         $(this).removeClass('empty_field');
     });
+
+
+    $( "select" )
+        .change(function() {
+            $( "select.valid option:selected" ).each(function() {
+                $( "select.valid" ).removeClass('empty_field');
+            });
+        })
+        .trigger( "change" );
     btn = form.find('input[type="submit"]');
 
     form.on('submit', function (event) {
