@@ -35,10 +35,8 @@
     width: calc(100% - 20px);
 }
 
-.step-hidden,
-.step2-hidden,
-.step2-hidden,
-.step2-hidden {
+.step-hidden
+ {
     height: 45px;
     overflow: hidden;
     opacity: .3;
