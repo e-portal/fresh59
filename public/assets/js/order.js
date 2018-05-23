@@ -132,16 +132,16 @@ $(document).ready(function () {
 
 
     }
-    $(".certificates input").change(function () {
-        doBasket(basket);
-        var str = "";
-        if ($('input').checked) {
-            console.log(123);
-        }
-        else {
-            console.log(321);
-        }
-    })
+    // $(".certificates input").change(function () {
+    //     doBasket(basket);
+    //     var str = "";
+    //     if ($('input').checked) {
+    //         console.log(123);
+    //     }
+    //     else {
+    //         console.log(321);
+    //     }
+    // })
 
     /*close popup*/
     $('.closeX, .close, .closeBtn, .take-order-btn').on('click', function () {
@@ -192,7 +192,7 @@ $(document).ready(function () {
         $('.popup').css('display', 'none');
         bindings();
         console.log(i);
-        $('header .numeral').text(i)
+        $('header .baskets .numeral').text(i);
     }
     // $('body').each(function () {
     //
