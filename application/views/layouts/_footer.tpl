@@ -117,7 +117,9 @@
 </footer>
 
 {*--------------CART--------------*}
-{include file='layouts/cart.tpl'}
+{if $zf.params.action=='order'}
+    {include file='layouts/cart.tpl'}
+{/if}
 {*--------------CART--------------*}
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -135,12 +137,12 @@
 {*<script>*}
 
 
-    {*(function() {*}
-        {*var d = document, s = d.createElement('script');*}
-        {*s.src = 'https://590.disqus.com/embed.js';*}
-        {*s.setAttribute('data-timestamp', +new Date());*}
-        {*(d.head || d.body).appendChild(s);*}
-    {*})();*}
+{*(function() {*}
+{*var d = document, s = d.createElement('script');*}
+{*s.src = 'https://590.disqus.com/embed.js';*}
+{*s.setAttribute('data-timestamp', +new Date());*}
+{*(d.head || d.body).appendChild(s);*}
+{*})();*}
 {*</script>*}
 {*<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>*}
 {*<script id="dsq-count-scr" src="//590.disqus.com/count.js" ></script>*}
