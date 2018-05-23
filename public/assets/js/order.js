@@ -266,9 +266,9 @@ $(document).ready(function () {
     function totalCart() {
         totalPrice = 0;
         totalPrice = parseInt($('.prod-price-total').html());
-            $('.prod-price-total').each(function () {
-                totalPrice += parseInt($(this).html());
-            });
+            // $('.prod-price-total').each(function () {
+            //     totalPrice += parseInt($(this).html());
+            // });
             // console.log(parseInt($(this).html()));
 
 
