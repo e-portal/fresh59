@@ -269,7 +269,7 @@
     padding: 10px 30px;
 }
 
-.cart .basket-section > div > div {
+.cart .container.wrap .basket-section > div > div {
     width: 16%;
 }
 
