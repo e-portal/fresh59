@@ -182,15 +182,11 @@ $(document).ready(function () {
     }
 
 
-    if ( basket != null ? doBasket(basket) : '') {  /*page of cart*/
-        $('header .baskets .numeral').text(0)
-
-    } else {
+    if ( $('body')) {  /*page of cart*/
         basket != null ? doBasket(basket) : ''
         $('.popup').css('display', 'none');
         $('header .baskets .numeral').text(i)
     }
-
 
     /*---------delete PRODUCT---------*/
     function delProd() {
@@ -230,7 +226,7 @@ $(document).ready(function () {
         basket[idObj].quantity = $(this).val();
 
         var startPrice = $(this).parents('.basket-section-prod').find('.prod-price-total').attr('data-value');
-        $(this).parents('.basket-section-prod').find('.prod-price-total').html((startPrice) * numcount);
+        // $(this).parents('.basket-section-prod').find('.prod-price-total').html((startPrice) * numcount);
         // $(this).parents('.basket-section-prod').find('.prod-price-total').attr('data-value', startPrice * numcount);
         totalCart();
 
