@@ -707,6 +707,7 @@
     .mobile-display-none .base-menu.mobile-menu-all {
         max-height: 100vh;
         height: calc(100vh - 183px);
+        opacity: 1;
     }
 
     .mobile-display-none .base-menu {
@@ -727,6 +728,7 @@
     .base-menu ul {
         position: relative;
         z-index: 20;
+        opacity: 1;
     }
 
     .item-base {
@@ -960,11 +962,8 @@
 
     .mobile-menu .base-menu {
         max-height: 2000px;
-        /*height: 1400px;*/
         height: calc(100vh - 190px);
         overflow: auto;
-        /*max-height: 1000px;*/
-        /*height: 640px;*/
     }
 
     .base-menu ul.mob-next-menu li {
@@ -1491,6 +1490,7 @@
     /*------pod-category------*/
     .bread-crumbs {
         margin: 18px auto 24px;
+        display: flex;
     }
 
     .background-menu-active {
@@ -2040,11 +2040,27 @@
 
 @media screen and (max-width: 769px) {
     .mobile-display-none .base-menu {
-        top: 179px;
+        top: 183px;
     }
     .items a > img {
         height: 230px;
     }
+    .head-item:nth-child(1) {
+        width: 18%;
+        padding-right: 20px;
+    }
+    .head-item:nth-child(3) {
+        width: 82%;
+    }
+    .head-item .inpp input {
+        padding: 9px 0 10px 12px;
+        width: 179px;
+        font-size: 12px;
+    }
+    .parag .slick-list {
+        width: 83%;
+    }
+
 }
 
 @media screen and (max-width: 767px) {
@@ -2187,7 +2203,8 @@
     }
 
     .bread-crumbs {
-        margin: 18px auto 34px;
+        margin: 15px auto 5px;
+        display: block;
     }
 
     .button a {
@@ -2944,6 +2961,19 @@
 
     .right-times {
         margin: 0;
+    }
+    .slider-for {
+        width: 100vw;
+    }
+    .slider-nav {
+        display: none;
+    }
+    .product-menu a {
+        font-size: 10px;
+    }
+    .slider-product .change,
+    .slider-product .present {
+        right: 0;
     }
 }
 

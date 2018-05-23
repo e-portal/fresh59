@@ -60,10 +60,17 @@ $(document).ready(function () {
 
             sliders();
 
-            $('.green').after($('.stars-ipad'));
         }
     }
 
+
+
+    if (window.matchMedia("(max-width: 1025px) and (min-width: 768px)").matches) {
+        $('.green').after($('.stars-ipad'));
+    }
+    if (window.matchMedia("(max-width: 767px)").matches) {
+        $('.left-right .ourr:nth-child(1)').after($('.title-slide, .in-stock, .prod-stars'));
+    }
 
 
     $('.slider-nav a[data-slide]').click(function (e) {
