@@ -1542,7 +1542,10 @@ $(document).ready(function () {
     function validform_1() {
         form.change(function () {
             form.each(function (){
-                if ($('.basket-two-column input').val() != '') {
+                if ($('.basket-two-column #fullname').val() != '' &&
+                    $('.basket-two-column #mail').val() != '' &&
+                    $('.basket-two-column #phone').val() != '' &&
+                    $('.basket-two-column #city').val() != '' ) {
                     $('.step2-hidden .close_deliver').addClass('active')
                 }
             })
