@@ -2962,6 +2962,11 @@
     .right-times {
         margin: 0;
     }
+
+    .parag .slick-list {
+        padding: 0;
+    }
+
     .left-right .ourr:nth-child(1) {
         margin-bottom: 0;
         padding-bottom: 27px;
@@ -3003,21 +3008,26 @@
         flex-direction: column;
         justify-content: center;
     }
-    .price-busket-kredit > div {
+    .price-busket-kredit > div:nth-child(1),
+    .price-busket-kredit > div:nth-child(2),
+    .price-busket-kredit > div:nth-child(3) {
         width: 100%;
         padding-bottom: 30px;
     }
     .price-busket-kredit > div:nth-child(1), .price-busket-kredit > div:nth-child(2) {
          border: none;
     }
-    .prod-price > div {
-        display: inline-block;
-        width: 49%;
-    }
+    /*.prod-price > div {*/
+        /*display: inline-block;*/
+        /*width: 49%;*/
+    /*}*/
     .qweek-busket-prodadd-to-cart form,
     .qweek-buy,
     .qweek-buy input {
         width: 100%;
+    }
+    .tab-button-outer {
+        display: block;
     }
     .threee {
         flex-wrap: wrap;

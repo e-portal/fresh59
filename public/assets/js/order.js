@@ -229,7 +229,7 @@ $(document).ready(function () {
     /*---------Plus-minus PRODUCT---------*/
     function incremProd() {
         var $input = $(this).parent().find('input');
-        c = $(this).hasClass('decrement') ? parseInt($input.val()) - 1 : parseInt($input.val()) ;
+        c = $(this).hasClass('decrement') ? parseInt($input.val()) - 1 : parseInt($input.val()) + 1;
         if (c <= 0) {
             c = 1;
         }
@@ -249,6 +249,7 @@ $(document).ready(function () {
 
         var startPrice = $(this).parents('.basket-section-prod').find('.prod-price-total').attr('data-value');
         $(this).parents('.basket-section-prod').find('.prod-price-total').html((startPrice) * numcount);
+        console.log($(this).parents('.basket-section-prod').find('.prod-price-total').html((startPrice) * numcount));
         // $(this).parents('.basket-section-prod').find('.prod-price-total').attr('data-value', startPrice * numcount);
         totalCart();
 
