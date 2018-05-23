@@ -35,14 +35,14 @@
     width: calc(100% - 20px);
 }
 
-/*.step-hidden,
+.step-hidden,
 .step2-hidden,
 .step2-hidden,
 .step2-hidden {
     height: 45px;
     overflow: hidden;
     opacity: .3;
-}*/
+}
 .two-col {
     width: 44%;
 }

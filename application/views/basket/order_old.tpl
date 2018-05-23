@@ -40,7 +40,7 @@
                                     </div>
 
                                 </div>
-                                <div class="step-hidden step2-hidden tab-section valid">
+                                <div class="step-hidden step2-hidden tab-section valid silver">
                                     <div class="order-title"><span>2</span> Способы оплаты</div>
                                     <div class="close_deliver">
                                         <div class="flexibal">
