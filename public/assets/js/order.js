@@ -178,11 +178,11 @@ $(document).ready(function () {
     }
 
 
-    if ($('body')) {  /*page of cart*/
-        basket != null ? doBasket(basket) : ''
-        $('.popup').css('display', 'none');
-        $('header .baskets .numeral').text(i)
-    }
+    // if ($('body')) {  /*page of cart*/
+    //     basket != null ? doBasket(basket) : ''
+    //     $('.popup').css('display', 'none');
+    //     $('header .baskets .numeral').text(i)
+    // }
 
 
     /*---------delete PRODUCT---------*/
