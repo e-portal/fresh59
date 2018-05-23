@@ -1279,12 +1279,21 @@ input {
     opacity: 1 !important;
 }
 
+
+/*.base-menu {*/
+
+    /*opacity: 0;*/
+/*}*/
+
 .base-menu {
     position: absolute;
     top: 65px;
     left: 0;
     width: 100%;
     z-index: 7;
+    transition: .3s;
+    background: #fff;
+
 }
 
 .base-menu ul {
@@ -2017,6 +2026,12 @@ input {
     margin: 0 25px 0 0;
 }
 
+.items a > img {
+    display: inline-block;
+    height: 240px;
+    object-fit: cover;
+}
+
 .owl {
     display: flex;
     width: calc(100% - 350px)
@@ -2272,6 +2287,13 @@ input {
 
 .newPrice {
     color: #ed462f !important;
+}
+
+.left-bakk .oldPrice {
+    font-size: 14px !important;
+}
+.left-bakk .newPrice{
+    font-size: 19px !important;
 }
 
 .oldPrice {
