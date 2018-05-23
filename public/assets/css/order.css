@@ -343,6 +343,7 @@ input.bask {
     color: rgba(49, 62, 73, .7);
     box-shadow: none;
     pointer-events: none;
+    border: 1px solid #e7e7e7;
 }
 
 .btn-dissable:hover {
