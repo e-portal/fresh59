@@ -1560,6 +1560,7 @@ $(document).ready(function () {
         })
     }
     validform_1()
+
     function validform_2(){
         var client_new = $('tab-new-client')
         client_new.change(function () {

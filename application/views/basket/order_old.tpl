@@ -403,6 +403,7 @@
     {else}
         <a href="https://590.ua/"><img src="https://590.ua/assets/media/emptybasket.png"></a>
     {/if}
+    {include file='layouts/slider_view.tpl'}
     {include file='layouts/orig.tpl'}
 </div>
 
