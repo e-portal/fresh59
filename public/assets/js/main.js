@@ -1633,7 +1633,7 @@ $(document).ready(function () {
         btn.addClass('disabled');
         var formData = new FormData(this);
         event.preventDefault();
-        console.log(уряяяя);
+        console.log(1235);
         // for (var id in queue) {
         //     formData.append('images[]', queue[id]);
         // }
