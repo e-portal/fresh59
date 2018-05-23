@@ -201,7 +201,7 @@ $(document).ready(function () {
         window.localStorage.setItem('basket', JSON.stringify(basket));
         // basket != null ? doBasket(basket) : ''
         // bindings();
-        doBasket(basket);
+
 
     }
 
@@ -217,6 +217,7 @@ $(document).ready(function () {
         }
         $input.val(c);
         $input.trigger('change');
+        doBasket(basket);
     }
 
     /*---------end Plus-minus PRODUCT---------*/
