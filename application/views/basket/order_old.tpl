@@ -351,54 +351,54 @@
                 </div>
 
             </div>
-            {*<div class="basket-last-column">*}
-                {*<div class="basket-header">*}
-                    {*<div class="basket-name">Наименование</div>*}
-                    {*<div class="">Кол-во</div>*}
-                    {*<div class="">Сумма (грн)</div>*}
-                    {*<div class="">Удалить</div>*}
-                {*</div>*}
-                {*<div class="basket-table">*}
+            <div class="basket-last-column">
+                <div class="basket-header">
+                    <div class="basket-name">Наименование</div>
+                    <div class="">Кол-во</div>
+                    <div class="">Сумма (грн)</div>
+                    <div class="">Удалить</div>
+                </div>
+                <div class="basket-table">
 
 
-                {*</div>*}
-                {*<div class="total-section">*}
-                    {*<div class="blue-link">*}
-                        {*<a class="bluee">Редактировать заказ</a>*}
-                        {*<a class="bluee icon-question">*}
-                            {*Использовать промокод*}
-                            {*<span><img src="/assets/img/main/bluee-question.png"></span>*}
-                        {*</a>*}
-                        {*<a class="bluee icon-question">*}
-                            {*Оплатить бонусами*}
-                            {*<span><img src="/assets/img/main/bluee-question.png"></span>*}
-                        {*</a>*}
-                    {*</div>*}
-                    {*<div class="">*}
-                        {*<div class="take-order-delivery flexibal">*}
-                            {*<div class="">По Киеву доставка <span>Бесплатно!</span></div>*}
-                            {*<img src="/assets/img/orig3.png" alt="">*}
-                        {*</div>*}
-                        {*<div class="total-take">*}
-                            {*<div class="total red">*}
-                                {*Итого: <span class="count-total">0</span>грн*}
-                            {*</div>*}
-                        {*</div>*}
-                    {*</div>*}
-                {*</div>*}
-                {*<div class="take-order">*}
-                    {*<div class="">*}
-                        {*Подтверждая заказ, я принимаю условия*}
-                        {*<a href="/page/confidentiality" class="bluee">пользовательского соглашения</a>*}
-                    {*</div>*}
-                    {*<div class="">*}
-                        {*<object type="lol/wut">*}
-                            {*<a class="bask acty btn-dissable"*}
-                               {*href="javascript:void(0)"><span>Заказ подтверждаю</span></a>*}
-                        {*</object>*}
-                    {*</div>*}
-                {*</div>*}
-            {*</div>*}
+                </div>
+                <div class="total-section">
+                    <div class="blue-link">
+                        <a class="bluee">Редактировать заказ</a>
+                        <a class="bluee icon-question">
+                            Использовать промокод
+                            <span><img src="/assets/img/main/bluee-question.png"></span>
+                        </a>
+                        <a class="bluee icon-question">
+                            Оплатить бонусами
+                            <span><img src="/assets/img/main/bluee-question.png"></span>
+                        </a>
+                    </div>
+                    <div class="">
+                        <div class="take-order-delivery flexibal">
+                            <div class="">По Киеву доставка <span>Бесплатно!</span></div>
+                            <img src="/assets/img/orig3.png" alt="">
+                        </div>
+                        <div class="total-take">
+                            <div class="total red">
+                                Итого: <span class="count-total">0</span>грн
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="take-order">
+                    <div class="">
+                        Подтверждая заказ, я принимаю условия
+                        <a href="/page/confidentiality" class="bluee">пользовательского соглашения</a>
+                    </div>
+                    <div class="">
+                        <object type="lol/wut">
+                            <a class="bask acty btn-dissable"
+                               href="javascript:void(0)"><span>Заказ подтверждаю</span></a>
+                        </object>
+                    </div>
+                </div>
+            </div>
         </div>
     {else}
         <a href="https://590.ua/"><img src="https://590.ua/assets/media/emptybasket.png"></a>
