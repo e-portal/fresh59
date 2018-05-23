@@ -1596,10 +1596,6 @@ $(document).ready(function () {
                 $(this).addClass('empty_field');
             }
 
-
-
-
-
         })
     }
     $('.valid').bind('keyup', function () {

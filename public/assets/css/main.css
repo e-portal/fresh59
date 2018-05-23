@@ -791,6 +791,9 @@ h6 {}
 .phone {
     margin-top: 7px;
 }
+.basket-two-column .phone {
+    margin-top: 0;
+}
 
 .phone .faux-select {
     left: -30px;
