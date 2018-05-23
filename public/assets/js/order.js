@@ -265,12 +265,11 @@ $(document).ready(function () {
 
     function totalCart() {
         totalPrice = 0;
-        totalPrice = parseInt($('.prod-price-total').html());
-        if( i > 1) {
+
             $('.prod-price-total').each(function () {
                 totalPrice += parseInt($(this).html());
             });
-        }
+
 
             console.log(i);
 
