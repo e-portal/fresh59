@@ -171,7 +171,6 @@ $(document).ready(function () {
     /*---------end autorisation---------*/
     /*---------end POPUP---------*/
 
-
     if ($('body').hasClass('cart')) {  /*page of cart*/
         $('html, body').css('overflow', 'auto');
         $('.popup.flexibal.popup-baskets').remove;
