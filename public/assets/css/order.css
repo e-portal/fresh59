@@ -119,6 +119,10 @@
     line-height: 20px;
     margin-bottom: 30px;
 }
+.order input.empty_field {
+    border: 1px solid #bc503e;
+}
+
 
 .order .input-min-width {
     width: calc(100% - 40px);
