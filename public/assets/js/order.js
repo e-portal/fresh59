@@ -207,7 +207,7 @@ $(document).ready(function () {
         $(this).parents('.basket-section').remove();
         totalCart();
         // doObject();
-        // window.localStorage.setItem('basket', JSON.stringify(basket));
+        window.localStorage.setItem('basket', JSON.stringify(basket));
         // basket != null ? doBasket(basket) : ''
         // bindings();
         // $('header .baskets .numeral').text(i)
