@@ -1547,6 +1547,8 @@ $(document).ready(function () {
                     $('.basket-two-column #phone').val() != '' &&
                     $('.basket-two-column #city').val() != '' ) {
                     $('.step2-hidden').removeClass('step-hidden')
+                } else {
+                    $('.step2-hidden').addClass('step-hidden')
                 }
             })
         })
