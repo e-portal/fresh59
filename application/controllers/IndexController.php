@@ -9,9 +9,11 @@
  *
  * @author Vadyus
  */
-class IndexController extends Alcotec_Frontend_Controller_IndexController {
+class IndexController extends Alcotec_Frontend_Controller_IndexController
+{
 
-    public function priceAction() {
+    public function priceAction()
+    {
         $this->_helper->removeHelper('viewRenderer');
         $modPrice = new Price();
         header('Content-type: text/csv');
@@ -20,8 +22,9 @@ class IndexController extends Alcotec_Frontend_Controller_IndexController {
         $modPrice->getCommonPrice();
     }
 
-	public function indexAction() {
-		$siteId = Zend_Registry::get('siteId');
+    public function indexAction()
+    {
+        $siteId = Zend_Registry::get('siteId');
         $modNews = new News();
         $date = date('Y-m-d');
 
@@ -32,21 +35,37 @@ class IndexController extends Alcotec_Frontend_Controller_IndexController {
         $this->view->footer_articles = $modArticles->fetchAll("site_id = {$siteId} and visible = '1'", 'date DESC', 8, 0)->toArray();
 
         $modCatalog = new Catalog();
-		$this->view->footer_items = $modCatalog->getItemList("c.show_index_{$siteId} = 1")->reset(Zend_Db_Select::ORDER)->limit(5)->order('RAND()')->query()->fetchAll();
+        $this->view->footer_items = $modCatalog->getItemList("c.show_index_{$siteId} = 1")->reset(Zend_Db_Select::ORDER)->limit(5)->order('RAND()')->query()->fetchAll();
 
-		$d = new DateTime();
-		$dn = $d->diff(new DateTime('2012-03-09'))->format("%d");
-		$this->view->dn = $dn;
-		$_plural_days = array('день', 'дня', 'дней');
-		$this->view->dw = $_plural_days[$this->plural_type($dn)];
+        $d = new DateTime();
+        $dn = $d->diff(new DateTime('2012-03-09'))->format("%d");
+        $this->view->dn = $dn;
+        $_plural_days = array('день', 'дня', 'дней');
+        $this->view->dw = $_plural_days[$this->plural_type($dn)];
         $cache = Zend_Registry::get('cache');
 
         $modCatalog->setArchive(1);
         $actionItemsKey = 'actionItems1';
-        try{
+
+        $db = Zend_Db_Table_Abstract::getDefaultAdapter();
+
+        try {
             $actionItems = $cache->load($actionItemsKey);
-        }
-        catch (Exception $e) {
+
+
+            $actionItemsInfo = $db->fetchAssoc("SELECT act.id_item  as id_item_action, act.end_date as end_date_action FROM actions as act, catalog as cat WHERE cat.id_availability = 1 and act.archive=0 and act.end_date IS NOT NULL and act.id_item = cat.id and act.type = 'gift'");
+
+            foreach ($actionItems as $key => $value) {
+                foreach ($actionItemsInfo as $dopkey => $dopvalue) {
+                    if ($value["id"] == $dopvalue["id_item_action"]) {
+                        $new_format_date = date("d/m/Y", strtotime($dopvalue["end_date_action"]));
+                        $actionItems[$key]["end_date"] = $new_format_date;
+                    }
+                }
+            }
+
+        } catch (Exception $e) {
+
         }
 
         if (!$actionItems) {
@@ -54,50 +73,66 @@ class IndexController extends Alcotec_Frontend_Controller_IndexController {
                 ->HAVING('(act.type IS NOT NULL AND icon IS NOT NULL)');
 
             $actionItems = $select->limit(20)->query()->fetchAll();
+
+            $actionItemsInfo = $db->fetchAssoc("SELECT act.id_item  as id_item_action, act.end_date as end_date_action FROM actions as act, catalog as cat WHERE cat.id_availability = 1 and act.archive=0 and act.end_date IS NOT NULL and act.id_item = cat.id and act.type = 'gift'");
+
+            foreach ($actionItems as $key => $value) {
+                foreach ($actionItemsInfo as $dopkey => $dopvalue) {
+                    if ($value["id"] == $dopvalue["id_item_action"]) {
+                        $new_format_date = date("d/m/Y", strtotime($dopvalue["end_date_action"]));
+                        $actionItems[$key]["end_date"] = $new_format_date;
+                    }
+                }
+            }
             try {
                 $cache->save($actionItems,$actionItemsKey);
             }
             catch (Exception $e) {
             }
         }
+
         $this->view->actionItems = $actionItems;
-	}
+    }
 
-	function plural_type($n) {
-	   return ($n%10==1 && $n%100!=11 ? 0 : ($n%10>=2 && $n%10<=4 && ($n%100<10 || $n%100>=20) ? 1 : 2));
-	}
+    function plural_type($n)
+    {
+        return ($n % 10 == 1 && $n % 100 != 11 ? 0 : ($n % 10 >= 2 && $n % 10 <= 4 && ($n % 100 < 10 || $n % 100 >= 20) ? 1 : 2));
+    }
 
-	public function transfermanagersAction() {
-		$this->_helper->removeHelper('viewRenderer');
-		$db = Zend_Db_Table_Abstract::getDefaultAdapter();
-		foreach ($db->fetchPairs("SELECT login, password  FROM `a_users` WHERE login = ANY(SELECT login FROM `a_user_roles` WHERE `role` LIKE 'sales')") as $login => $pass) {
-			foreach ($db->fetchAll('SELECT * FROM sites') as $site) {
-				echo "DELETE FROM users WHERE login = '{$login}' and site={$site['id']};\n";
-				echo "INSERT INTO users(site, active, login, password, manager) VALUES ({$site['id']}, 1, '{$login}', '{$pass}',1);\n";
-			}
-		}
-	}
-	
-	public function convertdbAction() {
-		$this->_helper->removeHelper('viewRenderer');
-		$db = Zend_Db_Table_Abstract::getDefaultAdapter();
-		
-		$sites = $db->fetchCol('SELECT id FROM sites');
-		foreach ($sites as $siteId) {
-		    $db->query("INSERT INTO catalog_items_visibility SELECT id, {$siteId} FROM catalog where visible_{$siteId}=1");
-		}
-	}
-	/*public function salesAction() {
+    public function transfermanagersAction()
+    {
+        $this->_helper->removeHelper('viewRenderer');
+        $db = Zend_Db_Table_Abstract::getDefaultAdapter();
+        foreach ($db->fetchPairs("SELECT login, password  FROM `a_users` WHERE login = ANY(SELECT login FROM `a_user_roles` WHERE `role` LIKE 'sales')") as $login => $pass) {
+            foreach ($db->fetchAll('SELECT * FROM sites') as $site) {
+                echo "DELETE FROM users WHERE login = '{$login}' and site={$site['id']};\n";
+                echo "INSERT INTO users(site, active, login, password, manager) VALUES ({$site['id']}, 1, '{$login}', '{$pass}',1);\n";
+            }
+        }
+    }
+
+    public function convertdbAction()
+    {
+        $this->_helper->removeHelper('viewRenderer');
+        $db = Zend_Db_Table_Abstract::getDefaultAdapter();
+
+        $sites = $db->fetchCol('SELECT id FROM sites');
+        foreach ($sites as $siteId) {
+            $db->query("INSERT INTO catalog_items_visibility SELECT id, {$siteId} FROM catalog where visible_{$siteId}=1");
+        }
+    }
+
+    /*public function salesAction() {
             $this->_helper->removeHelper ( 'viewRenderer' );
-	        $db = Zend_Db_Table_Abstract::getDefaultAdapter ();
-	        foreach ($db->fetchCol("SELECT id FROM sites") as $id)
-	        {
-	            $sales[$id] = $db->fetchPairs("SELECT coi.id_catalog, sum(coi.quantity) FROM catalog_orders_items coi INNER JOIN catalog_orders co on co.id = coi.id_order WHERE co.site = {$id} GROUP by coi.id_catalog");
-	        }
-	       
-	        foreach ($sales as $siteId =>$item)
-	             foreach ($item as $itemId=>$salesNum)
-	                 $db->query("INSERT INTO catalog_items_sales VALUES ({$itemId},{$siteId},{$salesNum})");
+            $db = Zend_Db_Table_Abstract::getDefaultAdapter ();
+            foreach ($db->fetchCol("SELECT id FROM sites") as $id)
+            {
+                $sales[$id] = $db->fetchPairs("SELECT coi.id_catalog, sum(coi.quantity) FROM catalog_orders_items coi INNER JOIN catalog_orders co on co.id = coi.id_order WHERE co.site = {$id} GROUP by coi.id_catalog");
+            }
+
+            foreach ($sales as $siteId =>$item)
+                 foreach ($item as $itemId=>$salesNum)
+                     $db->query("INSERT INTO catalog_items_sales VALUES ({$itemId},{$siteId},{$salesNum})");
         }
         
         public function shortinfoAction() {
@@ -122,7 +157,8 @@ class IndexController extends Alcotec_Frontend_Controller_IndexController {
             }
         }*/
 
-    public function page404Action() {
+    public function page404Action()
+    {
         $zf = $this->view->zf;
         $zf['params']['action'] = 'page404';
         $zf['params']['controller'] = 'index';
