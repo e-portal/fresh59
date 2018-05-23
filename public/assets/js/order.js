@@ -215,7 +215,6 @@ $(document).ready(function () {
         $input.val(c);
         $input.trigger('change');
         totalCart();
-        doBasket(basket);
     }
 
     /*---------end Plus-minus PRODUCT---------*/
