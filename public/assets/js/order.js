@@ -6,9 +6,9 @@ $(document).ready(function () {
 
     var basket = localStorage.getItem('basket') != undefined ? JSON.parse(localStorage.getItem('basket')) : {};
 
-    if ($('body').hasClass('cart')) {
-        basket != null ? doBasket(basket) : ''
-    }
+    // if ($('body').hasClass('cart')) {
+    //     basket != null ? doBasket(basket) : ''
+    // }
 
     function doObject() {/* create object product*/
         var prod_id = $(this).attr('data-id');
