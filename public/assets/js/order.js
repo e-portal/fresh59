@@ -265,7 +265,7 @@ $(document).ready(function () {
 
     function totalCart() {
         totalPrice = 0;
-        totalPrice = parseInt($(this).html());
+        totalPrice = parseInt($('.prod-price-total').html());
             $('.prod-price-total').each(function () {
                 totalPrice += parseInt($(this).html());
             });
