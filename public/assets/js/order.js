@@ -2,6 +2,11 @@ $(document).ready(function () {
 
     /*click on cart-button*/
     $('.add-to-cart').bind('click', doObject);
+    $('.add-to-cart').bind('click', function () {
+        $('body').find('.popup').css('display', 'flex');
+        $('.popup-content').addClass('show');
+        $('.close').addClass('show');
+    });
 
 
     var basket = localStorage.getItem('basket') != undefined ? JSON.parse(localStorage.getItem('basket')) : {};
@@ -121,9 +126,7 @@ $(document).ready(function () {
 
 
         /*show popup*/
-        $('body').find('.popup').css('display', 'flex');
-        $('.popup-content').addClass('show');
-        $('.close').addClass('show');
+
         $('header .baskets .numeral').text(i);
         totalCart();
         bindings();
@@ -198,8 +201,7 @@ $(document).ready(function () {
         window.localStorage.setItem('basket', JSON.stringify(basket));
         // basket != null ? doBasket(basket) : ''
         // bindings();
-        totalCart();
-        inNumberProd()
+        doBasket(basket);
 
     }
 
@@ -215,8 +217,6 @@ $(document).ready(function () {
         }
         $input.val(c);
         $input.trigger('change');
-        totalCart();
-        inNumberProd()
     }
 
     /*---------end Plus-minus PRODUCT---------*/
