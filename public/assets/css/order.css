@@ -245,9 +245,9 @@
     width: 100%;
 }
 
-/*.cart .basket-price {*/
-    /*display: none;*/
-/*}*/
+.cart .basket-price {
+    display: none;
+}
 
 .basket-last-column .basket-header > div:first-child {
     border-bottom-left-radius: 0;

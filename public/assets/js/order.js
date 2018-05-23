@@ -186,7 +186,7 @@ $(document).ready(function () {
     if ($('body').hasClass('cart')) {  /*page of cart*/
         $('html, body').css('overflow', 'auto');
         $('.popup').css('display', 'none');
-        bindings();
+        // bindings();
         console.log(i);
         $('header .baskets .numeral').text(i);
     }

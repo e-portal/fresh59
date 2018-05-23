@@ -71,6 +71,7 @@
 .search-result__inner {
     padding-left: 76px;
     position: relative;
+    overflow: hidden;
 }
 
 .search-result__content {
@@ -89,7 +90,7 @@
     position: relative;
     width: max-content;
     transition: .5s;
-    overflow: hidden;
+
 }
 
 .search-result__coast {
