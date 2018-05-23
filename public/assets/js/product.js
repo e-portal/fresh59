@@ -69,7 +69,7 @@ $(document).ready(function () {
         $('.green').after($('.stars-ipad'));
     }
     if (window.matchMedia("(max-width: 767px)").matches) {
-        $('.left-right .ourr:nth-child(1)').after($('.title-slide, .in-stock, .prod-stars'));
+        $('.slider-product').before($('.title-slide, .in-stock, .prod-stars'));
     }
 
 
