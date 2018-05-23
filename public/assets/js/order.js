@@ -199,6 +199,7 @@ $(document).ready(function () {
         // basket != null ? doBasket(basket) : ''
         // bindings();
         totalCart();
+
     }
 
     /*---------end delete PRODUCT---------*/
@@ -214,6 +215,7 @@ $(document).ready(function () {
         $input.val(c);
         $input.trigger('change');
         totalCart();
+        doBasket(basket);
     }
 
     /*---------end Plus-minus PRODUCT---------*/
@@ -230,6 +232,7 @@ $(document).ready(function () {
         $(this).parents('.basket-section-prod').find('.prod-price-total').html((startPrice) * numcount);
         // $(this).parents('.basket-section-prod').find('.prod-price-total').attr('data-value', startPrice * numcount);
         totalCart();
+        doBasket(basket);
         window.localStorage.setItem('basket', JSON.stringify(basket));
 
 
