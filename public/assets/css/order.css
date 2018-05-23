@@ -338,7 +338,7 @@ input.bask {
     border: 1px solid #fbd402;
 }
 
-.btn-dissable {
+.btn-dissable,.order input.btn-dissable  {
     background: #e7e7e7;
     color: rgba(49, 62, 73, .7);
     box-shadow: none;
