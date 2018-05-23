@@ -231,7 +231,7 @@ $(document).ready(function () {
         $(this).parents('.basket-section-prod').find('.prod-price-total').html((startPrice) * numcount);
         // $(this).parents('.basket-section-prod').find('.prod-price-total').attr('data-value', startPrice * numcount);
         totalCart();
-        doBasket(basket);
+        bindings();
         window.localStorage.setItem('basket', JSON.stringify(basket));
 
 
