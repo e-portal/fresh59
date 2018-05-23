@@ -1550,6 +1550,9 @@ $(document).ready(function () {
                 } else {
                     $('.step2-hidden').addClass('step-hidden')
                 }
+                if ($('.step2-hidden input').is(':checked')) {
+                    $('.step3-hidden').removeClass('step-hidden')
+                }
             })
         })
     }
