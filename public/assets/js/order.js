@@ -215,7 +215,7 @@ $(document).ready(function () {
         idObj = $(this).parents('.basket-section-prod').find('.prod-code span').html();
         delete basket[idObj];
         $(this).parents('.basket-section').remove();
-        totalCart();
+        // totalCart();
         // doObject();
         window.localStorage.setItem('basket', JSON.stringify(basket));
         basket != null ? doBasket(basket) : ''
@@ -265,7 +265,7 @@ $(document).ready(function () {
 
 
     function totalCart() {
-        totalPrice = parseInt($('.prod-price-total').html());
+        totalPrice = 0;
         $('.prod-price-total').each(function () {
             totalPrice += parseInt($(this).html());
         });
