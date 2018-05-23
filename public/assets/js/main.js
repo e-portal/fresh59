@@ -1594,9 +1594,9 @@ $(document).ready(function () {
 
         })
     }
-    $('.valid').bind('keyup', function () {
+    $('.valid, select.valid option:selected').bind('keyup', function () {
         $(this).removeClass('empty_field');
-    })
+    });
     btn = form.find('input[type="submit"]');
 
     form.on('submit', function (event) {
