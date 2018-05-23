@@ -1553,6 +1553,9 @@ $(document).ready(function () {
                 if ($('.step2-hidden input').is(':checked')) {
                     $('.step3-hidden').removeClass('step-hidden')
                 }
+                if ($('.step3-hidden input').is(':checked')) {
+                    $('.step4-hidden').removeClass('step-hidden')
+                }
             })
         })
     }
