@@ -1602,7 +1602,7 @@ $(document).ready(function () {
 
         })
     }
-    $('.valid, select.valid option:selected').bind('keyup', function () {
+    $('.valid').bind('keyup', function () {
         $(this).removeClass('empty_field');
     });
 
