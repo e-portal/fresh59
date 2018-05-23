@@ -199,6 +199,7 @@ $(document).ready(function () {
         // basket != null ? doBasket(basket) : ''
         // bindings();
         totalCart();
+        inNumberProd()
 
     }
 
@@ -215,6 +216,7 @@ $(document).ready(function () {
         $input.val(c);
         $input.trigger('change');
         totalCart();
+        inNumberProd()
     }
 
     /*---------end Plus-minus PRODUCT---------*/
@@ -231,7 +233,7 @@ $(document).ready(function () {
         $(this).parents('.basket-section-prod').find('.prod-price-total').html((startPrice) * numcount);
         // $(this).parents('.basket-section-prod').find('.prod-price-total').attr('data-value', startPrice * numcount);
         totalCart();
-        bindings();
+
         window.localStorage.setItem('basket', JSON.stringify(basket));
 
 
