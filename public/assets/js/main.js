@@ -1531,8 +1531,8 @@ $(document).ready(function () {
                 var fullname = $('.basket-two-column #fullname').val().length > 3;
                 var mail_order = $('.basket-two-column #mail').val().length > 3;
                 var phone_order =  $('.basket-two-column #phone').val() != '';
-                var city_order =  $('.basket-two-column #city').is(':checked')
-                if (fullname && mail_order && phone_order && !city_order) {
+                var city_order =  $('.basket-two-column #city').val() != ''
+                if (fullname && mail_order && phone_order && city_order) {
                     $('.step2-hidden').removeClass('step-hidden')
                 } else {
                     $('.step2-hidden').addClass('step-hidden')
