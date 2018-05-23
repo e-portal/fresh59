@@ -1559,9 +1559,9 @@ $(document).ready(function () {
                 if ($('.basket-two-column input').val().length > 3 &&
                     $('.step2-hidden input').is(':checked') &&
                     $('.step3-hidden input').is(':checked')){
-                        $('.take-order a, .take-order input').removeClass('btn-dissable')
+                        $('.take-order a.acty, .take-order input').removeClass('btn-dissable')
                 } else {
-                    $('.take-order a, .take-order input').addClass('btn-dissable')
+                    $('.take-order a.acty, .take-order input').addClass('btn-dissable')
                 }
             })
         })
