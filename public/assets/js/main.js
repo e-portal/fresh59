@@ -1546,9 +1546,9 @@ $(document).ready(function () {
                 if (mail_order && fullname && phone_order && city_order &&
                     $('.step2-hidden input').is(':checked') &&
                     $('.step3-hidden input').is(':checked')) {
-                    $('.take-order a.acty, .take-order input').removeClass('btn-dissable')
+                    $('.container.wrap .take-order a.acty,.container.wrap .take-order input').removeClass('btn-dissable')
                 } else {
-                    $('.take-order a.acty, .take-order input').addClass('btn-dissable')
+                    $('.container.wrap .take-order a.acty,.container.wrap .take-order input').addClass('btn-dissable')
                 }
             })
         })
