@@ -241,15 +241,14 @@ $(document).ready(function () {
 
     function totalCart() {
         totalPrice = 0;
-        if ($('body').hasClass('cart')) {
-            $('.count-total').html(totalPrice / 2);
-        }
+
         $('.prod-price-total').each(function () {
             totalPrice += parseInt($(this).html());
         });
 
-
-        console.log(i);
+        if ($('body').hasClass('cart')) {
+            $('.count-total').html(totalPrice / 2);
+        }
 
 
         $('.count-total').html(totalPrice);
