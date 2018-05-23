@@ -219,7 +219,7 @@ $(document).ready(function () {
         }
         $input.val(c);
         $input.trigger('change');
-        doBasket(basket);
+        // doBasket(basket);
     }
 
     /*---------end Plus-minus PRODUCT---------*/
@@ -237,7 +237,7 @@ $(document).ready(function () {
         // $(this).parents('.basket-section-prod').find('.prod-price-total').attr('data-value', startPrice * numcount);
         totalCart();
 
-        window.localStorage.setItem('basket', JSON.stringify(basket));
+        // window.localStorage.setItem('basket', JSON.stringify(basket));
 
 
     }
@@ -260,7 +260,7 @@ $(document).ready(function () {
 
 
         $('.count-total').html(totalPrice);
-        window.localStorage.setItem('basket', JSON.stringify(basket));
+        // window.localStorage.setItem('basket', JSON.stringify(basket));
     }
 
 
