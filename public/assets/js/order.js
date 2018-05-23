@@ -100,7 +100,7 @@ $(document).ready(function () {
                     '                        </div>\n' +
                     '                                       </div>\n' +
                     '                                       <div class="basket-prod-number red"></div>\n' +
-                    '                                       <div class="basket-price total">' + obj[prod_data].sertprice + '</div>\n' +
+                    // '                                       <div class="basket-price total">' + obj[prod_data].sertprice + '</div>\n' +
                     '                                       <div class=""></div>\n' +
                     '                                       <div class=""></div>\n' +
                     '                                    </div>').appendTo('.basket-section' + i);
@@ -125,7 +125,7 @@ $(document).ready(function () {
         $('.popup-content').addClass('show');
         $('.close').addClass('show');
         $('header .baskets .numeral').text(i);
-        // totalCart();
+        totalCart();
         bindings();
 
 
