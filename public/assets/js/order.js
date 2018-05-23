@@ -269,7 +269,7 @@ $(document).ready(function () {
             $('.prod-price-total').each(function () {
                 totalPrice += parseInt($(this).html());
             });
-            console.log(parseInt($(this).html()));
+            // console.log(parseInt($(this).html()));
 
 
 
