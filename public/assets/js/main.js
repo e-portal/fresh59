@@ -1594,7 +1594,9 @@ $(document).ready(function () {
 
         })
     }
-
+    $('.valid').bind('keyup', function () {
+        $(this).removeClass('empty_field');
+    })
     btn = form.find('input[type="submit"]');
 
     form.on('submit', function (event) {
@@ -1602,9 +1604,9 @@ $(document).ready(function () {
         if (!btn.length > 0) {
             btn = form.find('input[type="text"]');
             form.find('.valid').addClass('empty_field');
-            setTimeout(function () {
-                form.find('.valid').removeClass('empty_field');
-            },500)
+            // setTimeout(function () {
+            //     form.find('.valid').removeClass('empty_field');
+            // },500)
         }
         btn.addClass('disabled');
         var formData = new FormData(this);
