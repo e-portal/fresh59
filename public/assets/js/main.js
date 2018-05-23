@@ -1531,8 +1531,8 @@ $(document).ready(function () {
                 var fullname = $('.basket-two-column #fullname').val().length > 3;
                 var mail_order = $('.basket-two-column #mail').val().length > 3;
                 var phone_order =  $('.basket-two-column #phone').val() != '';
-                if (fullname && mail_order && phone_order &&
-                    $('.basket-two-column #city').val() != '') {
+                var city_order =  $('.basket-two-column #city').is(':checked')
+                if (fullname && mail_order && phone_order && city_order) {
                     $('.step2-hidden').removeClass('step-hidden')
                 } else {
                     $('.step2-hidden').addClass('step-hidden')
@@ -1543,7 +1543,7 @@ $(document).ready(function () {
                 if ($('.step3-hidden input').is(':checked')) {
                     $('.step4-hidden').removeClass('step-hidden')
                 }
-                if (mail_order && fullname && phone_order &&
+                if (mail_order && fullname && phone_order && city_order &&
                     $('.step2-hidden input').is(':checked') &&
                     $('.step3-hidden input').is(':checked')) {
                     $('.take-order a.acty, .take-order input').removeClass('btn-dissable')
