@@ -13,6 +13,13 @@ $(window).on('load', function () {
 //--------
 jQuery(document).ready(function () {
 
+
+
+
+    $('.categ-menu li a').mouseover(function () {
+        $(this).parents('li').addClass('hover');
+    })
+
     $('.parag-next .parag-item').click(function () {
         $('.parag-next .parag-item').removeClass('active');
 
@@ -1620,7 +1627,10 @@ $(document).ready(function () {
         })
         .trigger("change");
     btn = form.find('input[type="submit"]');
+
     $('.container.wrap .take-order a.acty').trigger(btn);
+
+
     form.on('submit', function (event) {
         validform();
         if (!btn.length > 0) {
