@@ -30,7 +30,7 @@ jQuery(document).ready(function () {
             // }, 1000);
         },
         'mouseout' : function () {
-            $(this).parents('li').removeClass('hover');
+            $('.categ-menu li').removeClass('hover');
             // clearTimeout(timer);
         }
     });
