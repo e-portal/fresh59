@@ -29,7 +29,9 @@ jQuery(document).ready(function () {
             }, 100);
         },
         'mouseout' : function () {
-            $('.categ-menu li').removeClass('hover');
+            setTimeout(function () {
+                $('.categ-menu li').removeClass('hover');
+            }, 100);
             // clearTimeout(timer);
         }
     });
