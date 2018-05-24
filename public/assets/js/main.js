@@ -18,6 +18,8 @@ jQuery(document).ready(function () {
 
     $('.categ-menu li a').mouseover(function () {
         $(this).parents('li').addClass('hover');
+    }).mouseout(function(){
+        $(this).parents('li').removeClass('hover');
     })
 
     $('.parag-next .parag-item').click(function () {
