@@ -24,14 +24,14 @@ jQuery(document).ready(function () {
 
     $('.categ-menu li a').on({
         'mouseover': function () {
-            $(this).parents('li').addClass('hover');
-            // timer = setTimeout(function () {
-            //     // do stuff
-            // }, 1000);
+
+            timer = setTimeout(function () {
+                $(this).parents('li').addClass('hover');
+            }, 1000);
         },
         'mouseout' : function () {
             $('.categ-menu li').removeClass('hover');
-            // clearTimeout(timer);
+            clearTimeout(timer);
         }
     });
 
