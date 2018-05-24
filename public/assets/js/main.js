@@ -16,11 +16,26 @@ jQuery(document).ready(function () {
 
 
 
-    $('.categ-menu li a').mouseover(function () {
-        $(this).parents('li').addClass('hover');
-    }).mouseout(function(){
-        $(this).parents('li').removeClass('hover');
-    })
+    // $('.categ-menu li a').mouseover(function () {
+    //     $(this).parents('li').addClass('hover');
+    // }).mouseout(function(){
+    //     $(this).parents('li').removeClass('hover');
+    // })
+
+    $('.categ-menu li a').on({
+        'mouseover': function () {
+            $(this).parents('li').addClass('hover');
+            // timer = setTimeout(function () {
+            //     // do stuff
+            // }, 1000);
+        },
+        'mouseout' : function () {
+            $(this).parents('li').removeClass('hover');
+            // clearTimeout(timer);
+        }
+    });
+
+
 
     $('.parag-next .parag-item').click(function () {
         $('.parag-next .parag-item').removeClass('active');
