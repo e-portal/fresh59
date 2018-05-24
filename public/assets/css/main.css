@@ -2,6 +2,13 @@
 body {
     margin: 0;
     padding: 0;
+    scrollbar-track-color: #ddd;
+    scrollbar-arrow-color: #000;
+    scrollbar-face-color: #fbd402;
+    scrollbar-shadow-color: #fbd402;
+    scrollbar-highlight-color: #fbd402;
+    scrollbar-3dlight-color: #fbd402;
+    scrollbar-darkshadow-color: #fbd402;
 }
 
 * {
@@ -9,6 +16,8 @@ body {
     -moz-appearance: none;
     appearance: none;
     -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-interpolation-mode: bicubic;
 }
 
 .preloader {
@@ -139,13 +148,15 @@ body {
     margin: 0 auto;
 }
 
-::-webkit-scrollbar {
+::-webkit-scrollbar,
+-moz-scrollbar {
     width: 10px;
     height: 10px;
     background-color: #ddd;
 }
 
-::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb,
+-moz-scrollbar-thumb {
     background-color: #fbd402;
 }
 
@@ -791,9 +802,6 @@ h6 {}
 .phone {
     margin-top: 7px;
 }
-.basket-two-column .phone {
-    margin-top: 0;
-}
 
 .phone .faux-select {
     left: -30px;
@@ -814,6 +822,11 @@ h6 {}
 .faux-select li,
 .faux-select li a {
     color: rgba(49, 62, 73, .7);
+}
+
+.faux-select li:hover,
+.faux-select li:hover a {
+    color: rgba(49, 62, 73, .9);
 }
 
 .faux-select img {
@@ -1228,13 +1241,6 @@ input {
     overflow: hidden;
 }
 
-.base-menu {
-    /*transform: translateY(-650px);*/
-    transition: .3s;
-    /*transition-delay: 1.2s;*/
-    opacity: 0;
-    background: #fff;
-}
 
 .mobile-display-none,
 .mob-next-menu,

@@ -7,6 +7,14 @@
 }
 
 @media screen and (max-width: 1441px) {
+    .iteem:nth-child(2) .inpp {
+        width: 90%;
+    }
+
+    .search-result {
+        padding: 14px 10px;
+    }
+
     .head-item:nth-child(2) {
         padding: 0 55px;
     }
@@ -191,7 +199,9 @@
 }
 
 @media screen and (max-width: 1367px) {
-
+    .search-result__name {
+        font-size: 13px;
+    }
     .most-item-slider .most-item:nth-child(2),
     .most-item-slider .most-item:nth-child(3) {
         margin-left: 30px;
@@ -267,9 +277,28 @@
     .front-wrap {
         width: 252px;
     }
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        .time-work {
+            font-size: 11px;
+        }
+    }
 }
 
 @media screen and (max-width: 1281px) {
+    .menu-0 {
+        width: 865px;
+    }
+
+    .base-menu .categ-menu ul.menu-0 li {
+        width: 288px;
+    }
+
+    .base-menu .categ-menu .menu-0 li a {
+        padding: 10px 0 10px 10px;
+        font-size: 13px
+    }
+
     .head-item .inpp input {
         padding: 9px 0 9px 27px;
     }
@@ -414,6 +443,17 @@
 }
 
 @media screen and (max-width: 1153px) and (min-width: 1025px) {
+    .main-menu ul li a {
+        font-size: 13px;
+    }
+
+    .next-menu ul li a {
+        font-size: 12px;
+    }
+
+    .menu-0 {
+        width: 580px;
+    }
     .left-bakk p:nth-child(2) {
         font-size: 10px;
     }
@@ -505,8 +545,10 @@
         line-height: 41px;
     }
 
+    .compare-found .right-butt span:after,
+    .compare-found .left-butt span:after,
     .look-for a:after {
-        top: -8px;
+        top: -13px;
     }
 
     .qweek-busket-prodadd-to-cart .bask.acty {
@@ -545,7 +587,7 @@
     .left-butt > span,
     .look-for a {
         display: inline-block;
-        width: 66px;
+        width: 15px;
     }
 
     .news {
@@ -3023,10 +3065,7 @@
     .price-busket-kredit > div:nth-child(1), .price-busket-kredit > div:nth-child(2) {
          border: none;
     }
-    /*.prod-price > div {*/
-        /*display: inline-block;*/
-        /*width: 49%;*/
-    /*}*/
+
     .qweek-busket-prodadd-to-cart form,
     .qweek-buy,
     .qweek-buy input {
@@ -3043,6 +3082,94 @@
     }
     .qweek-busket-prodadd-to-cart .bask:after {
         content: none;
+    }
+
+    .cheaper-slide {
+        flex-direction: column;
+    }
+
+    .cheaper-prod {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .cheaper-prod:last-child {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .cheaper-prod:last-child .cheaper-prod-img {
+        width: 0%;
+    }
+
+    .cheaper-prod:last-child .cheaper-prod-text .price {
+        font-size: 25px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .cheaper-prod:last-child .bask {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .cheaper-prod:last-child .bask:after {
+        right: calc(50% - 50px);
+    }
+
+    .cheaper-prod-text {
+        width: 100%;
+        display: block;
+    }
+
+    .cheaper-prod-text .oplata-part {
+        text-align: center;
+    }
+
+    .cheaper-prod-text .old-price {
+        font-size: 14px;
+        margin: 10px 0;
+        text-align: center;
+
+    }
+
+    .border-plus {
+        width: 100%;
+        height: 1px;
+    }
+
+    .take-gift .gift-price,
+    .take-gift .gift-prod-title {
+        display: none;
+    }
+
+    .title-gift {
+        font-size: 15px;
+    }
+
+    .take-gift-content {
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    .gift-prod {
+        display: flex;
+        width: calc(100% - 220px);
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .gift-prod-text {
+        display: flex;
+        padding-top: 10px;
+    }
+
+    .gift-prod-img {
+        margin-right: 0;
+    }
+
+    .in-gift {
+        font-size: 15px;
     }
 
 }
@@ -3321,6 +3448,13 @@
         padding: 15px 10px;
     }
 
+    .threee p {
+        line-height: 17px;
+    }
+
+    .tab-contents-wrap {
+        font-size: 13px;
+    }
 }
 
 @media screen and (max-width: 350px) {
@@ -3381,9 +3515,15 @@
         line-height: 17px;
     }
 
+    .slider-product-icon .itee:nth-child(2),
     .itee {
         width: 70px;
         height: 30px;
+    }
+
+    .buy-by-part-from em, .itee em {
+        font-size: 10px;
+        left: 11px;
     }
 
     .itee img {

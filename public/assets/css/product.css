@@ -425,12 +425,20 @@ img {
     right: 50px;
 }
 
+.qweek-busket-prodadd-to-cart form {
+    width: 210px;
+}
+
+.qweek-buy,
+.qweek-buy input {
+    width: 100%;
+}
+
 .qweek-buy {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 12px;
-    width: 210px;
 }
 
 .qweek-buy input {
@@ -439,8 +447,8 @@ img {
     border: 1px solid #d7d7d7;
     border-right: 0;
     color: #979797;
-    font-family: 'SF-UI-Display-Light';
-    padding: 2px 0 4px 11px;
+    font-family: cursive;
+    padding: 1px 0 2px 11px;
 }
 
 .qweek-buy .buy-btn {
@@ -581,6 +589,12 @@ img {
     width: 40%;
 }
 
+@supports (-ms-ime-align:auto) {
+    .cheaper-prod {
+        justify-content: space-around
+    }
+}
+
 .cheaper-prod:last-child {
     border-right: none;
     width: 20%;
@@ -646,8 +660,8 @@ img {
 .border-plus span {
     content: '';
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 29px;
+    height: 29px;
     color: #fff;
     background: #313e49;
     border-radius: 50%;
@@ -669,7 +683,10 @@ img {
 .tabs {
     border: 1px solid #d7d7d7;
     border-radius: 25px;
-    /*margin-top: 56px;*/
+
+}
+
+.tabs-delivery-pay {
     margin-top: 107px;
 }
 
@@ -868,9 +885,6 @@ img {
     border-bottom: 1px solid #d7d7d7;
     padding: 15px 30px;
     width: calc(100% - 20px);
-    max-height: 450px;
-    transition: .5s;
-    opacity: 1;
 }
 .tabs-review .tab-section:last-child {
     border-bottom: none;
@@ -914,6 +928,11 @@ div.review-date > span {
 
 .other-model-item span {
     color: #979797;
+    opacity: .6;
+}
+
+.other-model-item:hover span {
+    opacity: 1;
 }
 
 /*--------------POPUP--------------*/
@@ -1469,12 +1488,4 @@ div.review-date > span {
 .basket-section-service .servs {
     padding-right: 0;
 }
-/*.close_deliver {*/
-    /*display: none;*/
-/*}*/
-/*.close_deliver.active {*/
-    /*display: block;*/
-/*}*/
-/*.tab-section.silver .order-title span{*/
 
-/*}*/

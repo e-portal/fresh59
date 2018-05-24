@@ -48,7 +48,7 @@
 
 </div>
 
-<div id="popup">
+<div id="popup" class="popup-question">
     <div class="popup-inner">
         <h1 class="liner cent"><span>Задать вопрос</span></h1>
         <div class="close"><img src="/assets/img/close.png" alt="close"></div>
@@ -73,6 +73,7 @@
             </div>
         </form>
     </div>
+    <div class="close-question"></div>
 </div>
 
 <div class="doww"><img src="/assets/img/verh.png" alt="up"></div>
