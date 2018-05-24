@@ -24,10 +24,9 @@ jQuery(document).ready(function () {
 
     $('.categ-menu li a').on({
         'mouseover': function () {
-            $(this).parents('li').addClass('hover');
-            // timer = setTimeout(function () {
-            //     // do stuff
-            // }, 1000);
+            setTimeout(function () {
+                $(this).parents('li').addClass('hover');
+            }, 100);
         },
         'mouseout' : function () {
             $('.categ-menu li').removeClass('hover');
