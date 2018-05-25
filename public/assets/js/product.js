@@ -184,7 +184,7 @@ function getCats(e) {
 
         $('.cat-items').each(function (_this) {
             $(this).hide();
-            if (this.hasClass('data-catid-' + _this)) {
+            if ($(this).hasClass('data-catid-' + _this)) {
                 this.show();
             }
         });
