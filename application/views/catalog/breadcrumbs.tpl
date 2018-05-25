@@ -1,4 +1,4 @@
-<div class="bread-crumbs breadcrumbs mobile-display-none" id="breadcrumbs" itemscope=""
+<div class="bread-crumbs breadcrumbs mobile-display-none wrap" id="breadcrumbs" itemscope=""
      itemtype="http://schema.org/BreadcrumbList">
 
     {foreach from=$pages item=page name=pages}

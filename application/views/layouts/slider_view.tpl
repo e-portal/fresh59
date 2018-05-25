@@ -1,4 +1,4 @@
-<div class="small-product">
+<div class="small-product wrap">
     <a class="blue" href="javascript:void(0)">Все новые поступления<span class="linn"></span></a>
     <div class="liner"><span>Вы смотрели</span></div>
 

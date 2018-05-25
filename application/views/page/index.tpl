@@ -5,8 +5,8 @@
 {include file= error/404.tpl}
 {elseif $pagetext}
     <div class="container">
-    <div class="bread-crumbs breadcrumbs mobile-display-none" id="breadcrumbs" itemscope=""
-         itemtype="http://schema.org/BreadcrumbList">
+        <div class="bread-crumbs breadcrumbs mobile-display-none wrap" id="breadcrumbs" itemscope=""
+             itemtype="http://schema.org/BreadcrumbList">
         <div itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="button">
             <a href="/" itemprop="item">Главная</a>
             <meta itemprop="position" content="1">
