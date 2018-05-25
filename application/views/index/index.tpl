@@ -40,15 +40,12 @@
 
     {if $seo_text_bottom}
         <div class="equip">
-            <div class="nozer wrap">
-                {$seo_text_bottom}
-            </div>
+            {$seo_text_bottom}
         </div>
     {/if}
 
-    <div class="wrap">
-        {include file='layouts/orig.tpl'}
-    </div>
+    {include file='layouts/orig.tpl'}
+
     <div class="doww"><img src="/assets/img/verh.png" alt=""></div>
 </div>
 {include file='layouts/_footer.tpl'}
