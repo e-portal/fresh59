@@ -1,4 +1,4 @@
-<div class="small-product {if($wrap)}wrap{/if}">
+<div class="small-product {if(true==$wrap)}wrap{/if}">
     <a class="blue" href="javascript:void(0)">Все новые поступления<span class="linn"></span></a>
     <div class="liner"><span>Вы смотрели</span></div>
 
