@@ -1,4 +1,4 @@
-<div class="small-product">
+<div class="small-product wrap">
     <div class="container">
         <div class="liner"><span>Другие модели</span></div>
 

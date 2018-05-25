@@ -1,4 +1,4 @@
-<div class="small-product slider-till-here">
+<div class="small-product slider-till-here wrap">
     <div class="container">
         <div class="liner" id="prod-accessories">
             <span>С этим товаром покупают</span>
