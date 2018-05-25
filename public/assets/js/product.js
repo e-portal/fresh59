@@ -179,8 +179,6 @@ function getCats(e) {
     e.preventDefault();
 
     _this = $(this).data('catid');
-    console.log(_this);
-
 
     if (("undefined" !== typeof _this) && _this.length !== 0) {
         console.log(_this);
