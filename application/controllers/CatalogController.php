@@ -589,6 +589,7 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController
                 } elseif (count($brands >= 1)) {
                     $this->view->countBrand = count($brands);
                 }
+                $this->view->wrap = false;
             }
             if ($this->_getParam('availability') === '1')/*mycom*/
                 $filters['availability'] = 1;
