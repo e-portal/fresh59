@@ -354,7 +354,7 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController
                 </script>
                 <script id="dsq-count-scr" src="//590.disqus.com/count.js" async></script>
             ';
-        $this->view->wrap = 'wrap';
+        $this->view->wrap = true;
         /*$this->view->css_int = '
                 <link rel="stylesheet" href="/assets/css/product.css">
             ';*/
