@@ -25,9 +25,6 @@
 
             {foreach from=$assocItemsVmeste item=assocItemsCats name=similarItems}
                 {foreach from=$assocItemsCats.items item=assocItem}
-                    <pre>
-                                {$assocItem|@debug_print_var}
-                            </pre>
                     <div class="item-senn" data-catid="{$assocItemsCats.id}">
                         <a class="sench"
                            href="{iurl assoc.parent=$assocItem.parentname
