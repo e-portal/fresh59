@@ -21,9 +21,9 @@
         </div>
         <div class="right-banner">
             <div class="one-content">
-                {if isset($article.img) }
+                {if isset($article.picture) }
                 <div class="article-img">
-                    <img src="/assets/img/articles/{$article.img}">
+                    <img src="/assets/img/articles/{$article.picture}">
                 </div>
                 {/if}
                 <div class="one-article-date-btn one-article-under-img">
