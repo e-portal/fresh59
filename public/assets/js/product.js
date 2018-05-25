@@ -187,6 +187,7 @@ function getCats(e) {
                 $(this).show();
             } else {
                 $(this).hide();
+                console.log(_this);
             }
         });
 
