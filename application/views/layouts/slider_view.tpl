@@ -10,20 +10,6 @@
     <div class="{$slider_class}">
 
         {if $smarty.session.items|@count > 0}
-            {*<ul>
-                {foreach from=$smarty.session.items item=vieweditems name=content_vieweditems}
-                    *}{*{if $smarty.foreach.content_vieweditems.index < 1}*}{*
-                        <li>
-                            *}{*<a href="/catalog/item/{$vieweditems.id}" alt="{$vieweditems.brand} {$vieweditems.name}">
-                                {$vieweditems.brand} {$vieweditems.name}
-                            </a>*}{*
-                            *}{*<pre>{$vieweditems|var_dump}</pre>*}{*
-                            <pre>{$vieweditems|@debug_print_var}</pre>
-                        </li>
-                    *}{*{/if}*}{*
-                {/foreach}
-            </ul>*}
-
             {foreach from=$smarty.session.items item=vieweditems name=content_vieweditems}
                 <div class="item-senn">
                     <a class="sench" href="/catalog/item/{$vieweditems.id}" tabindex="0"
@@ -129,10 +115,10 @@
                     </object>
 
                     <div class="bakk">
-                            <div class="left-bakk">
-                                <p>{price $vieweditems.price $vieweditems.id_currency} {$smarty.session.Currency.title}</p>
-                                <p>Вернем: <span>{$vieweditems.bonus_amount|round} грн</span></p>
-                            </div>
+                        <div class="left-bakk">
+                            <p>{price $vieweditems.price $vieweditems.id_currency} {$smarty.session.Currency.title}</p>
+                            <p>Вернем: <span>{$vieweditems.bonus_amount|round} грн</span></p>
+                        </div>
                         <div class="right-bakk">
                             {if '4' === $vieweditems.id_availability || '1' === $vieweditems.id_availability}
                                 <object type="lol/wut">
