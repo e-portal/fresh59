@@ -1,4 +1,4 @@
-<div class="small-product wrap">
+<div class="small-product {if $zf.params.controller=='catalog' && $zf.params.action=='cat' && $finalCat}wrap{/if}">
     <a class="blue" href="javascript:void(0)">Все новые поступления<span class="linn"></span></a>
     <div class="liner"><span>Вы смотрели</span></div>
 
