@@ -42,7 +42,15 @@ $(document).ready(function () {
                     slidesToScroll: 1,
                     fade: false,
                     arrows: false,
-                    asNavFor: '.slider-nav'
+                    asNavFor: '.slider-nav',
+                    responsive: [
+                        {
+                            breakpoint: 640,
+                            settings: {
+                                dots: true
+                            }
+                        }
+                    ]
                 });
                 $('.slider-nav').slick({
                     slidesToShow: 4,
@@ -115,7 +123,6 @@ $(document).ready(function () {
                 }
                 //title scroll
                 var title = $('.slide-tabs');
-                // var title = $('.title-slide');
                 var mBottom = 67;
                 if (scroll_block > baner_top && scroll_block + title.height() + mBottom < $('.jq-move-slider').height() + foot) {
                     title.css({"position": 'fixed', top: '0px', bottom: 'auto'});
@@ -129,6 +136,8 @@ $(document).ready(function () {
                     title.css({'position': 'relative', top: '0px'});
                     title.removeClass('active-slide');
                 }
+
+
             }
             befScroll = scroll_block;
         });
@@ -148,11 +157,19 @@ $(document).ready(function () {
         $('.product-menu a').removeClass('active');
         $(this).addClass('active');
         var target = $(this).attr('href');
-        $('.product-menu a[href^="#prod-questions"]')
-        $('html, body').animate({scrollTop: $(target).offset().top - 190}, 800);
+        $('.product-menu a[href^="#prod-questions"]');
+        if ($('.product-menu a[href^="#prod-accessories"]')) {
+            $('html, body').animate({scrollTop: $(target).offset().top}, 800);
+        } else {
+            $('html, body').animate({scrollTop: $(target).offset().top - 190}, 800);
+        }
         return false;
     });
+
     /*---------end Anchor slide ease---------*/
 
+    $('.slider-product .present').click(function () {
+        $('html, body').animate({scrollTop: $('.price-busket-kredit').offset().top + 150}, 800);
+    })
 
 });

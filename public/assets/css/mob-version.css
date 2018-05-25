@@ -11,6 +11,16 @@
         width: 90%;
     }
 
+    @supports (-ms-ime-align:auto) {
+        .time-work {
+            font-size: 12px
+        }
+
+        .head-item:nth-child(2) {
+            padding: 0 25px;
+        }
+    }
+
     .search-result {
         padding: 14px 10px;
     }
@@ -155,9 +165,9 @@
     }
 
     .item-tehni {
-        width: calc(33% - 1px);
-        width: -moz-calc(33% - 1px);
-        width: -webkit-calc(33% - 1px);
+        width: calc(33.3% - 1px);
+        width: -moz-calc(33.3% - 1px);
+        width: -webkit-calc(33.3% - 1px);
     }
 
     .price-busket-kredit > div:nth-child(2) {
@@ -289,11 +299,9 @@
     .menu-0 {
         width: 865px;
     }
-
     .base-menu .categ-menu ul.menu-0 li {
         width: 288px;
     }
-
     .base-menu .categ-menu .menu-0 li a {
         padding: 10px 0 10px 10px;
         font-size: 13px
@@ -442,15 +450,16 @@
     }
 }
 
-@media screen and (max-width: 1153px) and (min-width: 1025px) {
+@media screen and (max-width: 1137px) and (min-width: 1025px) {
+    .search-list button {
+        font-size: 12px;
+    }
     .main-menu ul li a {
         font-size: 13px;
     }
-
     .next-menu ul li a {
         font-size: 12px;
     }
-
     .menu-0 {
         width: 580px;
     }
@@ -500,6 +509,10 @@
         font-size: 11px;
     }
 
+    .parag-item {
+        font-size: 14px;
+    }
+
     .owl .clock img {
         margin: 0 5px 0 0;
     }
@@ -544,7 +557,6 @@
         font-size: 13px;
         line-height: 41px;
     }
-
     .compare-found .right-butt span:after,
     .compare-found .left-butt span:after,
     .look-for a:after {
@@ -583,9 +595,9 @@
         width: 87px;
     }
 
-    .right-butt > span,
-    .left-butt > span,
-    .look-for a {
+    .prod-stars .right-butt > span,
+    .prod-stars .left-butt > span,
+    .prod-stars .look-for a {
         display: inline-block;
         width: 15px;
     }
@@ -669,11 +681,24 @@
         flex-wrap: wrap;
         border: 1px solid #f9d724;
     }
+
+    .libe-slick .slick-prev {
+        left: -10px;
+        z-index: 5;
+    }
+
+    .libe-slick .slick-next {
+        right: -10px;
+    }
 }
 
 @media screen and (max-width: 1025px) {
     .wrap {
         width: 97%;
+    }
+
+    .search-list {
+        width: 200%;
     }
 
     .head-item:nth-child(1) {
@@ -1364,13 +1389,13 @@
     }
 
     .bonus-score {
-        height: 130px;
+        height: 140px;
     }
 
     .score {
         flex-wrap: wrap;
         height: inherit;
-        padding: 10px 0;
+        padding: 10px 0 20px;
 
     }
 
@@ -1810,11 +1835,11 @@
 
     /*---------footer -----*/
     .doww {
-        right: 50px;
+        left: 5%;
     }
 
     .footers {
-        height: 615px;
+        height: 625px;
     }
 
     .foot {
@@ -1851,7 +1876,6 @@
 
     .rights-security b {
         font-family: 'SFUIDisplay-Bold';
-        font-weight: 900;
     }
 
     .item-foot:nth-child(2) p,
@@ -1963,6 +1987,7 @@
 
     .accordion .title_block {
         font-size: 14px;
+        padding-right: 33px;
     }
 
     .say-question a {
@@ -1971,7 +1996,7 @@
     }
 
     .say-question {
-        padding: 22px 0px 0 0px;
+        padding: 22px 0;
     }
 
     .say-question span {
@@ -3083,93 +3108,82 @@
     .qweek-busket-prodadd-to-cart .bask:after {
         content: none;
     }
-
     .cheaper-slide {
         flex-direction: column;
     }
-
     .cheaper-prod {
         width: 100%;
         margin: 20px 0;
     }
-
     .cheaper-prod:last-child {
         width: 100%;
         padding-right: 0;
     }
-
     .cheaper-prod:last-child .cheaper-prod-img {
         width: 0%;
     }
-
     .cheaper-prod:last-child .cheaper-prod-text .price {
         font-size: 25px;
         text-align: center;
         margin-bottom: 20px;
     }
-
     .cheaper-prod:last-child .bask {
         width: 100%;
         font-size: 16px;
     }
-
     .cheaper-prod:last-child .bask:after {
         right: calc(50% - 50px);
     }
 
-    .cheaper-prod-text {
+    .cheaper-prod-text,
+    .cheaper-prod:last-child {
         width: 100%;
         display: block;
     }
-
     .cheaper-prod-text .oplata-part {
         text-align: center;
     }
-
     .cheaper-prod-text .old-price {
         font-size: 14px;
         margin: 10px 0;
         text-align: center;
 
     }
-
     .border-plus {
         width: 100%;
         height: 1px;
     }
-
     .take-gift .gift-price,
     .take-gift .gift-prod-title {
         display: none;
     }
-
     .title-gift {
         font-size: 15px;
     }
-
     .take-gift-content {
         flex-wrap: wrap;
         padding: 10px;
     }
-
     .gift-prod {
         display: flex;
         width: calc(100% - 220px);
         flex-wrap: wrap;
         justify-content: center;
     }
-
     .gift-prod-text {
         display: flex;
         padding-top: 10px;
     }
-
     .gift-prod-img {
         margin-right: 0;
     }
-
     .in-gift {
         font-size: 15px;
+    }
+
+    .guarantee-tree-column > div li,
+    .guarantee-tree-column > div:last-child ul.long-list li {
+        width: 100%;
     }
 
 }
@@ -3204,6 +3218,10 @@
         font-size: 12px;
         position: relative;
         top: -8px;
+    }
+
+    .info-accord ul, .info-accord ol {
+        padding-left: 20px;
     }
 
     .button span {
@@ -3324,6 +3342,16 @@
     .items a > img {
         height: 300px;
     }
+
+    .yellow-button {
+        height: 30px;
+        font-size: 11px;
+        padding: 0 13px;
+    }
+
+    .bonus.flexibal {
+        font-size: 13px;
+    }
 }
 
 @media screen and (max-width: 380px) {
@@ -3432,14 +3460,6 @@
     .tab-button li {
         font-size: 13px;
     }
-    .yellow-button {
-        height: 30px;
-        font-size: 11px;
-        padding: 0 13px;
-    }
-    .bonus.flexibal {
-        font-size: 13px;
-    }
     .tab-contents {
         width: calc(100% - 20px);
         margin: 0 auto;
@@ -3447,13 +3467,28 @@
     .tab-section {
         padding: 15px 10px;
     }
-
     .threee p {
         line-height: 17px;
     }
-
     .tab-contents-wrap {
         font-size: 13px;
+    }
+
+    .popup-block p {
+        font-size: 11px;
+    }
+
+    .popup-block textarea {
+        margin-bottom: 0;
+    }
+
+    .popup-block .button {
+        font-size: 15px;
+    }
+
+    .popup-block select,
+    .popup-block input {
+        padding: 9px 22px
     }
 }
 
@@ -3510,6 +3545,13 @@
         width: 170px;
     }
 
+    .small-product .blue:after,
+    .seap .blue:after,
+    .senn .blue:after,
+    .owls .blue:after {
+        top: -1px;
+    }
+
     h4 {
         font-size: 11px;
         line-height: 17px;
@@ -3520,7 +3562,6 @@
         width: 70px;
         height: 30px;
     }
-
     .buy-by-part-from em, .itee em {
         font-size: 10px;
         left: 11px;
@@ -3612,6 +3653,10 @@
     .adree span {
         font-size: 11px;
         width: inherit;
+    }
+
+    .adree p {
+        margin: 3px 0 5px;
     }
 
     .call p {

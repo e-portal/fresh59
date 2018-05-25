@@ -823,7 +823,6 @@ h6 {}
 .faux-select li a {
     color: rgba(49, 62, 73, .7);
 }
-
 .faux-select li:hover,
 .faux-select li:hover a {
     color: rgba(49, 62, 73, .9);
@@ -965,6 +964,13 @@ h6 {}
     width: 300px;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input::-ms-clear {
+    display: none;
 }
 
 input {
@@ -2343,7 +2349,7 @@ input {
     height: 34px;
     border: 1px solid #bdbdbe;
     border-radius: 12px;
-    background: rgba(255, 255, 255, .8);
+    background: rgba(255, 255, 255, 1);
     align-items: center;
     /*z-index: 3;*/
     position: relative;
@@ -3337,7 +3343,7 @@ input {
 }
 
 .texx {
-    margin: 125px 0 -7px 0;
+    margin: 55px 0 -7px 0;
 }
 
 .category .senn {
@@ -5389,6 +5395,10 @@ ul.nacc .tabs-saw p {
 }
 .one-content .under-senn .item-senn {
     width: 295px;
+}
+
+.text-right > p {
+    margin-top: 0;
 }
 
 input::placeholder { font-family: 'SF-UI-Display-Regular'; }

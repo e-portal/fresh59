@@ -428,7 +428,6 @@ img {
 .qweek-busket-prodadd-to-cart form {
     width: 210px;
 }
-
 .qweek-buy,
 .qweek-buy input {
     width: 100%;
@@ -685,7 +684,6 @@ img {
     border-radius: 25px;
 
 }
-
 .tabs-delivery-pay {
     margin-top: 107px;
 }
@@ -930,7 +928,6 @@ div.review-date > span {
     color: #979797;
     opacity: .6;
 }
-
 .other-model-item:hover span {
     opacity: 1;
 }
@@ -1408,6 +1405,8 @@ div.review-date > span {
 
 .itee img {
     width: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .servs {
@@ -1489,3 +1488,39 @@ div.review-date > span {
     padding-right: 0;
 }
 
+.top-rating > span:hover:before {
+    content: "\2605";
+    position: absolute;
+}
+
+.top-rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+
+.top-rating > span:hover:before,
+.top-rating > span:hover ~ span:before {
+    content: "\2605";
+    position: absolute;
+    color: #fbd402;
+}
+
+.top-rating > span {
+    display: inline-block;
+    position: relative;
+    width: 17.6px;
+    font-size: 17.3px;
+    cursor: pointer;
+}
+
+.top-rating > span:hover:before,
+.top-rating > span:hover ~ span:before {
+    content: "\2605";
+    position: absolute;
+}
+
+.top-rating > .active:before,
+.top-rating > .active:before {
+    content: "\2605";
+    position: absolute;
+}

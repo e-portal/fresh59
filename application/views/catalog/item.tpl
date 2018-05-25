@@ -340,7 +340,7 @@
             {if $action}
                 <!-- Action -->
                 {if $item.acttype=='gift'}
-                    <div class="take-gift">
+                    <div class="take-gift" id="prod-gift">
                         <div class="title-gift"><span>Успей заказать и получить подарок!</span></div>
                         <div class="take-gift-content">
                             <div class="timer" data-year="{getdate arr=$action.end_date arr='Y'}"
