@@ -1,8 +1,5 @@
-{if $wrap}
-<div class="small-product wrap">
-    {else}
+
     <div class="small-product">
-        {/if}
         <a class="blue" href="javascript:void(0)">Все новые поступления<span class="linn"></span></a>
         <div class="liner"><span>Вы смотрели</span></div>
 
