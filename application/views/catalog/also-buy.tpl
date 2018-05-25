@@ -25,7 +25,7 @@
 
             {foreach from=$assocItemsVmeste item=assocItemsCats name=similarItems}
                 {foreach from=$assocItemsCats.items item=assocItem}
-                    <div class="item-senn">
+                    <div class="item-senn" data-id="{$assocItemsCats.id}">
                         <a class="sench"
                            href="{iurl assoc.parent=$assocItem.parentname
                            assoc.subdomain=$assocItem.subdomain
