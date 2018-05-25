@@ -9,6 +9,7 @@ class ArticlesController extends Alcotec_Frontend_Controller_ArticlesController 
         $rawId = $this->_getParam('id');
 
         $this->view->body_class = 'articles';
+        $this->view->wrap = true;
 
         if ($this->_hasParam('id') && $this->_getParam('id') != 'page') {
             if ($this->_getParam('id') && (string)(int)$rawId == $rawId) {
