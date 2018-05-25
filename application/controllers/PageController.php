@@ -13,6 +13,7 @@ class PageController extends Alcotec_Frontend_Controller_PageController {
             <script src="/assets/js/map.js"></script>
             ';
         }
+        $this->view->wrap = true;
 
         $this->view->body_class = $this->_getParam('pagename') ? $this->_getParam('pagename') : null;
 
