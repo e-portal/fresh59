@@ -1,11 +1,11 @@
 ﻿{include file='layouts/_header.tpl'}
 
-<div class="container wrap">
+<div class="container">
     {*<pre>{$item|var_dump}</pre>*}
     {*<pre>{$item|@debug_print_var}</pre>*}
     {*--------------------------------------------------------------------------------------------------------*}
     {php}echo $this->navigation($this->menu)->breadcrumbs()->setPartial(array('catalog/breadcrumbs.tpl', 'default'));{/php}
-    <div class="left-right slider-wrap jq-move-slider jq-move-slider-wrap">
+    <div class="left-right slider-wrap jq-move-slider jq-move-slider-wrap wrap">
         <div class="ourr">
             <div class="slider-product jq-move-slider-product">
                 <div class="slider-product-icon">

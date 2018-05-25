@@ -4,9 +4,7 @@
 {if $message}
 {include file= error/404.tpl}
 {elseif $pagetext}
-
-
-<div class="container wrap">
+    <div class="container">
     <div class="bread-crumbs breadcrumbs mobile-display-none" id="breadcrumbs" itemscope=""
          itemtype="http://schema.org/BreadcrumbList">
         <div itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="button">
@@ -19,8 +17,8 @@
         </div>
 
     </div>
-    <h1 class="liner cent"><span>{$pagename}</span></h1>
-    <div class="ourr left-right-banner">
+        <h1 class="liner cent wrap"><span>{$pagename}</span></h1>
+        <div class="ourr left-right-banner wrap">
         <div class="left-banner">
             {include file='layouts/left-banner.tpl'}
         </div>

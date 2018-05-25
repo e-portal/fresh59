@@ -1,4 +1,4 @@
-<div class="container wrap">
+<div class="container">
     <div class="bread-crumbs breadcrumbs mobile-display-none" id="breadcrumbs" itemscope=""
          itemtype="http://schema.org/BreadcrumbList">
         <div itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="button">
@@ -14,8 +14,8 @@
             <meta itemprop="position" content="3">
         </div>
     </div>
-    <h1 class="liner cent"><span>{$article.announce}</span></h1>
-    <div class="ourr left-right-banner">
+    <h1 class="liner cent wrap"><span>{$article.announce}</span></h1>
+    <div class="ourr left-right-banner wrap">
         <div class="left-banner">
             {include file='layouts/left-banner.tpl'}
         </div>
@@ -52,37 +52,6 @@
             </div>
         </div>
     </div>
-    <div class="orig">
-        <div class="container">
-            <div class="orii">
-                <div class="orig-item">
-                    <img src="/assets/img/orig1.png" alt="">
-                    <p><span>100% оригинал</span><br> от европейских производителей</p>
-                </div>
-
-                <div class="orig-item">
-                    <img src="/assets/img/orig2.png" alt="">
-                    <p><span>Акции!<br> Подарки! Скидки!</span>
-                        <br>каждые 2-е недели что-то
-                        новенькое</p>
-                </div>
-
-                <div class="orig-item">
-                    <img src="/assets/img/orig3.png" alt="">
-                    <p>Быстрая доставка в любой
-                        город Украины. От 2000 грн
-                        по Киеву <span>БЕСПЛАТНО</span></p>
-                </div>
-
-                <div class="orig-item">
-                    <img src="/assets/img/orig4.png" alt="">
-                    <p>Наши менеджеры<br>
-                        самые отзывчивые и
-                        профессиональные</p>
-                </div>
-
-            </div>
-        </div>
-    </div>
+    {include file="layouts/orig.tpl"}
     <div class="doww"><img src="/assets/img/verh.png" alt=""></div>
 </div>

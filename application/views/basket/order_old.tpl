@@ -1,7 +1,7 @@
-<div class="container wrap">
+<div class="container">
     {if $smarty.session.Basket.items || $smarty.session.Basket.sets || true}
-        <h1 class="liner smaller-liner liner-basket"><span>Оформление заказа</span></h1>
-        <div class="basket-two-column">
+        <h1 class="liner smaller-liner liner-basket wrap"><span>Оформление заказа</span></h1>
+        <div class="basket-two-column wrap">
             <div class="basket-first-column order">
 
                 <div class="tabs tabs-order" id="prod-reviews">

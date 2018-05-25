@@ -1,6 +1,6 @@
 {include file='layouts/_header.tpl'}
 
-<div class="container wrap">
+<div class="container">
 
     <div class="bread-crumbs breadcrumbs mobile-display-none" id="breadcrumbs" itemscope=""
          itemtype="http://schema.org/BreadcrumbList">
