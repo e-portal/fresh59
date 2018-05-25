@@ -121,12 +121,8 @@
         </div>
     </div>
 
-
+    {include file='layouts/slider_view.tpl'}
     <div class="saww wrap">
-        <!--        <div class="liner"><span>Вы смотрели</span></div>-->
-
-        {include file='layouts/slider_view.tpl'}
-
         <!-- SEO -->
         <div class="texx">
             {$seo_text_bottom|default:''}
