@@ -354,7 +354,7 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController
                 </script>
                 <script id="dsq-count-scr" src="//590.disqus.com/count.js" async></script>
             ';
-
+        $this->view->wrap = true;
         /*$this->view->css_int = '
                 <link rel="stylesheet" href="/assets/css/product.css">
             ';*/
@@ -452,6 +452,7 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController
                 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
                 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
             ';
+            $this->view->wrap = true;
         }
 
         if ($cat['id'] && $page = $this->view->navigation($this->view->menu)->findOneById($cat['id'])) {
