@@ -88,10 +88,10 @@
 
             </div>
         </div>
+        {include file='layouts/slider_view.tpl'}
     </div>
 
 
-    {include file='layouts/slider_view.tpl'}
     {include file='layouts/orig.tpl'}
 
     <div class="doww"><img src="/assets/img/verh.png" alt=""></div>
