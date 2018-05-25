@@ -23,7 +23,8 @@
 
                     {if $item.picture }
                     <div class="one-article-img">
-                        <img src="/assets/img/articles/{$item.picture}">
+                        {*<img src="/assets/img/articles/{$item.picture}">*}
+                        <img src="{$item.picture}">
                     </div>
                     {else}
                         <div class="one-article-img">
