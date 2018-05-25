@@ -72,7 +72,6 @@ $(document).ready(function () {
     }
 
 
-
     if (window.matchMedia("(max-width: 1025px) and (min-width: 768px)").matches) {
         $('.green').after($('.stars-ipad'));
     }
@@ -173,3 +172,18 @@ $(document).ready(function () {
     })
 
 });
+
+$('.parag-item').bind('click', getCats);
+
+function getCats(e) {
+    e.preventDefault();
+
+    _this = $(this).data('all-cats');
+
+    if (_this.length !== 0) {
+        console.log(_this);
+
+    } else {
+        console.log('----------------------')
+    }
+}

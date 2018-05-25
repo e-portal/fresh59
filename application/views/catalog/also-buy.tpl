@@ -7,10 +7,10 @@
 
         {if $assocItemsVmeste|@count > 0}
             <div class="parag parag-prev">
-                <div class="parag-item active all-cats">Все категории</div>
+                <div class="parag-item active" data-catid="all-cats">Все категории</div>
                 {foreach from=$assocItemsVmeste item=assocItemsCats name=similarItems}
                     {*<pre>{$assocItemsCats|@debug_print_var}</pre>*}
-                    <div class="parag-item catid-{$assocItemsCats.items[0].id_category}">
+                    <div class="parag-item" data-catid="{$assocItemsCats.items[0].id_category}">
                         {*<a href="{brandurl assoc.subdomain=$assocItemsCats.items[0].subdomain
                         assoc.cat_latin=$assocItemsCats.items[0].cat_latin_single}">
                             {$assocItemsCats.name}
@@ -25,7 +25,7 @@
 
             {foreach from=$assocItemsVmeste item=assocItemsCats name=similarItems}
                 {foreach from=$assocItemsCats.items item=assocItem}
-                    <div class="item-senn" data-catid="{$assocItem.id_category}">
+                    <div class="item-senn data-catid-{$assocItem.id_category}">
                         <a class="sench"
                            href="{iurl assoc.parent=$assocItem.parentname
                            assoc.subdomain=$assocItem.subdomain
