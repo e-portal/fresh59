@@ -67,7 +67,7 @@ img {
 }
 .smaller-liner {
     line-height: 28px;
-    margin: 50px 0 27px;
+    margin: 50px auto 27px;
 }
 
 .smaller-liner span {
@@ -1492,12 +1492,10 @@ div.review-date > span {
     content: "\2605";
     position: absolute;
 }
-
 .top-rating {
     unicode-bidi: bidi-override;
     direction: rtl;
 }
-
 .top-rating > span:hover:before,
 .top-rating > span:hover ~ span:before {
     content: "\2605";
@@ -1512,7 +1510,6 @@ div.review-date > span {
     font-size: 17.3px;
     cursor: pointer;
 }
-
 .top-rating > span:hover:before,
 .top-rating > span:hover ~ span:before {
     content: "\2605";

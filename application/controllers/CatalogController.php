@@ -452,7 +452,6 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController
                 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
                 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
             ';
-            $this->view->wrap = true;
         }
 
         if ($cat['id'] && $page = $this->view->navigation($this->view->menu)->findOneById($cat['id'])) {
@@ -589,7 +588,6 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController
                 } elseif (count($brands >= 1)) {
                     $this->view->countBrand = count($brands);
                 }
-                $this->view->wrap = false;
             }
             if ($this->_getParam('availability') === '1')/*mycom*/
                 $filters['availability'] = 1;
@@ -758,6 +756,8 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController
                 $this->view->accepted_filters = $acceptedFilters;
             }
 
+
+            $this->view->wrap = $this->view->finalCat ? true : false;
             $modArticles = new Articles();
             $this->view->articles = $modArticles->fetchAll("site_id = {$siteId} and visible = '1'", 'date DESC', 8, 0)->toArray();
             $this->view->article = $modArticles->getArticle($catId, $filters['brand']);
