@@ -173,14 +173,14 @@ $(document).ready(function () {
 
 });
 
-$('.parag-item').bind('click', getCats);
+$('.items-cat').bind('click', getCats);
 
 function getCats(e) {
     e.preventDefault();
 
-    _this = $(this).data('all-cats');
+    _this = $(this).data('catid');
 
-    if (_this.length !== 0) {
+    if (("undefined" !== typeof _this) && _this.length !== 0) {
         console.log(_this);
 
     } else {
