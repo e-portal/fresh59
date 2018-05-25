@@ -7,10 +7,10 @@
 
         {if $assocItemsVmeste|@count > 0}
             <div class="parag parag-prev">
-                <div class="parag-item active">Все категории</div>
+                <div class="parag-item active all-cats">Все категории</div>
                 {foreach from=$assocItemsVmeste item=assocItemsCats name=similarItems}
                     {*<pre>{$assocItemsCats|@debug_print_var}</pre>*}
-                    <div class="parag-item">
+                    <div class="parag-item catid-{$assocItemsCats.id}">
                         {*<a href="{brandurl assoc.subdomain=$assocItemsCats.items[0].subdomain
                         assoc.cat_latin=$assocItemsCats.items[0].cat_latin_single}">
                             {$assocItemsCats.name}
