@@ -1,4 +1,4 @@
-{if(true==$wrap)}
+{if $wrap}
 <div class="small-product wrap">
     {else}
     <div class="small-product">
