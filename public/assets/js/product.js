@@ -173,33 +173,3 @@ $(document).ready(function () {
 
 });
 
-$('.items-cat').bind('click', getCats);
-
-function getCats(e) {
-    e.preventDefault();
-
-    _this = $(this).data('catid');
-
-    if (("undefined" !== typeof _this) && _this.length !== 0) {
-
-        $('.cat-items').each(function () {
-            if ('all-cats' == _this) {
-                $(this).show();
-            } else {
-                if ($(this).hasClass('data-catid-' + _this)) {
-                    $(this).show();
-                } else {
-                    $(this).hide();
-                    console.log(_this);
-                }
-            }
-
-        });
-
-
-        // console.log($('.data-catid-' + _this));
-
-    } else {
-        console.log('----------------------')
-    }
-}

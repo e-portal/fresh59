@@ -126,7 +126,6 @@ jQuery(document).ready(function () {
     });
 
 
-
     if ($('.watched-small').length) {
         $('.watched-small').slick({
             slidesToShow: 4,
@@ -185,45 +184,81 @@ jQuery(document).ready(function () {
         });
     } else {
     }
+    var sliderWach;
 
-    if ($('.watched-slider').length) {
-        $('.watched-slider').slick({
-            slidesToShow: 5,
-            responsive: [
-                {
-                    breakpoint: 1281,
-                    settings: {
-                        slidesToShow: 4
+    $('.items-cat').bind('click', getCats);
+
+    function getCats(e) {
+        e.preventDefault();
+
+        _this = $(this).data('catid');
+
+        if (("undefined" !== typeof _this) && _this.length !== 0) {
+
+            $('.cat-items').each(function () {
+                if ('all-cats' == _this) {
+                    $(this).show();
+                } else {
+                    if ($(this).hasClass('data-catid-' + _this)) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
                     }
-                },
-                {
-                    breakpoint: 1025,
-                    settings: {
-                        slidesToShow: 3
-                    }
-                },
-                {
-                    breakpoint: 781,
-                    settings: {
-                        slidesToShow: 2
-                    }
-                },
-                {
-                    breakpoint: 767,
-                    settings: {
-                        slidesToShow: 1
-                    }
-                }],
-            slidesToScroll: 1,
-            dots: true,
-            arrows: false,
-            infinite: true,
-            cssEase: 'linear',
-            autoplay: true,
-            autoplaySpeed: 5000
-        });
-    } else {
+
+                }
+
+            });
+            sliderWach.slick('destroy')
+            sliderRest()
+        } else {
+            console.log('----------------------')
+        }
     }
+
+
+    function sliderRest() {
+
+        if ($('.watched-slider').length) {
+            sliderWach = $('.watched-slider').slick({
+                slidesToShow: 5,
+                responsive: [
+                    {
+                        breakpoint: 1281,
+                        settings: {
+                            slidesToShow: 4
+                        }
+                    },
+                    {
+                        breakpoint: 1025,
+                        settings: {
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 781,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 767,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }],
+                slidesToScroll: 1,
+                dots: true,
+                arrows: false,
+                infinite: true,
+                cssEase: 'linear',
+                autoplay: true,
+                autoplaySpeed: 5000
+            });
+        }
+    }
+
+    sliderRest()
+
 
     if ($(".slick").length) {
         $(".slick").slick({
@@ -243,7 +278,6 @@ jQuery(document).ready(function () {
                     }
                 }]
         });
-    } else {
     }
 
     if ($('.interest-slide').length && window.matchMedia("(min-width: 1025px)").matches) {
@@ -717,9 +751,6 @@ jQuery(document).ready(function () {
     if ($('.numb').length) {
         $('.numb').inputmask("+380 (99) 999-9999");
     }
-
-
-
 
 
     (function ($) {
@@ -1426,7 +1457,6 @@ function deleteItemFromCompare(e) {
 /*---------end BIND UNBIND---------*/
 
 
-
 function selectRegion(regionId) {
     $(".data-region-list .options li").each(function () {
         $(this).removeClass('active');
@@ -1465,6 +1495,7 @@ $(document).ready(function () {
         $(".tregion_" + a).addClass('active');
 
     }
+
     // if()
     cookie_tel();
 
@@ -1549,6 +1580,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     var form = $('.tab-contents.form.is-active form')
+
     function validform() {
         form.find('.valid').each(function () {
             if ($(this).hasClass('phone')) {
@@ -1582,9 +1614,6 @@ $(document).ready(function () {
             } else {
                 $(this).addClass('empty_field');
             }
-
-
-
 
 
         })
