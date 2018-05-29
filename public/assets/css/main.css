@@ -911,7 +911,7 @@ h6 {}
     z-index: 6;
     position: absolute;
     top: 50%;
-    right: .7em;
+    right: 1em;
     transform: translate(0,-50%);
     transition: all ease 0.25s;
 }
@@ -2097,7 +2097,6 @@ input {
     font-size: 14px;
     padding: 0 0 0 15px;
     background: #f9f9f9;
-    /*background: #e6e6e6;*/
 }
 
 .formu input:focus {
@@ -2309,7 +2308,7 @@ input {
 
 .oldPrice {
     color: #979797 !important;
-    text-decoration: line-through #979797;
+    text-decoration: line-through;
 }
 
 .left-bakk p:nth-child(2) span {
