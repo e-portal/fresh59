@@ -968,7 +968,6 @@ h6 {}
     -moz-appearance: textfield;
     appearance: textfield;
 }
-
 input::-ms-clear {
     display: none;
 }
@@ -4021,6 +4020,12 @@ ul#selectsMenuBoxi > li.options:hover {
     margin: 0;
 }
 
+.one-article-img img {
+    height: 225px;
+    width: 100%;
+    object-fit: cover;
+}
+
 .hate .present {
     top: 40px
 }
@@ -5410,6 +5415,9 @@ input:focus::-webkit-input-placeholder { opacity: 0; }
 input:focus::-moz-placeholder { opacity: 0; }
 input:focus:-ms-input-placeholder { opacity: 0; }
 
+@supports (-ms-ime-align:auto) {
+
+}
 
 @-moz-document url-prefix() {
     .searc{

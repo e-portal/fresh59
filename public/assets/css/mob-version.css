@@ -206,6 +206,11 @@
         margin: 0 100px 0 0;
     }
 
+    .right-banner .one-article-date-btn .date,
+    .right-banner .one-article-date-btn .rewiev {
+        font-size: 12px;
+    }
+
 }
 
 @media screen and (max-width: 1367px) {
@@ -286,6 +291,17 @@
 
     .front-wrap {
         width: 252px;
+    }
+
+    @supports (-ms-ime-align:auto) {
+        .qweek-buy input {
+            padding: 4px 0 5px 5px;
+        }
+
+        .qweek-buy .buy-btn {
+            padding: 2px 5px 2px 6px;
+        }
+
     }
 
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -448,7 +464,22 @@
     .item-foot:nth-child(1), .item-foot:nth-child(2), .item-foot:nth-child(3) {
         margin: 0 70px 0 0;
     }
-}
+
+    .right-banner .khob::after {
+        right: 11px;
+    }
+
+    .right-banner .one-article-date-btn .date, .right-banner .one-article-date-btn .rewiev {
+        font-size: 11px;
+        padding-left: 20px;
+    }
+
+    .all-sale .right-banner .khob,
+    .articles .right-banner .khob {
+        padding: 0 23px 0 13px;
+        height: 36px;
+        font-size: 12px;
+    }
 
 @media screen and (max-width: 1137px) and (min-width: 1025px) {
     .search-list button {
@@ -641,6 +672,9 @@
         width: 220px;
     }
 
+    .item-score:nth-child(2) span {
+        font-size: 40px;
+    }
     .item-score:nth-child(3) {
         width: 350px;
     }
@@ -661,7 +695,6 @@
     .adree p {
         margin: 0;
     }
-
     .item-foot:nth-child(1) span {
         font-size: 13px;
     }
@@ -673,6 +706,10 @@
     .most-item .slick-dots {
         padding: 0 0 0 10px;
     }
+
+    .three-column > div {
+        width: 48%;
+    }
 }
 
 @media screen and (min-width: 1025px) {
@@ -681,12 +718,10 @@
         flex-wrap: wrap;
         border: 1px solid #f9d724;
     }
-
     .libe-slick .slick-prev {
         left: -10px;
         z-index: 5;
     }
-
     .libe-slick .slick-next {
         right: -10px;
     }
@@ -1345,6 +1380,15 @@
         width: 100%;
     }
 
+    .accordion_item.open .info-accord {
+        max-height: 1530px;
+    }
+
+    .accordion .info-accord p,
+    .info-accord li {
+        font-size: 13px;
+    }
+
     .items h4 {
         margin: 10px 0 0 0;
     }
@@ -1558,6 +1602,7 @@
     .accordion .title_block:before {
         height: 21px;
         width: 21px;
+        right: 8px;
     }
 
     /*------pod-category------*/
@@ -2132,6 +2177,20 @@
     }
     .parag .slick-list {
         width: 83%;
+    }
+
+    .say-question span {
+        font-size: 12px
+    }
+
+    .say-question a {
+        font-size: 12px;
+        padding: 8px 5px;
+    }
+
+    .slider-contain .head-item:nth-child(1) {
+        width: 66%;
+        padding-right: 0;
     }
 
 }
@@ -3134,7 +3193,6 @@
     .cheaper-prod:last-child .bask:after {
         right: calc(50% - 50px);
     }
-
     .cheaper-prod-text,
     .cheaper-prod:last-child {
         width: 100%;
@@ -3348,7 +3406,6 @@
         font-size: 11px;
         padding: 0 13px;
     }
-
     .bonus.flexibal {
         font-size: 13px;
     }
@@ -3477,15 +3534,12 @@
     .popup-block p {
         font-size: 11px;
     }
-
     .popup-block textarea {
         margin-bottom: 0;
     }
-
     .popup-block .button {
         font-size: 15px;
     }
-
     .popup-block select,
     .popup-block input {
         padding: 9px 22px
@@ -3544,7 +3598,6 @@
     .item-score:nth-child(3) .send {
         width: 170px;
     }
-
     .small-product .blue:after,
     .seap .blue:after,
     .senn .blue:after,
@@ -3654,7 +3707,6 @@
         font-size: 11px;
         width: inherit;
     }
-
     .adree p {
         margin: 3px 0 5px;
     }

@@ -183,12 +183,17 @@ function getCats(e) {
     if (("undefined" !== typeof _this) && _this.length !== 0) {
 
         $('.cat-items').each(function () {
-            if ($(this).hasClass('data-catid-' + _this)) {
+            if ('all-cats' == _this) {
                 $(this).show();
             } else {
-                $(this).hide();
-                console.log(_this);
+                if ($(this).hasClass('data-catid-' + _this)) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                    console.log(_this);
+                }
             }
+
         });
 
 
