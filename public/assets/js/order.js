@@ -166,13 +166,22 @@ $(document).ready(function () {
     });
 
     /*---------autorisation---------*/
-    $('.pipl').click(function () {
+    $('.login-popup').click(function () {
+        autorize = $(this);
         $('.autorisation').css('display', 'flex');
         /*stop scroll*/
         if (window.matchMedia('(max-width: 900px)').matches) {
             $('html, body').css('overflow', 'hidden');
         } else {
             $('html, body').css('overflow', 'hidden');
+        }
+
+        if (autorize.hasClass('pipl')) {
+            $('.popup-content').find('.login-span').html('Авторизация');
+        } else if (autorize.hasClass('bonus')) {
+            $('.popup-content').find('.login-span').html('Авторизируйтесь для просмотра бонусов!');
+        } else if (autorize.hasClass('vijen')) {
+            $('.popup-content').find('.login-span').html('Авторизируйтесь для просмотра списка желаний!');
         }
 
         /*show popup*/

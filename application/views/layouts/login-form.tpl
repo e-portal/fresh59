@@ -1,6 +1,6 @@
 <div class="activate-popup order">
     <div class="liner smaller-liner liner-basket">
-        <span class="login-popup-span">Авторизация</span>
+        <span class="login-span">Авторизация</span>
     </div>
     <div class="flexibal tab-new-client">
         <div class="two-col">
