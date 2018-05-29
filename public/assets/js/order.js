@@ -4,7 +4,7 @@ $(document).ready(function () {
     $('.add-to-cart').bind('click', doObject);
     $('.add-to-cart').bind('click', function () {
         /*stop scroll*/
-        if (window.matchMedia('(max-width: 900px)').matches) {
+        if (window.matchMedia('(max-width: 1025px)').matches) {
             $('html, body').css('overflow', 'hidden');
         } else {
             $('html, body').css('overflow', 'hidden');
