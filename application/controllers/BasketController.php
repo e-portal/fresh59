@@ -316,6 +316,7 @@ class BasketController extends Alcotec_Frontend_Controller_BasketController
 
     public function orderAction()
     {
+        $this->view->wrap = true;
         $modBasket = new Basket();
         $form = new BasketForm();
         $currencies = Zend_Registry::get('currencies');
