@@ -310,11 +310,13 @@
         </div>
     {/if}
     <!-- SEO -->
-    <div class="fashion">
-        <div class="wrap">
-            {$seo_text_bottom|default:''}
+    {if $seo_text_bottom}
+        <div class="fashion">
+            <div class="wrap">
+                {$seo_text_bottom|default:''}
+            </div>
         </div>
-    </div>
+    {/if}
     <!-- SEO -->
     {include file='layouts/orig.tpl'}
 </div>
