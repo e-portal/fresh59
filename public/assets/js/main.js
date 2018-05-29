@@ -185,7 +185,7 @@ jQuery(document).ready(function () {
     } else {
     }
     var sliderWach;
-    var slidersWach = $('.watched-slider .item-senn ');
+    var slidersWach = $('.watched-slider-also-by .item-senn ');
     var afterSlides = []
     $('.items-cat').bind('click', getCats);
 
