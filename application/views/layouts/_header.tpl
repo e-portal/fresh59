@@ -149,7 +149,7 @@
                     </div>
                 </div>
                 <div class="iteem">
-                    <div class="bask-item bonus">
+                    <div class="bask-item bonus login-popup">
                         <div class="runn">
                             <div class="imgg">
                                 <div class="numeral">150</div>
@@ -165,14 +165,14 @@
                             </div>
                         </div>
                     {else}
-                        <div class="bask-item pipl">
+                        <div class="bask-item pipl login-popup">
                             <div class="runn">
                                 <div class="imgg"></div>
                                 <div class="names">Вход</div>
                             </div>
                         </div>
                     {/if}
-                    <div class="bask-item vijen">
+                    <div class="bask-item vijen login-popup">
                         <div class="runn">
                             <div class="imgg">
                                 <div class="numeral">0</div>
