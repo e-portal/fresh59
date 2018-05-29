@@ -12,6 +12,12 @@
 class CatalogController extends Alcotec_Frontend_Controller_CatalogController
 {
 
+    public function searchAction()
+    {
+        $this->view->wrap = true;
+        parent::searchAction();
+    }
+
     public function fixAction()
     {
         exit;
