@@ -4019,7 +4019,7 @@ ul#selectsMenuBoxi > li.options:hover {
     margin: 0;
 }
 
-.one-article-img img {
+.items .one-article-img img {
     height: 225px;
     width: 100%;
     object-fit: cover;
