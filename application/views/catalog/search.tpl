@@ -73,7 +73,7 @@
 
 
                     <div>
-                        <h3 class="">РЕЗУЛЬТАТЫ ПОИСКА ПО ТОВАРАМ “<em>LG</em>”</h3>
+                        <h3 class="">РЕЗУЛЬТАТЫ ПОИСКА ПО ТОВАРАМ “<em>{$searchtext}</em>”</h3>
                         <div class="under-senn">
 
                             {foreach from=$items item=item name=catitems}
