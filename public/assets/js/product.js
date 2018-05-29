@@ -72,8 +72,10 @@ $(document).ready(function () {
     }
 
 
+
     if (window.matchMedia("(max-width: 1025px) and (min-width: 768px)").matches) {
         $('.green').after($('.stars-ipad'));
+        $('.slider-product').before($('.title-slide, .in-stock, .prod-stars'));
     }
     if (window.matchMedia("(max-width: 767px)").matches) {
         $('.slider-product').before($('.title-slide, .in-stock, .prod-stars'));
@@ -172,4 +174,3 @@ $(document).ready(function () {
     })
 
 });
-
