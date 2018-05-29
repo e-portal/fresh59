@@ -198,19 +198,19 @@ jQuery(document).ready(function () {
 
             slidersWach.each(function () {
                 if ('all-cats' == _this) {
-                    afterSlide.push($(this));
+                    afterSlides.push($(this));
                 } else {
                     if ($(this).hasClass('data-catid-' + _this)) {
-                        afterSlide.push($(this));
+                        afterSlides.push($(this));
                     }
 
                 }
 
             });
             sliderWach.slick('destroy');
-            $('.watched-slider').html(afterSlide)
+            $('.watched-slider').html(afterSlides)
             sliderRest()
-            console.log(afterSlide);
+            console.log(afterSlides);
         } else {
             console.log('----------------------')
         }
