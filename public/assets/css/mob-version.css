@@ -297,7 +297,6 @@
         .qweek-buy input {
             padding: 4px 0 5px 5px;
         }
-
         .qweek-buy .buy-btn {
             padding: 2px 5px 2px 6px;
         }
@@ -315,9 +314,11 @@
     .menu-0 {
         width: 865px;
     }
+
     .base-menu .categ-menu ul.menu-0 li {
         width: 288px;
     }
+
     .base-menu .categ-menu .menu-0 li a {
         padding: 10px 0 10px 10px;
         font-size: 13px
@@ -480,6 +481,8 @@
         height: 36px;
         font-size: 12px;
     }
+
+}
 
 @media screen and (max-width: 1137px) and (min-width: 1025px) {
     .search-list button {
@@ -671,7 +674,6 @@
     .front-wrap {
         width: 220px;
     }
-
     .item-score:nth-child(2) span {
         font-size: 40px;
     }
@@ -706,7 +708,6 @@
     .most-item .slick-dots {
         padding: 0 0 0 10px;
     }
-
     .three-column > div {
         width: 48%;
     }
@@ -718,13 +719,7 @@
         flex-wrap: wrap;
         border: 1px solid #f9d724;
     }
-    .libe-slick .slick-prev {
-        left: -10px;
-        z-index: 5;
-    }
-    .libe-slick .slick-next {
-        right: -10px;
-    }
+
 }
 
 @media screen and (max-width: 1025px) {
@@ -1379,7 +1374,6 @@
     .owl .items a > img {
         width: 100%;
     }
-
     .accordion_item.open .info-accord {
         max-height: 1530px;
     }
@@ -1603,6 +1597,15 @@
         height: 21px;
         width: 21px;
         right: 8px;
+    }
+
+    .libe-slick .slick-prev {
+        left: -10px;
+        z-index: 5;
+    }
+
+    .libe-slick .slick-next {
+        right: -10px;
     }
 
     /*------pod-category------*/
@@ -2178,16 +2181,13 @@
     .parag .slick-list {
         width: 83%;
     }
-
     .say-question span {
         font-size: 12px
     }
-
     .say-question a {
         font-size: 12px;
         padding: 8px 5px;
     }
-
     .slider-contain .head-item:nth-child(1) {
         width: 66%;
         padding-right: 0;
@@ -2230,6 +2230,10 @@
         justify-content: space-between;
         padding: 6px 0;
         height: 30px;
+    }
+
+    input {
+        font-style: normal !important;
     }
 
     .burger {
@@ -3155,6 +3159,7 @@
     .qweek-buy input {
         width: 100%;
     }
+
     .tab-button-outer {
         display: block;
     }
@@ -3174,12 +3179,18 @@
         width: 100%;
         margin: 20px 0;
     }
+
+    .cheaper-prod:last-child .cheaper-prod-text,
     .cheaper-prod:last-child {
         width: 100%;
         padding-right: 0;
     }
     .cheaper-prod:last-child .cheaper-prod-img {
-        width: 0%;
+        width: 0;
+    }
+
+    .busket-marg {
+        margin: 5px auto 10px;
     }
     .cheaper-prod:last-child .cheaper-prod-text .price {
         font-size: 25px;
@@ -3187,7 +3198,8 @@
         margin-bottom: 20px;
     }
     .cheaper-prod:last-child .bask {
-        width: 100%;
+        width: 97%;
+        margin: 0 auto;
         font-size: 16px;
     }
     .cheaper-prod:last-child .bask:after {
@@ -3297,6 +3309,27 @@
     .times {
         margin: 25px 0 0 0;
     }
+
+    .one-article-under-img.one-article-date-btn {
+        padding: 15px 0;
+    }
+
+    .khob-back, .articles .right-banner .social-back .khob-back {
+        margin: 35px 0 0;
+    }
+
+    .one-article-date-btn > div,
+    .one-article-date-btn > a {
+        width: auto;
+    }
+
+    .one-article-date-btn {
+        justify-content: space-between;
+    }
+
+    .tab-contents .tab-contents-wrap {
+        margin-top: 0;
+    }
 }
 
 @media screen and (max-width: 405px) {
@@ -3346,10 +3379,11 @@
         font-size: 15px;
     }
 
+    .khob-back,
+    .articles .right-banner .social-back .khob-back,
     .khob {
         width: 130px;
         height: 37px;
-
         left: 10px;
     }
 
@@ -3531,6 +3565,10 @@
         font-size: 13px;
     }
 
+    .qweek-buy .buy-btn {
+        padding: 2px 11px 1px 12px;
+    }
+
     .popup-block p {
         font-size: 11px;
     }
@@ -3551,9 +3589,11 @@
     .base-menu .categ-menu ul.menu-0 li {
         width: 100%;
     }
+
     .base-menu .categ-menu .menu-0 li a {
         padding: 10px 0 10px 20px;
     }
+
     .base-menu ul.menu-0 li a::before {
         left: -10px;
     }
@@ -3598,6 +3638,7 @@
     .item-score:nth-child(3) .send {
         width: 170px;
     }
+
     .small-product .blue:after,
     .seap .blue:after,
     .senn .blue:after,
@@ -3615,6 +3656,7 @@
         width: 70px;
         height: 30px;
     }
+
     .buy-by-part-from em, .itee em {
         font-size: 10px;
         left: 11px;
@@ -3707,6 +3749,7 @@
         font-size: 11px;
         width: inherit;
     }
+
     .adree p {
         margin: 3px 0 5px;
     }
@@ -3714,6 +3757,7 @@
     .call p {
         font-size: 11px;
     }
+
     .tabs-delivery-pay .tab-contents {
         padding: 20px 5px;
         width: calc(100% - 10px);
@@ -3723,6 +3767,7 @@
         font-size: 11px;
         line-height: 40px;
     }
+
     .bonus.flexibal {
         font-size: 11px;
     }

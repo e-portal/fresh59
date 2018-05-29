@@ -45,10 +45,6 @@
     background: #fbd402;
 }
 
-.search-result__inner {
-    display: flex;
-}
-
 .search-result {
     padding: 14px 32px;
     position: relative;
@@ -70,8 +66,10 @@
 }
 
 .search-result__inner {
+    display: flex;
     padding-left: 76px;
     position: relative;
+    overflow: hidden;
 }
 
 .search-result__content {
