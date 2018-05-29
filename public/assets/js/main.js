@@ -210,6 +210,7 @@ jQuery(document).ready(function () {
             sliderWach.slick('destroy');
             $('.watched-slider').html(afterSlide)
             sliderRest()
+            console.log(afterSlide);
         } else {
             console.log('----------------------')
         }
