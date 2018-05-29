@@ -1603,7 +1603,6 @@
         left: -10px;
         z-index: 5;
     }
-
     .libe-slick .slick-next {
         right: -10px;
     }
@@ -2232,8 +2231,10 @@
         height: 30px;
     }
 
-    input {
-        font-style: normal !important;
+    .formu input,
+    .info .inpp input,
+    .qweek-buy input {
+        font-family: sans-serif;
     }
 
     .burger {
@@ -2529,9 +2530,6 @@
         width: 100%;
     }
 
-    /*.owl .slick-prev, .owl .slick-next {*/
-    /*bottom: 26%;*/
-    /*}*/
     article p {
         font-size: 14px;
         margin: 3px 0;
@@ -2833,6 +2831,10 @@
         padding: 0 10px;
     }
 
+    .oldPrice {
+        text-decoration: line-through;
+    }
+
     .blocks-pagination {
         flex-wrap: wrap;
     }
@@ -2901,6 +2903,10 @@
 
     .left-options.open-left {
         left: 0;
+    }
+
+    .tabs-delivery-pay {
+        margin-top: 47px;
     }
 
     /*------footer--------*/
@@ -3160,6 +3166,10 @@
         width: 100%;
     }
 
+    .qweek-buy .buy-btn {
+        padding: 2px 11px 1px 12px;
+    }
+
     .tab-button-outer {
         display: block;
     }
@@ -3179,7 +3189,6 @@
         width: 100%;
         margin: 20px 0;
     }
-
     .cheaper-prod:last-child .cheaper-prod-text,
     .cheaper-prod:last-child {
         width: 100%;
@@ -3188,7 +3197,6 @@
     .cheaper-prod:last-child .cheaper-prod-img {
         width: 0;
     }
-
     .busket-marg {
         margin: 5px auto 10px;
     }
@@ -3317,7 +3325,6 @@
     .khob-back, .articles .right-banner .social-back .khob-back {
         margin: 35px 0 0;
     }
-
     .one-article-date-btn > div,
     .one-article-date-btn > a {
         width: auto;
@@ -3564,11 +3571,6 @@
     .tab-contents-wrap {
         font-size: 13px;
     }
-
-    .qweek-buy .buy-btn {
-        padding: 2px 11px 1px 12px;
-    }
-
     .popup-block p {
         font-size: 11px;
     }
