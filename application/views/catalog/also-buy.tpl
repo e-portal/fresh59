@@ -21,7 +21,7 @@
             </div>
         {/if}
 
-        <div class="watched-slider-also-by">
+        <div class="watched-slider watched-slider-also-by">
 
             {foreach from=$assocItemsVmeste item=assocItemsCats name=similarItems}
                 {foreach from=$assocItemsCats.items item=assocItem}
