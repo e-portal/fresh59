@@ -185,7 +185,8 @@ jQuery(document).ready(function () {
     } else {
     }
     var sliderWach;
-
+    var slidersWach = $('.watched-slider .item-senn ');
+    var afterSlides = []
     $('.items-cat').bind('click', getCats);
 
     function getCats(e) {
@@ -195,20 +196,19 @@ jQuery(document).ready(function () {
 
         if (("undefined" !== typeof _this) && _this.length !== 0) {
 
-            $('.cat-items').each(function () {
+            slidersWach.each(function () {
                 if ('all-cats' == _this) {
-                    $(this).show();
+                    afterSlide.push($(this));
                 } else {
                     if ($(this).hasClass('data-catid-' + _this)) {
-                        $(this).show();
-                    } else {
-                        $(this).hide();
+                        afterSlide.push($(this));
                     }
 
                 }
 
             });
-            sliderWach.slick('destroy')
+            sliderWach.slick('destroy');
+            $('.watched-slider').html(afterSlide)
             sliderRest()
         } else {
             console.log('----------------------')
