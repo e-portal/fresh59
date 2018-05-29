@@ -208,7 +208,7 @@ jQuery(document).ready(function () {
 
             });
             sliderWach.slick('destroy');
-            $('.watched-slider').html(afterSlides)
+            $('.watched-slider-also-by').html(afterSlides)
             sliderRest()
         } else {
             console.log('----------------------')
