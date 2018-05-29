@@ -191,7 +191,7 @@ jQuery(document).ready(function () {
 
     function getCats(e) {
         e.preventDefault();
-
+        afterSlides = []
         _this = $(this).data('catid');
 
         if (("undefined" !== typeof _this) && _this.length !== 0) {
