@@ -302,9 +302,13 @@
 
     }
 
-    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    /*@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {*/
+    @media screen and (min-width:0\0)  {
         .time-work {
             font-size: 11px;
+        }
+        .head-item:nth-child(2) {
+            padding: 0 15px;
         }
     }
 }

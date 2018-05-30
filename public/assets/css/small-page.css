@@ -11,6 +11,12 @@
     object-fit: contain;
 }
 
+.all-sale .left-right-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 .left-banner {
     width: 359px;
 }
@@ -152,6 +158,7 @@
 .one-sale {
     border-bottom: 1px solid #eaeaea;
     transition: .5s;
+    margin: 0 0 2px;
 }
 
 .one-sale:hover {
@@ -163,7 +170,7 @@
     font-family: 'SF-UI-Display-Regular';
     font-size: 14px;
     line-height: 18px;
-    margin: 20px 22px 15px;
+    margin: 20px 22px 0;
     height: 36px;
 }
 
@@ -172,6 +179,7 @@
     position: relative;
     height: 160px;
     overflow: hidden;
+    margin-top: 15px;
 }
 
 .sale-img-text-contain {
@@ -496,7 +504,7 @@ li {
 }
 
 /*.table-grey-border td {*/
-/*padding: 15px 25px;*/
+    /*padding: 15px 25px;*/
 /*}*/
 
 .table-grey-border td,
@@ -543,7 +551,7 @@ li {
 }
 
 .long-list a:hover,
-.long-list a {
+.long-list a{
     text-decoration: none;
     color: #313e49;
 }
@@ -588,7 +596,7 @@ ol li {
     font-size: 15px;
 }
 
-#infoAddress:before {
+#infoAddress:before{
     content: url("./../img/main/contact1.png");
     position: relative;
     left: -22px;
