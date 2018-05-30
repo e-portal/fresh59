@@ -11,14 +11,9 @@
         width: 90%;
     }
 
-    @supports (-ms-ime-align:auto) {
-        .time-work {
-            font-size: 12px
-        }
-
-        .head-item:nth-child(2) {
-            padding: 0 25px;
-        }
+    @supports (-ms-ime-align:auto)  {
+        .time-work { font-size: 12px }
+        .head-item:nth-child(2) {padding: 0 25px;}
     }
 
     .search-result {
@@ -740,6 +735,8 @@
         width: 100%;
     }
 
+    .header-bottom__exit,
+    header.search-open .header-bottom__exit,
     .head-item:nth-child(2),
     .your,
     .time-work,
@@ -804,6 +801,20 @@
     }
 
     .mobile-display-none {
+        display: block;
+    }
+
+    .close-base {
+        display: none;
+    }
+
+    .close-base.mobile-menu-all {
+        width: 100%;
+        height: 100%;
+        z-index: 7;
+        top: 0;
+        left: 0;
+        position: fixed;
         display: block;
     }
 
@@ -1072,6 +1083,16 @@
 
     .base-menu ul.mob-next-menu li:hover {
         color: #fbd402;
+    }
+
+
+
+    .formu input,
+    .inpp input,
+    .info .inpp input,
+    .qweek-buy input {
+        -webkit-appearance: none;
+        font-family: sans-serif;
     }
 
     .head-item .inpp input {
@@ -2148,7 +2169,7 @@
     }
 }
 
-@media screen and (max-width: 826px) {
+@media screen and (max-width: 826px)  {
     .head-item .inpp input {
         padding: 8px 0 9px 7px;
         width: 190px;
@@ -2157,7 +2178,6 @@
     .city .faux-select {
         width: 110px;
     }
-
     .faux-select {
         width: 165px;
     }
@@ -2238,12 +2258,6 @@
         justify-content: space-between;
         padding: 6px 0;
         height: 30px;
-    }
-
-    .formu input,
-    .info .inpp input,
-    .qweek-buy input {
-        font-family: sans-serif;
     }
 
     .burger {
@@ -2871,7 +2885,6 @@
     .blocks-pagination .blocks-pagination-empty {
         width: 160px;
     }
-
     div#selectyPagination {
         width: 150px;
     }
@@ -2909,12 +2922,13 @@
     }
 
     /*.fashion .wrap {*/
-    /*max-height: 200px;*/
-    /*transition: 500ms;*/
-    /*overflow: hidden;*/
+        /*max-height: 200px;*/
+        /*transition: 500ms;*/
+        /*overflow: hidden;*/
     /*}*/
+
     /*.fashion .wrap.opened {*/
-    /*max-height: 1500px;*/
+        /*max-height: 1500px;*/
     /*}*/
 
     .left-options {
@@ -3189,7 +3203,7 @@
         width: 100%;
     }
 
-    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @media screen and (-webkit-min-device-pixel-ratio:0){
         .qweek-buy .buy-btn {
             padding: 2px 11px 1px 12px;
         }
@@ -3282,7 +3296,7 @@
         padding-top: 10px;
     }
     .gift-prod-img {
-        margin-right: 0;
+         margin-right: 0;
     }
     .in-gift {
         font-size: 15px;

@@ -338,22 +338,33 @@ jQuery(document).ready(function () {
                 arrows: true,
                 dots: false,
                 speed: 500,
-                cssEase: 'linear',
+                cssEase: 'linear'
             });
         }
 
 
         /*IPAD MENU*/
-        $(".burger").bind("click", function () {
+        $(".burger").on("click", function () {
             $(this).toggleClass('active');
             $('.mobile-display-none .base-menu').toggleClass('mobile-menu-all');
+            $('.mobile-display-none .close-base').addClass('mobile-menu-all');
             if ($('.burger').hasClass('active')) {
                 $('html, body').css('overflow', 'hidden');
 
             } else {
                 $('html, body').css('overflow', 'auto');
+                $('.mobile-display-none .close-base').removeClass('mobile-menu-all');
             }
         });
+
+
+        $('.mobile-display-none .close-base').bind("click", function () {
+            $(this).removeClass('mobile-menu-all');
+            $('.mobile-display-none .base-menu').removeClass('mobile-menu-all');
+            $('.burger').removeClass('active');
+        });
+
+
 
     }
     $('.base-menu li .menu-one').bind('click', function (e) {

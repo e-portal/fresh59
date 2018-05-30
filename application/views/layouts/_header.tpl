@@ -254,6 +254,7 @@
                 </div>
             </div>
         </div>
+        <div class="close-base"></div>
     </nav>
     {*============Tablet Menu============*}
 
