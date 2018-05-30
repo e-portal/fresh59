@@ -398,6 +398,19 @@
                         </object>
                     </div>
                 </div>
+                <div class="just-buy">
+                    <div class="without-reg-prod">
+                        Купить без регистрации
+                    </div>
+                    <form>
+                        <div class="qweek-buy">
+                            <form action="">
+                                <input type="tel" class="numb" placeholder="Введите номер">
+                                <div class="buy-btn">Купить</div>
+                            </form>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     {else}

@@ -262,6 +262,10 @@
         width: 185px;
     }
 
+    .qweek-buy .buy-btn {
+        padding: 2px 11px 1px 12px;
+    }
+
     .qweek-busket-prodadd-to-cart .bask:after {
         right: 35px;
     }
@@ -434,6 +438,7 @@
 
     .qweek-buy {
         width: 180px;
+        margin: 0 auto;
     }
 
     .qweek-buy input {

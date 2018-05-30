@@ -17,13 +17,14 @@
         width: 50%;
     }
 
+
     .basket-two-column {
         flex-wrap: wrap;
         flex-direction: column-reverse;
     }
     .basket-two-column > div {
         width: 100%;
-        margin-bottom: 30px;
+        margin-bottom: 100px;
     }
     .left-right {
         flex-wrap: wrap;
