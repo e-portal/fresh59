@@ -461,7 +461,6 @@ jQuery(document).ready(function () {
             options.searchPhrase = $(this).val();
 
 
-            console.log(342433);
             var modal = $(options.modal);
             var modal_ = $(options.modal_error_class);
             if (modal.hasClass(options.modal_error_class)) {
@@ -645,6 +644,7 @@ jQuery(document).ready(function () {
     // })(jQuery);
 
 
+
     /********************************************************/
 
 
@@ -662,6 +662,8 @@ jQuery(document).ready(function () {
                 $(this).html('Еще');
             }
         });
+
+        $('.form-search').after($('.search-list'));
     }
 
 
@@ -1593,6 +1595,7 @@ $(document).ready(function () {
 
 
     function validform_1() {
+        $('.container .wrap .take-order a.acty,.container .wrap .take-order input').addClass('btn-dissable');
         form.change(function () {
             form.each(function () {
                 var fullname = $('.basket-two-column #fullname').val().length > 3;
@@ -1613,9 +1616,9 @@ $(document).ready(function () {
                 if (mail_order && fullname && phone_order && city_order &&
                     $('.step2-hidden input').is(':checked') &&
                     $('.step3-hidden input').is(':checked')) {
-                    $('.container .wrap .take-order a.acty,.container .wrap .take-order input').removeClass('btn-dissable')
+                    $('.container.wrap .take-order a.acty,.container .wrap .take-order input').removeClass('btn-dissable')
                 } else {
-                    $('.container .wrap .take-order a.acty,.container .wrap .take-order input').addClass('btn-dissable')
+                    $('.container.wrap .take-order a.acty,.container .wrap .take-order input').addClass('btn-dissable')
                 }
             })
         })
