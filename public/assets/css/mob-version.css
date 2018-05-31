@@ -2200,6 +2200,11 @@
     .popup-baskets .popup-content {
         width: 80%;
     }
+
+    .take-without .qweek-buy input {
+        padding: 9px 22px 10px;
+
+    }
 }
 
 @media screen and (max-width: 826px)  {
@@ -2285,6 +2290,8 @@
     .most-item-sale .most-item:nth-child(2),
     .hedd,
     .menu,
+    .close-base,
+    .close-base.mobile-menu-all,
     .banny .khob,
     .banny .ad-blue,
     .item-foot:nth-child(2),
@@ -2367,7 +2374,6 @@
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         -o-box-shadow: none;
-        top: 0;
         transform: translateY(0px);
         width: 100%;
         overflow: auto;
@@ -2377,6 +2383,10 @@
 
     .mobile-display-none .base-menu ul {
         opacity: 1;
+    }
+
+    .base-menu .categ-menu ul.menu-0 li {
+        width: 100%;
     }
 
     .iteem-menu.mobile-menu-all nav {
@@ -2417,6 +2427,14 @@
 
     .iteem:nth-child(2) .inpp input {
         padding: 6.5px 0 6.5px 10px;
+    }
+
+    .iteem:nth-child(2) .inpp {
+        position: static;
+    }
+
+    .search-list {
+        width: calc(100% - 3px);
     }
 
     .bread-crumbs {
@@ -2483,7 +2501,7 @@
     }
 
     .parag .slick-list {
-        width: 77%;
+        width: 78%;
     }
 
     .liner {
@@ -2758,7 +2776,7 @@
     .watched-small .news,
     .news {
         left: 18px;
-        width: calc(100% - 36px);
+        width: calc(100% - 30px);
     }
 
     .senn-main .news span {
@@ -2816,15 +2834,16 @@
         padding-left: 20px;
     }
 
-    .guarantee-tree-column > div:last-child ul.long-list li {
-        width: inherit;
-    }
-
     .guarantee-tree-column > div:last-child ul.long-list li p,
     .one-content p,
     .text-icon-left-right p {
         font-size: 13px;
         line-height: 20px;
+    }
+
+    .guarantee-tree-column > div li,
+    .guarantee-tree-column > div:last-child ul.long-list li {
+        width: 100%;
     }
 
     /*--pod-category--*/
@@ -3091,7 +3110,7 @@
     .adree p {
         font-family: 'SFUIDisplay-Bold';
         font-size: 12px;
-        margin: 25px 0 5px;
+        margin: 20px 0 5px;
     }
 
     .call {
@@ -3359,11 +3378,6 @@
         font-size: 15px;
     }
 
-    .guarantee-tree-column > div li,
-    .guarantee-tree-column > div:last-child ul.long-list li {
-        width: 100%;
-    }
-
 }
 
 @media screen and (max-width: 500px) {
@@ -3448,6 +3462,11 @@
     .fresh {
         top: 14px;
         left: -6px;
+    }
+
+    .present {
+        width: 60px;
+        right: 7px;
     }
 }
 

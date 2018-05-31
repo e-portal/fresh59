@@ -362,6 +362,7 @@ jQuery(document).ready(function () {
             $(this).removeClass('mobile-menu-all');
             $('.mobile-display-none .base-menu').removeClass('mobile-menu-all');
             $('.burger').removeClass('active');
+            $('html, body').css('overflow', 'auto');
         });
 
 
