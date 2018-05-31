@@ -180,6 +180,8 @@ img {
 .slider-prod .slick-prev,
 .cheaper-slider .slick-prev{
     left: 0;
+    z-index: 5;
+
 }
 .cheaper-slider .slick-next,
 .slider-prod .slick-next {
@@ -868,6 +870,7 @@ img {
 }
 
 /*--------------end TABLE--------------*/
+
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     .basket-section > div {

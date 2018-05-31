@@ -2200,6 +2200,16 @@
         border: none;
     }
 
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        .qweek-buy input {
+            padding: 3px 0 3px 5px;
+        }
+
+        .qweek-buy .buy-btn {
+            margin-left: -3px;
+        }
+    }
+
     /* ------------popups----------------*/
     .popup-baskets .popup-content {
         width: 80%;
