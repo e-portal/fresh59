@@ -315,6 +315,7 @@
         left: auto;
     }
 }
+
 @media screen and (max-width: 1281px) {
     .menu-0 {
         width: 865px;
@@ -716,6 +717,18 @@
     }
     .three-column > div {
         width: 48%;
+    }
+
+    .basket-header div:first-child {
+        width: 46%;
+    }
+
+    .basket-header div {
+        padding: 10px 20px;
+    }
+
+    .take-without .qweek-buy {
+        margin-left: 50px;
     }
 }
 
