@@ -5441,9 +5441,14 @@ input:focus:-ms-input-placeholder { opacity: 0; }
         height: 47px;
     }
     .send {
-        height: 39px;
+        height: 35px;
     }
     .item-score:nth-child(3) .send {
         height: 51px;
+    }
+
+    .input-number-decrement,
+    .input-number-increment {
+        height: 31px;
     }
 }

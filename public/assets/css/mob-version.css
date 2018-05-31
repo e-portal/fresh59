@@ -734,6 +734,10 @@
     .take-without .qweek-buy {
         margin-left: 50px;
     }
+
+    .take-without .qweek-buy {
+        margin-left: 70px;
+    }
 }
 
 @media screen and (min-width: 1025px) {
@@ -2296,7 +2300,8 @@
     .banny .ad-blue,
     .item-foot:nth-child(2),
     .item-foot:nth-child(3),
-    .item-foot:nth-child(4) .rights-security {
+    .item-foot:nth-child(4) .rights-security,
+    .slider-nav {
         display: none;
     }
 
@@ -3230,9 +3235,7 @@
     .slider-for {
         width: 100vw;
     }
-    .slider-nav {
-        display: none;
-    }
+
     .product-menu a {
         font-size: 10px;
     }

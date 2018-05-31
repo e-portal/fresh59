@@ -869,6 +869,18 @@ img {
 
 /*--------------end TABLE--------------*/
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .basket-section > div {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 70%;
+    }
+
+    .take-without .qweek-buy input {
+        padding: 9px 22px;
+    }
+}
+
 /*--------------REVIEW Question--------------*/
 .bonus.flexibal,
 .review-from div > span {
@@ -950,7 +962,7 @@ div.review-date > span {
 
 .popup-content {
     width: 70%;
-    height: 80%;
+    height: calc(80% - 20px);
     min-height: 200px;
     margin: 4%;
     position: relative;
@@ -1005,6 +1017,7 @@ div.review-date > span {
     width: 100%;
     height: 100%;
     z-index: 90;
+    left: 0;
     position: fixed;
     display: block;
     background: rgba(101, 101, 101, 0.5);
@@ -1186,8 +1199,9 @@ div.review-date > span {
 }
 
 .basket-prod-img {
-    width: 20%;
-    padding-right: 5%;
+    width: 60px;
+    /*width: 20%;*/
+    padding-right: 3%;
 }
 
 .basket-prod-img img {
@@ -1237,7 +1251,7 @@ div.review-date > span {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 20px 30px !important;
+    padding: 20px 30px 20px 10px !important;
 }
 
 .basket-back .bask {
@@ -1319,7 +1333,8 @@ div.review-date > span {
 .take-without .qweek-buy {
     width: 365px;
     font-size: 18px;
-    margin-left: 125px;
+    margin-left: 105px;
+    margin-right: 20px;
 }
 
 .take-without .qweek-buy input {
@@ -1337,6 +1352,7 @@ div.review-date > span {
     width: 100%;
     height: 31px;
     display: block;
+    cursor: pointer;
 }
 
 .basket-delete-icon::before {
@@ -1396,7 +1412,7 @@ div.review-date > span {
 }
 
 .input-number {
-    width: 20px;
+    width: 23px;
     padding: 0 12px;
     vertical-align: top;
     text-align: center;
