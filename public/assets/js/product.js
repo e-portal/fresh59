@@ -98,7 +98,15 @@ $(document).ready(function () {
             infinite: true,
             cssEase: 'linear',
             autoplay: true,
-            autoplaySpeed: 5000
+            autoplaySpeed: 5000,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        dots: false
+                    }
+                }
+            ]
         });
     }
 

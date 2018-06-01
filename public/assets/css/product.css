@@ -1176,7 +1176,8 @@ div.review-date > span {
 .basket-section::after {
     content: '';
     position: absolute;
-    width: calc(100% - 20px);
+    width: 100%;
+    /*width: calc(100% - 20px);*/
     height: 1px;
     border-bottom: 1px solid #dddddd;
     transition: .5s;
@@ -1498,8 +1499,9 @@ div.review-date > span {
 .basket-section-service::before  {
     content: '';
     position: absolute;
-    right: 20px;
-    width: calc(90% - 20px);
+    right: 0;
+    width: 92%;
+    /*width: calc(90% - 20px);*/
     border-top: 1px solid #ddd;
 
 }

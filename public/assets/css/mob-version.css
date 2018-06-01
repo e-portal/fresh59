@@ -1170,7 +1170,7 @@
     }
 
     .send {
-        height: 37px;
+        height: 35px;
     }
 
     .iteem:nth-child(2) {
@@ -1654,6 +1654,22 @@
     }
     .libe-slick .slick-next {
         right: -10px;
+    }
+
+    .articles .three-column > div {
+        width: 49%;
+    }
+
+    .one-article-date-btn {
+        justify-content: space-between;
+    }
+
+    .one-article {
+        margin-bottom: 15px;
+    }
+
+    .blocks-pagination {
+        margin: 25px auto;
     }
 
     /*------pod-category------*/
@@ -2204,7 +2220,6 @@
         .qweek-buy input {
             padding: 3px 0 3px 5px;
         }
-
         .qweek-buy .buy-btn {
             margin-left: -3px;
         }
@@ -2489,6 +2504,9 @@
         margin: 5px 0;
     }
 
+    .most-item-sale .most-item:nth-child(odd) {
+        margin-right: 0;
+    }
     .most-item-slider .most-item:nth-child(1) {
         height: 100%;
     }
@@ -2776,8 +2794,12 @@
 
     .maii .item-senn:nth-child(2) .sench,
     .sench {
-        padding: 20px 16px;
+        padding: 20px 16px 0;
         width: calc(100% - 32px);
+    }
+
+    .maii .slick-slide {
+        margin: 9px 0 20px;
     }
 
     .slick-ipad .otzv {
@@ -2822,6 +2844,10 @@
 
     .hate .ityy:nth-child(2) {
         display: none;
+    }
+
+    .hate .news {
+        left: 26px;
     }
 
     .ityy {
@@ -2905,7 +2931,8 @@
 
     .under-senn .item-senn,
     .under-senn .item-senn:nth-child(4),
-    .under-senn .item-senn:nth-child(6) {
+    .under-senn .item-senn:nth-child(6),
+    .under-senn .item-senn:nth-child(7) {
         height: 350px;
         width: 100%;
     }
@@ -3441,6 +3468,10 @@
         right: 4px;
     }
 
+    .hate .news {
+        left: 18px;
+    }
+
     .times {
         margin: 25px 0 0 0;
     }
@@ -3476,10 +3507,27 @@
         top: 14px;
         left: -6px;
     }
-
     .present {
         width: 60px;
         right: 7px;
+    }
+
+    .yellow-button {
+        height: 30px;
+        font-size: 11px;
+        padding: 0 13px;
+    }
+
+    .bonus.flexibal {
+        font-size: 13px;
+    }
+
+    .parag {
+        height: 65px;
+    }
+
+    .parag .slick-list {
+        width: 79%;
     }
 }
 
@@ -3586,14 +3634,10 @@
         height: 300px;
     }
 
-    .yellow-button {
-        height: 30px;
-        font-size: 11px;
-        padding: 0 13px;
+    .parag .slick-list {
+        width: 78%;
     }
-    .bonus.flexibal {
-        font-size: 13px;
-    }
+
 }
 
 @media screen and (max-width: 380px) {
