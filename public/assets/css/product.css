@@ -1116,6 +1116,7 @@ div.review-date > span {
 }
 .basket-table {
     display: table;
+    width: 100%;
 }
 
 .basket-header {
@@ -1193,7 +1194,9 @@ div.review-date > span {
 }
 
 .basket-section > div {
-    display: table-row;
+    /*display: table-row;*/
+    display: table;
+    width: 100%;
 }
 
 .basket-prod.flexibal {

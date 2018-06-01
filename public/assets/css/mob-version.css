@@ -292,6 +292,17 @@
         width: 252px;
     }
 
+    .all-sale .right-banner .khob,
+    .articles .right-banner .khob {
+        padding: 0 23px 0 13px;
+        height: 36px;
+        font-size: 12px;
+    }
+
+    .right-banner .khob::after {
+        right: 11px;
+    }
+
     @supports (-ms-ime-align:auto) {
         .qweek-buy input {
             padding: 4px 0 5px 5px;
@@ -310,9 +321,11 @@
         padding: 0 15px;
     }
 
-    .all-sale .right-banner .khob, .articles .right-banner .khob {
+    .all-sale .right-banner .khob,
+    .articles .right-banner .khob {
         bottom: 0;
         left: auto;
+        width: 123px;
     }
 }
 
@@ -473,21 +486,12 @@
         margin: 0 70px 0 0;
     }
 
-    .right-banner .khob::after {
-        right: 11px;
-    }
-
     .right-banner .one-article-date-btn .date, .right-banner .one-article-date-btn .rewiev {
         font-size: 11px;
         padding-left: 20px;
     }
 
-    .all-sale .right-banner .khob,
-    .articles .right-banner .khob {
-        padding: 0 23px 0 13px;
-        height: 36px;
-        font-size: 12px;
-    }
+
 
 }
 
@@ -1117,7 +1121,18 @@
         color: #fbd402;
     }
 
+    .basket-two-column .basket-first-column {
+        margin-bottom: 20px;
+    }
 
+    .basket-two-column .basket-last-column {
+        margin-bottom: 100px;
+    }
+
+    .just-buy .qweek-buy input {
+        font-size: 13px;
+        padding: 4px 0 5px 11px;
+    }
 
     .formu input,
     .inpp input,
@@ -1663,7 +1678,6 @@
     .one-article-date-btn {
         justify-content: space-between;
     }
-
     .one-article {
         margin-bottom: 15px;
     }
@@ -3517,7 +3531,6 @@
         font-size: 11px;
         padding: 0 13px;
     }
-
     .bonus.flexibal {
         font-size: 13px;
     }

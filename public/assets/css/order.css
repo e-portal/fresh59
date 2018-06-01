@@ -119,6 +119,7 @@
     padding: 10px 20px;
     line-height: 20px;
     margin-bottom: 30px;
+    margin-top: 0;
 }
 .order input.empty_field,.order select.empty_field {
     border: 1px solid #bc503e;
@@ -341,7 +342,7 @@
 input.bask {
     background: #fbd402;
     font-family: 'SFUIDisplay-Medium';
-    border: 1px solid #fbd402;
+    border: none;
 }
 
 .btn-dissable,.order input.btn-dissable  {
