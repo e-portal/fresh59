@@ -776,7 +776,7 @@ img {
 .tab-contents.is-active .tab-contents-wrap {
     margin-top: 0;
     opacity: 1;
-    animation: tabUp .5s ease;
+    /*animation: tabUp .5s ease;*/
 }
 
 @keyframes tabUp {
