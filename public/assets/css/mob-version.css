@@ -1,3 +1,9 @@
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    .tab-contents.is-active .tab-contents-wrap {
+        animation: none;
+    }
+}
+
 @media screen and (max-width: 1601px) {
     .title-slide.active-slide {
         -webkit-box-shadow: -15px 10px 25px 3px rgba(255, 255, 255, 1);
@@ -22,6 +28,18 @@
 
     .head-item:nth-child(2) {
         padding: 0 55px;
+    }
+
+    .katal:after {
+        width: 18px;
+    }
+
+    .menu-0 {
+        width: 1010px;
+    }
+
+    .base-menu .categ-menu ul.menu-0 li {
+        width: 336px;
     }
 
     .next-menu ul li a {
@@ -119,6 +137,13 @@
 
     .right-times {
         margin: 0 0 0 10px;
+    }
+
+    .small-product .blue:after,
+    .seap .blue:after,
+    .senn .blue:after,
+    .owls .blue:after {
+        top: 1px;
     }
 
     .owl {
@@ -302,6 +327,17 @@
     .right-banner .khob::after {
         right: 11px;
     }
+
+    .interest-slide .clock p {
+        font-size: 12px;
+        margin: 5px 0;
+    }
+
+    .interest-slide .items h4 {
+        height: 60px;
+        overflow: hidden;
+    }
+
 
     @supports (-ms-ime-align:auto) {
         .qweek-buy input {
@@ -1124,7 +1160,6 @@
     .basket-two-column .basket-first-column {
         margin-bottom: 20px;
     }
-
     .basket-two-column .basket-last-column {
         margin-bottom: 100px;
     }

@@ -3672,7 +3672,7 @@ ul#selectsMenuBoxi > li.options:hover {
     -webkit-transition: border .25s linear;
     z-index: -1;
     left: 0;
-    top: 7px;
+    top: 9px;
 }
 
 .opti ul li a,
@@ -5423,6 +5423,10 @@ ul.nacc .tabs-saw p {
     width: 100%;
 }
 
+.tab-contents-wrap p:first-child {
+    margin-top: 0;
+}
+
 
 
 input::placeholder { font-family: 'SF-UI-Display-Regular'; }
@@ -5452,3 +5456,4 @@ input:focus:-ms-input-placeholder { opacity: 0; }
         height: 31px;
     }
 }
+
