@@ -1,9 +1,18 @@
 $(document).ready(function () {
+    if (window.matchMedia("(max-width: 767px)").matches) {
+        function appentTOOO() {
 
+            // $('.basket-prod-number').after($('.basket-bonus'));
+            // $('.basket-prod-number').before($('.prod-price-total'));
+            $('.basket-bonus').appendTo('.basket-prod-number');
+
+        }
+    }
     /*click on cart-button*/
     $('.add-to-cart').bind('click', doObject);
     $('.add-to-cart').bind('click', function () {
         /*stop scroll*/
+        appentTOOO()
         if (window.matchMedia('(max-width: 1025px)').matches) {
             $('html, body').css('overflow', 'hidden');
         } else {
@@ -168,6 +177,7 @@ $(document).ready(function () {
     /*---------autorisation---------*/
 
 
+
     // $('.pipl').click(function () {
     //     $('.autorisation').css('display', 'flex');
     //     /*stop scroll*/
@@ -182,7 +192,7 @@ $(document).ready(function () {
     //     $('.close').addClass('show');
     //
     // });
-    
+
     $('.login-popup').click(function () {
         autorize = $(this);
         $('.autorisation').css('display', 'flex');
@@ -294,7 +304,10 @@ $(document).ready(function () {
             totalPrice += parseInt($(this).html());
         });
 
-
+        // priseServ = 0;
+        // $('чекнутый').each(function () {
+        //     priseServ += $(цена).html();
+        // });
 
         $('.count-total').html(totalPrice);
         // window.localStorage.setItem('basket', JSON.stringify(basket));
