@@ -2,9 +2,44 @@
     .tab-contents.is-active .tab-contents-wrap {
         animation: none;
     }
+
+    .formu input,
+    .inpp input,
+    .info .inpp input,
+    .qweek-buy input {
+        font-family: sans-serif;
+    }
+
+    .inpp input {
+        padding: 8px 0 9px 27px;
+    }
+
+    .take-without .qweek-buy input {
+        padding: 9px 22px 10px;
+    }
+
+    .qweek-buy input {
+        padding: 4px 0 5px 11px;
+    }
+
+    .basket-section:hover {
+        box-shadow: 0 0 3px 5px rgba(30, 30, 30, .1);
+        -webkit-box-shadow: 0 0 3px 5px rgba(30, 30, 30, .1);
+        -moz-box-shadow: 0 0 3px 5px rgba(30, 30, 30, .1);
+    }
+
+    .accordion .title_block:before {
+        width: 28px;
+        height: 28px;
+    }
+
 }
 
 @media screen and (max-width: 1601px) {
+    .send:hover {
+        z-index: 5;
+    }
+
     .title-slide.active-slide {
         -webkit-box-shadow: -15px 10px 25px 3px rgba(255, 255, 255, 1);
         -moz-box-shadow: -15px 10px 25px 3px rgba(255, 255, 255, 1);
@@ -20,10 +55,19 @@
     @supports (-ms-ime-align:auto)  {
         .time-work { font-size: 12px }
         .head-item:nth-child(2) {padding: 0 25px;}
+
+        .inpp input {
+            width: 270px
+        }
     }
 
     .search-result {
         padding: 14px 10px;
+    }
+
+    .faux-select:before {
+        width: 8px;
+        height: 6px;
     }
 
     .head-item:nth-child(2) {
@@ -102,7 +146,7 @@
     }
 
     .left-butt > span, .right-butt > span {
-        margin: 0 0 0 30px;
+        margin: 0 0 0 40px;
     }
 
     .slick-slider .sench {
@@ -138,6 +182,7 @@
     .right-times {
         margin: 0 0 0 10px;
     }
+
 
     .small-product .blue:after,
     .seap .blue:after,
@@ -230,6 +275,7 @@
     .right-banner .one-article-date-btn .rewiev {
         font-size: 12px;
     }
+
 
 }
 
@@ -327,7 +373,6 @@
     .right-banner .khob::after {
         right: 11px;
     }
-
     .interest-slide .clock p {
         font-size: 12px;
         margin: 5px 0;
@@ -336,6 +381,10 @@
     .interest-slide .items h4 {
         height: 60px;
         overflow: hidden;
+    }
+
+    .left-butt > span, .right-butt > span, .look-for {
+        margin-left: 30px;
     }
 
 
@@ -1156,6 +1205,7 @@
     .base-menu ul.mob-next-menu li:hover {
         color: #fbd402;
     }
+
 
     .basket-two-column .basket-first-column {
         margin-bottom: 20px;
@@ -2194,6 +2244,12 @@
         margin-top: 0;
     }
 
+    .payment ul.long-list {
+        display: block;
+        font-size: 14px;
+
+    }
+
     .guarantee-tree-column > div li p {
         line-height: 21px;
         font-size: 13px;
@@ -2319,6 +2375,10 @@
 
     .take-without {
         padding: 0 30px 0 10px;
+    }
+
+    .tab-button li {
+        font-size: 11.5px;
     }
 }
 
@@ -3113,6 +3173,11 @@
         margin-top: 47px;
     }
 
+    .payment .tab-button li {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
     /*------footer--------*/
     .footers {
         height: 522px;
@@ -3257,6 +3322,11 @@
         width: -webkit-fill-available;
         width: available;
         width: -moz-available;
+    }
+
+    #popup .popup-block,
+    #popup .popup-block:last-child {
+        padding-left: 0;
     }
 }
 
@@ -3793,6 +3863,10 @@
     }
     .tab-button li {
         font-size: 13px;
+    }
+
+    .payment .tab-button li {
+        font-size: 11px;
     }
     .tab-contents {
         width: calc(100% - 20px);
