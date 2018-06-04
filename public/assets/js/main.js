@@ -666,8 +666,8 @@ jQuery(document).ready(function () {
 
         $('.form-search').after($('.search-list'));
 
-        $('.basket-prod-number').after($('.basket-bonus'));
-        $('.basket-prod-number').before($('.prod-price-total'));
+        $('.basket-prod-number').parents($('.basket-section-prod')).after($('.basket-bonus'));
+        $('.basket-prod-number').parent().before($('.prod-price-total'));
 
     }
 
