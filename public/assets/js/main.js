@@ -665,6 +665,10 @@ jQuery(document).ready(function () {
         });
 
         $('.form-search').after($('.search-list'));
+
+        $('.basket-prod-number').after($('.basket-bonus'));
+        $('.basket-prod-number').before($('.prod-price-total'));
+
     }
 
 

@@ -3371,7 +3371,8 @@
         margin: 7px auto 0;
     }
 
-    .basket-header {
+    .basket-header,
+    .basket-section-prod .basket-price {
         display: none;
     }
 
@@ -3455,6 +3456,17 @@
         width: 23%;
     }
 
+    basket-prod-name {
+        font-family: 'SFUIDisplay-Bold';
+        font-size: 13px;
+        line-height: 15px;
+    }
+
+    .basket-bonus {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
     .total-section {
         flex-wrap: wrap;
         justify-content: center;
@@ -3470,6 +3482,11 @@
 
     .total-take .total {
         margin-right: 0;
+    }
+
+    .take-order {
+        text-align: center;
+        align-items: center;
     }
 
     .take-without {
@@ -3488,6 +3505,10 @@
 
     .take-without .qweek-buy .buy-btn {
         padding: 6px 22px 7px;
+    }
+
+    .total-section .bask {
+        width: 120px;
     }
 
     .popup .smaller-liner {
