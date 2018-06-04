@@ -14,6 +14,7 @@
 .basket-last-column {
     border: 1px solid #d7d7d7;
     border-radius: 25px;
+    margin-bottom: 100px;
 }
 
 .without-icon::after {
@@ -93,6 +94,7 @@
 
 .order textarea {
     resize: vertical;
+    overflow: auto;
 }
 
 .order label {
@@ -116,6 +118,7 @@
     border: 1px solid #e6e6e6;
     border-radius: 25px;
     background: #f9f9f9;
+    color: #313e49;
     padding: 10px 20px;
     line-height: 20px;
     margin-bottom: 30px;
@@ -193,10 +196,16 @@
 }
 
 .order input[type="radio"]:checked + label::before {
-    background: #000;
-    -webkit-box-shadow: inset 0 0 0 4.5px rgba(255, 255, 255, 1);
-    -moz-box-shadow: inset 0 0 0 4.5px rgba(255, 255, 255, 1);
-    box-shadow: inset 0 0 0 4.5px rgba(255, 255, 255, 1);
+    box-shadow: inset 0 0 0 4px #f4f4f4;
+    -webkit-box-shadow: inset 0 0 0 4px #f4f4f4;
+    -moz-box-shadow: inset 0 0 0 4px #f4f4f4;
+    border-color: #b4b4b4;
+    background: #b4b4b4;
+
+    /*background: #000;*/
+    /*-webkit-box-shadow: inset 0 0 0 4.5px rgba(255, 255, 255, 1);*/
+    /*-moz-box-shadow: inset 0 0 0 4.5px rgba(255, 255, 255, 1);*/
+    /*box-shadow: inset 0 0 0 4.5px rgba(255, 255, 255, 1);*/
 }
 
 /*--------------end Checkbox--------------*/

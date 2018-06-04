@@ -13,7 +13,6 @@
     .inpp input {
         padding: 8px 0 9px 27px;
     }
-
     .take-without .qweek-buy input {
         padding: 9px 22px 10px;
     }
@@ -38,6 +37,11 @@
 @media screen and (max-width: 1601px) {
     .send:hover {
         z-index: 5;
+    }
+
+    .order .numb {
+        font-family: sans-serif;
+        font-weight: 700;
     }
 
     .title-slide.active-slide {
@@ -147,6 +151,15 @@
 
     .left-butt > span, .right-butt > span {
         margin: 0 0 0 40px;
+    }
+
+    .maii-item .left-butt > span,
+    .maii-item .right-butt > span {
+        margin: 0 0 0 20px;
+    }
+
+    .hate .news {
+        left: 30px;
     }
 
     .slick-slider .sench {
@@ -315,6 +328,19 @@
         top: -6px;
     }
 
+    .menu-0 {
+        width: 855px;
+    }
+
+    ul.menu-0 li {
+        width: 285px;
+    }
+
+    .base-menu .categ-menu .menu-0 li a {
+        padding: 10px;
+        font-size: 13px;
+    }
+
     .head-item:nth-child(3) {
         width: 370px;
     }
@@ -385,6 +411,14 @@
 
     .left-butt > span, .right-butt > span, .look-for {
         margin-left: 30px;
+    }
+
+    .order label {
+        margin-left: 8px;
+    }
+
+    .black-link {
+        font-size: 13px;
     }
 
 
@@ -469,6 +503,11 @@
 
     .left-butt > span {
         margin: 0 0 0 20px;
+    }
+
+    .hate-item .left-butt span:after,
+    .hate-item .right-butt span:after {
+        top: auto;
     }
 
     .circ {
@@ -1209,9 +1248,6 @@
 
     .basket-two-column .basket-first-column {
         margin-bottom: 20px;
-    }
-    .basket-two-column .basket-last-column {
-        margin-bottom: 100px;
     }
 
     .just-buy .qweek-buy input {
@@ -3173,6 +3209,7 @@
         margin-top: 47px;
     }
 
+
     .payment .tab-button li {
         font-size: 12px;
         line-height: 20px;
@@ -3327,6 +3364,94 @@
     #popup .popup-block,
     #popup .popup-block:last-child {
         padding-left: 0;
+    }
+
+    /*---------корзина----------*/
+    .popup .basket-table {
+        width: 100%;
+        margin: 0;
+    }
+
+    .basket-header {
+        display: none;
+    }
+
+    .basket-section > div {
+        display: flex;
+        width: 100%;
+    }
+
+    .flexibal {
+        flex-direction: column;
+    }
+
+    .basket-prod.flexibal {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .basket-prod-img {
+        max-width: 95px;
+        width: 30%;
+        padding-right: 3%;
+    }
+
+    .basket-prod-text {
+        width: 47%;
+    }
+
+    .basket-section > div > div {
+        text-align: left;
+        vertical-align: middle;
+        width: 66%;
+        padding-left: 33%;
+    }
+
+    .input-number-wrap {
+        margin: 0;
+    }
+
+    .basket-delete {
+        position: absolute;
+        right: 20px;
+        width: 35px;
+        padding: 0;
+    }
+
+    .basket-delete-icon::before {
+        left: auto;
+    }
+
+    .basket-section-prod > div {
+        padding: 0;
+    }
+
+    .basket-header div,
+    .basket-section-prod > div,
+    .basket-section-gift > div,
+    .basket-section-service > div {
+        padding: 10px 0;
+    }
+
+    .basket-section-gift .basket-prod.flexibal {
+        padding-left: 0;
+    }
+
+    .basket-section-gift .basket-prod-img {
+        width: 10%;
+    }
+
+    .basket-gift {
+        width: 84%;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .basket-section-gift .basket-gift .basket-prod-img {
+        max-width: 65px;
+        width: 23%;
     }
 }
 
