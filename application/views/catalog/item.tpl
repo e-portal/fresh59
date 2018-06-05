@@ -560,11 +560,11 @@
                 <div class="tabs tabs-review" id="prod-reviews">
                     <div class="tab-button-outer" id="prod-questions">
                         <ul class="tab-button">
-                            <li><a href="#tab11">Отзывы <span>  ({$comments|@count})</span></a></li>
+                            <li class="tab-review"><a href="#tab11">Отзывы <span>  ({$comments|@count})</span></a></li>
                             <li class="tab-quest"><a href="#tab12">Вопросы и ответы <span>  (8)</span></a></li>
                         </ul>
                     </div>
-                    <div id="tab11" class="tab-contents is-active">
+                    <div id="tab11" class="tab-contents is-active tab-review">
                         <div class="tab-contents-wrap">
                             <div class="tab-section flexibal flex-between">
                                 <div class="bonus flexibal">

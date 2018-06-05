@@ -319,7 +319,12 @@ jQuery(document).ready(function () {
                     {
                         breakpoint: 768,
                         settings: {
-                            slidesToShow: 2,
+                            slidesToShow: 3
+
+                        },
+                        breakpoint: 500,
+                        settings: {
+                            slidesToShow: 2
 
                         }
                     }],
@@ -496,7 +501,7 @@ jQuery(document).ready(function () {
                                     <div class="search-result__content-top">\
                                         <h5 class="search-result__name">' + i.category + ' ' + i.brand + ' ' + i.name + '</h5>\
                                     </div>\
-                                    <p class="search-result__coast">2500 грн</p> \
+                                    <p class="search-result__coast">' + i.price + '</p> \
                                 </div>\
                             </div>\
                         </a> </div> \
@@ -666,8 +671,16 @@ jQuery(document).ready(function () {
 
         $('.form-search').after($('.search-list'));
 
-        $('.basket-prod-number').parents($('.basket-section-prod')).after($('.basket-bonus'));
-        $('.basket-prod-number').parent().before($('.prod-price-total'));
+        // $('.basket-prod-number').parents($('.basket-section-prod')).after();
+        // $('.basket-prod-number').parent().before($('.prod-price-total'));
+        // $('.qweek-busket-prod').click(function () {
+        //     setTimeout(function () {
+        //
+        //     },5000)
+        //
+        // })
+
+
 
     }
 

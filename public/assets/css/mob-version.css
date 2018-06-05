@@ -2358,7 +2358,7 @@
 
     @media screen and (-webkit-min-device-pixel-ratio: 0) {
         .qweek-buy input {
-            padding: 3px 0 3px 5px;
+            padding: 4px 0 5px 5px;
         }
         .qweek-buy .buy-btn {
             margin-left: -3px;
@@ -2730,6 +2730,10 @@
         letter-spacing: 0;
     }
 
+    .parag .slick-list {
+        padding: 0;
+    }
+
     .khob:after {
         right: 20px;
         background: url(../img/rigs-mini.png) center no-repeat;
@@ -2899,7 +2903,7 @@
     .slick-ipad .slick-prev,
     .slick-ipad .slick-next {
         position: absolute;
-        top: 46.8%;
+        top: 48.5%;
     }
 
     .slick-ipad .slick-next {
@@ -3107,7 +3111,7 @@
     }
 
     .under-senn .itee {
-        height: 30px;
+        height: 38px;
     }
 
     .under-senn .present {
@@ -3211,7 +3215,6 @@
 
     .payment .tab-button li {
         font-size: 12px;
-        line-height: 20px;
     }
 
     /*------footer--------*/
@@ -3456,7 +3459,7 @@
         width: 23%;
     }
 
-    basket-prod-name {
+    .basket-prod-name {
         font-family: 'SFUIDisplay-Bold';
         font-size: 13px;
         line-height: 15px;
@@ -3833,6 +3836,35 @@
 
     .parag .slick-list {
         width: 79%;
+    }
+
+    .payment .tab-button li {
+        line-height: 20px;
+    }
+
+    .guarantee .table-grey-border {
+        min-width: 580px;
+    }
+
+    .table-guarant {
+        overflow-x: auto;
+    }
+
+    .table-grey-border tr > td:first-child {
+        padding: 10px;
+    }
+
+    .table-grey-border thead,
+    .table-grey-border thead td,
+    .table-grey-border td,
+    .table-grey-border td p,
+    .table-grey-border td li {
+        font-size: 11px;
+        line-height: 15px;
+    }
+
+    td p {
+        margin: 5px 0;
     }
 }
 

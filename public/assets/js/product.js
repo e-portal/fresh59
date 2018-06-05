@@ -162,13 +162,20 @@ $(document).ready(function () {
         $('.tabs-review .tab-contents').css('display', 'none');
         $('.tab-quest').css('display', 'block');
     });
+    $('.product-menu a[href^="#prod-reviews"]').click(function () {
+        $('.tabs-review li').removeClass('is-active');
+        $('.tabs-review .tab-contents').removeClass('is-active');
+        $('.tab-review').addClass('is-active');
+        $('.tabs-review .tab-contents').css('display', 'none');
+        $('.tab-review').css('display', 'block');
+    });
     $('.product-menu a[href^="#"]').click(function () {
         $('.product-menu a').removeClass('active');
         $(this).addClass('active');
         var target = $(this).attr('href');
         $('.product-menu a[href^="#prod-questions"]');
         if ($('.product-menu a[href^="#prod-accessories"]')) {
-            $('html, body').animate({scrollTop: $(target).offset().top}, 800);
+            $('html, body').animate({scrollTop: $(target).offset().top - 190}, 800);
         } else {
             $('html, body').animate({scrollTop: $(target).offset().top - 190}, 800);
         }
