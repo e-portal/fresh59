@@ -457,7 +457,7 @@ jQuery(document).ready(function () {
     (function ($) {
         $('.header-bottom__input').bind('keyup', function () {
             var options = {
-                url: 'https://590.ua/catalog/autocomplete',
+                url: '//590.ua/catalog/autocomplete',
                 minLength: 2,
                 modal: ".search-list__item_",
                 modal_error_class: ".search_ren",
