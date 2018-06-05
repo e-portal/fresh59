@@ -457,7 +457,7 @@ jQuery(document).ready(function () {
     (function ($) {
         $('.header-bottom__input').bind('keyup', function () {
             var options = {
-                url: '/catalog/autocomplete',
+                url: 'https://590.ua/catalog/autocomplete',
                 minLength: 2,
                 modal: ".search-list__item_",
                 modal_error_class: ".search_ren",
@@ -501,7 +501,7 @@ jQuery(document).ready(function () {
                                     <div class="search-result__content-top">\
                                         <h5 class="search-result__name">' + i.category + ' ' + i.brand + ' ' + i.name + '</h5>\
                                     </div>\
-                                    <p class="search-result__coast">' + i.price + '</p> \
+                                    <p class="search-result__coast">' + i.price + ' грн.</p> \
                                 </div>\
                             </div>\
                         </a> </div> \
