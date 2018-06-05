@@ -92,8 +92,8 @@ jQuery(document).ready(function () {
 
 
     $('.modalbox').click(function () {
-        $('.popup-question').css('display', 'block')
-        $("html, body").css('overflow', 'hidden')
+        $('.popup-question').css('display', 'block');
+        $("html, body").css({'overflow': 'hidden', 'height': '100%'})
     });
 
 
@@ -105,7 +105,7 @@ jQuery(document).ready(function () {
 
     $(".close, .close-question").click(function () {
         $(this).parents('.popup-question').css('display', 'none');
-        $("html, body").css('overflow', 'visible')
+        $("html, body").css({'overflow': 'visible', 'height': 'auto'})
     });
 
     $('.filter-open').click(function () {
@@ -501,7 +501,7 @@ jQuery(document).ready(function () {
                                     <div class="search-result__content-top">\
                                         <h5 class="search-result__name">' + i.category + ' ' + i.brand + ' ' + i.name + '</h5>\
                                     </div>\
-                                    <p class="search-result__coast">' + i.price + ' грн.</p> \
+                                    <p class="search-result__coast">2500 грн</p> \
                                 </div>\
                             </div>\
                         </a> </div> \

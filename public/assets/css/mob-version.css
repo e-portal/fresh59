@@ -66,7 +66,7 @@
     }
 
     .search-result {
-        padding: 14px 10px;
+        padding: 4px 10px 14px;
     }
 
     .faux-select:before {
@@ -294,6 +294,15 @@
 @media screen and (max-width: 1367px) {
     .search-result__name {
         font-size: 13px;
+        display: inline;
+    }
+
+    .search-result__content {
+        min-height: 60px;
+    }
+
+    .search-result__coast {
+        margin-top: 0;
     }
     .most-item-slider .most-item:nth-child(2),
     .most-item-slider .most-item:nth-child(3) {
@@ -2730,6 +2739,7 @@
         letter-spacing: 0;
     }
 
+
     .parag .slick-list {
         padding: 0;
     }
@@ -3146,6 +3156,7 @@
 
     .blocks-pagination a, .blocks-pagination span {
         margin: 0 auto;
+        margin-left: 0;
     }
 
     .blocks-pagination .blocks-pagination-empty {
@@ -3865,6 +3876,10 @@
 
     td p {
         margin: 5px 0;
+    }
+
+    .articles .one-article-date-btn .khob {
+        display: none;
     }
 }
 
