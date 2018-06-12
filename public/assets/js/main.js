@@ -126,7 +126,7 @@ jQuery(document).ready(function () {
     });
 
     $('.under-forms li').on('click', function () {
-        $('.check').parents().toggleClass('active');
+        $('.check').parent().toggleClass('active');
         $('.checkbox').parent().toggleClass('active');
     });
 
@@ -1321,8 +1321,11 @@ $(".legg").click(function () {
     if ($(this).parents('.brand').hasClass('active')) {
         $(this).parents('.brand').removeClass('active');
         $(this).parents('.brand').height(short);
+    } else {
+        $(this).parents('.brand').addClass('active');
+        $(this).parents('.brand').height(full);
     }
-    else {
+    if ($('.checkbox').hasClass('active')) {
         $(this).parents('.brand').addClass('active');
         $(this).parents('.brand').height(full);
     }
