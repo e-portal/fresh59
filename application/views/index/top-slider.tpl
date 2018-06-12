@@ -21,14 +21,11 @@
         </div>
 
         <div class="most-item slick">
-            {foreach from=$footer_news item=article key=key name=news}
-                {if 5 <= $smarty.foreach.news.index && 10 > $smarty.foreach.news.index}
-                    <a {if strlen($article.ext_url)> 0 && strpos($article.ext_url,'ucenka')>0}rel='nofollow'{/if}
-                       href="{if strlen($article.ext_url) > 0}{$article.ext_url}{else}/news/{$article.url}{/if}">
-                        <img src="/uploads/{$article.big_img}" alt="{$article.name|htmlspecialchars}"
-                             title="{$article.name|htmlspecialchars}">
+            {foreach from=$topSlider item=topSlide}
+                <a href="{$topSlide->link}">
+                    <img src="{$topSlide->image}" alt="{$topSlide->name|htmlspecialchars}"
+                         title="{$topSlide->name|htmlspecialchars}">
                     </a>
-                {/if}
             {/foreach}
         </div>
 
