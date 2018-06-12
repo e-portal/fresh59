@@ -261,7 +261,7 @@
                                             <a href="/articles/{$article.url|mblower}">
 
                                                 {if $article.picture}
-                                                    <img src="/assets/img/articles/{$article.picture}">
+                                                    <img src="{*/assets/img/articles/*}{$article.picture}">
                                                 {else}
                                                     <img src="/assets/img/noimage.png">
                                                 {/if}

@@ -27,7 +27,7 @@
 
                             {if $article.picture }
                                 <div class="one-article-img">
-                                    <img src="/assets/img/articles/{$article.picture}">
+                                    <img src="{*/assets/img/articles/*}{$article.picture}">
                                 </div>
                             {else}
                                 <div class="one-article-img">
