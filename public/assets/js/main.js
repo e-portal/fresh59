@@ -125,6 +125,11 @@ jQuery(document).ready(function () {
         $('.options', this).toggleClass('open');
     });
 
+    $('.under-forms li').on('click', function () {
+        $('.check').parents().toggleClass('active');
+        $('.checkbox').parent().toggleClass('active');
+    });
+
 
     if ($('.watched-small').length) {
         $('.watched-small').slick({

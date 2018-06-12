@@ -5427,7 +5427,14 @@ ul.nacc .tabs-saw p {
     margin-top: 0;
 }
 
+.under-forms .check.active:before {
+    background: #fbd402;
+}
 
+.under-forms .checkbox.active {
+    font-family: 'SFUIDisplay-Bold';
+    letter-spacing: .4px;
+}
 
 
 input::placeholder { font-family: 'SF-UI-Display-Regular'; }
