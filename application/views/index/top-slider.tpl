@@ -52,16 +52,14 @@
 
     <div class="most-item-sale">
 
-        {foreach from=$footer_news item=article key=key name=news}
-            {if ($smarty.foreach.news.total-4 <= $smarty.foreach.news.index)}
+        {foreach from=$staticBanner item=staticSlide}
+
                 <div class="most-item">
-                    <a {if strlen($article.ext_url)> 0 && strpos($article.ext_url,'ucenka')>0}rel='nofollow'{/if}
-                       href="{if strlen($article.ext_url) > 0}{$article.ext_url}{else}/news/{$article.url}{/if}">
-                        <img src="/uploads/{$article.big_img}" alt="{$article.name|htmlspecialchars}"
-                             title="{$article.name|htmlspecialchars}">
+                    <a href="{$staticSlide->link}">
+                        <img src="{$staticSlide->image}" alt="{$staticSlide->name}"
+                             title="{$staticSlide->name}">
                     </a>
                 </div>
-            {/if}
         {/foreach}
 
     </div>
