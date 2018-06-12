@@ -29,20 +29,12 @@
             {/foreach}
         </div>
 
-
         <div class="most-item slick">
-            {foreach from=$footer_news item=article key=key name=news}
-                {if 10 <= $smarty.foreach.news.index && 15 > $smarty.foreach.news.index}
-                    <div>
-                        <img src="/uploads/{$article.big_img}" alt="{$article.name|htmlspecialchars}"
-                             title="{$article.name|htmlspecialchars}">
-                        <a class="blue"
-                           {if strlen($article.ext_url)> 0 && strpos($article.ext_url,'ucenka')>0}rel='nofollow'{/if}
-                           href="{if strlen($article.ext_url) > 0}{$article.ext_url}{else}/news/{$article.url}{/if}">
-                            Подробнее<span class="linn"></span>
-                        </a>
-                    </div>
-                {/if}
+            {foreach from=$bottomSlider item=bottomSlide}
+                <a href="{$bottomSlide->link}">
+                    <img src="{$bottomSlide->image}" alt="{$bottomSlide->name|htmlspecialchars}"
+                         title="{$bottomSlide->name|htmlspecialchars}">
+                </a>
             {/foreach}
         </div>
     </div>
@@ -53,8 +45,8 @@
 
                 <div class="most-item">
                     <a href="{$staticSlide->link}">
-                        <img src="{$staticSlide->image}" alt="{$staticSlide->name}"
-                             title="{$staticSlide->name}">
+                        <img src="{$staticSlide->image}" alt="{$staticSlide->name|htmlspecialchars}"
+                             title="{$staticSlide->name|htmlspecialchars}">
                     </a>
                 </div>
         {/foreach}
