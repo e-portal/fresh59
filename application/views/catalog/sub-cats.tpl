@@ -260,8 +260,8 @@
                                         <div class="items">
                                             <a href="/articles/{$article.url|mblower}">
 
-                                                {if $item.picture}
-                                                    <img src="/assets/img/articles/{$item.picture}">
+                                                {if $article.picture}
+                                                    <img src="/assets/img/articles/{$article.picture}">
                                                 {else}
                                                     <img src="/assets/img/noimage.png">
                                                 {/if}
