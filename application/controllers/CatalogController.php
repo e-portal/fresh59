@@ -739,7 +739,7 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController
             $catFilers = $modCatalog->getCatFilters($cat['id'], $filters);
             $this->view->filters = $catFilers;
             if (strpos($_SERVER['REQUEST_URI'], 'only-filters') != FALSE) {
-                echo $this->view->render('_filter_ajax.tpl');
+                echo $this->view->render('catalog/_filter_ajax.tpl');
                 exit;
             }
             $brandId = $this->_hasParam('brand') ? intval($this->_getParam('brand')) : NULL;

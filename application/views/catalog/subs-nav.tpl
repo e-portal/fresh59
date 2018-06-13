@@ -143,41 +143,6 @@
                                 </div>
                             </div>
                             {*=============================================================*}
-                        {elseif $type == 'measure'}
-                            {foreach from=$filters item=filter}
-                                <div class="brand foxx" data-full="332" data-short="70" style="height: 70px;">
-                                    <div></div>
-                                    <div class="opti">
-                                        <div class="legg">
-                                            <span>
-                                               {$filter.name}{if $filter.measure} ,{$filter.measure}{/if}:
-                                            </span><i></i>
-                                        </div>
-
-
-                                        <div class="under-forms">
-                                            <div class="forms" data-heig="252">
-                                                <form action="">
-                                                    <ul>
-                                                        <li>
-                                                            <input type="checkbox" id="pol1" name="selects" value="pol1"
-                                                                   class="checkbox">
-                                                            <label for="pol1">
-                                                                <span>В наличии <span>(154)</span></span>
-                                                            </label>
-                                                            <div class="check"></div>
-                                                        </li>
-
-
-                                                    </ul>
-                                                </form>
-                                                <div class="clik">Показать все</div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            {/foreach}
                         {/if}
                     {/foreach}
                 {/if}
