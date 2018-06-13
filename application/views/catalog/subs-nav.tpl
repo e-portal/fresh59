@@ -73,7 +73,7 @@
                         {if $type == 'select'}
 
                             {foreach from=$filters item=filter}
-                                <div class="brand {if $value.selected}active{/if}">
+                                <div class="brand">
                                     <div></div>
                                     <div class="opti">
                                         <div class="legg"><span>{$filter.name}</span><i></i></div>
@@ -122,7 +122,7 @@
                                                             <a class="checkbox {if $brand.selected}active{/if}"
                                                                href="{url2 assoc.brand=$brand.add assoc.page=null param=$route}">{$brand.name}
                                                             </a>
-                                                            <div class="check"></div>
+                                                            <div class="check  {if $brand.selected}active{/if}"></div>
                                                         </li>
                                                     {else}
                                                         <li><span class="inactive">{$brand.name}</span>
