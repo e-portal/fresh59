@@ -125,7 +125,7 @@
                                                             <div class="check  {if $brand.selected}active{/if}"></div>
                                                         </li>
                                                     {else}
-                                                        <li><span class="inactive">{$brand.name}</span>
+                                                        <li><span class="checkbox inactive">{$brand.name}</span>
                                                             <div class="check"></div>
                                                         </li>
                                                     {/if}
