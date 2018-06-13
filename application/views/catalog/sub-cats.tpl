@@ -12,6 +12,11 @@
                     {else}
                         {php} echo $this->menu->findOneBy('active', true);{/php}
                     {/if}
+                    {if $zf.params.brand}
+                        {php}
+                            foreach (explode('_',$this->_tpl_vars['zf']['params']['brand']) as $brandId) $brands[] = $brandId; echo '
+                            '.join(', ', $brands);{/php}
+                    {/if}
                 </span>
             </div>
             <div class="base-options">

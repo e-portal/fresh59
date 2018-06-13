@@ -64,7 +64,7 @@
                                 {foreach from=$smart_filter item=filter_item key=filter_key}
                                     {if $filter_key == $cat.id}
                                         {foreach from=$filter_item item=sub_filter_item}
-                                            <a href="{$sub_filter_item.url}" target="_blank">{$sub_filter_item.name}</a>
+                                            <a href="{$sub_filter_item.url}">{$sub_filter_item.name}</a>
                                             <br/>
                                         {/foreach}
                                     {/if}
