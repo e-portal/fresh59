@@ -65,15 +65,12 @@ body {
     background-color: #fbd402;
 }
 .load-9 .spinner {animation: loadingI 3s linear infinite;}
-
 .load-9 .bubble-1 {
     animation: back1 6s infinite 2s, bounce 3s ease-in-out infinite;
 }
-
 .load-9 .bubble-2 {
     animation: back2 6s infinite 1s, bounce 3s ease-in-out infinite -1s;
 }
-
 .load-9 .bubble-3 {
     animation: back3 6s infinite, bounce 3s ease-in-out infinite -2s;
 }
@@ -86,7 +83,6 @@ body {
     0%, 100% {transform: scale(0.0);}
     50% {transform: scale(1.0);}
 }
-
 @keyframes back1 {
     0% {
         background: #fbd402
@@ -95,7 +91,6 @@ body {
         background: #dddddd
     }
 }
-
 @keyframes back2 {
     0% {
         background: #ddd
@@ -104,7 +99,6 @@ body {
         background: #fbd402
     }
 }
-
 @keyframes back3 {
     0% {
         background: #fbd402
@@ -966,7 +960,7 @@ h6 {}
 }
 
 .info .inpp input {
-    font-family: cursive;
+    font-family: 'Roboto';
 
 }
 
@@ -1002,7 +996,7 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer
+    cursor: pointer;
 }
 
 .send img {
@@ -1112,7 +1106,7 @@ input {
 }
 
 .searc {
-    height: 46px;
+    height: 45px;
     width: 108px;
     background: #313e49;
     border-top-right-radius: 25px;
@@ -1673,8 +1667,7 @@ input {
     width: 153px;
     font-family: 'SFUIDisplay-Medium';
     color: #fff;
-    height: 50px;
-
+    height: 48px;
 }
 
 .item-score:nth-child(3) .inpp {
@@ -3706,12 +3699,32 @@ ul#selectsMenuBoxi > li.options:hover {
     letter-spacing: 0;
 }
 
-.opti ul li span {
+.forms li span {
     padding: 7px 0 7px 24px;
+    opacity: .6;
 }
 
 .opti ul li:hover a,
 .opti ul li:hover label span {
+    font-family: 'SFUIDisplay-Bold';
+    letter-spacing: .4px;
+}
+
+.under-forms .check.active:before {
+    background: #fbd402;
+}
+
+.under-forms .check.inactive {
+    border-color: #ddd;
+}
+
+.under-forms .checkbox.inactive {
+    opacity: .6;
+    font-family: 'SF-UI-Display-Light';
+    letter-spacing: 0;
+}
+
+.under-forms .checkbox.active {
     font-family: 'SFUIDisplay-Bold';
     letter-spacing: .4px;
 }
@@ -5451,19 +5464,6 @@ ul.nacc .tabs-saw p {
 
 .tab-contents-wrap p:first-child {
     margin-top: 0;
-}
-
-.under-forms .check.active:before {
-    background: #fbd402;
-}
-
-.under-forms .check.inactive {
-    border-color: #ddd;
-}
-
-.under-forms .checkbox.active {
-    font-family: 'SFUIDisplay-Bold';
-    letter-spacing: .4px;
 }
 
 input::placeholder { font-family: 'SF-UI-Display-Regular'; }

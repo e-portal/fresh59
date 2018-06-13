@@ -288,6 +288,9 @@
         font-size: 12px;
     }
 
+    .item-foot:nth-child(1) span {
+        font-size: 13px;
+    }
 
 }
 
@@ -1430,36 +1433,28 @@
         top: 25px;
     }
 
-    .parag .slick-list {
-        padding: 0 10px 0 0;
-    }
-
     .parag {
         height: 45px;
     }
-
     .parag-item {
         text-align: center;
         padding: 6px 0;
         font-size: 14px;
     }
-
     .parag .slick-prev,
     .parag .slick-next {
         position: absolute;
         top: 45%;
         z-index: 10;
     }
-
     .parag .slick-list {
         width: 85%;
+        padding: 0;
     }
-
     .parag .slick-prev {
         left: auto;
         right: 50px;
     }
-
     .parag .slick-next {
         right: 5px;
     }
@@ -1804,13 +1799,26 @@
         width: 49%;
     }
 
-    .one-article-date-btn {
+    .one-article-under-img.one-article-date-btn {
         justify-content: space-between;
+        padding: 10px 0;
+
+    }
+
+    .one-article-under-img.one-article-date-btn > div {
+        margin-right: 0;
+    }
+
+    .right-banner .one-article-date-btn .rewiev {
+        width: auto;
     }
     .one-article {
         margin-bottom: 15px;
     }
 
+    .right-banner .three-column .one-sale {
+        width: 49%;
+    }
     .blocks-pagination {
         margin: 25px auto;
     }
@@ -2294,6 +2302,10 @@
 
     }
 
+    .one-content ol li {
+        font-size: 14px;
+    }
+
     .guarantee-tree-column > div li p {
         line-height: 21px;
         font-size: 13px;
@@ -2309,6 +2321,11 @@
     .guarantee-page ul.long-list {
         font-size: 12px;
         padding-left: 30px;
+        line-height: 21px;
+    }
+
+    .one-content ol li {
+        font-size: 12px;
         line-height: 21px;
     }
 
@@ -2424,6 +2441,10 @@
     .tab-button li {
         font-size: 11.5px;
     }
+
+    .parag .slick-list {
+        padding: 0;
+    }
 }
 
 @media screen and (max-width: 769px) {
@@ -2465,6 +2486,9 @@
         margin: 0;
     }
 
+    .all-sale .right-banner .khob {
+        padding: 0;
+    }
 }
 
 @media screen and (max-width: 767px) {
