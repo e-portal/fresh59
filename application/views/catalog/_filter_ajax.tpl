@@ -21,7 +21,7 @@
                                     {else}
                                         <li>
                                             <a class="checkbox inactive">{$value.value}</a>
-                                            <div class="check"></div>
+                                            <div class="check inactive"></div>
                                         </li>
                                     {/if}
                                 {/foreach}
@@ -55,7 +55,7 @@
                                     </li>
                                 {else}
                                     <li><span class="checkbox inactive">{$brand.name}</span>
-                                        <div class="check"></div>
+                                        <div class="check inactive"></div>
                                     </li>
                                 {/if}
                             {/foreach}

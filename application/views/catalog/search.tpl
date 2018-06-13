@@ -231,7 +231,7 @@
                                 {/if}
                                 {if $pages->firstPageInRangeNum!=1}
                                     <a class="pagin-number active-pagin-number"
-                                       href="/catalog/search{$searchtext}/{$firstPageUrl}">1</a>
+                                       href="/catalog/search/{$searchtext}/{$firstPageUrl}">1</a>
                                     <span>...</span>
                                 {/if}
                                 {if $pages->pagesInRange}
