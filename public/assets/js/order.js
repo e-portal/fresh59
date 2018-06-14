@@ -2,8 +2,9 @@ $(document).ready(function () {
     if (window.matchMedia("(max-width: 767px)").matches) {
         function appentTOOO() {
             a = $('.basket-section')
-            for (var i = 0; i < b.length; i++) {
+            for (var i = 0; i < a.length; i++) {
                 console.log(a[i]);
+                a.find('.basket-bonus basket-bonus0').clone().eq[i].appendTo('.basket-prod flexibal')
             }
             // $('.basket-prod-number').after($('.basket-bonus'));
             // $('.basket-prod-number').before($('.prod-price-total'));
@@ -60,7 +61,6 @@ $(document).ready(function () {
         i = 0;
 
         for (prod_data in obj) {
-            console.log(obj);
             /*---------POPUP---------*/
             $('<div class="basket-section basket-section' + i + '">\n' +
                 '                        <div class="basket-section-prod flexibal">\n' +
