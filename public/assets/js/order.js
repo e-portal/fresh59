@@ -3,9 +3,10 @@ $(document).ready(function () {
         function appentTOOO() {
             a = $('.basket-section')
             console.log(a);
-            for (var i = 0; i < a.length; i++) {
-                a.eq(i).find('.basket-bonus.basket-bonus0').clone().appendTo('.basket-prod.flexibal')
-            }
+            a.find('.basket-bonus.basket-bonus0').clone().appendTo('.basket-prod.flexibal')
+            // for (var i = 0; i < a.length; i++) {
+            //     a.eq(i).find('.basket-bonus.basket-bonus0').clone().appendTo('.basket-prod.flexibal')
+            // }
             // $('.basket-prod-number').after($('.basket-bonus'));
             // $('.basket-prod-number').before($('.prod-price-total'));
             // $('.basket-bonus').appendTo('.basket-prod-number');
