@@ -1,10 +1,10 @@
 $(document).ready(function () {
     if (window.matchMedia("(max-width: 767px)").matches) {
         function appentTOOO() {
-            a = $('.basket-section')
+            a = $('.basket-section').length
             for (var i = 0; i < a.length; i++) {
-                console.log(a[i]);
-                a[i].find('.basket-bonus.basket-bonus0').clone().appendTo('.basket-prod.flexibal')
+                console.log(a);
+                // a[i].find('.basket-bonus.basket-bonus0').clone().appendTo('.basket-prod.flexibal')
             }
             // $('.basket-prod-number').after($('.basket-bonus'));
             // $('.basket-prod-number').before($('.prod-price-total'));
