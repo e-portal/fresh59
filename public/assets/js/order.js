@@ -2,15 +2,15 @@ $(document).ready(function () {
     if (window.matchMedia("(max-width: 767px)").matches) {
         function appentTOOO() {
             a = $('.basket-section')
-            console.log(
-                a.find('.basket-bonus.basket-bonus0').clone().appendTo('.basket-section-prod.flexibal'),
-                a.find('.prod-price-total').clone().appendTo('.basket-prod.flexibal')
-            );
-            a.find('.basket-bonus.basket-bonus0').clone().appendTo('.basket-section-prod.flexibal')
-            a.find('.prod-price-total').clone().appendTo('.basket-prod.flexibal')
-            // for (var i = 0; i < a.length; i++) {
-            //     a.eq(i).find('.basket-bonus.basket-bonus0').clone().appendTo('.basket-prod.flexibal')
-            // }
+            // console.log(
+            //     a.find('.basket-bonus.basket-bonus0').clone().appendTo('.basket-section-prod.flexibal'),
+            //     a.find('.prod-price-total').clone().appendTo('.basket-prod.flexibal')
+            // );
+
+            for (var i = 0; i < a.length; i++) {
+                a.find('.basket-bonus.basket-bonus0').clone().eq(i).appendTo('.basket-section-prod.flexibal'),
+                    a.find('.prod-price-total').clone().eq(i).appendTo('.basket-prod.flexibal')
+            }
             // $('.basket-prod-number').after($('.basket-bonus'));
             // $('.basket-prod-number').before($('.prod-price-total'));
             // $('.basket-bonus').appendTo('.basket-prod-number');
