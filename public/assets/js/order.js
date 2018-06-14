@@ -2,7 +2,10 @@ $(document).ready(function () {
     if (window.matchMedia("(max-width: 767px)").matches) {
         function appentTOOO() {
             a = $('.basket-section')
-            console.log(a);
+            console.log(
+                a.find('.basket-bonus.basket-bonus0').clone().appendTo('.basket-section-prod.flexibal'),
+                a.find('.prod-price-total').clone().appendTo('.basket-prod.flexibal')
+            );
             a.find('.basket-bonus.basket-bonus0').clone().appendTo('.basket-section-prod.flexibal')
             a.find('.prod-price-total').clone().appendTo('.basket-prod.flexibal')
             // for (var i = 0; i < a.length; i++) {
