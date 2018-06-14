@@ -1,10 +1,13 @@
 $(document).ready(function () {
     if (window.matchMedia("(max-width: 767px)").matches) {
         function appentTOOO() {
-
+            a = $('.basket-section')
+            for (var i = 0; i < b.length; i++) {
+                console.log(a[i]);
+            }
             // $('.basket-prod-number').after($('.basket-bonus'));
             // $('.basket-prod-number').before($('.prod-price-total'));
-            $('.basket-bonus').appendTo('.basket-prod-number');
+            // $('.basket-bonus').appendTo('.basket-prod-number');
 
         }
     }
