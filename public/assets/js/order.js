@@ -2,8 +2,9 @@ $(document).ready(function () {
     if (window.matchMedia("(max-width: 767px)").matches) {
         function appentTOOO() {
             a = $('.basket-section').length
+            console.log(a);
             for (var i = 0; i < a.length; i++) {
-                console.log(a);
+
                 // a[i].find('.basket-bonus.basket-bonus0').clone().appendTo('.basket-prod.flexibal')
             }
             // $('.basket-prod-number').after($('.basket-bonus'));
