@@ -1,11 +1,10 @@
 $(document).ready(function () {
     if (window.matchMedia("(max-width: 767px)").matches) {
         function appentTOOO() {
-            a = $('.basket-section').length
+            a = $('.basket-section')
             console.log(a);
             for (var i = 0; i < a.length; i++) {
-
-                // a[i].find('.basket-bonus.basket-bonus0').clone().appendTo('.basket-prod.flexibal')
+                a.eq(i).find('.basket-bonus.basket-bonus0').clone().appendTo('.basket-prod.flexibal')
             }
             // $('.basket-prod-number').after($('.basket-bonus'));
             // $('.basket-prod-number').before($('.prod-price-total'));
