@@ -4,7 +4,7 @@ $(document).ready(function () {
             a = $('.basket-section')
             for (var i = 0; i < a.length; i++) {
                 console.log(a[i]);
-                a[i].find('.basket-bonus basket-bonus0').clone().appendTo('.basket-prod flexibal')
+                a[i].find('.basket-bonus.basket-bonus0').clone().appendTo('.basket-prod.flexibal')
             }
             // $('.basket-prod-number').after($('.basket-bonus'));
             // $('.basket-prod-number').before($('.prod-price-total'));
