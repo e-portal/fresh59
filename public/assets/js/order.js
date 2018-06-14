@@ -8,8 +8,8 @@ $(document).ready(function () {
             // );
 
             for (var i = 0; i < a.length; i++) {
-                a.find('.basket-bonus.basket-bonus0').clone().eq(i).appendTo(a.eq(i).find('.basket-section-prod.flexibal')),
-                    a.find('.prod-price-total').clone().eq(i).appendTo(a.eq(i).find('.basket-prod.flexibal'))
+                a.find('.basket-bonus.basket-bonus0').clone().appendTo(a.find('.basket-section-prod.flexibal')),
+                    a.find('.prod-price-total').clone().appendTo(a.find('.basket-prod.flexibal'))
             }
             // $('.basket-prod-number').after($('.basket-bonus'));
             // $('.basket-prod-number').before($('.prod-price-total'));
