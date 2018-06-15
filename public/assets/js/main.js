@@ -256,6 +256,7 @@ jQuery(document).ready(function () {
                 arrows: false,
                 infinite: true,
                 cssEase: 'linear',
+                // draggable:
                 autoplay: true,
                 autoplaySpeed: 5000
             });
@@ -374,7 +375,6 @@ jQuery(document).ready(function () {
             $('.burger').removeClass('active');
             $('html, body').css('overflow', 'auto');
         });
-
 
 
     }
@@ -655,7 +655,6 @@ jQuery(document).ready(function () {
     // })(jQuery);
 
 
-
     /********************************************************/
 
 
@@ -905,31 +904,6 @@ $('.top-rating span').click(function () {
 });
 
 //-------Personal office ------
-/*function naccs() {
-    // var numberIndex = $(this).index();
-    var listItemHeight = $(".naccs ul").find("li.active").innerHeight();
-    $(".naccs ul.nacc").height(listItemHeight + "px");
-
-}
-naccs();*/
-// function tabs_h() {
-//     $(".brand, .title_block, .tabs-more, .change-data, .change-pass").click(function () {
-//       var  a = setInterval(function () {
-//             /*naccs();*/
-//             console.log(155);
-//         },50)
-//         setTimeout(function () {
-//             clearInterval(a)
-//         },1000)
-//     })
-//
-//
-// }
-// tabs_h();
-
-// if ($('body').hasClass('auth')) {  /*page of auth*/
-//     bindings();
-// }
 
 $(document).on("click", ".naccs .tabs-menu div", function () {
     var numberIndex = $(this).index();
@@ -1268,6 +1242,7 @@ $('.forms').each(function () {
     var t = $(this);
 
     var m = t.height();
+
     t.attr('data-heig', m);
     if (m >= 170) {
         t.parent().parent().parent().addClass('foxx');
@@ -1276,52 +1251,71 @@ $('.forms').each(function () {
 });
 
 $('.brand').each(function () {
-//      var t = $(this);
-//      var l = t.find('.legg').height();
-//      var o = t.find('.forms').height() - 70;
-//      var hater = l + o + 140;
-//      t.attr('data-heig', hater);t.find('.forms').css({'top':-o});
-//
-//      t.find('.forms').attr('data-hizz', o);
 
+    bb = $(this).find('.legg').height()
+    $(this).attr('data-full', $(this).height() + 25).attr('data-short', $(this).find('.legg').height()).height($(this).find('.legg').height());
+    forms_i = $('.brand').find('.forms li')
+    for (var i = 0; i < forms_i.length; i++) {
+        forms_i[i].clientHeight;
 
-    $(this).attr('data-full', $(this).height() + 15).attr('data-short', $(this).find('.legg').height()).height($(this).find('.legg').height());
-    // $(this).attr('data-full', $(this).height() + 70).attr('data-short', $(this).find('.legg').height()).height($(this).find('.legg').height());
-
+        forms_wi = (forms_i[i].clientHeight * 10) + bb;
+        // console.log(forms_wi)
+        $(this).attr('data-he', forms_wi);
+        // a = forms_i.length
+        console.log(forms_i.length);
+    }
 });
 
 
-var cross = '4';
+// var cross = '4';
 
-// function brandAcc() {
 
-var full = $('.brand').attr('data-full');
-var short = $('.brand').attr('data-short');
+$(window).on('load', function () {
+    el = $('.brand.active')
+    var full = el.attr('data-full');
+    var short = el.attr('data-short');
+    el.height(full);
 
-if ($('.brand').hasClass('active')) {
-    $(this).height(full);
-} else {
-    $(this).height(short);
-}
-
-$(".legg").click(function () {
-
-    if ($(this).parents('.brand').hasClass('active')) {
-        $(this).parents('.brand').removeClass('active');
-        $(this).parents('.brand').height(short);
-    } else {
-        $(this).parents('.brand').addClass('active');
-        $(this).parents('.brand').height(full);
-    }
     if ($('.checkbox').hasClass('active')) {
         $(this).parents('.brand').addClass('active');
         $(this).parents('.brand').height(full);
     }
 
+});
+
+
+$(".legg").click(function () {
+    var middle = $(this).parents('.brand').attr('data-he');
+    var full = $(this).parents('.brand').attr('data-full');
+    var short = $(this).parents('.brand').attr('data-short');
+
+    if ($(this).parents('.brand').hasClass('active')) {
+        $(this).parents('.brand').removeClass('active');
+        $('.clik').removeClass('act');
+        $(this).parents('.brand').height(short);
+    } else {
+        $(this).parents('.brand').addClass('active');
+        $(this).parents('.brand').height(middle);
+    }
+
+    if ($('.brand.active').find('.forms li').length > 10) {
+        j = $('.brand.active').find('.forms li')
+        for (var i = 0; i < j.length; i++) {
+            a = j.length - 10
+            $('.clik').find('.li-count').text('(' + a + ')')
+        }
+        $('.clik').addClass('act');
+    }
+    $('.clik.act').click(function () {
+        el = $(this).parents('.brand.active')
+        var full = el.attr('data-full');
+
+        $(this).parents('.brand.active').height(full);
+        $(this).removeClass('act')
+    });
 
 });
-// }
-// brandAcc();
+
 
 window.requestAnimFrame = (function () {
     return window.requestAnimationFrame ||

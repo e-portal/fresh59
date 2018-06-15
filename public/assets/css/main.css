@@ -3713,7 +3713,6 @@ ul#selectsMenuBoxi > li.options:hover {
 .under-forms .check.active:before {
     background: #fbd402;
 }
-
 .under-forms .check.inactive {
     border-color: #ddd;
 }
@@ -3723,7 +3722,6 @@ ul#selectsMenuBoxi > li.options:hover {
     font-family: 'SF-UI-Display-Light';
     letter-spacing: 0;
 }
-
 .under-forms .checkbox.active {
     font-family: 'SFUIDisplay-Bold';
     letter-spacing: .4px;
@@ -3789,10 +3787,9 @@ ul#selectsMenuBoxi > li.options:hover {
     position: relative;
 }
 
+
 .clik {
     position: absolute;
-    bottom: 40px;
-    left: 0;
     color: #262438;
     font-size: 13px;
     font-family: 'SF-UI-Display-Light';
@@ -3802,6 +3799,17 @@ ul#selectsMenuBoxi > li.options:hover {
     transition-delay: .3s;
     text-decoration: underline;
 }
+
+.clik.act {
+    position: absolute;
+    bottom: 0;
+    opacity: 1;
+    background: #fff;
+    padding: 2px 0;
+    margin: 0 auto;
+    width: 100%;
+}
+
 
 .under-senn .item-senn:nth-child(1) {
     margin-left: 0;
