@@ -675,18 +675,6 @@ jQuery(document).ready(function () {
         });
 
         $('.form-search').after($('.search-list'));
-
-        // $('.basket-prod-number').parents($('.basket-section-prod')).after();
-        // $('.basket-prod-number').parent().before($('.prod-price-total'));
-        // $('.qweek-busket-prod').click(function () {
-        //     setTimeout(function () {
-        //
-        //     },5000)
-        //
-        // })
-
-
-
     }
 
 
@@ -736,14 +724,6 @@ jQuery(document).ready(function () {
 
     function step() {
         requestAnimationFrame(step);
-        //     $('.slick-active').addClass('live');
-        //     $('.slick-dots li button').click(function(){
-        //         $(this).parent().addClass('lave');setTimeout(function(){$('.live').removeClass('live');}, 250);
-        //        setTimeout(function(){$('.slick-active').removeClass('lave');},550);
-        //     });
-
-        //var countLi = $('.slick-dots li').length;
-        // console.log(countLi);
         $('.slick-active').prevUntil().addClass('jump').removeClass('jimm');
 
         $('.slick-active').nextUntil().addClass('jimm').removeClass('jump');
@@ -1305,7 +1285,7 @@ $('.brand').each(function () {
 //      t.find('.forms').attr('data-hizz', o);
 
 
-    $(this).attr('data-full', $(this).height() + 10).attr('data-short', $(this).find('.legg').height()).height($(this).find('.legg').height());
+    $(this).attr('data-full', $(this).height() + 15).attr('data-short', $(this).find('.legg').height()).height($(this).find('.legg').height());
     // $(this).attr('data-full', $(this).height() + 70).attr('data-short', $(this).find('.legg').height()).height($(this).find('.legg').height());
 
 });
@@ -1314,9 +1294,17 @@ $('.brand').each(function () {
 var cross = '4';
 
 // function brandAcc() {
+
+var full = $('.brand').attr('data-full');
+var short = $('.brand').attr('data-short');
+
+if ($('.brand').hasClass('active')) {
+    $(this).height(full);
+} else {
+    $(this).height(short);
+}
+
 $(".legg").click(function () {
-    var full = $(this).parents('.brand').attr('data-full');
-    var short = $(this).parents('.brand').attr('data-short');
 
     if ($(this).parents('.brand').hasClass('active')) {
         $(this).parents('.brand').removeClass('active');
@@ -1329,6 +1317,7 @@ $(".legg").click(function () {
         $(this).parents('.brand').addClass('active');
         $(this).parents('.brand').height(full);
     }
+
 
 });
 // }
