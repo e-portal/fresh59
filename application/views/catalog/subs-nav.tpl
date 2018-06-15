@@ -101,7 +101,6 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="clik">Показать еще <span class="li-count"></span></div>
                                     </div>
 
 
@@ -141,6 +140,7 @@
 
                                         </div>
                                     </div>
+                                    <div class="clik">Показать еще <span class="li-count"></span></div>
                                 </div>
                             </div>
                             {*=============================================================*}
