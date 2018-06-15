@@ -73,7 +73,7 @@
                         {if $type == 'select'}
 
                             {foreach from=$filters item=filter}
-                                <div class="brand">
+                                <div class="brand {if 'Тип' == $filter.name}active{/if}">
                                     <div></div>
                                     <div class="opti">
                                         <div class="legg"><span>{$filter.name}</span><i></i></div>
@@ -108,7 +108,7 @@
                             {/foreach}
                         {elseif $type == 'brands' && ($filters|@count > 1)}
                             {*=============================================================*}
-                            <div class="brand">
+                            <div class="brand active">
                                 <div></div>
                                 <div class="opti">
                                     <div class="legg"><span>Бренд</span><i></i></div>

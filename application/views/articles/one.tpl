@@ -21,12 +21,6 @@
         </div>
         <div class="right-banner">
             <div class="one-content">
-                {if isset($article.picture) }
-                <div class="article-img">
-                    {*<img src="/assets/img/articles/{$article.picture}">*}
-                    <img src="{$article.picture}">
-                </div>
-                {/if}
                 <div class="one-article-date-btn one-article-under-img">
                     <div class="date">{mdates arr=$article.date}</div>
                     {if isset($article.review) }
