@@ -1,4 +1,5 @@
 {if $zf.params.controller=="catalog" && $zf.params.action=="cat" && $zf.params.catid=="17"}
+
 	<ul>
         <li>Electrolux miele,</li> 
         <li>бытовая техника днепропетровск, </li>
