@@ -8,13 +8,13 @@
         <div class="parag parag-prev ">
             <div class="parag-item active">Популярные модели</div>
             <div class="parag-item" onclick="topNewProductIndex(17,'top'); return false;">Отдельностоящая</div>
-            <div class="parag-item">Встраиваемая</div>
-            <div class="parag-item">Мелкая бытовая</div>
-            <div class="parag-item">Красота и здоровье</div>
-            <div class="parag-item">Для уборки</div>
-            <div class="parag-item">Посуда</div>
-            <div class="parag-item">Мойки и смесители</div>
-            <div class="parag-item">Климатическая</div>
+            <div class="parag-item" onclick="topNewProductIndex(7,'top'); return false;">Встраиваемая</div>
+            <div class="parag-item" onclick="topNewProductIndex(44,'top'); return false;">Мелкая бытовая</div>
+            <div class="parag-item" onclick="topNewProductIndex(193,'top'); return false;">Красота и здоровье</div>
+            <div class="parag-item" onclick="topNewProductIndex(57,'top'); return false;">Для уборки</div>
+            <div class="parag-item" onclick="topNewProductIndex(515,'top'); return false;">Посуда</div>
+            <div class="parag-item" onclick="topNewProductIndex(27,'top'); return false;">Мойки и смесители</div>
+            <div class="parag-item" onclick="topNewProductIndex(136,'top'); return false;">Климатическая</div>
         </div>
 
         <div class="senn-main maii">
