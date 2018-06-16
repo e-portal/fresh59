@@ -1756,12 +1756,15 @@ function topNewProductIndex(catId, type) {
     $.ajax({
         type: 'POST',
         async: false,
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+        },
         url: 'index/getnewtopproducts/catid/' + catId + '/type/' + typeId + '/',
         dataType: 'json',
 
         success: function (data) {
 
-            console.log(data.items);
+            console.log(data, 1);
             /*ТУТ_ВАШ_КОД (ниже просто пример)*/
             for (var i = 0; i < data.items.length; i++) {
                 console.log($data.items[i].imgid)
