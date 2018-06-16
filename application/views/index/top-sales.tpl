@@ -7,7 +7,7 @@
         <div class="liner"><span>Топ продаж</span></div>
         <div class="parag parag-prev ">
             <div class="parag-item active" onclick="topNewProductIndex(1,'new'); return false;">Популярные модели</div>
-            <div class="parag-item">Отдельностоящая</div>
+            <div class="parag-item" onclick="topNewProductIndex(17,'top'); return false;">Отдельностоящая</div>
             <div class="parag-item">Встраиваемая</div>
             <div class="parag-item">Мелкая бытовая</div>
             <div class="parag-item">Красота и здоровье</div>
