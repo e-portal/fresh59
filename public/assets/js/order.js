@@ -6,7 +6,7 @@ $(document).ready(function () {
 
 
         for (var i = 0; i < a.length; i++) {
-            console.log(a[i].length);
+            console.log(a.eq(i));
             // console.log(a.find('.basket-bonus').clone().appendTo('.basket-section-prod.flexibal'));
             // console.log(a.find('.basket-bonus').eq(0).remove());
             // a.find('.prod-price-total').clone().appendTo('.basket-prod.flexibal')
