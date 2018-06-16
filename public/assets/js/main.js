@@ -1756,7 +1756,7 @@ function topNewProductIndex(catId, type) {
     $.ajax({
         type: 'POST',
         async: false,
-        url: 'https://590.ua/index/getnewtopproducts/catid/17/type/1',
+        url: '/index/getnewtopproducts/catid/17/type/1',
         dataType: 'json',
 
         success: function (data) {
