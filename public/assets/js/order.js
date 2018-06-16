@@ -10,7 +10,7 @@ $(document).ready(function () {
             // console.log(a.find('.basket-bonus').clone().appendTo('.basket-section-prod.flexibal'));
             // console.log(a.find('.basket-bonus').eq(0).remove());
             // a.find('.prod-price-total').clone().appendTo('.basket-prod.flexibal')
-            a.eq(i).addClass('123')
+            a.eq(1).find('.prod-price-total').remove()
         }
 
         // console.log(
