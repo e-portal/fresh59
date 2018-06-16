@@ -1738,7 +1738,7 @@ $(document).ready(function () {
 
 
 function topNewProductIndex(catId, type) {
-    $('.senn-main.maii .senn-slik.slick .slick-list .slick-track .maii-item .item-senn').remove()
+    // $('.senn-main.maii .senn-slik.slick .slick-list .slick-track .maii-item .item-senn').remove()
     switch (type) {
         case 'top':
             var typeId = 1;
