@@ -1781,7 +1781,7 @@ function topNewProductIndex(catId, type) {
                         ' <h4>' + data.items[i].cat_onename + '</h4>\n' +
                         '<div class="centr">\n' +
                         ' <div class="itee-imgg">\n' +
-                        ' <img src="/images/catalog/80990.png" alt="варочная поверхность Electrolux EHI 9654 HFK купить" title="варочная поверхность Electrolux EHI 9654 HFK">\n' +
+                        ' <img src="/images/catalog/' + data.items[i].imgid + '.' + data.items[i].imgext + '" alt="варочная поверхность Electrolux EHI 9654 HFK купить" title="варочная поверхность Electrolux EHI 9654 HFK">\n' +
                         '</div>\n' +
                         '<div class="itee">\n' +
                         '<img src="/assets/img/izee0.png" alt="">\n' +
