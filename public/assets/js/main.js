@@ -1756,14 +1756,11 @@ function topNewProductIndex(catId, type) {
     $.ajax({
         type: 'POST',
         async: false,
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-        },
         url: 'https://590.ua/index/getnewtopproducts/catid/17/type/1',
         dataType: 'json',
 
         success: function (data) {
-
+            console.log(111);
             console.log(data, 1);
             /*ТУТ_ВАШ_КОД (ниже просто пример)*/
             for (var i = 0; i < data.items.length; i++) {
