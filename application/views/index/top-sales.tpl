@@ -12,7 +12,7 @@
             <div class="parag-item" onclick="topNewProductIndex(44,'top'); return false;">Мелкая бытовая</div>
             <div class="parag-item" onclick="topNewProductIndex(193,'top'); return false;">Красота и здоровье</div>
             <div class="parag-item" onclick="topNewProductIndex(57,'top'); return false;">Для уборки</div>
-            <div class="parag-item" onclick="topNewProductIndex(515,'top'); return false;">Посуда</div>
+            <div class="parag-item" onclick="topNewProductIndex(215,'top'); return false;">Посуда</div>
             <div class="parag-item" onclick="topNewProductIndex(27,'top'); return false;">Мойки и смесители</div>
             <div class="parag-item" onclick="topNewProductIndex(136,'top'); return false;">Климатическая</div>
         </div>
