@@ -1752,19 +1752,20 @@ function topNewProductIndex(catId, type) {
         default:
             var typeId = 666;
     }
-    console.log(catId, type);
+
     $.ajax({
         type: 'POST',
         async: false,
         url: 'index/getnewtopproducts/catid/' + catId + '/type/' + typeId + '/',
         dataType: 'json',
+
         success: function (data) {
 
             // console.log(data);
             /*ТУТ_ВАШ_КОД (ниже просто пример)*/
-            /* for (var i = 0; i < data.items.length; i++) {
-                 $('#topNewProducts_result').append("<img src='/images/catalog/" + data.items[i].imgid + "_s." + data.items[i].imgext + "' />");
-             }*/
+            for (var i = 0; i < data.items.length; i++) {
+                console.log($('#topNewProducts_result').append("<img src='/images/catalog/" + data.items[i].imgid + "_s." + data.items[i].imgext + "' />"))
+            }
         }
     });
 }
