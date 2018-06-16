@@ -1775,8 +1775,7 @@ function topNewProductIndex(catId, type) {
             // $('<div class="maii-item">')
             // console.log(a, 123);
                 for (var n = 0; n < data.items.length; n += 7) {
-                    $('<div class="maii-item">\n' +
-                        '<div class="item-senn">\n' +
+                    $('<div class="item-senn">\n' +
                         ' <a class="sench" href="">\n' +
                         '<h5 class="green">В наличии</h5>\n' +
                         ' <h4>+ +</h4>\n' +
@@ -1833,7 +1832,6 @@ function topNewProductIndex(catId, type) {
                         '</div>\n' +
                         '<div class="right-butt" data-id="23311">\n' +
                         '<span>Сравнение</span>\n' +
-                        '</div>\n' +
                         '</div>\n' +
                         '</div>\n' +
                         '</div>\n' +
