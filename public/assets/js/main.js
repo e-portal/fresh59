@@ -1829,7 +1829,7 @@ function topNewProductIndex(catId, type) {
                     '</div>\n' +
                     '</div>\n' +
                     '</div>\n' +
-                    '</div>').appendTo('.maii-item.top__');
+                    '</div>').appendTo('.senn-main.maii .maii-item');
                 i++
                 console.log($data.items[i].imgid)
 
