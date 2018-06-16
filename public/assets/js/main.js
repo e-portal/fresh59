@@ -1768,7 +1768,7 @@ function topNewProductIndex(catId, type) {
             /*ТУТ_ВАШ_КОД (ниже просто пример)*/
 
             for (var i = 0; i < data.items.length; i += 6) {
-                console.log(data, 1);
+                // console.log(data, 1);
                 // $('<div class="item-senn">\n' +
                 //     ' <a class="sench" href="">\n' +
                 //     '<h5 class="green">В наличии</h5>\n' +
