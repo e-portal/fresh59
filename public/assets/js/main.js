@@ -1767,7 +1767,7 @@ function topNewProductIndex(catId, type) {
             // console.log(data, 1);
             /*ТУТ_ВАШ_КОД (ниже просто пример)*/
 
-            // for (var i = 0; i < data.length; i++) {
+            for (var i = 0; i < data.items.length; i++) {
                 console.log(data, 1);
                 $('<div class="item-senn">\n' +
                     ' <a class="sench" href="">\n' +
@@ -1830,10 +1830,9 @@ function topNewProductIndex(catId, type) {
                     '</div>\n' +
                     '</div>\n' +
                     '</div>').appendTo('.senn-main.maii .maii-item');
+                i++
 
-                console.log($data.items[i].imgid)
-
-            // }
+            }
 
 
         }
