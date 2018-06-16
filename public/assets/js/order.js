@@ -191,6 +191,10 @@ $(document).ready(function () {
     $('.baskets').click(function () {
         $('.popup-baskets').css('display', 'flex');
         doBasket(basket);
+        if (window.matchMedia("(max-width: 767px)").matches) {
+            appentTOOO()
+        }
+
     });
 
     /*---------autorisation---------*/
