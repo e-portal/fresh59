@@ -166,7 +166,7 @@
 
                     {/if}
                     {if $smarty.foreach.topsales_items.last}
-                        <div class="d" style="clear: both"></div>
+                        {*<div class="d" style="clear: both"></div>*}
                     {/if}
 
                     {/foreach}
