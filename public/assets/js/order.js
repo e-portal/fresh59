@@ -2,19 +2,25 @@ $(document).ready(function () {
     function appentTOOO() {
 
 
-            // a = $('.basket-section')
-            // console.log(
-            //     a.find('.basket-bonus.basket-bonus0').clone().appendTo('.basket-section-prod.flexibal'),
-            //     a.find('.prod-price-total').clone().appendTo('.basket-prod.flexibal')
-            // );
+        a = $('.basket-section')
 
-            // for (var i = 0; i < a.length; i++) {
-            //     a.find('.basket-bonus.basket-bonus0').clone().appendTo(a.find('.basket-section-prod.flexibal')),
-            //         a.find('.prod-price-total').clone().appendTo(a.find('.basket-prod.flexibal'))
-            // }
-            // $('.basket-prod-number').after($('.basket-bonus'));
-            // $('.basket-prod-number').before($('.prod-price-total'));
-            // $('.basket-bonus').appendTo('.basket-prod-number');
+
+        for (var i = 0; i < a.length; i++) {
+            console.log(a[i]);
+        }
+
+        // console.log(
+        //     a.find('.basket-bonus.basket-bonus0').clone().appendTo('.basket-section-prod.flexibal'),
+        //     a.find('.prod-price-total').clone().appendTo('.basket-prod.flexibal')
+        // );
+
+        // for (var i = 0; i < a.length; i++) {
+        //     a.find('.basket-bonus.basket-bonus0').clone().appendTo(a.find('.basket-section-prod.flexibal')),
+        //         a.find('.prod-price-total').clone().appendTo(a.find('.basket-prod.flexibal'))
+        // }
+        // $('.basket-prod-number').after($('.basket-bonus'));
+        // $('.basket-prod-number').before($('.prod-price-total'));
+        // $('.basket-bonus').appendTo('.basket-prod-number');
 
     }
 
