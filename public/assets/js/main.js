@@ -1774,9 +1774,10 @@ function topNewProductIndex(catId, type) {
             // $('<div class="item-senn">\n' +
             // $('<div class="maii-item">')
             // console.log(a, 123);
+            $('.senn-main.maii .senn-slik.slick .slick-list .slick-track .maii-item .item-senn').remove()
             for (var n = 0; i < data.items.length; i += 9) {
-                $('.senn-main.maii .senn-slik.slick .slick-list .slick-track .maii-item .item-senn').remove()
-                    $('<div class="item-senn">\n' +
+
+                $('<div class="item-senn">\n' +
                         ' <a class="sench" href="">\n' +
                         '<h5 class="green">В наличии</h5>\n' +
                         ' <h4>' + data.items[i].cat_onename + '</h4>\n' +
