@@ -1756,9 +1756,9 @@ function topNewProductIndex(catId, type) {
     $.ajax({
         type: 'POST',
         async: false,
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-        },
+        // headers: {
+        //     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+        // },
         url: '/index/getnewtopproducts/catid/' + catId + '/type/' + typeId + '/',
         dataType: 'json',
 
