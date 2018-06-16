@@ -1752,7 +1752,7 @@ function topNewProductIndex(catId, type) {
         default:
             var typeId = 666;
     }
-
+    console.log(1232);
     $.ajax({
         type: 'POST',
         async: false,
