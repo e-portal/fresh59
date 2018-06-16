@@ -1759,7 +1759,7 @@ function topNewProductIndex(catId, type) {
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
         },
-        url: 'https://590.ua/index/getnewtopproducts/catid/' + catId + '/type/' + typeId + '/',
+        url: 'https://590.ua/index/getnewtopproducts/catid/17/type/1',
         dataType: 'json',
 
         success: function (data) {
