@@ -1767,8 +1767,8 @@ function topNewProductIndex(catId, type) {
             // console.log(data, 1);
             /*ТУТ_ВАШ_КОД (ниже просто пример)*/
 
-            a = data.items.length / 7
-            console.log(a);
+            // a = data.items.length / 7
+            console.log(data.items);
             for (var i = 0; i < a.length; i++) {
                 console.log(i, 123);
                 for (var n = 0; n < data.items.length; n += 7) {
