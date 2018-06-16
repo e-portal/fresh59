@@ -1835,7 +1835,7 @@ function topNewProductIndex(catId, type) {
                         '</div>\n' +
                         '</div>\n' +
                         '</div>\n' +
-                        '</div>').appendTo('.senn-main.maii .senn-slik');
+                        '</div>').appendTo('.senn-main.maii .senn-slik.slick');
                     i++
                     // console.log(n)
 
