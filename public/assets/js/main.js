@@ -1761,11 +1761,11 @@ function topNewProductIndex(catId, type) {
 
         success: function (data) {
 
-            // console.log(data);
+            console.log(data.items);
             /*ТУТ_ВАШ_КОД (ниже просто пример)*/
-            for (var i = 0; i < data.items.length; i++) {
-                console.log($data.items[i].imgid)
-            }
+            // for (var i = 0; i < data.items.length; i++) {
+            //     console.log($data.items[i].imgid)
+            // }
         }
     });
 }
