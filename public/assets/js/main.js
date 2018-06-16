@@ -1752,6 +1752,7 @@ function topNewProductIndex(catId, type) {
         default:
             var typeId = 666;
     }
+    console.log(catId, type);
     $('.senn-main.maii .senn-slik.slick .slick-list .slick-track .maii-item .item-senn').html(' ');
     $.ajax({
         type: 'POST',
