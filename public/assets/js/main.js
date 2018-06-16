@@ -1756,7 +1756,7 @@ function topNewProductIndex(catId, type) {
     $.ajax({
         type: 'POST',
         async: false,
-        url: 'index/top-sales/getnewtopproducts/catid/' + catId + '/type/' + typeId + '/',
+        url: 'index/getnewtopproducts/catid/' + catId + '/type/' + typeId + '/',
         dataType: 'json',
 
         success: function (data) {
