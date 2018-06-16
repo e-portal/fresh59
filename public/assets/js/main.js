@@ -1763,12 +1763,12 @@ function topNewProductIndex(catId, type) {
         dataType: 'json',
 
         success: function (data) {
-            console.log(111);
-            console.log(data, 1);
+            // console.log(111);
+            // console.log(data, 1);
             /*ТУТ_ВАШ_КОД (ниже просто пример)*/
-            i = 0
-            for (var i = 0; i < data.length; i++) {
 
+            for (var i = 0; i < data.length; i++) {
+                console.log(data, 1);
                 $('<div class="item-senn">\n' +
                     ' <a class="sench" href="">\n' +
                     '<h5 class="green">В наличии</h5>\n' +
@@ -1830,23 +1830,10 @@ function topNewProductIndex(catId, type) {
                     '</div>\n' +
                     '</div>\n' +
                     '</div>').appendTo('.senn-main.maii .maii-item');
-                i++
+
                 console.log($data.items[i].imgid)
 
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         }
