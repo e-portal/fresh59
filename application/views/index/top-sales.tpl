@@ -6,8 +6,8 @@
 
         <div class="liner"><span>Топ продаж</span></div>
         <div class="parag parag-prev ">
-            <div class="parag-item active" onclick="topNewProductIndex(1,'new'); return false;">Популярные модели</div>
-            <div class="parag-item" onclick="topNewProductIndex(17,'top'); return false;">Отдельностоящая</div>
+            <div class="parag-item active">Популярные модели</div>
+            <div class="parag-item">Отдельностоящая</div>
             <div class="parag-item">Встраиваемая</div>
             <div class="parag-item">Мелкая бытовая</div>
             <div class="parag-item">Красота и здоровье</div>
@@ -21,9 +21,8 @@
             {*----------------MAIN----------------*}
             <div class="senn-slik slick">
                 <div class="maii-item">
-
                     {foreach from=$topsales_items item=item name=topsales_items}
-                    {$item|@debug_print_var}
+                    {*{$item|@debug_print_var}*}
                     <div class="item-senn">
                         <a class="sench"
                            href="{iurl  assoc.cat_latin=$item.cat_latin_single assoc.parent=$item.parentname assoc.subdomain=$item.subdomain assoc.cat=$item.cat_onename assoc.brand=$item.brand assoc.item=$item.name}">
@@ -68,16 +67,16 @@
                                         <p>
                                             от
                                             <span>
-                {if $item.rent >= 25}
-                    {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=8}
-                {elseif $item.rent > 12.5}
-                    {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=6}
-                {elseif $item.rent > 7.5}
-                    {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=3}
-                {else}
-                    {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=3}
-                {/if}
-                </span>
+                                                {if $item.rent >= 25}
+                                                    {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=8}
+                                                {elseif $item.rent > 12.5}
+                                                    {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=6}
+                                                {elseif $item.rent > 7.5}
+                                                    {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=3}
+                                                {else}
+                                                    {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=3}
+                                                {/if}
+                                            </span>
                                             грн/мес
                                         </p>
                                     </div>
@@ -118,14 +117,14 @@
                             </div>
                         </a>
                         <object type="lol/wut">
-                <span class="otzv">
-                <div class="left-otzv">
-                <img src="assets/img/patr.png" alt="">
-                </div>
-                <div class="right-otzv">
-                <span>10 отзывов</span>
-                </div>
-                </span>
+                                <span class="otzv">
+                                    <div class="left-otzv">
+                                        <img src="assets/img/patr.png" alt="">
+                                    </div>
+                                    <div class="right-otzv">
+                                        <span>10 отзывов</span>
+                                    </div>
+                                </span>
                         </object>
 
                         <div class="bakk">
