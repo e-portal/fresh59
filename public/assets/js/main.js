@@ -1831,7 +1831,7 @@ function topNewProductIndex(catId, type) {
                 //     '</div>\n' +
                 //     '</div>').appendTo('.senn-main.maii .maii-item');
                 // i += 6
-                console.log(data.items.length)
+                console.log(data.items[i].id)
 
             }
 
