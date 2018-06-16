@@ -7,10 +7,10 @@ $(document).ready(function () {
 
         for (var i = 0; i < a.length; i++) {
             console.log(a[i]);
-            a.find('.basket-bonus.basket-bonus0').clone().appendTo('.basket-section-prod.flexibal');
-            a.find('.basket-bonus.basket-bonus0').eq(0).remove()
-            a.find('.prod-price-total').clone().appendTo('.basket-prod.flexibal')
-            a.find('.prod-price-total').eq(0).remove()
+            console.log(a.find('.basket-bonus.basket-bonus0').clone().appendTo('.basket-section-prod.flexibal'));
+            // a.find('.basket-bonus.basket-bonus0').eq(0).remove()
+            // a.find('.prod-price-total').clone().appendTo('.basket-prod.flexibal')
+            // a.find('.prod-price-total').eq(0).remove()
         }
 
         // console.log(
