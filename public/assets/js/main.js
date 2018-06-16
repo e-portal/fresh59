@@ -1752,7 +1752,7 @@ function topNewProductIndex(catId, type) {
         default:
             var typeId = 666;
     }
-    console.log(1232);
+
     $.ajax({
         type: 'POST',
         async: false,
@@ -1761,7 +1761,6 @@ function topNewProductIndex(catId, type) {
         // },
         url: '/index/getnewtopproducts/catid/' + catId + '/type/' + typeId + '/',
         dataType: 'json',
-
         success: function (data) {
             // console.log(111);
             // console.log(data, 1);
@@ -1847,5 +1846,9 @@ function topNewProductIndex(catId, type) {
 
 
         }
+
+
     });
+    return false;
+
 }
