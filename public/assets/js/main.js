@@ -1766,9 +1766,9 @@ function topNewProductIndex(catId, type) {
             console.log(111);
             console.log(data, 1);
             /*ТУТ_ВАШ_КОД (ниже просто пример)*/
-            for (var i = 0; i < data.items.length; i++) {
-                console.log($data.items[i].imgid)
-            }
+            // for (var i = 0; i < data.items.length; i++) {
+            //     console.log($data.items[i].imgid)
+            // }
         }
     });
 }
