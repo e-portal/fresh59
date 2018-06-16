@@ -13,7 +13,7 @@ $(document).ready(function () {
             a.eq(i).find('.prod-price-total').clone().appendTo(a.eq(i).find('.basket-prod-text'))
             a.eq(i).find('.basket-bonus').clone().appendTo(a.eq(i).find('.basket-section-prod'))
             a.eq(i).find('.prod-price-total').eq(1).remove()
-            a.eq(i).find('.basket-bonus').eq(2).remove()
+            a.eq(i).find('.basket-bonus').eq(0).remove()
         }
 
         // console.log(
