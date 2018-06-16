@@ -1774,7 +1774,7 @@ function topNewProductIndex(catId, type) {
             // $('<div class="item-senn">\n' +
             // $('<div class="maii-item">')
             // console.log(a, 123);
-            for (var n = 0; i < data.items.length; i += 6) {
+            for (var n = 0; i < data.items.length; i += 8) {
                     $('<div class="item-senn">\n' +
                         ' <a class="sench" href="">\n' +
                         '<h5 class="green">В наличии</h5>\n' +
