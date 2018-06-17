@@ -1868,6 +1868,6 @@ function topNewProductIndex(catId, type) {
 
     });
     // return false;
-    $(".slick").slick();
+    $(".senn-slik").slick();
 }
 
