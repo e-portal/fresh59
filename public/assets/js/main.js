@@ -1736,9 +1736,9 @@ $(document).ready(function () {
 
 })
 
-function sclick_top() {
-    $(".slick").slick();
-}
+// function sclick_top() {
+//     $(".slick").slick();
+// }
 
 
 function topNewProductIndex(catId, type) {
@@ -1878,7 +1878,25 @@ function topNewProductIndex(catId, type) {
             // }
             // console.log(items.length)
             // wrap.appendChild($('.item-senn')[n]);
-            $(".senn-slik").slick();
+            $(".senn-slik").slick(
+                {
+                    arrows: false,
+                    dots: true,
+                    infinite: true,
+                    speed: 500,
+                    cssEase: 'linear',
+                    autoplay: true,
+                    autoplaySpeed: 5000,
+                    responsive: [
+                        {
+                            breakpoint: 1025,
+                            settings: {
+                                dots: false,
+                                arrows: true
+                            }
+                        }]
+                }
+            );
 
             // }
 
