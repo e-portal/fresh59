@@ -1857,7 +1857,7 @@ function topNewProductIndex(catId, type) {
                     i++
 
 
-                console.log(data.items[i])
+
 
 
             }
@@ -1867,13 +1867,14 @@ function topNewProductIndex(catId, type) {
             // kk = data.items.length / 7
             // console.log(kk, 0000);
             for (var n = 0; n < items.length; n++) {
-                if (i % 7 === 0) {
+                if (n % 7 === 0) {
                     wrap = document.createElement('div');
                     wrap.className = "wrap";
                     document.body.appendChild(wrap);
                 }
                 wrap.appendChild(items[n]);
             }
+            console.log(items.length)
             // wrap.appendChild($('.item-senn')[n]);
             // $(".senn-slik").slick();
 
