@@ -1770,7 +1770,7 @@ function topNewProductIndex(catId, type) {
 
             $('.senn-main.maii .senn-slik .slick-list').remove()
             $('.senn-main.maii .senn-slik .slick-dots').remove()
-            $('.senn-main.maii .senn-slik').removeClass('.slick-initialized.slick-slider.slick-dotted')
+            $('.senn-main.maii .senn-slik').removeClass('slick-initialized slick-slider slick-dotted')
             if ($('.senn-main.maii .senn-slik').hasClass('slick-list')) {
                 $('.senn-slik').unslick()
             }
@@ -1839,51 +1839,19 @@ function topNewProductIndex(catId, type) {
                     '</div>\n' +
                     '</div>\n' +
                     '</div>').appendTo('.senn-main.maii .senn-slik ');
-                console.log(data.items);
                 i++
             }
-            // var wrap
-            // for (var n = 0; n < data.items.length; n++) {
-            //     if (n % 7 === 0) {
-            //         $('<div class="maii-item"></div>').appendTo('.senn-main.maii .senn-slik')
-            //         // wrap = document.createElement('div');
-            //         // wrap.className = "wrap";
-            //         // $('senn-slik').append($('maii-item'));
-            //     }
-            //     $('.senn-main.maii .maii-item').append($('.senn-main.maii .item-senn')[n]);
-            // }
 
-
-            $('.senn-main.maii .senn-slik :nth-child(7n-7)').each(function () {//выбираю каждый шестой элемент и для каждого
+            $('.senn-main.maii .senn-slik :nth-child(7n-7)').each(function () {
                 var n = 0;
-                $(this).addClass('group');//присваиваю класс group этому шестому блоку
+                $(this).addClass('group');
                 while (n < 7) {
-                    $(this).prevAll('.item-senn').eq(n).addClass('group');//в цикле выбираю предыдущие пять блоков и всем даю класс group
+                    $(this).prevAll('.item-senn').eq(n).addClass('group');
                     n++;
                 }
-                $('.group').wrapAll('<div class="maii-item"></div>');//заварачиваю все у кого класс group в див
-                $('.item-senn').removeClass('group');// удаляю класс group
+                $('.group').wrapAll('<div class="maii-item"></div>');
+                $('.item-senn').removeClass('group');
             });
-
-
-            // var items = document.querySelectorAll('.senn-main.maii .item-senn');
-            // var wrap;
-            // kk = data.items.length / 7
-            // console.log(kk, 0000);
-            // for (var n = 0; n < items.length; n++) {
-            //     if (n % 7 === 0) {
-            //         wrap = document.createElement('div');
-            //         wrap.className = "wrap";
-            //         document.body.appendChild(wrap);
-            //     }
-            //     wrap.appendChild(items[n]);
-            // }
-            // console.log(items.length)
-            // wrap.appendChild($('.item-senn')[n]);
-
-
-            // }
-
 
         }
 
