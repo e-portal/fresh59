@@ -1780,7 +1780,7 @@ function topNewProductIndex(catId, type) {
             // console.log(kk, 0000);
             for (var n = 0; n < data.items.length; n++) {
                 // a = $('.maii-item')
-                $('<div class="item-senn"></div>').appendTo('.senn-main.maii .senn-slik')
+                $('<div class="maii-item"></div>').appendTo('.senn-main.maii .senn-slik')
                 n++
 
             }
