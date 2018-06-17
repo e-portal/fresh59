@@ -1862,7 +1862,7 @@ function topNewProductIndex(catId, type) {
                     // wrap.className = "wrap";
                     // $('senn-slik').append($('maii-item'));
                 }
-                $('.maii-item').append($('.item-senn')[n]);
+                $('.senn-main.maii .maii-item').append($('.senn-main.maii .item-senn')[n]);
             }
 
 
