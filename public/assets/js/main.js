@@ -1855,7 +1855,7 @@ function topNewProductIndex(catId, type) {
                 console.log($('.senn-main.maii .item-senn').length);
 
             }
-            for (var n = 0; data.items.length; n++) {
+            for (var n = 0; n < data.items.length; n++) {
                 if (n % 7 === 0) {
                     $('<div class="maii-item"></div>').appendTo('.senn-main.maii .senn-slik')
                     // wrap = document.createElement('div');
