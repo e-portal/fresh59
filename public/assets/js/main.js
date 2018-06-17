@@ -1791,13 +1791,6 @@ function topNewProductIndex(catId, type) {
 
 
             for (var i = 0; i < data.items.length; i++) {
-                if (i % 7 === 0) {
-                    $('<div class="maii-item"></div>').appendTo('.senn-main.maii .senn-slik')
-                    // wrap = document.createElement('div');
-                    // wrap.className = "wrap";
-                    // $('senn-slik').append($('maii-item'));
-
-
                 $('<div class="item-senn">\n' +
                     ' <a class="sench" href="">\n' +
                     '<h5 class="green">В наличии</h5>\n' +
@@ -1858,10 +1851,18 @@ function topNewProductIndex(catId, type) {
                     '</div>\n' +
                     '</div>\n' +
                     '</div>\n' +
-                    '</div>').append($('.senn-main.maii .maii-item'));
+                    '</div>').appendTo('.senn-main.maii .senn-slik ');
                 console.log($('.item-senn').length);
+
+            }
+            for (var n = 0; data.items.length; n++) {
+                if (n % 7 === 0) {
+                    $('<div class="maii-item"></div>').appendTo('.senn-main.maii .senn-slik')
+                    // wrap = document.createElement('div');
+                    // wrap.className = "wrap";
+                    // $('senn-slik').append($('maii-item'));
                 }
-                // $('.maii-item').append($('.item-senn')[i]);
+                $('.maii-item').append($('.item-senn')[n]);
             }
 
 
