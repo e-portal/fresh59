@@ -1856,10 +1856,10 @@ function topNewProductIndex(catId, type) {
                     '</div>').appendTo('.senn-main.maii .senn-slik .maii-item');
                 i++
                 console.log(data.items[i])
-                $(".senn-slik").slick();
+
 
             }
-
+            $(".senn-slik").slick();
 
             // }
 
