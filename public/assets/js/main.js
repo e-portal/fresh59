@@ -1844,10 +1844,12 @@ function topNewProductIndex(catId, type) {
                 }
 
             n = data.items.length / 6
+            console.log(n, 0000);
             for (var n = 0; n < n.length; n++) {
                 a = $('.maii-item')
                 a.appendTo('.senn-main.maii .senn-slik.slick')
                 n++
+
             }
             // }
 

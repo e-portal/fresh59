@@ -20,7 +20,7 @@
         <div class="senn-main maii">
             {*----------------MAIN----------------*}
             <div class="senn-slik slick">
-                <div class="maii-item">
+                {*<div class="maii-item">*}
                     {*{foreach from=$topsales_items item=item name=topsales_items}*}
                     {*{$item|@debug_print_var}*}
                     {*<div class="item-senn">*}
@@ -170,7 +170,7 @@
                     {*{/if}*}
 
                     {*{/foreach}*}
-                </div>
+                {*</div>*}
             </div>
             {*----------------MAIN----------------*}
 
