@@ -1816,7 +1816,7 @@ function topNewProductIndex(catId, type) {
                     '</object>\n' +
                     '<div class="bakk">\n' +
                     '<div class="left-bakk">\n' +
-                    '<p>' + data.items[i].price * 0.0099 + ' грн.</p>\n' +
+                    '<p>' + data.items[i].id2 * 0.0099 + ' грн.</p>\n' +
                     '<p>Вернем: <span>' + data.items[i].bonus_price + ' грн</span></p>\n' +
                     '</div>\n' +
                     '<div class="right-bakk">\n' +
