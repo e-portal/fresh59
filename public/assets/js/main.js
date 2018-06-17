@@ -1852,18 +1852,31 @@ function topNewProductIndex(catId, type) {
                     '</div>\n' +
                     '</div>\n' +
                     '</div>').appendTo('.senn-main.maii .senn-slik ');
-                console.log($('.senn-main.maii .item-senn').length);
+                // console.log($('.senn-main.maii .item-senn').length);
+                i++
+            }
+            // var wrap
+            // for (var n = 0; n < data.items.length; n++) {
+            //     if (n % 7 === 0) {
+            //         $('<div class="maii-item"></div>').appendTo('.senn-main.maii .senn-slik')
+            //         // wrap = document.createElement('div');
+            //         // wrap.className = "wrap";
+            //         // $('senn-slik').append($('maii-item'));
+            //     }
+            //     $('.senn-main.maii .maii-item').append($('.senn-main.maii .item-senn')[n]);
+            // }
 
-            }
-            for (var n = 0; n < data.items.length; n++) {
-                if (n % 7 === 0) {
-                    $('<div class="maii-item"></div>').appendTo('.senn-main.maii .senn-slik')
-                    // wrap = document.createElement('div');
-                    // wrap.className = "wrap";
-                    // $('senn-slik').append($('maii-item'));
+
+            $('.senn-main.maii .senn-slik :nth-child(6n-6)').each(function () {//выбираю каждый шестой элемент и для каждого
+                var n = 0;
+                $(this).addClass('group');//присваиваю класс group этому шестому блоку
+                while (n < 6) {
+                    $(this).prevAll('.item-senn').eq(n).addClass('group');//в цикле выбираю предыдущие пять блоков и всем даю класс group
+                    n++;
                 }
-                $('.senn-main.maii .maii-item').append($('.senn-main.maii .item-senn')[n]);
-            }
+                $('.group').wrapAll('<div class="list-row"></div>');//заварачиваю все у кого класс group в див
+                $('.item-senn').removeClass('group');// удаляю класс group
+            });
 
 
             // var items = document.querySelectorAll('.senn-main.maii .item-senn');
