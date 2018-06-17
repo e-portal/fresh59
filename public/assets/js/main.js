@@ -1776,9 +1776,9 @@ function topNewProductIndex(catId, type) {
             // console.log(a, 123);
             $('.senn-main.maii .senn-slik.slick .slick-list .slick-track .maii-item .item-senn').remove()
 
-            // kk = data.items.length / 6
+            kk = data.items.length / 7
             // console.log(kk, 0000);
-            for (var n = 0; n < data.items.length; n++) {
+            for (var n = 0; n < kk; n++) {
                 // a = $('.maii-item')
                 $('<div class="maii-item"></div>').appendTo('.senn-main.maii .senn-slik')
                 n++
