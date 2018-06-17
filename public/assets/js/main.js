@@ -1858,7 +1858,7 @@ function topNewProductIndex(catId, type) {
                 if (i % 7 === 0) {
                     wrap = document.createElement('div');
                     wrap.className = "wrap";
-                    document.getElementsByClassName('senn-slik').appendChild(wrap);
+                    $('senn-slik').append(wrap);
                 }
                 wrap.appendChild($('.item-senn')[i]);
             }
