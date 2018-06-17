@@ -1853,7 +1853,8 @@ function topNewProductIndex(catId, type) {
                         '</div>\n' +
                         '</div>\n' +
                         '</div>\n' +
-                        '</div>').appendTo('.senn-main.maii .senn-slik .maii-item');
+                        '</div>').appendTo('.senn-main.maii .senn-slik ');
+                    i++
 
                 }
                 wrap.appendChild($('.item-senn')[i]);
@@ -1862,7 +1863,7 @@ function topNewProductIndex(catId, type) {
 
 
             }
-            $(".senn-slik").slick();
+            // $(".senn-slik").slick();
 
             // }
 
