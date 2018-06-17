@@ -1745,7 +1745,7 @@ function topNewProductIndex(catId, type) {
     // $('.senn-main.maii .senn-slik.slick .slick-list .slick-track .maii-item .item-senn').remove()
     switch (type) {
         case 'top':
-            var typeId = 1;
+            var typeId = 17;
             break;
         case 'new':
             var typeId = 2;
