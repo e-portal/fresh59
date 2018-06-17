@@ -1874,7 +1874,7 @@ function topNewProductIndex(catId, type) {
                     $(this).prevAll('.item-senn').eq(n).addClass('group');//в цикле выбираю предыдущие пять блоков и всем даю класс group
                     n++;
                 }
-                $('.group').wrapAll('<div class="list-row"></div>');//заварачиваю все у кого класс group в див
+                $('.group').wrapAll('<div class="maii-item"></div>');//заварачиваю все у кого класс group в див
                 $('.item-senn').removeClass('group');// удаляю класс group
             });
 
@@ -1893,7 +1893,7 @@ function topNewProductIndex(catId, type) {
             // }
             // console.log(items.length)
             // wrap.appendChild($('.item-senn')[n]);
-            // $(".senn-slik").slick();
+            $(".senn-slik").slick();
 
             // }
 
