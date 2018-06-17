@@ -1786,10 +1786,10 @@ function topNewProductIndex(catId, type) {
                 // a = $('.maii-item')
                 $('<div class="maii-item"></div>').appendTo('.senn-main.maii .senn-slik')
                 n++
-                $(".slick").slick();
+
             }
 
-
+            $(".slick").slick();
 
             for (var i = 0; i < data.items.length; i++) {
 
