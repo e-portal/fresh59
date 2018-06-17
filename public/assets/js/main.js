@@ -1862,7 +1862,7 @@ function topNewProductIndex(catId, type) {
 
             }
 
-            var items = document.querySelectorAll('.item-senn');
+            var items = document.querySelectorAll('.senn-main.maii .item-senn');
             var wrap;
             // kk = data.items.length / 7
             // console.log(kk, 0000);
