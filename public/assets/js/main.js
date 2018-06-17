@@ -1775,7 +1775,7 @@ function topNewProductIndex(catId, type) {
             // $('<div class="maii-item">')
             // console.log(a, 123);
             // $('.senn-main.maii .senn-slik.slick .slick-list .slick-track .maii-item .item-senn').remove()
-            for (var n = 0; i < data.items.length; i += 7) {
+            for (var i = 0; i < data.items.length; i += 6) {
 
                 $('<div class="item-senn">\n' +
                         ' <a class="sench" href="">\n' +
@@ -1842,6 +1842,13 @@ function topNewProductIndex(catId, type) {
                 console.log(data.items[i])
 
                 }
+
+            n = data.items.length / 6
+            for (var n = 0; n < n.length; n++) {
+                a = $('.maii-item')
+                a.appendTo('.senn-main.maii .senn-slik.slick')
+                n++
+            }
             // }
 
 
