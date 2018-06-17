@@ -1858,7 +1858,7 @@ function topNewProductIndex(catId, type) {
                     '</div>\n' +
                     '</div>\n' +
                     '</div>\n' +
-                    '</div>').appendTo($('.senn-main.maii .maii-item'));
+                    '</div>').append($('.senn-main.maii .maii-item'));
                 console.log($('.item-senn').length);
                 }
                 // $('.maii-item').append($('.item-senn')[i]);
