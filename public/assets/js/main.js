@@ -1858,6 +1858,9 @@ function topNewProductIndex(catId, type) {
 
     });
     // return false;
+
+    $('.add-to-cart').bind('click', doObject);
+
     $(".senn-slik").slick(
         {
             arrows: false,
