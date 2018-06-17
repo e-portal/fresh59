@@ -1788,7 +1788,7 @@ function topNewProductIndex(catId, type) {
             //     n++
             //
             // }
-            var wrap = $('.maii-item');
+            var wrap;
 
             for (var i = 0; i < data.items.length; i++) {
 
@@ -1856,10 +1856,9 @@ function topNewProductIndex(catId, type) {
                     '</div>').appendTo('.senn-main.maii .senn-slik ');
                 console.log($('.item-senn').length);
                 if (i % 7 === 0) {
-                    $('<div class="maii-item"></div>').appendTo('.senn-main.maii .senn-slik')
-                    // wrap = document.createElement('div');
-                    // wrap.className = "wrap";
-                    // $('.senn-main.maii').appendTO(wrap);
+                    wrap = document.createElement('div');
+                    wrap.className = "wrap";
+                    document.getElementsByClassName('senn-slik').appendChild(wrap);
                 }
                 wrap.appendChild($('.item-senn')[i]);
             }
