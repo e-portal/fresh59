@@ -1786,7 +1786,7 @@ function topNewProductIndex(catId, type) {
             }
 
 
-            for (var i = 0; i < data.items.length; i += 6) {
+            for (var i = 0; i < data.items.length; i++) {
 
                 $('<div class="item-senn">\n' +
                     ' <a class="sench" href="">\n' +
@@ -1849,7 +1849,7 @@ function topNewProductIndex(catId, type) {
                     '</div>\n' +
                     '</div>\n' +
                     '</div>').appendTo('.senn-main.maii .senn-slik .maii-item');
-                i++
+                i += 6
                 console.log(data.items[i])
 
             }
