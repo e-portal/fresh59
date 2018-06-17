@@ -1769,6 +1769,8 @@ function topNewProductIndex(catId, type) {
         success: function (data) {
 
             $('.senn-main.maii .senn-slik .slick-list').remove()
+            $('.senn-main.maii .senn-slik .slick-dots').remove()
+            $('.senn-main.maii .senn-slik').removeClass('.slick-initialized.slick-slider.slick-dotted')
             if ($('.senn-main.maii .senn-slik').hasClass('slick-list')) {
                 $('.senn-slik').unslick()
             }
