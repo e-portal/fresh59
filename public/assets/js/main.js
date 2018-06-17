@@ -1789,7 +1789,7 @@ function topNewProductIndex(catId, type) {
 
             }
 
-            $(".slick").slick();
+
 
             for (var i = 0; i < data.items.length; i++) {
 
@@ -1868,6 +1868,6 @@ function topNewProductIndex(catId, type) {
 
     });
     // return false;
-
+    $(".slick").slick();
 }
 
