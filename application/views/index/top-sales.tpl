@@ -7,8 +7,8 @@
         <div class="liner"><span>Топ продаж</span></div>
         <div class="parag parag-prev ">
             {*<div class="parag-item active ">Популярные модели</div>*}
-            <div class="parag-item" onclick="topNewProductIndex(17,'top');oreder_start()">Отдельностоящая</div>
-            <div class="parag-item" onclick="topNewProductIndex(7,'top');oreder_start() ">Встраиваемая</div>
+            <div class="parag-item" onclick="topNewProductIndex(17,'top'); return false;">Отдельностоящая</div>
+            <div class="parag-item" onclick="topNewProductIndex(7,'top'); return false;">Встраиваемая</div>
             <div class="parag-item" onclick="topNewProductIndex(44,'top'); return false;">Мелкая бытовая</div>
             <div class="parag-item" onclick="topNewProductIndex(193,'top'); return false;">Красота и здоровье</div>
             <div class="parag-item" onclick="topNewProductIndex(57,'top'); return false;">Для уборки</div>
