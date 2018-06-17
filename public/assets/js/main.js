@@ -1854,13 +1854,13 @@ function topNewProductIndex(catId, type) {
                     '</div>\n' +
                     '</div>\n' +
                     '</div>').appendTo('.senn-main.maii .senn-slik ');
-                console.log($('item-senn').length);
+                console.log($('.item-senn').length);
                 if (i % 7 === 0) {
                     wrap = document.createElement('div');
                     wrap.className = "wrap";
                     document.body.appendChild(wrap);
                 }
-                wrap.appendChild($('item-senn')[i]);
+                wrap.appendChild($('.item-senn')[i]);
             }
 
             // var items = document.querySelectorAll('.senn-main.maii .item-senn');
