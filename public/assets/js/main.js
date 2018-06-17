@@ -1774,7 +1774,7 @@ function topNewProductIndex(catId, type) {
             // $('<div class="item-senn">\n' +
             // $('<div class="maii-item">')
             // console.log(a, 123);
-            $('.senn-main.maii .senn-slik.slick .slick-list .slick-track .maii-item .item-senn').remove()
+            $('.senn-main.maii .senn-slik.slick .slick-list').remove()
 
             kk = data.items.length / 7
             // console.log(kk, 0000);
@@ -1783,6 +1783,25 @@ function topNewProductIndex(catId, type) {
                 $('<div class="maii-item"></div>').appendTo('.senn-main.maii .senn-slik')
                 n++
 
+            }
+            if ($(".slick").length) {
+                $(".slick").slick({
+                    arrows: false,
+                    dots: true,
+                    infinite: true,
+                    speed: 500,
+                    cssEase: 'linear',
+                    autoplay: true,
+                    autoplaySpeed: 5000,
+                    responsive: [
+                        {
+                            breakpoint: 1025,
+                            settings: {
+                                dots: false,
+                                arrows: true
+                            }
+                        }]
+                });
             }
 
 
@@ -1849,7 +1868,7 @@ function topNewProductIndex(catId, type) {
                     '</div>\n' +
                     '</div>\n' +
                     '</div>').appendTo('.senn-main.maii .senn-slik .maii-item');
-                i += 6
+                i++
                 console.log(data.items[i])
 
             }
