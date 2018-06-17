@@ -1796,7 +1796,7 @@ function topNewProductIndex(catId, type) {
                     // wrap = document.createElement('div');
                     // wrap.className = "wrap";
                     // $('senn-slik').append($('maii-item'));
-                }
+
 
                 $('<div class="item-senn">\n' +
                     ' <a class="sench" href="">\n' +
@@ -1858,10 +1858,10 @@ function topNewProductIndex(catId, type) {
                     '</div>\n' +
                     '</div>\n' +
                     '</div>\n' +
-                    '</div>').appendTo('.senn-main.maii .senn-slik');
+                    '</div>').appendTo($('.senn-main.maii .maii-item')[i]);
                 console.log($('.item-senn').length);
-
-                $('.maii-item').append($('.item-senn')[i]);
+                }
+                // $('.maii-item').append($('.item-senn')[i]);
             }
 
 
