@@ -1789,9 +1789,9 @@ function topNewProductIndex(catId, type) {
             //
             // }
 
-            var wrap;
+
             for (var i = 0; i < data.items.length; i++) {
-                if (i % 7 === 0) {
+
 
                     $('<div class="item-senn">\n' +
                         ' <a class="sench" href="">\n' +
@@ -1855,16 +1855,26 @@ function topNewProductIndex(catId, type) {
                         '</div>\n' +
                         '</div>').appendTo('.senn-main.maii .senn-slik ');
                     i++
-                    wrap = document.createElement('div');
-                    wrap.className = "wrap";
-                    document.body.appendChild(wrap);
-                }
-                wrap.appendChild($('.item-senn')[i]);
+
 
                 console.log(data.items[i])
 
 
             }
+
+            var items = document.querySelectorAll('.item-senn');
+            var wrap;
+            // kk = data.items.length / 7
+            // console.log(kk, 0000);
+            for (var n = 0; n < items.length; n++) {
+                if (i % 7 === 0) {
+                    wrap = document.createElement('div');
+                    wrap.className = "wrap";
+                    document.body.appendChild(wrap);
+                }
+                wrap.appendChild(items[n]);
+            }
+            // wrap.appendChild($('.item-senn')[n]);
             // $(".senn-slik").slick();
 
             // }
