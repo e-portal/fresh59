@@ -19,10 +19,10 @@
 
         <div class="senn-main maii">
             {*----------------MAIN----------------*}
-            <div class="senn-slik">
-                <div class="maii-item">
+            <div class="senn-slik slick">
+                <div class="maii-item slick">
                     {foreach from=$topsales_items item=item name=topsales_items}
-                    {$item|@debug_print_var}
+                    {*{$item|@debug_print_var}*}
                     <div class="item-senn">
                         <a class="sench"
                            href="{iurl  assoc.cat_latin=$item.cat_latin_single assoc.parent=$item.parentname assoc.subdomain=$item.subdomain assoc.cat=$item.cat_onename assoc.brand=$item.brand assoc.item=$item.name}">
@@ -67,16 +67,16 @@
                                         <p>
                                             от
                                             <span>
-                    {if $item.rent >= 25}
-                        {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=8}
-                    {elseif $item.rent > 12.5}
-                        {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=6}
-                    {elseif $item.rent > 7.5}
-                        {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=3}
-                    {else}
-                        {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=3}
-                    {/if}
-                    </span>
+                                                {if $item.rent >= 25}
+                                                    {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=8}
+                                                {elseif $item.rent > 12.5}
+                                                    {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=6}
+                                                {elseif $item.rent > 7.5}
+                                                    {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=3}
+                                                {else}
+                                                    {math equation="x/y*$curs_evro_smarty|round" x=$item.price y=3}
+                                                {/if}
+                                            </span>
                                             грн/мес
                                         </p>
                                     </div>
@@ -117,14 +117,14 @@
                             </div>
                         </a>
                         <object type="lol/wut">
-                    <span class="otzv">
-                    <div class="left-otzv">
-                    <img src="assets/img/patr.png" alt="">
-                    </div>
-                    <div class="right-otzv">
-                    <span>10 отзывов</span>
-                    </div>
-                    </span>
+                                <span class="otzv">
+                                    <div class="left-otzv">
+                                        <img src="assets/img/patr.png" alt="">
+                                    </div>
+                                    <div class="right-otzv">
+                                        <span>10 отзывов</span>
+                                    </div>
+                                </span>
                         </object>
 
                         <div class="bakk">
@@ -160,13 +160,13 @@
                     </div>
 
                     {if 0 === $smarty.foreach.topsales_items.iteration%7 && !$smarty.foreach.topsales_items.last && !$smarty.foreach.topsales_items.first}
-                    <div class="d" style="clear: both"></div>
+                    {*<div class="d" style="clear: both"></div>*}
                 </div>
                 <div class="maii-item">
 
                     {/if}
                     {if $smarty.foreach.topsales_items.last}
-                        <div class="d" style="clear: both"></div>
+                        {*<div class="d" style="clear: both"></div>*}
                     {/if}
 
                     {/foreach}
