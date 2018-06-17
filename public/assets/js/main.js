@@ -1854,27 +1854,23 @@ function topNewProductIndex(catId, type) {
                         '</div>\n' +
                         '</div>\n' +
                         '</div>').appendTo('.senn-main.maii .senn-slik ');
-                    i++
-
-
-
 
 
             }
 
-            var items = document.querySelectorAll('.senn-main.maii .item-senn');
-            var wrap;
+            // var items = document.querySelectorAll('.senn-main.maii .item-senn');
+            // var wrap;
             // kk = data.items.length / 7
             // console.log(kk, 0000);
-            for (var n = 0; n < items.length; n++) {
-                if (n % 7 === 0) {
-                    wrap = document.createElement('div');
-                    wrap.className = "wrap";
-                    document.body.appendChild(wrap);
-                }
-                wrap.appendChild(items[n]);
-            }
-            console.log(items.length)
+            // for (var n = 0; n < items.length; n++) {
+            //     if (n % 7 === 0) {
+            //         wrap = document.createElement('div');
+            //         wrap.className = "wrap";
+            //         document.body.appendChild(wrap);
+            //     }
+            //     wrap.appendChild(items[n]);
+            // }
+            // console.log(items.length)
             // wrap.appendChild($('.item-senn')[n]);
             // $(".senn-slik").slick();
 
