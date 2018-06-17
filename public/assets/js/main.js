@@ -1767,28 +1767,10 @@ function topNewProductIndex(catId, type) {
         url: '/index/getnewtopproducts/catid/' + catId + '/type/' + typeId + '/',
         dataType: 'json',
         success: function (data) {
-            // console.log(111);
-            // console.log(data, 1);
-            /*ТУТ_ВАШ_КОД (ниже просто пример)*/
 
+            $('.senn-main.maii .senn-slik .slick-list').remove()
 
-            // console.log(data.items);
-            // for (var i = 0; i < data.items.length; i++) {
-            //     a = data.items.length / 7
-            // $('<div class="item-senn">\n' +
-            // $('<div class="maii-item">')
-            // console.log(a, 123);
-            $('.senn-main.maii .senn-slik.slick .slick-list').remove()
-
-            // kk = data.items.length / 7
-            // // console.log(kk, 0000);
-            // for (var n = 0; n < kk; n++) {
-            //     // a = $('.maii-item')
-            //     $('<div class="maii-item"></div>').appendTo('.senn-main.maii .senn-slik')
-            //     n++
-            //
-            // }
-
+            $('.senn-slik').unslick()
 
             for (var i = 0; i < data.items.length; i++) {
                 $('<div class="item-senn">\n' +
