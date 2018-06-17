@@ -1874,7 +1874,7 @@ function topNewProductIndex(catId, type) {
                 }]
         }
     );
-    doObject()
+    oreder_start()
 
     // $('.add-to-cart').bind('click', doObject);
 
