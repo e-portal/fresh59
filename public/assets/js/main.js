@@ -1776,7 +1776,6 @@ function topNewProductIndex(catId, type) {
             }
 
 
-
             for (var i = 0; i < data.items.length; i++) {
                 $('<div class="item-senn">\n' +
                     ' <a class="sench" href="">\n' +
@@ -1822,7 +1821,7 @@ function topNewProductIndex(catId, type) {
                     '</div>\n' +
                     '<div class="right-bakk">\n' +
                     '<object type="lol/wut">\n' +
-                    '<a class="open-in-popup add-to-cart bask acty"  data-id="23311" data-name="Варочная поверхность Electrolux EHI 9654 HFK"  data-img="/images/catalog/80990_s.png" data-price="11999" data-sale="10750" data-bonus="1500"   data-gift-id="" data-gift-name="Чайник ELECTROLUX Electro чайник" data-gift-img="/images/catalog/93266_s.jpg">\n' +
+                    '<a class="open-in-popup add-to-cart bask acty"  data-id="' + data.items[i].id + '" data-name="Варочная поверхность Electrolux EHI 9654 HFK"  data-img="/images/catalog/80990_s.png" data-price="11999" data-sale="10750" data-bonus="1500"   data-gift-id="" data-gift-name="Чайник ELECTROLUX Electro чайник" data-gift-img="/images/catalog/93266_s.jpg">\n' +
                     '<span>В корзину</span>\n' +
                     '</a>\n' +
                     '</object>\n' +
@@ -1841,7 +1840,7 @@ function topNewProductIndex(catId, type) {
                     '</div>').appendTo('.senn-main.maii .senn-slik ');
                 i++
             }
-
+            console.log(data.items);
             $('.senn-main.maii .senn-slik :nth-child(7n-7)').each(function () {
                 var n = 0;
                 $(this).addClass('group');
