@@ -1744,7 +1744,7 @@ $(document).ready(function () {
 function topNewProductIndex(catId, type) {
     switch (type) {
         case 'top':
-            var typeId = 17;
+            var typeId = 1;
             break;
         case 'new':
             var typeId = 2;
