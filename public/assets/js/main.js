@@ -1737,23 +1737,7 @@ $(document).ready(function () {
 })
 
 function sclick_top() {
-    $(".slick").slick({
-        arrows: false,
-        dots: true,
-        infinite: true,
-        speed: 500,
-        cssEase: 'linear',
-        autoplay: true,
-        autoplaySpeed: 5000,
-        responsive: [
-            {
-                breakpoint: 1025,
-                settings: {
-                    dots: false,
-                    arrows: true
-                }
-            }]
-    });
+    $(".slick").slick();
 }
 
 
@@ -1802,7 +1786,7 @@ function topNewProductIndex(catId, type) {
                 // a = $('.maii-item')
                 $('<div class="maii-item"></div>').appendTo('.senn-main.maii .senn-slik')
                 n++
-                sclick_top()
+                $(".slick").slick();
             }
 
 
