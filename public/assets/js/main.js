@@ -1867,10 +1867,10 @@ function topNewProductIndex(catId, type) {
             // }
 
 
-            $('.senn-main.maii .senn-slik :nth-child(6n-6)').each(function () {//выбираю каждый шестой элемент и для каждого
+            $('.senn-main.maii .senn-slik :nth-child(7n-7)').each(function () {//выбираю каждый шестой элемент и для каждого
                 var n = 0;
                 $(this).addClass('group');//присваиваю класс group этому шестому блоку
-                while (n < 6) {
+                while (n < 7) {
                     $(this).prevAll('.item-senn').eq(n).addClass('group');//в цикле выбираю предыдущие пять блоков и всем даю класс group
                     n++;
                 }
