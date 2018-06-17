@@ -1,4 +1,172 @@
 $(document).ready(function () {
+
+
+    function topNewProductIndex(catId, type) {
+        switch (type) {
+            case 'top':
+                var typeId = 1;
+                break;
+            case 'new':
+                var typeId = 2;
+                break;
+            case 'act':
+                var typeId = 3;
+                break;
+            default:
+                var typeId = 666;
+        }
+        console.log(catId, type);
+        $.ajax({
+            type: 'POST',
+            async: false,
+            // headers: {
+            //     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+            // },
+            url: '/index/getnewtopproducts/catid/' + catId + '/type/' + typeId + '/',
+            dataType: 'json',
+            success: function (data) {
+
+                $('.senn-main.maii .senn-slik .slick-list').remove()
+                $('.senn-main.maii .senn-slik .slick-dots').remove()
+                $('.senn-main.maii .senn-slik').removeClass('slick-initialized slick-slider slick-dotted')
+                if ($('.senn-main.maii .senn-slik').hasClass('slick-list')) {
+                    $('.senn-slik').unslick()
+                }
+
+
+                for (var i = 0; i < data.items.length; i++) {
+                    $('<div class="item-senn">\n' +
+                        ' <a class="sench" href="">\n' +
+                        '<h5 class="green">В наличии</h5>\n' +
+                        ' <h4>' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '</h4>\n' +
+                        '<div class="centr">\n' +
+                        ' <div class="itee-imgg">\n' +
+                        ' <img src="/images/catalog/' + data.items[i].imgid + '.' + data.items[i].imgext + '" alt="варочная поверхность Electrolux EHI 9654 HFK купить" title="варочная поверхность Electrolux EHI 9654 HFK">\n' +
+                        '</div>\n' +
+                        '<div class="itee">\n' +
+                        '<img src="/assets/img/izee0.png" alt="">\n' +
+                        '<p>Вернем: <span>120 грн</span></p>\n' +
+                        ' </div>\n' +
+                        '<div class="itee">\n' +
+                        '<img src="/assets/img/izee1.png" alt="">\n' +
+                        '<p>от<span>1499</span>грн/мес</p>\n' +
+                        '</div>\n' +
+                        '<div class="itee">\n' +
+                        '<img src="/assets/img/izee3.png" alt="">\n' +
+                        '<p>от<span>619</span>грн/мес</p>\n' +
+                        '</div>\n' +
+                        '<div class="itee present">\n' +
+                        '<div class="numeral"><img src="/assets/img/present-img.png" alt="present"></div>\n' +
+                        '<p>Подарок!</p>\n' +
+                        '<img src="/images/catalog/93266_s.jpg" alt="gift"/>\n' +
+                        '</div>\n' +
+                        '</div>\n' +
+                        '</a>\n' +
+                        '<object type="lol/wut">\n' +
+                        '<span class="otzv">\n' +
+                        '<div class="left-otzv">\n' +
+                        '<img src="assets/img/patr.png" alt="">\n' +
+                        '</div>\n' +
+                        '<div class="right-otzv">\n' +
+                        '<span>10 отзывов</span>\n' +
+                        '</div>\n' +
+                        '</span>\n' +
+                        '</object>\n' +
+                        '<div class="bakk">\n' +
+                        '<div class="left-bakk">\n' +
+                        '<p>' + data.items[i].id2 + ' грн.</p>\n' +
+                        '<p>Вернем: <span>' + data.items[i].bonus_price + ' грн</span></p>\n' +
+                        '</div>\n' +
+                        '<div class="right-bakk">\n' +
+                        '<object type="lol/wut">\n' +
+                        '<a class="open-in-popup add-to-cart bask acty"  data-id="' + data.items[i].id + '" data-name="Варочная поверхность Electrolux EHI 9654 HFK"  data-img="/images/catalog/80990_s.png" data-price="11999" data-sale="10750" data-bonus="1500"   data-gift-id="" data-gift-name="Чайник ELECTROLUX Electro чайник" data-gift-img="/images/catalog/93266_s.jpg">\n' +
+                        '<span>В корзину</span>\n' +
+                        '</a>\n' +
+                        '</object>\n' +
+                        '</div>\n' +
+                        '</div>\n' +
+                        '<div class="hovv">\n' +
+                        '<div class="news">\n' +
+                        '<div class="left-butt">\n' +
+                        '<span>В избранное</span>\n' +
+                        '</div>\n' +
+                        '<div class="right-butt" data-id="23311">\n' +
+                        '<span>Сравнение</span>\n' +
+                        '</div>\n' +
+                        '</div>\n' +
+                        '</div>\n' +
+                        '</div>').appendTo('.senn-main.maii .senn-slik ');
+                    i++
+                }
+                console.log(data.items);
+                $('.senn-main.maii .senn-slik :nth-child(7n-7)').each(function () {
+                    var n = 0;
+                    $(this).addClass('group');
+                    while (n < 7) {
+                        $(this).prevAll('.item-senn').eq(n).addClass('group');
+                        n++;
+                    }
+                    $('.group').wrapAll('<div class="maii-item"></div>');
+                    $('.item-senn').removeClass('group');
+                });
+
+            }
+
+
+        });
+
+        $(".senn-slik").slick(
+            {
+                arrows: false,
+                dots: true,
+                infinite: true,
+                speed: 500,
+                cssEase: 'linear',
+                autoplay: true,
+                autoplaySpeed: 5000,
+                responsive: [
+                    {
+                        breakpoint: 1025,
+                        settings: {
+                            dots: false,
+                            arrows: true
+                        }
+                    }]
+            }
+        );
+
+        $('.add-to-cart').bind('click', doObject);
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // перенос строк корзина мобайл
     function appentTOOO() {
         a = $('.basket-section')
