@@ -1790,8 +1790,7 @@ function topNewProductIndex(catId, type) {
             }
 
 
-
-            for (var i = 0; i < data.items.length; i++) {
+            for (var i = 0; i < data.items.length; i += 6) {
 
                 $('<div class="item-senn">\n' +
                     ' <a class="sench" href="">\n' +
