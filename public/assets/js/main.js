@@ -1742,7 +1742,6 @@ $(document).ready(function () {
 
 
 function topNewProductIndex(catId, type) {
-    // $('.senn-main.maii .senn-slik.slick .slick-list .slick-track .maii-item .item-senn').remove()
     switch (type) {
         case 'top':
             var typeId = 17;
@@ -1757,7 +1756,6 @@ function topNewProductIndex(catId, type) {
             var typeId = 666;
     }
     console.log(catId, type);
-    // $('.senn-main.maii .senn-slik.slick .slick-list .slick-track .maii-item .item-senn').html(' ');
     $.ajax({
         type: 'POST',
         async: false,
@@ -1856,7 +1854,6 @@ function topNewProductIndex(catId, type) {
 
 
     });
-    // return false;
 
 
     $(".senn-slik").slick(
