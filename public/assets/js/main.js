@@ -1854,7 +1854,6 @@ function topNewProductIndex(catId, type) {
             // }
 
 
-
         }
 
 
