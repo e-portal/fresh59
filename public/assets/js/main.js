@@ -1736,6 +1736,26 @@ $(document).ready(function () {
 
 })
 
+function sclick_top() {
+    $(".slick").slick({
+        arrows: false,
+        dots: true,
+        infinite: true,
+        speed: 500,
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 5000,
+        responsive: [
+            {
+                breakpoint: 1025,
+                settings: {
+                    dots: false,
+                    arrows: true
+                }
+            }]
+    });
+}
+
 
 function topNewProductIndex(catId, type) {
     // $('.senn-main.maii .senn-slik.slick .slick-list .slick-track .maii-item .item-senn').remove()
@@ -1782,27 +1802,9 @@ function topNewProductIndex(catId, type) {
                 // a = $('.maii-item')
                 $('<div class="maii-item"></div>').appendTo('.senn-main.maii .senn-slik')
                 n++
+                sclick_top()
+            }
 
-            }
-            if ($(".slick").length) {
-                $(".slick").slick({
-                    arrows: false,
-                    dots: true,
-                    infinite: true,
-                    speed: 500,
-                    cssEase: 'linear',
-                    autoplay: true,
-                    autoplaySpeed: 5000,
-                    responsive: [
-                        {
-                            breakpoint: 1025,
-                            settings: {
-                                dots: false,
-                                arrows: true
-                            }
-                        }]
-                });
-            }
 
 
             for (var i = 0; i < data.items.length; i++) {
@@ -1884,3 +1886,4 @@ function topNewProductIndex(catId, type) {
     // return false;
 
 }
+
