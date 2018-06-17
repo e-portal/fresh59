@@ -1852,7 +1852,7 @@ function topNewProductIndex(catId, type) {
                     '</div>\n' +
                     '</div>\n' +
                     '</div>').appendTo('.senn-main.maii .senn-slik ');
-                console.log($('.item-senn').length);
+                console.log($('.senn-main.maii .item-senn').length);
 
             }
             for (var n = 0; data.items.length; n++) {
