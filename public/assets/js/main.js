@@ -1775,82 +1775,86 @@ function topNewProductIndex(catId, type) {
             // $('<div class="maii-item">')
             // console.log(a, 123);
             $('.senn-main.maii .senn-slik.slick .slick-list .slick-track .maii-item .item-senn').remove()
-            // for (var i = 0; i < data.items.length; i += 6) {
-            //
-            //     $('<div class="item-senn">\n' +
-            //             ' <a class="sench" href="">\n' +
-            //             '<h5 class="green">В наличии</h5>\n' +
-            //             ' <h4>' + data.items[i].cat_onename + '</h4>\n' +
-            //             '<div class="centr">\n' +
-            //             ' <div class="itee-imgg">\n' +
-            //             ' <img src="/images/catalog/' + data.items[i].imgid + '.' + data.items[i].imgext + '" alt="варочная поверхность Electrolux EHI 9654 HFK купить" title="варочная поверхность Electrolux EHI 9654 HFK">\n' +
-            //             '</div>\n' +
-            //             '<div class="itee">\n' +
-            //             '<img src="/assets/img/izee0.png" alt="">\n' +
-            //             '<p>Вернем: <span>120 грн</span></p>\n' +
-            //             ' </div>\n' +
-            //             '<div class="itee">\n' +
-            //             '<img src="/assets/img/izee1.png" alt="">\n' +
-            //             '<p>от<span>1499</span>грн/мес</p>\n' +
-            //             '</div>\n' +
-            //             '<div class="itee">\n' +
-            //             '<img src="/assets/img/izee3.png" alt="">\n' +
-            //             '<p>от<span>619</span>грн/мес</p>\n' +
-            //             '</div>\n' +
-            //             '<div class="itee present">\n' +
-            //             '<div class="numeral"><img src="/assets/img/present-img.png" alt="present"></div>\n' +
-            //             '<p>Подарок!</p>\n' +
-            //             '<img src="/images/catalog/93266_s.jpg" alt="gift"/>\n' +
-            //             '</div>\n' +
-            //             '</div>\n' +
-            //             '</a>\n' +
-            //             '<object type="lol/wut">\n' +
-            //             '<span class="otzv">\n' +
-            //             '<div class="left-otzv">\n' +
-            //             '<img src="assets/img/patr.png" alt="">\n' +
-            //             '</div>\n' +
-            //             '<div class="right-otzv">\n' +
-            //             '<span>10 отзывов</span>\n' +
-            //             '</div>\n' +
-            //             '</span>\n' +
-            //             '</object>\n' +
-            //             '<div class="bakk">\n' +
-            //             '<div class="left-bakk">\n' +
-            //             '<p>11999 грн.</p>\n' +
-            //             '<p>Вернем: <span>120 грн</span></p>\n' +
-            //             '</div>\n' +
-            //             '<div class="right-bakk">\n' +
-            //             '<object type="lol/wut">\n' +
-            //             '<a class="open-in-popup add-to-cart bask acty"  data-id="23311" data-name="Варочная поверхность Electrolux EHI 9654 HFK"  data-img="/images/catalog/80990_s.png" data-price="11999" data-sale="10750" data-bonus="1500"   data-gift-id="" data-gift-name="Чайник ELECTROLUX Electro чайник" data-gift-img="/images/catalog/93266_s.jpg">\n' +
-            //             '<span>В корзину</span>\n' +
-            //             '</a>\n' +
-            //             '</object>\n' +
-            //             '</div>\n' +
-            //             '</div>\n' +
-            //             '<div class="hovv">\n' +
-            //             '<div class="news">\n' +
-            //             '<div class="left-butt">\n' +
-            //             '<span>В избранное</span>\n' +
-            //             '</div>\n' +
-            //             '<div class="right-butt" data-id="23311">\n' +
-            //             '<span>Сравнение</span>\n' +
-            //             '</div>\n' +
-            //             '</div>\n' +
-            //             '</div>\n' +
-            //             '</div>').appendTo('.senn-main.maii .senn-slik.slick .slick-list .slick-track .maii-item');
-            //         i++
-            //     console.log(data.items[i])
-            //
-            //     }
 
             kk = data.items.length / 6
             console.log(kk, 0000);
             for (var n = 0; n < kk.length; n++) {
                 // a = $('.maii-item')
-                $('<div class="item-senn"></div>').appendTo('.senn-main.maii .senn-slik.slick')
+                $('<div class="item-senn"></div>').appendTo('.senn-main.maii .senn-slik')
                 n++
 
             }
+
+
+            for (var i = 0; i < data.items.length; i += 6) {
+
+                $('<div class="item-senn">\n' +
+                    ' <a class="sench" href="">\n' +
+                    '<h5 class="green">В наличии</h5>\n' +
+                    ' <h4>' + data.items[i].cat_onename + '</h4>\n' +
+                    '<div class="centr">\n' +
+                    ' <div class="itee-imgg">\n' +
+                    ' <img src="/images/catalog/' + data.items[i].imgid + '.' + data.items[i].imgext + '" alt="варочная поверхность Electrolux EHI 9654 HFK купить" title="варочная поверхность Electrolux EHI 9654 HFK">\n' +
+                    '</div>\n' +
+                    '<div class="itee">\n' +
+                    '<img src="/assets/img/izee0.png" alt="">\n' +
+                    '<p>Вернем: <span>120 грн</span></p>\n' +
+                    ' </div>\n' +
+                    '<div class="itee">\n' +
+                    '<img src="/assets/img/izee1.png" alt="">\n' +
+                    '<p>от<span>1499</span>грн/мес</p>\n' +
+                    '</div>\n' +
+                    '<div class="itee">\n' +
+                    '<img src="/assets/img/izee3.png" alt="">\n' +
+                    '<p>от<span>619</span>грн/мес</p>\n' +
+                    '</div>\n' +
+                    '<div class="itee present">\n' +
+                    '<div class="numeral"><img src="/assets/img/present-img.png" alt="present"></div>\n' +
+                    '<p>Подарок!</p>\n' +
+                    '<img src="/images/catalog/93266_s.jpg" alt="gift"/>\n' +
+                    '</div>\n' +
+                    '</div>\n' +
+                    '</a>\n' +
+                    '<object type="lol/wut">\n' +
+                    '<span class="otzv">\n' +
+                    '<div class="left-otzv">\n' +
+                    '<img src="assets/img/patr.png" alt="">\n' +
+                    '</div>\n' +
+                    '<div class="right-otzv">\n' +
+                    '<span>10 отзывов</span>\n' +
+                    '</div>\n' +
+                    '</span>\n' +
+                    '</object>\n' +
+                    '<div class="bakk">\n' +
+                    '<div class="left-bakk">\n' +
+                    '<p>11999 грн.</p>\n' +
+                    '<p>Вернем: <span>120 грн</span></p>\n' +
+                    '</div>\n' +
+                    '<div class="right-bakk">\n' +
+                    '<object type="lol/wut">\n' +
+                    '<a class="open-in-popup add-to-cart bask acty"  data-id="23311" data-name="Варочная поверхность Electrolux EHI 9654 HFK"  data-img="/images/catalog/80990_s.png" data-price="11999" data-sale="10750" data-bonus="1500"   data-gift-id="" data-gift-name="Чайник ELECTROLUX Electro чайник" data-gift-img="/images/catalog/93266_s.jpg">\n' +
+                    '<span>В корзину</span>\n' +
+                    '</a>\n' +
+                    '</object>\n' +
+                    '</div>\n' +
+                    '</div>\n' +
+                    '<div class="hovv">\n' +
+                    '<div class="news">\n' +
+                    '<div class="left-butt">\n' +
+                    '<span>В избранное</span>\n' +
+                    '</div>\n' +
+                    '<div class="right-butt" data-id="23311">\n' +
+                    '<span>Сравнение</span>\n' +
+                    '</div>\n' +
+                    '</div>\n' +
+                    '</div>\n' +
+                    '</div>').appendTo('.senn-main.maii .senn-slik .maii-item');
+                i++
+                console.log(data.items[i])
+
+            }
+
+
             // }
 
 
