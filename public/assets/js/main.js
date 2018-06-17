@@ -1856,6 +1856,7 @@ function topNewProductIndex(catId, type) {
                     '</div>').appendTo('.senn-main.maii .senn-slik .maii-item');
                 i++
                 console.log(data.items[i])
+                $(".senn-slik").slick();
 
             }
 
@@ -1868,6 +1869,6 @@ function topNewProductIndex(catId, type) {
 
     });
     // return false;
-    $(".senn-slik").slick();
+
 }
 
