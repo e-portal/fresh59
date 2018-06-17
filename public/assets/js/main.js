@@ -1792,7 +1792,7 @@ function topNewProductIndex(catId, type) {
             var wrap;
             for (var i = 0; i < data.items.length; i++) {
                 if (i % 7 === 0) {
-                    wrap.className = "maii-item";
+
                     $('<div class="item-senn">\n' +
                         ' <a class="sench" href="">\n' +
                         '<h5 class="green">В наличии</h5>\n' +
@@ -1855,7 +1855,9 @@ function topNewProductIndex(catId, type) {
                         '</div>\n' +
                         '</div>').appendTo('.senn-main.maii .senn-slik ');
                     i++
-
+                    wrap = document.createElement('div');
+                    wrap.className = "wrap";
+                    document.body.appendChild(wrap);
                 }
                 wrap.appendChild($('.item-senn')[i]);
 
