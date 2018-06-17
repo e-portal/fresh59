@@ -20,7 +20,7 @@
         <div class="senn-main maii">
             {*----------------MAIN----------------*}
             <div class="senn-slik slick">
-                <div class="maii-item slick">
+                <div class="maii-item">
                     {foreach from=$topsales_items item=item name=topsales_items}
                     {*{$item|@debug_print_var}*}
                     <div class="item-senn">
@@ -160,13 +160,13 @@
                     </div>
 
                     {if 0 === $smarty.foreach.topsales_items.iteration%7 && !$smarty.foreach.topsales_items.last && !$smarty.foreach.topsales_items.first}
-                    {*<div class="d" style="clear: both"></div>*}
+                    <div class="d" style="clear: both"></div>
                 </div>
                 <div class="maii-item">
 
                     {/if}
                     {if $smarty.foreach.topsales_items.last}
-                        {*<div class="d" style="clear: both"></div>*}
+                        <div class="d" style="clear: both"></div>
                     {/if}
 
                     {/foreach}
