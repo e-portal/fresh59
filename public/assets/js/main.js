@@ -1861,15 +1861,18 @@ function topNewProductIndex(catId, type) {
                     '</div>\n' +
                     '</div>\n' +
                     '</div>\n' +
-                    '</div>')
+                    '</div>');
 
 
 
                     if(data.items[i].id_availability == 1) {
                         $('<h5 class="green">В наличии</h5>').appendTo('.sench' + i)
+                        console.log(1);
                     } else if(data.items[i].id_availability == 2) {
+                        console.log(2);
                         $('<h5 class="gray">Наличие уточняйте</h5>').appendTo('.sench' + i)
                     }else if(data.items[i].id_availability == 3) {
+                        console.log(3);
                         $('<h5 class="blue">Под заказ</h5>').appendTo('.sench' + i)
                     }
 
