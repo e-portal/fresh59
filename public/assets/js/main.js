@@ -1867,7 +1867,6 @@ function topNewProductIndex(catId, type) {
 
         }
 
-
     });
 
     $(".senn-slik").slick(
