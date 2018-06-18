@@ -1866,7 +1866,7 @@ function topNewProductIndex(catId, type) {
             $('.senn-main.maii .senn-slik :nth-child(7n-7)').each(function () {
                 var n = 0;
                 $(this).addClass('group');
-                while (n >= 7) {
+                while (n > 7) {
                     $(this).prevAll('.item-senn').eq(n).addClass('group');
                     n++;
                 }
