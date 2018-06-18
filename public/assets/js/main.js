@@ -1897,6 +1897,7 @@ function topNewProductIndex(catId, type) {
 
                 if (type == 'top') {
                     a.appendTo('.senn-main.maii.top_product .senn-slik ');
+                    var container = $(".senn-main.maii.top_product .senn-slik");
 
                 } else if (type == 'new') {
                     // $('.senn-main.maii.new_product .senn-slik').html('')
@@ -1911,7 +1912,7 @@ function topNewProductIndex(catId, type) {
             }
 
 
-            var container = $(".senn-main.maii.top_product .senn-slik");
+
             var allElements = Array.from(container.find(".item-senn"));
             for (var p = 0; p < allElements.length; p += 7) {
                 var wrap = document.createElement("div");
