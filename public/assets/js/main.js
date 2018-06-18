@@ -1770,7 +1770,6 @@ function topNewProductIndex(catId, type) {
         default:
             var typeId = 666;
     }
-    console.log(catId, type);
     $.ajax({
         type: 'POST',
         async: false,
@@ -1850,10 +1849,9 @@ function topNewProductIndex(catId, type) {
                     '</div>\n' +
                     '</div>\n' +
                     '</div>\n' +
-                    '</div>').appendTo('.senn-main.maii .senn-slik ');
+                    '</div>').appendTo($(this).parents().find('.senn-main.maii .senn-slik '));
                 i++
             }
-            console.log(data.items);
             $('.senn-main.maii .senn-slik :nth-child(7n-7)').each(function () {
                 var n = 0;
                 $(this).addClass('group');
