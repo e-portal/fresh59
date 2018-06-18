@@ -1833,9 +1833,9 @@ function topNewProductIndex(catId, type) {
                 }
 
                 if(data.items[i].bonus_amount > 0) {
-                    bonus_amount = '<p>Вернем: <span>' + data.items[i].bonus_amount + ' грн</span></p>'
+                    bonus_amount_ = '<p>Вернем: <span>' + data.items[i].bonus_amount + ' грн</span></p>'
                 } else {
-                    bonus_amount = ''
+                    bonus_amount_ = ''
                 }
 
                 url_name = data.items[i].name;
@@ -1871,7 +1871,7 @@ function topNewProductIndex(catId, type) {
                     '<div class="bakk">\n' +
                     '<div class="left-bakk">\n' +
                     '<p>' + data.items[i].id2 + ' грн.</p>\n' +
-                    ''+bonus_amount+'\n' +
+                    ''+bonus_amount_+'\n' +
                     '</div>\n' +
                     '<div class="right-bakk">\n' +
                     '<object type="lol/wut">\n' +
