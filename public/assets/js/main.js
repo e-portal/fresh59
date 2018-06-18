@@ -1815,6 +1815,7 @@ function topNewProductIndex(catId, type) {
                 }
 
 
+
                 url_name = data.items[i].name;
                 url_name_ = url_name.split(' ').join('-');
 
