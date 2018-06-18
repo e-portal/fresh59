@@ -935,7 +935,6 @@
         cursor: pointer;
         position: relative;
         z-index: 10;
-
     }
 
     .bask-item .numeral {
@@ -1804,18 +1803,15 @@
         padding: 10px 0;
 
     }
-
     .one-article-under-img.one-article-date-btn > div {
         margin-right: 0;
     }
-
     .right-banner .one-article-date-btn .rewiev {
         width: auto;
     }
     .one-article {
         margin-bottom: 15px;
     }
-
     .right-banner .three-column .one-sale {
         width: 49%;
     }
@@ -2301,7 +2297,6 @@
         font-size: 14px;
 
     }
-
     .one-content ol li {
         font-size: 14px;
     }
@@ -2323,7 +2318,6 @@
         padding-left: 30px;
         line-height: 21px;
     }
-
     .one-content ol li {
         font-size: 12px;
         line-height: 21px;
@@ -2441,7 +2435,6 @@
     .tab-button li {
         font-size: 11.5px;
     }
-
     .parag .slick-list {
         padding: 0;
     }
@@ -2485,7 +2478,6 @@
         height: calc(100% - 10px);
         margin: 0;
     }
-
     .all-sale .right-banner .khob {
         padding: 0;
     }
@@ -3467,11 +3459,14 @@
         padding: 0;
     }
 
+    .basket-section-prod .basket-prod {
+        padding: 35px 2px 0px;
+    }
     .basket-header div,
     .basket-section-prod > div,
     .basket-section-gift > div,
     .basket-section-service > div {
-        padding: 10px 0;
+        padding: 4px 0;
     }
 
     .basket-section-service .basket-prod.flexibal,
@@ -3500,7 +3495,7 @@
         line-height: 15px;
     }
 
-    .basket-bonus {
+    .basket-bonus.basket-bonus0 {
         font-size: 14px;
         line-height: 16px;
     }
