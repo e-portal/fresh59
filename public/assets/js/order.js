@@ -1,30 +1,27 @@
 $(document).ready(function () {
-    if (window.matchMedia("(max-width: 767px)").matches) {
-        function appentTOOO() {
-            a = $('.basket-section')
-            // console.log(
-            //     a.find('.basket-bonus.basket-bonus0').clone().appendTo('.basket-section-prod.flexibal'),
-            //     a.find('.prod-price-total').clone().appendTo('.basket-prod.flexibal')
-            // );
-
-            for (var i = 0; i < a.length; i++) {
-                // a.find('.basket-bonus.basket-bonus0').clone().appendTo(a.find('.basket-section-prod.flexibal')),
-                //     a.find('.prod-price-total').clone().appendTo(a.find('.basket-prod.flexibal'))
-            }
-            // $('.basket-prod-number').after($('.basket-bonus'));
-            // $('.basket-prod-number').before($('.prod-price-total'));
-            // $('.basket-bonus').appendTo('.basket-prod-number');
+    // перенос строк корзина мобайл
+    function appentTOOO() {
+        a = $('.basket-section')
+        for (var i = 0; i < a.length; i++) {
+            a.eq(i).find('.prod-price-total').clone().appendTo(a.eq(i).find('.basket-prod-text'))
+            a.eq(i).find('.basket-bonus').clone().appendTo(a.eq(i).find('.basket-section-prod'))
+            a.eq(i).find('.prod-price-total').eq(1).remove()
+            a.eq(i).find('.basket-bonus').eq(0).remove()
         }
     }
+
     /*click on cart-button*/
     $('.add-to-cart').bind('click', doObject);
     $('.add-to-cart').bind('click', function () {
         /*stop scroll*/
-        appentTOOO()
+
         if (window.matchMedia('(max-width: 1025px)').matches) {
             $('html, body').css('overflow', 'hidden');
         } else {
             $('html, body').css('overflow', 'hidden');
+        }
+        if (window.matchMedia("(max-width: 767px)").matches) {
+            appentTOOO()
         }
 
         /*show popup*/
@@ -145,6 +142,7 @@ $(document).ready(function () {
 
 
     }
+
     // $(".certificates input").change(function () {
     //     doBasket(basket);
     //     var str = "";
@@ -179,10 +177,13 @@ $(document).ready(function () {
     $('.baskets').click(function () {
         $('.popup-baskets').css('display', 'flex');
         doBasket(basket);
+        if (window.matchMedia("(max-width: 767px)").matches) {
+            appentTOOO()
+        }
+
     });
 
     /*---------autorisation---------*/
-
 
 
     // $('.pipl').click(function () {

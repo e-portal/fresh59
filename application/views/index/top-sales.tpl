@@ -6,15 +6,15 @@
 
         <div class="liner"><span>Топ продаж</span></div>
         <div class="parag parag-prev ">
-            <div class="parag-item active">Популярные модели</div>
-            <div class="parag-item">Отдельностоящая</div>
-            <div class="parag-item">Встраиваемая</div>
-            <div class="parag-item">Мелкая бытовая</div>
-            <div class="parag-item">Красота и здоровье</div>
-            <div class="parag-item">Для уборки</div>
-            <div class="parag-item">Посуда</div>
-            <div class="parag-item">Мойки и смесители</div>
-            <div class="parag-item">Климатическая</div>
+            {*<div class="parag-item active ">Популярные модели</div>*}
+            <div class="parag-item" onclick="topNewProductIndex(17,'top'); return false;">Отдельностоящая</div>
+            <div class="parag-item" onclick="topNewProductIndex(7,'top'); return false;">Встраиваемая</div>
+            <div class="parag-item" onclick="topNewProductIndex(44,'top'); return false;">Мелкая бытовая</div>
+            <div class="parag-item" onclick="topNewProductIndex(193,'top'); return false;">Красота и здоровье</div>
+            <div class="parag-item" onclick="topNewProductIndex(57,'top'); return false;">Для уборки</div>
+            <div class="parag-item" onclick="topNewProductIndex(215,'top'); return false;">Посуда</div>
+            <div class="parag-item" onclick="topNewProductIndex(27,'top'); return false;">Мойки и смесители</div>
+            <div class="parag-item" onclick="topNewProductIndex(136,'top'); return false;">Климатическая</div>
         </div>
 
         <div class="senn-main maii">
@@ -242,7 +242,7 @@
                                 {/if}
                             </div>
                         </a>
-                            <object type="lol/wut">
+                        <object type="lol/wut">
                                 <span class="otzv">
                                     <div class="left-otzv">
                                         <img src="assets/img/patr.png" alt="">
@@ -251,25 +251,25 @@
                                         <span>10 отзывов</span>
                                     </div>
                                 </span>
-                            </object>
+                        </object>
 
-                            <div class="bakk">
-                                <div class="left-bakk">
-                                    <p>
-                                        {price $item.price $item.id_currency} {$smarty.session.Currency.title}
-                                    </p>
-                                    {if $item.bonus_amount>0}
-                                        <p>Вернем: <span>{$item.bonus_amount|round} грн</span></p>
-                                    {/if}
-                                </div>
-                                <div class="right-bakk">
-                                    <object type="lol/wut">
-                                        <a class="open-in-popup add-to-cart bask acty" {include file='layouts/cart-item.tpl' cart_item=$item}>
-                                            <span>В корзину</span>
-                                        </a>
-                                    </object>
-                                </div>
+                        <div class="bakk">
+                            <div class="left-bakk">
+                                <p>
+                                    {price $item.price $item.id_currency} {$smarty.session.Currency.title}
+                                </p>
+                                {if $item.bonus_amount>0}
+                                    <p>Вернем: <span>{$item.bonus_amount|round} грн</span></p>
+                                {/if}
                             </div>
+                            <div class="right-bakk">
+                                <object type="lol/wut">
+                                    <a class="open-in-popup add-to-cart bask acty" {include file='layouts/cart-item.tpl' cart_item=$item}>
+                                        <span>В корзину</span>
+                                    </a>
+                                </object>
+                            </div>
+                        </div>
 
                         <div class="hovv">
                             <div class="news">
