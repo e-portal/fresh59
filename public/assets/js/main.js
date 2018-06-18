@@ -1899,15 +1899,15 @@ function topNewProductIndex(catId, type) {
 
             var wrapSize = 7;
 
-            for (var i = 0; i < allElements.length; i += wrapSize) {
+            for (var p = 0; p < allElements.length; p += wrapSize) {
                 /* создаём врап */
                 var wrap = document.createElement("div");
                 wrap.classList.add("maii-item");
 
                 /* наполняем нужным количеством элементов */
                 for (var j = 0; j < wrapSize; j++) {
-                    if (i + j < allElements.length) {
-                        wrap.appendChild(allElements[i + j]);
+                    if (p + j < allElements.length) {
+                        wrap.appendChild(allElements[p + j]);
                     }
                 }
 
