@@ -1861,7 +1861,7 @@ function topNewProductIndex(catId, type) {
                     '</div>')
                     if (type == 'top'){
                         a.appendTo('.senn-main.maii.top_product .senn-slik ');
-                        i++
+
                     } else if (type == 'new'){
                         // $('.senn-main.maii.new_product .senn-slik').html('')
                         // $('.senn-main.maii.new_product .senn-slik').removeClass('slick-initialized slick-slider slick-dotted')
@@ -1869,15 +1869,16 @@ function topNewProductIndex(catId, type) {
                         i++
                     }
                  // a.appendTo('.senn-main.maii.top_product .senn-slik ');
+                i++
             }
 
 
 
                 /* получаем контейнер */
-                var container = $(".senn-slik");
+                var container = $(".senn-main.maii.top_product .senn-slik");
 
                 /* получаем item-ы у контейнера */
-                var allElements = Array.from(container.find(".item-senn"));
+                var allElements = Array.from(container.find(".senn-main.maii.top_product .item-senn"));
 
 
             console.log(allElements);
