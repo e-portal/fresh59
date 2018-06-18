@@ -1827,7 +1827,7 @@ function topNewProductIndex(catId, type) {
                 }
 
                 if(data.items[i].acttype=='gift') {
-                    gift_ = '<div class="itee present"><div class="numeral"><img src="/assets/img/present-img.png" alt="present"></div><p>Подарок!</p><img src="/images/catalog/'+data.items[i].actid+'.jpg" alt="gift"/></div>'
+                    gift_ = '<div class="itee present"><div class="numeral"><img src="/assets/img/present-img.png" alt="present"></div><p>Подарок!</p><img src="/images/catalog/'+data.items[i].actid+'_s.jpg" alt="gift"/></div>'
                 } else {
                     gift_ = ''
                 }
