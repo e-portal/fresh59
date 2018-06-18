@@ -1853,14 +1853,14 @@ function topNewProductIndex(catId, type) {
                         $('.senn-main.maii.top_product .senn-slik').html('');
                         $('.senn-main.maii.top_product .senn-slik').removeClass('slick-initialized slick-slider slick-dotted')
                         a.appendTo('.senn-main.maii.top_product .senn-slik ');
+                        i++
                     } else if (type == 'new'){
                         $('.senn-main.maii.new_product .senn-slik').html('')
                         $('.senn-main.maii.new_product .senn-slik').removeClass('slick-initialized slick-slider slick-dotted')
                         a.appendTo('.senn-main.maii.new_product .senn-slik ');
-
+                        i++
                     }
                  // a.appendTo('.senn-main.maii.top_product .senn-slik ');
-                i++
             }
             $('.senn-main.maii .senn-slik :nth-child(7n-7)').each(function () {
                 var n = 0;
