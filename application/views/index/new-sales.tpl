@@ -6,13 +6,13 @@
         <div class="liner"><span>ГОРЯЧИЕ НОВИНКИ</span></div>
         <div class="parag parag-prev ">
             <div class="parag-item active" onclick="topNewProductIndex(17,'new'); return false;">Отдельностоящая</div>
-            <div class="parag-item">Встраиваемая</div>
-            <div class="parag-item">Мелкая бытовая</div>
-            <div class="parag-item">Красота и здоровье</div>
-            <div class="parag-item">Для уборки</div>
-            <div class="parag-item">Посуда</div>
-            <div class="parag-item">Мойки и смесители</div>
-            <div class="parag-item">Климатическая</div>
+            <div class="parag-item" onclick="topNewProductIndex(7,'new'); return false;">Встраиваемая</div>
+            <div class="parag-item" onclick="topNewProductIndex(44,'new'); return false;">Мелкая бытовая</div>
+            <div class="parag-item" onclick="topNewProductIndex(193,'new'); return false;">Красота и здоровье</div>
+            <div class="parag-item" onclick="topNewProductIndex(57,'new'); return false;">Для уборки</div>
+            <div class="parag-item" onclick="topNewProductIndex(215,'new'); return false;">Посуда</div>
+            <div class="parag-item" onclick="topNewProductIndex(27,'new'); return false;">Мойки и смесители</div>
+            <div class="parag-item" onclick="topNewProductIndex(136,'new'); return false;">Климатическая</div>
         </div>
 
         <div class="senn-main maii new_product">
