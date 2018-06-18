@@ -1757,6 +1757,16 @@ $(document).ready(function () {
 
 
 function topNewProductIndex(catId, type) {
+
+
+    if (type == 'top'){
+        $('.senn-main.maii.top_product .senn-slik').html('');
+        $('.senn-main.maii.top_product .senn-slik').removeClass('slick-initialized slick-slider slick-dotted');
+
+    } else if (type == 'new'){
+    }
+
+
     switch (type) {
         case 'top':
             var typeId = 1;
@@ -1850,9 +1860,6 @@ function topNewProductIndex(catId, type) {
                     '</div>\n' +
                     '</div>')
                     if (type == 'top'){
-                        $('.senn-main.maii.top_product .senn-slik .slick-list').remove()
-                        $('.senn-main.maii.top_product .senn-slik .slick-dots').remove()
-                        $('.senn-main.maii.top_product .senn-slik').removeClass('slick-initialized slick-slider slick-dotted')
                         a.appendTo('.senn-main.maii.top_product .senn-slik ');
                         i++
                     } else if (type == 'new'){
@@ -1864,30 +1871,6 @@ function topNewProductIndex(catId, type) {
                  // a.appendTo('.senn-main.maii.top_product .senn-slik ');
             }
 
-            // var items = document.querySelectorAll('.item-senn');
-            // var wrap;
-            // for (i = 0; i < items.length; i ++) {
-            //     if (i%7 === 0)
-            //     {
-            //         wrap = document.createElement('div');
-            //         wrap.className = "wrap";
-            //         document.body.appendChild(wrap);
-            //     }
-            //     wrap.appendChild(items[i]);
-            // }
-            // $('.senn-main.maii .senn-slik :nth-child(7n-7)').each(function () {
-            //     var n = 0;
-            //     $(this).addClass('group');
-            //     while (n < 2) {
-            //         $(this).prevAll('.item-senn').eq(n).addClass('group');
-            //         n++;
-            //     }
-            //
-            //
-            //
-            //     $('.group').wrapAll('<div class="maii-item"></div>');
-            //     $('.item-senn').removeClass('group');
-            // });
 
 
                 /* получаем контейнер */
