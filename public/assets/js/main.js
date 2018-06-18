@@ -1889,7 +1889,7 @@ function topNewProductIndex(catId, type) {
             //     $('.item-senn').removeClass('group');
             // });
 
-            $('.senn-main.maii .senn-slik').each(function () {
+
                 /* получаем контейнер */
                 var container = $(".senn-slik");
 
@@ -1897,8 +1897,8 @@ function topNewProductIndex(catId, type) {
                 var allElements = Array.from(container.find(".item-senn"));
 
 
-
-                for (var p = 0; p < allElements.length; p += 7) {
+            console.log(allElements);
+            for (var p = 0; p < allElements.length; p += 7) {
                     /* создаём врап */
                     var wrap = document.createElement("div");
                     wrap.classList.add("maii-item");
@@ -1913,7 +1913,7 @@ function topNewProductIndex(catId, type) {
                     /* добавляем в контейнер */
                     container.append(wrap);
                 }
-            })
+
 
 
 
