@@ -1900,12 +1900,9 @@ function topNewProductIndex(catId, type) {
                     var container = $(".senn-main.maii.top_product .senn-slik");
 
                 } else if (type == 'new') {
-                    // $('.senn-main.maii.new_product .senn-slik').html('')
-                    // $('.senn-main.maii.new_product .senn-slik').removeClass('slick-initialized slick-slider slick-dotted')
                     a.appendTo('.senn-main.maii.new_product .senn-slik ');
-                    i++
+                    var container = $(".senn-main.maii.new_product .senn-slik");
                 }
-                // a.appendTo('.senn-main.maii.top_product .senn-slik ');
 
 
                 i++
@@ -1928,7 +1925,7 @@ function topNewProductIndex(catId, type) {
     });
 
 
-    $(".senn-main.maii.top_product .senn-slik").slick(
+    container.slick(
         {
             arrows: false,
             dots: true,
