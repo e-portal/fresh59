@@ -1827,10 +1827,17 @@ function topNewProductIndex(catId, type) {
                 }
 
                 if(data.items[i].acttype=='gift') {
-                    gift_ = '<div class="itee present"><div class="numeral"><img src="/assets/img/present-img.png" alt="present"></div><p>Подарок!</p><img src="/images/catalog/'+data.items[i].actid+'_s.jpg" alt="gift"/></div>'
+                    gift_ = '<div class="itee present"><div class="numeral"><img src="/assets/img/present-img.png" alt="present"></div><p>Подарок!</p><img src="/images/catalog/'+data.items[i].actid+'_s.jpg" alt="'+data.items[i].actname+'"/></div>'
                 } else {
                     gift_ = ''
                 }
+
+                if(data.items[i].bonus_amount > 0) {
+                    bonus_amount = '<p>Вернем: <span>' + data.items[i].bonus_amount + ' грн</span></p>'
+                } else {
+                    bonus_amount = ''
+                }
+
                 url_name = data.items[i].name;
                 url_name_ = url_name.split(' ').join('-');
 
@@ -1864,7 +1871,7 @@ function topNewProductIndex(catId, type) {
                     '<div class="bakk">\n' +
                     '<div class="left-bakk">\n' +
                     '<p>' + data.items[i].id2 + ' грн.</p>\n' +
-                    '<p>Вернем: <span>' + data.items[i].bonus_price + ' грн</span></p>\n' +
+                    ''+bonus_amount+'\n' +
                     '</div>\n' +
                     '<div class="right-bakk">\n' +
                     '<object type="lol/wut">\n' +
