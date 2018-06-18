@@ -1808,9 +1808,8 @@ function topNewProductIndex(catId, type) {
 
                 if(data.items[i].id_availability == 1) {
                    a = '<h5 class="green">В наличии</h5>'
-                    $('.green').text('В наличии1')
-                    green =  $('<h5 class="green">В наличии</h5>')
-                    console.log(green,a);
+
+                    console.log(,a);
                 } else if(data.items[i].id_availability == 2) {
                     $('.gray').text('Наличие уточняйте')
                     console.log(2);
@@ -1824,7 +1823,7 @@ function topNewProductIndex(catId, type) {
 
                 a = $('<div class="item-senn">\n' +
                     ' <a class="sench" href="">\n' +
-                    ' '+ green +'\n'+
+                    ' '+ a +'\n'+
                     '       <h4>' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '</h4>\n' +
                     '   <div class="centr">\n' +
                     '       <div class="itee-imgg">\n' +
