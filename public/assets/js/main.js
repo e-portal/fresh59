@@ -1810,7 +1810,7 @@ function topNewProductIndex(catId, type) {
                    // a = <h5 class="green">В наличии</h5>
                     $('.green').text('В наличии1')
                     green =  $('<h5 class="green">В наличии</h5>')
-                    console.log(1);
+                    console.log(green);
                 } else if(data.items[i].id_availability == 2) {
                     $('.gray').text('Наличие уточняйте')
                     console.log(2);
