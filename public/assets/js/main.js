@@ -1821,6 +1821,7 @@ function topNewProductIndex(catId, type) {
 
 
 
+
                 a = $('<div class="item-senn">\n' +
                     ' <a class="sench" href="">\n' +
                     ' '+ green +'\n'+
