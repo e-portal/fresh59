@@ -1900,7 +1900,6 @@ function topNewProductIndex(catId, type) {
             var wrapSize = 7;
 
             for (var i = 0; i < allElements.length; i += wrapSize) {
-
                 /* создаём врап */
                 var wrap = document.createElement("div");
                 wrap.classList.add("maii-item");
