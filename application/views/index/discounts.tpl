@@ -8,14 +8,14 @@
 
         <div class="parag parag-home">
             <div class="parag-item active">Популярные модели</div>
-            <div class="parag-item">Отдельностоящая</div>
-            <div class="parag-item">Встраиваемая</div>
-            <div class="parag-item">Мелкая бытовая</div>
-            <div class="parag-item">Красота и здоровье</div>
-            <div class="parag-item">Для уборки</div>
-            <div class="parag-item">Посуда</div>
-            <div class="parag-item">Мойки и смесители</div>
-            <div class="parag-item">Климатическая</div>
+            <div class="parag-item" onclick="topNewProductIndex(17,'act'); return false;">Отдельностоящая</div>
+            <div class="parag-item" onclick="topNewProductIndex(7,'act'); return false;">Встраиваемая</div>
+            <div class="parag-item" onclick="topNewProductIndex(44,'act'); return false;">Мелкая бытовая</div>
+            <div class="parag-item" onclick="topNewProductIndex(193,'act'); return false;">Красота и здоровье</div>
+            <div class="parag-item" onclick="topNewProductIndex(57,'act'); return false;">Для уборки</div>
+            <div class="parag-item" onclick="topNewProductIndex(215,'act'); return false;">Посуда</div>
+            <div class="parag-item" onclick="topNewProductIndex(27,'act'); return false;">Мойки и смесители</div>
+            <div class="parag-item" onclick="topNewProductIndex(136,'act'); return false;">Климатическая</div>
         </div>
 
 
@@ -23,7 +23,7 @@
 
             <div class="hate ">
 
-                <div class="hate-item">
+                <div class="hate-item act_product">
 
                     {foreach from=$actionItems item=item name=action_items}
                     <div class="ityy">

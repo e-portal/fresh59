@@ -1757,13 +1757,18 @@ $(document).ready(function () {
 
 
 function topNewProductIndex(catId, type) {
-
-
-    if (type == 'top'){
-        $('.senn-main.maii.top_product .senn-slik').html('');
-        $('.senn-main.maii.top_product .senn-slik').removeClass('slick-initialized slick-slider slick-dotted');
-
-    } else if (type == 'new'){
+    var top_product = $('.senn-main.maii.top_product');
+    var new_product = $('.senn-main.maii.new_product');
+    var act_product = $('.hate-item.act_product');
+    if (type == 'top') {
+        top_product.find('.senn-slik').html('');
+        top_product.find('.senn-slik').removeClass('slick-initialized slick-slider slick-dotted');
+    } else if (type == 'new') {
+        new_product.find('.senn-slik').html('');
+        new_product.find('.senn-slik').removeClass('slick-initialized slick-slider slick-dotted');
+    } else if (type == 'act') {
+        act_product.find('.hate').html('');
+        act_product.find('.hate').removeClass('slick-initialized slick-slider slick-dotted');
     }
 
 
@@ -1791,24 +1796,22 @@ function topNewProductIndex(catId, type) {
         success: function (data) {
 
 
-
             if ($('.senn-main.maii .senn-slik').hasClass('slick-list')) {
                 $('.senn-slik').unslick()
             }
 
 
             for (var i = 0; i < data.items.length; i++) {
-             a = $('<div class="item-senn">\n' +
+                a = $('<div class="item-senn">\n' +
                     ' <a class="sench" href="">\n' +
-                    '<h5 class="green">В наличии</h5>\n' +
-                    ' <h4>' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '</h4>\n' +
-                    '<div class="centr">\n' +
-                    ' <div class="itee-imgg">\n' +
-                    ' <img src="/images/catalog/' + data.items[i].imgid + '.' + data.items[i].imgext + '" alt="варочная поверхность Electrolux EHI 9654 HFK купить" title="варочная поверхность Electrolux EHI 9654 HFK">\n' +
-                    '</div>\n' +
+                    '       <h4>' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '</h4>\n' +
+                    '   <div class="centr">\n' +
+                    '       <div class="itee-imgg">\n' +
+                    '           <img src="/images/catalog/' + data.items[i].imgid + '.' + data.items[i].imgext + '" alt="варочная поверхность Electrolux EHI 9654 HFK купить" title="варочная поверхность Electrolux EHI 9654 HFK">\n' +
+                    '   </div>\n' +
                     '<div class="itee">\n' +
-                    '<img src="/assets/img/izee0.png" alt="">\n' +
-                    '<p>Вернем: <span>120 грн</span></p>\n' +
+                    '   <img src="/assets/img/izee0.png" alt="">\n' +
+                    '   <p>Вернем: <span>120 грн</span></p>\n' +
                     ' </div>\n' +
                     '<div class="itee">\n' +
                     '<img src="/assets/img/izee1.png" alt="">\n' +
@@ -1859,46 +1862,46 @@ function topNewProductIndex(catId, type) {
                     '</div>\n' +
                     '</div>\n' +
                     '</div>')
-                    if (type == 'top'){
-                        a.appendTo('.senn-main.maii.top_product .senn-slik ');
 
-                    } else if (type == 'new'){
-                        // $('.senn-main.maii.new_product .senn-slik').html('')
-                        // $('.senn-main.maii.new_product .senn-slik').removeClass('slick-initialized slick-slider slick-dotted')
-                        a.appendTo('.senn-main.maii.new_product .senn-slik ');
-                        i++
+                if (data.items[i].id_availability !== undefined) {
+
+                    if(data.items[i].id_availability == 1) {
+                        $('<h5 class="green">В наличии</h5>').appendTo($('.sench') + i)
+                    } else if(data.items[i].id_availability == 2) {
+                        $('<h5 class="gray">Наличие уточняйте</h5>').appendTo($('.sench') + i)
+                    }else if(data.items[i].id_availability == 3) {
+                        $('<h5 class="blue">Под заказ</h5>').appendTo($('.sench') + i)
                     }
-                 // a.appendTo('.senn-main.maii.top_product .senn-slik ');
+
+                }
+
+                if (type == 'top') {
+                    a.appendTo('.senn-main.maii.top_product .senn-slik ');
+
+                } else if (type == 'new') {
+                    // $('.senn-main.maii.new_product .senn-slik').html('')
+                    // $('.senn-main.maii.new_product .senn-slik').removeClass('slick-initialized slick-slider slick-dotted')
+                    a.appendTo('.senn-main.maii.new_product .senn-slik ');
+                    i++
+                }
+                // a.appendTo('.senn-main.maii.top_product .senn-slik ');
                 i++
             }
 
 
-
-                var container = $(".senn-main.maii.top_product .senn-slik");
-
-                var allElements = Array.from(container.find(".item-senn"));
-
-
-            console.log(allElements);
+            var container = $(".senn-main.maii.top_product .senn-slik");
+            var allElements = Array.from(container.find(".item-senn"));
             for (var p = 0; p < allElements.length; p += 7) {
-                    var wrap = document.createElement("div");
-                    wrap.classList.add("maii-item");
-
-                    for (var j = 0; j < 7; j++) {
-                        if (p + j < allElements.length) {
-                            wrap.append(allElements[p + j]);
-                        }
+                var wrap = document.createElement("div");
+                wrap.classList.add("maii-item");
+                for (var j = 0; j < 7; j++) {
+                    if (p + j < allElements.length) {
+                        wrap.append(allElements[p + j]);
                     }
-
-                    container.append(wrap);
                 }
-
-
-
-
-
+                container.append(wrap);
+            }
         }
-
     });
 
 
