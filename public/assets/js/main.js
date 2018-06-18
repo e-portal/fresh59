@@ -1818,7 +1818,7 @@ function topNewProductIndex(catId, type) {
 
 
                 a = $('<div class="item-senn">\n' +
-                    ' <a class="sench" href=" '+ data.items[i].subdomain+' / '+ data.items[i].cat_latin_single +' / '+ data.items[i].brand+' '+  data.items[i].name+'">\n' +
+                    ' <a class="sench" href="'+data.items[i].subdomain+'/'+data.items[i].cat_latin_single+'/'+data.items[i].brand+'-'+data.items[i].name+'">\n' +
                     ' '+ in_stock +'\n'+
                     '       <h4>' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '</h4>\n' +
                     '   <div class="centr">\n' +
