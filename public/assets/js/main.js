@@ -1780,9 +1780,8 @@ function topNewProductIndex(catId, type) {
         dataType: 'json',
         success: function (data) {
 
-            $('.senn-main.maii .senn-slik .slick-list').remove()
-            $('.senn-main.maii .senn-slik .slick-dots').remove()
-            $('.senn-main.maii .senn-slik').removeClass('slick-initialized slick-slider slick-dotted')
+
+
             if ($('.senn-main.maii .senn-slik').hasClass('slick-list')) {
                 $('.senn-slik').unslick()
             }
@@ -1851,12 +1850,16 @@ function topNewProductIndex(catId, type) {
                     '</div>\n' +
                     '</div>')
                     if (type == 'top'){
-                        console.log(type, 123);
+                        $('.senn-main.maii.top_product .senn-slik').html('');
+                        $('.senn-main.maii.top_product .senn-slik').removeClass('slick-initialized slick-slider slick-dotted')
+                        a.appendTo('.senn-main.maii.top_product .senn-slik ');
                     } else if (type == 'new'){
-                        console.log(type, 22223);
+                        $('.senn-main.maii.new_product .senn-slik').html('')
+                        $('.senn-main.maii.new_product .senn-slik').removeClass('slick-initialized slick-slider slick-dotted')
+                        a.appendTo('.senn-main.maii.new_product .senn-slik ');
 
                     }
-                 a.appendTo('.senn-main.maii.top_product .senn-slik ');
+                 // a.appendTo('.senn-main.maii.top_product .senn-slik ');
                 i++
             }
             $('.senn-main.maii .senn-slik :nth-child(7n-7)').each(function () {

@@ -15,7 +15,7 @@
             <div class="parag-item">Климатическая</div>
         </div>
 
-        <div class="senn-main maii">
+        <div class="senn-main maii new_product">
             {*----------------MAIN----------------*}
             <div class="senn-slik slick">
                 <div class="maii-item">
