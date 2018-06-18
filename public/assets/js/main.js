@@ -1878,7 +1878,7 @@ function topNewProductIndex(catId, type) {
                 var container = $(".senn-main.maii.top_product .senn-slik");
 
                 /* получаем item-ы у контейнера */
-                var allElements = Array.from(container.find(".senn-main.maii.top_product .item-senn"));
+                var allElements = Array.from(container.find(".item-senn"));
 
 
             console.log(allElements);
