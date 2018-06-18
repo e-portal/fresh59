@@ -1851,7 +1851,10 @@ function topNewProductIndex(catId, type) {
                     '</div>\n' +
                     '</div>')
                     if (type == 'top'){
-                        console.log(type);
+                        console.log(type, 123);
+                    } else if (type == 'new'){
+                        console.log(type, 22223);
+
                     }
                  a.appendTo('.senn-main.maii.top_product .senn-slik ');
                 i++

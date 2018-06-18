@@ -5,7 +5,7 @@
 
         <div class="liner"><span>ГОРЯЧИЕ НОВИНКИ</span></div>
         <div class="parag parag-prev ">
-            <div class="parag-item active">Отдельностоящая</div>
+            <div class="parag-item active" onclick="topNewProductIndex(17,'new'); return false;">Отдельностоящая</div>
             <div class="parag-item">Встраиваемая</div>
             <div class="parag-item">Мелкая бытовая</div>
             <div class="parag-item">Красота и здоровье</div>
