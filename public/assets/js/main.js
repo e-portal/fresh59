@@ -1802,7 +1802,7 @@ function topNewProductIndex(catId, type) {
 
 
             for (var i = 0; i < data.items.length; i++) {
-                a = $('<div class="item-senn ' + i + '">\n' +
+                a = $('<div class="item-senn ">\n' +
                     ' <a class="sench" href="">\n' +
                     ' <div class="sench_"> </div>\n' +
                     '       <h4>' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '</h4>\n' +
