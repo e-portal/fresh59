@@ -1802,9 +1802,8 @@ function topNewProductIndex(catId, type) {
 
 
             for (var i = 0; i < data.items.length; i++) {
-                a = $('<div class="item-senn ">\n' +
+                a = $('<div class="item-senn ' + i + '">\n' +
                     ' <a class="sench" href="">\n' +
-                    '<h5 class="green">В наличии</h5>\n'+
                     '       <h4>' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '</h4>\n' +
                     '   <div class="centr">\n' +
                     '       <div class="itee-imgg">\n' +
@@ -1828,7 +1827,7 @@ function topNewProductIndex(catId, type) {
                     '<img src="/images/catalog/93266_s.jpg" alt="gift"/>\n' +
                     '</div>\n' +
                     '</div>\n' +
-                    '</div>\n' +
+                    '</a>\n' +
                     '<object type="lol/wut">\n' +
                     '<span class="otzv">\n' +
                     '<div class="left-otzv">\n' +
@@ -1881,23 +1880,22 @@ function topNewProductIndex(catId, type) {
                 // a.appendTo('.senn-main.maii.top_product .senn-slik ');
 
 
-                // if(data.items[i].id_availability == 1) {
-                //     $('.green').text('В наличии')
-                //     console.log(1);
-                // } else if(data.items[i].id_availability == 2) {
-                //     console.log(2);
-                //     $('<h5 class="gray">Наличие уточняйте</h5>').appendTo(a.find('.sench_'))
-                // }else if(data.items[i].id_availability == 3) {
-                //     console.log(3);
-                //     $('<h5 class="blue">Под заказ</h5>').appendTo(a.find('.sench_'))
-                // }
 
 
                 i++
             }
 
 
-
+            // if(data.items[i].id_availability == 1) {
+            //     $('<h5 class="green">В наличии</h5>').appendTo('.sench' + i)
+            //     console.log(1);
+            // } else if(data.items[i].id_availability == 2) {
+            //     console.log(2);
+            //     $('<h5 class="gray">Наличие уточняйте</h5>').appendTo('.sench' + i)
+            // }else if(data.items[i].id_availability == 3) {
+            //     console.log(3);
+            //     $('<h5 class="blue">Под заказ</h5>').appendTo('.sench' + i)
+            // }
 
 
             var container = $(".senn-main.maii.top_product .senn-slik");
