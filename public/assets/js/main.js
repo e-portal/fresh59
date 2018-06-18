@@ -1851,7 +1851,7 @@ function topNewProductIndex(catId, type) {
                     '</div>\n' +
                     '</div>')
 
-                 a.appendTo('.senn-main.maii .senn-slik ');
+                 a.appendTo('.senn-main.maii.top_product .senn-slik ');
                 i++
             }
             $('.senn-main.maii .senn-slik :nth-child(7n-7)').each(function () {

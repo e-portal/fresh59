@@ -17,7 +17,7 @@
             <div class="parag-item" onclick="topNewProductIndex(136,'top'); return false;">Климатическая</div>
         </div>
 
-        <div class="senn-main maii">
+        <div class="senn-main maii top_product">
             {*----------------MAIN----------------*}
             <div class="senn-slik slick">
                 <div class="maii-item">
