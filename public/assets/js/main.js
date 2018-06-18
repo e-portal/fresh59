@@ -1863,19 +1863,59 @@ function topNewProductIndex(catId, type) {
                     }
                  // a.appendTo('.senn-main.maii.top_product .senn-slik ');
             }
-            $('.senn-main.maii .senn-slik :nth-child(7n-7)').each(function () {
-                var n = 0;
-                $(this).addClass('group');
-                while (n = 2) {
-                    $(this).prevAll('.item-senn').eq(n).addClass('group');
-                    n++;
+
+            // var items = document.querySelectorAll('.item-senn');
+            // var wrap;
+            // for (i = 0; i < items.length; i ++) {
+            //     if (i%7 === 0)
+            //     {
+            //         wrap = document.createElement('div');
+            //         wrap.className = "wrap";
+            //         document.body.appendChild(wrap);
+            //     }
+            //     wrap.appendChild(items[i]);
+            // }
+            // $('.senn-main.maii .senn-slik :nth-child(7n-7)').each(function () {
+            //     var n = 0;
+            //     $(this).addClass('group');
+            //     while (n < 2) {
+            //         $(this).prevAll('.item-senn').eq(n).addClass('group');
+            //         n++;
+            //     }
+            //
+            //
+            //
+            //     $('.group').wrapAll('<div class="maii-item"></div>');
+            //     $('.item-senn').removeClass('group');
+            // });
+
+
+
+            /* получаем контейнер */
+            var container = document.getElementsByClassName("senn-slik");
+
+            /* получаем item-ы у контейнера */
+            var allElements = Array.from(container.getElementsByClassName("item-senn"));
+
+            var wrapSize = 7;
+
+            for (var i = 0; i < allElements.length; i += wrapSize) {
+
+                /* создаём врап */
+                var wrap = document.createElement("div");
+                wrap.classList.add("maii-item");
+
+                /* наполняем нужным количеством элементов */
+                for (var j = 0; j < wrapSize; j++) {
+                    if (i + j < allElements.length) {
+                        wrap.appendChild(allElements[i + j]);
+                    }
                 }
 
+                /* добавляем в контейнер */
+                container.appendChild(wrap);
+            }
 
-
-                $('.group').wrapAll('<div class="maii-item"></div>');
-                $('.item-senn').removeClass('group');
-            });
 
         }
 
