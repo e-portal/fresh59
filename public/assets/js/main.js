@@ -1889,7 +1889,7 @@ function topNewProductIndex(catId, type) {
             //     $('.item-senn').removeClass('group');
             // });
 
-            $('.senn-main.maii .senn-slik)').each(function () {
+            $('.senn-main.maii .senn-slik').each(function () {
                 /* получаем контейнер */
                 var container = document.getElementsByClassName("senn-slik");
 
