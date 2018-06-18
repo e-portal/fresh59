@@ -1807,10 +1807,10 @@ function topNewProductIndex(catId, type) {
 
 
                 if(data.items[i].id_availability == 1) {
-                   // a = <h5 class="green">В наличии</h5>
+                   a = '<h5 class="green">В наличии</h5>'
                     $('.green').text('В наличии1')
                     green =  $('<h5 class="green">В наличии</h5>')
-                    console.log(green);
+                    console.log(green,a);
                 } else if(data.items[i].id_availability == 2) {
                     $('.gray').text('Наличие уточняйте')
                     console.log(2);
