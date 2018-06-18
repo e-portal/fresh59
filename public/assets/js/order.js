@@ -275,7 +275,6 @@ $(document).ready(function () {
         $input.val(c);
         $input.trigger('change');
         doBasket(basket);
-        appentTOOO()
     }
 
     /*---------end Plus-minus PRODUCT---------*/
@@ -317,7 +316,7 @@ $(document).ready(function () {
         // $('чекнутый').each(function () {
         //     priseServ += $(цена).html();
         // });
-        appentTOOO()
+
         $('.count-total').html(totalPrice);
         // window.localStorage.setItem('basket', JSON.stringify(basket));
     }
