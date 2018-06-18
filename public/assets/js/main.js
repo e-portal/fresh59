@@ -1882,7 +1882,7 @@ function topNewProductIndex(catId, type) {
 
 
                 if(data.items[i].id_availability == 1) {
-                    $('<h5 class="green">В наличии</h5>').appendTo(a.find('.sench_' + i) )
+                    $('<h5 class="green">В наличии</h5>').appendTo(a[i].find('.sench_') )
                     console.log(1);
                 } else if(data.items[i].id_availability == 2) {
                     console.log(2);
