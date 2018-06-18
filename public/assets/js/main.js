@@ -1920,6 +1920,7 @@ function topNewProductIndex(catId, type) {
 
     });
 
+
     $(".senn-main.maii.top_product .senn-slik").slick(
         {
             arrows: false,
