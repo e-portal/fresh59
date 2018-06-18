@@ -417,7 +417,7 @@ jQuery(document).ready(function () {
 
 
             // var pageY = window.pageYOffset || document.documentElement.scrollTop;
-            if (147 < $(this).scrollTop()) {
+            if (212 < $(this).scrollTop()) {
                 // $('.head-item:nth-child(1)').clone().appendTo($('.menu .container.wrap'))
                 $('.menu').addClass('fixed_menu')
                 /* $('.menu').css({
@@ -427,7 +427,7 @@ jQuery(document).ready(function () {
                      'z-index':'5'
 
                  })*/
-            } else if(147 > $(this).scrollTop()){
+            } else if(212 > $(this).scrollTop()){
                 $('.menu').removeClass('fixed_menu')
 
             }
