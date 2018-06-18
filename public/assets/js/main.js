@@ -1804,6 +1804,7 @@ function topNewProductIndex(catId, type) {
             for (var i = 0; i < data.items.length; i++) {
                 a = $('<div class="item-senn ' + i + '">\n' +
                     ' <a class="sench" href="">\n' +
+                    ' <div class="sench_"> </div>\n' +
                     '       <h4>' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '</h4>\n' +
                     '   <div class="centr">\n' +
                     '       <div class="itee-imgg">\n' +
@@ -1827,7 +1828,7 @@ function topNewProductIndex(catId, type) {
                     '<img src="/images/catalog/93266_s.jpg" alt="gift"/>\n' +
                     '</div>\n' +
                     '</div>\n' +
-                    '</a>\n' +
+                    '</div>\n' +
                     '<object type="lol/wut">\n' +
                     '<span class="otzv">\n' +
                     '<div class="left-otzv">\n' +
@@ -1881,7 +1882,7 @@ function topNewProductIndex(catId, type) {
 
 
                 if(data.items[i].id_availability == 1) {
-                    $('<h5 class="green">В наличии</h5>').appendTo(a.find('.sench'))
+                    $('<h5 class="green">В наличии</h5>').appendTo(a.find('.sench_') + i)
                     console.log(1);
                 } else if(data.items[i].id_availability == 2) {
                     console.log(2);
