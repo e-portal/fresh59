@@ -1818,8 +1818,13 @@ function topNewProductIndex(catId, type) {
                     bonus_amount = '<div class="itee"><img src="/assets/img/izee0.png" alt=""><p>Вернем: <span>'+data.items[i].bonus_amount+' грн</span></p></div>'
                 }
 
+                if(data.items[i].id_availability == 1) {
+                    credit_ = '<div class="itee"><img src="/assets/img/izee1.png" alt=""><p>от<span>1499</span>грн/мес</p></div>'
+                }
 
-
+                if(data.items[i].acttype=='gift') {
+                    gift_ = '<div class="itee present"><div class="numeral"><img src="/assets/img/present-img.png" alt="present"></div><p>Подарок!</p><img src="/images/catalog/93266_s.jpg" alt="gift"/></div>'
+                }
                 url_name = data.items[i].name;
                 url_name_ = url_name.split(' ').join('-');
 
@@ -1832,19 +1837,12 @@ function topNewProductIndex(catId, type) {
                     '           <img src="/images/catalog/' + data.items[i].imgid + '.' + data.items[i].imgext + '" alt="варочная поверхность Electrolux EHI 9654 HFK купить" title="варочная поверхность Electrolux EHI 9654 HFK">\n' +
                     '   </div>\n' +
                     ''+bonus_amount+'\n' +
-                    '<div class="itee">\n' +
-                    '<img src="/assets/img/izee1.png" alt="">\n' +
-                    '<p>от<span>1499</span>грн/мес</p>\n' +
-                    '</div>\n' +
+                    ''+credit_+'\n' +
                     '<div class="itee">\n' +
                     '<img src="/assets/img/izee3.png" alt="">\n' +
                     '<p>от<span>619</span>грн/мес</p>\n' +
                     '</div>\n' +
-                    '<div class="itee present">\n' +
-                    '<div class="numeral"><img src="/assets/img/present-img.png" alt="present"></div>\n' +
-                    '<p>Подарок!</p>\n' +
-                    '<img src="/images/catalog/93266_s.jpg" alt="gift"/>\n' +
-                    '</div>\n' +
+                    ''+gift_+'\n' +
                     '</div>\n' +
                     '</a>\n' +
                     '<object type="lol/wut">\n' +
