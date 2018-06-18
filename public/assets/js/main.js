@@ -1816,14 +1816,20 @@ function topNewProductIndex(catId, type) {
 
                 if(data.items[i].bonus_amount > 0) {
                     bonus_amount = '<div class="itee"><img src="/assets/img/izee0.png" alt=""><p>Вернем: <span>'+data.items[i].bonus_amount+' грн</span></p></div>'
+                } else {
+                    bonus_amount = ''
                 }
 
                 if(data.items[i].id_availability == 1) {
                     credit_ = '<div class="itee"><img src="/assets/img/izee1.png" alt=""><p>от<span>1499</span>грн/мес</p></div>'
+                } else {
+                    credit_ = ''
                 }
 
                 if(data.items[i].acttype=='gift') {
                     gift_ = '<div class="itee present"><div class="numeral"><img src="/assets/img/present-img.png" alt="present"></div><p>Подарок!</p><img src="/images/catalog/93266_s.jpg" alt="gift"/></div>'
+                } else {
+                    gift_ = ''
                 }
                 url_name = data.items[i].name;
                 url_name_ = url_name.split(' ').join('-');
