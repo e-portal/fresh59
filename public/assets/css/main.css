@@ -5507,3 +5507,10 @@ input:focus:-ms-input-placeholder { opacity: 0; }
     }
 }
 
+.fixed_menu {
+    position: fixed;
+    top: 0;
+    /* transition: .5s; */
+    width: 100%;
+    z-index: 5;
+}
