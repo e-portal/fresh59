@@ -1802,9 +1802,28 @@ function topNewProductIndex(catId, type) {
 
 
             for (var i = 0; i < data.items.length; i++) {
+
+
+
+
+                if(data.items[i].id_availability == 1) {
+                   // a = <h5 class="green">В наличии</h5>
+                    $('.green').text('В наличии1')
+                    green =  $('.green').text('В наличии1')
+                    console.log(1);
+                } else if(data.items[i].id_availability == 2) {
+                    $('.gray').text('Наличие уточняйте')
+                    console.log(2);
+                }else if(data.items[i].id_availability == 3) {
+                    console.log(3);
+                    $('.blue').text('Под заказ')
+                }
+
+
+
                 a = $('<div class="item-senn">\n' +
                     ' <a class="sench" href="">\n' +
-                    '<h5 class="green">В наличии</h5>\n'+
+                    '<h5 class="'+  green +'">В наличии</h5>\n'+
                     '       <h4>' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '</h4>\n' +
                     '   <div class="centr">\n' +
                     '       <div class="itee-imgg">\n' +
@@ -1877,16 +1896,6 @@ function topNewProductIndex(catId, type) {
                 }
                 // a.appendTo('.senn-main.maii.top_product .senn-slik ');
 
-                if(data.items[i].id_availability == 1) {
-                    $('.green').text('В наличии1')
-                    console.log(1);
-                } else if(data.items[i].id_availability == 2) {
-                    $('.gray').text('Наличие уточняйте')
-                    console.log(2);
-                }else if(data.items[i].id_availability == 3) {
-                    console.log(3);
-                    $('.blue').text('Под заказ')
-                }
 
                 i++
             }
