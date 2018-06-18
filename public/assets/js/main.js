@@ -1922,8 +1922,7 @@ function topNewProductIndex(catId, type) {
                 }
                 container.append(wrap);
             }
-            container.slick(
-                {
+            container.slick({
                     arrows: false,
                     dots: true,
                     infinite: true,
@@ -1939,8 +1938,7 @@ function topNewProductIndex(catId, type) {
                                 arrows: true
                             }
                         }]
-                }
-            );
+                });
         }
 
 
@@ -1949,7 +1947,13 @@ function topNewProductIndex(catId, type) {
 
 
 
-
+    $('.item-senn').hover(
+        function () {
+            $(this).addClass('runn')
+        },
+        function () {
+            $(this).removeClass('runn');
+        });
 
     // $('.add-to-cart').bind('click', doObject);
 
