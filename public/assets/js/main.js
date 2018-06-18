@@ -1807,15 +1807,11 @@ function topNewProductIndex(catId, type) {
 
 
                 if(data.items[i].id_availability == 1) {
-                   a = '<h5 class="green">В наличии</h5>'
-
-                    console.log(a);
+                    in_stock = '<h5 class="green">В наличии</h5>'
                 } else if(data.items[i].id_availability == 2) {
-                    $('.gray').text('Наличие уточняйте')
-                    console.log(2);
+                    in_stock = '<h5 class="gray">Наличие уточняйте</h5>'
                 }else if(data.items[i].id_availability == 3) {
-                    console.log(3);
-                    $('.blue').text('Под заказ')
+                    in_stock = '<h5 class="blue">Под заказ</h5>'
                 }
 
 
@@ -1823,7 +1819,7 @@ function topNewProductIndex(catId, type) {
 
                 a = $('<div class="item-senn">\n' +
                     ' <a class="sench" href="">\n' +
-                    ' '+ a +'\n'+
+                    ' '+ in_stock +'\n'+
                     '       <h4>' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '</h4>\n' +
                     '   <div class="centr">\n' +
                     '       <div class="itee-imgg">\n' +
