@@ -1786,7 +1786,7 @@ function topNewProductIndex(catId, type) {
             if ($('.senn-main.maii .senn-slik').hasClass('slick-list')) {
                 $('.senn-slik').unslick()
             }
-
+            console.log(type);
 
             for (var i = 0; i < data.items.length; i++) {
              a = $('<div class="item-senn">\n' +
@@ -1850,7 +1850,9 @@ function topNewProductIndex(catId, type) {
                     '</div>\n' +
                     '</div>\n' +
                     '</div>')
-
+                    // if (type = tot){
+                    //
+                    // }
                  a.appendTo('.senn-main.maii.top_product .senn-slik ');
                 i++
             }
