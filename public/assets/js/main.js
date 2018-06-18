@@ -1959,3 +1959,4 @@ function topNewProductIndex(catId, type) {
 
 }
 
+
