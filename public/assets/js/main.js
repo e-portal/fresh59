@@ -1874,27 +1874,22 @@ function topNewProductIndex(catId, type) {
 
 
 
-                /* получаем контейнер */
                 var container = $(".senn-main.maii.top_product .senn-slik");
 
-                /* получаем item-ы у контейнера */
                 var allElements = Array.from(container.find(".item-senn"));
 
 
             console.log(allElements);
             for (var p = 0; p < allElements.length; p += 7) {
-                    /* создаём врап */
                     var wrap = document.createElement("div");
                     wrap.classList.add("maii-item");
 
-                    /* наполняем нужным количеством элементов */
                     for (var j = 0; j < 7; j++) {
                         if (p + j < allElements.length) {
                             wrap.append(allElements[p + j]);
                         }
                     }
 
-                    /* добавляем в контейнер */
                     container.append(wrap);
                 }
 
