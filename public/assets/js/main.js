@@ -1789,7 +1789,7 @@ function topNewProductIndex(catId, type) {
 
 
             for (var i = 0; i < data.items.length; i++) {
-                $('<div class="item-senn">\n' +
+             a = $('<div class="item-senn">\n' +
                     ' <a class="sench" href="">\n' +
                     '<h5 class="green">В наличии</h5>\n' +
                     ' <h4>' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '</h4>\n' +
@@ -1849,7 +1849,9 @@ function topNewProductIndex(catId, type) {
                     '</div>\n' +
                     '</div>\n' +
                     '</div>\n' +
-                    '</div>').appendTo($(this).parents().find('.senn-main.maii .senn-slik '));
+                    '</div>')
+
+                 a.appendTo('.senn-main.maii .senn-slik ');
                 i++
             }
             $('.senn-main.maii .senn-slik :nth-child(7n-7)').each(function () {
