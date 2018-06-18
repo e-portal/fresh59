@@ -1815,7 +1815,7 @@ function topNewProductIndex(catId, type) {
                 }
 
                 if(data.items[i].bonus_amount > 0) {
-                    bonus_amount = data.items[i].bonus_amount
+                    bonus_amount = '<div class="itee"><img src="/assets/img/izee0.png" alt=""><p>Вернем: <span>'+data.items[i].bonus_amount+' грн</span></p></div>'
                 }
 
 
@@ -1831,10 +1831,7 @@ function topNewProductIndex(catId, type) {
                     '       <div class="itee-imgg">\n' +
                     '           <img src="/images/catalog/' + data.items[i].imgid + '.' + data.items[i].imgext + '" alt="варочная поверхность Electrolux EHI 9654 HFK купить" title="варочная поверхность Electrolux EHI 9654 HFK">\n' +
                     '   </div>\n' +
-                    '<div class="itee">\n' +
-                    '   <img src="/assets/img/izee0.png" alt="">\n' +
-                    '   <p>Вернем: <span>'+bonus_amount+' грн</span></p>\n' +
-                    ' </div>\n' +
+                    ''+bonus_amount+'\n' +
                     '<div class="itee">\n' +
                     '<img src="/assets/img/izee1.png" alt="">\n' +
                     '<p>от<span>1499</span>грн/мес</p>\n' +
