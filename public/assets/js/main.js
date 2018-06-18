@@ -427,7 +427,7 @@ jQuery(document).ready(function () {
                      'z-index':'5'
 
                  })*/
-            } else if(212 > $(this).scrollTop()){
+            } else if(147 > $(this).scrollTop()){
                 $('.menu').removeClass('fixed_menu')
 
             }
