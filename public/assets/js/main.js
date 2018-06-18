@@ -1881,7 +1881,7 @@ function topNewProductIndex(catId, type) {
 
 
                 if(data.items[i].id_availability == 1) {
-                    $('<h5 class="green">В наличии</h5>').appendTo('.sench' + i)
+                    $('<h5 class="green">В наличии</h5>').appendTo(a.find('.sench'))
                     console.log(1);
                 } else if(data.items[i].id_availability == 2) {
                     console.log(2);
