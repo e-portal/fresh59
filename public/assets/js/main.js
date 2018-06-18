@@ -1850,13 +1850,13 @@ function topNewProductIndex(catId, type) {
                     '</div>\n' +
                     '</div>')
                     if (type == 'top'){
-                        $('.senn-main.maii.top_product .senn-slik').html('');
-                        $('.senn-main.maii.top_product .senn-slik').removeClass('slick-initialized slick-slider slick-dotted')
+                        // $('.senn-main.maii.top_product .senn-slik').html('');
+                        // $('.senn-main.maii.top_product .senn-slik').removeClass('slick-initialized slick-slider slick-dotted')
                         a.appendTo('.senn-main.maii.top_product .senn-slik ');
                         i++
                     } else if (type == 'new'){
-                        $('.senn-main.maii.new_product .senn-slik').html('')
-                        $('.senn-main.maii.new_product .senn-slik').removeClass('slick-initialized slick-slider slick-dotted')
+                        // $('.senn-main.maii.new_product .senn-slik').html('')
+                        // $('.senn-main.maii.new_product .senn-slik').removeClass('slick-initialized slick-slider slick-dotted')
                         a.appendTo('.senn-main.maii.new_product .senn-slik ');
                         i++
                     }
