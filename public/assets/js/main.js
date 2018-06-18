@@ -1889,31 +1889,33 @@ function topNewProductIndex(catId, type) {
             //     $('.item-senn').removeClass('group');
             // });
 
+            $('.senn-main.maii .senn-slik)').each(function () {
+                /* получаем контейнер */
+                var container = document.getElementsByClassName("senn-slik");
 
+                /* получаем item-ы у контейнера */
+                var allElements = Array.from(container.getElementsByClassName("item-senn"));
 
-            /* получаем контейнер */
-            var container = document.getElementsByClassName("senn-slik");
+                var wrapSize = 7;
 
-            /* получаем item-ы у контейнера */
-            var allElements = Array.from(container.getElementsByClassName("item-senn"));
+                for (var p = 0; p < allElements.length; p += wrapSize) {
+                    /* создаём врап */
+                    var wrap = document.createElement("div");
+                    wrap.classList.add("maii-item");
 
-            var wrapSize = 7;
-
-            for (var p = 0; p < allElements.length; p += wrapSize) {
-                /* создаём врап */
-                var wrap = document.createElement("div");
-                wrap.classList.add("maii-item");
-
-                /* наполняем нужным количеством элементов */
-                for (var j = 0; j < wrapSize; j++) {
-                    if (p + j < allElements.length) {
-                        wrap.appendChild(allElements[p + j]);
+                    /* наполняем нужным количеством элементов */
+                    for (var j = 0; j < wrapSize; j++) {
+                        if (p + j < allElements.length) {
+                            wrap.appendChild(allElements[p + j]);
+                        }
                     }
-                }
 
-                /* добавляем в контейнер */
-                container.appendChild(wrap);
-            }
+                    /* добавляем в контейнер */
+                    container.appendChild(wrap);
+                }
+            })
+
+
 
 
         }
