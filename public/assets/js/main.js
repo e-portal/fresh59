@@ -1814,6 +1814,10 @@ function topNewProductIndex(catId, type) {
                     in_stock = '<h5 class="blue">Под заказ</h5>'
                 }
 
+                if(data.items[i].bonus_amount > 0) {
+                    bonus_amount = data.items[i].bonus_amount
+                }
+
 
 
                 url_name = data.items[i].name;
@@ -1829,7 +1833,7 @@ function topNewProductIndex(catId, type) {
                     '   </div>\n' +
                     '<div class="itee">\n' +
                     '   <img src="/assets/img/izee0.png" alt="">\n' +
-                    '   <p>Вернем: <span>120 грн</span></p>\n' +
+                    '   <p>Вернем: <span>'+bonus_amount+' грн</span></p>\n' +
                     ' </div>\n' +
                     '<div class="itee">\n' +
                     '<img src="/assets/img/izee1.png" alt="">\n' +
