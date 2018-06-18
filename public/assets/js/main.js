@@ -1804,7 +1804,7 @@ function topNewProductIndex(catId, type) {
             for (var i = 0; i < data.items.length; i++) {
                 a = $('<div class="item-senn ">\n' +
                     ' <a class="sench" href="">\n' +
-
+                    '<h5 class="green">В наличии</h5>\n'+
                     '       <h4>' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '</h4>\n' +
                     '   <div class="centr">\n' +
                     '       <div class="itee-imgg">\n' +
@@ -1882,14 +1882,14 @@ function topNewProductIndex(catId, type) {
 
 
                 if(data.items[i].id_availability == 1) {
-                    $('<h5 class="green">В наличии</h5>').appendTo($('.sench_') )
+                    $('.green').text('В наличии')
                     console.log(1);
                 } else if(data.items[i].id_availability == 2) {
                     console.log(2);
-                    $('<h5 class="gray">Наличие уточняйте</h5>').appendTo($('.sench_'))
+                    $('<h5 class="gray">Наличие уточняйте</h5>').appendTo(a.find('.sench_'))
                 }else if(data.items[i].id_availability == 3) {
                     console.log(3);
-                    $('<h5 class="blue">Под заказ</h5>').appendTo($('.sench_'))
+                    $('<h5 class="blue">Под заказ</h5>').appendTo(a.find('.sench_'))
                 }
 
                 i++
