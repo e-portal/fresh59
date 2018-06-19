@@ -1807,7 +1807,7 @@ function topNewProductIndex(catId, type) {
 
             for (var i = 0; i < data.items.length; i++) {
 
-
+                console.log(data.items.length);
 
 
                 if(data.items[i].id_availability == 1) {
