@@ -1769,6 +1769,7 @@ function topNewProductIndex(catId, type) {
         new_product.find('.senn-slik').removeClass('slick-initialized slick-slider slick-dotted');
         var container = $(".senn-main.maii.new_product .senn-slik");
     } else if (type == 'act') {
+        console.log(123);
         act_product.find('.hate').html('');
         act_product.find('.hate').removeClass('slick-initialized slick-slider slick-dotted');
         var container = $(".hate-item.act_product .hate");
