@@ -2064,7 +2064,7 @@ function topNewProductIndex(catId, type) {
     $('.right-butt').bind('click', addItemToCompare);
     // addItemToCompare(e)
     $.getScript("/assets/js/order.js",function(){
-        $('.add-to-cart').bind('click', doObject);
+
         doObject()
     });
 }
