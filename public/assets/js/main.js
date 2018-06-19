@@ -1877,7 +1877,7 @@ function topNewProductIndex(catId, type) {
                     '</div>\n' +
                     '<div class="right-bakk">\n' +
                     '<object type="lol/wut">\n' +
-                    '<a class="open-in-popup add-to-cart bask acty"  data-id="' + data.items[i].id + '" data-name="Варочная поверхность Electrolux EHI 9654 HFK"  data-img="/images/catalog/80990_s.png" data-price="11999" data-sale="10750" data-bonus="1500"   data-gift-id="" data-gift-name="Чайник ELECTROLUX Electro чайник" data-gift-img="/images/catalog/93266_s.jpg">\n' +
+                    '<a class="open-in-popup add-to-cart bask acty"  data-id="'+data.items[i].id+'" data-name="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '"  data-img="/images/catalog/80990_s.png" data-price="11999" data-sale="10750" data-bonus="1500"   data-gift-id="" data-gift-name="Чайник ELECTROLUX Electro чайник" data-gift-img="/images/catalog/93266_s.jpg">\n' +
                     '<span>В корзину</span>\n' +
                     '</a>\n' +
                     '</object>\n' +
@@ -1888,7 +1888,7 @@ function topNewProductIndex(catId, type) {
                     '<div class="left-butt">\n' +
                     '<span>В избранное</span>\n' +
                     '</div>\n' +
-                    '<div class="right-butt" data-id="23311">\n' +
+                    '<div class="right-butt" data-id="'+data.items[i].id+'">\n' +
                     '<span>Сравнение</span>\n' +
                     '</div>\n' +
                     '</div>\n' +
@@ -1933,7 +1933,7 @@ function topNewProductIndex(catId, type) {
                     ' <div class="right-iteem"> \n' +
                     ' <div class="name-iteem"> \n' +
                     ' <h5 class="green">В наличии</h5> \n' +
-                    '<h4>Варочная поверхность Electrolux EHI 9654 HFK </h4>\n' +
+                    '<h4>' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '</h4>\n' +
                     '<object type="lol/wut"> \n' +
                     '<a href="#" class="otzv"> \n' +
                     '<div class="left-otzv"> \n' +
@@ -1949,7 +1949,7 @@ function topNewProductIndex(catId, type) {
                     '<div class="timer" data-year="2018" data-month="06" data-days="30"></div> \n' +
                     '<div class="right-times"> \n' +
                     '<object type="lol/wut"> \n' +
-                    '<a class="open-in-popup add-to-cart bask acty" data-id="23311" data-name="Варочная поверхность Electrolux EHI 9654 HFK" data-img="/images/catalog/80990_s.png" data-price="11999" data-sale="10750" data-bonus="1500" data-gift-id="" data-gift-name="Чайник ELECTROLUX Electro чайник" data-gift-img="/images/catalog/93266_s.jpg">  \n' +
+                    '<a class="open-in-popup add-to-cart bask acty" data-id="'+data.items[i].id+'" data-name="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '" data-img="/images/catalog/80990_s.png" data-price="11999" data-sale="10750" data-bonus="1500" data-gift-id="" data-gift-name="Чайник ELECTROLUX Electro чайник" data-gift-img="/images/catalog/93266_s.jpg">  \n' +
                     ' <span>В корзину</span> \n' +
                     ' </a> \n' +
                     ' </object> \n' +
@@ -1962,7 +1962,7 @@ function topNewProductIndex(catId, type) {
                     '<span>В избранное</span> \n' +
                     ' </object> \n' +
                     '</div> \n' +
-                    '<div class="right-butt" data-id="23311"> \n' +
+                    '<div class="right-butt" data-id="'+data.items[i].id+'"> \n' +
                     '<object type="lol/wut"> \n' +
                     '<span>Сравнение</span> \n' +
                     '</object> \n' +
@@ -1973,13 +1973,9 @@ function topNewProductIndex(catId, type) {
 
                 if (type == 'top') {
                     a.appendTo('.senn-main.maii.top_product .senn-slik ');
-
                 } else if (type == 'new') {
                     a.appendTo('.senn-main.maii.new_product .senn-slik ');
-
                 }
-
-
                 i++
             }
 
@@ -1996,6 +1992,8 @@ function topNewProductIndex(catId, type) {
                 }
                 container.append(wrap);
             }
+
+
             container.slick({
                     arrows: false,
                     dots: true,
@@ -2019,16 +2017,7 @@ function topNewProductIndex(catId, type) {
 
     });
 
-    // $('.add-to-cart').bind('click', doObject, function () {
-    //
-    // });
-    // $('button').bind("click", function() {
-    //
-    //
-    // });
     $.getScript("/assets/js/order.js");
-
-
     $('.item-senn').hover(
         function () {
             $(this).addClass('runn')
@@ -2038,7 +2027,6 @@ function topNewProductIndex(catId, type) {
         });
     $('.right-butt').bind('click', addItemToCompare);
     addItemToCompare(e)
-    // $('.add-to-cart').bind('click', doObject);
 
 }
 
