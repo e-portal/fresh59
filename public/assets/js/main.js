@@ -1770,7 +1770,7 @@ function topNewProductIndex(catId, type) {
         var container = $(".senn-main.maii.new_product .senn-slik");
     } else if (type == 'act') {
         console.log(123);
-        // act_product.find('.hate').html('');
+        act_product.find('.hate').html('');
         act_product.find('.hate').removeClass('slick-initialized slick-slider slick-dotted');
         var container = $(".iteem-mainy.act_product .hate");
     }
@@ -1975,12 +1975,15 @@ function topNewProductIndex(catId, type) {
 
                 if (type == 'top') {
                     a.appendTo('.senn-main.maii.top_product .senn-slik ');
+                    i++
                 } else if (type == 'new') {
                     a.appendTo('.senn-main.maii.new_product .senn-slik ');
+                    i++
                 } else if (type == 'act') {
                     b.appendTo(act_product.find('.hate'))
+                    i++
                 }
-                i++
+
             }
 
             if (type == 'top' || type == 'new'){
