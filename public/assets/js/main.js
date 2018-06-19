@@ -2010,7 +2010,7 @@ function topNewProductIndex(catId, type) {
             ' </div><div class="right-bakk"> <div class="bask acty empty-but"><span></span></div> \n'+
             '  </div> </div> </div> </div> ');
         nn = (container.find('.maii-item').length * 7) - container.find('.item-senn').length
-        for (var o = 0; o < nn; o ++) {
+        for (var o = 0; o < container.find('.item-senn').length; o ++) {
             container.find('.maii-item:last').append(stub)
         }
         // container.find('.maii-item:last .item-senn').length
