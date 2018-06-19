@@ -2002,7 +2002,7 @@ function topNewProductIndex(catId, type) {
         }
         nn = (container.find('.maii-item').length * 7) - container.find('.item-senn').length
         for (var o = 0; o < nn; o += nn) {
-            container.find('.maii-item:last').append($('<div class="item-senn"></div>'))
+            container.find('.maii-item:last').append($('<div class="item-senn mmmm"></div>'))
         }
         // container.find('.maii-item:last .item-senn').length
 
