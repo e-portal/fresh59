@@ -2018,6 +2018,9 @@ function topNewProductIndex(catId, type) {
                     }
                 }]
         });
+
+        console.log(container.find(".item-senn").length);
+
     } else if (type == 'act'){
         var allElements = Array.from(container.find(".ityy"));
         for (var p = 0; p < allElements.length; p += 2) {
