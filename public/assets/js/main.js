@@ -2010,23 +2010,23 @@ function topNewProductIndex(catId, type) {
 
 
         console.log($('.senn-main.maii.top_product .maii-item').length);
-        container.slick({
-            arrows: false,
-            dots: true,
-            infinite: true,
-            speed: 500,
-            cssEase: 'linear',
-            autoplay: true,
-            autoplaySpeed: 5000,
-            responsive: [
-                {
-                    breakpoint: 1025,
-                    settings: {
-                        dots: false,
-                        arrows: true
-                    }
-                }]
-        });
+        // container.slick({
+        //     arrows: false,
+        //     dots: true,
+        //     infinite: true,
+        //     speed: 500,
+        //     cssEase: 'linear',
+        //     autoplay: true,
+        //     autoplaySpeed: 5000,
+        //     responsive: [
+        //         {
+        //             breakpoint: 1025,
+        //             settings: {
+        //                 dots: false,
+        //                 arrows: true
+        //             }
+        //         }]
+        // });
 
 
 
