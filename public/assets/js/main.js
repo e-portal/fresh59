@@ -2019,7 +2019,7 @@ function topNewProductIndex(catId, type) {
                 }]
         });
 
-        console.log(container.find(".item-senn").length);
+        console.log(allElements);
 
     } else if (type == 'act'){
         var allElements = Array.from(container.find(".ityy"));
