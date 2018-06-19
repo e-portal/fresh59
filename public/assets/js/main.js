@@ -1895,7 +1895,81 @@ function topNewProductIndex(catId, type) {
                     '</div>\n' +
                     '</div>')
 
-
+                b = $('<div class="ityy">\n' +
+                    '<div class="hovyy"></div>\n' +
+                    '<a href="http://fresh.590.ua/vt/hob/electrolux-ehi-9654-hfk">\n' +
+                    '<div class="left-iteem">\n' +
+                    ' <div class="itee-imgg">\n' +
+                    '<img src="/images/catalog/80990_s.png"  alt="варочная поверхность Electrolux EHI 9654 HFK купить" title="варочная поверхность Electrolux EHI 9654 HFK"> \n' +
+                    '</div> \n' +
+                    '<div class="itee"> \n' +
+                    '<img src="/assets/img/izee0.png" alt=""> \n' +
+                    '<p>Вернем: <span>120 грн</span></p> \n' +
+                    '</div> \n' +
+                    ' <div class="itee"> \n' +
+                    '  <img src="/assets/img/izee1.png" alt=""> \n' +
+                    '<p> от <span> 1499 </span> грн/мес </p>  \n' +
+                    '</div>  \n' +
+                    '<div class="itee">  \n' +
+                    '<img src="/assets/img/izee3.png" alt="">  \n' +
+                    '<p>от<span>619</span> грн/мес</p> \n' +
+                    '</div> \n' +
+                    '<div class="itee"> \n' +
+                    '<img src="/assets/img/izee4.png" alt=""> \n' +
+                    ' <p>Лучшая <span>цена</span></p> \n' +
+                    '</div> \n' +
+                    '<div class="itee present"> \n' +
+                    ' <div class="numeral"><img src="/assets/img/present-img.png" alt="present"> \n' +
+                    ' </div> \n' +
+                    '<p>Подарок!</p> \n' +
+                    '<img src="/images/catalog/93266_s.jpg" alt="gift"/> \n' +
+                    '</div> \n' +
+                    '<div class="itee change"> \n' +
+                    '<img src="/assets/img/izee5.png" alt=""> \n' +
+                    '<p>Замена</p> \n' +
+                    '</div> \n' +
+                    ' </div> \n' +
+                    ' </a> \n' +
+                    ' <div class="right-iteem"> \n' +
+                    ' <div class="name-iteem"> \n' +
+                    ' <h5 class="green">В наличии</h5> \n' +
+                    '<h4>Варочная поверхность Electrolux EHI 9654 HFK </h4>\n' +
+                    '<object type="lol/wut"> \n' +
+                    '<a href="#" class="otzv"> \n' +
+                    '<div class="left-otzv"> \n' +
+                    '<img src="/assets/img/patr.png" alt=""> \n' +
+                    '</div> \n' +
+                    '<div class="right-otzv"> \n' +
+                    '<span>10 отзывов</span> \n' +
+                    '</div> \n' +
+                    ' </a> \n' +
+                    ' </object> \n' +
+                    '<div class="cash"> 11999 грн.</div> \n' +
+                    '<div class="times"> \n' +
+                    '<div class="timer" data-year="2018" data-month="06" data-days="30"></div> \n' +
+                    '<div class="right-times"> \n' +
+                    '<object type="lol/wut"> \n' +
+                    '<a class="open-in-popup add-to-cart bask acty" data-id="23311" data-name="Варочная поверхность Electrolux EHI 9654 HFK" data-img="/images/catalog/80990_s.png" data-price="11999" data-sale="10750" data-bonus="1500" data-gift-id="" data-gift-name="Чайник ELECTROLUX Electro чайник" data-gift-img="/images/catalog/93266_s.jpg">  \n' +
+                    ' <span>В корзину</span> \n' +
+                    ' </a> \n' +
+                    ' </object> \n' +
+                    ' </div> \n' +
+                    ' </div> \n' +
+                    ' </div> \n' +
+                    ' <div class="news"> \n' +
+                    ' <div class="left-butt"> \n' +
+                    '<object type="lol/wut"> \n' +
+                    '<span>В избранное</span> \n' +
+                    ' </object> \n' +
+                    '</div> \n' +
+                    '<div class="right-butt" data-id="23311"> \n' +
+                    '<object type="lol/wut"> \n' +
+                    '<span>Сравнение</span> \n' +
+                    '</object> \n' +
+                    '</div> \n' +
+                    '</div> \n' +
+                    '</div> \n' +
+                    '</div>')
 
                 if (type == 'top') {
                     a.appendTo('.senn-main.maii.top_product .senn-slik ');
