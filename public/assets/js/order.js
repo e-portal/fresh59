@@ -517,6 +517,7 @@ $(document).ready(function () {
         });
     }
     topNewProductIndex(function () {
+        console.log(9999);
         $('.add-to-cart').bind('click', doObject);
     })
 
