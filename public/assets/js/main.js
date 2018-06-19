@@ -1992,6 +1992,7 @@ function topNewProductIndex(catId, type) {
                 ' </div><div class="right-bakk"> <div class="bask acty empty-but"><span></span></div> \n'+
                 '  </div> </div> </div> </div> '))
         }
+
         container.slick({
             arrows: false,
             dots: true,
@@ -2059,5 +2060,5 @@ function topNewProductIndex(catId, type) {
 
 }
 topNewProductIndex(17,'top')
-console.log(topNewProductIndex(1, 'top'));
+console.log(topNewProductIndex(666, 'top'));
 
