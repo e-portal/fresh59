@@ -2001,7 +2001,7 @@ function topNewProductIndex(catId, type) {
             container.append(wrap);
         }
         // container.find('.maii-item:last .item-senn').length
-
+        container.find('.maii-item:last .item-senn').appendTo($('<div></div>'))
         console.log($('.senn-main.maii.top_product .maii-item').length,container.find('.maii-item:last .item-senn').length);
         // container.slick({
         //     arrows: false,
