@@ -1841,8 +1841,11 @@ function topNewProductIndex(catId, type) {
                 } else {
                     bonus_amount_ = ''
                 }
-                end_date = data.items[i].end_date
-                date_mas = end_date.split('/');
+                if (type == 'act') {
+                    end_date = data.items[i].end_date
+                    date_mas = end_date.split('/');
+                }
+
 
                 url_name = data.items[i].name;
                 url_name_ = url_name.split(' ').join('-');
