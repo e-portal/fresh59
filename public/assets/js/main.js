@@ -1982,7 +1982,7 @@ function topNewProductIndex(catId, type) {
                     console.log(123);
                 }
                 console.log(5555);
-                i++
+
             }
 
 
