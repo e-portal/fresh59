@@ -1803,33 +1803,34 @@ function topNewProductIndex(catId, type) {
             for (var i = 0; i < data.items.length; i++) {
 
 
-                if (data.items[i].id_availability == 1) {
+
+                if(data.items[i].id_availability == 1) {
                     in_stock = '<h5 class="green">В наличии</h5>'
-                } else if (data.items[i].id_availability == 2) {
+                } else if(data.items[i].id_availability == 2) {
                     in_stock = '<h5 class="gray">Наличие уточняйте</h5>'
-                } else if (data.items[i].id_availability == 3) {
+                }else if(data.items[i].id_availability == 3) {
                     in_stock = '<h5 class="blue">Под заказ</h5>'
                 }
 
-                if (data.items[i].bonus_amount > 0) {
-                    bonus_amount = '<div class="itee"><img src="/assets/img/izee0.png" alt=""><p>Вернем: <span>' + data.items[i].bonus_amount + ' грн</span></p></div>'
+                if(data.items[i].bonus_amount > 0) {
+                    bonus_amount = '<div class="itee"><img src="/assets/img/izee0.png" alt=""><p>Вернем: <span>'+data.items[i].bonus_amount+' грн</span></p></div>'
                 } else {
                     bonus_amount = ''
                 }
 
-                if (data.items[i].id_availability == 1) {
+                if(data.items[i].id_availability == 1) {
                     credit_ = '<div class="itee"><img src="/assets/img/izee1.png" alt=""><p>от<span>1499</span>грн/мес</p></div>'
                 } else {
                     credit_ = ''
                 }
 
-                if (data.items[i].acttype == 'gift') {
-                    gift_ = '<div class="itee present"><div class="numeral"><img src="/assets/img/present-img.png" alt="present"></div><p>Подарок!</p><img src="/images/catalog/' + data.items[i].actid + '_s.jpg" alt="' + data.items[i].actname + '"/></div>'
+                if(data.items[i].acttype=='gift') {
+                    gift_ = '<div class="itee present"><div class="numeral"><img src="/assets/img/present-img.png" alt="present"></div><p>Подарок!</p><img src="/images/catalog/'+data.items[i].actid+'_s.jpg" alt="'+data.items[i].actname+'"/></div>'
                 } else {
                     gift_ = ''
                 }
 
-                if (data.items[i].bonus_amount > 0) {
+                if(data.items[i].bonus_amount > 0) {
                     bonus_amount_ = '<p>Вернем: <span>' + data.items[i].bonus_amount + ' грн</span></p>'
                 } else {
                     bonus_amount_ = ''
@@ -1844,20 +1845,20 @@ function topNewProductIndex(catId, type) {
                 url_name_ = url_name.split(' ').join('-');
 
                 a = $('<div class="item-senn">\n' +
-                    ' <a class="sench" href="' + data.items[i].subdomain + '/' + data.items[i].cat_latin_single + '/' + data.items[i].brand + '-' + url_name_ + '">\n' +
-                    ' ' + in_stock + '\n' +
+                    ' <a class="sench" href="'+data.items[i].subdomain+'/'+data.items[i].cat_latin_single+'/'+data.items[i].brand+'-'+url_name_+'">\n' +
+                    ' '+ in_stock +'\n'+
                     '       <h4>' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '</h4>\n' +
                     '   <div class="centr">\n' +
                     '       <div class="itee-imgg">\n' +
                     '           <img src="/images/catalog/' + data.items[i].imgid + '.' + data.items[i].imgext + '" alt="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '" title="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '">\n' +
                     '   </div>\n' +
-                    '' + bonus_amount + '\n' +
-                    '' + credit_ + '\n' +
+                    ''+bonus_amount+'\n' +
+                    ''+credit_+'\n' +
                     '<div class="itee">\n' +
                     '<img src="/assets/img/izee3.png" alt="">\n' +
                     '<p>от<span>619</span>грн/мес</p>\n' +
                     '</div>\n' +
-                    '' + gift_ + '\n' +
+                    ''+gift_+'\n' +
                     '</div>\n' +
                     '</a>\n' +
                     '<object type="lol/wut">\n' +
@@ -1873,11 +1874,11 @@ function topNewProductIndex(catId, type) {
                     '<div class="bakk">\n' +
                     '<div class="left-bakk">\n' +
                     '<p>' + data.items[i].id2 + ' грн.</p>\n' +
-                    '' + bonus_amount_ + '\n' +
+                    ''+bonus_amount_+'\n' +
                     '</div>\n' +
                     '<div class="right-bakk">\n' +
                     '<object type="lol/wut">\n' +
-                    '<a class="open-in-popup add-to-cart bask acty"  data-id="' + data.items[i].id + '" data-name="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '"  data-img="/images/catalog/' + data.items[i].imgid + '.' + data.items[i].imgext + '" data-price="11999" data-sale="10750" data-bonus="1500"   data-gift-id="" data-gift-name="' + data.items[i].actname + '" data-gift-img="/images/catalog/93266_s.jpg" tabindex="-1">\n' +
+                    '<a class="open-in-popup add-to-cart bask acty"  data-id="'+data.items[i].id+'" data-name="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '"  data-img="/images/catalog/' + data.items[i].imgid + '.' + data.items[i].imgext + '" data-price="11999" data-sale="10750" data-bonus="1500"   data-gift-id="" data-gift-name="'+data.items[i].actname+'" data-gift-img="/images/catalog/93266_s.jpg" tabindex="-1">\n' +
                     '<span>В корзину</span>\n' +
                     '</a>\n' +
                     '</object>\n' +
@@ -1888,7 +1889,7 @@ function topNewProductIndex(catId, type) {
                     '<div class="left-butt">\n' +
                     '<span>В избранное</span>\n' +
                     '</div>\n' +
-                    '<div class="right-butt" data-id="' + data.items[i].id + '">\n' +
+                    '<div class="right-butt" data-id="'+data.items[i].id+'">\n' +
                     '<span>Сравнение</span>\n' +
                     '</div>\n' +
                     '</div>\n' +
@@ -1897,13 +1898,13 @@ function topNewProductIndex(catId, type) {
                 if (type == 'act') {
                     b = $('<div class="ityy">\n' +
                         '<div class="hovyy"></div>\n' +
-                        '<a href="/' + data.items[i].subdomain + '/' + data.items[i].cat_latin_single + '/' + data.items[i].brand + '-' + url_name_ + '">\n' +
+                        '<a href="/'+data.items[i].subdomain+'/'+data.items[i].cat_latin_single+'/'+data.items[i].brand+'-'+url_name_+'">\n' +
                         '<div class="left-iteem">\n' +
                         ' <div class="itee-imgg">\n' +
                         '<img src="/images/catalog/80990_s.png"  alt="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + ' купить" title="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '"> \n' +
                         '</div> \n' +
-                        '' + bonus_amount + '\n' +
-                        '' + credit_ + '\n' +
+                        ''+bonus_amount+'\n' +
+                        ''+credit_+'\n' +
                         '<div class="itee">  \n' +
                         '<img src="/assets/img/izee3.png" alt="">  \n' +
                         '<p>от<span>619</span> грн/мес</p> \n' +
@@ -1912,7 +1913,7 @@ function topNewProductIndex(catId, type) {
                         '<img src="/assets/img/izee4.png" alt=""> \n' +
                         ' <p>Лучшая <span>цена</span></p> \n' +
                         '</div> \n' +
-                        '' + gift_ + ' \n' +
+                        ''+gift_+' \n' +
                         '<div class="itee change"> \n' +
                         '<img src="/assets/img/izee5.png" alt=""> \n' +
                         '<p>Замена</p> \n' +
@@ -1935,10 +1936,10 @@ function topNewProductIndex(catId, type) {
                         ' </object> \n' +
                         '<div class="cash"> 11999 грн.</div> \n' +
                         '<div class="times"> \n' +
-                        '<div class="timer" data-year="' + date_mas[2] + '" data-month="' + date_mas[1] + '" data-days="' + date_mas[0] + '"></div> \n' +
+                        '<div class="timer" data-year="'+date_mas[2]+'" data-month="'+date_mas[1]+'" data-days="'+date_mas[0]+'"></div> \n' +
                         '<div class="right-times"> \n' +
                         '<object type="lol/wut"> \n' +
-                        '<a class="open-in-popup add-to-cart bask acty" data-id="' + data.items[i].id + '" data-name="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '" data-img="/images/catalog/' + data.items[i].imgid + '.' + data.items[i].imgext + '" data-price="11999" data-sale="10750" data-bonus="1500" data-gift-id="" data-gift-name="' + data.items[i].actname + '" data-gift-img="/images/catalog/93266_s.jpg" tabindex="-1">  \n' +
+                        '<a class="open-in-popup add-to-cart bask acty" data-id="'+data.items[i].id+'" data-name="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '" data-img="/images/catalog/' + data.items[i].imgid + '.' + data.items[i].imgext + '" data-price="11999" data-sale="10750" data-bonus="1500" data-gift-id="" data-gift-name="'+data.items[i].actname+'" data-gift-img="/images/catalog/93266_s.jpg" tabindex="-1">  \n' +
                         ' <span>В корзину</span> \n' +
                         '</a></object></div></div></div> \n' +
                         '<div class="news"> \n' +
@@ -1947,7 +1948,7 @@ function topNewProductIndex(catId, type) {
                         '<span>В избранное</span> \n' +
                         ' </object> \n' +
                         '</div> \n' +
-                        '<div class="right-butt" data-id="' + data.items[i].id + '"> \n' +
+                        '<div class="right-butt" data-id="'+data.items[i].id+'"> \n' +
                         '<object type="lol/wut"> \n' +
                         '<span>Сравнение</span> \n' +
                         '</object></div></div></div></div>')
@@ -1963,7 +1964,7 @@ function topNewProductIndex(catId, type) {
         }
     });
 
-    if (type == 'top' || type == 'new') {
+    if (type == 'top' || type == 'new'){
         var allElements = Array.from(container.find(".item-senn"));
         for (var p = 0; p < allElements.length; p += 7) {
             var wrap = document.createElement("div");
@@ -1976,37 +1977,37 @@ function topNewProductIndex(catId, type) {
             container.append(wrap);
         }
         nn = (container.find('.maii-item').length * 7) - container.find('.item-senn').length
-        for (var o = 0; o < nn; o++) {
+        for (var o = 0; o < nn; o ++) {
             container.find('.maii-item:last').append($('<div class="item-senn empty"> <div class="text-empty empty-half"></div>\n' +
-                ' <div class="text-empty"></div><div class="text-empty"></div> \n' +
-                ' <span class="sench" ><div class="centr"><div class="itee-imgg"><img src="./img/empty.png" alt=""> </div> </div> \n' +
-                '  <object type="lol/wut"><div class="left-otzv"><img src="./img/empty-stars.png" alt=""></div> </object>\n' +
-                ' <div class="bakk"> <div class="left-bakk"><div class="text-empty empty-half"></div><div class="text-empty empty-half"></div> \n' +
-                ' </div><div class="right-bakk"> <div class="bask acty empty-but"><span></span></div> \n' +
+                ' <div class="text-empty"></div><div class="text-empty"></div> \n'+
+                ' <span class="sench" ><div class="centr"><div class="itee-imgg"><img src="./img/empty.png" alt=""> </div> </div> \n'+
+                '  <object type="lol/wut"><div class="left-otzv"><img src="./img/empty-stars.png" alt=""></div> </object>\n'+
+                ' <div class="bakk"> <div class="left-bakk"><div class="text-empty empty-half"></div><div class="text-empty empty-half"></div> \n'+
+                ' </div><div class="right-bakk"> <div class="bask acty empty-but"><span></span></div> \n'+
                 '  </div> </div> </div> </div> '))
         }
-        if ($('.parag-item').onclick) {
-            container.slick({
-                arrows: false,
-                dots: true,
-                infinite: true,
-                speed: 500,
-                cssEase: 'linear',
-                autoplay: true,
-                autoplaySpeed: 5000,
-                responsive: [
-                    {
-                        breakpoint: 1025,
-                        settings: {
-                            dots: false,
-                            arrows: true
-                        }
-                    }]
-            });
-        }
+
+        container.slick({
+            arrows: false,
+            dots: true,
+            infinite: true,
+            speed: 500,
+            cssEase: 'linear',
+            autoplay: true,
+            autoplaySpeed: 5000,
+            responsive: [
+                {
+                    breakpoint: 1025,
+                    settings: {
+                        dots: false,
+                        arrows: true
+                    }
+                }]
+        });
 
 
-    } else if (type == 'act') {
+
+    } else if (type == 'act'){
         var allElements = Array.from(container.find(".ityy"));
         for (var p = 0; p < allElements.length; p += 2) {
             var wrap = document.createElement("div");
@@ -2052,9 +2053,8 @@ function topNewProductIndex(catId, type) {
     $('.right-butt').bind('click', addItemToCompare);
 
 }
-
 // topNewProductIndex(17,'new')
-topNewProductIndex(17, 'top');
 
-console.log(topNewProductIndex(666, 'top'));
+
+console.log(topNewProductIndex(1, 'top'));
 
