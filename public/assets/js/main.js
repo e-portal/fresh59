@@ -1751,10 +1751,6 @@ $(document).ready(function () {
 
 })
 
-// function sclick_top() {
-//     $(".slick").slick();
-// }
-
 
 function topNewProductIndex(catId, type) {
     var top_product = $('.senn-main.maii.top_product');
@@ -1769,7 +1765,6 @@ function topNewProductIndex(catId, type) {
         new_product.find('.senn-slik').removeClass('slick-initialized slick-slider slick-dotted');
         var container = $(".senn-main.maii.new_product .senn-slik");
     } else if (type == 'act') {
-        // console.log(123);
         act_product.find('.hate').html('');
         act_product.find('.hate').removeClass('slick-initialized slick-slider slick-dotted');
         var container = $(".iteem-mainy.act_product .hate");
@@ -1792,9 +1787,9 @@ function topNewProductIndex(catId, type) {
     $.ajax({
         type: 'POST',
         async: false,
-        // headers: {
-        //     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-        // },
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+        },
         url: '/index/getnewtopproducts/catid/' + catId + '/type/' + typeId + '/',
         dataType: 'json',
         success: function (data) {
@@ -1807,7 +1802,6 @@ function topNewProductIndex(catId, type) {
 
             for (var i = 0; i < data.items.length; i++) {
 
-                console.log(data.items.length);
 
 
                 if(data.items[i].id_availability == 1) {
@@ -1993,23 +1987,23 @@ function topNewProductIndex(catId, type) {
                 '  </div> </div> </div> </div> '))
         }
 
-        // container.slick({
-        //     arrows: false,
-        //     dots: true,
-        //     infinite: true,
-        //     speed: 500,
-        //     cssEase: 'linear',
-        //     autoplay: true,
-        //     autoplaySpeed: 5000,
-        //     responsive: [
-        //         {
-        //             breakpoint: 1025,
-        //             settings: {
-        //                 dots: false,
-        //                 arrows: true
-        //             }
-        //         }]
-        // });
+        container.slick({
+            arrows: false,
+            dots: true,
+            infinite: true,
+            speed: 500,
+            cssEase: 'linear',
+            autoplay: true,
+            autoplaySpeed: 5000,
+            responsive: [
+                {
+                    breakpoint: 1025,
+                    settings: {
+                        dots: false,
+                        arrows: true
+                    }
+                }]
+        });
 
 
 
@@ -2025,26 +2019,26 @@ function topNewProductIndex(catId, type) {
             }
             container.append(wrap);
         }
-        // container.slick({
-        //     slidesToShow: 2,
-        //     slidesToScroll: 1,
-        //     responsive: [
-        //         {
-        //             breakpoint: 1025,
-        //             settings: {
-        //                 slidesToShow: 1,
-        //                 arrows: true,
-        //                 dots: false
-        //             }
-        //         }],
-        //     dots: true,
-        //     arrows: false,
-        //     infinite: true,
-        //     fade: false,
-        //     cssEase: 'linear',
-        //     autoplay: true,
-        //     autoplaySpeed: 5000
-        // });
+        container.slick({
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1025,
+                    settings: {
+                        slidesToShow: 1,
+                        arrows: true,
+                        dots: false
+                    }
+                }],
+            dots: true,
+            arrows: false,
+            infinite: true,
+            fade: false,
+            cssEase: 'linear',
+            autoplay: true,
+            autoplaySpeed: 5000
+        });
 
         CDT();
     }
