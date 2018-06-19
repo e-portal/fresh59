@@ -2000,8 +2000,11 @@ function topNewProductIndex(catId, type) {
             }
             container.append(wrap);
         }
+        for (var o = 0; o < 7; o += 3) {
+            container.find('.maii-item:last').append($('<div></div>'))
+        }
         // container.find('.maii-item:last .item-senn').length
-        container.find('.maii-item:last').append($('<div></div>'))
+
         console.log($('.senn-main.maii.top_product .maii-item').length,container.find('.maii-item:last .item-senn').length);
         // container.slick({
         //     arrows: false,
