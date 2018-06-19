@@ -2053,8 +2053,4 @@ function topNewProductIndex(catId, type) {
     $('.right-butt').bind('click', addItemToCompare);
 
 }
-// topNewProductIndex(17,'new')
-
-
-console.log(topNewProductIndex(666, 'top'));
 
