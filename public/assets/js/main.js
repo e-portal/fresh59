@@ -2015,7 +2015,7 @@ function topNewProductIndex(catId, type) {
                 });
             } else if (type == 'act'){
                 var allElements = Array.from(container.find(".ityy"));
-                for (var p = 0; p < allElements.length; p += 2) {
+                for (var p = 0; p < allElements.length; p += 4) {
                     var wrap = document.createElement("div");
                     wrap.classList.add("hate-item");
                     for (var j = 0; j < 2; j++) {
