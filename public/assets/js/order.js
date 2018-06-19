@@ -519,6 +519,7 @@ $(document).ready(function () {
 
 
     /*---------end COMPARE---------*/
+
     function topNewProductIndex(catId, type) {
         var top_product = $('.senn-main.maii.top_product');
         var new_product = $('.senn-main.maii.new_product');
@@ -828,7 +829,7 @@ $(document).ready(function () {
         // $('.add-to-cart').bind('click', doObject());
         add_to_cart()
     }
-
+    topNewProductIndex(catId, type)
 });
 
 
