@@ -1997,14 +1997,14 @@ function topNewProductIndex(catId, type) {
                 if (p + j < allElements.length) {
                     wrap.append(allElements[p + j]);
 
-                    t = container.find(".item-senn").length
-                    o = container.find(".maii-item").length * 7
-                    wrap.append($('<div class="item-senn"></div>')[o - t]);
+
                 }
             }
             container.append(wrap);
 
-
+            t = container.find(".item-senn").length
+            o = container.find(".maii-item").length * 7
+            container.find('.maii-item:last-child').appendTo($('<div class="item-senn"></div>')[o - t]);
 
         }
 
