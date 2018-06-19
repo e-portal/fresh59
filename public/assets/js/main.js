@@ -1975,16 +1975,14 @@ function topNewProductIndex(catId, type) {
 
                 if (type == 'top') {
                     a.appendTo('.senn-main.maii.top_product .senn-slik ');
-                    i++
                 } else if (type == 'new') {
                     a.appendTo('.senn-main.maii.new_product .senn-slik ');
-                    i++
                 } else if (type == 'act') {
                     b.appendTo(act_product.find('.hate'))
                     console.log(123);
-                    i++
                 }
-
+                console.log(5555);
+                i++
             }
 
 
