@@ -2000,7 +2000,7 @@ function topNewProductIndex(catId, type) {
             }
             container.append(wrap);
         }
-
+        console.log($('.senn-main.maii.top_product .maii-item').length);
         container.slick({
             arrows: false,
             dots: true,
@@ -2019,7 +2019,7 @@ function topNewProductIndex(catId, type) {
                 }]
         });
 
-        console.log($('.senn-main.maii.top_product .maii-item').length);
+
 
     } else if (type == 'act'){
         var allElements = Array.from(container.find(".ityy"));
