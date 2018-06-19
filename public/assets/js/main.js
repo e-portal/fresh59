@@ -2019,6 +2019,14 @@ function topNewProductIndex(catId, type) {
 
     });
 
+    // $('.add-to-cart').bind('click', doObject, function () {
+    //
+    // });
+    // $('button').bind("click", function() {
+    //
+    //
+    // });
+    $.getScript("/assets/js/order.js");
 
 
     $('.item-senn').hover(
