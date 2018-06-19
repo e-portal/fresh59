@@ -11,6 +11,9 @@ $(document).ready(function () {
     }
 
     /*click on cart-button*/
+    $('.senn-main.maii .senn-slik ').each(function () {
+        $('.add-to-cart').bind('click', doObject);
+    })
     $('.add-to-cart').bind('click', doObject);
     $('.add-to-cart').bind('click', function () {
         /*stop scroll*/
