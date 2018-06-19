@@ -19,11 +19,11 @@
         </div>
 
 
-        <div class="iteem-mainy">
+        <div class="iteem-mainy act_product">
 
             <div class="hate ">
 
-                <div class="hate-item act_product">
+                <div class="hate-item ">
 
                     {foreach from=$actionItems item=item name=action_items}
                     <div class="ityy">

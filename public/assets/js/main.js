@@ -1759,7 +1759,7 @@ $(document).ready(function () {
 function topNewProductIndex(catId, type) {
     var top_product = $('.senn-main.maii.top_product');
     var new_product = $('.senn-main.maii.new_product');
-    var act_product = $('.hate-item.act_product');
+    var act_product = $('.iteem-mainy.act_product');
     if (type == 'top') {
         top_product.find('.senn-slik').html('');
         top_product.find('.senn-slik').removeClass('slick-initialized slick-slider slick-dotted');
