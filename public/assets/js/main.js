@@ -1772,7 +1772,7 @@ function topNewProductIndex(catId, type) {
         console.log(123);
         act_product.find('.hate').html('');
         act_product.find('.hate').removeClass('slick-initialized slick-slider slick-dotted');
-        var container = $(".hate-item.act_product .hate");
+        var container = $(".iteem-mainy.act_product .hate");
     }
 
 
