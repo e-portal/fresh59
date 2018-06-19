@@ -471,6 +471,10 @@ $(document).ready(function () {
 
         });
 
+        topNewProductIndex(function () {
+            console.log(9999);
+            $('.add-to-cart').bind('click', doObject);
+        })
 //Active button
         $('.compare-btn').click(function () {
             $(this).parents('.compare-all-blocks').find('.hide-without-different').removeClass('hide-without-different');
@@ -516,10 +520,7 @@ $(document).ready(function () {
 
         });
     }
-    topNewProductIndex(function () {
-        console.log(9999);
-        $('.add-to-cart').bind('click', doObject);
-    })
+
 
     /*---------end COMPARE---------*/
 
