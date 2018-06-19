@@ -1884,7 +1884,7 @@ function topNewProductIndex(catId, type) {
                     '</div>\n' +
                     '<div class="right-bakk">\n' +
                     '<object type="lol/wut">\n' +
-                    '<a class="open-in-popup add-to-cart bask acty"  data-id="'+data.items[i].id+'" data-name="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '"  data-img="/images/catalog/80990_s.png" data-price="11999" data-sale="10750" data-bonus="1500"   data-gift-id="" data-gift-name="Чайник ELECTROLUX Electro чайник" data-gift-img="/images/catalog/93266_s.jpg">\n' +
+                    '<a class="open-in-popup add-to-cart bask acty"  data-id="'+data.items[i].id+'" data-name="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '"  data-img="/images/catalog/' + data.items[i].imgid + '.' + data.items[i].imgext + '" data-price="11999" data-sale="10750" data-bonus="1500"   data-gift-id="" data-gift-name="Чайник ELECTROLUX Electro чайник" data-gift-img="/images/catalog/93266_s.jpg" tabindex="-1">\n' +
                     '<span>В корзину</span>\n' +
                     '</a>\n' +
                     '</object>\n' +
@@ -1950,14 +1950,10 @@ function topNewProductIndex(catId, type) {
                         '<div class="timer" data-year="'+date_mas[2]+'" data-month="'+date_mas[1]+'" data-days="'+date_mas[0]+'"></div> \n' +
                         '<div class="right-times"> \n' +
                         '<object type="lol/wut"> \n' +
-                        '<a class="open-in-popup add-to-cart bask acty" data-id="'+data.items[i].id+'" data-name="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '" data-img="/images/catalog/80990_s.png" data-price="11999" data-sale="10750" data-bonus="1500" data-gift-id="" data-gift-name="Чайник ELECTROLUX Electro чайник" data-gift-img="/images/catalog/93266_s.jpg">  \n' +
+                        '<a class="open-in-popup add-to-cart bask acty" data-id="'+data.items[i].id+'" data-name="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '" data-img="/images/catalog/' + data.items[i].imgid + '.' + data.items[i].imgext + '" data-price="11999" data-sale="10750" data-bonus="1500" data-gift-id="" data-gift-name="Чайник ELECTROLUX Electro чайник" data-gift-img="/images/catalog/93266_s.jpg" tabindex="-1">  \n' +
                         ' <span>В корзину</span> \n' +
-                        ' </a> \n' +
-                        ' </object> \n' +
-                        ' </div> \n' +
-                        ' </div> \n' +
-                        ' </div> \n' +
-                        ' <div class="news"> \n' +
+                        '</a></object></div></div></div> \n' +
+                        '<div class="news"> \n' +
                         ' <div class="left-butt"> \n' +
                         '<object type="lol/wut"> \n' +
                         '<span>В избранное</span> \n' +
@@ -1966,14 +1962,8 @@ function topNewProductIndex(catId, type) {
                         '<div class="right-butt" data-id="'+data.items[i].id+'"> \n' +
                         '<object type="lol/wut"> \n' +
                         '<span>Сравнение</span> \n' +
-                        '</object> \n' +
-                        '</div> \n' +
-                        '</div> \n' +
-                        '</div> \n' +
-                        '</div>')
+                        '</object></div></div></div></div>')
                 }
-
-
                 if (type == 'top') {
                     a.appendTo('.senn-main.maii.top_product .senn-slik ');
                 } else if (type == 'new') {
@@ -1981,10 +1971,7 @@ function topNewProductIndex(catId, type) {
                 } else if (type == 'act') {
                     b.appendTo(act_product.find('.hate'))
                 }
-
             }
-
-
         }
     });
 
@@ -2000,9 +1987,7 @@ function topNewProductIndex(catId, type) {
             }
             container.append(wrap);
         }
-
         nn = (container.find('.maii-item').length * 7) - container.find('.item-senn').length
-
         for (var o = 0; o < nn; o ++) {
             container.find('.maii-item:last').append($('<div class="item-senn empty"> <div class="text-empty empty-half"></div>\n' +
                 ' <div class="text-empty"></div><div class="text-empty"></div> \n'+
@@ -2012,9 +1997,6 @@ function topNewProductIndex(catId, type) {
                 ' </div><div class="right-bakk"> <div class="bask acty empty-but"><span></span></div> \n'+
                 '  </div> </div> </div> </div> '))
         }
-        // container.find('.maii-item:last .item-senn').length
-
-        console.log(nn);
         container.slick({
             arrows: false,
             dots: true,
@@ -2079,7 +2061,6 @@ function topNewProductIndex(catId, type) {
             $(this).removeClass('runn');
         });
     $('.right-butt').bind('click', addItemToCompare);
-    // addItemToCompare(e)
 
 }
 
