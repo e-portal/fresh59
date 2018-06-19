@@ -1841,6 +1841,8 @@ function topNewProductIndex(catId, type) {
                 } else {
                     bonus_amount_ = ''
                 }
+                end_date = data.items[i].end_date
+                date_mas = end_date.split('/');
 
                 url_name = data.items[i].name;
                 url_name_ = url_name.split(' ').join('-');
@@ -1948,7 +1950,7 @@ function topNewProductIndex(catId, type) {
                     ' </object> \n' +
                     '<div class="cash"> 11999 грн.</div> \n' +
                     '<div class="times"> \n' +
-                    '<div class="timer" data-year="2018" data-month="06" data-days="28"></div> \n' +
+                    '<div class="timer" data-year="'+date_mas[3]+'" data-month="'+date_mas[1]+'" data-days="'+date_mas[0]+'"></div> \n' +
                     '<div class="right-times"> \n' +
                     '<object type="lol/wut"> \n' +
                     '<a class="open-in-popup add-to-cart bask acty" data-id="'+data.items[i].id+'" data-name="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '" data-img="/images/catalog/80990_s.png" data-price="11999" data-sale="10750" data-bonus="1500" data-gift-id="" data-gift-name="Чайник ELECTROLUX Electro чайник" data-gift-img="/images/catalog/93266_s.jpg">  \n' +
