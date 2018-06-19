@@ -2000,7 +2000,7 @@ function topNewProductIndex(catId, type) {
             }
             container.append(wrap);
         }
-        container.find('.maii-item').appendTo($('<div class="item-senn"></div>'));
+        // container.find('.maii-item').appendTo($('<div class="item-senn"></div>'));
 
         console.log($('.senn-main.maii.top_product .maii-item').length);
         // container.slick({
