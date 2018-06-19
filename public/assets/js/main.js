@@ -2008,7 +2008,7 @@ function topNewProductIndex(catId, type) {
 
         }
 
-        container.find('.maii-item:last-child').appendTo($('<div class="item-senn"></div>'));
+        container.find('.maii-item').last().appendTo($('<div class="item-senn"></div>'));
         console.log($('.senn-main.maii.top_product .maii-item').length);
         // container.slick({
         //     arrows: false,
