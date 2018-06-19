@@ -2019,7 +2019,7 @@ function topNewProductIndex(catId, type) {
                 }]
         });
 
-        console.log(allElements);
+        console.log(container.find(".maii-item").childNodes.length);
 
     } else if (type == 'act'){
         var allElements = Array.from(container.find(".ityy"));
