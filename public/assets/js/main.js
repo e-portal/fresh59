@@ -1977,7 +1977,7 @@ function topNewProductIndex(catId, type) {
                     a.appendTo('.senn-main.maii.top_product .senn-slik ');
                 } else if (type == 'new') {
                     a.appendTo('.senn-main.maii.new_product .senn-slik ');
-                } else if (type == 'new') {
+                } else if (type == 'act') {
                     b.appendTo(act_product.find('.hate'))
                 }
                 i++
