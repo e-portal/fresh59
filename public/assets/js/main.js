@@ -1979,9 +1979,7 @@ function topNewProductIndex(catId, type) {
                     a.appendTo('.senn-main.maii.new_product .senn-slik ');
                 } else if (type == 'act') {
                     b.appendTo(act_product.find('.hate'))
-                    console.log(123);
                 }
-                console.log(5555);
 
             }
 

@@ -516,13 +516,14 @@ $(document).ready(function () {
 
         });
     }
+    topNewProductIndex(function () {
+        $('.add-to-cart').bind('click', doObject);
+    })
+
     /*---------end COMPARE---------*/
 
 
 });
-topNewProductIndex(function () {
-    $('.add-to-cart').bind('click', doObject);
-})
 
 
 
