@@ -2048,7 +2048,7 @@ function topNewProductIndex(catId, type) {
         }
     });
 
-    $.getScript("/assets/js/order.js");
+    // $.getScript("/assets/js/order.js");
     $('.item-senn').hover(
         function () {
             $(this).addClass('runn')
