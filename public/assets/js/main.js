@@ -166,29 +166,29 @@ jQuery(document).ready(function () {
     } else {
     }
 
-    if ($('.hate').length) {
-        $('.hate').slick({
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            responsive: [
-                {
-                    breakpoint: 1025,
-                    settings: {
-                        slidesToShow: 1,
-                        arrows: true,
-                        dots: false
-                    }
-                }],
-            dots: true,
-            arrows: false,
-            infinite: true,
-            fade: false,
-            cssEase: 'linear',
-            autoplay: true,
-            autoplaySpeed: 5000
-        });
-    } else {
-    }
+    // if ($('.hate').length) {
+    //     $('.hate').slick({
+    //         slidesToShow: 2,
+    //         slidesToScroll: 1,
+    //         responsive: [
+    //             {
+    //                 breakpoint: 1025,
+    //                 settings: {
+    //                     slidesToShow: 1,
+    //                     arrows: true,
+    //                     dots: false
+    //                 }
+    //             }],
+    //         dots: true,
+    //         arrows: false,
+    //         infinite: true,
+    //         fade: false,
+    //         cssEase: 'linear',
+    //         autoplay: true,
+    //         autoplaySpeed: 5000
+    //     });
+    // } else {
+    // }
     var sliderWach;
     var slidersWach = $('.watched-slider-also-by .item-senn ');
     var afterSlides = []
