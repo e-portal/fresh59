@@ -2053,7 +2053,7 @@ function topNewProductIndex(catId, type) {
 
         CDT();
     }
-    // $.getScript("/assets/js/order.js");
+    $.getScript("/assets/js/order.js");
     $('.item-senn').hover(
         function () {
             $(this).addClass('runn')
