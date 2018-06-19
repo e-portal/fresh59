@@ -2000,6 +2000,7 @@ function topNewProductIndex(catId, type) {
             }
             container.append(wrap);
         }
+
         nn = (container.find('.maii-item').length * 7) - container.find('.item-senn').length
         stub = $('<div class="item-senn empty"> <div class="text-empty empty-half"></div>\n' +
             ' <div class="text-empty"></div><div class="text-empty"></div> \n'+
