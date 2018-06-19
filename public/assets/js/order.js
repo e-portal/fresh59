@@ -11,28 +11,29 @@ $(document).ready(function () {
     }
 
     /*click on cart-button*/
-    $('.senn-main.maii .senn-slik ').each(function () {
-        $('.add-to-cart').bind('click', doObject);
-    })
+
     $('.add-to-cart').bind('click', doObject);
-    $('.add-to-cart').bind('click', function () {
-        /*stop scroll*/
+    function add_to_cart(){
+        $('.add-to-cart').bind('click', function () {
+            /*stop scroll*/
 
-        if (window.matchMedia('(max-width: 1025px)').matches) {
-            $('html, body').css('overflow', 'hidden');
-        } else {
-            $('html, body').css('overflow', 'hidden');
-        }
-        if (window.matchMedia("(max-width: 767px)").matches) {
-            appentTOOO()
-        }
+            if (window.matchMedia('(max-width: 1025px)').matches) {
+                $('html, body').css('overflow', 'hidden');
+            } else {
+                $('html, body').css('overflow', 'hidden');
+            }
+            if (window.matchMedia("(max-width: 767px)").matches) {
+                appentTOOO()
+            }
 
-        /*show popup*/
-        $('body').find('.popup-baskets.popup').css('display', 'flex');
-        $('.popup-content').addClass('show');
-        $('.close').addClass('show');
-        $('header .baskets .numeral').text(i);
-    });
+            /*show popup*/
+            $('body').find('.popup-baskets.popup').css('display', 'flex');
+            $('.popup-content').addClass('show');
+            $('.close').addClass('show');
+            $('header .baskets .numeral').text(i);
+        });
+    }
+    add_to_cart()
 
 
     var basket = localStorage.getItem('basket') != undefined ? JSON.parse(localStorage.getItem('basket')) : {};
@@ -57,9 +58,7 @@ $(document).ready(function () {
         }
         window.localStorage.setItem('basket', JSON.stringify(basket));
     }
-    $('.senn-main.maii .senn-slik ').each(function () {
-        doObject()
-    })
+
 
 
     function doBasket(obj) {/* add basket-section-prod*/
@@ -520,319 +519,319 @@ $(document).ready(function () {
 
 
     /*---------end COMPARE---------*/
+    function topNewProductIndex(catId, type) {
+        var top_product = $('.senn-main.maii.top_product');
+        var new_product = $('.senn-main.maii.new_product');
+        var act_product = $('.iteem-mainy.act_product');
+        if (type == 'top') {
+            top_product.find('.senn-slik').html('');
+            top_product.find('.senn-slik').removeClass('slick-initialized slick-slider slick-dotted');
+            var container = $(".senn-main.maii.top_product .senn-slik");
+        } else if (type == 'new') {
+            new_product.find('.senn-slik').html('');
+            new_product.find('.senn-slik').removeClass('slick-initialized slick-slider slick-dotted');
+            var container = $(".senn-main.maii.new_product .senn-slik");
+        } else if (type == 'act') {
+            // console.log(123);
+            act_product.find('.hate').html('');
+            act_product.find('.hate').removeClass('slick-initialized slick-slider slick-dotted');
+            var container = $(".iteem-mainy.act_product .hate");
+        }
 
+
+        switch (type) {
+            case 'top':
+                var typeId = 1;
+                break;
+            case 'new':
+                var typeId = 2;
+                break;
+            case 'act':
+                var typeId = 3;
+                break;
+            default:
+                var typeId = 666;
+        }
+        $.ajax({
+            type: 'POST',
+            async: false,
+            // headers: {
+            //     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+            // },
+            url: '/index/getnewtopproducts/catid/' + catId + '/type/' + typeId + '/',
+            dataType: 'json',
+            success: function (data) {
+
+
+                if ($('.senn-main.maii .senn-slik').hasClass('slick-list')) {
+                    $('.senn-slik').unslick()
+                }
+
+
+                for (var i = 0; i < data.items.length; i++) {
+
+                    console.log(data.items.length);
+
+
+                    if(data.items[i].id_availability == 1) {
+                        in_stock = '<h5 class="green">В наличии</h5>'
+                    } else if(data.items[i].id_availability == 2) {
+                        in_stock = '<h5 class="gray">Наличие уточняйте</h5>'
+                    }else if(data.items[i].id_availability == 3) {
+                        in_stock = '<h5 class="blue">Под заказ</h5>'
+                    }
+
+                    if(data.items[i].bonus_amount > 0) {
+                        bonus_amount = '<div class="itee"><img src="/assets/img/izee0.png" alt=""><p>Вернем: <span>'+data.items[i].bonus_amount+' грн</span></p></div>'
+                    } else {
+                        bonus_amount = ''
+                    }
+
+                    if(data.items[i].id_availability == 1) {
+                        credit_ = '<div class="itee"><img src="/assets/img/izee1.png" alt=""><p>от<span>1499</span>грн/мес</p></div>'
+                    } else {
+                        credit_ = ''
+                    }
+
+                    if(data.items[i].acttype=='gift') {
+                        gift_ = '<div class="itee present"><div class="numeral"><img src="/assets/img/present-img.png" alt="present"></div><p>Подарок!</p><img src="/images/catalog/'+data.items[i].actid+'_s.jpg" alt="'+data.items[i].actname+'"/></div>'
+                    } else {
+                        gift_ = ''
+                    }
+
+                    if(data.items[i].bonus_amount > 0) {
+                        bonus_amount_ = '<p>Вернем: <span>' + data.items[i].bonus_amount + ' грн</span></p>'
+                    } else {
+                        bonus_amount_ = ''
+                    }
+                    if (type == 'act') {
+                        end_date = data.items[i].end_date
+                        date_mas = end_date.split('/');
+                    }
+
+
+                    url_name = data.items[i].name;
+                    url_name_ = url_name.split(' ').join('-');
+
+                    a = $('<div class="item-senn">\n' +
+                        ' <a class="sench" href="'+data.items[i].subdomain+'/'+data.items[i].cat_latin_single+'/'+data.items[i].brand+'-'+url_name_+'">\n' +
+                        ' '+ in_stock +'\n'+
+                        '       <h4>' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '</h4>\n' +
+                        '   <div class="centr">\n' +
+                        '       <div class="itee-imgg">\n' +
+                        '           <img src="/images/catalog/' + data.items[i].imgid + '.' + data.items[i].imgext + '" alt="варочная поверхность Electrolux EHI 9654 HFK купить" title="варочная поверхность Electrolux EHI 9654 HFK">\n' +
+                        '   </div>\n' +
+                        ''+bonus_amount+'\n' +
+                        ''+credit_+'\n' +
+                        '<div class="itee">\n' +
+                        '<img src="/assets/img/izee3.png" alt="">\n' +
+                        '<p>от<span>619</span>грн/мес</p>\n' +
+                        '</div>\n' +
+                        ''+gift_+'\n' +
+                        '</div>\n' +
+                        '</a>\n' +
+                        '<object type="lol/wut">\n' +
+                        '<span class="otzv">\n' +
+                        '<div class="left-otzv">\n' +
+                        '<img src="assets/img/patr.png" alt="">\n' +
+                        '</div>\n' +
+                        '<div class="right-otzv">\n' +
+                        '<span>10 отзывов</span>\n' +
+                        '</div>\n' +
+                        '</span>\n' +
+                        '</object>\n' +
+                        '<div class="bakk">\n' +
+                        '<div class="left-bakk">\n' +
+                        '<p>' + data.items[i].id2 + ' грн.</p>\n' +
+                        ''+bonus_amount_+'\n' +
+                        '</div>\n' +
+                        '<div class="right-bakk">\n' +
+                        '<object type="lol/wut">\n' +
+                        '<a class="open-in-popup add-to-cart bask acty"  data-id="'+data.items[i].id+'" data-name="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '"  data-img="/images/catalog/80990_s.png" data-price="11999" data-sale="10750" data-bonus="1500"   data-gift-id="" data-gift-name="Чайник ELECTROLUX Electro чайник" data-gift-img="/images/catalog/93266_s.jpg">\n' +
+                        '<span>В корзину</span>\n' +
+                        '</a>\n' +
+                        '</object>\n' +
+                        '</div>\n' +
+                        '</div>\n' +
+                        '<div class="hovv">\n' +
+                        '<div class="news">\n' +
+                        '<div class="left-butt">\n' +
+                        '<span>В избранное</span>\n' +
+                        '</div>\n' +
+                        '<div class="right-butt" data-id="'+data.items[i].id+'">\n' +
+                        '<span>Сравнение</span>\n' +
+                        '</div>\n' +
+                        '</div>\n' +
+                        '</div>\n' +
+                        '</div>')
+                    if (type == 'act') {
+                        b = $('<div class="ityy">\n' +
+                            '<div class="hovyy"></div>\n' +
+                            '<a href="http://fresh.590.ua/vt/hob/electrolux-ehi-9654-hfk">\n' +
+                            '<div class="left-iteem">\n' +
+                            ' <div class="itee-imgg">\n' +
+                            '<img src="/images/catalog/80990_s.png"  alt="варочная поверхность Electrolux EHI 9654 HFK купить" title="варочная поверхность Electrolux EHI 9654 HFK"> \n' +
+                            '</div> \n' +
+                            ''+bonus_amount+'\n' +
+                            ''+credit_+'\n' +
+                            '<div class="itee">  \n' +
+                            '<img src="/assets/img/izee3.png" alt="">  \n' +
+                            '<p>от<span>619</span> грн/мес</p> \n' +
+                            '</div> \n' +
+                            '<div class="itee"> \n' +
+                            '<img src="/assets/img/izee4.png" alt=""> \n' +
+                            ' <p>Лучшая <span>цена</span></p> \n' +
+                            '</div> \n' +
+                            '<div class="itee present"> \n' +
+                            ' <div class="numeral"><img src="/assets/img/present-img.png" alt="present"> \n' +
+                            ' </div> \n' +
+                            '<p>Подарок!</p> \n' +
+                            '<img src="/images/catalog/93266_s.jpg" alt="gift"/> \n' +
+                            '</div> \n' +
+                            '<div class="itee change"> \n' +
+                            '<img src="/assets/img/izee5.png" alt=""> \n' +
+                            '<p>Замена</p> \n' +
+                            '</div> \n' +
+                            ' </div> \n' +
+                            ' </a> \n' +
+                            ' <div class="right-iteem"> \n' +
+                            ' <div class="name-iteem"> \n' +
+                            ' <h5 class="green">В наличии</h5> \n' +
+                            '<h4>' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '</h4>\n' +
+                            '<object type="lol/wut"> \n' +
+                            '<a href="#" class="otzv"> \n' +
+                            '<div class="left-otzv"> \n' +
+                            '<img src="/assets/img/patr.png" alt=""> \n' +
+                            '</div> \n' +
+                            '<div class="right-otzv"> \n' +
+                            '<span>10 отзывов</span> \n' +
+                            '</div> \n' +
+                            ' </a> \n' +
+                            ' </object> \n' +
+                            '<div class="cash"> 11999 грн.</div> \n' +
+                            '<div class="times"> \n' +
+                            '<div class="timer" data-year="'+date_mas[2]+'" data-month="'+date_mas[1]+'" data-days="'+date_mas[0]+'"></div> \n' +
+                            '<div class="right-times"> \n' +
+                            '<object type="lol/wut"> \n' +
+                            '<a class="open-in-popup add-to-cart bask acty" data-id="'+data.items[i].id+'" data-name="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '" data-img="/images/catalog/80990_s.png" data-price="11999" data-sale="10750" data-bonus="1500" data-gift-id="" data-gift-name="Чайник ELECTROLUX Electro чайник" data-gift-img="/images/catalog/93266_s.jpg">  \n' +
+                            ' <span>В корзину</span> \n' +
+                            ' </a> \n' +
+                            ' </object> \n' +
+                            ' </div> \n' +
+                            ' </div> \n' +
+                            ' </div> \n' +
+                            ' <div class="news"> \n' +
+                            ' <div class="left-butt"> \n' +
+                            '<object type="lol/wut"> \n' +
+                            '<span>В избранное</span> \n' +
+                            ' </object> \n' +
+                            '</div> \n' +
+                            '<div class="right-butt" data-id="'+data.items[i].id+'"> \n' +
+                            '<object type="lol/wut"> \n' +
+                            '<span>Сравнение</span> \n' +
+                            '</object> \n' +
+                            '</div> \n' +
+                            '</div> \n' +
+                            '</div> \n' +
+                            '</div>')
+                    }
+
+
+                    if (type == 'top') {
+                        a.appendTo('.senn-main.maii.top_product .senn-slik ');
+                    } else if (type == 'new') {
+                        a.appendTo('.senn-main.maii.new_product .senn-slik ');
+                    } else if (type == 'act') {
+                        b.appendTo(act_product.find('.hate'))
+                    }
+
+                }
+
+
+            }
+        });
+
+        if (type == 'top' || type == 'new'){
+            var allElements = Array.from(container.find(".item-senn"));
+            for (var p = 0; p < allElements.length; p += 7) {
+                var wrap = document.createElement("div");
+                wrap.classList.add("maii-item");
+                for (var j = 0; j < 7; j++) {
+                    if (p + j < allElements.length) {
+                        wrap.append(allElements[p + j]);
+                    }
+                }
+                container.append(wrap);
+            }
+
+            container.slick({
+                arrows: false,
+                dots: true,
+                infinite: true,
+                speed: 500,
+                cssEase: 'linear',
+                autoplay: true,
+                autoplaySpeed: 5000,
+                responsive: [
+                    {
+                        breakpoint: 1025,
+                        settings: {
+                            dots: false,
+                            arrows: true
+                        }
+                    }]
+            });
+        } else if (type == 'act'){
+            var allElements = Array.from(container.find(".ityy"));
+            for (var p = 0; p < allElements.length; p += 2) {
+                var wrap = document.createElement("div");
+                wrap.classList.add("hate-item");
+                for (var j = 0; j < 2; j++) {
+                    if (p + j < allElements.length) {
+                        wrap.append(allElements[p + j]);
+                    }
+                }
+                container.append(wrap);
+            }
+            container.slick({
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 1025,
+                        settings: {
+                            slidesToShow: 1,
+                            arrows: true,
+                            dots: false
+                        }
+                    }],
+                dots: true,
+                arrows: false,
+                infinite: true,
+                fade: false,
+                cssEase: 'linear',
+                autoplay: true,
+                autoplaySpeed: 5000
+            });
+
+            CDT();
+        }
+        // $.getScript("/assets/js/order.js");
+        $('.item-senn').hover(
+            function () {
+                $(this).addClass('runn')
+            },
+            function () {
+                $(this).removeClass('runn');
+            });
+        $('.right-butt').bind('click', addItemToCompare);
+        // $('.add-to-cart').bind('click', doObject());
+        add_to_cart()
+    }
 
 });
 
 
 
-function topNewProductIndex(catId, type) {
-    var top_product = $('.senn-main.maii.top_product');
-    var new_product = $('.senn-main.maii.new_product');
-    var act_product = $('.iteem-mainy.act_product');
-    if (type == 'top') {
-        top_product.find('.senn-slik').html('');
-        top_product.find('.senn-slik').removeClass('slick-initialized slick-slider slick-dotted');
-        var container = $(".senn-main.maii.top_product .senn-slik");
-    } else if (type == 'new') {
-        new_product.find('.senn-slik').html('');
-        new_product.find('.senn-slik').removeClass('slick-initialized slick-slider slick-dotted');
-        var container = $(".senn-main.maii.new_product .senn-slik");
-    } else if (type == 'act') {
-        // console.log(123);
-        act_product.find('.hate').html('');
-        act_product.find('.hate').removeClass('slick-initialized slick-slider slick-dotted');
-        var container = $(".iteem-mainy.act_product .hate");
-    }
 
-
-    switch (type) {
-        case 'top':
-            var typeId = 1;
-            break;
-        case 'new':
-            var typeId = 2;
-            break;
-        case 'act':
-            var typeId = 3;
-            break;
-        default:
-            var typeId = 666;
-    }
-    $.ajax({
-        type: 'POST',
-        async: false,
-        // headers: {
-        //     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-        // },
-        url: '/index/getnewtopproducts/catid/' + catId + '/type/' + typeId + '/',
-        dataType: 'json',
-        success: function (data) {
-
-
-            if ($('.senn-main.maii .senn-slik').hasClass('slick-list')) {
-                $('.senn-slik').unslick()
-            }
-
-
-            for (var i = 0; i < data.items.length; i++) {
-
-                console.log(data.items.length);
-
-
-                if(data.items[i].id_availability == 1) {
-                    in_stock = '<h5 class="green">В наличии</h5>'
-                } else if(data.items[i].id_availability == 2) {
-                    in_stock = '<h5 class="gray">Наличие уточняйте</h5>'
-                }else if(data.items[i].id_availability == 3) {
-                    in_stock = '<h5 class="blue">Под заказ</h5>'
-                }
-
-                if(data.items[i].bonus_amount > 0) {
-                    bonus_amount = '<div class="itee"><img src="/assets/img/izee0.png" alt=""><p>Вернем: <span>'+data.items[i].bonus_amount+' грн</span></p></div>'
-                } else {
-                    bonus_amount = ''
-                }
-
-                if(data.items[i].id_availability == 1) {
-                    credit_ = '<div class="itee"><img src="/assets/img/izee1.png" alt=""><p>от<span>1499</span>грн/мес</p></div>'
-                } else {
-                    credit_ = ''
-                }
-
-                if(data.items[i].acttype=='gift') {
-                    gift_ = '<div class="itee present"><div class="numeral"><img src="/assets/img/present-img.png" alt="present"></div><p>Подарок!</p><img src="/images/catalog/'+data.items[i].actid+'_s.jpg" alt="'+data.items[i].actname+'"/></div>'
-                } else {
-                    gift_ = ''
-                }
-
-                if(data.items[i].bonus_amount > 0) {
-                    bonus_amount_ = '<p>Вернем: <span>' + data.items[i].bonus_amount + ' грн</span></p>'
-                } else {
-                    bonus_amount_ = ''
-                }
-                if (type == 'act') {
-                    end_date = data.items[i].end_date
-                    date_mas = end_date.split('/');
-                }
-
-
-                url_name = data.items[i].name;
-                url_name_ = url_name.split(' ').join('-');
-
-                a = $('<div class="item-senn">\n' +
-                    ' <a class="sench" href="'+data.items[i].subdomain+'/'+data.items[i].cat_latin_single+'/'+data.items[i].brand+'-'+url_name_+'">\n' +
-                    ' '+ in_stock +'\n'+
-                    '       <h4>' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '</h4>\n' +
-                    '   <div class="centr">\n' +
-                    '       <div class="itee-imgg">\n' +
-                    '           <img src="/images/catalog/' + data.items[i].imgid + '.' + data.items[i].imgext + '" alt="варочная поверхность Electrolux EHI 9654 HFK купить" title="варочная поверхность Electrolux EHI 9654 HFK">\n' +
-                    '   </div>\n' +
-                    ''+bonus_amount+'\n' +
-                    ''+credit_+'\n' +
-                    '<div class="itee">\n' +
-                    '<img src="/assets/img/izee3.png" alt="">\n' +
-                    '<p>от<span>619</span>грн/мес</p>\n' +
-                    '</div>\n' +
-                    ''+gift_+'\n' +
-                    '</div>\n' +
-                    '</a>\n' +
-                    '<object type="lol/wut">\n' +
-                    '<span class="otzv">\n' +
-                    '<div class="left-otzv">\n' +
-                    '<img src="assets/img/patr.png" alt="">\n' +
-                    '</div>\n' +
-                    '<div class="right-otzv">\n' +
-                    '<span>10 отзывов</span>\n' +
-                    '</div>\n' +
-                    '</span>\n' +
-                    '</object>\n' +
-                    '<div class="bakk">\n' +
-                    '<div class="left-bakk">\n' +
-                    '<p>' + data.items[i].id2 + ' грн.</p>\n' +
-                    ''+bonus_amount_+'\n' +
-                    '</div>\n' +
-                    '<div class="right-bakk">\n' +
-                    '<object type="lol/wut">\n' +
-                    '<a class="open-in-popup add-to-cart bask acty"  data-id="'+data.items[i].id+'" data-name="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '"  data-img="/images/catalog/80990_s.png" data-price="11999" data-sale="10750" data-bonus="1500"   data-gift-id="" data-gift-name="Чайник ELECTROLUX Electro чайник" data-gift-img="/images/catalog/93266_s.jpg">\n' +
-                    '<span>В корзину</span>\n' +
-                    '</a>\n' +
-                    '</object>\n' +
-                    '</div>\n' +
-                    '</div>\n' +
-                    '<div class="hovv">\n' +
-                    '<div class="news">\n' +
-                    '<div class="left-butt">\n' +
-                    '<span>В избранное</span>\n' +
-                    '</div>\n' +
-                    '<div class="right-butt" data-id="'+data.items[i].id+'">\n' +
-                    '<span>Сравнение</span>\n' +
-                    '</div>\n' +
-                    '</div>\n' +
-                    '</div>\n' +
-                    '</div>')
-                if (type == 'act') {
-                    b = $('<div class="ityy">\n' +
-                        '<div class="hovyy"></div>\n' +
-                        '<a href="http://fresh.590.ua/vt/hob/electrolux-ehi-9654-hfk">\n' +
-                        '<div class="left-iteem">\n' +
-                        ' <div class="itee-imgg">\n' +
-                        '<img src="/images/catalog/80990_s.png"  alt="варочная поверхность Electrolux EHI 9654 HFK купить" title="варочная поверхность Electrolux EHI 9654 HFK"> \n' +
-                        '</div> \n' +
-                        ''+bonus_amount+'\n' +
-                        ''+credit_+'\n' +
-                        '<div class="itee">  \n' +
-                        '<img src="/assets/img/izee3.png" alt="">  \n' +
-                        '<p>от<span>619</span> грн/мес</p> \n' +
-                        '</div> \n' +
-                        '<div class="itee"> \n' +
-                        '<img src="/assets/img/izee4.png" alt=""> \n' +
-                        ' <p>Лучшая <span>цена</span></p> \n' +
-                        '</div> \n' +
-                        '<div class="itee present"> \n' +
-                        ' <div class="numeral"><img src="/assets/img/present-img.png" alt="present"> \n' +
-                        ' </div> \n' +
-                        '<p>Подарок!</p> \n' +
-                        '<img src="/images/catalog/93266_s.jpg" alt="gift"/> \n' +
-                        '</div> \n' +
-                        '<div class="itee change"> \n' +
-                        '<img src="/assets/img/izee5.png" alt=""> \n' +
-                        '<p>Замена</p> \n' +
-                        '</div> \n' +
-                        ' </div> \n' +
-                        ' </a> \n' +
-                        ' <div class="right-iteem"> \n' +
-                        ' <div class="name-iteem"> \n' +
-                        ' <h5 class="green">В наличии</h5> \n' +
-                        '<h4>' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '</h4>\n' +
-                        '<object type="lol/wut"> \n' +
-                        '<a href="#" class="otzv"> \n' +
-                        '<div class="left-otzv"> \n' +
-                        '<img src="/assets/img/patr.png" alt=""> \n' +
-                        '</div> \n' +
-                        '<div class="right-otzv"> \n' +
-                        '<span>10 отзывов</span> \n' +
-                        '</div> \n' +
-                        ' </a> \n' +
-                        ' </object> \n' +
-                        '<div class="cash"> 11999 грн.</div> \n' +
-                        '<div class="times"> \n' +
-                        '<div class="timer" data-year="'+date_mas[2]+'" data-month="'+date_mas[1]+'" data-days="'+date_mas[0]+'"></div> \n' +
-                        '<div class="right-times"> \n' +
-                        '<object type="lol/wut"> \n' +
-                        '<a class="open-in-popup add-to-cart bask acty" data-id="'+data.items[i].id+'" data-name="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '" data-img="/images/catalog/80990_s.png" data-price="11999" data-sale="10750" data-bonus="1500" data-gift-id="" data-gift-name="Чайник ELECTROLUX Electro чайник" data-gift-img="/images/catalog/93266_s.jpg">  \n' +
-                        ' <span>В корзину</span> \n' +
-                        ' </a> \n' +
-                        ' </object> \n' +
-                        ' </div> \n' +
-                        ' </div> \n' +
-                        ' </div> \n' +
-                        ' <div class="news"> \n' +
-                        ' <div class="left-butt"> \n' +
-                        '<object type="lol/wut"> \n' +
-                        '<span>В избранное</span> \n' +
-                        ' </object> \n' +
-                        '</div> \n' +
-                        '<div class="right-butt" data-id="'+data.items[i].id+'"> \n' +
-                        '<object type="lol/wut"> \n' +
-                        '<span>Сравнение</span> \n' +
-                        '</object> \n' +
-                        '</div> \n' +
-                        '</div> \n' +
-                        '</div> \n' +
-                        '</div>')
-                }
-
-
-                if (type == 'top') {
-                    a.appendTo('.senn-main.maii.top_product .senn-slik ');
-                } else if (type == 'new') {
-                    a.appendTo('.senn-main.maii.new_product .senn-slik ');
-                } else if (type == 'act') {
-                    b.appendTo(act_product.find('.hate'))
-                }
-
-            }
-
-
-        }
-    });
-
-    if (type == 'top' || type == 'new'){
-        var allElements = Array.from(container.find(".item-senn"));
-        for (var p = 0; p < allElements.length; p += 7) {
-            var wrap = document.createElement("div");
-            wrap.classList.add("maii-item");
-            for (var j = 0; j < 7; j++) {
-                if (p + j < allElements.length) {
-                    wrap.append(allElements[p + j]);
-                }
-            }
-            container.append(wrap);
-        }
-
-        container.slick({
-            arrows: false,
-            dots: true,
-            infinite: true,
-            speed: 500,
-            cssEase: 'linear',
-            autoplay: true,
-            autoplaySpeed: 5000,
-            responsive: [
-                {
-                    breakpoint: 1025,
-                    settings: {
-                        dots: false,
-                        arrows: true
-                    }
-                }]
-        });
-    } else if (type == 'act'){
-        var allElements = Array.from(container.find(".ityy"));
-        for (var p = 0; p < allElements.length; p += 2) {
-            var wrap = document.createElement("div");
-            wrap.classList.add("hate-item");
-            for (var j = 0; j < 2; j++) {
-                if (p + j < allElements.length) {
-                    wrap.append(allElements[p + j]);
-                }
-            }
-            container.append(wrap);
-        }
-        container.slick({
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            responsive: [
-                {
-                    breakpoint: 1025,
-                    settings: {
-                        slidesToShow: 1,
-                        arrows: true,
-                        dots: false
-                    }
-                }],
-            dots: true,
-            arrows: false,
-            infinite: true,
-            fade: false,
-            cssEase: 'linear',
-            autoplay: true,
-            autoplaySpeed: 5000
-        });
-
-        CDT();
-    }
-    // $.getScript("/assets/js/order.js");
-    $('.item-senn').hover(
-        function () {
-            $(this).addClass('runn')
-        },
-        function () {
-            $(this).removeClass('runn');
-        });
-    $('.right-butt').bind('click', addItemToCompare);
-    $('.add-to-cart').bind('click', doObject);
-
-}
 
