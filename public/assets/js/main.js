@@ -1771,6 +1771,7 @@ function topNewProductIndex(catId, type) {
     } else if (type == 'act') {
         act_product.find('.hate').html('');
         act_product.find('.hate').removeClass('slick-initialized slick-slider slick-dotted');
+        var container = $(".hate-item.act_product .hate");
     }
 
 
@@ -1975,26 +1976,26 @@ function topNewProductIndex(catId, type) {
                     a.appendTo('.senn-main.maii.top_product .senn-slik ');
                 } else if (type == 'new') {
                     a.appendTo('.senn-main.maii.new_product .senn-slik ');
+                } else if (type == 'new') {
+                    b.appendTo(act_product.find('.hate'))
                 }
                 i++
             }
 
-
-
-            var allElements = Array.from(container.find(".item-senn"));
-            for (var p = 0; p < allElements.length; p += 7) {
-                var wrap = document.createElement("div");
-                wrap.classList.add("maii-item");
-                for (var j = 0; j < 7; j++) {
-                    if (p + j < allElements.length) {
-                        wrap.append(allElements[p + j]);
+            if (type == 'top' || type == 'new'){
+                var allElements = Array.from(container.find(".item-senn"));
+                for (var p = 0; p < allElements.length; p += 7) {
+                    var wrap = document.createElement("div");
+                    wrap.classList.add("maii-item");
+                    for (var j = 0; j < 7; j++) {
+                        if (p + j < allElements.length) {
+                            wrap.append(allElements[p + j]);
+                        }
                     }
+                    container.append(wrap);
                 }
-                container.append(wrap);
-            }
 
-
-            container.slick({
+                container.slick({
                     arrows: false,
                     dots: true,
                     infinite: true,
@@ -2011,10 +2012,40 @@ function topNewProductIndex(catId, type) {
                             }
                         }]
                 });
+            } else if (type == 'act'){
+                var allElements = Array.from(container.find(".ityy"));
+                for (var p = 0; p < allElements.length; p += 2) {
+                    var wrap = document.createElement("div");
+                    wrap.classList.add("hate-item");
+                    for (var j = 0; j < 2; j++) {
+                        if (p + j < allElements.length) {
+                            wrap.append(allElements[p + j]);
+                        }
+                    }
+                    container.append(wrap);
+                }
+                container.slick({
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    responsive: [
+                        {
+                            breakpoint: 1025,
+                            settings: {
+                                slidesToShow: 1,
+                                arrows: true,
+                                dots: false
+                            }
+                        }],
+                    dots: true,
+                    arrows: false,
+                    infinite: true,
+                    fade: false,
+                    cssEase: 'linear',
+                    autoplay: true,
+                    autoplaySpeed: 5000
+                });
+            }
         }
-
-
-
     });
 
     $.getScript("/assets/js/order.js");
