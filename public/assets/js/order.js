@@ -61,6 +61,7 @@ $(document).ready(function () {
         doObject()
     })
 
+
     function doBasket(obj) {/* add basket-section-prod*/
 
         $('.basket-table').html(' ');
