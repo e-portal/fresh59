@@ -1856,7 +1856,7 @@ function topNewProductIndex(catId, type) {
                     '       <h4>' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '</h4>\n' +
                     '   <div class="centr">\n' +
                     '       <div class="itee-imgg">\n' +
-                    '           <img src="/images/catalog/' + data.items[i].imgid + '.' + data.items[i].imgext + '" alt="варочная поверхность Electrolux EHI 9654 HFK купить" title="варочная поверхность Electrolux EHI 9654 HFK">\n' +
+                    '           <img src="/images/catalog/' + data.items[i].imgid + '.' + data.items[i].imgext + '" alt="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '" title="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '">\n' +
                     '   </div>\n' +
                     ''+bonus_amount+'\n' +
                     ''+credit_+'\n' +
@@ -1884,7 +1884,7 @@ function topNewProductIndex(catId, type) {
                     '</div>\n' +
                     '<div class="right-bakk">\n' +
                     '<object type="lol/wut">\n' +
-                    '<a class="open-in-popup add-to-cart bask acty"  data-id="'+data.items[i].id+'" data-name="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '"  data-img="/images/catalog/' + data.items[i].imgid + '.' + data.items[i].imgext + '" data-price="11999" data-sale="10750" data-bonus="1500"   data-gift-id="" data-gift-name="Чайник ELECTROLUX Electro чайник" data-gift-img="/images/catalog/93266_s.jpg" tabindex="-1">\n' +
+                    '<a class="open-in-popup add-to-cart bask acty"  data-id="'+data.items[i].id+'" data-name="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '"  data-img="/images/catalog/' + data.items[i].imgid + '.' + data.items[i].imgext + '" data-price="11999" data-sale="10750" data-bonus="1500"   data-gift-id="" data-gift-name="'+data.items[i].actname+'" data-gift-img="/images/catalog/93266_s.jpg" tabindex="-1">\n' +
                     '<span>В корзину</span>\n' +
                     '</a>\n' +
                     '</object>\n' +
@@ -1904,10 +1904,10 @@ function topNewProductIndex(catId, type) {
                 if (type == 'act') {
                     b = $('<div class="ityy">\n' +
                         '<div class="hovyy"></div>\n' +
-                        '<a href="http://fresh.590.ua/vt/hob/electrolux-ehi-9654-hfk">\n' +
+                        '<a href="/'+data.items[i].subdomain+'/'+data.items[i].cat_latin_single+'/'+data.items[i].brand+'-'+url_name_+'">\n' +
                         '<div class="left-iteem">\n' +
                         ' <div class="itee-imgg">\n' +
-                        '<img src="/images/catalog/80990_s.png"  alt="варочная поверхность Electrolux EHI 9654 HFK купить" title="варочная поверхность Electrolux EHI 9654 HFK"> \n' +
+                        '<img src="/images/catalog/80990_s.png"  alt="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + ' купить" title="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '"> \n' +
                         '</div> \n' +
                         ''+bonus_amount+'\n' +
                         ''+credit_+'\n' +
@@ -1919,12 +1919,7 @@ function topNewProductIndex(catId, type) {
                         '<img src="/assets/img/izee4.png" alt=""> \n' +
                         ' <p>Лучшая <span>цена</span></p> \n' +
                         '</div> \n' +
-                        '<div class="itee present"> \n' +
-                        ' <div class="numeral"><img src="/assets/img/present-img.png" alt="present"> \n' +
-                        ' </div> \n' +
-                        '<p>Подарок!</p> \n' +
-                        '<img src="/images/catalog/93266_s.jpg" alt="gift"/> \n' +
-                        '</div> \n' +
+                        ''+gift_+' \n' +
                         '<div class="itee change"> \n' +
                         '<img src="/assets/img/izee5.png" alt=""> \n' +
                         '<p>Замена</p> \n' +
@@ -1950,7 +1945,7 @@ function topNewProductIndex(catId, type) {
                         '<div class="timer" data-year="'+date_mas[2]+'" data-month="'+date_mas[1]+'" data-days="'+date_mas[0]+'"></div> \n' +
                         '<div class="right-times"> \n' +
                         '<object type="lol/wut"> \n' +
-                        '<a class="open-in-popup add-to-cart bask acty" data-id="'+data.items[i].id+'" data-name="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '" data-img="/images/catalog/' + data.items[i].imgid + '.' + data.items[i].imgext + '" data-price="11999" data-sale="10750" data-bonus="1500" data-gift-id="" data-gift-name="Чайник ELECTROLUX Electro чайник" data-gift-img="/images/catalog/93266_s.jpg" tabindex="-1">  \n' +
+                        '<a class="open-in-popup add-to-cart bask acty" data-id="'+data.items[i].id+'" data-name="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '" data-img="/images/catalog/' + data.items[i].imgid + '.' + data.items[i].imgext + '" data-price="11999" data-sale="10750" data-bonus="1500" data-gift-id="" data-gift-name="'+data.items[i].actname+'" data-gift-img="/images/catalog/93266_s.jpg" tabindex="-1">  \n' +
                         ' <span>В корзину</span> \n' +
                         '</a></object></div></div></div> \n' +
                         '<div class="news"> \n' +
