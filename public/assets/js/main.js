@@ -2004,7 +2004,7 @@ function topNewProductIndex(catId, type) {
 
             // t = container.find(".item-senn").length
             // o = container.find(".maii-item").length * 7
-            container.find(':last-child').appendTo($('<div class="item-senn"></div>'));
+            container.find('.maii-item:last-child').appendTo($('<div class="item-senn"></div>'));
 
         }
 
