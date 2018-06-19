@@ -2001,12 +2001,12 @@ function topNewProductIndex(catId, type) {
             container.append(wrap);
         }
         nn = (container.find('.maii-item').length * 7) - container.find('.item-senn').length
-        for (var o = 0; o < 7; o += nn) {
+        for (var o = 0; o < 7; o += 4) {
             container.find('.maii-item:last').append($('<div class="item-senn"></div>'))
         }
         // container.find('.maii-item:last .item-senn').length
 
-        console.log($('.senn-main.maii.top_product .maii-item').length,container.find('.maii-item:last .item-senn').length);
+        console.log(nn);
         // container.slick({
         //     arrows: false,
         //     dots: true,
