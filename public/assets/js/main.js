@@ -2056,5 +2056,5 @@ function topNewProductIndex(catId, type) {
 // topNewProductIndex(17,'new')
 
 
-console.log(topNewProductIndex(1, 'top'));
+console.log(topNewProductIndex(666, 'top'));
 
