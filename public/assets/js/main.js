@@ -2001,8 +2001,15 @@ function topNewProductIndex(catId, type) {
             container.append(wrap);
         }
         nn = (container.find('.maii-item').length * 7) - container.find('.item-senn').length
+        stub = $('<div class="item-senn empty"> <div class="text-empty empty-half"></div>\n' +
+            ' <div class="text-empty"></div><div class="text-empty"></div> \n'+
+            ' <span class="sench" ><div class="centr"><div class="itee-imgg"><img src="./img/empty.png" alt=""> </div> </div> \n'+
+            '  <object type="lol/wut"><div class="left-otzv"><img src="./img/empty-stars.png" alt=""></div> </object>\n'+
+            ' <div class="bakk"> <div class="left-bakk"><div class="text-empty empty-half"></div><div class="text-empty empty-half"></div> \n'+
+            ' </div><div class="right-bakk"> <div class="bask acty empty-but"><span></span></div> \n'+
+            '  </div> </div> </div> </div> ');
         for (var o = 0; o < nn; o ++) {
-            container.find('.maii-item:last').append($('<div class="item-senn mmmm"></div>'))
+            container.find('.maii-item:last').append(stub)
         }
         // container.find('.maii-item:last .item-senn').length
 
