@@ -2019,7 +2019,7 @@ function topNewProductIndex(catId, type) {
                 }]
         });
 
-        console.log($('.senn-main.maii.top_product .maii-item').find().length);
+        console.log($('.senn-main.maii.top_product .maii-item').length);
 
     } else if (type == 'act'){
         var allElements = Array.from(container.find(".ityy"));
