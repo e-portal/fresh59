@@ -2036,6 +2036,7 @@ function topNewProductIndex(catId, type) {
         function () {
             $(this).removeClass('runn');
         });
+    $('.right-butt').bind('click', addItemToCompare);
     addItemToCompare(e)
     // $('.add-to-cart').bind('click', doObject);
 
