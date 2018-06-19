@@ -2049,6 +2049,8 @@ function topNewProductIndex(catId, type) {
             autoplay: true,
             autoplaySpeed: 5000
         });
+
+        CDT();
     }
     // $.getScript("/assets/js/order.js");
     $('.item-senn').hover(
