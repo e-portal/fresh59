@@ -1996,10 +1996,19 @@ function topNewProductIndex(catId, type) {
             for (var j = 0; j < 7; j++) {
                 if (p + j < allElements.length) {
                     wrap.append(allElements[p + j]);
+
+                    t = container.find(".item-senn").length
+                    o = container.find(".maii-item").length * 7
+                    wrap.append($('<div class="item-senn"></div>')[o - t]);
                 }
             }
             container.append(wrap);
+
+
+
         }
+
+
         console.log($('.senn-main.maii.top_product .maii-item').length);
         container.slick({
             arrows: false,
