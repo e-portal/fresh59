@@ -1986,72 +1986,73 @@ function topNewProductIndex(catId, type) {
 
             }
 
-            if (type == 'top' || type == 'new'){
-                var allElements = Array.from(container.find(".item-senn"));
-                for (var p = 0; p < allElements.length; p += 7) {
-                    var wrap = document.createElement("div");
-                    wrap.classList.add("maii-item");
-                    for (var j = 0; j < 7; j++) {
-                        if (p + j < allElements.length) {
-                            wrap.append(allElements[p + j]);
-                        }
-                    }
-                    container.append(wrap);
-                }
 
-                container.slick({
-                    arrows: false,
-                    dots: true,
-                    infinite: true,
-                    speed: 500,
-                    cssEase: 'linear',
-                    autoplay: true,
-                    autoplaySpeed: 5000,
-                    responsive: [
-                        {
-                            breakpoint: 1025,
-                            settings: {
-                                dots: false,
-                                arrows: true
-                            }
-                        }]
-                });
-            } else if (type == 'act'){
-                var allElements = Array.from(container.find(".ityy"));
-                for (var p = 0; p < allElements.length; p += 2) {
-                    var wrap = document.createElement("div");
-                    wrap.classList.add("hate-item");
-                    for (var j = 0; j < 2; j++) {
-                        if (p + j < allElements.length) {
-                            wrap.append(allElements[p + j]);
-                        }
-                    }
-                    container.append(wrap);
-                }
-                container.slick({
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    responsive: [
-                        {
-                            breakpoint: 1025,
-                            settings: {
-                                slidesToShow: 1,
-                                arrows: true,
-                                dots: false
-                            }
-                        }],
-                    dots: true,
-                    arrows: false,
-                    infinite: true,
-                    fade: false,
-                    cssEase: 'linear',
-                    autoplay: true,
-                    autoplaySpeed: 5000
-                });
-            }
         }
     });
 
+    if (type == 'top' || type == 'new'){
+        var allElements = Array.from(container.find(".item-senn"));
+        for (var p = 0; p < allElements.length; p += 7) {
+            var wrap = document.createElement("div");
+            wrap.classList.add("maii-item");
+            for (var j = 0; j < 7; j++) {
+                if (p + j < allElements.length) {
+                    wrap.append(allElements[p + j]);
+                }
+            }
+            container.append(wrap);
+        }
+
+        container.slick({
+            arrows: false,
+            dots: true,
+            infinite: true,
+            speed: 500,
+            cssEase: 'linear',
+            autoplay: true,
+            autoplaySpeed: 5000,
+            responsive: [
+                {
+                    breakpoint: 1025,
+                    settings: {
+                        dots: false,
+                        arrows: true
+                    }
+                }]
+        });
+    } else if (type == 'act'){
+        var allElements = Array.from(container.find(".ityy"));
+        for (var p = 0; p < allElements.length; p += 2) {
+            var wrap = document.createElement("div");
+            wrap.classList.add("hate-item");
+            for (var j = 0; j < 2; j++) {
+                if (p + j < allElements.length) {
+                    wrap.append(allElements[p + j]);
+                }
+            }
+            container.append(wrap);
+        }
+        container.slick({
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1025,
+                    settings: {
+                        slidesToShow: 1,
+                        arrows: true,
+                        dots: false
+                    }
+                }],
+            dots: true,
+            arrows: false,
+            infinite: true,
+            fade: false,
+            cssEase: 'linear',
+            autoplay: true,
+            autoplaySpeed: 5000
+        });
+    }
     // $.getScript("/assets/js/order.js");
     $('.item-senn').hover(
         function () {
