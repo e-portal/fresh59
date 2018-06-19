@@ -57,7 +57,9 @@ $(document).ready(function () {
         }
         window.localStorage.setItem('basket', JSON.stringify(basket));
     }
-
+    $('.senn-main.maii .senn-slik ').each(function () {
+        doObject()
+    })
 
     function doBasket(obj) {/* add basket-section-prod*/
 
