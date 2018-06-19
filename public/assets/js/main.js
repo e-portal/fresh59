@@ -1993,23 +1993,23 @@ function topNewProductIndex(catId, type) {
                 '  </div> </div> </div> </div> '))
         }
 
-        container.slick({
-            arrows: false,
-            dots: true,
-            infinite: true,
-            speed: 500,
-            cssEase: 'linear',
-            autoplay: true,
-            autoplaySpeed: 5000,
-            responsive: [
-                {
-                    breakpoint: 1025,
-                    settings: {
-                        dots: false,
-                        arrows: true
-                    }
-                }]
-        });
+        // container.slick({
+        //     arrows: false,
+        //     dots: true,
+        //     infinite: true,
+        //     speed: 500,
+        //     cssEase: 'linear',
+        //     autoplay: true,
+        //     autoplaySpeed: 5000,
+        //     responsive: [
+        //         {
+        //             breakpoint: 1025,
+        //             settings: {
+        //                 dots: false,
+        //                 arrows: true
+        //             }
+        //         }]
+        // });
 
 
 
