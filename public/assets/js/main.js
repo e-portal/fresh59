@@ -421,8 +421,8 @@ jQuery(document).ready(function () {
                     $('.menu').removeClass('fixed_menu')
                 }
             } else if ($('body').hasClass('home-page')) {
-                home_page_ = $('.senn.senn-scrol:nth-child(1)').offset().top
-                console.log(home_page_);
+                // home_page_ =
+                console.log($('.senn.senn-scrol:nth-child(1)').offset().top);
 
                 if (home_page_ < $(this).scrollTop()) {
                     $('.menu').addClass('fixed_menu')
