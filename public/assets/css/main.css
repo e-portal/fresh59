@@ -1297,7 +1297,7 @@ input {
 }
 .home-page .fixed_menu  .item-base {
     height: auto;
-    /*overflow: hidden;*/
+    overflow: hidden;
 }
 
 .home-page .base-menu {
