@@ -412,7 +412,7 @@ jQuery(document).ready(function () {
     (function () {
         a = $('.headers').innerHeight()
         $('.headers').css('height', a + 'px')
-
+        console.log($('.senn-scrol:nth-child(1)').offset().top);
         $(window).scroll(function () {
             if (!$('body').hasClass('home-page'))  {
                 if (212 < $(this).scrollTop()) {
@@ -422,7 +422,7 @@ jQuery(document).ready(function () {
                 }
             } else if ($('body').hasClass('home-page')) {
                 // home_page_ =
-                console.log($('.senn-scrol:nth-child(1)').offset().top);
+
 
                 // if (home_page_ < $(this).scrollTop()) {
                 //     $('.menu').addClass('fixed_menu')
