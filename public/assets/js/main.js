@@ -422,13 +422,13 @@ jQuery(document).ready(function () {
                 }
             } else if ($('body').hasClass('home-page')) {
                 // home_page_ =
-                console.log($('.senn.senn-scrol:nth-child(1)').offset().top);
+                console.log($('юsenn-scrol:nth-child(1)').offset().top);
 
-                if (home_page_ < $(this).scrollTop()) {
-                    $('.menu').addClass('fixed_menu')
-                } else if(home_page_ > $(this).scrollTop()){
-                    $('.menu').removeClass('fixed_menu')
-                }
+                // if (home_page_ < $(this).scrollTop()) {
+                //     $('.menu').addClass('fixed_menu')
+                // } else if(home_page_ > $(this).scrollTop()){
+                //     $('.menu').removeClass('fixed_menu')
+                // }
             }
 
 
