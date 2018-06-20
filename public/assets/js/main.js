@@ -421,14 +421,14 @@ jQuery(document).ready(function () {
                     $('.menu').removeClass('fixed_menu')
                 }
             } else if ($('body').hasClass('home-page')) {
-                // home_page_ =
+                home_page_ = $('.senn-scrol').offset().top
 
 
-                // if (home_page_ < $(this).scrollTop()) {
-                //     $('.menu').addClass('fixed_menu')
-                // } else if(home_page_ > $(this).scrollTop()){
-                //     $('.menu').removeClass('fixed_menu')
-                // }
+                if (home_page_ < $(this).scrollTop()) {
+                    $('.menu').addClass('fixed_menu')
+                } else if(home_page_ > $(this).scrollTop()){
+                    $('.menu').removeClass('fixed_menu')
+                }
             }
 
 
