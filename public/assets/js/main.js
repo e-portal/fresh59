@@ -415,7 +415,7 @@ jQuery(document).ready(function () {
         console.log($('.menu').offset().top);
         $(window).scroll(function () {
             if (212 < $(this).scrollTop()) {
-                a =$('.head-item:nth-child(1) img').attr(src)
+                a =$('.head-item:nth-child(1) img').attr('src')
                 $('.headers').find('.conteiner.wrap').append($('<div class="fixed_logo"><a href="/"><img src="'+a+'" alt=""></a></div>'))
                 $('.menu').addClass('fixed_menu')
             } else if(147 > $(this).scrollTop()){
