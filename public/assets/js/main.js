@@ -422,9 +422,10 @@ jQuery(document).ready(function () {
                 }
             } else if ($('body').hasClass('home-page')) {
                 home_page_ = $('.senn-scrol').offset().top
-
-
-                if (home_page_  + 30 < $(this).scrollTop()) {
+                if (home_page_ - 30 < $(this).scrollTop()) {
+                    $('.menu').addClass('fixed_menu_')
+                } else    if (home_page_  + 30 < $(this).scrollTop()) {
+                    $('.menu').removeClass('fixed_menu_')
                     $('.menu').addClass('fixed_menu')
                 } else if(home_page_  + 30 > $(this).scrollTop()){
                     $('.menu').removeClass('fixed_menu')
