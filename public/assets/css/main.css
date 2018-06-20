@@ -5519,7 +5519,6 @@ input:focus:-ms-input-placeholder { opacity: 0; }
 }
 .fixed_menu .wrap {
     display: flex;
-    flex-direction: row-reverse;
 }
 .fixed_menu .names {
     display: none;
@@ -5530,6 +5529,10 @@ input:focus:-ms-input-placeholder { opacity: 0; }
 }
 .fixed_logo {
     width: 8%;
+    display: none;
+}
+.fixed_menu .fixed_logo {
+    display: flex;
 }
 .fixed_logo img {
     width: 100%;
