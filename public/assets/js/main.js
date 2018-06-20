@@ -415,10 +415,11 @@ jQuery(document).ready(function () {
         console.log($('.menu').offset().top);
         $(window).scroll(function () {
             if (212 < $(this).scrollTop()) {
-                a =$('.head-item:nth-child(1) img').attr('src')
-                // $('.headers .conteiner.wrap').appendTo($('<div class="fixed_logo"><a href="/"><img src="'+a+'" alt=""></a></div>'))
                 $('.menu').addClass('fixed_menu')
-                $('.fixed_menu ').append($('<div></div>'))
+                a = $('.head-item:nth-child(1) img').attr('src')
+                $('.fixed_menu').appendTo($('<div class="fixed_logo"><a href="/"><img src="'+a+'" alt=""></a></div>'))
+
+                // $('.fixed_menu ').append($('<div></div>'))
 
             } else if(147 > $(this).scrollTop()){
                 $('.menu').removeClass('fixed_menu')
