@@ -412,8 +412,7 @@ jQuery(document).ready(function () {
     (function () {
         a = $('.headers').innerHeight()
         $('.headers').css('height', a + 'px')
-        console.log($('.menu').offset().top);
-        home_page_ = $('.senn.senn-scrol:nth-child(1)').offset().top
+
         $(window).scroll(function () {
             if (!$('body').hasClass('home-page'))  {
                 if (212 < $(this).scrollTop()) {
@@ -422,6 +421,9 @@ jQuery(document).ready(function () {
                     $('.menu').removeClass('fixed_menu')
                 }
             } else if ($('body').hasClass('home-page')) {
+                home_page_ = $('.senn.senn-scrol:nth-child(1)').offset().top
+                console.log(home_page_);
+
                 if (home_page_ < $(this).scrollTop()) {
                     $('.menu').addClass('fixed_menu')
                 } else if(home_page_ > $(this).scrollTop()){
