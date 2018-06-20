@@ -1299,7 +1299,7 @@ input {
     height: 714px;
     overflow: visible;
 }
-.home-page .fixed_menu_  .item-base {
+.home-page .fixed_menu  .item-base {
     height: 0;
     overflow: hidden;
 }
