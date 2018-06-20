@@ -412,7 +412,7 @@ jQuery(document).ready(function () {
     (function () {
         a = $('.headers').innerHeight()
         $('.headers').css('height', a + 'px')
-        console.log($('.senn-scrol:nth-child(1)').offset().top);
+        console.log($('.senn-scrol').offset().top);
         $(window).scroll(function () {
             if (!$('body').hasClass('home-page'))  {
                 if (212 < $(this).scrollTop()) {
