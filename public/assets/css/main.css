@@ -5522,7 +5522,7 @@ input:focus:-ms-input-placeholder { opacity: 0; }
     height: inherit;
 }
 .fixed_menu .flexy {
-    width: 93%;
+    width: calc(93% - 10px);
 }
 .fixed_menu .names {
     display: none;
@@ -5530,6 +5530,9 @@ input:focus:-ms-input-placeholder { opacity: 0; }
 .fixed_menu .iteem:nth-child(1) {
     height: 50px;
     width: 285px;
+}
+.fixed_menu .iteem:nth-child(2) .inpp {
+    margin-top: -2px;
 }
 .fixed_menu .baskets .imgg {
     width: 30px;
@@ -5544,6 +5547,7 @@ input:focus:-ms-input-placeholder { opacity: 0; }
 }
 .fixed_logo {
     width: 7%;
+    padding-right: 10px;
     display: none;
 }
 .fixed_menu .fixed_logo {
