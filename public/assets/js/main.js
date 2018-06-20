@@ -1845,7 +1845,7 @@ function topNewProductIndex(catId, type) {
                 }
 
                 if(data.items[i].acttype=='gift') {
-                    gift_ = '<div class="itee present"><div class="numeral"><img src="/assets/img/present-img.png" alt="present"></div><p>Подарок!</p><img src="/images/catalog/'+data.items[i].gift_image+'_s.jpg" alt="'+data.items[i].actname+'"/></div>'
+                    gift_ = '<div class="itee present"><div class="numeral"><img src="/assets/img/present-img.png" alt="present"></div><p>Подарок!</p><img src="/images/catalog/'+data.items[i].gift_image+'" alt="'+data.items[i].actname+'"/></div>'
                 } else {
                     gift_ = ''
                 }
