@@ -1297,10 +1297,11 @@ input {
 }
 .home-page .fixed_menu  .item-base {
     height: 0;
-    /*overflow: hidden;*/
+    overflow: hidden;
 }
 .home-page .fixed_menu .iteem:hover .item-base {
     height: auto;
+    overflow: visible;
 }
 .home-page .base-menu {
     transform: translate(0);
