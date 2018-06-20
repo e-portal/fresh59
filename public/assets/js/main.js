@@ -424,9 +424,9 @@ jQuery(document).ready(function () {
                 home_page_ = $('.senn-scrol').offset().top
 
 
-                if (home_page_ < $(this).scrollTop()) {
+                if (home_page_  + 30 < $(this).scrollTop()) {
                     $('.menu').addClass('fixed_menu')
-                } else if(home_page_ > $(this).scrollTop()){
+                } else if(home_page_  + 30 > $(this).scrollTop()){
                     $('.menu').removeClass('fixed_menu')
                 }
             }
