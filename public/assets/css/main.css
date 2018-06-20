@@ -666,7 +666,11 @@ h6 {}
     -webkit-transition: .3s;
     -ms-transition: .3s
 }
-
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .main-menu ul li a {
+        font-family: Arial;
+    }
+}
 .main-menu ul li:hover a {
     color: #333e48
 }
