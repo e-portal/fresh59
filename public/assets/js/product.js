@@ -121,20 +121,20 @@ $(document).ready(function () {
                 var baner_top = $('.jq-move-slider-wrap').offset().top;
                 //scroll_block + 60  - с высотой фиксированного меня
                 if (scroll_block > baner_top + 27 && scroll_block + baner.height() + 67 < $('.jq-move-slider').height() + foot) {
-                    baner.css({"position": 'fixed', top: '0px'});
+                    baner.css({"position": 'fixed', top: '50px'});
                 } else if (scroll_block + baner.height() + 67 >= $('.jq-move-slider').height() + foot) {
                     if (befScroll < scroll_block) {
                         baner.css({'position': 'absolute', 'bottom': '67px', 'top': 'auto'});
                     }
                 }
                 else if (scroll_block < baner_top + 27) {
-                    baner.css({'position': 'relative', top: '0px'});
+                    baner.css({'position': 'relative', top: '50px'});
                 }
                 //title scroll
                 var title = $('.slide-tabs');
                 var mBottom = 67;
                 if (scroll_block > baner_top && scroll_block + title.height() + mBottom < $('.jq-move-slider').height() + foot) {
-                    title.css({"position": 'fixed', top: '0px', bottom: 'auto'});
+                    title.css({"position": 'fixed', top: '50px', bottom: 'auto'});
                     title.addClass('active-slide');
                 } else if (scroll_block + title.height() + mBottom >= $('.jq-move-slider').height() + foot) {
                     if (befScroll < scroll_block) {
@@ -142,7 +142,7 @@ $(document).ready(function () {
                     }
                 }
                 else if (scroll_block < baner_top) {
-                    title.css({'position': 'relative', top: '0px'});
+                    title.css({'position': 'relative', top: '50px'});
                     title.removeClass('active-slide');
                 }
 
