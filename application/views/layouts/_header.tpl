@@ -112,6 +112,7 @@
 
     <div class="menu">
         <div class="container wrap">
+            <div class="fixed_logo"><a href="/"><img src="/assets/img/logo.png" alt=""></a></div>
             <div class="flexy">
 
                 <div class="iteem">

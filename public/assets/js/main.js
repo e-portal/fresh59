@@ -416,20 +416,12 @@ jQuery(document).ready(function () {
         $(window).scroll(function () {
             if (212 < $(this).scrollTop()) {
                 $('.menu').addClass('fixed_menu')
-
-                // $('.fixed_menu ').append($('<div></div>'))
-
             } else if(147 > $(this).scrollTop()){
                 $('.menu').removeClass('fixed_menu')
-                $('.headers').find('.conteiner.wrap .fixed_logo').remove()
             }
 
         });
-        if ( $('.headers .menu').hasClass('fixed_menu')){
-            a = $('.head-item:nth-child(1) img').attr('src')
-            $('.fixed_menu .container').append($('<div class="fixed_logo"><a href="/"><img src="'+a+'" alt=""></a></div>'))
 
-        }
 
     })();
 
