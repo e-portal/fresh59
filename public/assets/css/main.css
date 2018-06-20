@@ -1290,16 +1290,26 @@ input {
     height: 714px;
     overflow: visible;
 }
+.home-page .fixed_menu  .item-base {
+    height: auto;
+    overflow: hidden;
+}
 
 .home-page .base-menu {
     transform: translate(0);
     opacity: 1;
 }
-
-.home-page .base-menu ul {
-    opacity: 1 !important;
+.home-page .fixed_menu .base-menu {
+    transform: translate(0);
+    opacity: 0;
 }
 
+.home-page .base-menu ul {
+    opacity: 1 ;
+}
+.home-page .fixed_menu .base-menu ul {
+    opacity: 0;
+}
 
 /*.base-menu {*/
 
