@@ -1296,10 +1296,12 @@ input {
     overflow: visible;
 }
 .home-page .fixed_menu  .item-base {
-    height: auto;
+    height: 0;
     /*overflow: hidden;*/
 }
-
+.home-page .fixed_menu .iteem:hover .item-base {
+    height: auto;
+}
 .home-page .base-menu {
     transform: translate(0);
     opacity: 1;
@@ -5529,7 +5531,7 @@ input:focus:-ms-input-placeholder { opacity: 0; }
     /* transition: .5s; */
     width: 100%;
     z-index: 999;
-    /*animation: fixed_menu 1s;*/
+    animation: fixed_menu 1s;
     transform: translateY(65px);
 }
 .fixed_menu .wrap {
