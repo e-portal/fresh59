@@ -417,7 +417,7 @@ jQuery(document).ready(function () {
             if (212 < $(this).scrollTop()) {
                 $('.menu').addClass('fixed_menu')
                 a = $('.head-item:nth-child(1) img').attr('src')
-                $('.fixed_menu').appendTo($('<div class="fixed_logo"><a href="/"><img src="'+a+'" alt=""></a></div>'))
+                $('.fixed_menu').append($('<div class="fixed_logo"><a href="/"><img src="'+a+'" alt=""></a></div>'))
 
                 // $('.fixed_menu ').append($('<div></div>'))
 
