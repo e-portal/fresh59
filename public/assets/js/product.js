@@ -128,7 +128,7 @@ $(document).ready(function () {
                     }
                 }
                 else if (scroll_block < baner_top + 27) {
-                    baner.css({'position': 'relative', top: '50px'});
+                    baner.css({'position': 'relative', top: '0px'});
                 }
                 //title scroll
                 var title = $('.slide-tabs');
@@ -142,7 +142,7 @@ $(document).ready(function () {
                     }
                 }
                 else if (scroll_block < baner_top) {
-                    title.css({'position': 'relative', top: '50px'});
+                    title.css({'position': 'relative', top: '0px'});
                     title.removeClass('active-slide');
                 }
 
