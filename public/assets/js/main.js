@@ -422,7 +422,7 @@ jQuery(document).ready(function () {
                 }
             } else if ($('body').hasClass('home-page')) {
                 // home_page_ =
-                console.log($('юsenn-scrol:nth-child(1)').offset().top);
+                console.log($('.senn-scrol:nth-child(1)').offset().top);
 
                 // if (home_page_ < $(this).scrollTop()) {
                 //     $('.menu').addClass('fixed_menu')
