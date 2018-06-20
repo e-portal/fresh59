@@ -1072,7 +1072,12 @@ input {
 .iteem:nth-child(1):hover .katal:after {
     transform: rotate(180deg);
 }
-
+.home-page .fixed_menu .katal:after{
+    transform: rotate(0);
+}
+.fixed_menu .iteem:nth-child(1):hover .katal:after {
+    transform: rotate(180deg);
+}
 /*.home-page .katal:after {*/
 /*transform: rotate(180deg) !important;*/
 /*}*/
@@ -1292,7 +1297,7 @@ input {
 }
 .home-page .fixed_menu  .item-base {
     height: auto;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .home-page .base-menu {
