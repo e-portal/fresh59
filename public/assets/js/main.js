@@ -423,12 +423,13 @@ jQuery(document).ready(function () {
                 $('.menu').removeClass('fixed_menu')
                 $('.headers').find('.conteiner.wrap .fixed_logo').remove()
             }
-        });
-        if ( $('.headers').hasClass('fixed_menu')){
-            a = $('.head-item:nth-child(1) img').attr('src')
-            $('.fixed_menu .container').append($('<div class="fixed_logo"><a href="/"><img src="'+a+'" alt=""></a></div>'))
+            if ( $('.headers').hasClass('fixed_menu')){
+                a = $('.head-item:nth-child(1) img').attr('src')
+                $('.fixed_menu .container').append($('<div class="fixed_logo"><a href="/"><img src="'+a+'" alt=""></a></div>'))
 
-        }
+            }
+        });
+
     })();
 
     $(document).ready(function () {
