@@ -416,7 +416,8 @@ jQuery(document).ready(function () {
         $(window).scroll(function () {
             if (212 < $(this).scrollTop()) {
                 a =$('.head-item:nth-child(1) img').attr('src')
-                $('.headers').find('.conteiner.wrap').appendTo($('<div class="fixed_logo"><a href="/"><img src="'+a+'" alt=""></a></div>'))
+                $('.headers .conteiner.wrap').appendTo($('<div></div>'))
+                // $('.headers .conteiner.wrap').appendTo($('<div class="fixed_logo"><a href="/"><img src="'+a+'" alt=""></a></div>'))
                 $('.menu').addClass('fixed_menu')
             } else if(147 > $(this).scrollTop()){
                 $('.menu').removeClass('fixed_menu')
