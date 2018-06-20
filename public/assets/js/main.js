@@ -429,8 +429,8 @@ jQuery(document).ready(function () {
                     $('.menu').addClass('fixed_menu')
                     $('body').removeClass('fixed_menu_')
                 } else if(home_page_  + 30 > $(this).scrollTop()){
-                    $('.menu').removeClass('fixed_menu')
-                    $('body').removeClass('fixed_menu_')
+                    // $('.menu').removeClass('fixed_menu')
+                    // $('body').removeClass('fixed_menu_')
                 }
             }
 
