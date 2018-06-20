@@ -421,16 +421,19 @@ jQuery(document).ready(function () {
                     $('.menu').removeClass('fixed_menu')
                 }
             } else if ($('body').hasClass('home-page')) {
+
                 home_page_ = $('.senn-scrol').offset().top
-                if (home_page_ < $(this).scrollTop()) {
-                    $('budy').addClass('fixed_menu_')
-                } else  if (home_page_  + 30 < $(this).scrollTop()) {
+                  if (home_page_  + 30 < $(this).scrollTop()) {
 
                     $('.menu').addClass('fixed_menu')
                     // $('body').removeClass('fixed_menu_')
                 } else if(home_page_  + 30 > $(this).scrollTop()){
                     // $('.menu').removeClass('fixed_menu')
                     // $('body').removeClass('fixed_menu_')
+                }
+
+                if (home_page_ < $(this).scrollTop()) {
+                    $('budy').addClass('fixed_menu_')
                 }
             }
 
