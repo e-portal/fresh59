@@ -1,5 +1,5 @@
 <?php
-/* 
+/*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
@@ -92,6 +92,30 @@ class IndexController extends Alcotec_Frontend_Controller_IndexController
         }
 
         $this->view->actionItems = $actionItems;
+
+        /**
+         * Вывод двух маленьких слайдеров на главной ввверху
+         * и четырех статических маленьких баннеров под слайдерами
+         */
+
+        $allBannerSliderItems = $db->fetchAssoc("SELECT * FROM `littlebannersindex590`");
+
+        foreach ($allBannerSliderItems as $key => $value) {
+
+            if ( $value['type'] == 'static' ) {
+                $staticBannerItems[] = $value;
+            }
+            elseif ( $value['type'] == 'top' ) {
+                $topSliderItems[] = $value;
+            }
+            elseif ( $value['type'] == 'bottom' ) {
+                $bottomSliderItems[] = $value;
+            }
+        }
+
+        $this->view->staticBanner = $staticBannerItems;
+        $this->view->topSlider = $topSliderItems;
+        $this->view->bottomSlider = $bottomSliderItems;
     }
 
     function plural_type($n)
@@ -134,7 +158,7 @@ class IndexController extends Alcotec_Frontend_Controller_IndexController
                  foreach ($item as $itemId=>$salesNum)
                      $db->query("INSERT INTO catalog_items_sales VALUES ({$itemId},{$siteId},{$salesNum})");
         }
-        
+
         public function shortinfoAction() {
             //$this->_helper->removeHelper ( 'viewRenderer' );
             $db = Zend_Db_Table_Abstract::getDefaultAdapter ();
@@ -164,5 +188,144 @@ class IndexController extends Alcotec_Frontend_Controller_IndexController
         $zf['params']['controller'] = 'index';
         $this->view->zf = $zf;
         $this->getResponse()->setHttpResponseCode(404);
+    }
+
+
+
+
+/**
+ * [Вывод продуктов отсортированных по топу продаж или по дате добавления товара
+ * для вывода в слайдерах на главной странице]
+ *
+ * @return  [json]  [вывод items с 20 продуктами, result - success / failed,
+ * type - топ родаж/новинки, maincategory - главная категория, subcategory - список подкатегорий в главной категории]
+ */
+
+    public function getnewtopproductsAction() {
+        $parentCatId = $this->_hasParam('catid') ? intval($this->_getParam('catid')) : null;
+        $type = $this->_hasParam('type') ? intval($this->_getParam('type')) : null;
+
+        $db = Zend_Db_Table_Abstract::getDefaultAdapter();
+        $modCat = new Catalog();
+
+        $catIdArr = $db->fetchAll("SELECT id FROM `catalog_categories` WHERE parent = '{$parentCatId}' AND visible_4 = 1 and subdomain != ''");
+        foreach ($catIdArr as $key => $value) {
+            $catId[] = $value['id'];
+        }
+        $catId = implode(",", $catId);
+
+            //ДЛЯ ТОПА ПРОДАЖ
+        if ($type == 1 && $catId) {
+            //"SELECT * FROM `catalog` WHERE `id_category` in ({$catId}) and id_availability=1 ORDER BY sales_4 DESC LIMIT 70"
+            $filters['availability'] = 1;
+            $modCat->setFilters($filters);
+            $modCat->setTopNewSearchCatsId($catId,'sales_4');
+            $items = $modCat->getItemList()->limit(70)->query()->fetchAll();
+
+            foreach ($items as $key => $value) {
+                if ($value['actid']) {
+                    $giftImageSql = $db->select()
+                            ->from(array('a'=>'actions'))
+                            ->join(array('ci'=>'catalog_img'),'a.gift = ci.id_catalog',array('id','imgext'))
+                            ->order('ci.sort ASC')
+                            ->limit(1)
+                            ->where('a.id = ?',$value['actid']);
+
+                        $giftImage = $db->fetchRow($giftImageSql);
+
+                        if ($giftImage) {
+                           $items[$key]["gift_image"] = $giftImage['id'].'_s.'.$giftImage['imgext'];
+                        }
+                }
+
+                $correct_latin_name = str_replace(' ', '-', $value['cat_latin_single']);
+                $items[$key]["cat_latin_single"] = $correct_latin_name;
+            }
+
+            $res['result'] = 'success';
+            $res['type'] = 'топ продаж';
+            $res['maincategory'] = $parentCatId;
+            $res['subcategory'] = $catId;
+            $res['items'] = $items;
+        }
+            //ДЛЯ НОВИНОК
+        elseif ($type == 2 && $catId) {
+            //"SELECT * FROM `catalog` WHERE `id_category` in ({$catId}) and id_availability=1 ORDER BY `date` DESC LIMIT 70"
+            $filters['availability'] = 1;
+            $modCat->setFilters($filters);
+            $modCat->setTopNewSearchCatsId($catId,'date');
+            $items = $modCat->getItemList()->limit(70)->query()->fetchAll();
+
+            foreach ($items as $key => $value) {
+                if ($value['actid']) {
+                    $giftImageSql = $db->select()
+                            ->from(array('a'=>'actions'))
+                            ->join(array('ci'=>'catalog_img'),'a.gift = ci.id_catalog',array('id','imgext'))
+                            ->order('ci.sort ASC')
+                            ->limit(1)
+                            ->where('a.id = ?',$value['actid']);
+
+                        $giftImage = $db->fetchRow($giftImageSql);
+
+                        if ($giftImage) {
+                           $items[$key]["gift_image"] = $giftImage['id'].'_s.'.$giftImage['imgext'];
+                        }
+                }
+
+                $correct_latin_name = str_replace(' ', '-', $value['cat_latin_single']);
+                $items[$key]["cat_latin_single"] = $correct_latin_name;
+            }
+
+            $res['result'] = 'success';
+            $res['type'] = 'новинки';
+            $res['maincategory'] = $parentCatId;
+            $res['subcategory'] = $catId;
+            $res['items'] = $items;
+        }
+            //ДЛЯ АКЦИЙ
+        elseif ($type == 3 && $catId) {
+
+            $filters['availability'] = 1;
+            $modCat->setFilters($filters);
+            $modCat->setTopNewSearchCatsId($catId,'act');
+            $items = $modCat->getItemList()->HAVING('(act.type IS NOT NULL AND icon IS NOT NULL)')->limit(22)->query()->fetchAll();
+
+            $actionItemsInfo = $db->fetchAssoc("SELECT act.id_item  as id_item_action, act.end_date as end_date_action FROM actions as act, catalog as cat WHERE cat.id_availability = 1 and act.archive=0 and act.end_date IS NOT NULL and act.id_item = cat.id and act.type = 'gift'");
+
+            foreach ($items as $key => $value) {
+                foreach ($actionItemsInfo as $dopkey => $dopvalue) {
+                    if ($value["id"] == $dopvalue["id_item_action"]) {
+                        $new_format_date = date("d/m/Y", strtotime($dopvalue["end_date_action"]));
+                        $items[$key]["end_date"] = $new_format_date;
+
+                        $giftImageSql = $db->select()
+                            ->from(array('a'=>'actions'))
+                            ->join(array('ci'=>'catalog_img'),'a.gift = ci.id_catalog',array('id','imgext'))
+                            ->order('ci.sort ASC')
+                            ->limit(1)
+                            ->where('a.id = ?',$value['actid']);
+                        $giftImage = $db->fetchRow($giftImageSql);
+                        if ($giftImage) {
+                           $items[$key]["gift_image"] = $giftImage['id'].'_s.'.$giftImage['imgext'];
+                        }
+                    }
+                }
+
+                $correct_latin_name = str_replace(' ', '-', $value['cat_latin_single']);
+                $items[$key]["cat_latin_single"] = $correct_latin_name;
+            }
+
+            $res['result'] = 'success';
+            $res['type'] = 'акции';
+            $res['maincategory'] = $parentCatId;
+            $res['subcategory'] = $catId;
+            $res['items'] = $items;
+        }
+            //ЕСЛИ ЗАПРОС НЕ ВЕРНЫЙ
+        else {
+            $res['result'] = 'failed';
+        }
+
+        echo json_encode($res);
     }
 }

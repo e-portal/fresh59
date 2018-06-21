@@ -538,7 +538,50 @@ class CatalogController extends Alcotec_Frontend_Controller_CatalogController
                 foreach ($this->view->navigation($this->view->menu)->findOneById($cat['id'])->getPages() as $page) {
                     $ids[] = $page->id;
                 }
-                $this->view->categories = $modCat->findCategories("c.id IN (" . join(',', $ids) . ")", $catId);
+                $listCategories = $modCat->findCategories("c.id IN (" . join(',', $ids) . ")", $catId);
+                $this->view->categories = $listCategories;
+
+
+
+                /**
+                 * Собираем умные фильтры для
+                 * выдачи на странице категорий
+                 */
+                        $db = Zend_Db_Table_Abstract::getDefaultAdapter();
+                        $modCatalog = new Catalog();
+
+                        $mainCatId = intval($listCategories[0]['parent']);
+
+                        $catArr = $db->fetchAll("SELECT id, subdomain, latin_name FROM `catalog_categories` WHERE parent = '{$mainCatId}' AND visible_4 = 1 and subdomain != ''");
+                        foreach ($catArr as $key => $value) {
+                            $correct_latin_name = str_replace(' ', '-', $value['latin_name']);
+                           $catSubId[$value['id']] = 'https://590.ua/'.$value['subdomain'].'/'.$correct_latin_name.'/';
+                        }
+
+                        foreach ($catSubId as $keySubId => $value_pre_url) {
+
+                           $valueSubIdInt = intval($keySubId);
+                           $catFilersSmartSearch = $modCatalog->getCatFilters($valueSubIdInt);
+
+                           foreach ($catFilersSmartSearch['select'] as $keyFilers => $valueFilers) {
+
+                               if ($valueFilers['name'] == 'Тип') {
+                                   //$catFilersSmart[$valueSubIdInt]['sub_cat_id'] = $valueFilers['id_category'];
+
+                                   foreach ($valueFilers['values'] as $keyVal => $valueVal) {
+                                       $catFilersSmart[$valueSubIdInt][$keyVal]['name'] = $valueVal['value'];
+                                       $catFilersSmart[$valueSubIdInt][$keyVal]['url'] = $value_pre_url.$valueFilers['urlhelperarg'].'/'.$valueVal['id'].'/';
+                                   }
+
+                               }
+                           }
+                        }
+
+                        $this->view->smart_filter = $catFilersSmart;
+
+
+
+
                 if ($catId != 1) {
                     $images = $db->fetchAll("SELECT cc.id as cat, ci.id, ci.imgext from catalog c inner join catalog_categories cc on cc.id = c.id_category and cc.visible_{$siteId}=1 inner join catalog_brands cb on c.id_brand = cb.id and cb.visible_{$siteId}=1 inner join catalog_img ci on c.id = ci.id_catalog and ci.main=1 INNER JOIN catalog_items_sites_visibility cisv on c.id = cisv.item_id and cisv.site_id = {$siteId} where cc.id IN (" . join(',', $ids) . ") group by cc.id");
                 } else {
