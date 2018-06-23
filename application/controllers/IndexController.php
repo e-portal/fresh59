@@ -208,6 +208,10 @@ class IndexController extends Alcotec_Frontend_Controller_IndexController
         $db = Zend_Db_Table_Abstract::getDefaultAdapter();
         $modCat = new Catalog();
 
+        //Смотрим в базе свежий курс евро
+        $curs_evro_sql = $db->fetchAssoc("SELECT * FROM `catalog_currencies` WHERE short_name ='eur'");
+        $curs_evro = $curs_evro_sql[6]['rate'];
+
         $catIdArr = $db->fetchAll("SELECT id FROM `catalog_categories` WHERE parent = '{$parentCatId}' AND visible_4 = 1 and subdomain != ''");
         foreach ($catIdArr as $key => $value) {
             $catId[] = $value['id'];
@@ -238,8 +242,41 @@ class IndexController extends Alcotec_Frontend_Controller_IndexController
                         }
                 }
 
+                    //корректировка имени категории для правильного url
                 $correct_latin_name = str_replace(' ', '-', $value['cat_latin_single']);
                 $items[$key]["cat_latin_single"] = $correct_latin_name;
+
+                    //скооректированная цена (записываем старую и акционную цены, если они есть)
+                if ($value['specprice'] && ($value['bdprice'] > $value['price']) && (($value['bdprice'] - $value['price'])/$value['price'] > 0.01) ) {
+                    $correct_old_price = $value['bdprice'];
+                    $correct_price = $value['price'];
+                } else{
+                    $correct_old_price = null;
+                    $correct_price = $value['price'];
+                }
+
+                $correct_old_price = round($correct_old_price * $curs_evro);
+                $correct_price = round($correct_price * $curs_evro);
+
+                $items[$key]["correct_old_price"] = $correct_old_price;
+                $items[$key]["correct_price"] = $correct_price;
+
+                    //сумма первого платежа за мгновенную рассрочку из рассчета за 24 месяца
+                $mgnovennaya_rassrochka = ($correct_price + ($correct_price * 0.99 * 24 / 100)) / 24;
+                $items[$key]["mgnovennaya_rassrochka"] = round($mgnovennaya_rassrochka);
+
+                    //сумма первого платежа по оплате частями
+                if ($value['rent'] > 25) {
+                    $oplata_chast_month = 8;
+                }elseif ($value['rent'] > 12.5) {
+                    $oplata_chast_month = 6;
+                }else{
+                    $oplata_chast_month = 3;
+                }
+
+                $oplata_chast = $correct_price / $oplata_chast_month;
+                $items[$key]["oplata_chast"] = round($oplata_chast);
+                $items[$key]["oplata_chast_month"] = $oplata_chast_month;
             }
 
             $res['result'] = 'success';
@@ -272,8 +309,41 @@ class IndexController extends Alcotec_Frontend_Controller_IndexController
                         }
                 }
 
+                    //корректировка имени категории для правильного url
                 $correct_latin_name = str_replace(' ', '-', $value['cat_latin_single']);
                 $items[$key]["cat_latin_single"] = $correct_latin_name;
+
+                    //скооректированная цена (записываем старую и акционную цены, если они есть)
+                if ($value['specprice'] && ($value['bdprice'] > $value['price']) && (($value['bdprice'] - $value['price'])/$value['price'] > 0.01) ) {
+                    $correct_old_price = $value['bdprice'];
+                    $correct_price = $value['price'];
+                } else{
+                    $correct_old_price = null;
+                    $correct_price = $value['price'];
+                }
+
+                $correct_old_price = round($correct_old_price * $curs_evro);
+                $correct_price = round($correct_price * $curs_evro);
+
+                $items[$key]["correct_old_price"] = $correct_old_price;
+                $items[$key]["correct_price"] = $correct_price;
+
+                    //сумма первого платежа за мгновенную рассрочку из рассчета за 24 месяца
+                $mgnovennaya_rassrochka = ($correct_price + ($correct_price * 0.99 * 24 / 100)) / 24;
+                $items[$key]["mgnovennaya_rassrochka"] = round($mgnovennaya_rassrochka);
+
+                    //сумма первого платежа по оплате частями
+                if ($value['rent'] > 25) {
+                    $oplata_chast_month = 8;
+                }elseif ($value['rent'] > 12.5) {
+                    $oplata_chast_month = 6;
+                }else{
+                    $oplata_chast_month = 3;
+                }
+
+                $oplata_chast = $correct_price / $oplata_chast_month;
+                $items[$key]["oplata_chast"] = round($oplata_chast);
+                $items[$key]["oplata_chast_month"] = $oplata_chast_month;
             }
 
             $res['result'] = 'success';
@@ -311,8 +381,41 @@ class IndexController extends Alcotec_Frontend_Controller_IndexController
                     }
                 }
 
+                    //корректировка имени категории для правильного url
                 $correct_latin_name = str_replace(' ', '-', $value['cat_latin_single']);
                 $items[$key]["cat_latin_single"] = $correct_latin_name;
+
+                    //скооректированная цена (записываем старую и акционную цены, если они есть)
+                if ($value['specprice'] && ($value['bdprice'] > $value['price']) && (($value['bdprice'] - $value['price'])/$value['price'] > 0.01) ) {
+                    $correct_old_price = $value['bdprice'];
+                    $correct_price = $value['price'];
+                } else{
+                    $correct_old_price = null;
+                    $correct_price = $value['price'];
+                }
+
+                $correct_old_price = round($correct_old_price * $curs_evro);
+                $correct_price = round($correct_price * $curs_evro);
+
+                $items[$key]["correct_old_price"] = $correct_old_price;
+                $items[$key]["correct_price"] = $correct_price;
+
+                    //сумма первого платежа за мгновенную рассрочку из рассчета за 24 месяца
+                $mgnovennaya_rassrochka = ($correct_price + ($correct_price * 0.99 * 24 / 100)) / 24;
+                $items[$key]["mgnovennaya_rassrochka"] = round($mgnovennaya_rassrochka);
+
+                    //сумма первого платежа по оплате частями
+                if ($value['rent'] > 25) {
+                    $oplata_chast_month = 8;
+                }elseif ($value['rent'] > 12.5) {
+                    $oplata_chast_month = 6;
+                }else{
+                    $oplata_chast_month = 3;
+                }
+
+                $oplata_chast = $correct_price / $oplata_chast_month;
+                $items[$key]["oplata_chast"] = round($oplata_chast);
+                $items[$key]["oplata_chast_month"] = $oplata_chast_month;
             }
 
             $res['result'] = 'success';

@@ -1,9 +1,7 @@
 {*{$all_articles|@debug_print_var}*}
-<div class="senn senn-scrol">
+<div class="senn senn-scrol tc_">
     <div class="senn-container wrap">
         <a class="blue" href="/">Все новые поступления<span class="linn"></span></a>
-
-
         <div class="liner"><span>Топ продаж</span></div>
         <div class="parag parag-prev ">
             <div class="parag-item active parag-item_one">Популярные модели</div>
@@ -16,6 +14,8 @@
             <div class="parag-item" onclick="topNewProductIndex(27,'top'); return false;">Мойки и смесители</div>
             <div class="parag-item" onclick="topNewProductIndex(136,'top'); return false;">Климатическая</div>
         </div>
+
+
 
         <div class="senn-main maii top_product">
             {*----------------MAIN----------------*}

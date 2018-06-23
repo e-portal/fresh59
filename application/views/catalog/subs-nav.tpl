@@ -1,56 +1,56 @@
 {if $zf.params.controller=='catalog' && $zf.params.action=='cat' && !$finalCat}
     <div class="left-options">
-        <div class="opti">
-            <div class="liner"><span>Выбор по параметрам</span></div>
-            <form action="">
-                <ul>
-                    <li>
-                        <input type="checkbox" id="poll1" name="selects" value="poll1" class="checkbox">
-                        <label for="poll1">
-                            <span>В наличии <span>(154)</span></span>
-                        </label>
-                        <div class="check"></div>
-                    </li>
+        {*<div class="opti">*}
+            {*<div class="liner"><span>Выбор по параметрам</span></div>*}
+            {*<form action="">*}
+                {*<ul>*}
+                    {*<li>*}
+                        {*<input type="checkbox" id="poll1" name="selects" value="poll1" class="checkbox">*}
+                        {*<label for="poll1">*}
+                            {*<span>В наличии <span>(154)</span></span>*}
+                        {*</label>*}
+                        {*<div class="check"></div>*}
+                    {*</li>*}
 
 
-                    <li>
-                        <input type="checkbox" id="poll2" name="selects" value="poll2" class="checkbox">
-                        <label for="poll2">
-                            <span>Акционные предложения <span>(122)</span></span>
-                        </label>
-                        <div class="check"></div>
-                    </li>
+                    {*<li>*}
+                        {*<input type="checkbox" id="poll2" name="selects" value="poll2" class="checkbox">*}
+                        {*<label for="poll2">*}
+                            {*<span>Акционные предложения <span>(122)</span></span>*}
+                        {*</label>*}
+                        {*<div class="check"></div>*}
+                    {*</li>*}
 
 
-                    <li>
-                        <input type="checkbox" id="poll3" name="selects" value="poll3" class="checkbox">
-                        <label for="poll3">
-                            <span>Товары со скидками <span>(140)</span></span>
-                        </label>
-                        <div class="check"></div>
-                    </li>
+                    {*<li>*}
+                        {*<input type="checkbox" id="poll3" name="selects" value="poll3" class="checkbox">*}
+                        {*<label for="poll3">*}
+                            {*<span>Товары со скидками <span>(140)</span></span>*}
+                        {*</label>*}
+                        {*<div class="check"></div>*}
+                    {*</li>*}
 
 
-                    <li>
-                        <input type="checkbox" id="poll4" name="selects" value="poll4" class="checkbox">
-                        <label for="poll4">
-                            <span>Товары со скидками <span>(140)</span></span>
-                        </label>
-                        <div class="check"></div>
-                    </li>
+                    {*<li>*}
+                        {*<input type="checkbox" id="poll4" name="selects" value="poll4" class="checkbox">*}
+                        {*<label for="poll4">*}
+                            {*<span>Товары со скидками <span>(140)</span></span>*}
+                        {*</label>*}
+                        {*<div class="check"></div>*}
+                    {*</li>*}
 
 
-                    <li>
-                        <input type="checkbox" id="poll5" name="selects" value="poll5" class="checkbox">
-                        <label for="poll5">
-                            <span>Товары со скидками <span>(140)</span></span>
-                        </label>
-                        <div class="check"></div>
-                    </li>
+                    {*<li>*}
+                        {*<input type="checkbox" id="poll5" name="selects" value="poll5" class="checkbox">*}
+                        {*<label for="poll5">*}
+                            {*<span>Товары со скидками <span>(140)</span></span>*}
+                        {*</label>*}
+                        {*<div class="check"></div>*}
+                    {*</li>*}
 
-                </ul>
-            </form>
-        </div>
+                {*</ul>*}
+            {*</form>*}
+        {*</div>*}
 
         <div class="filter {if $accepted_filters}get-ajax{/if}">
 

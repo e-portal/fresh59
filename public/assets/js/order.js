@@ -51,15 +51,13 @@ $(document).ready(function () {
             basket[prod_id] = prod_data;
             doBasket(basket);
         } else {
-            basket[prod_id].quantity = parseInt(basket[prod_id].quantity) + 1;
+            // basket[prod_id].quantity = parseInt(basket[prod_id].quantity) + 1;
             doBasket(basket);
 
         }
         window.localStorage.setItem('basket', JSON.stringify(basket));
     }
-    $('.senn-main.maii .senn-slik ').each(function () {
-        doObject()
-    })
+
 
 
     function doBasket(obj) {/* add basket-section-prod*/
@@ -261,7 +259,6 @@ $(document).ready(function () {
 
         // doObject();
         window.localStorage.setItem('basket', JSON.stringify(basket));
-        // basket != null ? doBasket(basket) : ''
         // bindings();
         doBasket(basket);
 

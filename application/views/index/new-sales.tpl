@@ -1,11 +1,11 @@
-<div class="senn senn-scrol">
+<div class="senn senn-scrol nc_">
     <div class="senn-container wrap">
         <a class="blue" href="/">Все новые поступления<span class="linn"></span></a>
 
-
         <div class="liner"><span>ГОРЯЧИЕ НОВИНКИ</span></div>
         <div class="parag parag-prev ">
-            <div class="parag-item active" onclick="topNewProductIndex(17,'new'); return false;">Отдельностоящая</div>
+            <div class="parag-item active parag-item_one">Популярные модели</div>
+            <div class="parag-item" onclick="topNewProductIndex(17,'new'); return false;">Отдельностоящая</div>
             <div class="parag-item" onclick="topNewProductIndex(7,'new'); return false;">Встраиваемая</div>
             <div class="parag-item" onclick="topNewProductIndex(44,'new'); return false;">Мелкая бытовая</div>
             <div class="parag-item" onclick="topNewProductIndex(193,'new'); return false;">Красота и здоровье</div>

@@ -26,32 +26,36 @@
                 {*----------SORT----------*}
 
                 <div class="right-options">
-                    <div class="selec">
-                        <p>Сортировать по:</p>
+                    <div class="cat_sort_top">
+                        <div class="selec">
+                            <p>Сортировать по:</p>
 
 
-                        <div id=selectyBoxi>
-                            <p class=valueTags name=selects>цена по возростанию<span></span></p>
-                            <ul id=selectyMenuBoxi>
-                                <li class=options>цена по убыванию</li>
-                                <li class=options>популярные</li>
-                                <li class=options>только в наличии</li>
-                            </ul>
+                            <div id=selectyBoxi>
+                                <p class=valueTags name=selects>цена по возростанию<span></span></p>
+                                <ul id=selectyMenuBoxi>
+                                    <li class=options>цена по убыванию</li>
+                                    <li class=options>популярные</li>
+                                    <li class=options>только в наличии</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="share">
+                            <p>Текущие акции:</p>
+
+                            <div class="share-main">
+                                <div class="share-item active">Вернем до 30%</div>
+                                <div class="share-item">С подарками</div>
+                                <div class="share-item">Вместе дешевле</div>
+                            </div>
+
+
                         </div>
                     </div>
 
 
-                    <div class="share">
-                        <p>Текущие акции:</p>
-
-                        <div class="share-main">
-                            <div class="share-item active">Вернем до 30%</div>
-                            <div class="share-item">С подарками</div>
-                            <div class="share-item">Вместе дешевле</div>
-                        </div>
 
 
-                    </div>
 
 
                     <div class="under-senn">

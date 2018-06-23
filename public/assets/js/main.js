@@ -9,6 +9,15 @@ $(window).on('load', function () {
 
 });
 
+(function () {
+    if (window.matchMedia("(max-width: 640px)").matches) {
+        a = $('.hate .ityy')
+        for (var i = 0; i < a.length; i++) {
+            a.eq(i).find('.right-times').clone().appendTo(a.eq(i).find('.cash'));
+            a.eq(i).find('.right-times').eq(1).remove()
+        }
+    }
+})();
 
 //--------
 jQuery(document).ready(function () {
@@ -412,22 +421,21 @@ jQuery(document).ready(function () {
     (function () {
         a = $('.headers').innerHeight()
         $('.headers').css('height', a + 'px')
-        console.log($('.senn-scrol').offset().top);
         $(window).scroll(function () {
-            if (!$('body').hasClass('home-page'))  {
+            if (!$('body').hasClass('home-page')) {
                 if (212 < $(this).scrollTop()) {
                     $('.menu').addClass('fixed_menu')
-                } else if(147 > $(this).scrollTop()){
+                } else if (147 > $(this).scrollTop()) {
                     $('.menu').removeClass('fixed_menu')
                 }
             } else if ($('body').hasClass('home-page')) {
 
                 home_page_ = $('.senn-scrol').offset().top
-                  if (home_page_  + 30 < $(this).scrollTop()) {
+                if (home_page_ + 30 < $(this).scrollTop()) {
 
                     $('.menu').addClass('fixed_menu')
                     // $('body').removeClass('fixed_menu_')
-                } else if(home_page_  + 30 > $(this).scrollTop()){
+                } else if (home_page_ + 30 > $(this).scrollTop()) {
                     $('.menu').removeClass('fixed_menu')
                     // $('body').removeClass('fixed_menu_')
                 }
@@ -1771,23 +1779,51 @@ $(document).ready(function () {
 
 })
 
+function RestartIndex() {
+    $.getScript("/assets/js/order.js");
+    $('.item-senn').hover(
+        function () {
+            $(this).addClass('runn')
+        },
+        function () {
+            $(this).removeClass('runn');
+        });
+    $('.right-butt').bind('click', addItemToCompare);
+}
+
 
 function topNewProductIndex(catId, type) {
     var top_product = $('.senn-main.maii.top_product');
     var new_product = $('.senn-main.maii.new_product');
     var act_product = $('.iteem-mainy.act_product');
-    if (type == 'top') {
-        top_product.find('.senn-slik').html('');
-        top_product.find('.senn-slik').removeClass('slick-initialized slick-slider slick-dotted');
-        var container = $(".senn-main.maii.top_product .senn-slik");
-    } else if (type == 'new') {
-        new_product.find('.senn-slik').html('');
-        new_product.find('.senn-slik').removeClass('slick-initialized slick-slider slick-dotted');
-        var container = $(".senn-main.maii.new_product .senn-slik");
-    } else if (type == 'act') {
-        act_product.find('.hate').html('');
-        act_product.find('.hate').removeClass('slick-initialized slick-slider slick-dotted');
-        var container = $(".iteem-mainy.act_product .hate");
+    if (window.matchMedia("(min-width: 991px)").matches) {
+        if (type == 'top') {
+            top_product.find('.senn-slik').html('');
+            top_product.find('.senn-slik').removeClass('slick-initialized slick-slider slick-dotted');
+            var container = $(".senn-main.maii.top_product .senn-slik");
+        } else if (type == 'new') {
+            new_product.find('.senn-slik').html('');
+            new_product.find('.senn-slik').removeClass('slick-initialized slick-slider slick-dotted');
+            var container = $(".senn-main.maii.new_product .senn-slik");
+        } else if (type == 'act') {
+            act_product.find('.hate').html('');
+            act_product.find('.hate').removeClass('slick-initialized slick-slider slick-dotted');
+            var container = $(".iteem-mainy.act_product .hate");
+        }
+    } else {
+        if (type == 'top') {
+            top_product.find('.slick-ipad').html('');
+            top_product.find('.slick-ipad').removeClass('slick-initialized slick-slider slick-dotted');
+            var container = $(".senn-main.maii.top_product .slick-ipad");
+        } else if (type == 'new') {
+            new_product.find('.slick-ipad').html('');
+            new_product.find('.slick-ipad').removeClass('slick-initialized slick-slider slick-dotted');
+            var container = $(".senn-main.maii.new_product .slick-ipad");
+        } else if (type == 'act') {
+            act_product.find('.hate').html('');
+            act_product.find('.hate').removeClass('slick-initialized slick-slider slick-dotted');
+            var container = $(".iteem-mainy.act_product .hate");
+        }
     }
 
 
@@ -1813,8 +1849,6 @@ function topNewProductIndex(catId, type) {
         url: '/index/getnewtopproducts/catid/' + catId + '/type/' + typeId + '/',
         dataType: 'json',
         success: function (data) {
-
-
             if ($('.senn-main.maii .senn-slik').hasClass('slick-list')) {
                 $('.senn-slik').unslick()
             }
@@ -1823,34 +1857,37 @@ function topNewProductIndex(catId, type) {
             for (var i = 0; i < data.items.length; i++) {
 
 
-
-                if(data.items[i].id_availability == 1) {
+                if (data.items[i].id_availability == 1) {
                     in_stock = '<h5 class="green">В наличии</h5>'
-                } else if(data.items[i].id_availability == 2) {
+                } else if (data.items[i].id_availability == 2) {
                     in_stock = '<h5 class="gray">Наличие уточняйте</h5>'
-                }else if(data.items[i].id_availability == 3) {
+                } else if (data.items[i].id_availability == 3) {
                     in_stock = '<h5 class="blue">Под заказ</h5>'
                 }
 
-                if(data.items[i].bonus_amount > 0) {
-                    bonus_amount = '<div class="itee"><img src="/assets/img/izee0.png" alt=""><p>Вернем: <span>'+data.items[i].bonus_amount+' грн</span></p></div>'
+                if (data.items[i].bonus_amount > 0) {
+                    bonus_amount = '<div class="itee"><img src="/assets/img/izee0.png" alt=""><p>Вернем: <span>' + data.items[i].bonus_amount + ' грн</span></p></div>'
                 } else {
                     bonus_amount = ''
                 }
 
-                if(data.items[i].id_availability == 1) {
-                    credit_ = '<div class="itee"><img src="/assets/img/izee1.png" alt=""><p>от<span>1499</span>грн/мес</p></div>'
+                if (data.items[i].id_availability == 1) {
+                    credit_ = '<div class="itee"><img src="/assets/img/izee1.png" alt=""><p>от<span> ' + data.items[i].oplata_chast + ' </span>грн/мес</p></div>'
                 } else {
                     credit_ = ''
                 }
 
-                if(data.items[i].acttype=='gift') {
-                    gift_ = '<div class="itee present"><div class="numeral"><img src="/assets/img/present-img.png" alt="present"></div><p>Подарок!</p><img src="/images/catalog/'+data.items[i].gift_image+'" alt="'+data.items[i].actname+'"/></div>'
+                if (data.items[i].acttype == 'gift') {
+                    gift_ = '<div class="itee present"><div class="numeral"><img src="/assets/img/present-img.png" alt="present"></div><p>Подарок!</p><img src="/images/catalog/' + data.items[i].gift_image + '" alt="' + data.items[i].actname + '"/></div>'
+                    gift_corzina = 'data-gift-img="/images/catalog/' + data.items[i].gift_image + '"'
+                    data_gift_name = 'data-gift-id="' + data.items[i].actid + '" data-gift-name="' + data.items[i].actname + '"'
                 } else {
                     gift_ = ''
+                    gift_corzina = ''
+                    data_gift_name = ''
                 }
 
-                if(data.items[i].bonus_amount > 0) {
+                if (data.items[i].bonus_amount > 0) {
                     bonus_amount_ = '<p>Вернем: <span>' + data.items[i].bonus_amount + ' грн</span></p>'
                 } else {
                     bonus_amount_ = ''
@@ -1859,26 +1896,33 @@ function topNewProductIndex(catId, type) {
                     end_date = data.items[i].end_date
                     date_mas = end_date.split('/');
                 }
+                if (data.items[i].correct_old_price > 0) {
+                    correct_price = data.items[i].correct_old_price
+                    correct_price_corzinz = 'data-price="' + data.items[i].correct_price + '" data-sale="' + data.items[i].correct_old_price + '"'
+                } else {
+                    correct_price = data.items[i].correct_price
+                    correct_price_corzinz = 'data-price="' + data.items[i].correct_price + '"'
+                }
 
 
                 url_name = data.items[i].name;
                 url_name_ = url_name.split(' ').join('-');
 
                 a = $('<div class="item-senn">\n' +
-                    ' <a class="sench" href="'+data.items[i].subdomain+'/'+data.items[i].cat_latin_single+'/'+data.items[i].brand+'-'+url_name_+'">\n' +
-                    ' '+ in_stock +'\n'+
+                    ' <a class="sench" href="' + data.items[i].subdomain + '/' + data.items[i].cat_latin_single + '/' + data.items[i].brand + '-' + url_name_ + '">\n' +
+                    ' ' + in_stock + '\n' +
                     '       <h4>' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '</h4>\n' +
                     '   <div class="centr">\n' +
                     '       <div class="itee-imgg">\n' +
                     '           <img src="/images/catalog/' + data.items[i].imgid + '.' + data.items[i].imgext + '" alt="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '" title="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '">\n' +
                     '   </div>\n' +
-                    ''+bonus_amount+'\n' +
-                    ''+credit_+'\n' +
+                    '' + bonus_amount + '\n' +
+                    '' + credit_ + '\n' +
                     '<div class="itee">\n' +
                     '<img src="/assets/img/izee3.png" alt="">\n' +
-                    '<p>от<span>619</span>грн/мес</p>\n' +
+                    '<p>от<span> ' + data.items[i].mgnovennaya_rassrochka + ' </span>грн/мес</p>\n' +
                     '</div>\n' +
-                    ''+gift_+'\n' +
+                    '' + gift_ + '\n' +
                     '</div>\n' +
                     '</a>\n' +
                     '<object type="lol/wut">\n' +
@@ -1893,12 +1937,12 @@ function topNewProductIndex(catId, type) {
                     '</object>\n' +
                     '<div class="bakk">\n' +
                     '<div class="left-bakk">\n' +
-                    '<p>' + data.items[i].id2 + ' грн.</p>\n' +
-                    ''+bonus_amount_+'\n' +
+                    '<p>' + correct_price + ' грн.</p>\n' +
+                    '' + bonus_amount_ + '\n' +
                     '</div>\n' +
                     '<div class="right-bakk">\n' +
                     '<object type="lol/wut">\n' +
-                    '<a class="open-in-popup add-to-cart bask acty"  data-id="'+data.items[i].id+'" data-name="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '"  data-img="/images/catalog/' + data.items[i].imgid + '.' + data.items[i].imgext + '" data-price="11999" data-sale="10750" data-bonus="1500"   data-gift-id="" data-gift-name="'+data.items[i].actname+'" data-gift-img="/images/catalog/93266_s.jpg" tabindex="-1">\n' +
+                    '<a class="open-in-popup add-to-cart bask acty"  data-id="' + data.items[i].id + '" data-name="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '"  data-img="/images/catalog/' + data.items[i].imgid + '.' + data.items[i].imgext + '" ' + correct_price_corzinz + ' data-bonus=""    ' + data_gift_name + ' ' + gift_corzina + ' tabindex="-1">\n' +
                     '<span>В корзину</span>\n' +
                     '</a>\n' +
                     '</object>\n' +
@@ -1909,7 +1953,7 @@ function topNewProductIndex(catId, type) {
                     '<div class="left-butt">\n' +
                     '<span>В избранное</span>\n' +
                     '</div>\n' +
-                    '<div class="right-butt" data-id="'+data.items[i].id+'">\n' +
+                    '<div class="right-butt" data-id="' + data.items[i].id + '">\n' +
                     '<span>Сравнение</span>\n' +
                     '</div>\n' +
                     '</div>\n' +
@@ -1918,13 +1962,13 @@ function topNewProductIndex(catId, type) {
                 if (type == 'act') {
                     b = $('<div class="ityy">\n' +
                         '<div class="hovyy"></div>\n' +
-                        '<a href="/'+data.items[i].subdomain+'/'+data.items[i].cat_latin_single+'/'+data.items[i].brand+'-'+url_name_+'">\n' +
+                        '<a href="/' + data.items[i].subdomain + '/' + data.items[i].cat_latin_single + '/' + data.items[i].brand + '-' + url_name_ + '">\n' +
                         '<div class="left-iteem">\n' +
                         ' <div class="itee-imgg">\n' +
                         '<img src="/images/catalog/80990_s.png"  alt="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + ' купить" title="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '"> \n' +
                         '</div> \n' +
-                        ''+bonus_amount+'\n' +
-                        ''+credit_+'\n' +
+                        '' + bonus_amount + '\n' +
+                        '' + credit_ + '\n' +
                         '<div class="itee">  \n' +
                         '<img src="/assets/img/izee3.png" alt="">  \n' +
                         '<p>от<span>619</span> грн/мес</p> \n' +
@@ -1933,7 +1977,7 @@ function topNewProductIndex(catId, type) {
                         '<img src="/assets/img/izee4.png" alt=""> \n' +
                         ' <p>Лучшая <span>цена</span></p> \n' +
                         '</div> \n' +
-                        ''+gift_+' \n' +
+                        '' + gift_ + ' \n' +
                         '<div class="itee change"> \n' +
                         '<img src="/assets/img/izee5.png" alt=""> \n' +
                         '<p>Замена</p> \n' +
@@ -1956,10 +2000,10 @@ function topNewProductIndex(catId, type) {
                         ' </object> \n' +
                         '<div class="cash"> 11999 грн.</div> \n' +
                         '<div class="times"> \n' +
-                        '<div class="timer" data-year="'+date_mas[2]+'" data-month="'+date_mas[1]+'" data-days="'+date_mas[0]+'"></div> \n' +
+                        '<div class="timer" data-year="' + date_mas[2] + '" data-month="' + date_mas[1] + '" data-days="' + date_mas[0] + '"></div> \n' +
                         '<div class="right-times"> \n' +
                         '<object type="lol/wut"> \n' +
-                        '<a class="open-in-popup add-to-cart bask acty" data-id="'+data.items[i].id+'" data-name="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '" data-img="/images/catalog/' + data.items[i].imgid + '.' + data.items[i].imgext + '" data-price="11999" data-sale="10750" data-bonus="1500" data-gift-id="" data-gift-name="'+data.items[i].actname+'" data-gift-img="/images/catalog/93266_s.jpg" tabindex="-1">  \n' +
+                        '<a class="open-in-popup add-to-cart bask acty" data-id="' + data.items[i].id + '" data-name="' + data.items[i].cat_onename + ' ' + data.items[i].brand + ' ' + data.items[i].name + '"  data-img="/images/catalog/' + data.items[i].imgid + '.' + data.items[i].imgext + '" ' + correct_price_corzinz + ' data-bonus=""    ' + data_gift_name + ' ' + gift_corzina + ' >  \n' +
                         ' <span>В корзину</span> \n' +
                         '</a></object></div></div></div> \n' +
                         '<div class="news"> \n' +
@@ -1968,42 +2012,72 @@ function topNewProductIndex(catId, type) {
                         '<span>В избранное</span> \n' +
                         ' </object> \n' +
                         '</div> \n' +
-                        '<div class="right-butt" data-id="'+data.items[i].id+'"> \n' +
+                        '<div class="right-butt" data-id="' + data.items[i].id + '"> \n' +
                         '<object type="lol/wut"> \n' +
                         '<span>Сравнение</span> \n' +
                         '</object></div></div></div></div>')
                 }
-                if (type == 'top') {
-                    a.appendTo('.senn-main.maii.top_product .senn-slik ');
-                } else if (type == 'new') {
-                    a.appendTo('.senn-main.maii.new_product .senn-slik ');
-                } else if (type == 'act') {
-                    b.appendTo(act_product.find('.hate'))
+                if (window.matchMedia("(min-width: 991px)").matches) {
+                    if (type == 'top') {
+                        a.appendTo('.senn-main.maii.top_product .senn-slik ');
+                    } else if (type == 'new') {
+                        a.appendTo('.senn-main.maii.new_product .senn-slik ');
+                    } else if (type == 'act') {
+                        b.appendTo(act_product.find('.hate'))
+                    }
+                } else {
+                    if (type == 'top') {
+                        a.appendTo('.senn-main.maii.top_product .slick-ipad');
+                    } else if (type == 'new') {
+                        a.appendTo('.senn-main.maii.new_product .slick-ipad');
+                    } else if (type == 'act') {
+                        b.appendTo(act_product.find('.hate'))
+                    }
                 }
+
             }
         }
     });
 
-    if (type == 'top' || type == 'new'){
+    if (type == 'top' || type == 'new') {
         var allElements = Array.from(container.find(".item-senn"));
-        for (var p = 0; p < allElements.length; p += 7) {
-            var wrap = document.createElement("div");
-            wrap.classList.add("maii-item");
-            for (var j = 0; j < 7; j++) {
-                if (p + j < allElements.length) {
-                    wrap.append(allElements[p + j]);
+        if (window.matchMedia("(min-width: 991px)").matches) {
+            nn = (container.find('.maii-item').length * 7) - container.find('.item-senn').length
+            for (var p = 0; p < allElements.length; p += 7) {
+                var wrap = document.createElement("div");
+                wrap.classList.add("maii-item");
+                for (var j = 0; j < 7; j++) {
+                    if (p + j < allElements.length) {
+                        wrap.append(allElements[p + j]);
+                    }
                 }
+                container.append(wrap);
             }
-            container.append(wrap);
+
+        } else {
+            nn = (container.find('.maii-item').length * 2) - container.find('.item-senn').length
+            for (var p = 0; p < allElements.length; p += 2) {
+                var wrap = document.createElement("div");
+                wrap.classList.add("maii-item");
+                for (var j = 0; j < 2; j++) {
+                    if (p + j < allElements.length) {
+                        wrap.append(allElements[p + j]);
+                    }
+                }
+                container.append(wrap);
+            }
+            // container.find('maii-item').addClass('jimm')
+            container.find('.maii-item').addClass('mobile')
         }
-        nn = (container.find('.maii-item').length * 7) - container.find('.item-senn').length
-        for (var o = 0; o < nn; o ++) {
+
+
+        for (var o = 0; o < nn; o++) {
             container.find('.maii-item:last').append($('<div class="item-senn empty"> <div class="text-empty empty-half"></div>\n' +
-                ' <div class="text-empty"></div><div class="text-empty"></div> \n'+
-                ' <span class="sench" ><div class="centr"><div class="itee-imgg"><img src="./img/empty.png" alt=""> </div> </div> \n'+
-                '  <object type="lol/wut"><div class="left-otzv"><img src="./img/empty-stars.png" alt=""></div> </object>\n'+
-                ' <div class="bakk"> <div class="left-bakk"><div class="text-empty empty-half"></div><div class="text-empty empty-half"></div> \n'+
-                ' </div><div class="right-bakk"> <div class="bask acty empty-but"><span></span></div> \n'+
+                ' <div class="text-empty"></div><div class="text-empty"></div> \n' +
+                ' <span class="sench" ><div class="centr"><div class="itee-imgg"><img src="./img/empty.png" alt=""> </div> </div> \n' +
+                '  <object type="lol/wut"><div class="left-otzv"><img src="./img/empty-stars.png" alt=""></div> </object>\n' +
+                ' <div class="bakk"> <div class="left-bakk"><div class="text-empty empty-half"></div><div class="text-empty empty-half"></div> \n' +
+                ' </div><div class="right-bakk"> <div class="bask acty empty-but"><span></span></div> \n' +
                 '  </div> </div> </div> </div> '))
         }
 
@@ -2026,18 +2100,39 @@ function topNewProductIndex(catId, type) {
         });
 
 
-
-    } else if (type == 'act'){
+    } else if (type == 'act') {
         var allElements = Array.from(container.find(".ityy"));
-        for (var p = 0; p < allElements.length; p += 2) {
-            var wrap = document.createElement("div");
-            wrap.classList.add("hate-item");
-            for (var j = 0; j < 2; j++) {
-                if (p + j < allElements.length) {
-                    wrap.append(allElements[p + j]);
+        if (window.matchMedia("(min-width: 991px)").matches) {
+
+            for (var p = 0; p < allElements.length; p += 2) {
+                var wrap = document.createElement("div");
+                wrap.classList.add("hate-item");
+                for (var j = 0; j < 2; j++) {
+                    if (p + j < allElements.length) {
+                        wrap.append(allElements[p + j]);
+                    }
                 }
+                container.append(wrap);
             }
-            container.append(wrap);
+
+        } else {
+
+            for (var p = 0; p < allElements.length; p += 1) {
+                var wrap = document.createElement("div");
+                wrap.classList.add("hate-item");
+                for (var j = 0; j < 1; j++) {
+                    if (p + j < allElements.length) {
+                        wrap.append(allElements[p + j]);
+                    }
+                }
+                container.append(wrap);
+            }
+            clon_ = $('.hate .ityy')
+            for (var r = 0; r < clon_.length; r++) {
+                clon_.eq(r).find('.right-times').clone().appendTo(clon_.eq(r).find('.cash'));
+                clon_.eq(r).find('.right-times').eq(1).remove()
+            }
+
         }
         container.slick({
             slidesToShow: 2,
@@ -2062,15 +2157,278 @@ function topNewProductIndex(catId, type) {
 
         CDT();
     }
-    $.getScript("/assets/js/order.js");
-    $('.item-senn').hover(
-        function () {
-            $(this).addClass('runn')
-        },
-        function () {
-            $(this).removeClass('runn');
-        });
-    $('.right-butt').bind('click', addItemToCompare);
+
+    RestartIndex()
+
 
 }
+
+function LoadSliderIndex() {
+    var top_product = $('.senn-main.maii.top_product');
+    var new_product = $('.senn-main.maii.new_product');
+    var act_product = $('.iteem-mainy.act_product');
+    var tc = $('.tc_').find('.parag-item_one');
+    var nc = $('.nc_').find('.parag-item_one');
+    var acp = $('.ac_').find('.parag-item_one');
+    var t = []
+    var n = []
+    var ac = []
+    t.push(top_product.find('.senn-slik .item-senn'));
+    n.push(new_product.find('.senn-slik .item-senn'));
+    ac.push(act_product.find('.ityy'));
+
+
+    tc.click(function () {
+        if (window.matchMedia("(min-width: 991px)").matches) {
+            top_product.find('.senn-slik').html('');
+            top_product.find('.senn-slik').removeClass('slick-initialized slick-slider slick-dotted');
+        } else {
+            top_product.find('.slick-ipad').html('');
+            top_product.find('.slick-ipad').removeClass('slick-initialized slick-slider slick-dotted');
+        }
+        top_product.find('.senn-slik').html('');
+        top_product.find('.senn-slik').removeClass('slick-initialized slick-slider slick-dotted');
+        for (var i = 0; i < t.length; i++) {
+            var cfv = t[i]
+            cfv.appendTo(top_product.find('.senn-slik'));
+        }
+
+        var allElements = Array.from(top_product.find(".item-senn"));
+        if (window.matchMedia("(min-width: 991px)").matches) {
+            nn = (top_product.find('.maii-item').length * 7) - top_product.find('.item-senn').length
+            for (var p = 0; p < allElements.length; p += 7) {
+                var wrap = document.createElement("div");
+                wrap.classList.add("maii-item");
+                for (var j = 0; j < 7; j++) {
+                    if (p + j < allElements.length) {
+                        wrap.append(allElements[p + j]);
+                    }
+                }
+                top_product.find('.senn-slik').append(wrap);
+            }
+            top_product.find('.senn-slik').slick({
+                arrows: false,
+                dots: true,
+                infinite: true,
+                speed: 500,
+                cssEase: 'linear',
+                autoplay: true,
+                autoplaySpeed: 5000,
+                responsive: [
+                    {
+                        breakpoint: 1025,
+                        settings: {
+                            dots: false,
+                            arrows: true
+                        }
+                    }]
+            });
+
+        } else {
+            nn = (top_product.find('.maii-item').length * 2) - top_product.find('.item-senn').length
+            for (var p = 0; p < allElements.length; p += 2) {
+                var wrap = document.createElement("div");
+                wrap.classList.add("maii-item");
+                for (var j = 0; j < 2; j++) {
+                    if (p + j < allElements.length) {
+                        wrap.append(allElements[p + j]);
+                    }
+                }
+                top_product.find('.slick-ipad').append(wrap);
+            }
+            top_product.find('.maii-item').addClass('mobile')
+            top_product.find('.slick-ipad').slick({
+                arrows: false,
+                dots: true,
+                infinite: true,
+                speed: 500,
+                cssEase: 'linear',
+                autoplay: true,
+                autoplaySpeed: 5000,
+                responsive: [
+                    {
+                        breakpoint: 1025,
+                        settings: {
+                            dots: false,
+                            arrows: true
+                        }
+                    }]
+            });
+        }
+
+        for (var o = 0; o < nn; o++) {
+            top_product.find('.maii-item:last').append($('<div class="item-senn empty"> <div class="text-empty empty-half"></div>\n' +
+                ' <div class="text-empty"></div><div class="text-empty"></div> \n' +
+                ' <span class="sench" ><div class="centr"><div class="itee-imgg"><img src="./img/empty.png" alt=""> </div> </div> \n' +
+                '  <object type="lol/wut"><div class="left-otzv"><img src="./img/empty-stars.png" alt=""></div> </object>\n' +
+                ' <div class="bakk"> <div class="left-bakk"><div class="text-empty empty-half"></div><div class="text-empty empty-half"></div> \n' +
+                ' </div><div class="right-bakk"> <div class="bask acty empty-but"><span></span></div> \n' +
+                '  </div> </div> </div> </div> '))
+        }
+
+        RestartIndex()
+    })
+
+    /*********************************/
+    nc.click(function () {
+
+        if (window.matchMedia("(min-width: 991px)").matches) {
+            new_product.find('.senn-slik').html('');
+            new_product.find('.senn-slik').removeClass('slick-initialized slick-slider slick-dotted');
+        } else {
+            new_product.find('.slick-ipad').html('');
+            new_product.find('.slick-ipad').removeClass('slick-initialized slick-slider slick-dotted');
+        }
+
+        for (var i = 0; i < n.length; i++) {
+            var cfv = n[i]
+            cfv.appendTo(new_product.find('.senn-slik'));
+        }
+
+        var allElements = Array.from(new_product.find(".item-senn"));
+        if (window.matchMedia("(min-width: 991px)").matches) {
+            nn = (new_product.find('.maii-item').length * 7) - new_product.find('.item-senn').length
+            for (var p = 0; p < allElements.length; p += 7) {
+                var wrap = document.createElement("div");
+                wrap.classList.add("maii-item");
+                for (var j = 0; j < 7; j++) {
+                    if (p + j < allElements.length) {
+                        wrap.append(allElements[p + j]);
+                    }
+                }
+                new_product.find('.senn-slik').append(wrap);
+            }
+
+        } else {
+            nn = (new_product.find('.maii-item').length * 2) - new_product.find('.item-senn').length
+            for (var p = 0; p < allElements.length; p += 2) {
+                var wrap = document.createElement("div");
+                wrap.classList.add("maii-item");
+                for (var j = 0; j < 2; j++) {
+                    if (p + j < allElements.length) {
+                        wrap.append(allElements[p + j]);
+                    }
+                }
+                new_product.find('.slick-ipad').append(wrap);
+            }
+            new_product.find('.maii-item').addClass('mobile')
+            new_product.find('.slick-ipad').slick({
+                arrows: false,
+                dots: true,
+                infinite: true,
+                speed: 500,
+                cssEase: 'linear',
+                autoplay: true,
+                autoplaySpeed: 5000,
+                responsive: [
+                    {
+                        breakpoint: 1025,
+                        settings: {
+                            dots: false,
+                            arrows: true
+                        }
+                    }]
+            });
+        }
+
+        for (var o = 0; o < nn; o++) {
+            new_product.find('.maii-item:last').append($('<div class="item-senn empty"> <div class="text-empty empty-half"></div>\n' +
+                ' <div class="text-empty"></div><div class="text-empty"></div> \n' +
+                ' <span class="sench" ><div class="centr"><div class="itee-imgg"><img src="./img/empty.png" alt=""> </div> </div> \n' +
+                '  <object type="lol/wut"><div class="left-otzv"><img src="./img/empty-stars.png" alt=""></div> </object>\n' +
+                ' <div class="bakk"> <div class="left-bakk"><div class="text-empty empty-half"></div><div class="text-empty empty-half"></div> \n' +
+                ' </div><div class="right-bakk"> <div class="bask acty empty-but"><span></span></div> \n' +
+                '  </div> </div> </div> </div> '))
+        }
+        new_product.find('.slick-ipad').slick({
+            arrows: false,
+            dots: true,
+            infinite: true,
+            speed: 500,
+            cssEase: 'linear',
+            autoplay: true,
+            autoplaySpeed: 5000,
+            responsive: [
+                {
+                    breakpoint: 1025,
+                    settings: {
+                        dots: false,
+                        arrows: true
+                    }
+                }]
+        });
+        RestartIndex()
+    })
+    /**************************/
+    acp.click(function () {
+        act_product.find('.hate').html('');
+        act_product.find('.hate').removeClass('slick-initialized slick-slider slick-dotted');
+        for (var i = 0; i < ac.length; i++) {
+            var cfv = ac[i]
+            cfv.appendTo(act_product.find('.hate'))
+        }
+
+        var allElements = Array.from(act_product.find(".ityy"));
+        if (window.matchMedia("(min-width: 991px)").matches) {
+
+            for (var p = 0; p < allElements.length; p += 2) {
+                var wrap = document.createElement("div");
+                wrap.classList.add("hate-item");
+                for (var j = 0; j < 2; j++) {
+                    if (p + j < allElements.length) {
+                        wrap.append(allElements[p + j]);
+                    }
+                }
+                act_product.find('.hate').append(wrap);
+            }
+
+        } else {
+
+            for (var p = 0; p < allElements.length; p += 1) {
+                var wrap = document.createElement("div");
+                wrap.classList.add("hate-item");
+                for (var j = 0; j < 1; j++) {
+                    if (p + j < allElements.length) {
+                        wrap.append(allElements[p + j]);
+                    }
+                }
+                act_product.find('.hate').append(wrap);
+            }
+            clon_ = $('.hate .ityy')
+            for (var r = 0; r < clon_.length; r++) {
+                clon_.eq(r).find('.right-times').clone().appendTo(clon_.eq(r).find('.cash'));
+                clon_.eq(r).find('.right-times').eq(1).remove()
+            }
+
+        }
+
+
+        act_product.find('.hate').slick({
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1025,
+                    settings: {
+                        slidesToShow: 1,
+                        arrows: true,
+                        dots: false
+                    }
+                }],
+            dots: true,
+            arrows: false,
+            infinite: true,
+            fade: false,
+            cssEase: 'linear',
+            autoplay: true,
+            autoplaySpeed: 5000
+        });
+
+        CDT();
+        RestartIndex()
+    })
+
+}
+
+LoadSliderIndex()
 

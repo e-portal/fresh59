@@ -1,4 +1,4 @@
-<div class="seap wrap">
+<div class="seap wrap ac_">
     <div class="discount">
         <a class="blue" href="/">Все новые поступления<span class="linn"></span></a>
 
@@ -7,7 +7,7 @@
 
 
         <div class="parag parag-home">
-            <div class="parag-item active">Популярные модели</div>
+            <div class="parag-item parag-item_one active">Популярные модели</div>
             <div class="parag-item" onclick="topNewProductIndex(17,'act'); return false;">Отдельностоящая</div>
             <div class="parag-item" onclick="topNewProductIndex(7,'act'); return false;">Встраиваемая</div>
             <div class="parag-item" onclick="topNewProductIndex(44,'act'); return false;">Мелкая бытовая</div>

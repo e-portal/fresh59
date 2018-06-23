@@ -7,6 +7,7 @@
 	{php} echo $this->navigation()->menu($this->menu->findOneById(1));{/php}
 </div>
 
+
 {literal}
 	<script type="text/javascript">
 		$(document).ready(function() {

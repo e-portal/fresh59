@@ -17,6 +17,7 @@
     margin-bottom: 100px;
 }
 
+
 .without-icon::after {
     content: none;
 }
